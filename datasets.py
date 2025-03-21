@@ -23,14 +23,17 @@ def create_bloons_dataframe(red_bloon_speed: float) -> pd.DataFrame:
     # Get the real speed by using the relative speed; round to get integer speeds
     bloons_dataset['speed'] = round(bloons_dataset['relative_speed']*red_bloon_speed)
     bloons_dataset['speed'] = bloons_dataset['speed'].astype(int)
+
+    # Set index to be Bloon type
     bloons_dataset.set_index('type',inplace=True)
+
     return bloons_dataset
 
 def create_pathline() -> List:
     return [
-        (0,400), (170,400), (170, 175), (375,175), (375,615), 
+        (-20,400), (170,400), (170, 175), (375,175), (375,615), 
         (95, 615), (95, 760), (755, 760), (755, 525), (540, 525), 
-        (540, 330), (755, 330), (755, 95), (465, 95), (465, 0)
+        (540, 330), (755, 330), (755, 95), (465, 95), (465, 20)
         ]
      
 def create_rounds_dataframe() -> pd.DataFrame:
@@ -60,6 +63,9 @@ def create_rounds_dataframe() -> pd.DataFrame:
     rounds = rounds.drop(['description', 'bloons_info'], axis = 1).copy()
     # Add data on money gained at the end of each round
     rounds['money_round_end'] = rounds['money_total'] - rounds['money_popping_max'] 
+    rounds.loc[6,'money_round_end'] = 94 # manual correction needed
+    # Set index to be round nr
+    rounds.set_index('round', inplace=True)
 
     return rounds
 

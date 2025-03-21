@@ -1,5 +1,7 @@
+import random
+
 from utils import Circle, is_circle_overlapping, is_point_in_circle
-from datasets import create_pathline, create_bloons_dataframe
+from datasets import create_pathline, create_bloons_dataframe, create_rounds_dataframe
 from typing import Tuple, List, Any
 
 class Bloon:
@@ -96,3 +98,39 @@ class Bloon:
         # self.type = new_type
         # self.color = Bloon.TYPE_COLOR_DICT[self.type]
 
+class BloonManager():
+    """
+    Manages Bloon spawns each round and keeps existing of Bloons.
+    """
+    SPAWN_RATE = 5 # nr of bloons spawned per second (on 60 FPS)
+    DF_ROUNDS = create_rounds_dataframe()
+
+    def __init__(self):
+        self.bloon_list = []
+        self.queue = []
+        self.round_nr = 1
+
+    def enqueue_bloon(self, bloon_type: str) -> None:
+        self.queue.append(Bloon(bloon_type))
+
+    def spawn_bloon_from_queue(self) -> None:
+        self.bloon_list.append(self.queue.pop(0))
+
+    def spawn_bloon_outside_queue(self, bloon_type: str) -> None:
+        new_bloon = Bloon(bloon_type)
+        self.bloon_list.append(new_bloon)
+    
+    def remove_bloon(self, bloon: Bloon) -> None:
+        self.bloon_list.remove(bloon)
+
+    def prepare_queue_for_round(self):
+        for bloon_type in ['K', 'W', 'Y', 'G', 'B', 'R']:
+            for _ in range(BloonManager.DF_ROUNDS.loc[self.round_nr, bloon_type]):
+                self.enqueue_bloon(bloon_type)
+
+    def shuffle_queue(self):
+        self.queue = random.shuffle(self.queue)
+
+    def round_start_spawn(self): # TODO - incorporate the rate of spawning
+        for _ in len(self.queue):
+            self.spawn_bloon_from_queue()
