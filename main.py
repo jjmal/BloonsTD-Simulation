@@ -25,12 +25,12 @@ clock = pygame.time.Clock()
 
 # Set up bloons
 bloons = [
-    Bloon("R", 1, 2),
-    Bloon("B", 2, 7),
-    Bloon("G", 3, 9),
-    Bloon("Y", 4, 16),
-    Bloon("K", 5, 9),
-    Bloon("W", 5, 10)
+    Bloon("R"),
+    Bloon("B"),
+    Bloon("G"),
+    Bloon("Y"),
+    Bloon("K"),
+    Bloon("W")
 ]
 
 # game loop

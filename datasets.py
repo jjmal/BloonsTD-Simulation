@@ -1,13 +1,13 @@
 import pandas as pd
 from typing import List, Tuple, Dict, Any
 
-def create_bloons_dataset(red_bloon_speed: float) -> pd.DataFrame:
+def create_bloons_dataframe(red_bloon_speed: float) -> pd.DataFrame:
     bloon_type = ['R', 'B', 'G', 'Y', 'W', 'K']
     bloon_name = ['Red', 'Blue', 'Green', 'Yellow', 'White', 'Black']
     bloon_health = [1,2,3,4,5,5]
     bloon_rgb = [(255, 0, 0), (0,0, 255),(0, 255, 0),(255,255,0),(255,255,255),(0,0,0)]
     bloon_relative_speed = [1,1.4,1.8,3.2,2,1.8] # speed relative to Red Bloon speed
-    bloons_ice_resits = [0,0,0,0,1,0]
+    bloons_ice_resist = [0,0,0,0,1,0]
     bloon_bomb_resist = [0,0,0,0,0,1]
     bloons_dataset = pd.DataFrame(
         {
@@ -16,11 +16,13 @@ def create_bloons_dataset(red_bloon_speed: float) -> pd.DataFrame:
             'health': bloon_health,
             'rgb': bloon_rgb,
             'relative_speed': bloon_relative_speed,
-            'ice_resistant': bloons_ice_resits,
+            'ice_resistant': bloons_ice_resist,
             'bomb_resistant': bloon_bomb_resist
             }
         )
-    bloons_dataset['speed'] = bloons_dataset['relative_speed']*red_bloon_speed
+    # Get the real speed by using the relative speed; round to get integer speeds
+    bloons_dataset['speed'] = round(bloons_dataset['relative_speed']*red_bloon_speed)
+    bloons_dataset['speed'] = bloons_dataset['speed'].astype(int)
     bloons_dataset.set_index('type',inplace=True)
     return bloons_dataset
 
@@ -31,7 +33,7 @@ def create_pathline() -> List:
         (540, 330), (755, 330), (755, 95), (465, 95), (465, 0)
         ]
      
-def create_rounds_dataset() -> pd.DataFrame:
+def create_rounds_dataframe() -> pd.DataFrame:
     rounds_raw = pd.read_csv("data\\rounds.csv",  encoding='unicode_escape')
     # Clean the data
     rounds_raw['description'] = rounds_raw['description'].replace(",", "", regex=True)

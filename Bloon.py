@@ -1,46 +1,27 @@
 from utils import Circle, is_circle_overlapping, is_point_in_circle
+from datasets import create_pathline, create_bloons_dataframe
 from typing import Tuple, List, Any
 
 class Bloon:
-    PATH_POINTS = [
-        (-20,400), (170,400), (170, 175), (375,175), (375,615), 
-        (95, 615), (95, 760), (755, 760), (755, 525), (540, 525), 
-        (540, 330), (755, 330), (755, 95), (465, 95), (465, -20)
-        ]
-    HEALTH_TYPE_DICT = {
-        1: "R",
-        2: "B",
-        3: "G",
-        4: "Y"
-    }
-    TYPE_COLOR_DICT = {
-        "R":(255, 0, 0),
-        "B":(0,0, 255),
-        "G":(0, 255, 0),
-        "Y":(255,255,0),
-        "W":(255,255,255),
-        "K": (0,0,0)
-    }
+    """
+    Represents a Bloon (creep) in Bloons TD.
+    """
+    RED_BLOON_SPEED = 2
     RADIUS = 20
-    RED_BLOON_SPEED = 5
-    """
-    Represents a Bloon (creep) in Bloons TD
-    """
-    def __init__(self, type_, health, speed) -> None:
+    DF_BLOONS = create_bloons_dataframe(RED_BLOON_SPEED)
+    PATH_POINTS = create_pathline()
+    def __init__(self, type_) -> None:
         self.type = type_
-        self.health = health
-        self.speed = speed
 
-        self.color = Bloon.TYPE_COLOR_DICT[self.type]
+        self.health = Bloon.DF_BLOONS.loc[type_, 'health']
+        self.speed = Bloon.DF_BLOONS.loc[type_, 'speed']
+        self.color = Bloon.DF_BLOONS.loc[type_, 'rgb']
         self.x = Bloon.PATH_POINTS[0][0]
         self.y = Bloon.PATH_POINTS[0][1]
         self.circle = Circle(color=self.color, radius=Bloon.RADIUS, pos=[self.x, self.y])
         self.pathline = 1
         self.target_x = Bloon.PATH_POINTS[self.pathline][0]
         self.target_y = Bloon.PATH_POINTS[self.pathline][1]
-        
-        # self.anteriorx = self.x
-        # self.anteriory = self.y
     
     def overlaps(self, other: Circle) -> bool:
         return is_circle_overlapping(self.circle, other)
@@ -100,7 +81,6 @@ class Bloon:
             endpoint_reached = self.reach_target()
             if endpoint_reached:
                 self.die(bloons_list)
-                print(bloons_list)
                 break
 
     def draw(self, screen) -> None:
