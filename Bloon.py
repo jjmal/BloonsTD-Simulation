@@ -1,8 +1,12 @@
-from utils import Circle, is_circle_overlapping
+from utils import Circle, is_circle_overlapping, is_point_in_circle
+from typing import Tuple
 
 class Bloon:
-    PATH_POINTS = [(0,400), (170,400), (170, 175), (375,175), (375,615), (95, 615), (95, 760), (755, 760), (755, 525), (540, 525), (540, 330), (755, 330), (755, 95), (465, 95), (465, 0)]
-    PATH_CIRCLES = [Circle((0,0,0), 2, [point[0], point[1]]) for point in PATH_POINTS]
+    PATH_POINTS = [
+        (0,400), (170,400), (170, 175), (375,175), (375,615), 
+        (95, 615), (95, 760), (755, 760), (755, 525), (540, 525), 
+        (540, 330), (755, 330), (755, 95), (465, 95), (465, 0)
+        ]
     HEALTH_TYPE_DICT = {
         1: "R",
         2: "B",
@@ -22,9 +26,9 @@ class Bloon:
     """
     Represents a Bloon (creep) in Bloons TD
     """
-    def __init__(self, type_, life, speed) -> None:
+    def __init__(self, type_, health, speed) -> None:
         self.type = type_
-        self.life = life
+        self.health = health
         self.speed = speed
 
         self.color = Bloon.TYPE_COLOR_DICT[self.type]
@@ -39,19 +43,22 @@ class Bloon:
         # self.anteriory = self.y
     
     def overlaps(self, other: Circle) -> bool:
-        return is_circle_overlapping(self, other)
+        return is_circle_overlapping(self.circle, other)
+    
+    def contains(self, point: Tuple[int, int]) -> bool:
+        return is_point_in_circle(self.circle, point[0], point[1])
 
-    def move(self) -> None:
-        # Move 
+    def move_once(self) -> None:
+        # Move 9by one pixel)
         if self.x < self.target_x:
-            self.x += self.speed
+            self.x += 1
         if self.y < self.target_y:
-            self.y += self.speed
+            self.y += 1
 
         if self.x > self.target_x:
-            self.x -= self.speed
+            self.x -= 1
         if self.y > self.target_y:
-            self.y -= self.speed
+            self.y -= 1
 
         # Update circle position
         self.circle.pos[0] = self.x
@@ -62,6 +69,21 @@ class Bloon:
             self.pathline += 1
             self.target_x = Bloon.PATH_POINTS[self.pathline][0]
             self.target_y = Bloon.PATH_POINTS[self.pathline][1]
+    
+    def move(self) -> None:
+        for _ in range(self.speed):
+            self.move_once()
 
     def draw(self, screen) -> None:
         self.circle.draw(screen)
+    
+    def hit(self, damage = int) -> None: # TODO - Finish
+        """
+        Transforms the Bloon into bloon of another type (upod takign damage).
+        """
+        pass
+        # self.health -= damage
+        # new_type = Bloon.HEALTH_TYPE_DICT[self.health]
+        # self.type = new_type
+        # self.color = Bloon.TYPE_COLOR_DICT[self.type]
+

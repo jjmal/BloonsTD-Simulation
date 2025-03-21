@@ -23,9 +23,15 @@ pygame.display.update()
 # Set up the clock
 clock = pygame.time.Clock()
 
-# Set up a Bloon
-bloon = Bloon("W", 1, 5)
-
+# Set up bloons
+bloons = [
+    Bloon("R", 1, 5),
+    Bloon("B", 2, 7),
+    Bloon("G", 3, 9),
+    Bloon("Y", 4, 16),
+    Bloon("K", 5, 9),
+    Bloon("W", 5, 10)
+]
 
 # game loop
 run = True
@@ -36,10 +42,14 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
-    # Game rendering
+    # Backdround rendering
     screen.blit(background, (0, 0))
-    bloon.draw(screen),
-    bloon.move()
+
+    # Bloon movements
+    for bloon in bloons:
+        bloon.move()
+        bloon.draw(screen),
+    
     pygame.display.update()
 
     # Limit the frame rate
