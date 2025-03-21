@@ -42,13 +42,13 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
-    # Backdround rendering
+    # Background rendering
     screen.blit(background, (0, 0))
 
     # Bloon movements
     for bloon in bloons:
-        bloon.move()
-        bloon.draw(screen),
+        bloon.move(bloons)
+        bloon.draw(screen)
     
     pygame.display.update()
 
