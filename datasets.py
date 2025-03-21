@@ -1,5 +1,5 @@
 import pandas as pd
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 
 def create_bloons_dataset(red_bloon_speed: float) -> pd.DataFrame:
     bloon_type = ['R', 'B', 'G', 'Y', 'W', 'K']
@@ -30,11 +30,36 @@ def create_pathline() -> List:
         (95, 615), (95, 760), (755, 760), (755, 525), (540, 525), 
         (540, 330), (755, 330), (755, 95), (465, 95), (465, 0)
         ]
-    
-    
-
+     
 def create_rounds_dataset() -> pd.DataFrame:
-    pass
+    rounds_raw = pd.read_csv("data\\rounds.csv",  encoding='unicode_escape')
+    # Clean the data
+    rounds_raw['description'] = rounds_raw['description'].replace(",", "", regex=True)
+    rounds_raw['description'] = rounds_raw['description'].replace("\xa0", " ", regex=True)
+    # Transform description to list with numbers and types
+    rounds_raw['bloons_info'] = rounds_raw['description'].str.split(" ")
+    
+    def process_bloons_info(bloons_info_line: pd.Series, bloon_type: str) -> int:
+        for i in range(0, len(bloons_info_line), 2):
+            bloon_nr = bloons_info_line[i]
+            bloon_type_in_list = bloons_info_line[i+1]
+            if bloon_type_in_list == bloon_type:
+                return bloon_nr
+        return 0
+
+    for color in ['Red', 'Blue', 'Green', 'Yellow', 'White', 'Black']:
+        rounds_raw[color] = rounds_raw['bloons_info'].apply(process_bloons_info, args=(color,))
+
+    
+    # Rename Columns
+    rename_mapper = {'Red':'R', 'Blue':'B', 'Green':'G', 'Yellow':'Y', 'White':'W', 'Black':'K'}
+    rounds = rounds_raw.rename(columns=rename_mapper).copy()
+    # Keep only relevant columns
+    rounds = rounds.drop(['description', 'bloons_info'], axis = 1).copy()
+    # Add data on money gained at the end of each round
+    rounds['money_round_end'] = rounds['money_total'] - rounds['money_popping_max'] 
+
+    return rounds
 
 def create_tower_dataframe() -> pd.DataFrame:
     pass
