@@ -40,6 +40,7 @@ bloon_manager = BloonManager(25)
 # Round preparation
 bloon_manager.prepare_queue_for_round()
 bloon_manager.shuffle_queue()
+bloon_spawn_frame_counter = 10
 while run:
     # Event loop
     for event in pygame.event.get():
@@ -50,8 +51,12 @@ while run:
     screen.blit(background, (0, 0))
     
     # Spawn bloon from queue
-    if bloon_manager.queue:
-        bloon_manager.spawn_bloon_from_queue()
+    if bloon_spawn_frame_counter >= 10:
+        if bloon_manager.queue:
+            bloon_manager.spawn_bloon_from_queue()
+            bloon_spawn_frame_counter = 1
+    else:
+        bloon_spawn_frame_counter += 1
 
     # Move bloons
     bloon_manager.move_all_bloons(screen)
@@ -60,8 +65,8 @@ while run:
     pygame.display.update()
 
     # Limit the frame rate
-    dt = clock.tick(FPS)/1000
-
+    clock.tick(FPS)
+    
 
 pygame.quit()
 

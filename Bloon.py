@@ -116,10 +116,6 @@ class BloonManager():
 
     def shuffle_queue(self):
         random.shuffle(self.queue)
-
-    def round_start_spawn(self): # TODO - incorporate the rate of spawning
-        for _ in len(self.queue):
-            self.spawn_bloon_from_queue()
     
     def move_bloon(self, bloon: Bloon, screen) -> None:
         speed = bloon.speed
