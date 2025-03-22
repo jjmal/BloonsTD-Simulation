@@ -1,4 +1,5 @@
 import random
+import pygame
 
 from utils import Circle, is_circle_overlapping, is_point_in_circle
 from datasets import create_pathline, create_bloons_dataframe, create_rounds_dataframe
@@ -69,21 +70,6 @@ class Bloon:
                 self.target_y = Bloon.PATH_POINTS[self.pathline][1]
         # If endpoint was not reached, send a signal with that info
         return False
-    
-    def die(self, bloons_list: List[Any]) -> None:
-        bloons_list.remove(self)
-
-    def move(self, bloons_list: List[Any]) -> None:
-        """
-        Performs movement by the numbertaking into account speed. Also resolves  
-        :param bloons_list: list of active Bloons.
-        """
-        for _ in range(self.speed):
-            self.move_once()
-            endpoint_reached = self.reach_target()
-            if endpoint_reached:
-                self.die(bloons_list)
-                break
 
     def draw(self, screen) -> None:
         self.circle.draw(screen)
@@ -100,15 +86,15 @@ class Bloon:
 
 class BloonManager():
     """
-    Manages Bloon spawns each round and keeps existing of Bloons.
+    Manages Bloon spawns and movement each round and keeps track of existing of Bloons.
     """
     SPAWN_RATE = 5 # nr of bloons spawned per second (on 60 FPS)
     DF_ROUNDS = create_rounds_dataframe()
 
-    def __init__(self):
+    def __init__(self, round_nr: int = 1):
         self.bloon_list = []
         self.queue = []
-        self.round_nr = 1
+        self.round_nr = round_nr
 
     def enqueue_bloon(self, bloon_type: str) -> None:
         self.queue.append(Bloon(bloon_type))
@@ -125,12 +111,27 @@ class BloonManager():
 
     def prepare_queue_for_round(self):
         for bloon_type in ['K', 'W', 'Y', 'G', 'B', 'R']:
-            for _ in range(BloonManager.DF_ROUNDS.loc[self.round_nr, bloon_type]):
+            for _ in range(int(BloonManager.DF_ROUNDS.loc[self.round_nr, bloon_type])):
                 self.enqueue_bloon(bloon_type)
 
     def shuffle_queue(self):
-        self.queue = random.shuffle(self.queue)
+        random.shuffle(self.queue)
 
     def round_start_spawn(self): # TODO - incorporate the rate of spawning
         for _ in len(self.queue):
             self.spawn_bloon_from_queue()
+    
+    def move_bloon(self, bloon: Bloon, screen) -> None:
+        speed = bloon.speed
+        for _ in range(speed):
+            bloon.move_once()
+            endpoint_reached = bloon.reach_target()
+            if endpoint_reached:
+                self.remove_bloon(bloon)
+                break
+        bloon.draw(screen)
+
+    def move_all_bloons(self, screen) -> None:
+        for bloon in self.bloon_list:
+            self.move_bloon(bloon, screen)
+            
