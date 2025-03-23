@@ -2,41 +2,42 @@ import pygame
 import sys
 import math
 import random
+from typing import List
+from Bloon import Bloon
+
+from utils import Circle, is_circle_overlapping
 
 
 class Tower:
-    def __init__(self, name, x, y, damage, attacks_per_second):
+    def __init__(self, name, x, y, damage, attacks_per_second, footprint_size):
         self.name = name
         self.x = x
         self.y = y
-        self.transformou = False
-        self.makeup = 0
         self.damage = damage
-        self.pierce = 2
-        self.rotation = 0
-        self.range = 100  # New attribute
+        self.footprint_size = footprint_size
+
+        self.pierce = 1
+        self.range = 100  
         self.pops = 0
         self.upgrade1 = False
         self.upgrade2 = False
         self.projectiles = []
-        # self.spritedart = pygame.image.load("sprites\Monkeys\darts\dart.png").convert_alpha()
-        # self.sprite = dart_monkey_sprite
-        # self.sprite_original = self.sprite
         self.attacks_per_second = attacks_per_second
         self.attack_timer = 0
-        self.rect = self.sprite.get_rect()
+        self.color = (150,75,0)
+        self.footprint = Circle(self.color, self.footprint_size, [self.x, self.y])
     
     def draw(self, screen):
-        screen.blit(self.sprite, (self.x, self.y))
-        for projectile in self.projectiles:  # New code
+        self.circle.draw(screen)
+        for projectile in self.projectiles:  
             projectile.draw()
 
-    def find_target(self, value):
+    def find_target(self, bloon_list: List[Bloon]):
         min_distance = float("inf")
         target = None
-        if len(Bloons) > 0:
-            primeiro = Bloons[0]
-            for value in Bloons:
+        if len(bloon_list) > 0:
+            primeiro = bloon_list[0]
+            for value in bloon_list:
                 distance = math.sqrt((value.x - self.x) **
                                     2 + (value.y - self.y) ** 2)
                 distancep = math.sqrt((primeiro.x - self.x) **
@@ -49,4 +50,12 @@ class Tower:
                     target = value
             return target
         
-    
+    def attack_target(self):
+        pass
+
+class Projectile:
+    def __init__(self):
+        pass
+
+    def draw(self, screen):
+        self.circle.draw(screen)

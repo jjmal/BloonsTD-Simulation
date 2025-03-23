@@ -110,7 +110,7 @@ class BloonManager():
         self.bloon_list.remove(bloon)
 
     def prepare_queue_for_round(self):
-        for bloon_type in ['K', 'W', 'Y', 'G', 'B', 'R']:
+        for bloon_type in ['R', 'B', 'G', 'K', 'W', 'Y']:
             for _ in range(int(BloonManager.DF_ROUNDS.loc[self.round_nr, bloon_type])):
                 self.enqueue_bloon(bloon_type)
 

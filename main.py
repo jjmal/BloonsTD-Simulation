@@ -36,13 +36,13 @@ clock = pygame.time.Clock()
 # game loop
 run = True
 FPS = 60
-bloon_manager = BloonManager(50)
+bloon_manager = BloonManager(1)
 # Round preparation
 bloon_manager.prepare_queue_for_round()
 bloon_manager.shuffle_queue()
-bloons_per_sec = 12
-bloon_spawn_frame_counter = 60/bloons_per_sec
-bloons_spawn_frame_threshold = bloon_spawn_frame_counter 
+bloons_per_sec = 2
+bloons_spawn_frame_threshold = 60/bloons_per_sec
+bloon_spawn_frame_counter = bloons_spawn_frame_threshold
 
 while run:
     # Event loop

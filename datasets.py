@@ -69,5 +69,25 @@ def create_rounds_dataframe() -> pd.DataFrame:
 
     return rounds
 
-def create_tower_dataframe() -> pd.DataFrame:
-    pass
+def create_towers_dataframe() -> pd.DataFrame:
+    tower_name = ['Dart', 'Tack', 'Ice', 'Bomb', 'Super Monkey']
+    tower_cost = [250, 320, 850, 720, 4000]
+    tower_upgrade_1_cost = [210, 250, 450, 650, pd.NA]
+    tower_upgrade_2_cost = [100, 150, 300, 250, 2400]
+    tower_range = [100, 70, 60, 120, 140]
+    tower_upgrade_2_range = [125, 80, 70, 140, 240]
+    tower_attack_cooldown= [1.2, 1.5, 2.5, 1.42, 0.05]
+    tower_footprint = []
+    
+    towers_dataset = pd.DataFrame(
+        {
+            "name" : tower_name,
+            "cost": tower_cost,
+            "upgrade_1_cost": tower_upgrade_1_cost,
+            "upgrade_2_cost": tower_upgrade_2_cost,
+            "range": tower_range,
+            "upgrade_2_range": tower_upgrade_2_range,
+            "attack_cooldown" : tower_attack_cooldown,
+            "tower_footprint" :  tower_footprint
+        }
+    )
