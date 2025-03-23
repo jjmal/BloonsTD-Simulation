@@ -80,6 +80,9 @@ def create_towers_dataframe() -> pd.DataFrame:
     tower_footprint_radius = [10,10,10,10, 15] 
     projectile_speed = [20, 15, pd.NA, 11, 20]
     projectile_lifespan_frames = [7, 5, pd.NA, 18, 20]
+    color_outer = [(123, 63, 0), (255, 182, 193), (255, 255, 255),(211, 211, 211), (100, 149, 237)]
+    color_inner = [(234, 221, 202), (211, 211, 211), (240, 255, 255),(0,0,0), (220, 20, 60)]
+    
     
     towers_dataset = pd.DataFrame(
         {
@@ -92,15 +95,16 @@ def create_towers_dataframe() -> pd.DataFrame:
             "attack_cooldown_frames" : tower_attack_cooldown_frames,
             "footprint_radius" : tower_footprint_radius,
             "projectile_speed" : projectile_speed,
-            "projectile_lifespan_frames" : projectile_lifespan_frames
-
+            "projectile_lifespan_frames" : projectile_lifespan_frames,
+            "color_outer": color_outer,
+            "color_inner" : color_inner
         }
     )
 
     # Add cumulative cost information
-    towers_dataset['cumulative_cost_upgrade_1'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost']
-    towers_dataset['cumulative_cost_upgrade_2'] = towers_dataset['cost'] + towers_dataset['upgrade_2_cost']
-    towers_dataset['cumulative_cost'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost'] + towers_dataset['upgrade_2_cost']
+    # towers_dataset['cumulative_cost_upgrade_1'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost']
+    # towers_dataset['cumulative_cost_upgrade_2'] = towers_dataset['cost'] + towers_dataset['upgrade_2_cost']
+    # towers_dataset['cumulative_cost'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost'] + towers_dataset['upgrade_2_cost']
 
     # Set index to be Bloon type
     towers_dataset.set_index('name', inplace=True)

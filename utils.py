@@ -64,3 +64,33 @@ def draw_polygon_alpha(surface, color, points):
     shape_surf = pygame.Surface(target_rect.size, pygame.SRCALPHA)
     pygame.draw.polygon(shape_surf, color, [(x - min_x, y - min_y) for x, y in points])
     surface.blit(shape_surf, target_rect)
+
+
+# pygame.init()
+# window = pygame.display.set_mode((250, 250))
+# clock = pygame.time.Clock()
+
+# background = pygame.Surface(window.get_size())
+# ts, w, h, c1, c2 = 50, *window.get_size(), (160, 160, 160), (192, 192, 192)
+# tiles = [((x*ts, y*ts, ts, ts), c1 if (x+y) % 2 == 0 else c2) for x in range((w+ts-1)//ts) for y in range((h+ts-1)//ts)]
+# for rect, color in tiles:
+#     pygame.draw.rect(background, color, rect)
+
+# run = True
+# while run:
+#     clock.tick(60)
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             run = False
+
+#     window.blit(background, (0, 0))
+
+#     draw_rect_alpha(window, (0, 0, 255, 127), (55, 90, 140, 140))
+#     draw_circle_alpha(window, (255, 0, 0, 127), (150, 100), 80)
+#     draw_polygon_alpha(window, (255, 255, 0, 127), 
+#         [(100, 10), (100 + 0.8660 * 90, 145), (100 - 0.8660 * 90, 145)])
+
+#     pygame.display.flip()
+
+# pygame.quit()
+# exit()

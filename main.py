@@ -13,11 +13,11 @@ height = 480
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Bloons TD Simulation")
 
-# Load background image
-background = pygame.image.load("assets\\maps\\BTD1_Map.png").convert()
+# Load background image and surface
+background_graphic = pygame.image.load("assets\\maps\\BTD1_Map.png").convert_alpha()
 
-# Draw the background
-screen.blit(background, (0, 0))
+# Draw the backgrounds
+screen.blit(background_graphic, (0, 0))
 pygame.display.update()
 
 # Set up the clock
@@ -59,8 +59,9 @@ while run:
             run = False
 
     # Background rendering
-    screen.blit(background, (0, 0))
-    pygame.draw.rect(screen, (128,128,128, 0.1), right_side_rect)
+    screen.blit(background_graphic, (0, 0))
+    # pygame.draw.rect(screen, (220,220,220,0.5), right_side_rect)
+    draw_rect_alpha(screen, (220,220,220,175), right_side_rect)
 
     # Spawn bloon from queue
     if last_spawned_bloon.x >= bloons_spawn_line:
