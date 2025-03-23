@@ -3,18 +3,18 @@ import sys
 import math
 import random
 from Bloon import Bloon, BloonManager
-from utils import Circle
+from utils import Circle, draw_rect_alpha
 
 pygame.init()
 
  # Set screen parameters
-width = 830
-height = 842
+width = 640
+height = 480
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Bloons TD Simulation")
 
 # Load background image
-background = pygame.image.load("assets\\maps\\BTD1Map.png").convert()
+background = pygame.image.load("assets\\maps\\BTD1_Map.png").convert()
 
 # Draw the background
 screen.blit(background, (0, 0))
@@ -33,16 +33,24 @@ clock = pygame.time.Clock()
 #     Bloon("W")
 # ]
 
-# game loop
+# game loop info
 run = True
-FPS = 60
-bloon_manager = BloonManager(1)
+FPS = 40
+
+# Prepare the right-side rectangle to render
+right_side_rect = pygame.Rect(480, 0, 160, 480)
+
 # Round preparation
+bloon_manager = BloonManager(18)
 bloon_manager.prepare_queue_for_round()
-bloon_manager.shuffle_queue()
-bloons_per_sec = 2
-bloons_spawn_frame_threshold = 60/bloons_per_sec
-bloon_spawn_frame_counter = bloons_spawn_frame_threshold
+# bloon_manager.shuffle_queue()
+
+bloons_spawn_line = 20
+
+
+# Spawn initial bloon
+if bloon_manager.queue:
+    last_spawned_bloon = bloon_manager.spawn_bloon_from_queue()
 
 while run:
     # Event loop
@@ -52,14 +60,12 @@ while run:
 
     # Background rendering
     screen.blit(background, (0, 0))
-    
+    pygame.draw.rect(screen, (128,128,128, 0.1), right_side_rect)
+
     # Spawn bloon from queue
-    if bloon_spawn_frame_counter >= bloons_spawn_frame_threshold:
+    if last_spawned_bloon.x >= bloons_spawn_line:
         if bloon_manager.queue:
-            bloon_manager.spawn_bloon_from_queue()
-            bloon_spawn_frame_counter = 1
-    else:
-        bloon_spawn_frame_counter += 1
+            last_spawned_bloon  = bloon_manager.spawn_bloon_from_queue()
 
     # Move bloons
     bloon_manager.move_all_bloons(screen)

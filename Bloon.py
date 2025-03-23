@@ -10,7 +10,7 @@ class Bloon:
     Represents a Bloon (creep) in Bloons TD.
     """
     RED_BLOON_SPEED = 2
-    RADIUS = 20
+    RADIUS = 10
     DF_BLOONS = create_bloons_dataframe(RED_BLOON_SPEED)
     PATH_POINTS = create_pathline()
     def __init__(self, type_) -> None:
@@ -99,12 +99,15 @@ class BloonManager():
     def enqueue_bloon(self, bloon_type: str) -> None:
         self.queue.append(Bloon(bloon_type))
 
-    def spawn_bloon_from_queue(self) -> None:
-        self.bloon_list.append(self.queue.pop(0))
+    def spawn_bloon_from_queue(self) -> Bloon:
+        spawned_bloon = self.queue.pop(0)
+        self.bloon_list.append(spawned_bloon )
+        return spawned_bloon 
 
-    def spawn_bloon_outside_queue(self, bloon_type: str) -> None:
+    def spawn_bloon_outside_queue(self, bloon_type: str) -> Bloon:
         new_bloon = Bloon(bloon_type)
         self.bloon_list.append(new_bloon)
+        return new_bloon
     
     def remove_bloon(self, bloon: Bloon) -> None:
         self.bloon_list.remove(bloon)

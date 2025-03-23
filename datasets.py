@@ -31,9 +31,9 @@ def create_bloons_dataframe(red_bloon_speed: float) -> pd.DataFrame:
 
 def create_pathline() -> List:
     return [
-        (-20,400), (170,400), (170, 175), (375,175), (375,615), 
-        (95, 615), (95, 760), (755, 760), (755, 525), (540, 525), 
-        (540, 330), (755, 330), (755, 95), (465, 95), (465, -20)
+        (-10,230), (95,230), (95, 100), (210,100), (210,350), 
+        (55,350), (55,430), (425,430), (425,300), (305,300), 
+        (305,185), (430,185), (430,55), (265,55), (265,-10)
         ]
      
 def create_rounds_dataframe() -> pd.DataFrame:
@@ -76,7 +76,7 @@ def create_towers_dataframe() -> pd.DataFrame:
     tower_upgrade_2_cost = [100, 150, 300, 250, 2400]
     tower_range = [100, 70, 60, 120, 140]
     tower_upgrade_2_range = [125, 80, 70, 140, 240]
-    tower_attack_cooldown= [1.2, 1.5, 2.5, 1.42, 0.05]
+    tower_attack_cooldown_frame = [1.2, 1.5, 2.5, 1.42, 0.05]
     tower_footprint = []
     
     towers_dataset = pd.DataFrame(
