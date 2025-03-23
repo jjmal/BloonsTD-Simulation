@@ -3,6 +3,7 @@ import sys
 import math
 import random
 from Bloon import Bloon, BloonManager
+from Tower import DartTower
 from utils import Circle, draw_rect_alpha
 
 pygame.init()
@@ -44,9 +45,10 @@ right_side_rect = pygame.Rect(480, 0, 160, 480)
 bloon_manager = BloonManager(18)
 bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
-
 bloons_spawn_line = 20
-
+towers = []
+towers.append(DartTower(150,150))
+towers.append(DartTower(400,250))
 
 # Spawn initial bloon
 if bloon_manager.queue:
@@ -70,12 +72,17 @@ while run:
 
     # Move bloons
     bloon_manager.move_all_bloons(screen)
-    
+
+    # Test Towers
+    for tower in towers:
+        tower.draw(screen)
+   
+
     # Update display
     pygame.display.update()
 
     # Limit the frame rate
-    clock.tick(FPS)
+    print(clock.tick(FPS))
     
 
 pygame.quit()
