@@ -72,12 +72,14 @@ def create_rounds_dataframe() -> pd.DataFrame:
 def create_towers_dataframe() -> pd.DataFrame:
     tower_name = ['Dart', 'Tack', 'Ice', 'Bomb', 'Super Monkey']
     tower_cost = [250, 320, 850, 720, 4000]
-    tower_upgrade_1_cost = [210, 250, 450, 650, pd.NA]
+    tower_upgrade_1_cost = [210, 250, 450, 650, 0]
     tower_upgrade_2_cost = [100, 150, 300, 250, 2400]
     tower_range = [100, 70, 60, 120, 140]
     tower_upgrade_2_range = [125, 80, 70, 140, 240]
-    tower_attack_cooldown_frame = [1.2, 1.5, 2.5, 1.42, 0.05]
-    tower_footprint = []
+    tower_attack_cooldown_frames = [29, 55, 100, 55, 2]
+    tower_footprint_radius = [10,10,10,10, 15] 
+    projectile_speed = [20, 15, pd.NA, 11, 20]
+    projectile_lifespan_frames = [7, 5, pd.NA, 18, 20]
     
     towers_dataset = pd.DataFrame(
         {
@@ -87,7 +89,21 @@ def create_towers_dataframe() -> pd.DataFrame:
             "upgrade_2_cost": tower_upgrade_2_cost,
             "range": tower_range,
             "upgrade_2_range": tower_upgrade_2_range,
-            "attack_cooldown" : tower_attack_cooldown,
-            "tower_footprint" :  tower_footprint
+            "attack_cooldown_frames" : tower_attack_cooldown_frames,
+            "footprint_radius" : tower_footprint_radius,
+            "projectile_speed" : projectile_speed,
+            "projectile_lifespan_frames" : projectile_lifespan_frames
+
         }
     )
+
+    # Add cumulative cost information
+    towers_dataset['cumulative_cost_upgrade_1'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost']
+    towers_dataset['cumulative_cost_upgrade_2'] = towers_dataset['cost'] + towers_dataset['upgrade_2_cost']
+    towers_dataset['cumulative_cost'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost'] + towers_dataset['upgrade_2_cost']
+
+    # Set index to be Bloon type
+    towers_dataset.set_index('name', inplace=True)
+
+    return towers_dataset
+
