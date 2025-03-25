@@ -37,13 +37,13 @@ clock = pygame.time.Clock()
 
 # game loop info
 run = True
-FPS = 40
+FPS = 40*2
 
 # Prepare the right-side rectangle to render
 right_side_rect = pygame.Rect(480, 0, 160, 480)
 
 # Round preparation
-bloon_manager = BloonManager(20)
+bloon_manager = BloonManager(3)
 bloon_manager.prepare_queue_for_round()
 bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
@@ -83,7 +83,7 @@ while run:
         tower.shoot(bloon_manager.bloon_list)
         tower.update_attack_counter()
         tower.move_projectiles()    
-        tower.check_for_projectile_collisions(bloon_manager.bloon_list)
+        tower.check_for_projectile_collisions(bloon_manager)
         
     ## Drawing
     for tower in towers:

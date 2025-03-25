@@ -77,15 +77,9 @@ class Bloon:
 
     def draw(self, screen) -> None:
         self.circle.draw(screen)
-    
-    def hit(self) -> None: # TODO - Finish
-        """
-        Transforms the Bloon into bloon of another type (upod takign damage).
-        """
-        # Get damaged
-        pass
 
-class BloonManager():
+
+class BloonManager:
     """
     Manages Bloon spawns and movement each round and keeps track of existing of Bloons.
     """
@@ -129,6 +123,34 @@ class BloonManager():
             if endpoint_reached:
                 self.remove_bloon(bloon)
                 break
+    
+    def resolve_bloon_hit(self, bloon: Bloon) -> None:
+        """
+        Resolves Bloon being hit by a projectile.
+        :param bloon: Bloon that gets hit.
+        """
+        # Get damaged
+        bloon.health += -1
+
+        # Check for death
+        if bloon.health <= 0:
+            self.remove_bloon(bloon)
+        else:
+            # Transform Bloon 
+            if bloon.type == 'B':
+                into = 'R'
+            if bloon.type == 'G':
+                into = 'B'
+            if bloon.type == 'Y':
+                into = 'G'
+            if bloon.type == 'W' or bloon.type == 'K':
+                into == 'Y'
+            bloon.type = into
+            bloon.speed = Bloon.DF_BLOONS.loc[into, 'speed']
+            bloon.color = Bloon.DF_BLOONS.loc[into, 'rgb']
+            bloon.circle = Circle(color=bloon.color, radius=Bloon.RADIUS, pos=[bloon.x, bloon.y])
+
+
 
     def move_all_bloons(self) -> None:
         for bloon in self.bloon_list:

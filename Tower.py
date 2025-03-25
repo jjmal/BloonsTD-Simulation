@@ -3,7 +3,7 @@ import sys
 import math
 import random
 from typing import List
-from Bloon import Bloon
+from Bloon import Bloon, BloonManager
 
 from datasets import create_towers_dataframe
 from utils import Circle, is_circle_overlapping, is_point_in_circle, draw_circle_alpha
@@ -82,7 +82,6 @@ class Tower:
             target = self.find_target(bloon_list)
             self.spawn_projectile(target)
             
-
     def move_projectiles(self) -> None:
         for projectile in self.projectile_list: 
             if projectile.lifespan_counter < projectile.lifespan_frames:
@@ -90,17 +89,13 @@ class Tower:
             else:
                 self.remove_projectile(projectile)
     
-    def check_for_projectile_collisions(self, bloon_list: List[Bloon]) -> None:
+    def check_for_projectile_collisions(self, bloon_manager: BloonManager) -> None:
         for projectile in self.projectile_list:
-            hit_something = projectile.collide(bloon_list)
+            hit_something = projectile.collide(bloon_manager)
             if hit_something:
                 self.remove_projectile(projectile)
 
     
-   
-
-
-
 class DartTower(Tower):
     """
     Represents a Tower in Bloons TD.
@@ -124,6 +119,7 @@ class DartTower(Tower):
     
     def get_upgrade_2(self):
         self.range = Tower.DF_TOWERS.loc['Dart', "upgrade_2_range"]
+
 
 class TowerManager:
     """
@@ -149,12 +145,15 @@ class TowerManager:
         else:
             tower.get_upgrade_2()
     
-    def move_all(self) -> None:
+    def update_all_towers(self, bloon_list: List[Bloon]) -> None:
         for tower in self.tower_list:
-            target = tower.find_target()
+            target = tower.find_target(bloon_list)
             tower.spawn_projectile(target)
             tower.move_projectiles()
-            tower.draw()
+    
+    def draw_all_towers(self, screen) -> None:
+        for tower in self.tower_list:
+            tower.draw(screen)
 
     def next_round(self):
         self.round_nr += 1
@@ -195,14 +194,19 @@ class Projectile:
         self.lifespan_counter += 1
         
     
-    def collide(self, bloon_list: List[Bloon]) -> bool:
+    def collide(self, bloon_manager: BloonManager) -> bool:
+        """
+        Checks for collision with bloons. 
+        :returns: true if the collision has occured; false otherwise
+        """
         hit_set = set()
+        bloon_list = bloon_manager.bloon_list
         if len(bloon_list) > 0:
             for bloon in  bloon_list:
                 if is_circle_overlapping(bloon.circle, self.circle):
                     hit_set.add(bloon)
             if len(hit_set) > 0:
                 hit_bloon = hit_set.pop()
-                hit_bloon.hit()
+                bloon_manager.resolve_bloon_hit(hit_bloon)
                 return True
         return False
