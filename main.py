@@ -37,7 +37,7 @@ clock = pygame.time.Clock()
 
 # game loop info
 run = True
-FPS = 40*2
+FPS = 40
 
 # Prepare the right-side rectangle to render
 right_side_rect = pygame.Rect(480, 0, 160, 480)
@@ -49,6 +49,7 @@ bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
 towers.append(DartTower(150,150))
+towers.append(DartTower(250,200))
 attacked = 0
 
 # Spawn initial bloon

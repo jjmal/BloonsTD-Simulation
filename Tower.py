@@ -36,7 +36,7 @@ class Tower:
         self.upgrade1 = False
         self.upgrade2 = False
         self.projectile_list: List[Projectile] = []
-        self.attack_counter = 1
+        self.attack_counter = self.attack_cooldown_frames
         self.footprint = Circle(self.colors[0], self.footprint_radius, [self.x, self.y])
         self.inner_circle = Circle(self.colors[1], self.footprint_radius - 5, [self.x, self.y])
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])

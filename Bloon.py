@@ -144,7 +144,7 @@ class BloonManager:
             if bloon.type == 'Y':
                 into = 'G'
             if bloon.type == 'W' or bloon.type == 'K':
-                into == 'Y'
+                into = 'Y'
             bloon.type = into
             bloon.speed = Bloon.DF_BLOONS.loc[into, 'speed']
             bloon.color = Bloon.DF_BLOONS.loc[into, 'rgb']
