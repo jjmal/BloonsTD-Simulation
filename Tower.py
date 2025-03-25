@@ -36,7 +36,7 @@ class Tower:
         self.upgrade1 = False
         self.upgrade2 = False
         self.projectile_list: List[Projectile] = []
-        self.attack_timer = 0
+        self.attack_counter = 1
         self.footprint = Circle(self.colors[0], self.footprint_radius, [self.x, self.y])
         self.inner_circle = Circle(self.colors[1], self.footprint_radius - 5, [self.x, self.y])
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
@@ -71,16 +71,28 @@ class Tower:
     def remove_projectile(self, projectile) -> None:
         self.projectile_list.remove(projectile)
 
+    def update_attack_counter(self) -> None:
+        if self.attack_counter >= self.attack_cooldown_frames:
+            self.attack_counter = 1
+        else:
+            self.attack_counter += 1
+
+    def attack(self, bloon_list: List[Bloon]) -> None:
+        if self.attack_counter >= self.attack_cooldown_frames:
+            target = self.find_target(bloon_list)
+            self.spawn_projectile(target)
+            
+
     def move_projectiles(self) -> None:
         for projectile in self.projectile_list: 
             if projectile.lifespan_counter < projectile.lifespan_frames:
                 projectile.move()
             else:
                 self.remove_projectile(projectile)
+        
+
     
-    def attack(self, bloon_list: List[Bloon]) -> None:
-        target = self.find_target(bloon_list)
-        self.spawn_projectile(target)
+   
 
 
 

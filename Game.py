@@ -11,6 +11,11 @@ class Game:
     """
     Object for running the simulation.
     """
+    def __init__(self, starting_lives, starting_money, starting_round) -> None:
+        self.lives = starting_lives
+        self.monet = starting_money
+        self.round = starting_round
+        
 
     def load_screen(self) -> None:
         """
