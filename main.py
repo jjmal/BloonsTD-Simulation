@@ -76,8 +76,6 @@ while run:
 
     # Move bloons
     bloon_manager.move_all_bloons()
-
-    # Draw all bloons
     
 
     # Test Towers

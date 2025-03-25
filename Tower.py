@@ -50,11 +50,14 @@ class Tower:
        
     def find_target(self, bloon_list: List[Bloon]) -> Bloon:
             target = None
-            if bloon_list:
+            max_progress = 0
+            if len(bloon_list) > 0:
                 for bloon in bloon_list:
                     if is_point_in_circle(self.range_circle, bloon.x, bloon.y):
-                        target = bloon
-                        return target
+                        if max_progress <= bloon.progress:
+                            target = bloon
+                            max_progress = bloon.progress
+            return target
     
     # Idea for movement in any direction taken from https://www.youtube.com/watch?v=3DeW-7vbc50&ab_channel=NealHoltschulte
     def spawn_projectile(self, target: Bloon) -> None:
@@ -93,7 +96,7 @@ class DartTower(Tower):
             cost = Tower.DF_TOWERS.loc['Dart', "cost"], 
             cost_upgrade_1 = Tower.DF_TOWERS.loc['Dart', "upgrade_1_cost"], 
             cost_upgrade_2 = Tower.DF_TOWERS.loc['Dart', "upgrade_2_cost"], 
-            range_ = Tower.DF_TOWERS.loc['Dart', "range"] + 20, 
+            range_ = Tower.DF_TOWERS.loc['Dart', "range"], 
             projectile_speed = Tower.DF_TOWERS.loc['Dart', "projectile_speed"], 
             projectile_lifetime_frames = Tower.DF_TOWERS.loc['Dart', "projectile_lifespan_frames"], 
             colors = [Tower.DF_TOWERS.loc['Dart', "color_outer"], Tower.DF_TOWERS.loc['Dart', "color_inner"]]

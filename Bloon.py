@@ -25,6 +25,7 @@ class Bloon:
         self.pathline = 1
         self.target_x = Bloon.PATH_POINTS[self.pathline][0]
         self.target_y = Bloon.PATH_POINTS[self.pathline][1]
+        self.progress = 0
     
     def overlaps(self, other: Circle) -> bool:
         return is_circle_overlapping(self.circle, other)
@@ -50,6 +51,9 @@ class Bloon:
         # Update circle position
         self.circle.pos[0] = self.x
         self.circle.pos[1] = self.y
+
+        # Update progress
+        self.progress += 1
         
     def reach_target(self) -> bool:
         """
