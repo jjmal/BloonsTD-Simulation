@@ -78,11 +78,7 @@ class Bloon:
         """
         Transforms the Bloon into bloon of another type (upod takign damage).
         """
-        pass
-        # self.health -= damage
-        # new_type = Bloon.HEALTH_TYPE_DICT[self.health]
-        # self.type = new_type
-        # self.color = Bloon.TYPE_COLOR_DICT[self.type]
+        print("Hit!")
 
 class BloonManager():
     """
@@ -120,7 +116,7 @@ class BloonManager():
     def shuffle_queue(self):
         random.shuffle(self.queue)
     
-    def move_bloon(self, bloon: Bloon, screen) -> None:
+    def move_bloon(self, bloon: Bloon) -> None:
         speed = bloon.speed
         for _ in range(speed):
             bloon.move_once()
@@ -128,9 +124,11 @@ class BloonManager():
             if endpoint_reached:
                 self.remove_bloon(bloon)
                 break
-        bloon.draw(screen)
 
-    def move_all_bloons(self, screen) -> None:
+    def move_all_bloons(self) -> None:
         for bloon in self.bloon_list:
-            self.move_bloon(bloon, screen)
-            
+            self.move_bloon(bloon)
+    
+    def draw_all_bloons(self,screen) -> None:
+        for bloon in self.bloon_list:
+            bloon.draw(screen)
