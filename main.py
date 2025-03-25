@@ -80,9 +80,10 @@ while run:
 
     # Test Towers
     for tower in towers:
-        tower.attack(bloon_manager.bloon_list)
+        tower.shoot(bloon_manager.bloon_list)
         tower.update_attack_counter()
         tower.move_projectiles()    
+        tower.check_for_projectile_collisions(bloon_manager.bloon_list)
         
     ## Drawing
     for tower in towers:

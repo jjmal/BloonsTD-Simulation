@@ -77,7 +77,7 @@ class Tower:
         else:
             self.attack_counter += 1
 
-    def attack(self, bloon_list: List[Bloon]) -> None:
+    def shoot(self, bloon_list: List[Bloon]) -> None:
         if self.attack_counter >= self.attack_cooldown_frames:
             target = self.find_target(bloon_list)
             self.spawn_projectile(target)
@@ -89,6 +89,10 @@ class Tower:
                 projectile.move()
             else:
                 self.remove_projectile(projectile)
+    
+    def check_for_projectile_collisions(self, bloon_list: List[Bloon]) -> None:
+        for projectile in self.projectile_list:
+            projectile.collide(bloon_list)
         
 
     
@@ -170,13 +174,13 @@ class Projectile:
         self.vx = self.dx*self.speed
         self.vy = self.dy*self.speed
         self.damage = 1
-        self.radius = 2
+        self.radius = 3
         self.circle = Circle((139, 0, 139), self.radius, [self.x, self.y])
         self.lifespan_frames = lifespan_frames
         self.lifespan_counter = 1
         
     def draw(self, screen) -> None:
-        self.circle.draw(screen)
+        self.circle.draw(screen, outline=False)
 
     # Idea for movement in any direction taken from https://www.youtube.com/watch?v=3DeW-7vbc50&ab_channel=NealHoltschulte
     def move(self) -> None:
@@ -191,13 +195,14 @@ class Projectile:
         self.lifespan_counter += 1
         
     
-    def collide(self, bloons_in_range: List[Bloon]) -> bool:
-        damage_set = {}
-        if bloons_in_range:
-            for bloon in bloons_in_range:
+    def collide(self, bloon_list: List[Bloon]) -> bool:
+        hit_set = set()
+        if len(bloon_list) > 0:
+            for bloon in  bloon_list:
                 if is_circle_overlapping(bloon.circle, self.circle):
-                    damage_set.add(bloon)
-            hit_bloon = damage_set.pop()
-            hit_bloon.hit()
-            return True
+                    hit_set.add(bloon)
+            if len(hit_set) > 0:
+                hit_bloon = hit_set.pop()
+                hit_bloon.hit()
+                return True
         return False
