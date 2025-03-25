@@ -92,8 +92,9 @@ class Tower:
     
     def check_for_projectile_collisions(self, bloon_list: List[Bloon]) -> None:
         for projectile in self.projectile_list:
-            projectile.collide(bloon_list)
-        
+            hit_something = projectile.collide(bloon_list)
+            if hit_something:
+                self.remove_projectile(projectile)
 
     
    
@@ -173,7 +174,6 @@ class Projectile:
 
         self.vx = self.dx*self.speed
         self.vy = self.dy*self.speed
-        self.damage = 1
         self.radius = 3
         self.circle = Circle((139, 0, 139), self.radius, [self.x, self.y])
         self.lifespan_frames = lifespan_frames

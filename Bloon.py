@@ -78,11 +78,12 @@ class Bloon:
     def draw(self, screen) -> None:
         self.circle.draw(screen)
     
-    def hit(self, damage = int) -> None: # TODO - Finish
+    def hit(self) -> None: # TODO - Finish
         """
         Transforms the Bloon into bloon of another type (upod takign damage).
         """
-        print("Hit!")
+        # Get damaged
+        pass
 
 class BloonManager():
     """
