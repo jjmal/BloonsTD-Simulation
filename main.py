@@ -45,11 +45,12 @@ right_side_rect = pygame.Rect(480, 0, 160, 480)
 # Round preparation
 bloon_manager = BloonManager(3)
 bloon_manager.prepare_queue_for_round()
-bloon_manager.shuffle_queue()
+# bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(DartTower(150,150))
-towers.append(DartTower(250,200))
+# towers.append(DartTower(150,150))
+towers.append(DartTower(200,200))
+towers[0].get_upgrade_2()
 attacked = 0
 
 # Spawn initial bloon

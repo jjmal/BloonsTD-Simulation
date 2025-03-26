@@ -36,13 +36,13 @@ class Tower:
         self.upgrade1 = False
         self.upgrade2 = False
         self.projectile_list: List[Projectile] = []
-        self.attack_counter = self.attack_cooldown_frames
+        self.attack_counter = self.attack_cooldown_frames 
         self.footprint = Circle(self.colors[0], self.footprint_radius, [self.x, self.y])
         self.inner_circle = Circle(self.colors[1], self.footprint_radius - 5, [self.x, self.y])
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
     
     def draw(self, screen) -> None:
-        draw_circle_alpha(screen, (220,220,220,150), (self.x, self.y), self.range)
+        draw_circle_alpha(screen, (220,220,220,100), (self.x, self.y), self.range)
         self.footprint.draw(screen)
         self.inner_circle.draw(screen)
         for projectile in self.projectile_list:  
@@ -93,7 +93,9 @@ class Tower:
         for projectile in self.projectile_list:
             hit_something = projectile.collide(bloon_manager)
             if hit_something:
-                self.remove_projectile(projectile)
+                projectile.pierce -= 1
+                if projectile.pierce <= 0:
+                    self.remove_projectile(projectile)
 
     
 class DartTower(Tower):
@@ -119,6 +121,8 @@ class DartTower(Tower):
     
     def get_upgrade_2(self):
         self.range = Tower.DF_TOWERS.loc['Dart', "upgrade_2_range"]
+        # Also adjust range circle
+        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
 
 class TowerManager:
