@@ -79,7 +79,6 @@ while run:
     # Move bloons
     bloon_manager.move_all_bloons()
     
-
     # Test Towers
     for tower in towers:
         tower.shoot(bloon_manager.bloon_list)
