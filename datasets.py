@@ -111,3 +111,4 @@ def create_towers_dataframe() -> pd.DataFrame:
 
     return towers_dataset
 
+print(create_towers_dataframe())

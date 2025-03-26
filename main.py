@@ -3,7 +3,7 @@ import sys
 import math
 import random
 from Bloon import Bloon, BloonManager
-from Tower import Tower, DartTower
+from Tower import Tower, DartTower, SuperMonkeyTower
 from utils import Circle, draw_rect_alpha
 from typing import List
 
@@ -25,33 +25,22 @@ pygame.display.update()
 # Set up the clock
 clock = pygame.time.Clock()
 
-# # Set up bloons
-# bloons = [
-#     Bloon("R"),
-#     Bloon("B"),
-#     Bloon("G"),
-#     Bloon("Y"),
-#     Bloon("K"),
-#     Bloon("W")
-# ]
 
 # game loop info
 run = True
-FPS = 40
+FPS = 40*0.5
 
 # Prepare the right-side rectangle to render
 right_side_rect = pygame.Rect(480, 0, 160, 480)
 
 # Round preparation
-bloon_manager = BloonManager(3)
+bloon_manager = BloonManager(50)
 bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
-# towers.append(DartTower(150,150))
-towers.append(DartTower(200,200))
-towers[0].get_upgrade_2()
-attacked = 0
+towers.append(SuperMonkeyTower(250, 250))
+
 
 # Spawn initial bloon
 if bloon_manager.queue:

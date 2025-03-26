@@ -43,7 +43,7 @@ class Tower:
         self.target = None
     
     def draw(self, screen) -> None:
-        draw_circle_alpha(screen, (220,220,220,100), (self.x, self.y), self.range)
+        # draw_circle_alpha(screen, (220,220,220,50), (self.x, self.y), self.range)
         self.footprint.draw(screen)
         self.inner_circle.draw(screen)
         for projectile in self.projectile_list:  
@@ -74,7 +74,7 @@ class Tower:
     def update_attack_counter(self) -> None:
         if self.attack_counter >= self.attack_cooldown_frames and self.target is not None:
             self.attack_counter = 1
-        elif self.attack_counter < 29:
+        elif self.attack_counter < self.attack_cooldown_frames:
             self.attack_counter += 1
         else:
             pass
@@ -102,30 +102,55 @@ class Tower:
     
 class DartTower(Tower):
     """
-    Represents a Tower in Bloons TD.
+    Represents a Dart Tower in Bloons TD.
     """
     def __init__(self, x, y):
+        tower_type = 'Dart'
         super().__init__(
-            'Dart', x, y, 
-            footprint_radius = Tower.DF_TOWERS.loc['Dart', "footprint_radius"], 
-            attack_cooldown_frames =  Tower.DF_TOWERS.loc['Dart', "attack_cooldown_frames"],
-            cost = Tower.DF_TOWERS.loc['Dart', "cost"], 
-            cost_upgrade_1 = Tower.DF_TOWERS.loc['Dart', "upgrade_1_cost"], 
-            cost_upgrade_2 = Tower.DF_TOWERS.loc['Dart', "upgrade_2_cost"], 
-            range_ = Tower.DF_TOWERS.loc['Dart', "range"], 
-            projectile_speed = Tower.DF_TOWERS.loc['Dart', "projectile_speed"], 
-            projectile_lifetime_frames = Tower.DF_TOWERS.loc['Dart', "projectile_lifespan_frames"], 
-            colors = [Tower.DF_TOWERS.loc['Dart', "color_outer"], Tower.DF_TOWERS.loc['Dart', "color_inner"]]
+            tower_type, x, y, 
+            footprint_radius = Tower.DF_TOWERS.loc[tower_type, "footprint_radius"], 
+            attack_cooldown_frames =  Tower.DF_TOWERS.loc[tower_type, "attack_cooldown_frames"],
+            cost = Tower.DF_TOWERS.loc[tower_type, "cost"], 
+            cost_upgrade_1 = Tower.DF_TOWERS.loc[tower_type, "upgrade_1_cost"], 
+            cost_upgrade_2 = Tower.DF_TOWERS.loc[tower_type, "upgrade_2_cost"], 
+            range_ = Tower.DF_TOWERS.loc[tower_type, "range"], 
+            projectile_speed = Tower.DF_TOWERS.loc[tower_type, "projectile_speed"], 
+            projectile_lifetime_frames = Tower.DF_TOWERS.loc[tower_type, "projectile_lifespan_frames"], 
+            colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
         )
     
     def get_upgrade_1(self):
         self.pierce = 2
     
     def get_upgrade_2(self):
-        self.range = Tower.DF_TOWERS.loc['Dart', "upgrade_2_range"]
+        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
         # Also adjust range circle
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
+
+class SuperMonkeyTower(Tower):
+    """
+    Represents a Super Monkey Tower in Bloons TD.
+    """
+    def __init__(self, x, y):
+        tower_type = 'Super Monkey'
+        super().__init__(
+            tower_type, x, y, 
+            footprint_radius = Tower.DF_TOWERS.loc[tower_type, "footprint_radius"], 
+            attack_cooldown_frames =  Tower.DF_TOWERS.loc[tower_type, "attack_cooldown_frames"],
+            cost = Tower.DF_TOWERS.loc[tower_type, "cost"], 
+            cost_upgrade_1 = Tower.DF_TOWERS.loc[tower_type, "upgrade_1_cost"], 
+            cost_upgrade_2 = Tower.DF_TOWERS.loc[tower_type, "upgrade_2_cost"], 
+            range_ = Tower.DF_TOWERS.loc[tower_type, "range"], 
+            projectile_speed = Tower.DF_TOWERS.loc[tower_type, "projectile_speed"], 
+            projectile_lifetime_frames = Tower.DF_TOWERS.loc[tower_type, "projectile_lifespan_frames"], 
+            colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
+        )
+
+    def get_upgrade_2(self):
+        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+        # Also adjust range circle
+        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
 class TowerManager:
     """
