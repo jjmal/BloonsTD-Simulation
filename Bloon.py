@@ -42,6 +42,9 @@ class Bloon:
         self.target_x = Bloon.PATH_POINTS[self.pathline][0]
         self.target_y = Bloon.PATH_POINTS[self.pathline][1]
         self.progress = 0
+        self.frozen = False
+        self.freeze_counter = 1
+        self.freeze_duration_frames = 50
     
     def overlaps(self, other: Circle) -> bool:
         return is_circle_overlapping(self.circle, other)
@@ -53,23 +56,24 @@ class Bloon:
         """
         Moves the bloon by one pixel in the given direction.
         """
-        # Move (by one pixel)
-        if self.x < self.target_x:
-            self.x += 1
-        if self.y < self.target_y:
-            self.y += 1
+        if not self.frozen:
+            # Move (by one pixel)
+            if self.x < self.target_x:
+                self.x += 1
+            if self.y < self.target_y:
+                self.y += 1
 
-        if self.x > self.target_x:
-            self.x -= 1
-        if self.y > self.target_y:
-            self.y -= 1
+            if self.x > self.target_x:
+                self.x -= 1
+            if self.y > self.target_y:
+                self.y -= 1
 
-        # Update circle position
-        self.circle.pos[0] = self.x
-        self.circle.pos[1] = self.y
+            # Update circle position
+            self.circle.pos[0] = self.x
+            self.circle.pos[1] = self.y
 
-        # Update progress
-        self.progress += 1
+            # Update progress
+            self.progress += 1
         
     def reach_target(self) -> bool:
         """
@@ -93,6 +97,18 @@ class Bloon:
 
     def draw(self, screen) -> None:
         self.circle.draw(screen)
+
+    def freeze(self, freeze_duration_frames) -> None:
+        self.frozen = True
+        self.freeze_duration_frames = freeze_duration_frames
+
+    def update_freeze(self) -> None:
+        if self.frozen:
+            if self.freeze_counter >= self.freeze_duration_frames:
+                self.frozen = False
+                self.freeze_counter = 1
+            else:
+                self.freeze_counter += 1
 
 
 class BloonManager:
@@ -197,3 +213,7 @@ class BloonManager:
     def draw_all_bloons(self,screen) -> None:
         for bloon in self.bloon_list:
             bloon.draw(screen)
+    
+    def update_freeze_all_bloons(self) -> None:
+        for bloon in self.bloon_list:
+            bloon.update_freeze()

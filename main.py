@@ -3,7 +3,7 @@ import sys
 import math
 import random
 from Bloon import Bloon, BloonManager
-from Tower import Tower, DartTower, SuperMonkeyTower, TackTower, BombTower
+from Tower import Tower, DartTower, SuperMonkeyTower, TackTower, BombTower, IceTower
 from utils import Circle, draw_rect_alpha
 from typing import List
 
@@ -40,10 +40,10 @@ bloon_manager.prepare_queue_for_round()
 # bloon_manager.enqueue_bloon('Y')
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(BombTower(150,150))
+towers.append(IceTower(150,150))
 towers[0].get_upgrade_1()
-print(towers[0].upgrade1)
-print(towers[0].upgrade2)
+towers[0].get_upgrade_2()
+
 
 # Spawn initial bloon
 if bloon_manager.queue:
@@ -70,6 +70,7 @@ while run:
 
     # Move bloons
     bloon_manager.move_all_bloons()
+    bloon_manager.update_freeze_all_bloons()
     
     # Test Towers
     for tower in towers:

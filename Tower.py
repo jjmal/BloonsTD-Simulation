@@ -132,7 +132,7 @@ class DartTower(Tower):
     
     def get_upgrade_2(self):
         if not self.upgrade2:
-            super().get_upgrade_1()
+            super().get_upgrade_2()
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
             # Also adjust range circle
             self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
@@ -168,6 +168,9 @@ class SuperMonkeyTower(Tower):
 
 
 class TackTower(Tower):
+    """
+    Represents a Tack Tower in Bloons TD.
+    """
     def __init__(self, x, y):
         tower_type = 'Tack'
         super().__init__(
@@ -216,8 +219,10 @@ class TackTower(Tower):
             self.projectile_lifespan_frames = 5
             
 
-
 class BombTower(Tower):
+    """
+    Represents a Bomb Tower in Bloons TD.
+    """
     def __init__(self, x, y):
         tower_type = 'Bomb'
         super().__init__(
@@ -248,6 +253,72 @@ class BombTower(Tower):
             super().get_upgrade_1()
             self.projectile_radius = int(self.projectile_radius*1.5)
             self.projectile_explosion_radius = int(self.projectile_explosion_radius*1.5)
+    
+    def get_upgrade_2(self):
+        if not self.upgrade2:
+            super().get_upgrade_2()
+            self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+            # Also adjust range circle
+            self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+
+
+class IceTower(Tower):
+    """
+    Represents an Ice Tower in Bloons TD.
+    """
+    def __init__(self, x, y):
+        tower_type = 'Ice'
+        super().__init__(
+            tower_type, x, y, 
+            footprint_radius = Tower.DF_TOWERS.loc[tower_type, "footprint_radius"], 
+            attack_cooldown_frames =  Tower.DF_TOWERS.loc[tower_type, "attack_cooldown_frames"],
+            cost = Tower.DF_TOWERS.loc[tower_type, "cost"], 
+            cost_upgrade_1 = Tower.DF_TOWERS.loc[tower_type, "upgrade_1_cost"], 
+            cost_upgrade_2 = Tower.DF_TOWERS.loc[tower_type, "upgrade_2_cost"], 
+            range_ = Tower.DF_TOWERS.loc[tower_type, "range"], 
+            projectile_speed = Tower.DF_TOWERS.loc[tower_type, "projectile_speed"], 
+            projectile_lifetime_frames = Tower.DF_TOWERS.loc[tower_type, "projectile_lifespan_frames"], 
+            colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
+        )
+        self.freeze_duration_frames = 50
+    
+    def find_target(self, bloon_list: list[Bloon]):
+        self.target = []
+        bloons_in_freeze = 0
+        if len(bloon_list) > 0: 
+            for bloon in bloon_list:
+                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20:
+                    self.target.append(bloon)
+                    bloons_in_freeze += 1
+    
+    def spawn_projectile(self):
+        pass
+
+    def move_projectiles(self):
+        pass
+
+    def check_for_projectile_collisions(self, bloon_manager):
+        pass
+
+    def update_attack_counter(self) -> None:
+        if self.attack_counter >= self.attack_cooldown_frames and len(self.target) > 0:
+            self.attack_counter = 1
+        elif self.attack_counter < self.attack_cooldown_frames:
+            self.attack_counter += 1
+        else:
+            pass
+
+    def shoot(self, bloon_list):
+        if self.attack_counter >= self.attack_cooldown_frames:
+            self.find_target(bloon_list)
+            if self.target is not None:
+                for bloon in self.target:
+                    bloon.freeze(self.freeze_duration_frames)
+    
+    def get_upgrade_1(self):
+        if not self.upgrade1:
+            super().get_upgrade_1()
+            self.freeze_duration_frames = 70
     
     def get_upgrade_2(self):
         if not self.upgrade2:
@@ -360,11 +431,10 @@ class Bomb(Projectile):
 
         self.circle = Circle((255, 102, 0), self.radius, [self.x, self.y])
         
-    def find_bloons_in_explosion(self, bloon_manager: BloonManager) -> List[Bloon]:
+    def find_bloons_in_explosion(self, bloon_list: List[Bloon]) -> List[Bloon]:
         hit_bloons = []
         explosion_circle = Circle((255, 102, 0), self.explosion_radius, [self.x, self.y])
         bloons_in_explosion = 0
-        bloon_list = bloon_manager.bloon_list
         for bloon in bloon_list:
             if is_circle_overlapping(bloon.circle, explosion_circle) and bloons_in_explosion < 20:
                 hit_bloons.append(bloon)
@@ -381,7 +451,7 @@ class Bomb(Projectile):
         if len(bloon_list) > 0:
             for bloon in  bloon_list:
                 if is_circle_overlapping(bloon.circle, self.circle):
-                    bloons_in_explosion = self.find_bloons_in_explosion(bloon_manager)
+                    bloons_in_explosion = self.find_bloons_in_explosion(bloon_list)
                     break
 
             if len(bloons_in_explosion) > 0:
