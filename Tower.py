@@ -43,7 +43,7 @@ class Tower:
         self.target = None
     
     def draw(self, screen) -> None:
-        # draw_circle_alpha(screen, (220,220,220,50), (self.x, self.y), self.range)
+        draw_circle_alpha(screen, (220,220,220,50), (self.x, self.y), self.range)
         self.footprint.draw(screen)
         self.inner_circle.draw(screen)
         for projectile in self.projectile_list:  
@@ -151,6 +151,42 @@ class SuperMonkeyTower(Tower):
         self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
         # Also adjust range circle
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+
+class TackTower(Tower):
+    def __init__(self, x, y):
+        tower_type = 'Tack'
+        super().__init__(
+            tower_type, x, y, 
+            footprint_radius = Tower.DF_TOWERS.loc[tower_type, "footprint_radius"], 
+            attack_cooldown_frames =  Tower.DF_TOWERS.loc[tower_type, "attack_cooldown_frames"],
+            cost = Tower.DF_TOWERS.loc[tower_type, "cost"], 
+            cost_upgrade_1 = Tower.DF_TOWERS.loc[tower_type, "upgrade_1_cost"], 
+            cost_upgrade_2 = Tower.DF_TOWERS.loc[tower_type, "upgrade_2_cost"], 
+            range_ = Tower.DF_TOWERS.loc[tower_type, "range"], 
+            projectile_speed = Tower.DF_TOWERS.loc[tower_type, "projectile_speed"], 
+            projectile_lifetime_frames = Tower.DF_TOWERS.loc[tower_type, "projectile_lifespan_frames"], 
+            colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
+        )
+    
+    def find_target(self, bloon_list):
+        """
+        Checks if there are any Bloons in range
+        """
+        self.target = None
+        for bloon in bloon_list:
+            if is_point_in_circle(self.range_circle, bloon.x, bloon.y):
+                self.target = True
+                return
+    
+    def spawn_projectile(self):
+        "Spawns 8 projectiles, according to the shooting pattern of the Tack Tower."
+        if self.target:
+            for angle in (0, math.pi/4, math.pi/2, math.pi*3/4, math.pi, math.pi*5/4, math.pi*6/4, math.pi*7/4):
+                dx = math.cos(angle)
+                dy = math.sin(angle)
+                new_projectile = Projectile(self.x, self.y, self.projectile_speed, dx, dy, self.pierce, self.projectile_lifespan_frames)
+                self.projectile_list.append(new_projectile)
+        
 
 class TowerManager:
     """

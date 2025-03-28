@@ -3,7 +3,7 @@ import sys
 import math
 import random
 from Bloon import Bloon, BloonManager
-from Tower import Tower, DartTower, SuperMonkeyTower
+from Tower import Tower, DartTower, SuperMonkeyTower, TackTower
 from utils import Circle, draw_rect_alpha
 from typing import List
 
@@ -28,18 +28,18 @@ clock = pygame.time.Clock()
 
 # game loop info
 run = True
-FPS = 40*0.5
+FPS = 40
 
 # Prepare the right-side rectangle to render
 right_side_rect = pygame.Rect(480, 0, 160, 480)
 
 # Round preparation
-bloon_manager = BloonManager(50)
+bloon_manager = BloonManager(3)
 bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(DartTower(250, 250))
+towers.append(TackTower(250, 250))
 
 
 # Spawn initial bloon
@@ -70,6 +70,7 @@ while run:
     
     # Test Towers
     for tower in towers:
+        print(tower.attack_counter)
         tower.shoot(bloon_manager.bloon_list)
         tower.update_attack_counter()
         tower.move_projectiles()    
