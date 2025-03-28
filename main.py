@@ -36,10 +36,11 @@ right_side_rect = pygame.Rect(480, 0, 160, 480)
 # Round preparation
 bloon_manager = BloonManager(50)
 bloon_manager.prepare_queue_for_round()
-# bloon_manager.shuffle_queue()
+bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
 towers.append(IceTower(150,150))
+towers.append(BombTower(300,300))
 towers[0].get_upgrade_1()
 towers[0].get_upgrade_2()
 

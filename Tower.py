@@ -240,6 +240,16 @@ class BombTower(Tower):
         self.projectile_radius = 10
         self.projectile_explosion_radius = 50
     
+    def find_target(self, bloon_list: List[Bloon]) -> None:
+            self.target = None
+            max_progress = 0
+            if len(bloon_list) > 0:
+                for bloon in bloon_list:
+                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K":
+                        if max_progress <= bloon.progress:
+                            self.target = bloon
+                            max_progress = bloon.progress
+
     def spawn_projectile(self) -> None:
         if self.target is not None:
             angle = - (math.atan2(self.target.x - self.x, self.target.y - self.y) - math.pi/2)
@@ -436,7 +446,7 @@ class Bomb(Projectile):
         explosion_circle = Circle((255, 102, 0), self.explosion_radius, [self.x, self.y])
         bloons_in_explosion = 0
         for bloon in bloon_list:
-            if is_circle_overlapping(bloon.circle, explosion_circle) and bloons_in_explosion < 20:
+            if is_circle_overlapping(bloon.circle, explosion_circle) and bloons_in_explosion < 20 and bloon.type != 'K':
                 hit_bloons.append(bloon)
                 bloons_in_explosion += 1
         return hit_bloons
