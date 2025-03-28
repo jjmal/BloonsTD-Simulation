@@ -3,7 +3,7 @@ import sys
 import math
 import random
 from Bloon import Bloon, BloonManager
-from Tower import Tower, DartTower, SuperMonkeyTower, TackTower
+from Tower import Tower, DartTower, SuperMonkeyTower, TackTower, BombTower
 from utils import Circle, draw_rect_alpha
 from typing import List
 
@@ -39,7 +39,9 @@ bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(TackTower(250, 250))
+towers.append(BombTower(150,150))
+# towers.append(TackTower(100,100))
+towers[0].get_upgrade_2()
 
 
 # Spawn initial bloon

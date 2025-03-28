@@ -86,7 +86,7 @@ class Tower:
             
     def move_projectiles(self) -> None:
         for projectile in self.projectile_list: 
-            if projectile.lifespan_counter < projectile.lifespan_frames:
+            if projectile.lifespan_counter <= projectile.lifespan_frames:
                 projectile.move()
             else:
                 self.remove_projectile(projectile)
@@ -152,6 +152,7 @@ class SuperMonkeyTower(Tower):
         # Also adjust range circle
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
+
 class TackTower(Tower):
     def __init__(self, x, y):
         tower_type = 'Tack'
@@ -186,6 +187,45 @@ class TackTower(Tower):
                 dy = math.sin(angle)
                 new_projectile = Projectile(self.x, self.y, self.projectile_speed, dx, dy, self.pierce, self.projectile_lifespan_frames)
                 self.projectile_list.append(new_projectile)
+    
+    def get_upgrade_1(self):
+        self.attack_cooldown_frames = 40
+    
+    def get_upgrade_2(self):
+        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+        # Also adjust range circle
+        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+
+
+class BombTower(Tower):
+    def __init__(self, x, y):
+        tower_type = 'Bomb'
+        super().__init__(
+            tower_type, x, y, 
+            footprint_radius = Tower.DF_TOWERS.loc[tower_type, "footprint_radius"], 
+            attack_cooldown_frames =  Tower.DF_TOWERS.loc[tower_type, "attack_cooldown_frames"],
+            cost = Tower.DF_TOWERS.loc[tower_type, "cost"], 
+            cost_upgrade_1 = Tower.DF_TOWERS.loc[tower_type, "upgrade_1_cost"], 
+            cost_upgrade_2 = Tower.DF_TOWERS.loc[tower_type, "upgrade_2_cost"], 
+            range_ = Tower.DF_TOWERS.loc[tower_type, "range"], 
+            projectile_speed = Tower.DF_TOWERS.loc[tower_type, "projectile_speed"], 
+            projectile_lifetime_frames = Tower.DF_TOWERS.loc[tower_type, "projectile_lifespan_frames"], 
+            colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
+        )
+    
+    def spawn_projectile(self) -> None:
+        if self.target is not None:
+            angle = - (math.atan2(self.target.x - self.x, self.target.y - self.y) - math.pi/2)
+            dx = math.cos(angle)
+            dy = math.sin(angle)
+            new_projectile = Bomb(self.x, self.y, self.projectile_speed, dx, dy, self.pierce, self.projectile_lifespan_frames)
+            self.projectile_list.append(new_projectile)
+    
+    def get_upgrade_2(self):
+        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+        # Also adjust range circle
+        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+
         
 
 class TowerManager:
@@ -259,6 +299,32 @@ class Projectile:
         # Update lifespan tracker
         self.lifespan_counter += 1
         
+    def collide(self, bloon_manager: BloonManager) -> bool:
+        """
+        Checks for collision with bloons. 
+        :returns: true if the collision has occured; false otherwise
+        """
+        hit_bloon = None
+        bloon_list = bloon_manager.bloon_list
+        if len(bloon_list) > 0:
+            for bloon in  bloon_list:
+                if is_circle_overlapping(bloon.circle, self.circle):
+                    hit_bloon = bloon
+                    break
+            if hit_bloon is not None:
+                bloon_manager.resolve_bloon_hit(hit_bloon)
+                return True
+        return False
+
+
+class Bomb(Projectile):
+    """
+    Represents a Bomb (projectile used by Bomb Tower).
+    """
+    def __init__(self, x, y, speed, dx, dy, pierce, lifespan_frames):
+        super().__init__(x, y, speed, dx, dy, pierce, lifespan_frames)
+        self.radius = 10
+        self.circle = Circle((255, 102, 0), self.radius, [self.x, self.y])
     
     def collide(self, bloon_manager: BloonManager) -> bool:
         """
@@ -276,3 +342,4 @@ class Projectile:
                 bloon_manager.resolve_bloon_hit(hit_bloon)
                 return True
         return False
+    
