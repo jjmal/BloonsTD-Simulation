@@ -13,6 +13,22 @@ class Bloon:
     RADIUS = 10
     DF_BLOONS = create_bloons_dataframe(RED_BLOON_SPEED)
     PATH_POINTS = create_pathline()
+    DIRECTION = {
+        1: "right",
+        2: "up",
+        3: "right",
+        4: "down",
+        5: "left",
+        6: "down",
+        7: "right",
+        8: "up",
+        9: "left",
+        10: "up",
+        11: "right",
+        12: "up",
+        13: "left",
+        14: "up"
+    }
     def __init__(self, type_) -> None:
         self.type = type_
 
@@ -145,6 +161,28 @@ class BloonManager:
                 into = 'G'
             if bloon.type == 'W' or bloon.type == 'K':
                 into = 'Y'
+
+                # If Bloon is White or Black, spawn an additional Yellow Bloon
+                new_bloon = Bloon('Y')
+                if Bloon.DIRECTION[bloon.pathline] == "right":
+                    new_bloon.x = bloon.x - 10
+                    new_bloon.y = bloon.y
+                elif Bloon.DIRECTION[bloon.pathline] == "up":
+                    new_bloon.x =  bloon.x
+                    new_bloon.y  = bloon.y - 10
+                elif Bloon.DIRECTION[bloon.pathline] == "left":
+                    new_bloon.x = bloon.x + 10
+                    new_bloon.y = bloon.y
+                elif Bloon.DIRECTION[bloon.pathline] == "down":
+                    new_bloon.x = bloon.x
+                    new_bloon.y = bloon.y + 10
+                new_bloon.progress = bloon.progress - 10
+                new_bloon.pathline = bloon.pathline
+                new_bloon.target_x = bloon.target_x
+                new_bloon.target_y = bloon.target_y
+
+                self.bloon_list.append(new_bloon)
+                
             bloon.type = into
             bloon.speed = Bloon.DF_BLOONS.loc[into, 'speed']
             bloon.color = Bloon.DF_BLOONS.loc[into, 'rgb']

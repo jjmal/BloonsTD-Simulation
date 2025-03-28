@@ -39,7 +39,7 @@ bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(SuperMonkeyTower(250, 250))
+towers.append(DartTower(250, 250))
 
 
 # Spawn initial bloon

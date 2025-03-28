@@ -110,5 +110,3 @@ def create_towers_dataframe() -> pd.DataFrame:
     towers_dataset.set_index('name', inplace=True)
 
     return towers_dataset
-
-print(create_towers_dataframe())
