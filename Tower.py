@@ -245,7 +245,7 @@ class BombTower(Tower):
             max_progress = 0
             if len(bloon_list) > 0:
                 for bloon in bloon_list:
-                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K":
+                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K": # Bomb Towers cannot target black bloons
                         if max_progress <= bloon.progress:
                             self.target = bloon
                             max_progress = bloon.progress
@@ -425,7 +425,8 @@ class Projectile:
                     self.last_bloon_struck = bloon
                     break
             if hit_bloon is not None:
-                bloon_manager.resolve_bloon_hit(hit_bloon)
+                if not hit_bloon.frozen:
+                    bloon_manager.resolve_bloon_hit(hit_bloon)
                 return True
         return False
 
