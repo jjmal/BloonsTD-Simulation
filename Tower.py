@@ -190,11 +190,15 @@ class TackTower(Tower):
     
     def get_upgrade_1(self):
         self.attack_cooldown_frames = 40
+        self.attack_counter = self.attack_cooldown_frames
     
     def get_upgrade_2(self):
         self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
         # Also adjust range circle
         self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+        # Also adjust projectile lifespan
+        self.projectile_lifespan_frames += 1
+        
 
 
 class BombTower(Tower):

@@ -79,7 +79,7 @@ def create_towers_dataframe() -> pd.DataFrame:
     tower_attack_cooldown_frames = [29, 55, 100, 55, 2]
     tower_footprint_radius = [10,10,10,10, 15] 
     projectile_speed = [20, 15, pd.NA, 11, 20]
-    projectile_lifespan_frames = [7, 5, pd.NA, 18, 20]
+    projectile_lifespan_frames = [7, 4, pd.NA, 18, 20] # For Tack set to 4 instead of 5 to better reflect its in-game range without the range upgrade (set to 5 after upgrade)
     color_outer = [(123, 63, 0), (255, 182, 193), (255, 255, 255),(211, 211, 211), (100, 149, 237)]
     color_inner = [(234, 221, 202), (211, 211, 211), (240, 255, 255),(0,0,0), (220, 20, 60)]
     
@@ -110,3 +110,5 @@ def create_towers_dataframe() -> pd.DataFrame:
     towers_dataset.set_index('name', inplace=True)
 
     return towers_dataset
+
+print(create_towers_dataframe()[['range', 'projectile_speed', "projectile_lifespan_frames"]])

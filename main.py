@@ -34,15 +34,16 @@ FPS = 40
 right_side_rect = pygame.Rect(480, 0, 160, 480)
 
 # Round preparation
-bloon_manager = BloonManager(3)
+bloon_manager = BloonManager(15)
 bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
+# bloon_manager.enqueue_bloon('Y')
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(BombTower(150,150))
+towers.append(TackTower(150,150))
 # towers.append(TackTower(100,100))
-towers[0].get_upgrade_2()
-
+# towers[0].get_upgrade_2()
+# towers[0].get_upgrade_2()
 
 # Spawn initial bloon
 if bloon_manager.queue:
