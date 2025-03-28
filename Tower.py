@@ -98,6 +98,12 @@ class Tower:
                 projectile.pierce -= 1
                 if projectile.pierce <= 0:
                     self.remove_projectile(projectile)
+    
+    def get_upgrade_1(self):
+        self.get_upgrade_1 = True
+    
+    def get_upgrade_2(self):
+        self.get_upgrade_2 = True
 
     
 class DartTower(Tower):
@@ -120,12 +126,16 @@ class DartTower(Tower):
         )
     
     def get_upgrade_1(self):
-        self.pierce = 2
+        if not self.upgrade1: 
+            super().get_upgrade_1()
+            self.pierce = 2
     
     def get_upgrade_2(self):
-        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
-        # Also adjust range circle
-        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+        if not self.upgrade2:
+            super().get_upgrade_1()
+            self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+            # Also adjust range circle
+            self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
 
 class SuperMonkeyTower(Tower):
@@ -147,10 +157,14 @@ class SuperMonkeyTower(Tower):
             colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
         )
 
+    def get_upgrade_1(self):
+        pass
+
     def get_upgrade_2(self):
-        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
-        # Also adjust range circle
-        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+        if not self.upgrade2:
+            self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+            # Also adjust range circle
+            self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
 
 class TackTower(Tower):
@@ -189,16 +203,18 @@ class TackTower(Tower):
                 self.projectile_list.append(new_projectile)
     
     def get_upgrade_1(self):
-        self.attack_cooldown_frames = 40
-        self.attack_counter = self.attack_cooldown_frames
+        if not self.upgrade1:
+            self.attack_cooldown_frames = 40
+            self.attack_counter = self.attack_cooldown_frames
     
     def get_upgrade_2(self):
-        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
-        # Also adjust range circle
-        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
-        # Also adjust projectile lifespan
-        self.projectile_lifespan_frames += 1
-        
+        if not self.upgrade2:
+            self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+            # Also adjust range circle
+            self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+            # Also adjust projectile lifespan
+            self.projectile_lifespan_frames = 5
+            
 
 
 class BombTower(Tower):
@@ -226,12 +242,13 @@ class BombTower(Tower):
             self.projectile_list.append(new_projectile)
     
     def get_upgrade_2(self):
-        self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
-        # Also adjust range circle
-        self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
+        if not self.upgrade2:
+            super().get_upgrade_2()
+            self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
+            # Also adjust range circle
+            self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
 
         
-
 class TowerManager:
     """
     Manages spawns and upgrades of towers from a list in the right rounds, and makes updates to towers if necessary.
@@ -269,6 +286,7 @@ class TowerManager:
         self.round_nr += 1
         self.currect_queue = self.queue_all_rounds[self.round_nr]
 
+
 class Projectile:
     """
     Represents a projectile fired by tower in Bloons TD.
@@ -287,6 +305,7 @@ class Projectile:
         self.circle = Circle((139, 0, 139), self.radius, [self.x, self.y])
         self.lifespan_frames = lifespan_frames
         self.lifespan_counter = 1
+        self.last_bloon_struck = None
         
     def draw(self, screen) -> None:
         self.circle.draw(screen, outline=False)
@@ -312,8 +331,9 @@ class Projectile:
         bloon_list = bloon_manager.bloon_list
         if len(bloon_list) > 0:
             for bloon in  bloon_list:
-                if is_circle_overlapping(bloon.circle, self.circle):
+                if is_circle_overlapping(bloon.circle, self.circle) and not self.last_bloon_struck == bloon:
                     hit_bloon = bloon
+                    self.last_bloon_struck = bloon
                     break
             if hit_bloon is not None:
                 bloon_manager.resolve_bloon_hit(hit_bloon)
