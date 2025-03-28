@@ -34,10 +34,9 @@ FPS = 40
 right_side_rect = pygame.Rect(480, 0, 160, 480)
 
 # Round preparation
-bloon_manager = BloonManager(10)
+bloon_manager = BloonManager(50)
 bloon_manager.prepare_queue_for_round()
 # bloon_manager.shuffle_queue()
-# bloon_manager.enqueue_bloon('Y')
 bloons_spawn_line = 20
 towers: List[Tower] = []
 towers.append(IceTower(150,150))

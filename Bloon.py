@@ -99,16 +99,18 @@ class Bloon:
         self.circle.draw(screen)
 
     def freeze(self, freeze_duration_frames) -> None:
-        self.frozen = True
-        self.freeze_duration_frames = freeze_duration_frames
+        if self.type != "W":
+            self.frozen = True
+            self.freeze_duration_frames = freeze_duration_frames
 
     def update_freeze(self) -> None:
-        if self.frozen:
-            if self.freeze_counter >= self.freeze_duration_frames:
-                self.frozen = False
-                self.freeze_counter = 1
-            else:
-                self.freeze_counter += 1
+         if self.type != "W":
+            if self.frozen:
+                if self.freeze_counter >= self.freeze_duration_frames:
+                    self.frozen = False
+                    self.freeze_counter = 1
+                else:
+                    self.freeze_counter += 1
 
 
 class BloonManager:

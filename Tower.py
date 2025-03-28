@@ -287,7 +287,7 @@ class IceTower(Tower):
         bloons_in_freeze = 0
         if len(bloon_list) > 0: 
             for bloon in bloon_list:
-                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20:
+                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20 and bloon.type != 'W':
                     self.target.append(bloon)
                     bloons_in_freeze += 1
     
