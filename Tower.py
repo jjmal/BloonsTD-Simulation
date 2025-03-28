@@ -100,10 +100,10 @@ class Tower:
                     self.remove_projectile(projectile)
     
     def get_upgrade_1(self):
-        self.get_upgrade_1 = True
+        self.upgrade1 = True
     
     def get_upgrade_2(self):
-        self.get_upgrade_2 = True
+        self.upgrade2 = True
 
     
 class DartTower(Tower):
@@ -232,14 +232,22 @@ class BombTower(Tower):
             projectile_lifetime_frames = Tower.DF_TOWERS.loc[tower_type, "projectile_lifespan_frames"], 
             colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
         )
+        self.projectile_radius = 10
+        self.projectile_explosion_radius = 50
     
     def spawn_projectile(self) -> None:
         if self.target is not None:
             angle = - (math.atan2(self.target.x - self.x, self.target.y - self.y) - math.pi/2)
             dx = math.cos(angle)
             dy = math.sin(angle)
-            new_projectile = Bomb(self.x, self.y, self.projectile_speed, dx, dy, self.pierce, self.projectile_lifespan_frames)
+            new_projectile = Bomb(self.x, self.y, self.projectile_speed, dx, dy, self.pierce, self.projectile_lifespan_frames, self.projectile_radius, self.projectile_explosion_radius)
             self.projectile_list.append(new_projectile)
+    
+    def get_upgrade_1(self):
+        if not self.upgrade1:
+            super().get_upgrade_1()
+            self.projectile_radius = int(self.projectile_radius*1.5)
+            self.projectile_explosion_radius = int(self.projectile_explosion_radius*1.5)
     
     def get_upgrade_2(self):
         if not self.upgrade2:
@@ -345,25 +353,40 @@ class Bomb(Projectile):
     """
     Represents a Bomb (projectile used by Bomb Tower).
     """
-    def __init__(self, x, y, speed, dx, dy, pierce, lifespan_frames):
+    def __init__(self, x, y, speed, dx, dy, pierce, lifespan_frames, radius, explosion_radius):
         super().__init__(x, y, speed, dx, dy, pierce, lifespan_frames)
-        self.radius = 10
+        self.radius = radius
+        self.explosion_radius = explosion_radius
+
         self.circle = Circle((255, 102, 0), self.radius, [self.x, self.y])
+        
+    def find_bloons_in_explosion(self, bloon_manager: BloonManager) -> List[Bloon]:
+        hit_bloons = []
+        explosion_circle = Circle((255, 102, 0), self.explosion_radius, [self.x, self.y])
+        bloons_in_explosion = 0
+        bloon_list = bloon_manager.bloon_list
+        for bloon in bloon_list:
+            if is_circle_overlapping(bloon.circle, explosion_circle) and bloons_in_explosion < 20:
+                hit_bloons.append(bloon)
+                bloons_in_explosion += 1
+        return hit_bloons
     
     def collide(self, bloon_manager: BloonManager) -> bool:
         """
         Checks for collision with bloons. 
         :returns: true if the collision has occured; false otherwise
         """
-        hit_set = set()
+        bloons_in_explosion = []
         bloon_list = bloon_manager.bloon_list
         if len(bloon_list) > 0:
             for bloon in  bloon_list:
                 if is_circle_overlapping(bloon.circle, self.circle):
-                    hit_set.add(bloon)
-            if len(hit_set) > 0:
-                hit_bloon = hit_set.pop()
-                bloon_manager.resolve_bloon_hit(hit_bloon)
+                    bloons_in_explosion = self.find_bloons_in_explosion(bloon_manager)
+                    break
+
+            if len(bloons_in_explosion) > 0:
+                for hit_bloon in bloons_in_explosion:
+                    bloon_manager.resolve_bloon_hit(hit_bloon)
                 return True
         return False
     
