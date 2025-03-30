@@ -40,7 +40,7 @@ bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
 towers.append(IceTower(150,150))
-towers.append(BombTower(250,200))
+towers.append(TackTower(250,200))
 towers[0].get_upgrade_1()
 towers[0].get_upgrade_2()
 

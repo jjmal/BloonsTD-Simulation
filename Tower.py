@@ -54,7 +54,7 @@ class Tower:
             max_progress = 0
             if len(bloon_list) > 0:
                 for bloon in bloon_list:
-                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y):
+                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen: # don't target frozen bloons
                         if max_progress <= bloon.progress:
                             self.target = bloon
                             max_progress = bloon.progress
@@ -188,11 +188,11 @@ class TackTower(Tower):
     
     def find_target(self, bloon_list):
         """
-        Checks if there are any Bloons in range
+        Checks if there are any Bloons in range.
         """
         self.target = None
         for bloon in bloon_list:
-            if is_point_in_circle(self.range_circle, bloon.x, bloon.y):
+            if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen: # don't target frozen bloons
                 self.target = True
                 return
     
@@ -297,7 +297,7 @@ class IceTower(Tower):
         bloons_in_freeze = 0
         if len(bloon_list) > 0: 
             for bloon in bloon_list:
-                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20 and bloon.type != 'W':
+                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20 and bloon.type != 'W': # Ice Towers cannot target white bloons
                     self.target.append(bloon)
                     bloons_in_freeze += 1
     
