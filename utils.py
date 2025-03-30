@@ -64,3 +64,7 @@ def draw_polygon_alpha(surface, color, points):
     shape_surf = pygame.Surface(target_rect.size, pygame.SRCALPHA)
     pygame.draw.polygon(shape_surf, color, [(x - min_x, y - min_y) for x, y in points])
     surface.blit(shape_surf, target_rect)
+
+def draw_text(surface, text, font, color, x, y):
+    img = font.render(text, True, color)
+    surface.blit(img,(x, y))

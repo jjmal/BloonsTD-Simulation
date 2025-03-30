@@ -122,10 +122,10 @@ class BloonManager:
     SPAWN_RATE = 5 # nr of bloons spawned per second (on 60 FPS)
     DF_ROUNDS = create_rounds_dataframe()
 
-    def __init__(self, round_nr: int = 1):
+    def __init__(self, initial_round_nr: int = 1):
+        self.round_nr = initial_round_nr
         self.bloon_list = []
         self.queue = []
-        self.round_nr = round_nr
 
     def enqueue_bloon(self, bloon_type: str) -> None:
         self.queue.append(Bloon(bloon_type))

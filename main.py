@@ -4,6 +4,7 @@ import math
 import random
 from Bloon import Bloon, BloonManager
 from Tower import Tower, DartTower, SuperMonkeyTower, TackTower, BombTower, IceTower
+from Game import Game
 from utils import Circle, draw_rect_alpha
 from typing import List
 
@@ -94,7 +95,10 @@ while run:
 pygame.quit()
 
 
-
+# if __name__ == "__main__":
+#     game = Game(40, 650, 1, True)
+#     game.run_game()
+    
 
 
 

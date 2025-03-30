@@ -2,7 +2,7 @@ import pygame
 import sys
 import math
 import random
-from typing import List
+from typing import List, Dict
 from Bloon import Bloon, BloonManager
 
 from datasets import create_towers_dataframe
@@ -342,19 +342,15 @@ class TowerManager:
     """
     Manages spawns and upgrades of towers from a list in the right rounds, and makes updates to towers if necessary.
     """
-    def __init__(self, initial_round_nr: int = 1):
+    def __init__(self, queue_all_rounds: Dict, initial_round_nr: int = 1):
         self.round_nr = initial_round_nr
+        self.queue_all_rounds = queue_all_rounds
 
         self.tower_list = []
-        self.queue_all_rounds = {}
         self.position_tower_map = {}
-        self.currect_queue = self.queue_all_rounds[self.round_nr]
-       
-    def spawn_tower_from_queue(self) -> None:
-        new_tower = self.current_queue.pop(0)
-        self.tower_list.append(new_tower)
-        self.position_tower_map[(new_tower.x, new_tower.y)] = new_tower
-
+        self.current_queue = self.queue_all_rounds[self.round_nr]
+    
+        
     def upgrade_tower_at_position(self, tower_x: int, tower_y: int, upgrade_type: int) -> None:
         tower = self.position_tower_map[(tower_x, tower_y)]
         if upgrade_type == 1:
@@ -362,10 +358,26 @@ class TowerManager:
         else:
             tower.get_upgrade_2()
     
-    def update_all_towers(self, bloon_list: List[Bloon]) -> None:
+    def perform_action_from_queue(self):
+        if isinstance(self.current_queue[0], Tower):
+            print(self.current_queue[0])
+            new_tower = self.current_queue.pop(0)
+            self.tower_list.append(new_tower)
+            self.position_tower_map[(new_tower.x, new_tower.y)] = new_tower
+        elif isinstance(self.current_queue[0], tuple):
+            upgrade_info = self.current_queue.pop(0)
+            self.upgrade_tower_at_position(upgrade_info[0][0],upgrade_info[0][1], upgrade_info[1])
+    
+    def resolve_queue_in_round(self):
+        for _ in range(len(self.current_queue)):
+            self.perform_action_from_queue()
+    
+    def update_all_towers(self, bloon_manager: BloonManager) -> None:
         for tower in self.tower_list:
-            tower.shoot(bloon_list)
-            tower.move_projectiles()
+            tower.shoot(bloon_manager.bloon_list)
+            tower.update_attack_counter()
+            tower.move_projectiles()    
+            tower.check_for_projectile_collisions(bloon_manager)
     
     def draw_all_towers(self, screen) -> None:
         for tower in self.tower_list:
@@ -373,7 +385,7 @@ class TowerManager:
 
     def next_round(self):
         self.round_nr += 1
-        self.currect_queue = self.queue_all_rounds[self.round_nr]
+        self.current_queue = self.queue_all_rounds[self.round_nr]
 
 
 class Projectile:
