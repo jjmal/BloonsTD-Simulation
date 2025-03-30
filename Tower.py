@@ -467,6 +467,7 @@ class Bomb(Projectile):
 
             if len(bloons_in_explosion) > 0:
                 for hit_bloon in bloons_in_explosion:
+                    hit_bloon.reset_freeze() # reset bloon freeze upon being damaged by a Bomb.
                     bloon_manager.resolve_bloon_hit(hit_bloon)
                 return True
         return False

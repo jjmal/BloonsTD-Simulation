@@ -110,6 +110,10 @@ class Bloon:
             else:
                 self.freeze_counter += 1
 
+    def reset_freeze(self) -> None:
+        if self.frozen:
+            self.frozen = False
+            self.freeze_counter = 1
 
 class BloonManager:
     """
