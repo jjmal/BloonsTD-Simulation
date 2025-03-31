@@ -1,9 +1,8 @@
 import random
-import pygame
 
 from utils import Circle, is_circle_overlapping, is_point_in_circle
 from datasets import create_pathline, create_bloons_dataframe, create_rounds_dataframe
-from typing import Tuple, List, Any
+from typing import Tuple
 
 class Bloon:
     """
@@ -35,6 +34,7 @@ class Bloon:
         self.health = Bloon.DF_BLOONS.loc[type_, 'health']
         self.speed = Bloon.DF_BLOONS.loc[type_, 'speed']
         self.color = Bloon.DF_BLOONS.loc[type_, 'rgb']
+        self.damage = Bloon.DF_BLOONS.loc[type_, 'damage']
         self.x = Bloon.PATH_POINTS[0][0]
         self.y = Bloon.PATH_POINTS[0][1]
         self.circle = Circle(color=self.color, radius=Bloon.RADIUS, pos=[self.x, self.y])
@@ -47,14 +47,24 @@ class Bloon:
         self.freeze_duration_frames = 50
     
     def overlaps(self, other: Circle) -> bool:
+        """
+        Checks if the bloon overlaps with a Circle.
+        :param other: a Circle.
+        :returns: True if the bloon overlaps with a circle, False otherwise.
+        """
         return is_circle_overlapping(self.circle, other)
     
     def contains(self, point: Tuple[int, int]) -> bool:
+        """
+        Checks if the bloon contains a point.
+        :param point: a tuple in the form (x-coord, y-coord)
+        :returns: True if the bloon contains a point, False otherwise.
+        """
         return is_point_in_circle(self.circle, point[0], point[1])
 
     def move_once(self):
         """
-        Moves the bloon by one pixel in the given direction.
+        Moves the bloon by one pixel in the right direction, determined by its pathway.
         """
         if not self.frozen:
             # Move (by one pixel)
@@ -99,10 +109,17 @@ class Bloon:
         self.circle.draw(screen)
 
     def freeze(self, freeze_duration_frames) -> None:
+        """
+        Resolves frost behaviour (stops movement and starts the frame counter to unfreeze self)
+        :param freeze_duration_frames: the duration for which the bloon should remain frozen
+        """
         self.frozen = True
         self.freeze_duration_frames = freeze_duration_frames
 
     def update_freeze(self) -> None:
+        """
+        Updates the freeze counter for natural unfreezing purposes.
+        """
         if self.frozen:
             if self.freeze_counter >= self.freeze_duration_frames:
                 self.frozen = False
@@ -111,6 +128,9 @@ class Bloon:
                 self.freeze_counter += 1
 
     def reset_freeze(self) -> None:
+        """
+        Unfreezes the bloon immediately.
+        """
         if self.frozen:
             self.frozen = False
             self.freeze_counter = 1
@@ -128,19 +148,26 @@ class BloonManager:
         self.queue = []
 
     def enqueue_bloon(self, bloon_type: str) -> None:
+        """
+        Adds Bloon of the given type to the queue.
+        :param bloon_type: A letter encoding a bloon type ('R', 'B', 'G', 'Y', 'W', or 'K').
+        """
         self.queue.append(Bloon(bloon_type))
 
     def spawn_bloon_from_queue(self) -> Bloon:
+        """
+        Extracts the first bloon from queue, deletes it from the queue and adds it to the active bloon list.
+        :returns: the extracted Bloon
+        """
         spawned_bloon = self.queue.pop(0)
-        self.bloon_list.append(spawned_bloon )
+        self.bloon_list.append(spawned_bloon)
         return spawned_bloon 
 
-    def spawn_bloon_outside_queue(self, bloon_type: str) -> Bloon:
-        new_bloon = Bloon(bloon_type)
-        self.bloon_list.append(new_bloon)
-        return new_bloon
-    
     def remove_bloon(self, bloon: Bloon) -> None:
+        """
+        Removes Bloon from the active bloon list.
+        :param bloon: the Bloon to remove
+        """
         self.bloon_list.remove(bloon)
 
     def prepare_queue_for_round(self):
@@ -149,16 +176,23 @@ class BloonManager:
                 self.enqueue_bloon(bloon_type)
 
     def shuffle_queue(self):
+        """
+        Shuffles the bloon queue randomly.
+        """
         random.shuffle(self.queue)
     
-    def move_bloon(self, bloon: Bloon) -> None:
+    def move_bloon(self, bloon: Bloon) -> int:
+        """
+        Moves Bloon the number of times equal to its speed.
+        :returns: the damage received by the player if the bloon reaches endpoint
+        """
         speed = bloon.speed
         for _ in range(speed):
             bloon.move_once()
             endpoint_reached = bloon.reach_target()
             if endpoint_reached:
                 self.remove_bloon(bloon)
-                break
+                return bloon.damage
     
     def resolve_bloon_hit(self, bloon: Bloon) -> None:
         """
@@ -208,16 +242,24 @@ class BloonManager:
             bloon.color = Bloon.DF_BLOONS.loc[into, 'rgb']
             bloon.circle = Circle(color=bloon.color, radius=Bloon.RADIUS, pos=[bloon.x, bloon.y])
 
-
-
     def move_all_bloons(self) -> None:
+        """
+        Moves all active bloons.
+        """
         for bloon in self.bloon_list:
             self.move_bloon(bloon)
     
     def draw_all_bloons(self,screen) -> None:
+        """
+        Draws all active bloons.
+        :param screen: the pygame Surface to draw on.
+        """
         for bloon in self.bloon_list:
             bloon.draw(screen)
     
     def update_freeze_all_bloons(self) -> None:
+        """
+        Updates the freeze counters for all active bloons.
+        """
         for bloon in self.bloon_list:
             bloon.update_freeze()

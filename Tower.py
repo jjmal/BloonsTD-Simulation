@@ -1,7 +1,4 @@
-import pygame
-import sys
 import math
-import random
 from typing import List, Dict
 from Bloon import Bloon, BloonManager
 
@@ -50,17 +47,26 @@ class Tower:
             projectile.draw(screen)
        
     def find_target(self, bloon_list: List[Bloon]) -> None:
-            self.target = None
-            max_progress = 0
-            if len(bloon_list) > 0:
-                for bloon in bloon_list:
-                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen: # don't target frozen bloons
-                        if max_progress <= bloon.progress:
-                            self.target = bloon
-                            max_progress = bloon.progress
+        """
+        Find the bloon to shoot at. The target is defined to be the bloon in range that has reached the 
+        furthest in the track and is non-frozen.
+        :param bloon_list: A list of active bloons.
+        """
+        self.target = None
+        max_progress = 0
+        if len(bloon_list) > 0:
+            for bloon in bloon_list:
+                if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen: # don't target frozen bloons
+                    if max_progress <= bloon.progress:
+                        self.target = bloon
+                        max_progress = bloon.progress
     
     # Idea for movement in any direction taken from https://www.youtube.com/watch?v=3DeW-7vbc50&ab_channel=NealHoltschulte
     def spawn_projectile(self) -> None:
+        """
+        Adds a new projectile to the active projectile list, considering that it should move in a straight
+        line to the found target.
+        """
         if self.target is not None:
             angle = - (math.atan2(self.target.x - self.x, self.target.y - self.y) - math.pi/2)
             dx = math.cos(angle)
@@ -69,9 +75,15 @@ class Tower:
             self.projectile_list.append(new_projectile)
     
     def remove_projectile(self, projectile) -> None:
+        """
+        Removes a projectile from the active projectile list.
+        """
         self.projectile_list.remove(projectile)
 
     def update_attack_counter(self) -> None:
+        """
+        Updates the attack counter for the purpose of managing the attack cooldowns.
+        """
         if self.attack_counter >= self.attack_cooldown_frames and self.target is not None:
             self.attack_counter = 1
         elif self.attack_counter < self.attack_cooldown_frames:
@@ -80,11 +92,19 @@ class Tower:
             pass
 
     def shoot(self, bloon_list: List[Bloon]) -> None:
+        """
+        Shoots a projectile at the suitable target (combines finding the target and spawning the projectile).
+        :param bloon_list: list of active bloons.
+        """
         if self.attack_counter >= self.attack_cooldown_frames:
             self.find_target(bloon_list)
             self.spawn_projectile()
             
     def move_projectiles(self) -> None:
+        """
+        Moves all active projectiles shot by the tower. Also manages projectile removal if they reach the end
+        of their lifespan.
+        """
         for projectile in self.projectile_list: 
             if projectile.lifespan_counter <= projectile.lifespan_frames:
                 projectile.move()
@@ -92,6 +112,10 @@ class Tower:
                 self.remove_projectile(projectile)
     
     def check_for_projectile_collisions(self, bloon_manager: BloonManager) -> None:
+        """
+        Checks if an active projectile has collided with anything.
+        :param bloon_manager: Bloon Manager object used in the game. 
+        """
         for projectile in self.projectile_list:
             hit_something = projectile.collide(bloon_manager)
             if hit_something:
@@ -100,9 +124,15 @@ class Tower:
                     self.remove_projectile(projectile)
     
     def get_upgrade_1(self):
+        """
+        Template for buying upgrade 1 for the tower.
+        """
         self.upgrade1 = True
     
     def get_upgrade_2(self):
+        """
+        Template for buying upgrade 2 for the tower.
+        """
         self.upgrade2 = True
 
     
@@ -126,11 +156,17 @@ class DartTower(Tower):
         )
     
     def get_upgrade_1(self):
+        """
+        Gets upgrade 1 for Dart Tower (increases pierce by 1).
+        """
         if not self.upgrade1: 
             super().get_upgrade_1()
             self.pierce = 2
     
     def get_upgrade_2(self):
+        """
+        Gets upgrade 2 for Dart Tower (increases range).
+        """
         if not self.upgrade2:
             super().get_upgrade_2()
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
@@ -158,9 +194,15 @@ class SuperMonkeyTower(Tower):
         )
 
     def get_upgrade_1(self):
+        """
+        Super Monkey Tower has only one upgrade, so does nothing.
+        """
         pass
 
     def get_upgrade_2(self):
+        """
+        Gets upgrade 2 for Dart Tower (increases range).
+        """
         if not self.upgrade2:
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
             # Also adjust range circle
@@ -186,9 +228,10 @@ class TackTower(Tower):
             colors = [Tower.DF_TOWERS.loc[tower_type, "color_outer"], Tower.DF_TOWERS.loc[tower_type, "color_inner"]]
         )
     
-    def find_target(self, bloon_list):
+    def find_target(self, bloon_list: List[Bloon]) -> None:
         """
-        Checks if there are any Bloons in range.
+        Checks if there are any non-frozen Bloons in range.
+        :param bloon_list: list of active bloons.
         """
         self.target = None
         for bloon in bloon_list:
@@ -196,7 +239,7 @@ class TackTower(Tower):
                 self.target = True
                 return
     
-    def spawn_projectile(self):
+    def spawn_projectile(self) -> None:
         "Spawns 8 projectiles, according to the shooting pattern of the Tack Tower."
         if self.target:
             for angle in (0, math.pi/4, math.pi/2, math.pi*3/4, math.pi, math.pi*5/4, math.pi*6/4, math.pi*7/4):
@@ -206,11 +249,17 @@ class TackTower(Tower):
                 self.projectile_list.append(new_projectile)
     
     def get_upgrade_1(self):
+        """
+        Gets upgrade 1 for Tack Tower (increases attack speed).
+        """
         if not self.upgrade1:
             self.attack_cooldown_frames = 40
             self.attack_counter = self.attack_cooldown_frames
     
     def get_upgrade_2(self):
+        """
+        Gets upgrade 2 for Tack Tower (increases range).
+        """
         if not self.upgrade2:
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
             # Also adjust range circle
@@ -241,16 +290,25 @@ class BombTower(Tower):
         self.projectile_explosion_radius = 50
     
     def find_target(self, bloon_list: List[Bloon]) -> None:
-            self.target = None
-            max_progress = 0
-            if len(bloon_list) > 0:
-                for bloon in bloon_list:
-                    if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K": # Bomb Towers cannot target black bloons
-                        if max_progress <= bloon.progress:
-                            self.target = bloon
-                            max_progress = bloon.progress
+        """
+        Find the bloon to shoot at. The target is defined to be the bloon in range that has reached the 
+        furthest in the track and is non-frozen. Furthermore, Bomb Towers cannot target Black Bloons
+        :param bloon_list: A list of active bloons.
+        """
+        self.target = None
+        max_progress = 0
+        if len(bloon_list) > 0:
+            for bloon in bloon_list:
+                if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K": # Bomb Towers cannot target black bloons
+                    if max_progress <= bloon.progress:
+                        self.target = bloon
+                        max_progress = bloon.progress
 
     def spawn_projectile(self) -> None:
+        """
+        Adds a new Bomb to the active projectile list, considering that it should move in a straight
+        line to the found target.
+        """
         if self.target is not None:
             angle = - (math.atan2(self.target.x - self.x, self.target.y - self.y) - math.pi/2)
             dx = math.cos(angle)
@@ -258,13 +316,19 @@ class BombTower(Tower):
             new_projectile = Bomb(self.x, self.y, self.projectile_speed, dx, dy, self.pierce, self.projectile_lifespan_frames, self.projectile_radius, self.projectile_explosion_radius)
             self.projectile_list.append(new_projectile)
     
-    def get_upgrade_1(self):
+    def get_upgrade_1(self) -> None:
+        """
+        Gets upgrade 1 for Bomb Tower (increases projectise size and explosion radius).
+        """
         if not self.upgrade1:
             super().get_upgrade_1()
             self.projectile_radius = int(self.projectile_radius*1.5)
             self.projectile_explosion_radius = int(self.projectile_explosion_radius*1.5)
     
-    def get_upgrade_2(self):
+    def get_upgrade_2(self) -> None:
+        """
+        Gets upgrade 1 for Bomb Tower (increases range).
+        """
         if not self.upgrade2:
             super().get_upgrade_2()
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
@@ -293,6 +357,10 @@ class IceTower(Tower):
         self.freeze_duration_frames = 50
     
     def find_target(self, bloon_list: list[Bloon]):
+        """
+        Finds up to 20 bloons in range.
+        :param bloon_list: List of active bloons
+        """
         self.target = []
         bloons_in_freeze = 0
         if len(bloon_list) > 0: 
@@ -302,15 +370,27 @@ class IceTower(Tower):
                     bloons_in_freeze += 1
     
     def spawn_projectile(self):
+        """
+        Ice Towers don't use projectiles.
+        """
         pass
 
     def move_projectiles(self):
+        """
+        Ice Towers don't use projectiles.
+        """
         pass
 
     def check_for_projectile_collisions(self, bloon_manager):
+        """
+        Ice Towers don't use projectiles.
+        """
         pass
 
     def update_attack_counter(self) -> None:
+        """
+        Updates the attack counter for the purpose of managing the attack cooldowns.
+        """
         if self.attack_counter >= self.attack_cooldown_frames and len(self.target) > 0:
             self.attack_counter = 1
         elif self.attack_counter < self.attack_cooldown_frames:
@@ -319,6 +399,9 @@ class IceTower(Tower):
             pass
 
     def shoot(self, bloon_list):
+        """
+        Freezes all bloons in the target list.
+        """
         if self.attack_counter >= self.attack_cooldown_frames:
             self.find_target(bloon_list)
             if self.target is not None:
@@ -326,11 +409,17 @@ class IceTower(Tower):
                     bloon.freeze(self.freeze_duration_frames)
     
     def get_upgrade_1(self):
+        """
+        Gets upgrade 1 for Ice Tower (increases freeze duration).
+        """
         if not self.upgrade1:
             super().get_upgrade_1()
             self.freeze_duration_frames = 70
     
     def get_upgrade_2(self):
+        """
+        Gets upgrade 2 for Ice Tower (increases range).
+        """
         if not self.upgrade2:
             super().get_upgrade_2()
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
@@ -350,29 +439,59 @@ class TowerManager:
         self.position_tower_map = {}
         self.current_queue = self.queue_all_rounds[self.round_nr]
     
-        
     def upgrade_tower_at_position(self, tower_x: int, tower_y: int, upgrade_type: int) -> None:
+        """
+        Upgrades tower positioned at (x, y)
+        :param tower_x: x coord of the tower
+        :param tower_y: y coord of the tower
+        :param upgrade_type: 1 for upgrade 1, 2 for upgrade 2
+        """
         tower = self.position_tower_map[(tower_x, tower_y)]
         if upgrade_type == 1:
             tower.get_upgrade_1()
         else:
             tower.get_upgrade_2()
     
-    def perform_action_from_queue(self):
+    def perform_action_from_queue(self) -> int:
+        """
+        For the current queue (queue for the current round), pop the first element and resolve its action.
+        It can either be a tower (and then the tower will be built), or an upgrade for a tower (in this case
+        a tower will be upgraded)
+        Format of element for tower: Tower(x,y) - an instantiated Tower object
+        Format of element for upgrade: ((x,y), upgrade_type) - a tuple with position x, position y and 
+        int for upgrade type.
+        :returns: cost in money of the action
+        """
+        out_cost = 0
         if isinstance(self.current_queue[0], Tower):
-            print(self.current_queue[0])
             new_tower = self.current_queue.pop(0)
             self.tower_list.append(new_tower)
             self.position_tower_map[(new_tower.x, new_tower.y)] = new_tower
+            out_cost += new_tower.cost
         elif isinstance(self.current_queue[0], tuple):
             upgrade_info = self.current_queue.pop(0)
-            self.upgrade_tower_at_position(upgrade_info[0][0],upgrade_info[0][1], upgrade_info[1])
-    
-    def resolve_queue_in_round(self):
+            self.upgrade_tower_at_position(upgrade_info[0][0], upgrade_info[0][1], upgrade_info[1])
+            upgraded_tower = self.position_tower_map[upgrade_info[0]]
+            if upgrade_info[1] == 1:
+                out_cost += upgraded_tower.cost_upgrade_1
+            elif upgrade_info[1] == 2:
+                out_cost += upgraded_tower.cost_upgrade_2
+        return out_cost
+
+    def resolve_queue_in_round(self) -> int:
+        """
+        Resolve the entire queue for the current round.
+        :returns: a total cost of the actions defined for the current round
+        """
+        out_cost = 0
         for _ in range(len(self.current_queue)):
-            self.perform_action_from_queue()
-    
+            out_cost += self.perform_action_from_queue()
+        return out_cost
+
     def update_all_towers(self, bloon_manager: BloonManager) -> None:
+        """
+        Updates the behaviour of all towers for the given round.
+        """
         for tower in self.tower_list:
             tower.shoot(bloon_manager.bloon_list)
             tower.update_attack_counter()
@@ -380,10 +499,17 @@ class TowerManager:
             tower.check_for_projectile_collisions(bloon_manager)
     
     def draw_all_towers(self, screen) -> None:
+        """
+        Draws all active towers and their projectiles.
+        :param screen: a pygame.Surface object to draw on
+        """
         for tower in self.tower_list:
             tower.draw(screen)
 
     def next_round(self):
+        """
+        Resolves the change of the round.
+        """
         self.round_nr += 1
         self.current_queue = self.queue_all_rounds[self.round_nr]
 
@@ -413,6 +539,9 @@ class Projectile:
 
     # Idea for movement in any direction taken from https://www.youtube.com/watch?v=3DeW-7vbc50&ab_channel=NealHoltschulte
     def move(self) -> None:
+        """
+        Moves the projectile in the predefined direction.
+        """
         self.x += self.vx
         self.y += self.vy
 
@@ -426,7 +555,8 @@ class Projectile:
     def collide(self, bloon_manager: BloonManager) -> bool:
         """
         Checks for collision with bloons. 
-        :returns: true if the collision has occured; false otherwise
+        :param bloon_manager: a BloonManager object used in the game
+        :returns: True if the collision has occured; False otherwise
         """
         hit_bloon = None
         bloon_list = bloon_manager.bloon_list
@@ -455,6 +585,11 @@ class Bomb(Projectile):
         self.circle = Circle((255, 102, 0), self.radius, [self.x, self.y])
         
     def find_bloons_in_explosion(self, bloon_list: List[Bloon]) -> List[Bloon]:
+        """
+        Finds bloons caught in the explosion of the bomb that occurs upon collision.
+        :param bloon_list: list of active bloons
+        :returns: list of bloons caught in explosion
+        """
         hit_bloons = []
         explosion_circle = Circle((255, 102, 0), self.explosion_radius, [self.x, self.y])
         bloons_in_explosion = 0
@@ -466,8 +601,8 @@ class Bomb(Projectile):
     
     def collide(self, bloon_manager: BloonManager) -> bool:
         """
-        Checks for collision with bloons. 
-        :returns: true if the collision has occured; false otherwise
+        Checks for collision with bloons; also manages explosion behaviour. 
+        :returns: True if the collision has occured; False otherwise
         """
         bloons_in_explosion = []
         bloon_list = bloon_manager.bloon_list

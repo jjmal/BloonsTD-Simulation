@@ -7,8 +7,7 @@ def create_bloons_dataframe(red_bloon_speed: float) -> pd.DataFrame:
     bloon_health = [1,2,3,4,5,5]
     bloon_rgb = [(255, 0, 0), (0,0, 255),(0, 255, 0),(255,255,0),(255,255,255),(0,0,0)]
     bloon_relative_speed = [1,1.4,1.8,3.2,2,1.8] # speed relative to Red Bloon speed
-    bloons_ice_resist = [0,0,0,0,1,0]
-    bloon_bomb_resist = [0,0,0,0,0,1]
+    bloon_damage = [1,2,3,4,9,9]
     bloons_dataset = pd.DataFrame(
         {
             'type': bloon_type, 
@@ -16,8 +15,7 @@ def create_bloons_dataframe(red_bloon_speed: float) -> pd.DataFrame:
             'health': bloon_health,
             'rgb': bloon_rgb,
             'relative_speed': bloon_relative_speed,
-            'ice_resistant': bloons_ice_resist,
-            'bomb_resistant': bloon_bomb_resist
+            'damage': bloon_damage
             }
         )
     # Get the real speed by using the relative speed; round to get integer speeds

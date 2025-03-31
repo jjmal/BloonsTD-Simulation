@@ -47,6 +47,9 @@ class Game:
         self.text_font = pygame.font.SysFont("Times New Roman", 14)
 
     def render_screen(self) -> None:
+        """
+        Renders the background which fills the screen.
+        """
         # Draw the background
         self.screen.blit(self.background, (0, 0))
 
@@ -63,27 +66,52 @@ class Game:
         self.tower_manager.draw_all_towers(self.screen)
 
     def render_ui(self) -> None:
+        """
+        Renders the UI elements and information displayed on it.
+        """
         draw_rect_alpha(self.screen, (220,220,220,175), self.right_side_rect)
-        draw_text(self.screen, f"Health: {self.lives}", self.text_font, (0,0,0), 485, 5)
+        draw_text(self.screen, f"Lives: {self.lives}", self.text_font, (0,0,0), 485, 5)
         draw_text(self.screen, f"Money: {self.money}", self.text_font, (0,0,0), 560, 5)
 
     def spawn_bloon(self) -> None:
+        """
+        Spawns all bloons from queue.
+        """
         if self.last_spawned_bloon.x >= self.bloons_spawn_line:
             if self.bloon_manager.queue:
                 self.last_spawned_bloon  = self.bloon_manager.spawn_bloon_from_queue()
 
     def build_and_upgrade_towers(self) -> None:
-        self.tower_manager.resolve_queue_in_round()
+        """
+        Builds and upgrades towers for the given round.
+        """
+        cost = self.tower_manager.resolve_queue_in_round()
+        if cost <= self.money:
+            self.money += -cost
+        else:
+            raise ValueError(f"Not enough money for the declared build in round {self.round}!")
 
     def move_bloons(self) -> None:
-        self.bloon_manager.move_all_bloons()
-        self.bloon_manager.update_freeze_all_bloons()
+        """
+        Moves all active bloons.
+        """
+        for bloon in self.bloon_manager.bloon_list:
+            damage = self.bloon_manager.move_bloon(bloon)
+            if damage is not None: # damage if endpoint is reached
+                self.lives += -damage
+        self.bloon_manager.update_freeze_all_bloons() # manage freeze
 
-    def update_towers(self) -> None:
+    def update_towers(self) -> None: 
+        """
+        Updates all tower behaiour
+        """
         self.tower_manager.update_all_towers(self.bloon_manager)
         
 
     def run_game_with_graphics(self) -> None:
+        """
+        Runs the entire game with graphics.
+        """
         # Initialise pygame
         pygame.init()
         # Set up the screen
@@ -133,9 +161,15 @@ class Game:
         pygame.quit()
 
     def run_game_without_graphics(self):
+        """
+        Runs the entire game without graphics. This also ignores the FPS cap, as there is nothing to display.
+        """
         pass
 
     def run_game(self):
+        """
+        Runs the game with or without graphics, depending on the game settings.
+        """
         if self.graphics:
             self.run_game_with_graphics()
         else:
