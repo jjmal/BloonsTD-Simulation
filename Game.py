@@ -16,7 +16,15 @@ class Game:
     SCREEN_HEIGHT = 480
     FPS = 40
     
-    def __init__(self, starting_lives: int, starting_money: int, starting_round: int, graphics: bool, tower_queue: Dict, speed_multiplier: float = 1, bloons_spawn_line: int = 20) -> None:
+    def __init__(self, 
+                 starting_lives: int, 
+                 starting_money: int, 
+                 starting_round: int, 
+                 graphics: bool, 
+                 tower_queue: Dict, 
+                 speed_multiplier: float = 1, 
+                 bloons_spawn_line: int = 20,
+                 round_break_frames: int = 60) -> None:
         self.lives = starting_lives
         self.money = starting_money
         self.round = starting_round
@@ -24,10 +32,12 @@ class Game:
         self.speed_multiplier = speed_multiplier
         self.bloons_spawn_line = bloons_spawn_line
         self.tower_manager = TowerManager(tower_queue, self.round)
+        self.round_brake_frames = round_break_frames
 
         self.bloon_manager = BloonManager(self.round)
         self.fps = self.FPS*self.speed_multiplier
         self.last_spawned_bloon = None
+        self.tower_build_history = {}
 
     def setup_screen(self) -> None:
         """
@@ -70,8 +80,9 @@ class Game:
         Renders the UI elements and information displayed on it.
         """
         draw_rect_alpha(self.screen, (220,220,220,175), self.right_side_rect)
-        draw_text(self.screen, f"Lives: {self.lives}", self.text_font, (0,0,0), 485, 5)
-        draw_text(self.screen, f"Money: {self.money}", self.text_font, (0,0,0), 560, 5)
+        draw_text(self.screen, f"Round: {self.round}", self.text_font, (0,0,0), 485, 5)
+        draw_text(self.screen, f"Lives: {self.lives}", self.text_font, (0,0,0), 485, 20)
+        draw_text(self.screen, f"Money: {self.money}", self.text_font, (0,0,0), 560, 20)
 
     def spawn_bloon(self) -> None:
         """
@@ -106,7 +117,35 @@ class Game:
         Updates all tower behaiour
         """
         self.tower_manager.update_all_towers(self.bloon_manager)
-        
+
+    def check_round_end(self) -> bool:
+        """
+        Checks for the end of the round.
+        :returns: True if round has ended; False otherwise.
+        """
+        if len(self.bloon_manager.bloon_list) <= 0:
+            return True
+        return False
+    
+    def next_round(self) -> None:
+        """
+        Changes round to next.
+        """
+        self.bloon_manager.next_round()
+        self.tower_manager.next_round()
+        self.round += 1
+
+    def check_game_end(self) -> int:
+        """
+        Checks for the end of the game and its type.
+        :returns: 0 if the game has not ended; 1 if the game has ended and is won by the player; 2 if the game has ended and is lost by the player.
+        """
+        if self.lives <= 0:
+            return 2
+        if self.round == 50 and self.check_round_end():
+            return 1
+        return 0
+
 
     def run_game_with_graphics(self) -> None:
         """
@@ -118,9 +157,10 @@ class Game:
         self.setup_screen()
         # Set up the clock
         clock = pygame.time.Clock()
+        # Set up the round break counter
+        round_break_counter = 1
         
-        
-        # Prepare round
+        # Prepare round 1
         self.bloon_manager.prepare_queue_for_round()
 
         # Spawn initial bloon
@@ -155,6 +195,18 @@ class Game:
             # Update display
             pygame.display.update()
 
+            # Manage round changes
+            if self.check_round_end():
+                if round_break_counter >= self.round_brake_frames:
+
+                    # Change round to next
+                    self.next_round()
+
+                    # Reset round break 
+                    round_break_counter = 1
+                else:
+                    round_break_counter += 1
+
             # Control game speed
             clock.tick(self.fps)
 
@@ -164,7 +216,39 @@ class Game:
         """
         Runs the entire game without graphics. This also ignores the FPS cap, as there is nothing to display.
         """
-        pass
+        # Set up the round break counter
+        round_break_counter = 1
+        
+        # Prepare round 1
+        self.bloon_manager.prepare_queue_for_round()
+        
+        # Spawn initial bloon
+        if len(self.bloon_manager.queue) > 0:
+            self.last_spawned_bloon = self.bloon_manager.spawn_bloon_from_queue()
+        
+        # Game loop
+        run = True
+        while run:
+            if self.round == 4:
+                print(self.lives)
+
+            # Building towers
+            self.build_and_upgrade_towers()
+
+            # Spawning
+            self.spawn_bloon()
+            
+            # Movement
+            self.move_bloons()
+            self.update_towers()
+
+            # Manage round changes
+            if self.check_round_end():
+                if round_break_counter >= self.round_brake_frames:
+                    self.next_round()
+                    round_break_counter = 1
+                else:
+                    round_break_counter += 1
 
     def run_game(self):
         """

@@ -1,6 +1,6 @@
 import random
 
-from utils import Circle, is_circle_overlapping, is_point_in_circle
+from utils import Circle, is_circle_overlapping, is_point_in_circle, draw_circle_alpha
 from datasets import create_pathline, create_bloons_dataframe, create_rounds_dataframe
 from typing import Tuple
 
@@ -106,7 +106,9 @@ class Bloon:
         return False
 
     def draw(self, screen) -> None:
-        self.circle.draw(screen)
+        # self.circle.draw(screen)
+        c = self.color
+        draw_circle_alpha(screen, (c[0], c[1], c[2], 127), (self.x, self.y), Bloon.RADIUS)
 
     def freeze(self, freeze_duration_frames) -> None:
         """
@@ -180,6 +182,13 @@ class BloonManager:
         Shuffles the bloon queue randomly.
         """
         random.shuffle(self.queue)
+
+    def next_round(self):
+        """
+        Prepares queue for next round.
+        """
+        self.round_nr += 1
+        self.prepare_queue_for_round()
     
     def move_bloon(self, bloon: Bloon) -> int:
         """
@@ -241,6 +250,7 @@ class BloonManager:
             bloon.speed = Bloon.DF_BLOONS.loc[into, 'speed']
             bloon.color = Bloon.DF_BLOONS.loc[into, 'rgb']
             bloon.circle = Circle(color=bloon.color, radius=Bloon.RADIUS, pos=[bloon.x, bloon.y])
+            bloon.damage = Bloon.DF_BLOONS.loc[into, 'damage']
 
     def move_all_bloons(self) -> None:
         """

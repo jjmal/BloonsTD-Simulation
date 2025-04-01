@@ -29,20 +29,22 @@ clock = pygame.time.Clock()
 
 # game loop info
 run = True
-FPS = 40
+FPS = 40*0.5
 
 # Prepare the right-side rectangle to render
 right_side_rect = pygame.Rect(480, 0, 160, 480)
 
 # Round preparation
-bloon_manager = BloonManager(30)
+bloon_manager = BloonManager(45)
 bloon_manager.prepare_queue_for_round()
 bloon_manager.shuffle_queue()
 bloons_spawn_line = 20
 towers: List[Tower] = []
-towers.append(IceTower(150,150))
-towers.append(IceTower(300,300))
+towers.append(DartTower(150,385))
+towers.append(SuperMonkeyTower(385,385))
+towers.append(IceTower(250,250))
 towers.append(BombTower(250,200))
+towers.append(TackTower(125,150))
 towers[0].get_upgrade_1()
 towers[0].get_upgrade_2()
 
