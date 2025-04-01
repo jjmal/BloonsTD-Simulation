@@ -37,7 +37,6 @@ class Game:
         self.bloon_manager = BloonManager(self.round)
         self.fps = self.FPS*self.speed_multiplier
         self.last_spawned_bloon = None
-        self.tower_build_history = {}
 
     def setup_screen(self) -> None:
         """
@@ -82,7 +81,7 @@ class Game:
         draw_rect_alpha(self.screen, (220,220,220,175), self.right_side_rect)
         draw_text(self.screen, f"Round: {self.round}", self.text_font, (0,0,0), 485, 5)
         draw_text(self.screen, f"Lives: {self.lives}", self.text_font, (0,0,0), 485, 20)
-        draw_text(self.screen, f"Money: {self.money}", self.text_font, (0,0,0), 560, 20)
+        draw_text(self.screen, f"Money: {self.money}", self.text_font, (0,0,0), 550 , 20)
 
     def spawn_bloon(self) -> None:
         """
@@ -142,12 +141,12 @@ class Game:
         """
         if self.lives <= 0:
             return 2
-        if self.round == 50 and self.check_round_end():
+        if self.round >= 50 and self.check_round_end():
             return 1
         return 0
 
 
-    def run_game_with_graphics(self) -> None:
+    def run_game(self) -> None:
         """
         Runs the entire game with graphics.
         """
@@ -192,69 +191,29 @@ class Game:
             self.render_bloons()
             self.render_ui()
 
-            # Update display
-            pygame.display.update()
+            # Resolve game end:
+            if self.check_game_end() == 1:
+                run = False
+                print("Game won!")
+            elif self.check_game_end() == 2:
+                run = False
+                print("Game lost!")
 
             # Manage round changes
             if self.check_round_end():
                 if round_break_counter >= self.round_brake_frames:
-
-                    # Change round to next
+                    # Change round
                     self.next_round()
-
-                    # Reset round break 
                     round_break_counter = 1
                 else:
                     round_break_counter += 1
+
+            # Update display
+            pygame.display.update()
 
             # Control game speed
             clock.tick(self.fps)
 
         pygame.quit()
 
-    def run_game_without_graphics(self):
-        """
-        Runs the entire game without graphics. This also ignores the FPS cap, as there is nothing to display.
-        """
-        # Set up the round break counter
-        round_break_counter = 1
-        
-        # Prepare round 1
-        self.bloon_manager.prepare_queue_for_round()
-        
-        # Spawn initial bloon
-        if len(self.bloon_manager.queue) > 0:
-            self.last_spawned_bloon = self.bloon_manager.spawn_bloon_from_queue()
-        
-        # Game loop
-        run = True
-        while run:
-            if self.round == 4:
-                print(self.lives)
-
-            # Building towers
-            self.build_and_upgrade_towers()
-
-            # Spawning
-            self.spawn_bloon()
-            
-            # Movement
-            self.move_bloons()
-            self.update_towers()
-
-            # Manage round changes
-            if self.check_round_end():
-                if round_break_counter >= self.round_brake_frames:
-                    self.next_round()
-                    round_break_counter = 1
-                else:
-                    round_break_counter += 1
-
-    def run_game(self):
-        """
-        Runs the game with or without graphics, depending on the game settings.
-        """
-        if self.graphics:
-            self.run_game_with_graphics()
-        else:
-            self.run_game_without_graphics()
+    
