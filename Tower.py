@@ -119,7 +119,11 @@ class Tower:
         for projectile in self.projectile_list:
             hit_something = projectile.collide(bloon_manager)
             if hit_something:
+                # Manage how many bloons can be pierced still
                 projectile.pierce -= 1
+                # Increment pops by the number of pops of the projectile
+                self.pops += projectile.pops
+                # Remove projectile if cannot pierce more
                 if projectile.pierce <= 0:
                     self.remove_projectile(projectile)
     
@@ -134,6 +138,9 @@ class Tower:
         Template for buying upgrade 2 for the tower.
         """
         self.upgrade2 = True
+
+    def __repr__(self) -> str:
+        return(f"{self.name}Tower(pos:({self.x}, {self.y}), up1: {self.upgrade1}, up2: {self.upgrade2}, pops: {self.pops})")
 
     
 class DartTower(Tower):
@@ -438,6 +445,7 @@ class TowerManager:
         self.tower_list = []
         self.position_tower_map = {}
         self.current_queue = self.queue_all_rounds[self.round_nr]
+        self.pops_sum = 0
     
     def upgrade_tower_at_position(self, tower_x: int, tower_y: int, upgrade_type: int) -> None:
         """
@@ -458,8 +466,7 @@ class TowerManager:
         It can either be a tower (and then the tower will be built), or an upgrade for a tower (in this case
         a tower will be upgraded)
         Format of element for tower: Tower(x,y) - an instantiated Tower object
-        Format of element for upgrade: ((x,y), upgrade_type) - a tuple with position x, position y and 
-        int for upgrade type.
+        Format of element for upgrade: (Tower(x,y), upgrade_type) - a Tower object and int for upgrade type.
         :returns: cost in money of the action
         """
         out_cost = 0
@@ -470,8 +477,8 @@ class TowerManager:
             out_cost += new_tower.cost
         elif isinstance(self.current_queue[0], tuple):
             upgrade_info = self.current_queue.pop(0)
-            self.upgrade_tower_at_position(upgrade_info[0][0], upgrade_info[0][1], upgrade_info[1])
-            upgraded_tower = self.position_tower_map[upgrade_info[0]]
+            upgraded_tower = upgrade_info[0]
+            self.upgrade_tower_at_position(upgraded_tower.x, upgraded_tower.y, upgrade_info[1])
             if upgrade_info[1] == 1:
                 out_cost += upgraded_tower.cost_upgrade_1
             elif upgrade_info[1] == 2:
@@ -498,6 +505,14 @@ class TowerManager:
             tower.move_projectiles()    
             tower.check_for_projectile_collisions(bloon_manager)
     
+    def update_pops(self) -> None:
+        """
+        Updates self.pops_sum.
+        """
+        self.pops_sum = 0
+        for tower in self.tower_list:
+            self.pops_sum += tower.pops
+    
     def draw_all_towers(self, screen) -> None:
         """
         Draws all active towers and their projectiles.
@@ -512,6 +527,7 @@ class TowerManager:
         """
         self.round_nr += 1
         self.current_queue = self.queue_all_rounds[self.round_nr]
+        self.update_pops()
 
 
 class Projectile:
@@ -533,6 +549,7 @@ class Projectile:
         self.lifespan_frames = lifespan_frames
         self.lifespan_counter = 1
         self.last_bloon_struck = None
+        self.pops = 0
         
     def draw(self, screen) -> None:
         self.circle.draw(screen, outline=False)
@@ -569,6 +586,8 @@ class Projectile:
             if hit_bloon is not None:
                 if not hit_bloon.frozen:
                     bloon_manager.resolve_bloon_hit(hit_bloon)
+                    self.pops += 1
+                    
                 return True
         return False
 
@@ -602,6 +621,7 @@ class Bomb(Projectile):
     def collide(self, bloon_manager: BloonManager) -> bool:
         """
         Checks for collision with bloons; also manages explosion behaviour. 
+        :param bloon_manager: BloonManager object used in the game
         :returns: True if the collision has occured; False otherwise
         """
         bloons_in_explosion = []
@@ -616,6 +636,8 @@ class Bomb(Projectile):
                 for hit_bloon in bloons_in_explosion:
                     hit_bloon.reset_freeze() # reset bloon freeze upon being damaged by a Bomb.
                     bloon_manager.resolve_bloon_hit(hit_bloon)
+                    self.pops += 1
+                    
                 return True
         return False
     

@@ -106,9 +106,10 @@ class Bloon:
         return False
 
     def draw(self, screen) -> None:
-        # self.circle.draw(screen)
-        c = self.color
-        draw_circle_alpha(screen, (c[0], c[1], c[2], 127), (self.x, self.y), Bloon.RADIUS)
+        self.circle.draw(screen)
+        # Uncomment lines below if you want the Bloons to be semi-transparent
+        # c = self.color
+        # draw_circle_alpha(screen, (c[0], c[1], c[2], 127), (self.x, self.y), Bloon.RADIUS)
 
     def freeze(self, freeze_duration_frames) -> None:
         """

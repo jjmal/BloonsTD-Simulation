@@ -1,12 +1,10 @@
 import pygame
-import sys
-import math
-import random
 
-from typing import Dict
+from typing import Dict, Tuple, List
 from Tower import TowerManager
 from Bloon import BloonManager
 from utils import draw_rect_alpha, draw_text
+from datasets import create_rounds_dataframe
 
 class Game:
     """
@@ -15,6 +13,7 @@ class Game:
     SCREEN_WIDTH = 640
     SCREEN_HEIGHT = 480
     FPS = 40
+    DF_ROUNDS = create_rounds_dataframe()
     
     def __init__(self, 
                  starting_lives: int, 
@@ -126,12 +125,27 @@ class Game:
             return True
         return False
     
+    def make_money(self, previous_round_pops_sum: int) -> None:
+        """
+        Increments the money at the end of the round.
+        :param previous_round_pops: sum of pops at the end of the previous round of all active towers
+        """
+        end_round_money = int(Game.DF_ROUNDS.loc[self.round,'money_round_end'])
+        pops_sum = self.tower_manager.pops_sum
+        pop_money = pops_sum - previous_round_pops_sum
+        self.money += end_round_money
+        self.money += pop_money
+    
     def next_round(self) -> None:
         """
         Changes round to next.
         """
+        # Get previous round (pre-update) pops sum
+        previous_round_pops_sum = self.tower_manager.pops_sum
         self.bloon_manager.next_round()
-        self.tower_manager.next_round()
+        self.tower_manager.next_round() # This also updates pops!
+        # Make money
+        self.make_money(previous_round_pops_sum)
         self.round += 1
 
     def check_game_end(self) -> int:
@@ -145,6 +159,17 @@ class Game:
             return 1
         return 0
 
+
+    def get_endgame_info(self) -> Dict:
+        """
+        Gets information at the end of the game.
+        """
+        info_dict = {}
+        info_dict['round'] = self.round
+        info_dict['lives'] = int(self.lives)
+        info_dict['money'] = int(self.money)
+        info_dict['towers'] = self.tower_manager.tower_list
+        return info_dict
 
     def run_game(self) -> None:
         """
@@ -201,9 +226,11 @@ class Game:
             if self.check_game_end() == 1:
                 run = False
                 print("Game won!")
+                print(f"Some end game information:\n{self.get_endgame_info()}")
             elif self.check_game_end() == 2:
                 run = False
-                print("Game lost!")
+                print(f"Game lost on round {self.round}!")
+                print(f"Some end game information:\n{self.get_endgame_info()}")
 
             # Manage round changes
             if self.check_round_end():
@@ -211,6 +238,7 @@ class Game:
                     # Change round
                     self.next_round()
                     round_break_counter = 1
+
                 else:
                     round_break_counter += 1
 
@@ -223,4 +251,18 @@ class Game:
         if self.graphics:
             pygame.quit()
 
+def prepare_tower_queue(tower_actions_tuple: List[Tuple[int, List]]) -> Dict:
+    """
+    Transforms list of tuples into a queue that can be put in a Game object.
+    :param tower_actions_tuples: A list of tuples, with the tuples in the 
+    form (round_nr, [action1, action2]). Action can be either a Tower or (Tower, upgrade_nr)
+    :returns: A dictionary that is readable by the Game object as a valid queue.
+    """
+    builds = [[] for i in range(50)]
+    keys = [(i+1) for i in range(50)]
+    queue = dict(zip(keys,builds))
+    for action in tower_actions_tuple:
+        queue[action[0]].append(action[1])
+    
+    return queue
     
