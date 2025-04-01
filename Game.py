@@ -150,12 +150,15 @@ class Game:
         """
         Runs the entire game with graphics.
         """
-        # Initialise pygame
-        pygame.init()
-        # Set up the screen
-        self.setup_screen()
-        # Set up the clock
-        clock = pygame.time.Clock()
+
+        if self.graphics:
+            # Initialise pygame
+            pygame.init()
+            # Set up the screen
+            self.setup_screen()
+            # Set up the clock
+            clock = pygame.time.Clock()
+
         # Set up the round break counter
         round_break_counter = 1
         
@@ -169,12 +172,14 @@ class Game:
         # Game loop
         run = True
         while run:
-            # Event loop
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    run = False
-            # Background rendering
-            self.render_screen()
+            if self.graphics:
+                # Event loop
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        run = False
+                
+                # Background rendering
+                self.render_screen()
 
             # Building towers
             self.build_and_upgrade_towers()
@@ -185,11 +190,12 @@ class Game:
             # Movement
             self.move_bloons()
             self.update_towers()
-
-            # Rendering
-            self.render_towers()
-            self.render_bloons()
-            self.render_ui()
+            
+            if self.graphics:
+                # Rendering
+                self.render_towers()
+                self.render_bloons()
+                self.render_ui()
 
             # Resolve game end:
             if self.check_game_end() == 1:
@@ -208,12 +214,13 @@ class Game:
                 else:
                     round_break_counter += 1
 
-            # Update display
-            pygame.display.update()
+            if self.graphics:
+                # Update display
+                pygame.display.update()
 
-            # Control game speed
-            clock.tick(self.fps)
-
-        pygame.quit()
+                # Control game speed
+                clock.tick(self.fps)
+        if self.graphics:
+            pygame.quit()
 
     
