@@ -323,4 +323,10 @@ def get_good_tower_positions() -> List[Tuple[int,int]]:
         close to the middle of the map, close to a turn (in a corner), covering a lot of track area.
         :returns: a List of good positions in the form (x-coord, y-coord).
         """
-        pass
+        corners = [(85, 390), (340, 220)]
+        middle = [(255,255)]
+
+        def generate_corner_set():
+            pass
+        def generate_middle_set():
+            pass
