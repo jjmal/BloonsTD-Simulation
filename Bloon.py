@@ -28,6 +28,8 @@ class Bloon:
         13: "left",
         14: "up"
     }
+    BLOONS_SPAWN_LINE = -10
+
     def __init__(self, type_) -> None:
         self.type = type_
 
@@ -45,6 +47,7 @@ class Bloon:
         self.frozen = False
         self.freeze_counter = 1
         self.freeze_duration_frames = 50
+        self.invulnerable = True
     
     def overlaps(self, other: Circle) -> bool:
         """
@@ -84,6 +87,10 @@ class Bloon:
 
             # Update progress
             self.progress += 1
+
+            # Set invulnerable to False if the threshold is crossed
+            if self.x > Bloon.BLOONS_SPAWN_LINE and self.invulnerable:
+                self.invulnerable = False
         
     def reach_target(self) -> bool:
         """

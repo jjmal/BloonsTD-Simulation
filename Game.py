@@ -14,6 +14,7 @@ class Game:
     SCREEN_HEIGHT = 480
     FPS = 40
     DF_ROUNDS = create_rounds_dataframe()
+    BLOONS_SPAWN_LINE = -10
     
     def __init__(self, 
                  starting_lives: int, 
@@ -22,14 +23,12 @@ class Game:
                  graphics: bool, 
                  tower_queue: Dict, 
                  speed_multiplier: float = 1, 
-                 bloons_spawn_line: int = 20,
                  round_break_frames: int = 60) -> None:
         self.lives = starting_lives
         self.money = starting_money
         self.round = starting_round
         self.graphics = graphics
         self.speed_multiplier = speed_multiplier
-        self.bloons_spawn_line = bloons_spawn_line
         self.tower_manager = TowerManager(tower_queue, self.round)
         self.round_brake_frames = round_break_frames
 
@@ -86,7 +85,7 @@ class Game:
         """
         Spawns all bloons from queue.
         """
-        if self.last_spawned_bloon.x >= self.bloons_spawn_line:
+        if self.last_spawned_bloon.x >= Game.BLOONS_SPAWN_LINE:
             if self.bloon_manager.queue:
                 self.last_spawned_bloon  = self.bloon_manager.spawn_bloon_from_queue()
 

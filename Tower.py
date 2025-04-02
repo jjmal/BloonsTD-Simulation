@@ -56,7 +56,7 @@ class Tower:
         max_progress = 0
         if len(bloon_list) > 0:
             for bloon in bloon_list:
-                if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen: # don't target frozen bloons
+                if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen and not bloon.invulnerable: # don't target frozen bloons
                     if max_progress <= bloon.progress:
                         self.target = bloon
                         max_progress = bloon.progress
@@ -242,7 +242,7 @@ class TackTower(Tower):
         """
         self.target = None
         for bloon in bloon_list:
-            if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen: # don't target frozen bloons
+            if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and not bloon.frozen and not bloon.invulnerable: # don't target frozen bloons
                 self.target = True
                 return
     
@@ -306,7 +306,7 @@ class BombTower(Tower):
         max_progress = 0
         if len(bloon_list) > 0:
             for bloon in bloon_list:
-                if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K": # Bomb Towers cannot target black bloons
+                if is_point_in_circle(self.range_circle, bloon.x, bloon.y) and bloon.type != "K" and not bloon.invulnerable: # Bomb Towers cannot target black bloons
                     if max_progress <= bloon.progress:
                         self.target = bloon
                         max_progress = bloon.progress
@@ -372,7 +372,7 @@ class IceTower(Tower):
         bloons_in_freeze = 0
         if len(bloon_list) > 0: 
             for bloon in bloon_list:
-                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20 and bloon.type != 'W': # Ice Towers cannot target white bloons
+                if is_circle_overlapping(self.range_circle, bloon.circle) and bloons_in_freeze < 20 and bloon.type != 'W' and not bloon.invulnerable: # Ice Towers cannot target white bloons
                     self.target.append(bloon)
                     bloons_in_freeze += 1
     
@@ -578,8 +578,8 @@ class Projectile:
         hit_bloon = None
         bloon_list = bloon_manager.bloon_list
         if len(bloon_list) > 0:
-            for bloon in  bloon_list:
-                if is_circle_overlapping(bloon.circle, self.circle) and not self.last_bloon_struck == bloon:
+            for bloon in bloon_list:
+                if is_circle_overlapping(bloon.circle, self.circle) and not self.last_bloon_struck == bloon and not bloon.invulnerable:
                     hit_bloon = bloon
                     self.last_bloon_struck = bloon
                     break
@@ -613,7 +613,7 @@ class Bomb(Projectile):
         explosion_circle = Circle((255, 102, 0), self.explosion_radius, [self.x, self.y])
         bloons_in_explosion = 0
         for bloon in bloon_list:
-            if is_circle_overlapping(bloon.circle, explosion_circle) and bloons_in_explosion < 20 and bloon.type != 'K':
+            if is_circle_overlapping(bloon.circle, explosion_circle) and bloons_in_explosion < 20 and bloon.type != 'K' and not bloon.invulnerable:
                 hit_bloons.append(bloon)
                 bloons_in_explosion += 1
         return hit_bloons
@@ -628,7 +628,7 @@ class Bomb(Projectile):
         bloon_list = bloon_manager.bloon_list
         if len(bloon_list) > 0:
             for bloon in  bloon_list:
-                if is_circle_overlapping(bloon.circle, self.circle):
+                if is_circle_overlapping(bloon.circle, self.circle) and not bloon.invulnerable:
                     bloons_in_explosion = self.find_bloons_in_explosion(bloon_list)
                     break
 
