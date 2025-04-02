@@ -1,10 +1,10 @@
 import pygame
 
 from typing import Dict, Tuple, List
-from Tower import TowerManager
+from Tower import TowerManager, DartTower
 from Bloon import BloonManager
 from utils import draw_rect_alpha, draw_text
-from datasets import create_rounds_dataframe
+from datasets import create_rounds_dataframe, create_towers_dataframe
 
 class Game:
     """
@@ -264,4 +264,63 @@ def prepare_tower_queue(tower_actions_tuple: List[Tuple[int, List]]) -> Dict:
         queue[action[0]].append(action[1])
     
     return queue
+
+
+class GameHeuristic(Game):
+    """
+    Represents a game played using human strategies.
+    """
+    TOWERS_DF = create_towers_dataframe()
+
+    def __init__(self, starting_lives, starting_money, starting_round, graphics, tower_queue, strategy, speed_multiplier = 1, round_break_frames = 60):
+        super().__init__(starting_lives, starting_money, starting_round, graphics, tower_queue, speed_multiplier, round_break_frames)
+        self.strategy = strategy
+        
+        self.good_position_list = get_good_tower_positions()
+
+    def get_next_good_positions(self) -> Tuple[int,int]:
+        """
+        Gets the next good position (according to Strategy 1).
+        :returns: the next good position, in the format (x-coord, y-coord)
+        """
+        return self.good_position_list.pop(0)
+
+    def strategy_1(self) -> None:
+        """
+        Adds actions to the queue according to Strategy 1.
+        """
+        can_buy = True
+        while can_buy:
+            if self.money >= GameHeuristic.TOWERS_DF.loc['Dart', 'cost']:
+                pos = self.get_next_good_positions()
+                self.queue[self.round].append(DartTower(pos[0], pos[1]))
+            else:
+                can_buy = False
+
+    def strategy_2(self) -> None:
+        pass
     
+    def next_round(self) -> None:
+        """
+        Changes round to next.
+        """
+        # Get previous round (pre-update) pops sum
+        previous_round_pops_sum = self.tower_manager.pops_sum
+        self.bloon_manager.next_round()
+        self.tower_manager.next_round() # This also updates pops!
+        # Make money
+        self.make_money(previous_round_pops_sum)
+        self.round += 1
+
+        if self.strategy == 1:
+            self.strategy_1()
+        elif self.strategy == 2:
+            self.strategy_2()
+
+def get_good_tower_positions() -> List[Tuple[int,int]]:
+        """
+        Returns a good position for the Dart Tower. Some rules of thumb for good positions are:
+        close to the middle of the map, close to a turn (in a corner), covering a lot of track area.
+        :returns: a List of good positions in the form (x-coord, y-coord).
+        """
+        pass
