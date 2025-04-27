@@ -1,5 +1,5 @@
 import math
-from typing import List, Dict
+from typing import List, Dict, Tuple
 from Bloon import Bloon, BloonManager
 
 from datasets import create_towers_dataframe
@@ -464,24 +464,27 @@ class TowerManager:
         """
         For the current queue (queue for the current round), pop the first element and resolve its action.
         It can either be a tower (and then the tower will be built), or an upgrade for a tower (in this case
-        a tower will be upgraded)
-        Format of element for tower: Tower(x,y) - an instantiated Tower object
-        Format of element for upgrade: (Tower(x,y), upgrade_type) - a Tower object and int for upgrade type.
+        a tower will be upgraded). Format of action: (tower_name, pos, action_type), with tower_name a string 
+        (e.g. 'Dart'), pos a tuple of integers representing the tower position and action_type an integer 
+        (0 for build, 1 for upgrade 1, 2 for upgrade 2).
         :returns: cost in money of the action
         """
         out_cost = 0
-        if isinstance(self.current_queue[0], Tower):
-            new_tower = self.current_queue.pop(0)
+        action = self.current_queue.pop(0)
+        tower_name = action[0]
+        pos = action[1]
+        action_type = action[2]
+        if action_type == 0:
+            new_tower = convert_name_to_tower(tower_name, pos)
             self.tower_list.append(new_tower)
             self.position_tower_map[(new_tower.x, new_tower.y)] = new_tower
             out_cost += new_tower.cost
-        elif isinstance(self.current_queue[0], tuple):
-            upgrade_info = self.current_queue.pop(0)
-            upgraded_tower = upgrade_info[0]
-            self.upgrade_tower_at_position(upgraded_tower.x, upgraded_tower.y, upgrade_info[1])
-            if upgrade_info[1] == 1:
+        elif action_type == 1:
+            upgraded_tower = self.position_tower_map[pos]
+            self.upgrade_tower_at_position(upgraded_tower.x, upgraded_tower.y, action_type)
+            if action_type == 1:
                 out_cost += upgraded_tower.cost_upgrade_1
-            elif upgrade_info[1] == 2:
+            elif action_type == 2:
                 out_cost += upgraded_tower.cost_upgrade_2
         return out_cost
 
@@ -528,6 +531,25 @@ class TowerManager:
         self.round_nr += 1
         self.current_queue = self.queue_all_rounds[self.round_nr]
         self.update_pops()
+
+def convert_name_to_tower(tower_name: str, pos: Tuple[int, int]):
+    """
+    Converts a tower name to a Tower object.
+    :param tower_name: name of the tower (e.g. 'Dart')
+    :param pos: position of the tower, (x,y)
+    """
+    if tower_name == 'Dart':
+        return DartTower(pos[0], pos[1])
+    elif tower_name == 'Tack':
+        return TackTower(pos[0], pos[1])
+    elif tower_name == 'Bomb':
+        return BombTower(pos[0], pos[1])
+    elif tower_name == 'Ice':
+        return IceTower(pos[0], pos[1])
+    elif tower_name == 'SuperMonkey':
+        return SuperMonkeyTower(pos[0], pos[1])
+    else:
+        raise ValueError(f"Conversion from name to Tower object impossible (no tower with name {tower_name} exists)")
 
 
 class Projectile:

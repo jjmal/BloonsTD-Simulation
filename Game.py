@@ -254,7 +254,7 @@ def prepare_tower_queue(tower_actions_tuple: List[Tuple[int, List]]) -> Dict:
     """
     Transforms list of tuples into a queue that can be put in a Game object.
     :param tower_actions_tuples: A list of tuples, with the tuples in the 
-    form (round_nr, [action1, action2]). Action can be either a Tower or (Tower, upgrade_nr)
+    form (round_nr, (tower_name, pos, action_type)). 
     :returns: A dictionary that is readable by the Game object as a valid queue.
     """
     builds = [[] for i in range(50)]
@@ -262,7 +262,7 @@ def prepare_tower_queue(tower_actions_tuple: List[Tuple[int, List]]) -> Dict:
     queue = dict(zip(keys,builds))
     for action in tower_actions_tuple:
         queue[action[0]].append(action[1])
-    
+
     return queue
 
 
@@ -326,7 +326,13 @@ def get_good_tower_positions() -> List[Tuple[int,int]]:
         corners = [(85, 390), (340, 220)]
         middle = [(255,255)]
 
-        def generate_corner_set():
+        def generate_corner_point_set(corners):
             pass
-        def generate_middle_set():
-            pass
+        def generate_middle_point_set(middle):
+            kernel = middle[0]
+            x, y = kernel
+            for i in range(-100, 101, 20):
+                middle.append((x, y + i))
+            return middle
+
+        return generate_middle_point_set(middle)

@@ -182,3 +182,6 @@ def create_rounds_dataframe() -> pd.DataFrame:
     df_final  = df.set_index('Round')
 
     return df_final
+
+# df = create_rounds_dataframe()
+# print((df['RBE_Cash'].sum() + df['money_round_end'].sum() - 1791)/250)
