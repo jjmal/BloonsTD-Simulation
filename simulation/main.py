@@ -1,6 +1,5 @@
 from Game import Game, prepare_tower_queue
 from typing import List, Tuple
-from Tower import DartTower, TackTower, BombTower, IceTower, SuperMonkeyTower
 
 actions = [
     (1, ('Dart', (150,225), 0)),
@@ -17,11 +16,7 @@ def main(use_graphics: bool, actions: List[Tuple], speed_multiplier: int = 2) ->
     game.run_game()
 
 if __name__ == "__main__":
-    main(False, actions, 5)
-    main(False, actions, 5)
-    main(False, actions, 5)
-    main(False, actions, 5)
-    main(False, actions, 5)
-    # main(False, actions)
+    main(True, actions, 5)
+    
 
 

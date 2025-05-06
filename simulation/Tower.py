@@ -1,4 +1,5 @@
 import math
+import pygame
 from typing import List, Dict, Tuple
 from Bloon import Bloon, BloonManager
 
@@ -40,7 +41,8 @@ class Tower:
         self.target = None
     
     def draw(self, screen) -> None:
-        draw_circle_alpha(screen, (220,220,220,50), (self.x, self.y), self.range)
+        # draw_circle_alpha(screen, (220,220,220,50), (self.x, self.y), self.range)
+        pygame.draw.circle(screen, (220,220,220),  (self.x, self.y), self.range, 1)
         self.footprint.draw(screen)
         self.inner_circle.draw(screen)
         for projectile in self.projectile_list:  
@@ -524,6 +526,12 @@ class TowerManager:
         for tower in self.tower_list:
             tower.draw(screen)
 
+    def prepare_current_queue(self):
+        """
+        Resolves the change of the round without updating pops.
+        """
+        self.current_queue = self.queue_all_rounds[self.round_nr]
+
     def next_round(self):
         """
         Resolves the change of the round.
@@ -532,11 +540,12 @@ class TowerManager:
         self.current_queue = self.queue_all_rounds[self.round_nr]
         self.update_pops()
 
-def convert_name_to_tower(tower_name: str, pos: Tuple[int, int]):
+def convert_name_to_tower(tower_name: str, pos: Tuple[int, int]) -> Tower:
     """
     Converts a tower name to a Tower object.
     :param tower_name: name of the tower (e.g. 'Dart')
     :param pos: position of the tower, (x,y)
+    :returns: the created Tower object
     """
     if tower_name == 'Dart':
         return DartTower(pos[0], pos[1])
