@@ -97,7 +97,8 @@ class Game:
         if cost <= self.money:
             self.money += -cost
         else:
-            raise ValueError(f"Not enough money for the declared build in round {self.round}!")
+            raise ValueError(f"Not enough money for the declared build in round {self.round}! \n \
+                             Money: {self.money}. Money needed: {cost}")
 
     def move_bloons(self) -> None:
         """
