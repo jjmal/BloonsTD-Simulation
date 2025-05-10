@@ -2,13 +2,13 @@ import re
 
 from typing import List, Tuple, Dict, Any
 from gurobipy import Model, GRB, quicksum
-from modelling_sets import generate_vars_1a, generate_coverage_dict, generate_all_footprint_constraint_sets, get_money_constraint_rhs, generate_sets_1a
+from modelling_sets import generate_vars_1a, generate_coverage_dict, generate_all_footprint_constraint_sets, get_money_constraint_rhs, generate_sets_1a, generate_sets_1b
 
 class GameModel:
     """
     Template class for models that will derive the solutions for the game.
     """
-    def __init__(self, name: str, modulo: int = 1, logging: bool = True):
+    def __init__(self, name: str, modulo: int, logging: bool = True):
         self.modulo = modulo
         self.model = Model(name=name)
         self.logging = logging
@@ -69,7 +69,7 @@ class CoverageModel(GameModel):
     """
     Represents a model based on point coverage. It utilises only DartMonkeys (and their upgrades)
     """
-    def __init__(self, name, modulo = 1, logging = True):
+    def __init__(self, name, modulo, logging = True):
         super().__init__(name, modulo, logging)
 
 
@@ -77,14 +77,14 @@ class ConstraintSatisfactionModel(GameModel):
     """
     Represents a model based on Constraint Satisfaction, with no optimization objective needed. 
     """
-    def __init__(self, name, modulo = 1, logging = True):
+    def __init__(self, name, modulo, logging = True):
         super().__init__(name, modulo, logging)
 
 class Model1a(CoverageModel):
     """
     Represents Model 1a (Maximum Track Coverage as objective; Dart Tower only; No Upgrades)
     """
-    def __init__(self, modulo = 1, logging = True):
+    def __init__(self, modulo, logging = True):
         super().__init__('Model 1 (Max Coverage, Dart Only, No Upgrades)', modulo, logging)
 
     def generate_sets(self):
@@ -145,7 +145,7 @@ class Model1a(CoverageModel):
         """
         Runs Model 1a for each round, fixing previous choices.
         :param modulo: number for the divisibility filter
-        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 (not enough money for the build), as it
+        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 for modulo 10 (not enough money for the build), as it
         by default does not account for lost lives. With correction enabled, the model will take the lives lost into account when calculating
         money from round 19 onwards, enabling the game to last until its properly lost.
         :returns: a Dict of the form (round_nr, choices) with round_nr being the round
@@ -214,7 +214,7 @@ class Model1a(CoverageModel):
         return out
 
     @staticmethod
-    def model_1a_per_round_to_simulation(result_dict: Dict[int, List[Tuple[int,int]]]) -> List[Tuple]:
+    def model_to_simulation(result_dict: Dict[int, List[Tuple[int,int]]]) -> List[Tuple]:
         out = []
         for key, val in result_dict.items():
             if len(val) > 0:
@@ -228,12 +228,38 @@ class Model1b(Model1a):
     """
     Represents Model 1b (Maximum Track Coverage as objective; Dart Tower only; No Upgrades; Ensuring all points are covered)
     """
-    def set_constraints(self):
-        super().set_constraints()
-        # CONSTRAINT 3 - we have to cover all points at least once
-        self.model.addConstrs(
+    def __init__(self, modulo: int, alpha: int, logging: bool = True):
+        super().__init__(modulo, logging)
+        self.alpha = alpha
 
+    def generate_sets(self):
+        sets = generate_sets_1b(self.modulo, self.alpha)
+        self.TOWER_PLACEMENTS = sets['TP']
+        self.DISTANCE = sets['DIST']
+        self.FOOTPRINTS = sets['FP']
+
+    def set_objective(self):
+         # Define the objective function
+        obj = quicksum(
+            self.DISTANCE[pos] * self.varss[pos] 
+            for pos in self.TOWER_PLACEMENTS
+            )
+        self.objective_function = obj
+
+        # Set the objective function
+        self.model.setObjective(
+            obj,
+            sense=GRB.MINIMIZE
         )
+        # Update model
+        self.model.update()
+
+    # def set_constraints(self):
+    #     super().set_constraints()
+    #     # CONSTRAINT 3 - we have to cover all points at least once
+    #     self.model.addConstrs(
+
+    #     )
     
 
 

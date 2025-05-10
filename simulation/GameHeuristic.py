@@ -79,4 +79,3 @@ def get_s1_tower_positions() -> List[Tuple[int,int]]:
         
         return sort_positions_by_middle_dist(corners)
 
-print(len(get_s1_tower_positions()))

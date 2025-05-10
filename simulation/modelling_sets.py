@@ -158,10 +158,11 @@ def generate_coverage_dict(tower_type: str = 'Dart', upgrade_2: bool = False) ->
     return out
 
 
-def generate_distance_dict(tower_type: str = 'Dart', upgrade_1: bool = False, upgrade_2: bool = False) -> Dict[Tuple[int,int], int]: # TODO - repurpose output to handle tower type and upgrade
+def generate_distance_dict(alpha: float, tower_type: str = 'Dart', upgrade_1: bool = False, upgrade_2: bool = False) -> Dict[Tuple[int,int], int]: # TODO - repurpose output to handle tower type and upgrade
     """
     Generates a dictionary containing the average distance of the placement point of a tower to all
     the points in the middle of the track in the range of a tower_type Tower, upgraded with upgrade_2 or not.
+    :param alpha: weight to give to count (so to the COVERAGE measure)
     :param tower_type: One of 'Dart', 'Tack', 'Bomb', 'Ice', 'SuperMonkey'
     :param upgrade_2: True if we want to consider the tower with upgrade 2 bought; False otherwise
     :returns: A Dict of the form (x,y): avegare_midpoint_distance
@@ -184,7 +185,10 @@ def generate_distance_dict(tower_type: str = 'Dart', upgrade_1: bool = False, up
             if is_point_in_circle(circle, p[0], p[1]):
                 dist_sum += math.dist(var, p)
                 counter += 1
-        out[var] = dist_sum/counter
+        if counter <= 0:
+            out[var] = float('Inf')
+        else:
+            out[var] = dist_sum/(counter*alpha)
     return out
 
 
@@ -284,6 +288,16 @@ def generate_sets_1a(modulo: int) -> Dict[str, List]:
 
     return {'TP': TP, 'COV' : COV, 'FP' : FP}
 
+def generate_sets_1b(modulo: int, alpha: float) -> Dict[str, List]:
+    """
+    Generates all sets needed for Model 1b.
+    """
+    TP = generate_vars_1a(modulo) # Use the same set of vars as 1a
+    DIST = generate_distance_dict(alpha)
+    FP = generate_all_footprint_constraint_sets("nn", modulo)
+
+    return {'TP': TP, 'DIST' : DIST, 'FP' : FP}
+
 def generate_var_label_sets(modulo: int) -> Tuple[Tuple]:
     """
     
@@ -301,8 +315,5 @@ def generate_var_label_sets(modulo: int) -> Tuple[Tuple]:
     upgrade_vals_super = (0,1)
 
     return ((placements_nonsuper_mod, monkey_types_nonsuper, upgrade_vals_nonsuper), (placements_super_mod, monkey_types_super, upgrade_vals_super))
-
-
-
 
 

@@ -28,7 +28,7 @@ def run_1a(modulo: int, graphics: bool = False, speed_multiplier = 5):
     Runs the experiment for model 1a.
     """
     results = Model1a.model_1a_per_round(modulo, False)
-    actions = Model1a.model_1a_per_round_to_simulation(results)
+    actions = Model1a.model_to_simulation(results)
     print(actions)
     queue = prepare_tower_queue(actions)
     # actions = [
@@ -73,4 +73,4 @@ def run_1a(modulo: int, graphics: bool = False, speed_multiplier = 5):
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-run_1a(5, True, 10)
+run_1a(3, True, 10)

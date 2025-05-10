@@ -1,4 +1,5 @@
 from modelling_sets import generate_track_middlepoints, create_pathline, generate_footprint_constraint_set,generate_coverage_dict, generate_all_points_on_track, generate_all_tower_placements, generate_all_footprint_constraint_sets
+from modelling_utils import generate_square_integer_points, square_to_quarter_circle
 import matplotlib.pyplot as plt
 
 
@@ -43,11 +44,12 @@ def plot_footprint_constraints(pos, zone_points):
     plt.show()
 
 
-def plot_points(points):
+def plot_points(points_list):
     plt.figure(figsize=(10, 6))
 
-    x, y = zip(*points)
-    plt.plot(x,y, 'bo', markersize = 1)
+    for points in points_list:
+        x, y = zip(*points)
+        plt.scatter(x,y)
 
     plt.legend()
     plt.xlabel('X')
@@ -60,7 +62,4 @@ def plot_points(points):
 def flatten(xss):
     return [x for xs in xss for x in xs]
 
-track = generate_all_points_on_track()
-p = [(150, 150), (170, 190), (340, 370), (170, 150), (130, 190), (340, 110), (360, 380), (360, 340), (130, 150), (380, 350), (380, 220), (370, 240), (360, 130), (390, 240), (380, 140), (360, 220), (150, 170), (380, 100), (150, 390), (270, 230), (350, 240), (170, 170), (110, 390), (170, 390), (340, 130), (340, 350), (360, 360), (130, 170), (380, 370), (130, 390), (370, 260), (390, 260), (150, 190), (360, 110), (270, 250), (380, 120), (350, 260)]
 
-plot_track(p, track)
