@@ -1,6 +1,6 @@
 from Game import Game, prepare_tower_queue
 from GameHeuristic import GameS1, get_s1_tower_positions
-from modelling import Model1a
+from modelling import Model1a, Model1b, Model1c
 
 def run_s1(graphics: bool = False, speed_multiplier = 5):
     """
@@ -23,13 +23,12 @@ def run_s2(graphics: bool = False, speed_multiplier = 5):
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-def run_1a(modulo: int, graphics: bool = False, speed_multiplier = 5):
+def run_1a(modulo: int, graphics: bool = False, speed_multiplier: int = 5, round_19_correction: bool = False):
     """
     Runs the experiment for model 1a.
     """
-    results = Model1a.model_1a_per_round(modulo, False)
+    results = Model1a.model_1a_per_round(modulo, round_19_correction)
     actions = Model1a.model_to_simulation(results)
-    print(actions)
     queue = prepare_tower_queue(actions)
     # actions = [
     #     (1, ('Dart', (150, 180), 0)), 
@@ -73,4 +72,24 @@ def run_1a(modulo: int, graphics: bool = False, speed_multiplier = 5):
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-run_1a(3, True, 10)
+def run_1b(modulo: int, alpha, beta, graphics: bool = False, speed_multiplier = 5, round_19_correction: bool = False):
+    results = Model1b.model_1b_per_round(modulo, alpha, beta, round_19_correction)
+    actions = Model1b.model_to_simulation(results)
+    queue = prepare_tower_queue(actions)
+
+    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    g.run_game()
+
+
+run_1b(10, 0.99, 0.01, False, 2, True)
+
+
+def run_1c(modulo: int, graphics: bool = False, speed_multiplier: int = 5, round_19_correction: bool = False):
+    results = Model1c.model_1c_per_round(modulo, round_19_correction)
+    actions = Model1c.model_to_simulation(results)
+    queue = prepare_tower_queue(actions)
+
+    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    g.run_game()
+
+run_1c(10, True, 5)

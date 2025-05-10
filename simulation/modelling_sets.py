@@ -36,7 +36,7 @@ def generate_all_points_on_track(extended_by: int = 0) -> List[Tuple[int,int]]:
     """
     Generates a list of all points on the the track.
     :param extended_by: by how much to increase or shrink the width of resulting lines; should be at 
-    most -19
+    least -19 and at most 15. 
     :returns: List of tuples representing points (x,y) on the track
     """
 
@@ -143,6 +143,7 @@ def generate_all_tower_placements(super_monkey: bool = False) -> List[Tuple[int,
     too_close_to_track_set = set(generate_all_points_on_track(radius))
 
     out = list(not_outside_set - too_close_to_track_set)
+
     return out
 
    
@@ -174,14 +175,13 @@ def generate_coverage_dict(tower_type: str = 'Dart', upgrade_2: bool = False) ->
     return out
 
 
-def generate_distance_dict(alpha: float, tower_type: str = 'Dart', upgrade_1: bool = False, upgrade_2: bool = False) -> Dict[Tuple[int,int], int]: # TODO - repurpose output to handle tower type and upgrade
+def generate_distance_dict(tower_type: str = 'Dart', upgrade_2: bool = False) -> Dict[Tuple[int,int], int]: # TODO - repurpose output to handle tower type and upgrade
     """
-    Generates a dictionary containing the average distance of the placement point of a tower to all
-    the points in the middle of the track in the range of a tower_type Tower, upgraded with upgrade_2 or not.
-    :param alpha: weight to give to count (so to the COVERAGE measure)
+    Generates a dictionary containing the sum of the distances of the placement point of a tower to all the
+    points in the middle of the track in the range of a tower_type Tower, upgraded with upgrade_2 or not.
     :param tower_type: One of 'Dart', 'Tack', 'Bomb', 'Ice', 'SuperMonkey'
     :param upgrade_2: True if we want to consider the tower with upgrade 2 bought; False otherwise
-    :returns: A Dict of the form (x,y): avegare_midpoint_distance
+    :returns: A Dict of the form (x,y): distance sum
     """
     out = {}
 
@@ -195,22 +195,91 @@ def generate_distance_dict(alpha: float, tower_type: str = 'Dart', upgrade_1: bo
     for i in range(len(tower_placements)):
         var = tower_placements[i]
         circle = Circle(color=(0,0,0), radius=rad, pos=var)
-        counter = 0
-        dist_sum = 1
+        dist_sum = 0
         for p in midpoints:
             if is_point_in_circle(circle, p[0], p[1]):
                 dist_sum += math.dist(var, p)
-                counter += 1
-        if counter <= 0:
-            out[var] = float('Inf')
-        else:
-            out[var] = dist_sum/(counter*alpha)
+
+        out[var] = dist_sum 
     return out
 
+def generate_midpoint_vector_map() -> Dict[Tuple[int,int], np.array]:
+    """
+    Generates a map from midpoints of the track to the vector made by the two
+    breakpoints of the line that the midpoint is a part of.
+    """
+    break_points = create_pathline()
+    out = {}
+    # Process each segment between consecutive break points
+    for i in range(len(break_points) - 1):
+        pointls = []
+        x1, y1 = break_points[i]
+        x2, y2 = break_points[i + 1]
+        
+        vec = np.subtract((x1,y1), (x2, y2))
 
-# def generate_angle_coverage_dict(tower_type: str, upgrade_2: bool) -> Dict[Tuple[int,int], int]:
-#     track = 
-    
+        # Horizontal segment
+        if y1 == y2:
+            start_x, end_x = min(x1, x2), max(x1, x2)
+            for x in range(start_x, end_x + 1):
+                pointls.append((x, y1))
+        
+        # Vertical segment
+        elif x1 == x2:
+            start_y, end_y = min(y1, y2), max(y1, y2)
+            for y in range(start_y, end_y + 1):
+                pointls.append((x1, y))
+
+        for point in pointls:
+            out[point] = vec
+
+    return out
+
+def compute_shooting_angle_cos(tower_pos: Tuple[int,int], midpoint: Tuple[int,int], midpoint_vector_map: Dict) -> float:
+    """
+    Computes the absolute value of a cosine of the angle between the vector joining the tower placement and 
+    point in the middle of the track, and the vector joining two track breakpoints
+    :returns: the absolute value of a cosine of the angle between the vector joining the tower placement and 
+    point in the middle of the track, and the vector joining two track breakpoints
+    """
+    track_vec = midpoint_vector_map[midpoint]
+    shooting_vec = np.subtract(midpoint, tower_pos)
+
+    tv_norm = np.linalg.norm(track_vec)
+    sv_norm = np.linalg.norm(shooting_vec)
+
+    tv_unit = track_vec/tv_norm
+    sv_unit = shooting_vec/sv_norm
+
+    return(float(abs(np.dot(tv_unit, sv_unit))))
+
+def generate_angle_coverage_dict(tower_type: str = 'Dart', upgrade_2: bool = False) -> Dict[Tuple[int,int], int]:
+    """
+    Generates a dictionary containing the number of points in the middle of the track in the 
+    range of a tower_type Tower, upgraded with upgrade_2 or not, which is weighted by the shooting angle.
+    :param tower_type: One of 'Dart', 'Tack', 'Bomb', 'Ice', 'SuperMonkey'
+    :param upgrade_2: True if we want to consider the tower with upgrade 2 bought; False otherwise
+    :returns: A Dict of the form (x,y): # midpoint covered
+    """
+    out = {}
+    if not upgrade_2:
+        rad = 100
+    else:
+        rad = 125
+    tower_placements = generate_all_tower_placements()
+    midpoints = generate_track_middlepoints()
+    midpoint_vector_map = generate_midpoint_vector_map()
+
+    for i in range(len(tower_placements)):
+        var = tower_placements[i]
+        circle = Circle(color=(0,0,0), radius=rad, pos=var)
+        ang_sum = 0
+        for p in midpoints:
+            if is_point_in_circle(circle, p[0], p[1]):
+                ang_sum += compute_shooting_angle_cos(var, p, midpoint_vector_map)
+
+        out[var] = ang_sum
+    return out
 
 def get_money_constraint_rhs(round_nr: int) -> int:
     """
@@ -233,11 +302,6 @@ def get_money_constraint_rhs(round_nr: int) -> int:
     total_money += max_RBE
 
     return total_money  
-
-
-def get_costs() -> Dict[str, int]:
-    pass
-
 
 def generate_all_footprint_constraint_sets(mode: str, modulo: int = 1, adjust: bool = True) -> Dict[Tuple[int,int], List[Tuple[int,int]]]:
     """
@@ -283,7 +347,6 @@ def generate_all_footprint_constraint_sets(mode: str, modulo: int = 1, adjust: b
 
     return out
 
-
 def generate_vars_1a(modulo: int) -> List[Tuple[int,int]]:
     """
     Generates a list of variables for Model1a.
@@ -304,15 +367,26 @@ def generate_sets_1a(modulo: int) -> Dict[str, List]:
 
     return {'TP': TP, 'COV' : COV, 'FP' : FP}
 
-def generate_sets_1b(modulo: int, alpha: float) -> Dict[str, List]:
+def generate_sets_1b(modulo: int) -> Dict[str, List]:
     """
     Generates all sets needed for Model 1b.
     """
     TP = generate_vars_1a(modulo) # Use the same set of vars as 1a
-    DIST = generate_distance_dict(alpha)
+    DIST = generate_distance_dict()
+    COV = generate_coverage_dict()
     FP = generate_all_footprint_constraint_sets("nn", modulo)
 
-    return {'TP': TP, 'DIST' : DIST, 'FP' : FP}
+    return {'TP': TP, 'DIST' : DIST, 'FP' : FP, 'COV':COV}
+
+def generate_sets_1c(modulo: int) -> Dict[str, List]:
+    """
+    Generates all sets needed for Model 1c.
+    """
+    TP = generate_vars_1a(modulo) # Use the same set of vars as 1a
+    ANG_COV = generate_angle_coverage_dict()
+    FP = generate_all_footprint_constraint_sets("nn", modulo)
+
+    return {'TP': TP, 'FP' : FP, 'ANG_COV': ANG_COV}
 
 def generate_var_label_sets(modulo: int) -> Tuple[Tuple]:
     """
@@ -331,5 +405,7 @@ def generate_var_label_sets(modulo: int) -> Tuple[Tuple]:
     upgrade_vals_super = (0,1)
 
     return ((placements_nonsuper_mod, monkey_types_nonsuper, upgrade_vals_nonsuper), (placements_super_mod, monkey_types_super, upgrade_vals_super))
+
+
 
 

@@ -133,7 +133,6 @@ def square_to_quarter_circle(square_points: List[Tuple[int,int]], orientation: s
     min_y, max_y = min(y_coords), max(y_coords)
     side_len = max_x - min_x 
     rad = side_len + 0.1 # adding 0.1 to include the cornerpoints of the square
-    print(side_len)
     if orientation == 'lower_left':
         circle = Circle((0,0,0), rad, [min_x, max_y])
         
@@ -185,6 +184,23 @@ def get_empty_tower_queue() -> Dict[int, List[None]]:
         out[i+1] = []
     return out     
 
-def compute_shooting_angle():
-    pass
+
+def min_max_scaling(mn: float, mx: float, vals: List[float]) -> float:
+    """
+    Applies min-max scaling to a list of values
+    """
+    val_min = min(vals)
+    val_max = max(vals)
+    out = []
+    for val in vals:
+        std = (val - val_min) / (val_max - val_min)
+        out.append(std * (mx - mn) + mn)
+    return out
+
+
+def min_max_cosine(mn: float, mx: float, val: float) -> float:
+    """
+    Applies min-max scaling to a cosine function.
+    """
+    return val*(mx - mn) + mn
 

@@ -62,11 +62,7 @@ def plot_points(points_list):
 def flatten(xss):
     return [x for xs in xss for x in xs]
 
-
-points_in_square = generate_square_integer_points((210,350), 20)
-points_in_quarter_circle = square_to_quarter_circle(points_in_square, 'upper_left')
-plot_points([points_in_square, points_in_quarter_circle])
    
 bp = create_pathline()
-tp = generate_all_points_on_track()
+tp = generate_all_points_on_track(extended_by=15)
 plot_track(bp, tp)
