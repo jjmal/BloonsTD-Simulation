@@ -107,7 +107,7 @@ def square_to_right_triangle(square_points: List[Tuple[int,int]], orientation: s
     return triangle_points
 
 
-def square_to_quarter_circle(square_points: List[Tuple[int,int]], orientation: str) -> List[Tuple[int,int]]:
+def square_to_quarter_circle(square_points: List[Tuple[int,int]], orientation: str, modulo: int = 1) -> List[Tuple[int,int]]:
     """
     Convert a set of integer points forming a square to a set forming a quarter_circle.
     The quarter circle will be inscribed into a square, with the square's sides equal to
@@ -133,7 +133,7 @@ def square_to_quarter_circle(square_points: List[Tuple[int,int]], orientation: s
     min_y, max_y = min(y_coords), max(y_coords)
     side_len = max_x - min_x 
     rad = side_len + 0.1 # adding 0.1 to include the cornerpoints of the square
-
+    print(side_len)
     if orientation == 'lower_left':
         circle = Circle((0,0,0), rad, [min_x, max_y])
         
@@ -148,7 +148,9 @@ def square_to_quarter_circle(square_points: List[Tuple[int,int]], orientation: s
 
     for p in square_points:
         if is_point_in_circle(circle, p[0], p[1]):
-            out.append(p)
+            # Filter for divisibility
+            if is_point_modulo(p, modulo):
+                out.append(p)
 
     return out
 
