@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import matplotlib.pyplot as plt
+import pickle
 from typing import List, Tuple, Dict
 
 
@@ -184,8 +185,8 @@ def get_empty_tower_queue() -> Dict[int, List[None]]:
         out[i+1] = []
     return out     
 
-
-def min_max_scaling(mn: float, mx: float, vals: List[float]) -> float:
+# Adopted from sklearn's implementation
+def min_max_scaling(mn: float, mx: float, vals: List[float]) -> List[float]:
     """
     Applies min-max scaling to a list of values
     """
@@ -204,3 +205,12 @@ def min_max_cosine(mn: float, mx: float, val: float) -> float:
     """
     return val*(mx - mn) + mn
 
+def write_pickle(obj, savename):
+    filename = f'simulation/data/{savename}.pkl'
+    with open(filename, 'wb') as f:
+        pickle.dump(obj, f)
+
+def read_pickle(filename):
+    path = f'simulation/data/{filename}.pkl'
+    with open(path, 'rb') as f:
+        return pickle.load(f)

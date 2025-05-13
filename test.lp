@@ -1,0 +1,14314 @@
+\ Model Model 1 (Maximize Coverage, Dart Tower Only, No Upgrades)
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Maximize
+  0.6044733516635148 tower-placement[440,210]
+   + 0.3296163789875367 tower-placement[180,390]
+   + 0.2036793607185839 tower-placement[290,130]
+   + 0.0492111551394216 tower-placement[350,130]
+   + 0.4761436753151913 tower-placement[200,50]
+   + 0.1731773157959875 tower-placement[370,140]
+   + 0.2542254887334256 tower-placement[150,150]
+   + 0.4612504625988414 tower-placement[250,330]
+   + 0.7078705583126658 tower-placement[100,250]
+   + 0.2329620587308217 tower-placement[270,340]
+   + 0.2984584956300077 tower-placement[260,270]
+   + 0.132444001325002 tower-placement[170,190]
+   + 0.4496602043898698 tower-placement[240,100]
+   + 0.4015435986849981 tower-placement[60,290]
+   + 0.3491303005295161 tower-placement[300,100]
+   + 0.7381647126657394 tower-placement[20,460]
+   + 0.1932689315943778 tower-placement[120,290]
+   + 0.6386256252159097 tower-placement[370,10]
+   + 0.6980444003657298 tower-placement[150,20]
+   + 0.7101238357137025 tower-placement[430,10]
+   + 0.6630008313967337 tower-placement[10,390]
+   + 0.3591908605970668 tower-placement[250,200]
+   + 0.3885540056190396 tower-placement[320,110]
+   + 0.2835531961395404 tower-placement[140,300]
+   + 0.313732219450071 tower-placement[270,210]
+   + 0.5963066186378031 tower-placement[230,30]
+   + 0.2803148751371071 tower-placement[260,140]
+   + 0.6894922749644419 tower-placement[110,60]
+   + 0.5382042310016236 tower-placement[170,60]
+   + 0.6546000738409512 tower-placement[30,430]
+   + 0.4033350516266235 tower-placement[130,230]
+   + 0.4538958252851504 tower-placement[60,160]
+   + 0.2808943075377051 tower-placement[340,150]
+   + 0.7266346529363569 tower-placement[20,330]
+   + 0.4851204164693023 tower-placement[190,70]
+   + 0.5044725077625398 tower-placement[250,70]
+   + 0.4927193772580639 tower-placement[70,260]
+   + 0.0901605896717913 tower-placement[140,170]
+   + 0.4265474671657835 tower-placement[90,270]
+   + 0.7221945938539747 tower-placement[50,90]
+   + 0.4224012838634164 tower-placement[30,300]
+   + 0.8424188628554543 tower-placement[60,30]
+   + 0.5478274023027807 tower-placement[340,20]
+   + 0.3603187414266587 tower-placement[160,210]
+   + 0.7096438694995438 tower-placement[120,30]
+   + 0.7539306077227512 tower-placement[10,130]
+   + 0.6552244304985134 tower-placement[140,40]
+   + 0.7160057465469467 tower-placement[80,70]
+   + 0.4108847150543767 tower-placement[30,170]
+   + 0.8655024379311261 tower-placement[90,10]
+   + 0.7057236144297233 tower-placement[40,110]
+   + 0.9150801549225833 tower-placement[30,40]
+   + 0.2669089219696694 tower-placement[380,340]
+   + 0.6144763796651874 tower-placement[460,350]
+   + 0.6753722791110264 tower-placement[450,280]
+   + 0.6320719940024557 tower-placement[460,220]
+   + 0.1942921925623156 tower-placement[400,250]
+   + 0.2325704090759984 tower-placement[290,350]
+   + 0.1009930905977691 tower-placement[350,350]
+   + 0.4512642493191466 tower-placement[420,260]
+   + 0.1650869914253307 tower-placement[370,360]
+   + 0.7266346529363567 tower-placement[450,20]
+   + 0.4990767814740309 tower-placement[310,390]
+   + 0.3724666270346093 tower-placement[230,380]
+   + 0.2811178949974223 tower-placement[350,220]
+   + 0.4904309156929978 tower-placement[300,320]
+   + 0.1372081414834627 tower-placement[370,230]
+   + 0.3916834054677497 tower-placement[150,240]
+   + 0.4764661364323065 tower-placement[430,230]
+   + 0.6886517960445644 tower-placement[320,330]
+   + 0.2624761232742704 tower-placement[280,150]
+   + 0.4968837535135649 tower-placement[270,80]
+   + 0.2275628499949365 tower-placement[260,360]
+   + 0.4358849105134552 tower-placement[290,90]
+   + 0.4073127404301899 tower-placement[110,280]
+   + 0.259311850347598 tower-placement[350,90]
+   + 0.3790612744615069 tower-placement[170,280]
+   + 0.628102784503544 tower-placement[200,10]
+   + 0.0706600007315717 tower-placement[340,370]
+   + 0.1906306852721374 tower-placement[370,100]
+   + 0.3442630091186979 tower-placement[250,290]
+   + 0.1169531543864654 tower-placement[140,390]
+   + 0.4049698992819568 tower-placement[310,130]
+   + 0.36417880249775 tower-placement[270,300]
+   + 0.4222562842303221 tower-placement[50,310]
+   + 0.7082960527092091 tower-placement[440,40]
+   + 0.281595451423477 tower-placement[260,230]
+   + 0.5072508912149628 tower-placement[220,50]
+   + 0.2967538313495234 tower-placement[390,140]
+   + 0.2673997837259735 tower-placement[170,150]
+   + 0.519802542022183 tower-placement[240,60]
+   + 0.8479358935250489 tower-placement[20,70]
+   + 0.364437653794194 tower-placement[340,240]
+   + 0.6579725467795072 tower-placement[20,420]
+   + 0.4810967725052281 tower-placement[120,250]
+   + 0.6935704633134516 tower-placement[10,350]
+   + 0.4062712576788156 tower-placement[250,160]
+   + 0.1793334996399092 tower-placement[140,260]
+   + 0.4824291763241458 tower-placement[50,180]
+   + 0.3953679493531289 tower-placement[260,100]
+   + 0.3998988045354523 tower-placement[80,290]
+   + 0.7160057465469466 tower-placement[40,460]
+   + 0.762455231315285 tower-placement[110,20]
+   + 0.6579751854519226 tower-placement[390,10]
+   + 0.5422668103090987 tower-placement[170,20]
+   + 0.1507675159875994 tower-placement[130,190]
+   + 0.6836025345007134 tower-placement[60,120]
+   + 0.1068905642360209 tower-placement[340,110]
+   + 0.5030985364500401 tower-placement[20,290]
+   + 0.4446312064853423 tower-placement[160,300]
+   + 0.5114715121379944 tower-placement[190,30]
+   + 0.8014342103093245 tower-placement[50,50]
+   + 0.7127497306962356 tower-placement[40,330]
+   + 0.4601210554857057 tower-placement[210,70]
+   + 0.1041191551690772 tower-placement[160,170]
+   + 0.8448414489687602 tower-placement[10,90]
+   + 0.7098996217972103 tower-placement[70,90]
+   + 0.7888839360515528 tower-placement[80,30]
+   + 0.6915414232627765 tower-placement[30,130]
+   + 0.6535414252442497 tower-placement[160,40]
+   + 0.714123159015543 tower-placement[460,440]
+   + 0.6933960033456276 tower-placement[460,310]
+   + 0.540293280225522 tower-placement[450,240]
+   + 0.7078705583126658 tower-placement[430,450]
+   + 0.1294289888227805 tower-placement[360,380]
+   + 0.6985084552345435 tower-placement[460,180]
+   + 0.2691387366603975 tower-placement[280,370]
+   + 0.4256508553519617 tower-placement[290,310]
+   + 0.4771638988875671 tower-placement[420,220]
+   + 0.4008355951551463 tower-placement[330,140]
+   + 0.2057304087347238 tower-placement[360,250]
+   + 0.4065870098277966 tower-placement[310,350]
+   + 0.3658575289932079 tower-placement[270,170]
+   + 0.5192475425757586 tower-placement[440,260]
+   + 0.324547098002259 tower-placement[390,360]
+   + 0.6836025345007136 tower-placement[410,20]
+   + 0.58325308778605 tower-placement[330,10]
+   + 0.3349587286963422 tower-placement[190,380]
+   + 0.330128051390408 tower-placement[150,200]
+   + 0.3715188674286858 tower-placement[250,380]
+   + 0.0441296006580007 tower-placement[360,120]
+   + 0.2688366148873783 tower-placement[280,110]
+   + 0.4202571339684503 tower-placement[100,300]
+   + 0.4434334438384845 tower-placement[270,390]
+   + 0.4113243248075379 tower-placement[260,320]
+   + 0.7082960527092091 tower-placement[110,240]
+   + 0.1065561269991351 tower-placement[390,230]
+   + 0.4537718551936801 tower-placement[170,240]
+   + 0.6398178042921524 tower-placement[130,60]
+   + 0.3705126481730925 tower-placement[20,160]
+   + 0.2946710520754963 tower-placement[300,150]
+   + 0.7221945938539747 tower-placement[10,440]
+   + 0.3045742225773805 tower-placement[250,250]
+   + 0.5330892762718623 tower-placement[310,90]
+   + 0.4568381386256691 tower-placement[230,80]
+   + 0.4613984332074951 tower-placement[50,270]
+   + 0.3546368966611731 tower-placement[260,190]
+   + 0.6753346319548471 tower-placement[220,10]
+   + 0.3081330141491582 tower-placement[390,100]
+   + 0.1379260571698427 tower-placement[130,280] + tower-placement[20,30]
+   + 0.7146779653179673 tower-placement[300,20]
+   + 0.6506211556194983 tower-placement[20,380]
+   + 0.3065692785220737 tower-placement[160,390]
+   + 0.4992565795590296 tower-placement[10,310]
+   + 0.3504778454254147 tower-placement[250,120]
+   + 0.4324681689246828 tower-placement[70,310]
+   + 0.3583356833042878 tower-placement[140,220]
+   + 0.7240752818692869 tower-placement[100,40]
+   + 0.4206004290340458 tower-placement[50,140]
+   + 0.7774833204884437 tower-placement[40,70]
+   + 0.6546000738409512 tower-placement[30,350]
+   + 0.7266346529363567 tower-placement[60,80]
+   + 0.2234320275208695 tower-placement[160,260]
+   + 0.473057102417063 tower-placement[10,180] + tower-placement[50,10]
+   + 0.4145639794902516 tower-placement[40,290]
+   + 0.5455840710997101 tower-placement[210,30]
+   + 0.9855242779347754 tower-placement[10,50]
+   + 0.756737595349344 tower-placement[70,50]
+   + 0.7625807622558517 tower-placement[30,90]
+   + 0.7258614677637339 tower-placement[450,460]
+   + 0.2962362897645231 tower-placement[380,390]
+   + 0.7073143309806872 tower-placement[460,50]
+   + 0.6699621405858213 tower-placement[460,400]
+   + 0.1239604579169787 tower-placement[380,260]
+   + 0.1768425269245314 tower-placement[330,360]
+   + 0.6441342905045356 tower-placement[460,270]
+   + 0.7127497306962357 tower-placement[450,200]
+   + 0.2014302812009691 tower-placement[380,130]
+   + 0.4000061070578421 tower-placement[410,240]
+   + 0.2183473321075989 tower-placement[360,340]
+   + 0.4444160690958711 tower-placement[280,330]
+   + 0.2754368896559379 tower-placement[270,260]
+   + 0.3376843169681576 tower-placement[240,370]
+   + 0.3306240949922828 tower-placement[300,370]
+   + 0.4000728172069957 tower-placement[330,100]
+   + 0.2806175692439558 tower-placement[150,290]
+   + 0.6033095262715826 tower-placement[430,280]
+   + 0.4138530013104398 tower-placement[320,380]
+   + 0.4142725528576878 tower-placement[100,390]
+   + 0.2351631681800641 tower-placement[270,130]
+   + 0.5471053152833194 tower-placement[440,220]
+   + 0.4747728648695746 tower-placement[180,50]
+   + 0.2124171188788795 tower-placement[290,140]
+   + 0.1370774163742039 tower-placement[350,140]
+   + 0.2450100082572612 tower-placement[130,150]
+   + 0.4621427793821438 tower-placement[200,60]
+   + 0.172819928983876 tower-placement[150,160]
+   + 0.2602032813856657 tower-placement[250,340]
+   + 0.4699395745628103 tower-placement[100,260]
+   + 0.3195793429235461 tower-placement[260,280]
+   + 0.4783220629588999 tower-placement[350,10]
+   + 0.3547579969604827 tower-placement[210,380]
+   + 0.3729200420365996 tower-placement[170,200]
+   + 0.7252194698575346 tower-placement[130,20]
+   + 0.4516680037603866 tower-placement[240,110]
+   + 0.4020674971356804 tower-placement[60,300]
+   + 0.7321723841718001 tower-placement[20,120]
+   + 0.279659171834616 tower-placement[300,110]
+   + 0.2152887417367551 tower-placement[120,300]
+   + 0.6712850441763408 tower-placement[150,30]
+   + 0.6632202692117756 tower-placement[10,400]
+   + 0.3445825710646175 tower-placement[250,210]
+   + 0.3698984313834521 tower-placement[140,310]
+   + 0.7130451838371412 tower-placement[90,60]
+   + 0.3234262299687154 tower-placement[260,150]
+   + 0.3875730809809333 tower-placement[40,160]
+   + 0.6886517960445642 tower-placement[110,70]
+   + 0.6733851016070347 tower-placement[30,440]
+   + 0.4734644832249857 tower-placement[60,170]
+   + 0.6682309644072355 tower-placement[10,270]
+   + 0.4691842267776694 tower-placement[250,80]
+   + 0.4396345360968517 tower-placement[70,270]
+   + 0.0716271412164681 tower-placement[140,180]
+   + 0.40206749713568 tower-placement[90,280]
+   + 0.7101238357137025 tower-placement[50,100]
+   + 0.9146420848725816 tower-placement[40,30]
+   + 0.4372414433445883 tower-placement[30,310]
+   + 0.8068170440986023 tower-placement[60,40]
+   + 0.3758482789551287 tower-placement[160,220]
+   + 0.6921990503931839 tower-placement[120,40]
+   + 0.5003528740263513 tower-placement[10,140]
+   + 0.7127497306962357 tower-placement[80,80]
+   + 0.4749060604663985 tower-placement[30,180] + tower-placement[10,10]
+   + 0.9268247997395991 tower-placement[70,10]
+   + 0.8731327738191306 tower-placement[30,50]
+   + 0.2449242370031504 tower-placement[380,350]
+   + 0.6886517960445644 tower-placement[410,460]
+   + 0.754057277842877 tower-placement[460,10]
+   + 0.6028132105078772 tower-placement[460,360]
+   + 0.7098996217972104 tower-placement[450,290]
+   + 0.1604809268736626 tower-placement[380,220]
+   + 0.2994169255770135 tower-placement[370,150]
+   + 0.2083159670529137 tower-placement[270,350]
+   + 0.7082960527092091 tower-placement[440,440]
+   + 0.2122097156356923 tower-placement[400,260]
+   + 0.2421263239019553 tower-placement[290,360]
+   + 0.0288867931433224 tower-placement[350,360]
+   + 0.4935685635425514 tower-placement[420,270]
+   + 0.358688088024048 tower-placement[380,90]
+   + 0.6382366670739975 tower-placement[370,20]
+   + 0.1705100938591806 tower-placement[370,370]
+   + 0.7053140613017796 tower-placement[430,20]
+   + 0.3775794861419766 tower-placement[320,120]
+   + 0.718471528923105 tower-placement[450,30]
+   + 0.2860168857424383 tower-placement[270,220]
+   + 0.5614039263062415 tower-placement[230,40]
+   + 0.3922768231649339 tower-placement[230,390]
+   + 0.2817812357819833 tower-placement[350,230]
+   + 0.412144149340387 tower-placement[130,240]
+   + 0.4929699726447783 tower-placement[240,330]
+   + 0.6969520600999018 tower-placement[20,340]
+   + 0.5119141220222757 tower-placement[300,330]
+   + 0.4116175105295988 tower-placement[150,250]
+   + 0.3878537711027771 tower-placement[280,160]
+   + 0.4496840409609094 tower-placement[270,90]
+   + 0.7078705583126658 tower-placement[50,450]
+   + 0.2763170142217969 tower-placement[260,370]
+   + 0.5986791545363493 tower-placement[180,10]
+   + 0.3328814085772428 tower-placement[290,100]
+   + 0.4145639794902509 tower-placement[110,290]
+   + 0.1333169591436257 tower-placement[350,100]
+   + 0.454221845188671 tower-placement[170,290]
+   + 0.5679027008887122 tower-placement[200,20]
+   + 0.1088436604244185 tower-placement[340,380]
+   + 0.2817749237673861 tower-placement[120,390]
+   + 0.3694560767711759 tower-placement[250,300]
+   + 0.6378885437111961 tower-placement[140,50]
+   + 0.4325114918844811 tower-placement[310,140]
+   + 0.4699395745628102 tower-placement[50,320]
+   + 0.2784239349268583 tower-placement[260,240]
+   + 0.4853640667739705 tower-placement[220,60]
+   + 0.1911645207770971 tower-placement[170,160]
+   + 0.4879554970919602 tower-placement[240,70]
+   + 0.8208482604044955 tower-placement[20,80]
+   + 0.2511119549279805 tower-placement[120,260]
+   + 0.6747921133260019 tower-placement[10,360]
+   + 0.3796467617377197 tower-placement[250,170]
+   + 0.1363745730920108 tower-placement[140,270]
+   + 0.6609457147067972 tower-placement[310,10]
+   + 0.8071558480483229 tower-placement[90,20]
+   + 0.536515166058836 tower-placement[50,190]
+   + 0.3299387269593748 tower-placement[260,110]
+   + 0.4078221750368587 tower-placement[80,300]
+   + 0.6923063529155733 tower-placement[40,120]
+   + 0.7270639040537579 tower-placement[110,30]
+   + 0.5198950019455717 tower-placement[170,30]
+   + 0.6699621405858209 tower-placement[60,130]
+   + 0.5183425167028951 tower-placement[160,310]
+   + 0.7757026045522588 tower-placement[50,60]
+   + 0.5523763699108266 tower-placement[30,270]
+   + 0.0579007176797966 tower-placement[160,180]
+   + 0.8201973309053999 tower-placement[10,100]
+   + 0.7044523963381885 tower-placement[70,100]
+   + 0.7608316952270893 tower-placement[80,40]
+   + 0.4407468942140945 tower-placement[30,140]
+   + 0.5964761406983313 tower-placement[460,230] + tower-placement[30,10]
+   + 0.7266346529363567 tower-placement[460,450]
+   + 0.1388569462842182 tower-placement[370,240]
+   + 0.4643942124173179 tower-placement[430,240]
+   + 0.4521175185465648 tower-placement[320,340]
+   + 0.5428025485794693 tower-placement[450,250]
+   + 0.6956847050893796 tower-placement[420,10]
+   + 0.1302709289959202 tower-placement[370,110]
+   + 0.7073143309806871 tower-placement[430,460]
+   + 0.2368075457293619 tower-placement[360,390]
+   + 0.3397977710837093 tower-placement[280,380]
+   + 0.384897984193619 tower-placement[270,310]
+   + 0.2349305328625008 tower-placement[400,220]
+   + 0.4455389317539242 tower-placement[290,320]
+   + 0.3614105125697204 tower-placement[390,150]
+   + 0.3603473099603504 tower-placement[340,250]
+   + 0.6730133050425956 tower-placement[20,430]
+   + 0.4992501995481251 tower-placement[330,150]
+   + 0.2052731092149968 tower-placement[360,260]
+   + 0.3867262600841955 tower-placement[310,360]
+   + 0.3636989273109618 tower-placement[270,180]
+   + 0.5608471955157069 tower-placement[440,270]
+   + 0.6585167413090862 tower-placement[390,20]
+   + 0.3245470980022582 tower-placement[390,370]
+   + 0.367983130910665 tower-placement[130,200]
+   + 0.0997793905801613 tower-placement[340,120]
+   + 0.4708324165838256 tower-placement[20,300]
+   + 0.485927635328607 tower-placement[190,40]
+   + 0.6066166103126892 tower-placement[330,20]
+   + 0.3436492716093107 tower-placement[190,390]
+   + 0.3459519700495999 tower-placement[150,210]
+   + 0.4254219724547987 tower-placement[250,390]
+   + 0.0641099397941471 tower-placement[360,130]
+   + 0.3331476855562879 tower-placement[140,140]
+   + 0.2331767202936627 tower-placement[280,120]
+   + 0.4584943133310584 tower-placement[100,310]
+   + 0.4420426092700706 tower-placement[260,330]
+   + 0.6502627058887629 tower-placement[40,340]
+   + 0.7127497306962357 tower-placement[110,250]
+   + 0.480730389903409 tower-placement[170,250]
+   + 0.4075098719238395 tower-placement[20,170]
+   + 0.4702370067097389 tower-placement[300,160]
+   + 0.7384811336330089 tower-placement[10,450]
+   + 0.3040994220558219 tower-placement[250,260]
+   + 0.762625243582123 tower-placement[140,10]
+   + 0.458801918499162 tower-placement[310,100]
+   + 0.4202571339684503 tower-placement[50,280]
+   + 0.3417222304761048 tower-placement[260,200]
+   + 0.6133657577721581 tower-placement[220,20]
+   + 0.9657059406469559 tower-placement[20,40]
+   + 0.6365637379388061 tower-placement[160,50]
+   + 0.5166825214250002 tower-placement[10,320]
+   + 0.3273404900663382 tower-placement[250,130]
+   + 0.4823336443737997 tower-placement[70,320]
+   + 0.7085660195029526 tower-placement[100,50]
+   + 0.40897616300156 tower-placement[50,150]
+   + 0.4823336443737997 tower-placement[80,260]
+   + 0.7579718933955725 tower-placement[40,80]
+   + 0.714123159015543 tower-placement[60,90]
+   + 0.2311645107671929 tower-placement[160,270]
+   + 0.5322732698633434 tower-placement[10,190]
+   + 0.9301834907752445 tower-placement[50,20]
+   + 0.6836025345007135 tower-placement[460,320]
+   + 0.9435018342128758 tower-placement[10,60]
+   + 0.739220453019744 tower-placement[70,60]
+   + 0.7441575111364037 tower-placement[30,100]
+   + 0.7073143309806874 tower-placement[460,190]
+   + 0.4415583958759665 tower-placement[420,230]
+   + 0.6985084552345434 tower-placement[460,60]
+   + 0.1852819849500084 tower-placement[330,370]
+   + 0.6452963286627041 tower-placement[450,210]
+   + 0.0650761748332385 tower-placement[390,240]
+   + 0.2095956219955865 tower-placement[380,140]
+   + 0.2015250648998569 tower-placement[340,340]
+   + 0.4034508787781479 tower-placement[410,250]
+   + 0.1222445790452714 tower-placement[360,350]
+   + 0.2370340123166061 tower-placement[280,340]
+   + 0.2957975565986785 tower-placement[270,270]
+   + 0.4560594416178327 tower-placement[230,90]
+   + 0.7221945938539747 tower-placement[440,10]
+   + 0.3628727060107922 tower-placement[220,370]
+   + 0.2896911581430209 tower-placement[390,110]
+   + 0.1499038882204548 tower-placement[130,290]
+   + 0.6465019257838748 tower-placement[380,10]
+   + 0.3819352134335856 tower-placement[240,380]
+   + 0.6509153617274777 tower-placement[20,390]
+   + 0.4017541902405826 tower-placement[300,380]
+   + 0.3646576901619056 tower-placement[330,110]
+   + 0.3623890954999783 tower-placement[150,300]
+   + 0.2044332191031161 tower-placement[360,220]
+   + 0.3727748139286107 tower-placement[140,230]
+   + 0.24327863145385 tower-placement[270,140]
+   + 0.4825898852066963 tower-placement[180,60]
+   + 0.2579240209251165 tower-placement[290,150]
+   + 0.2725588947970121 tower-placement[350,150]
+   + 0.1714854735498294 tower-placement[130,160]
+   + 0.4670363809293311 tower-placement[200,70]
+   + 0.0974041701615064 tower-placement[150,170]
+   + 0.2386396510086086 tower-placement[250,350]
+   + 0.3037697774182859 tower-placement[360,90]
+   + 0.4222562842303223 tower-placement[100,270]
+   + 0.3372997359824078 tower-placement[260,290]
+   + 0.4073127404301903 tower-placement[40,300]
+   + 0.5161273376207354 tower-placement[210,40]
+   + 0.4882858240838402 tower-placement[350,20]
+   + 0.3674100332623096 tower-placement[210,390]
+   + 0.3920545136707131 tower-placement[170,210]
+   + 0.6935014776327274 tower-placement[130,30]
+   + 0.4265474671657838 tower-placement[60,310]
+   + 0.7130379125376869 tower-placement[20,130]
+   + 0.3326426893512198 tower-placement[160,140]
+   + 0.2431621326407507 tower-placement[300,120]
+   + 0.2711613568124214 tower-placement[120,310]
+   + 0.6512532625092797 tower-placement[150,40]
+   + 0.6698839481758398 tower-placement[10,410]
+   + 0.3247666565098136 tower-placement[250,220]
+   + 0.7073143309806871 tower-placement[90,70]
+   + 0.3879150083175706 tower-placement[260,160]
+   + 0.4167430347409898 tower-placement[40,170]
+   + 0.7184715289231051 tower-placement[30,450]
+   + 0.5043948334484258 tower-placement[60,180]
+   + 0.762625243582123 tower-placement[160,10]
+   + 0.6097791129901836 tower-placement[10,280]
+   + 0.4078221750368589 tower-placement[70,280]
+   + 0.8391946519751174 tower-placement[100,10]
+   + 0.6956847050893794 tower-placement[50,110]
+   + 0.8708950578670435 tower-placement[40,40]
+   + 0.4884867113458572 tower-placement[30,320]
+   + 0.7772540886300909 tower-placement[60,50]
+   + 0.6807582709831006 tower-placement[120,50]
+   + 0.6836025345007135 tower-placement[460,410]
+   + 0.447086645125692 tower-placement[10,150]
+   + 0.7082960527092091 tower-placement[80,90]
+   + 0.5296317819708922 tower-placement[30,190]
+   + 0.7178939861796745 tower-placement[460,280] + tower-placement[10,20]
+   + 0.8617146726087027 tower-placement[70,20]
+   + 0.8391515659632032 tower-placement[30,60]
+   + 0.7044523963381886 tower-placement[450,430]
+   + 0.241596154577205 tower-placement[380,360]
+   + 0.7381647126657395 tower-placement[460,20]
+   + 0.47520938203374 tower-placement[320,390]
+   + 0.7044523963381885 tower-placement[450,300]
+   + 0.5110785299055279 tower-placement[440,230]
+   + 0.0950986863444035 tower-placement[380,230]
+   + 0.5023041323895829 tower-placement[330,330]
+   + 0.2193595594996907 tower-placement[270,360]
+   + 0.7127497306962357 tower-placement[440,450]
+   + 0.2562347401123349 tower-placement[400,270]
+   + 0.2898455771050037 tower-placement[290,370]
+   + 0.0349753664969576 tower-placement[350,370]
+   + 0.4198604011616649 tower-placement[240,120]
+   + 0.231208969296127 tower-placement[380,100]
+   + 0.7044523963381886 tower-placement[430,30]
+   + 0.1204140225043259 tower-placement[150,390]
+   + 0.379040283420313 tower-placement[320,130]
+   + 0.378103230546311 tower-placement[280,300]
+   + 0.7127497306962357 tower-placement[450,40]
+   + 0.2697771247868457 tower-placement[270,230]
+   + 0.5293695606138304 tower-placement[230,50]
+   + 0.2818122114187855 tower-placement[350,240]
+   + 0.4246556432612005 tower-placement[130,250]
+   + 0.2944308500742571 tower-placement[240,340]
+   + 0.6730133050425956 tower-placement[20,350]
+   + 0.3015490042979625 tower-placement[300,340]
+   + 0.1937541812045936 tower-placement[150,260]
+   + 0.4385521891445213 tower-placement[250,90]
+   + 0.0832514072489535 tower-placement[140,190]
+   + 0.3608605823216361 tower-placement[270,100]
+   + 0.4015435986849976 tower-placement[90,290]
+   + 0.7073143309806871 tower-placement[50,460]
+   + 0.6696678829350126 tower-placement[400,10]
+   + 0.3470796327589236 tower-placement[260,380]
+   + 0.5396484291888259 tower-placement[180,20]
+   + 0.4331207063100843 tower-placement[110,300]
+   + 0.0582667179341203 tower-placement[350,110]
+   + 0.5183425167028952 tower-placement[170,300]
+   + 0.5250718093862723 tower-placement[200,30]
+   + 0.3955552811315584 tower-placement[160,230]
+   + 0.3962672366633821 tower-placement[250,310]
+   + 0.6229963307026776 tower-placement[140,60]
+   + 0.521785002091168 tower-placement[310,150]
+   + 0.7078705583126658 tower-placement[50,330]
+   + 0.2804463263028797 tower-placement[260,250]
+   + 0.4662807439506304 tower-placement[220,70]
+   + 0.1363530890921583 tower-placement[170,170]
+   + 0.4481457488929165 tower-placement[60,270]
+   + 0.7938897256947666 tower-placement[20,90]
+   + 0.1998666869267104 tower-placement[120,270]
+   + 0.6698839481758397 tower-placement[10,370]
+   + 0.6814849105628291 tower-placement[310,20]
+   + 0.766342300718604 tower-placement[90,30]
+   + 0.4396345360968515 tower-placement[80,310]
+   + 0.6764824342563814 tower-placement[40,130]
+   + 0.7076997541422684 tower-placement[110,40]
+   + 0.5185688481132785 tower-placement[170,40]
+   + 0.4527465256627557 tower-placement[60,140]
+   + 0.49618497016398 tower-placement[30,280]
+   + 0.9627529990142349 tower-placement[60,10]
+   + 0.7936818483292354 tower-placement[120,10]
+   + 0.6028132105078772 tower-placement[460,370]
+   + 0.7950601083080079 tower-placement[10,110]
+   + 0.7390033829215461 tower-placement[80,50]
+   + 0.3639087632006506 tower-placement[30,150]
+   + 0.5843003645870459 tower-placement[460,240] + tower-placement[30,20]
+   + 0.1817611329309188 tower-placement[370,380]
+   + 0.1383316771301784 tower-placement[370,250]
+   + 0.4673561008355021 tower-placement[430,250]
+   + 0.3925508976714877 tower-placement[320,350]
+   + 0.3741846920906725 tower-placement[280,170]
+   + 0.5600687134242394 tower-placement[450,260]
+   + 0.2638667036717233 tower-placement[290,110]
+   + 0.6933960033456275 tower-placement[420,20]
+   + 0.3440518105240857 tower-placement[200,380]
+   + 0.2085579797492183 tower-placement[340,390]
+   + 0.1262847809955809 tower-placement[370,120]
+   + 0.4451104019427614 tower-placement[280,390]
+   + 0.4102764776691228 tower-placement[270,320]
+   + 0.2013042507509953 tower-placement[400,230]
+   + 0.4688659048644302 tower-placement[290,330]
+   + 0.4602618244339725 tower-placement[240,80]
+   + 0.352017077665967 tower-placement[340,260]
+   + 0.6969520600999014 tower-placement[20,440]
+   + 0.3659136854592727 tower-placement[250,180]
+   + 0.4977105772780241 tower-placement[320,90]
+   + 0.1325620143732099 tower-placement[140,280]
+   + 0.3995193079206136 tower-placement[310,370]
+   + 0.3534381209087556 tower-placement[270,190]
+   + 0.7070271634283271 tower-placement[230,10]
+   + 0.2959537758488492 tower-placement[260,120]
+   + 0.3549944910602785 tower-placement[110,390]
+   + 0.3181115778285716 tower-placement[170,390]
+   + 0.3816235248255573 tower-placement[130,210]
+   + 0.1071724957164524 tower-placement[340,130]
+   + 0.4536873696104557 tower-placement[20,310]
+   + 0.4664849659022132 tower-placement[190,50]
+   + 0.3593692315637496 tower-placement[150,220]
+   + 0.1479211237946294 tower-placement[360,140]
+   + 0.2456361713236802 tower-placement[140,150]
+   + 0.754057277842877 tower-placement[50,70]
+   + 0.2387345507081385 tower-placement[260,340]
+   + 0.4786309901290697 tower-placement[110,260]
+   + 0.2820524897492117 tower-placement[170,260]
+   + 0.4680563829763235 tower-placement[20,180]
+   + 0.0921446642092488 tower-placement[160,190]
+   + 0.754057277842877 tower-placement[10,460]
+   + 0.6886517960445641 tower-placement[70,460]
+   + 0.4857176298695089 tower-placement[360,10]
+   + 0.7092111003931809 tower-placement[140,20]
+   + 0.418327449564915 tower-placement[310,110]
+   + 0.4052124833623331 tower-placement[50,290]
+   + 0.5673341806896083 tower-placement[220,30]
+   + 0.9196425055887053 tower-placement[20,50]
+   + 0.6220172370027176 tower-placement[160,60]
+   + 0.4670776399203118 tower-placement[120,230]
+   + 0.7384811336330087 tower-placement[10,330]
+   + 0.4324681689246829 tower-placement[80,270]
+   + 0.7380377883337232 tower-placement[40,90]
+   + 0.7053140613017796 tower-placement[60,100]
+   + 0.7381647126657395 tower-placement[460,460]
+   + 0.6699621405858212 tower-placement[460,330]
+   + 0.8945737298663041 tower-placement[80,10]
+   + 0.7244505089599741 tower-placement[30,110]
+   + 0.7160057465469469 tower-placement[460,200]
+   + 0.42979889629901 tower-placement[420,240]
+   + 0.2402568186211737 tower-placement[370,340]
+   + 0.6886517960445644 tower-placement[460,70]
+   + 0.33758400773863 tower-placement[230,360]
+   + 0.6359121163126521 tower-placement[440,280]
+   + 0.3357070219692435 tower-placement[390,380]
+   + 0.2163661622718336 tower-placement[330,380]
+   + 0.5699548342693147 tower-placement[430,210]
+   + 0.209268880628955 tower-placement[280,130]
+   + 0.5883493255450591 tower-placement[450,220]
+   + 0.0775206136170302 tower-placement[390,250]
+   + 0.0974199533099032 tower-placement[340,350]
+   + 0.4216646591362418 tower-placement[410,260]
+   + 0.3118045146964704 tower-placement[250,270]
+   + 0.0854941817781537 tower-placement[360,360]
+   + 0.3288853834402224 tower-placement[270,280]
+   + 0.714123159015543 tower-placement[440,20]
+   + 0.3287204591854823 tower-placement[260,210]
+   + 0.3619020920564183 tower-placement[220,380]
+   + 0.2884824747955623 tower-placement[390,120]
+   + 0.2178992587205132 tower-placement[130,300]
+   + 0.3643520303401183 tower-placement[340,220]
+   + 0.6506211556194981 tower-placement[20,400]
+   + 0.5080205480309705 tower-placement[300,390]
+   + 0.4626754200777082 tower-placement[150,310]
+   + 0.3347280653948133 tower-placement[250,140]
+   + 0.2039341860026476 tower-placement[360,230]
+   + 0.3848455720688831 tower-placement[140,240]
+   + 0.7013279973082491 tower-placement[100,60]
+   + 0.6985084552345434 tower-placement[310,330]
+   + 0.28723140598996 tower-placement[270,150]
+   + 0.4216837638228145 tower-placement[50,160]
+   + 0.4805666529530392 tower-placement[260,80]
+   + 0.6502627058887631 tower-placement[40,440]
+   + 0.1519168156099941 tower-placement[130,170]
+   + 0.2456149347736282 tower-placement[340,90]
+   + 0.6023381362816678 tower-placement[20,270]
+   + 0.2877375388138198 tower-placement[160,280]
+   + 0.6126140381754274 tower-placement[190,10]
+   + 0.0242607367267828 tower-placement[150,180]
+   + 0.1595205840788357 tower-placement[360,100]
+   + 0.401879722826647 tower-placement[100,280]
+   + 0.8747304027572664 tower-placement[50,30]
+   + 0.4234022172467224 tower-placement[40,310]
+   + 0.4915832489595489 tower-placement[210,50]
+   + 0.4098183815098111 tower-placement[170,220]
+   + 0.677468316815711 tower-placement[130,40]
+   + 0.4726623375180894 tower-placement[60,320]
+   + 0.4609526486829632 tower-placement[20,140]
+   + 0.2616481821525621 tower-placement[160,150]
+   + 0.9059695778387963 tower-placement[10,70]
+   + 0.6747921133260019 tower-placement[10,420]
+   + 0.7258614677637338 tower-placement[70,70]
+   + 0.7078705583126658 tower-placement[90,80]
+   + 0.4749374479032476 tower-placement[40,180]
+   + 0.7258614677637339 tower-placement[30,460]
+   + 0.5500571164588088 tower-placement[60,190] + tower-placement[20,10]
+   + 0.7037365855840422 tower-placement[160,20]
+   + 0.563842939275774 tower-placement[10,290]
+   + 0.3998988045354525 tower-placement[70,290]
+   + 0.8330907569203686 tower-placement[40,50]
+   + 0.718471528923105 tower-placement[30,330]
+   + 0.6933960033456275 tower-placement[460,420]
+   + 0.6985084552345432 tower-placement[420,460]
+   + 0.7141231590155432 tower-placement[460,290]
+   + 0.3219626192368748 tower-placement[380,150]
+   + 0.6773921247232376 tower-placement[460,160]
+   + 0.2110001073033189 tower-placement[280,350]
+   + 0.7098996217972104 tower-placement[450,440]
+   + 0.6467771359243717 tower-placement[380,20]
+   + 0.4058437113964514 tower-placement[240,390]
+   + 0.2501759179142223 tower-placement[380,370]
+   + 0.3556946830497412 tower-placement[330,120]
+   + 0.7258614677637341 tower-placement[460,30]
+   + 0.4988694835608124 tower-placement[440,240]
+   + 0.4124468962468039 tower-placement[290,160]
+   + 0.3417541714635254 tower-placement[390,340]
+   + 0.2515235451727749 tower-placement[250,360]
+   + 0.4391845031613787 tower-placement[280,90]
+   + 0.2676758223030567 tower-placement[270,370]
+   + 0.3594557542472885 tower-placement[260,300]
+   + 0.3606261657002952 tower-placement[290,380]
+   + 0.109666137411414 tower-placement[350,380]
+   + 0.1960168710369086 tower-placement[130,390]
+   + 0.2190080779722791 tower-placement[300,130]
+   + 0.4460577658159987 tower-placement[410,220]
+   + 0.6344540311564051 tower-placement[150,50]
+   + 0.3060777024316885 tower-placement[250,230]
+   + 0.4138373664457691 tower-placement[320,140]
+   + 0.2671009543231316 tower-placement[270,240]
+   + 0.502383604845093 tower-placement[230,60]
+   + 0.3658571495165975 tower-placement[260,170]
+   + 0.1988109465727069 tower-placement[130,260]
+   + 0.6579725467795072 tower-placement[20,360]
+   + 0.1548819883292357 tower-placement[150,270]
+   + 0.4380135728234897 tower-placement[250,100]
+   + 0.6234278690815361 tower-placement[320,10]
+   + 0.3323188611499207 tower-placement[140,200]
+   + 0.7837678955419399 tower-placement[100,20]
+   + 0.2938088972745661 tower-placement[270,110]
+   + 0.4130462331999167 tower-placement[90,300]
+   + 0.6842078624670417 tower-placement[50,120]
+   + 0.4988798748340631 tower-placement[180,30]
+   + 0.4744040721449274 tower-placement[110,310]
+   + 0.5509190537034317 tower-placement[170,310]
+   + 0.7556663792856123 tower-placement[60,60]
+   + 0.4139785322510062 tower-placement[160,240]
+   + 0.6685009232633413 tower-placement[120,60]
+   + 0.4431984289550067 tower-placement[10,160]
+   + 0.4555270663013081 tower-placement[220,80]
+   + 0.5048882504772958 tower-placement[40,270]
+   + 0.6509529491250338 tower-placement[210,10]
+   + 0.1260507287275745 tower-placement[170,180]
+   + 0.4130462331999168 tower-placement[60,280]
+   + 0.7723439327346543 tower-placement[20,100]
+   + 0.1821136036285039 tower-placement[120,280] + tower-placement[10,30]
+   + 0.6632202692117759 tower-placement[10,380]
+   + 0.8140339087542574 tower-placement[70,30]
+   + 0.7416252846693027 tower-placement[90,40]
+   + 0.492719377258064 tower-placement[80,320]
+   + 0.4267201956348318 tower-placement[40,140]
+   + 0.8094090139435912 tower-placement[30,70] + tower-placement[40,10]
+   + 0.4559018103199745 tower-placement[30,290]
+   + 0.6144763796651876 tower-placement[460,380]
+   + 0.0723369468525144 tower-placement[380,240]
+   + 0.2617970466801278 tower-placement[330,340]
+   + 0.586663102573682 tower-placement[460,250]
+   + 0.7160057465469467 tower-placement[440,460]
+   + 0.2126295591785436 tower-placement[380,110]
+   + 0.2649267306416183 tower-placement[370,390]
+   + 0.3961818684554062 tower-placement[280,310]
+   + 0.7078705583126657 tower-placement[450,50]
+   + 0.281274624625087 tower-placement[350,250]
+   + 0.2745139911093022 tower-placement[240,350]
+   + 0.273608805782498 tower-placement[300,350]
+   + 0.1355751871026303 tower-placement[370,260]
+   + 0.4853891165717952 tower-placement[430,260]
+   + 0.3703507323571773 tower-placement[320,360]
+   + 0.3702627413425248 tower-placement[280,180]
+   + 0.6010756952774882 tower-placement[450,270]
+   + 0.7082960527092093 tower-placement[440,200]
+   + 0.6699621405858213 tower-placement[400,20]
+   + 0.4490780961655487 tower-placement[260,390]
+   + 0.2277114896587998 tower-placement[290,120]
+   + 0.0266775735192372 tower-placement[350,120]
+   + 0.4978035897513534 tower-placement[200,40]
+   + 0.35424478643209 tower-placement[200,390]
+   + 0.1225175255995851 tower-placement[370,130]
+   + 0.3309352621022967 tower-placement[150,140]
+   + 0.4277061428841958 tower-placement[250,320]
+   + 0.7002585157050696 tower-placement[310,160]
+   + 0.4383795484941996 tower-placement[270,330]
+   + 0.2877596081465369 tower-placement[260,260]
+   + 0.4429558248551909 tower-placement[240,90]
+   + 0.4525492889660939 tower-placement[300,90]
+   + 0.7266346529363567 tower-placement[20,450]
+   + 0.762625243582123 tower-placement[150,10]
+   + 0.3657042531626896 tower-placement[250,190]
+   + 0.4264773701872398 tower-placement[320,100]
+   + 0.2075771119971039 tower-placement[140,290]
+   + 0.4351656655370945 tower-placement[310,380]
+   + 0.3426272910619357 tower-placement[270,200]
+   + 0.6441543171108628 tower-placement[230,20]
+   + 0.4683383098582061 tower-placement[90,390]
+   + 0.2725291485731122 tower-placement[260,130]
+   + 0.6945299073466434 tower-placement[110,50]
+   + 0.5258530974603605 tower-placement[170,50]
+   + 0.3914169936704712 tower-placement[130,220]
+   + 0.4457885681860054 tower-placement[60,150]
+   + 0.1503197603352356 tower-placement[340,140]
+   + 0.5007899562478624 tower-placement[20,320]
+   + 0.466967166001133 tower-placement[190,60]
+   + 0.1650616378053945 tower-placement[140,160]
+   + 0.4726623375180894 tower-placement[90,260]
+   + 0.7384811336330089 tower-placement[50,80]
+   + 0.4234022172467219 tower-placement[110,270]
+   + 0.322428773399321 tower-placement[170,270]
+   + 0.8939072813367163 tower-placement[60,20]
+   + 0.5404100199739743 tower-placement[340,10]
+   + 0.5251478938233297 tower-placement[20,190]
+   + 0.3429391932579314 tower-placement[160,200]
+   + 0.7429758939602408 tower-placement[120,20]
+   + 0.7749711357169294 tower-placement[10,120]
+   + 0.6757889410813526 tower-placement[140,30]
+   + 0.725357816880992 tower-placement[80,60]
+   + 0.3550782922063307 tower-placement[30,160]
+   + 0.8816103662224617 tower-placement[20,60]
+   + 0.4041737768461876 tower-placement[80,280]
+   + 0.722768927748015 tower-placement[40,100]
+   + 0.9629698427946766 tower-placement[30,30]
+   + 0.6413456423934446 tower-placement[460,340]
+   + 0.688614466777969 tower-placement[460,210]
+   + 0.1906739829660039 tower-placement[400,240]
+   + 0.2597597767477248 tower-placement[290,340]
+   + 0.2013533799483838 tower-placement[350,340]
+   + 0.4330165284629268 tower-placement[420,250]
+   + 0.1689929523361392 tower-placement[370,350]
+   + 0.6773921247232372 tower-placement[460,80]
+   + 0.7384811336330088 tower-placement[450,10]
+   + 0.3694049169842611 tower-placement[230,370]
+   + 0.7082960527092093 tower-placement[440,290]
+   + 0.6773921247232372 tower-placement[400,460]
+   + 0.36145799972812 tower-placement[390,390]
+   + 0.1657147593048834 tower-placement[370,220]
+   + 0.3764145448820417 tower-placement[150,230]
+   + 0.5124699093501024 tower-placement[430,220]
+   + 0.2789884475333945 tower-placement[360,150]
+   + 0.2177095150470717 tower-placement[280,140]
+   + 0.215595767326799 tower-placement[260,350]
+   + 0.1372272264185758 tower-placement[390,260]
+   + 0.0636322009954383 tower-placement[340,360]
+   + 0.4636229317614938 tower-placement[410,270]
+   + 0.3308804381075439 tower-placement[370,90]
+   + 0.3238463478344283 tower-placement[250,280]
+   + 0.4556066719909206 tower-placement[360,20]
+   + 0.0910658939427525 tower-placement[360,370]
+   + 0.4052372454415091 tower-placement[310,120]
+   + 0.3445625987257713 tower-placement[270,290]
+   + 0.401879722826647 tower-placement[50,300]
+   + 0.7098996217972104 tower-placement[440,30]
+   + 0.2990260083831971 tower-placement[260,220]
+   + 0.535292448033713 tower-placement[220,40]
+   + 0.3778596385897361 tower-placement[220,390]
+   + 0.2896911581430215 tower-placement[390,130]
+   + 0.3383087247869578 tower-placement[170,140]
+   + 0.305398320718723 tower-placement[130,310]
+   + 0.5524709613731117 tower-placement[240,50]
+   + 0.3666035722500742 tower-placement[340,230]
+   + 0.6557210806840164 tower-placement[20,410]
+   + 0.4725248653793336 tower-placement[120,240]
+   + 0.7221945938539746 tower-placement[10,340]
+   + 0.3769202350221768 tower-placement[250,150]
+   + 0.4011321118479172 tower-placement[140,250]
+   + 0.6985084552345433 tower-placement[100,70]
+   + 0.3836180981740721 tower-placement[270,160]
+   + 0.4462251875439405 tower-placement[50,170]
+   + 0.4398701373553414 tower-placement[260,90]
+   + 0.7127497306962356 tower-placement[40,450]
+   + 0.8153272525348267 tower-placement[110,10]
+   + 0.6192095109701802 tower-placement[170,10]
+   + 0.1438095585108494 tower-placement[130,180]
+   + 0.6933960033456273 tower-placement[60,110]
+   + 0.1399133290746039 tower-placement[340,100]
+   + 0.6985084552345432 tower-placement[60,460]
+   + 0.5448854298697677 tower-placement[20,280]
+   + 0.3628271655499807 tower-placement[160,290]
+   + 0.5531039636618632 tower-placement[190,20]
+   + 0.8350950446016219 tower-placement[50,40]
+   + 0.4786309901290698 tower-placement[40,320]
+   + 0.4740680158981885 tower-placement[210,60]
+   + 0.6559445679128044 tower-placement[130,50]
+   + 0.3832533118755594 tower-placement[20,150]
+   + 0.1797279862400271 tower-placement[160,160]
+   + 0.8752142275137544 tower-placement[10,80]
+   + 0.718471528923105 tower-placement[70,80]
+   + 0.8329821562677761 tower-placement[80,20]
+   + 0.5327856653918627 tower-placement[40,190]
+   + 0.7089209714315039 tower-placement[30,120] + tower-placement[20,20]
+   + 0.6737506206902514 tower-placement[160,30]
+   + 0.8032153808703656 tower-placement[40,60]
+   + 0.7053140613017796 tower-placement[460,430]
+   + 0.2755564761445876 tower-placement[330,390]
+   + 0.7053140613017796 tower-placement[460,300]
+   + 0.5525150423872663 tower-placement[450,230]
+   + 0.6886517960445646 tower-placement[460,170]
+   + 0.2212018404157051 tower-placement[280,360]
+   + 0.718471528923105 tower-placement[450,450]
+   + 0.3586863402923512 tower-placement[330,130]
+   + 0.206266633876224 tower-placement[360,240]
+   + 0.7160057465469467 tower-placement[460,40]
+   + 0.4639532408903723 tower-placement[310,340]
+   + 0.5015841451773979 tower-placement[440,250]
+   + 0.4088070752359481 tower-placement[290,170]
+   + 0.329925050356828 tower-placement[390,350]
+   + 0.6842078624670418 tower-placement[410,10]
+   + 0.0803658127688589 tower-placement[150,190]
+   + 0.3006823956726286 tower-placement[250,370]
+   + 0.0721472476548862 tower-placement[360,110]
+   + 0.3370777259700664 tower-placement[280,100]
+   + 0.4052124833623327 tower-placement[100,290]
+   + 0.3383561449878427 tower-placement[270,380]
+   + 0.3830459282003444 tower-placement[260,310]
+   + 0.1772973357737219 tower-placement[390,220]
+   + 0.4322260622335677 tower-placement[170,230]
+   + 0.2279143862864683 tower-placement[300,140]
+   + 0.6200791810672126 tower-placement[150,60]
+   + 0.6935704633134515 tower-placement[10,430]
+   + 0.3023755615981048 tower-placement[250,240]
+   + 0.5109741722443479 tower-placement[320,150]
+   + 0.2689592405278661 tower-placement[270,250]
+   + 0.4772639491135787 tower-placement[230,70]
+   + 0.3565834596507839 tower-placement[260,180]
+   + 0.3892207136908885 tower-placement[390,90]
+   + 0.1517083599352997 tower-placement[130,270]
+   + 0.6957804361086559 tower-placement[300,10]
+   + 0.6557210806840162 tower-placement[20,370]
+   + 0.5211197332995122 tower-placement[10,300]
+   + 0.3833601639206812 tower-placement[250,110]
+   + 0.4041737768461876 tower-placement[70,300]
+   + 0.6454479757192635 tower-placement[320,20]
+   + 0.3468588406819501 tower-placement[140,210]
+   + 0.7458736907865873 tower-placement[100,30]
+   + 0.2588707797360168 tower-placement[270,120]
+   + 0.448145748892916 tower-placement[90,310]
+   + 0.6696678829350123 tower-placement[50,130]
+   + 0.4745763069421854 tower-placement[180,40]
+   + 0.6733851016070347 tower-placement[30,340]
+   + 0.3309933941367547 tower-placement[130,140]
+   + 0.7381647126657394 tower-placement[60,70]
+   + 0.43746272322528 tower-placement[160,250]
+   + 0.6519137497656464 tower-placement[120,70]
+   + 0.4522608006389711 tower-placement[10,170]
+   + 0.677392124723237 tower-placement[80,460]
+   + 0.45018190611215 tower-placement[40,280]
+   + 0.5899067477202716 tower-placement[210,20]
+   + 0.7741538822835462 tower-placement[130,10]
+   + 0.7499362520108976 tower-placement[20,110] + tower-placement[10,40]
+   + 0.7823213868299497 tower-placement[70,40]
+   + 0.7231985896990981 tower-placement[90,50]
+   + 0.3706151195927558 tower-placement[40,150]
+   + 0.7860649532301255 tower-placement[30,80]
+   + 0.9741595155359933 tower-placement[40,20]
+   + 0.2614567859420815 tower-placement[380,380]
+   + 0.6413456423934447 tower-placement[460,390]
+   + 0.0717786515065276 tower-placement[380,250]
+   + 0.2007717596243832 tower-placement[330,350]
+   + 0.603602272810661 tower-placement[460,260]
+   + 0.7078705583126658 tower-placement[450,190]
+   + 0.4663143352711994 tower-placement[290,390]
+   + 0.2098970441645632 tower-placement[350,390]
+   + 0.2055530678608563 tower-placement[380,120]
+   + 0.4112717665208 tower-placement[410,230]
+   + 0.4187905873941636 tower-placement[280,320]
+   + 0.2741993058205277 tower-placement[350,260]
+   + 0.2882354551987552 tower-placement[240,360]
+   + 0.2828513765158913 tower-placement[300,360]
+   + 0.4682673636475398 tower-placement[330,90]
+   + 0.205572824315849 tower-placement[150,280]
+   + 0.5275116618860871 tower-placement[430,270]
+   + 0.3807095211877845 tower-placement[320,370]
+   + 0.3629094939199785 tower-placement[280,190]
+Subject To
+ footprints[(440,_210),(430,_210)]: tower-placement[440,210]
+   + tower-placement[430,210] <= 1
+ footprints[(440,_210),(430,_220)]: tower-placement[440,210]
+   + tower-placement[430,220] <= 1
+ footprints[(440,_210),(440,_200)]: tower-placement[440,210]
+   + tower-placement[440,200] <= 1
+ footprints[(440,_210),(440,_220)]: tower-placement[440,210]
+   + tower-placement[440,220] <= 1
+ footprints[(440,_210),(450,_200)]: tower-placement[440,210]
+   + tower-placement[450,200] <= 1
+ footprints[(440,_210),(450,_210)]: tower-placement[440,210]
+   + tower-placement[450,210] <= 1
+ footprints[(440,_210),(450,_220)]: tower-placement[440,210]
+   + tower-placement[450,220] <= 1
+ footprints[(180,_390),(170,_390)]: tower-placement[180,390]
+   + tower-placement[170,390] <= 1
+ footprints[(180,_390),(190,_380)]: tower-placement[180,390]
+   + tower-placement[190,380] <= 1
+ footprints[(180,_390),(190,_390)]: tower-placement[180,390]
+   + tower-placement[190,390] <= 1
+ footprints[(290,_130),(280,_120)]: tower-placement[290,130]
+   + tower-placement[280,120] <= 1
+ footprints[(290,_130),(280,_130)]: tower-placement[290,130]
+   + tower-placement[280,130] <= 1
+ footprints[(290,_130),(280,_140)]: tower-placement[290,130]
+   + tower-placement[280,140] <= 1
+ footprints[(290,_130),(290,_120)]: tower-placement[290,130]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_130),(290,_140)]: tower-placement[290,130]
+   + tower-placement[290,140] <= 1
+ footprints[(290,_130),(300,_120)]: tower-placement[290,130]
+   + tower-placement[300,120] <= 1
+ footprints[(290,_130),(300,_130)]: tower-placement[290,130]
+   + tower-placement[300,130] <= 1
+ footprints[(290,_130),(300,_140)]: tower-placement[290,130]
+   + tower-placement[300,140] <= 1
+ footprints[(350,_130),(340,_120)]: tower-placement[350,130]
+   + tower-placement[340,120] <= 1
+ footprints[(350,_130),(340,_130)]: tower-placement[350,130]
+   + tower-placement[340,130] <= 1
+ footprints[(350,_130),(340,_140)]: tower-placement[350,130]
+   + tower-placement[340,140] <= 1
+ footprints[(350,_130),(350,_120)]: tower-placement[350,130]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_130),(350,_140)]: tower-placement[350,130]
+   + tower-placement[350,140] <= 1
+ footprints[(350,_130),(360,_120)]: tower-placement[350,130]
+   + tower-placement[360,120] <= 1
+ footprints[(350,_130),(360,_130)]: tower-placement[350,130]
+   + tower-placement[360,130] <= 1
+ footprints[(350,_130),(360,_140)]: tower-placement[350,130]
+   + tower-placement[360,140] <= 1
+ footprints[(200,_50),(190,_40)]: tower-placement[200,50]
+   + tower-placement[190,40] <= 1
+ footprints[(200,_50),(190,_50)]: tower-placement[200,50]
+   + tower-placement[190,50] <= 1
+ footprints[(200,_50),(190,_60)]: tower-placement[200,50]
+   + tower-placement[190,60] <= 1
+ footprints[(200,_50),(200,_40)]: tower-placement[200,50]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_50),(200,_60)]: tower-placement[200,50]
+   + tower-placement[200,60] <= 1
+ footprints[(200,_50),(210,_40)]: tower-placement[200,50]
+   + tower-placement[210,40] <= 1
+ footprints[(200,_50),(210,_50)]: tower-placement[200,50]
+   + tower-placement[210,50] <= 1
+ footprints[(200,_50),(210,_60)]: tower-placement[200,50]
+   + tower-placement[210,60] <= 1
+ footprints[(370,_140),(360,_130)]: tower-placement[370,140]
+   + tower-placement[360,130] <= 1
+ footprints[(370,_140),(360,_140)]: tower-placement[370,140]
+   + tower-placement[360,140] <= 1
+ footprints[(370,_140),(360,_150)]: tower-placement[370,140]
+   + tower-placement[360,150] <= 1
+ footprints[(370,_140),(370,_130)]: tower-placement[370,140]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_140),(370,_150)]: tower-placement[370,140]
+   + tower-placement[370,150] <= 1
+ footprints[(370,_140),(380,_130)]: tower-placement[370,140]
+   + tower-placement[380,130] <= 1
+ footprints[(370,_140),(380,_140)]: tower-placement[370,140]
+   + tower-placement[380,140] <= 1
+ footprints[(370,_140),(380,_150)]: tower-placement[370,140]
+   + tower-placement[380,150] <= 1
+ footprints[(150,_150),(140,_140)]: tower-placement[150,150]
+   + tower-placement[140,140] <= 1
+ footprints[(150,_150),(140,_150)]: tower-placement[150,150]
+   + tower-placement[140,150] <= 1
+ footprints[(150,_150),(140,_160)]: tower-placement[150,150]
+   + tower-placement[140,160] <= 1
+ footprints[(150,_150),(150,_140)]: tower-placement[150,150]
+   + tower-placement[150,140] <= 1
+ footprints[(150,_150),(150,_160)]: tower-placement[150,150]
+   + tower-placement[150,160] <= 1
+ footprints[(150,_150),(160,_140)]: tower-placement[150,150]
+   + tower-placement[160,140] <= 1
+ footprints[(150,_150),(160,_150)]: tower-placement[150,150]
+   + tower-placement[160,150] <= 1
+ footprints[(150,_150),(160,_160)]: tower-placement[150,150]
+   + tower-placement[160,160] <= 1
+ footprints[(250,_330),(240,_330)]: tower-placement[250,330]
+   + tower-placement[240,330] <= 1
+ footprints[(250,_330),(240,_340)]: tower-placement[250,330]
+   + tower-placement[240,340] <= 1
+ footprints[(250,_330),(250,_320)]: tower-placement[250,330]
+   + tower-placement[250,320] <= 1
+ footprints[(250,_330),(250,_340)]: tower-placement[250,330]
+   + tower-placement[250,340] <= 1
+ footprints[(250,_330),(260,_320)]: tower-placement[250,330]
+   + tower-placement[260,320] <= 1
+ footprints[(250,_330),(260,_330)]: tower-placement[250,330]
+   + tower-placement[260,330] <= 1
+ footprints[(250,_330),(260,_340)]: tower-placement[250,330]
+   + tower-placement[260,340] <= 1
+ footprints[(100,_250),(90,_260)]: tower-placement[100,250]
+   + tower-placement[90,260] <= 1
+ footprints[(100,_250),(100,_260)]: tower-placement[100,250]
+   + tower-placement[100,260] <= 1
+ footprints[(100,_250),(110,_240)]: tower-placement[100,250]
+   + tower-placement[110,240] <= 1
+ footprints[(100,_250),(110,_250)]: tower-placement[100,250]
+   + tower-placement[110,250] <= 1
+ footprints[(100,_250),(110,_260)]: tower-placement[100,250]
+   + tower-placement[110,260] <= 1
+ footprints[(270,_340),(260,_330)]: tower-placement[270,340]
+   + tower-placement[260,330] <= 1
+ footprints[(270,_340),(260,_340)]: tower-placement[270,340]
+   + tower-placement[260,340] <= 1
+ footprints[(270,_340),(260,_350)]: tower-placement[270,340]
+   + tower-placement[260,350] <= 1
+ footprints[(270,_340),(270,_330)]: tower-placement[270,340]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_340),(270,_350)]: tower-placement[270,340]
+   + tower-placement[270,350] <= 1
+ footprints[(270,_340),(280,_330)]: tower-placement[270,340]
+   + tower-placement[280,330] <= 1
+ footprints[(270,_340),(280,_340)]: tower-placement[270,340]
+   + tower-placement[280,340] <= 1
+ footprints[(270,_340),(280,_350)]: tower-placement[270,340]
+   + tower-placement[280,350] <= 1
+ footprints[(260,_270),(250,_260)]: tower-placement[260,270]
+   + tower-placement[250,260] <= 1
+ footprints[(260,_270),(250,_270)]: tower-placement[260,270]
+   + tower-placement[250,270] <= 1
+ footprints[(260,_270),(250,_280)]: tower-placement[260,270]
+   + tower-placement[250,280] <= 1
+ footprints[(260,_270),(260,_260)]: tower-placement[260,270]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_270),(260,_280)]: tower-placement[260,270]
+   + tower-placement[260,280] <= 1
+ footprints[(260,_270),(270,_260)]: tower-placement[260,270]
+   + tower-placement[270,260] <= 1
+ footprints[(260,_270),(270,_270)]: tower-placement[260,270]
+   + tower-placement[270,270] <= 1
+ footprints[(260,_270),(270,_280)]: tower-placement[260,270]
+   + tower-placement[270,280] <= 1
+ footprints[(170,_190),(160,_180)]: tower-placement[170,190]
+   + tower-placement[160,180] <= 1
+ footprints[(170,_190),(160,_190)]: tower-placement[170,190]
+   + tower-placement[160,190] <= 1
+ footprints[(170,_190),(160,_200)]: tower-placement[170,190]
+   + tower-placement[160,200] <= 1
+ footprints[(170,_190),(170,_180)]: tower-placement[170,190]
+   + tower-placement[170,180] <= 1
+ footprints[(170,_190),(170,_200)]: tower-placement[170,190]
+   + tower-placement[170,200] <= 1
+ footprints[(240,_100),(230,_90)]: tower-placement[240,100]
+   + tower-placement[230,90] <= 1
+ footprints[(240,_100),(240,_90)]: tower-placement[240,100]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_100),(240,_110)]: tower-placement[240,100]
+   + tower-placement[240,110] <= 1
+ footprints[(240,_100),(250,_90)]: tower-placement[240,100]
+   + tower-placement[250,90] <= 1
+ footprints[(240,_100),(250,_100)]: tower-placement[240,100]
+   + tower-placement[250,100] <= 1
+ footprints[(240,_100),(250,_110)]: tower-placement[240,100]
+   + tower-placement[250,110] <= 1
+ footprints[(60,_290),(50,_280)]: tower-placement[60,290]
+   + tower-placement[50,280] <= 1
+ footprints[(60,_290),(50,_290)]: tower-placement[60,290]
+   + tower-placement[50,290] <= 1
+ footprints[(60,_290),(50,_300)]: tower-placement[60,290]
+   + tower-placement[50,300] <= 1
+ footprints[(60,_290),(60,_280)]: tower-placement[60,290]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_290),(60,_300)]: tower-placement[60,290]
+   + tower-placement[60,300] <= 1
+ footprints[(60,_290),(70,_280)]: tower-placement[60,290]
+   + tower-placement[70,280] <= 1
+ footprints[(60,_290),(70,_290)]: tower-placement[60,290]
+   + tower-placement[70,290] <= 1
+ footprints[(60,_290),(70,_300)]: tower-placement[60,290]
+   + tower-placement[70,300] <= 1
+ footprints[(300,_100),(290,_90)]: tower-placement[300,100]
+   + tower-placement[290,90] <= 1
+ footprints[(300,_100),(290,_100)]: tower-placement[300,100]
+   + tower-placement[290,100] <= 1
+ footprints[(300,_100),(290,_110)]: tower-placement[300,100]
+   + tower-placement[290,110] <= 1
+ footprints[(300,_100),(300,_90)]: tower-placement[300,100]
+   + tower-placement[300,90] <= 1
+ footprints[(300,_100),(300,_110)]: tower-placement[300,100]
+   + tower-placement[300,110] <= 1
+ footprints[(300,_100),(310,_90)]: tower-placement[300,100]
+   + tower-placement[310,90] <= 1
+ footprints[(300,_100),(310,_100)]: tower-placement[300,100]
+   + tower-placement[310,100] <= 1
+ footprints[(300,_100),(310,_110)]: tower-placement[300,100]
+   + tower-placement[310,110] <= 1
+ footprints[(20,_460),(10,_450)]: tower-placement[20,460]
+   + tower-placement[10,450] <= 1
+ footprints[(20,_460),(10,_460)]: tower-placement[20,460]
+   + tower-placement[10,460] <= 1
+ footprints[(20,_460),(20,_450)]: tower-placement[20,460]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_460),(30,_450)]: tower-placement[20,460]
+   + tower-placement[30,450] <= 1
+ footprints[(20,_460),(30,_460)]: tower-placement[20,460]
+   + tower-placement[30,460] <= 1
+ footprints[(120,_290),(110,_280)]: tower-placement[120,290]
+   + tower-placement[110,280] <= 1
+ footprints[(120,_290),(110,_290)]: tower-placement[120,290]
+   + tower-placement[110,290] <= 1
+ footprints[(120,_290),(110,_300)]: tower-placement[120,290]
+   + tower-placement[110,300] <= 1
+ footprints[(120,_290),(120,_280)]: tower-placement[120,290]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_290),(120,_300)]: tower-placement[120,290]
+   + tower-placement[120,300] <= 1
+ footprints[(120,_290),(130,_280)]: tower-placement[120,290]
+   + tower-placement[130,280] <= 1
+ footprints[(120,_290),(130,_290)]: tower-placement[120,290]
+   + tower-placement[130,290] <= 1
+ footprints[(120,_290),(130,_300)]: tower-placement[120,290]
+   + tower-placement[130,300] <= 1
+ footprints[(370,_10),(360,_10)]: tower-placement[370,10]
+   + tower-placement[360,10] <= 1
+ footprints[(370,_10),(360,_20)]: tower-placement[370,10]
+   + tower-placement[360,20] <= 1
+ footprints[(370,_10),(370,_20)]: tower-placement[370,10]
+   + tower-placement[370,20] <= 1
+ footprints[(370,_10),(380,_10)]: tower-placement[370,10]
+   + tower-placement[380,10] <= 1
+ footprints[(370,_10),(380,_20)]: tower-placement[370,10]
+   + tower-placement[380,20] <= 1
+ footprints[(150,_20),(140,_10)]: tower-placement[150,20]
+   + tower-placement[140,10] <= 1
+ footprints[(150,_20),(140,_20)]: tower-placement[150,20]
+   + tower-placement[140,20] <= 1
+ footprints[(150,_20),(140,_30)]: tower-placement[150,20]
+   + tower-placement[140,30] <= 1
+ footprints[(150,_20),(150,_10)]: tower-placement[150,20]
+   + tower-placement[150,10] <= 1
+ footprints[(150,_20),(150,_30)]: tower-placement[150,20]
+   + tower-placement[150,30] <= 1
+ footprints[(150,_20),(160,_10)]: tower-placement[150,20]
+   + tower-placement[160,10] <= 1
+ footprints[(150,_20),(160,_20)]: tower-placement[150,20]
+   + tower-placement[160,20] <= 1
+ footprints[(150,_20),(160,_30)]: tower-placement[150,20]
+   + tower-placement[160,30] <= 1
+ footprints[(430,_10),(420,_10)]: tower-placement[430,10]
+   + tower-placement[420,10] <= 1
+ footprints[(430,_10),(420,_20)]: tower-placement[430,10]
+   + tower-placement[420,20] <= 1
+ footprints[(430,_10),(430,_20)]: tower-placement[430,10]
+   + tower-placement[430,20] <= 1
+ footprints[(430,_10),(440,_10)]: tower-placement[430,10]
+   + tower-placement[440,10] <= 1
+ footprints[(430,_10),(440,_20)]: tower-placement[430,10]
+   + tower-placement[440,20] <= 1
+ footprints[(10,_390),(10,_380)]: tower-placement[10,390]
+   + tower-placement[10,380] <= 1
+ footprints[(10,_390),(10,_400)]: tower-placement[10,390]
+   + tower-placement[10,400] <= 1
+ footprints[(10,_390),(20,_380)]: tower-placement[10,390]
+   + tower-placement[20,380] <= 1
+ footprints[(10,_390),(20,_390)]: tower-placement[10,390]
+   + tower-placement[20,390] <= 1
+ footprints[(10,_390),(20,_400)]: tower-placement[10,390]
+   + tower-placement[20,400] <= 1
+ footprints[(250,_200),(250,_190)]: tower-placement[250,200]
+   + tower-placement[250,190] <= 1
+ footprints[(250,_200),(250,_210)]: tower-placement[250,200]
+   + tower-placement[250,210] <= 1
+ footprints[(250,_200),(260,_190)]: tower-placement[250,200]
+   + tower-placement[260,190] <= 1
+ footprints[(250,_200),(260,_200)]: tower-placement[250,200]
+   + tower-placement[260,200] <= 1
+ footprints[(250,_200),(260,_210)]: tower-placement[250,200]
+   + tower-placement[260,210] <= 1
+ footprints[(320,_110),(310,_100)]: tower-placement[320,110]
+   + tower-placement[310,100] <= 1
+ footprints[(320,_110),(310,_110)]: tower-placement[320,110]
+   + tower-placement[310,110] <= 1
+ footprints[(320,_110),(310,_120)]: tower-placement[320,110]
+   + tower-placement[310,120] <= 1
+ footprints[(320,_110),(320,_100)]: tower-placement[320,110]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_110),(320,_120)]: tower-placement[320,110]
+   + tower-placement[320,120] <= 1
+ footprints[(320,_110),(330,_100)]: tower-placement[320,110]
+   + tower-placement[330,100] <= 1
+ footprints[(320,_110),(330,_110)]: tower-placement[320,110]
+   + tower-placement[330,110] <= 1
+ footprints[(320,_110),(330,_120)]: tower-placement[320,110]
+   + tower-placement[330,120] <= 1
+ footprints[(140,_300),(130,_290)]: tower-placement[140,300]
+   + tower-placement[130,290] <= 1
+ footprints[(140,_300),(130,_300)]: tower-placement[140,300]
+   + tower-placement[130,300] <= 1
+ footprints[(140,_300),(130,_310)]: tower-placement[140,300]
+   + tower-placement[130,310] <= 1
+ footprints[(140,_300),(140,_290)]: tower-placement[140,300]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_300),(140,_310)]: tower-placement[140,300]
+   + tower-placement[140,310] <= 1
+ footprints[(140,_300),(150,_290)]: tower-placement[140,300]
+   + tower-placement[150,290] <= 1
+ footprints[(140,_300),(150,_300)]: tower-placement[140,300]
+   + tower-placement[150,300] <= 1
+ footprints[(140,_300),(150,_310)]: tower-placement[140,300]
+   + tower-placement[150,310] <= 1
+ footprints[(270,_210),(260,_200)]: tower-placement[270,210]
+   + tower-placement[260,200] <= 1
+ footprints[(270,_210),(260,_210)]: tower-placement[270,210]
+   + tower-placement[260,210] <= 1
+ footprints[(270,_210),(260,_220)]: tower-placement[270,210]
+   + tower-placement[260,220] <= 1
+ footprints[(270,_210),(270,_200)]: tower-placement[270,210]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_210),(270,_220)]: tower-placement[270,210]
+   + tower-placement[270,220] <= 1
+ footprints[(230,_30),(220,_20)]: tower-placement[230,30]
+   + tower-placement[220,20] <= 1
+ footprints[(230,_30),(220,_30)]: tower-placement[230,30]
+   + tower-placement[220,30] <= 1
+ footprints[(230,_30),(220,_40)]: tower-placement[230,30]
+   + tower-placement[220,40] <= 1
+ footprints[(230,_30),(230,_20)]: tower-placement[230,30]
+   + tower-placement[230,20] <= 1
+ footprints[(230,_30),(230,_40)]: tower-placement[230,30]
+   + tower-placement[230,40] <= 1
+ footprints[(260,_140),(250,_130)]: tower-placement[260,140]
+   + tower-placement[250,130] <= 1
+ footprints[(260,_140),(250,_140)]: tower-placement[260,140]
+   + tower-placement[250,140] <= 1
+ footprints[(260,_140),(250,_150)]: tower-placement[260,140]
+   + tower-placement[250,150] <= 1
+ footprints[(260,_140),(260,_130)]: tower-placement[260,140]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_140),(260,_150)]: tower-placement[260,140]
+   + tower-placement[260,150] <= 1
+ footprints[(260,_140),(270,_130)]: tower-placement[260,140]
+   + tower-placement[270,130] <= 1
+ footprints[(260,_140),(270,_140)]: tower-placement[260,140]
+   + tower-placement[270,140] <= 1
+ footprints[(260,_140),(270,_150)]: tower-placement[260,140]
+   + tower-placement[270,150] <= 1
+ footprints[(110,_60),(100,_50)]: tower-placement[110,60]
+   + tower-placement[100,50] <= 1
+ footprints[(110,_60),(100,_60)]: tower-placement[110,60]
+   + tower-placement[100,60] <= 1
+ footprints[(110,_60),(100,_70)]: tower-placement[110,60]
+   + tower-placement[100,70] <= 1
+ footprints[(110,_60),(110,_50)]: tower-placement[110,60]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_60),(110,_70)]: tower-placement[110,60]
+   + tower-placement[110,70] <= 1
+ footprints[(110,_60),(120,_50)]: tower-placement[110,60]
+   + tower-placement[120,50] <= 1
+ footprints[(110,_60),(120,_60)]: tower-placement[110,60]
+   + tower-placement[120,60] <= 1
+ footprints[(110,_60),(120,_70)]: tower-placement[110,60]
+   + tower-placement[120,70] <= 1
+ footprints[(170,_60),(160,_50)]: tower-placement[170,60]
+   + tower-placement[160,50] <= 1
+ footprints[(170,_60),(160,_60)]: tower-placement[170,60]
+   + tower-placement[160,60] <= 1
+ footprints[(170,_60),(170,_50)]: tower-placement[170,60]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_60),(180,_50)]: tower-placement[170,60]
+   + tower-placement[180,50] <= 1
+ footprints[(170,_60),(180,_60)]: tower-placement[170,60]
+   + tower-placement[180,60] <= 1
+ footprints[(30,_430),(20,_420)]: tower-placement[30,430]
+   + tower-placement[20,420] <= 1
+ footprints[(30,_430),(20,_430)]: tower-placement[30,430]
+   + tower-placement[20,430] <= 1
+ footprints[(30,_430),(20,_440)]: tower-placement[30,430]
+   + tower-placement[20,440] <= 1
+ footprints[(30,_430),(30,_440)]: tower-placement[30,430]
+   + tower-placement[30,440] <= 1
+ footprints[(30,_430),(40,_440)]: tower-placement[30,430]
+   + tower-placement[40,440] <= 1
+ footprints[(130,_230),(120,_230)]: tower-placement[130,230]
+   + tower-placement[120,230] <= 1
+ footprints[(130,_230),(120,_240)]: tower-placement[130,230]
+   + tower-placement[120,240] <= 1
+ footprints[(130,_230),(130,_220)]: tower-placement[130,230]
+   + tower-placement[130,220] <= 1
+ footprints[(130,_230),(130,_240)]: tower-placement[130,230]
+   + tower-placement[130,240] <= 1
+ footprints[(130,_230),(140,_220)]: tower-placement[130,230]
+   + tower-placement[140,220] <= 1
+ footprints[(130,_230),(140,_230)]: tower-placement[130,230]
+   + tower-placement[140,230] <= 1
+ footprints[(130,_230),(140,_240)]: tower-placement[130,230]
+   + tower-placement[140,240] <= 1
+ footprints[(60,_160),(50,_150)]: tower-placement[60,160]
+   + tower-placement[50,150] <= 1
+ footprints[(60,_160),(50,_160)]: tower-placement[60,160]
+   + tower-placement[50,160] <= 1
+ footprints[(60,_160),(50,_170)]: tower-placement[60,160]
+   + tower-placement[50,170] <= 1
+ footprints[(60,_160),(60,_150)]: tower-placement[60,160]
+   + tower-placement[60,150] <= 1
+ footprints[(60,_160),(60,_170)]: tower-placement[60,160]
+   + tower-placement[60,170] <= 1
+ footprints[(340,_150),(330,_140)]: tower-placement[340,150]
+   + tower-placement[330,140] <= 1
+ footprints[(340,_150),(330,_150)]: tower-placement[340,150]
+   + tower-placement[330,150] <= 1
+ footprints[(340,_150),(340,_140)]: tower-placement[340,150]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_150),(350,_140)]: tower-placement[340,150]
+   + tower-placement[350,140] <= 1
+ footprints[(340,_150),(350,_150)]: tower-placement[340,150]
+   + tower-placement[350,150] <= 1
+ footprints[(20,_330),(10,_320)]: tower-placement[20,330]
+   + tower-placement[10,320] <= 1
+ footprints[(20,_330),(10,_330)]: tower-placement[20,330]
+   + tower-placement[10,330] <= 1
+ footprints[(20,_330),(10,_340)]: tower-placement[20,330]
+   + tower-placement[10,340] <= 1
+ footprints[(20,_330),(20,_320)]: tower-placement[20,330]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_330),(20,_340)]: tower-placement[20,330]
+   + tower-placement[20,340] <= 1
+ footprints[(20,_330),(30,_320)]: tower-placement[20,330]
+   + tower-placement[30,320] <= 1
+ footprints[(20,_330),(30,_330)]: tower-placement[20,330]
+   + tower-placement[30,330] <= 1
+ footprints[(20,_330),(30,_340)]: tower-placement[20,330]
+   + tower-placement[30,340] <= 1
+ footprints[(190,_70),(180,_60)]: tower-placement[190,70]
+   + tower-placement[180,60] <= 1
+ footprints[(190,_70),(190,_60)]: tower-placement[190,70]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_70),(200,_60)]: tower-placement[190,70]
+   + tower-placement[200,60] <= 1
+ footprints[(190,_70),(200,_70)]: tower-placement[190,70]
+   + tower-placement[200,70] <= 1
+ footprints[(250,_70),(240,_60)]: tower-placement[250,70]
+   + tower-placement[240,60] <= 1
+ footprints[(250,_70),(240,_70)]: tower-placement[250,70]
+   + tower-placement[240,70] <= 1
+ footprints[(250,_70),(240,_80)]: tower-placement[250,70]
+   + tower-placement[240,80] <= 1
+ footprints[(250,_70),(250,_80)]: tower-placement[250,70]
+   + tower-placement[250,80] <= 1
+ footprints[(250,_70),(260,_80)]: tower-placement[250,70]
+   + tower-placement[260,80] <= 1
+ footprints[(70,_260),(60,_270)]: tower-placement[70,260]
+   + tower-placement[60,270] <= 1
+ footprints[(70,_260),(70,_270)]: tower-placement[70,260]
+   + tower-placement[70,270] <= 1
+ footprints[(70,_260),(80,_260)]: tower-placement[70,260]
+   + tower-placement[80,260] <= 1
+ footprints[(70,_260),(80,_270)]: tower-placement[70,260]
+   + tower-placement[80,270] <= 1
+ footprints[(140,_170),(130,_160)]: tower-placement[140,170]
+   + tower-placement[130,160] <= 1
+ footprints[(140,_170),(130,_170)]: tower-placement[140,170]
+   + tower-placement[130,170] <= 1
+ footprints[(140,_170),(130,_180)]: tower-placement[140,170]
+   + tower-placement[130,180] <= 1
+ footprints[(140,_170),(140,_160)]: tower-placement[140,170]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_170),(140,_180)]: tower-placement[140,170]
+   + tower-placement[140,180] <= 1
+ footprints[(140,_170),(150,_160)]: tower-placement[140,170]
+   + tower-placement[150,160] <= 1
+ footprints[(140,_170),(150,_170)]: tower-placement[140,170]
+   + tower-placement[150,170] <= 1
+ footprints[(140,_170),(150,_180)]: tower-placement[140,170]
+   + tower-placement[150,180] <= 1
+ footprints[(90,_270),(80,_260)]: tower-placement[90,270]
+   + tower-placement[80,260] <= 1
+ footprints[(90,_270),(80,_270)]: tower-placement[90,270]
+   + tower-placement[80,270] <= 1
+ footprints[(90,_270),(80,_280)]: tower-placement[90,270]
+   + tower-placement[80,280] <= 1
+ footprints[(90,_270),(90,_260)]: tower-placement[90,270]
+   + tower-placement[90,260] <= 1
+ footprints[(90,_270),(90,_280)]: tower-placement[90,270]
+   + tower-placement[90,280] <= 1
+ footprints[(90,_270),(100,_260)]: tower-placement[90,270]
+   + tower-placement[100,260] <= 1
+ footprints[(90,_270),(100,_270)]: tower-placement[90,270]
+   + tower-placement[100,270] <= 1
+ footprints[(90,_270),(100,_280)]: tower-placement[90,270]
+   + tower-placement[100,280] <= 1
+ footprints[(50,_90),(40,_80)]: tower-placement[50,90]
+   + tower-placement[40,80] <= 1
+ footprints[(50,_90),(40,_90)]: tower-placement[50,90]
+   + tower-placement[40,90] <= 1
+ footprints[(50,_90),(40,_100)]: tower-placement[50,90]
+   + tower-placement[40,100] <= 1
+ footprints[(50,_90),(50,_80)]: tower-placement[50,90]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_90),(50,_100)]: tower-placement[50,90]
+   + tower-placement[50,100] <= 1
+ footprints[(50,_90),(60,_80)]: tower-placement[50,90]
+   + tower-placement[60,80] <= 1
+ footprints[(50,_90),(60,_90)]: tower-placement[50,90]
+   + tower-placement[60,90] <= 1
+ footprints[(50,_90),(60,_100)]: tower-placement[50,90]
+   + tower-placement[60,100] <= 1
+ footprints[(30,_300),(20,_290)]: tower-placement[30,300]
+   + tower-placement[20,290] <= 1
+ footprints[(30,_300),(20,_300)]: tower-placement[30,300]
+   + tower-placement[20,300] <= 1
+ footprints[(30,_300),(20,_310)]: tower-placement[30,300]
+   + tower-placement[20,310] <= 1
+ footprints[(30,_300),(30,_290)]: tower-placement[30,300]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_300),(30,_310)]: tower-placement[30,300]
+   + tower-placement[30,310] <= 1
+ footprints[(30,_300),(40,_290)]: tower-placement[30,300]
+   + tower-placement[40,290] <= 1
+ footprints[(30,_300),(40,_300)]: tower-placement[30,300]
+   + tower-placement[40,300] <= 1
+ footprints[(30,_300),(40,_310)]: tower-placement[30,300]
+   + tower-placement[40,310] <= 1
+ footprints[(60,_30),(50,_20)]: tower-placement[60,30]
+   + tower-placement[50,20] <= 1
+ footprints[(60,_30),(50,_30)]: tower-placement[60,30]
+   + tower-placement[50,30] <= 1
+ footprints[(60,_30),(50,_40)]: tower-placement[60,30]
+   + tower-placement[50,40] <= 1
+ footprints[(60,_30),(60,_20)]: tower-placement[60,30]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_30),(60,_40)]: tower-placement[60,30]
+   + tower-placement[60,40] <= 1
+ footprints[(60,_30),(70,_20)]: tower-placement[60,30]
+   + tower-placement[70,20] <= 1
+ footprints[(60,_30),(70,_30)]: tower-placement[60,30]
+   + tower-placement[70,30] <= 1
+ footprints[(60,_30),(70,_40)]: tower-placement[60,30]
+   + tower-placement[70,40] <= 1
+ footprints[(340,_20),(330,_10)]: tower-placement[340,20]
+   + tower-placement[330,10] <= 1
+ footprints[(340,_20),(330,_20)]: tower-placement[340,20]
+   + tower-placement[330,20] <= 1
+ footprints[(340,_20),(340,_10)]: tower-placement[340,20]
+   + tower-placement[340,10] <= 1
+ footprints[(340,_20),(350,_10)]: tower-placement[340,20]
+   + tower-placement[350,10] <= 1
+ footprints[(340,_20),(350,_20)]: tower-placement[340,20]
+   + tower-placement[350,20] <= 1
+ footprints[(160,_210),(150,_200)]: tower-placement[160,210]
+   + tower-placement[150,200] <= 1
+ footprints[(160,_210),(150,_210)]: tower-placement[160,210]
+   + tower-placement[150,210] <= 1
+ footprints[(160,_210),(150,_220)]: tower-placement[160,210]
+   + tower-placement[150,220] <= 1
+ footprints[(160,_210),(160,_200)]: tower-placement[160,210]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_210),(160,_220)]: tower-placement[160,210]
+   + tower-placement[160,220] <= 1
+ footprints[(160,_210),(170,_200)]: tower-placement[160,210]
+   + tower-placement[170,200] <= 1
+ footprints[(160,_210),(170,_210)]: tower-placement[160,210]
+   + tower-placement[170,210] <= 1
+ footprints[(160,_210),(170,_220)]: tower-placement[160,210]
+   + tower-placement[170,220] <= 1
+ footprints[(120,_30),(110,_20)]: tower-placement[120,30]
+   + tower-placement[110,20] <= 1
+ footprints[(120,_30),(110,_30)]: tower-placement[120,30]
+   + tower-placement[110,30] <= 1
+ footprints[(120,_30),(110,_40)]: tower-placement[120,30]
+   + tower-placement[110,40] <= 1
+ footprints[(120,_30),(120,_20)]: tower-placement[120,30]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_30),(120,_40)]: tower-placement[120,30]
+   + tower-placement[120,40] <= 1
+ footprints[(120,_30),(130,_20)]: tower-placement[120,30]
+   + tower-placement[130,20] <= 1
+ footprints[(120,_30),(130,_30)]: tower-placement[120,30]
+   + tower-placement[130,30] <= 1
+ footprints[(120,_30),(130,_40)]: tower-placement[120,30]
+   + tower-placement[130,40] <= 1
+ footprints[(10,_130),(10,_120)]: tower-placement[10,130]
+   + tower-placement[10,120] <= 1
+ footprints[(10,_130),(10,_140)]: tower-placement[10,130]
+   + tower-placement[10,140] <= 1
+ footprints[(10,_130),(20,_120)]: tower-placement[10,130]
+   + tower-placement[20,120] <= 1
+ footprints[(10,_130),(20,_130)]: tower-placement[10,130]
+   + tower-placement[20,130] <= 1
+ footprints[(10,_130),(20,_140)]: tower-placement[10,130]
+   + tower-placement[20,140] <= 1
+ footprints[(140,_40),(130,_30)]: tower-placement[140,40]
+   + tower-placement[130,30] <= 1
+ footprints[(140,_40),(130,_40)]: tower-placement[140,40]
+   + tower-placement[130,40] <= 1
+ footprints[(140,_40),(130,_50)]: tower-placement[140,40]
+   + tower-placement[130,50] <= 1
+ footprints[(140,_40),(140,_30)]: tower-placement[140,40]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_40),(140,_50)]: tower-placement[140,40]
+   + tower-placement[140,50] <= 1
+ footprints[(140,_40),(150,_30)]: tower-placement[140,40]
+   + tower-placement[150,30] <= 1
+ footprints[(140,_40),(150,_40)]: tower-placement[140,40]
+   + tower-placement[150,40] <= 1
+ footprints[(140,_40),(150,_50)]: tower-placement[140,40]
+   + tower-placement[150,50] <= 1
+ footprints[(80,_70),(70,_60)]: tower-placement[80,70]
+   + tower-placement[70,60] <= 1
+ footprints[(80,_70),(70,_70)]: tower-placement[80,70]
+   + tower-placement[70,70] <= 1
+ footprints[(80,_70),(70,_80)]: tower-placement[80,70]
+   + tower-placement[70,80] <= 1
+ footprints[(80,_70),(80,_60)]: tower-placement[80,70]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_70),(80,_80)]: tower-placement[80,70]
+   + tower-placement[80,80] <= 1
+ footprints[(80,_70),(90,_60)]: tower-placement[80,70]
+   + tower-placement[90,60] <= 1
+ footprints[(80,_70),(90,_70)]: tower-placement[80,70]
+   + tower-placement[90,70] <= 1
+ footprints[(80,_70),(90,_80)]: tower-placement[80,70]
+   + tower-placement[90,80] <= 1
+ footprints[(30,_170),(20,_160)]: tower-placement[30,170]
+   + tower-placement[20,160] <= 1
+ footprints[(30,_170),(20,_170)]: tower-placement[30,170]
+   + tower-placement[20,170] <= 1
+ footprints[(30,_170),(20,_180)]: tower-placement[30,170]
+   + tower-placement[20,180] <= 1
+ footprints[(30,_170),(30,_160)]: tower-placement[30,170]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_170),(30,_180)]: tower-placement[30,170]
+   + tower-placement[30,180] <= 1
+ footprints[(30,_170),(40,_160)]: tower-placement[30,170]
+   + tower-placement[40,160] <= 1
+ footprints[(30,_170),(40,_170)]: tower-placement[30,170]
+   + tower-placement[40,170] <= 1
+ footprints[(30,_170),(40,_180)]: tower-placement[30,170]
+   + tower-placement[40,180] <= 1
+ footprints[(90,_10),(80,_10)]: tower-placement[90,10]
+   + tower-placement[80,10] <= 1
+ footprints[(90,_10),(80,_20)]: tower-placement[90,10]
+   + tower-placement[80,20] <= 1
+ footprints[(90,_10),(90,_20)]: tower-placement[90,10]
+   + tower-placement[90,20] <= 1
+ footprints[(90,_10),(100,_10)]: tower-placement[90,10]
+   + tower-placement[100,10] <= 1
+ footprints[(90,_10),(100,_20)]: tower-placement[90,10]
+   + tower-placement[100,20] <= 1
+ footprints[(40,_110),(30,_100)]: tower-placement[40,110]
+   + tower-placement[30,100] <= 1
+ footprints[(40,_110),(30,_110)]: tower-placement[40,110]
+   + tower-placement[30,110] <= 1
+ footprints[(40,_110),(30,_120)]: tower-placement[40,110]
+   + tower-placement[30,120] <= 1
+ footprints[(40,_110),(40,_100)]: tower-placement[40,110]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_110),(40,_120)]: tower-placement[40,110]
+   + tower-placement[40,120] <= 1
+ footprints[(40,_110),(50,_100)]: tower-placement[40,110]
+   + tower-placement[50,100] <= 1
+ footprints[(40,_110),(50,_110)]: tower-placement[40,110]
+   + tower-placement[50,110] <= 1
+ footprints[(40,_110),(50,_120)]: tower-placement[40,110]
+   + tower-placement[50,120] <= 1
+ footprints[(30,_40),(20,_30)]: tower-placement[30,40]
+   + tower-placement[20,30] <= 1
+ footprints[(30,_40),(20,_40)]: tower-placement[30,40]
+   + tower-placement[20,40] <= 1
+ footprints[(30,_40),(20,_50)]: tower-placement[30,40]
+   + tower-placement[20,50] <= 1
+ footprints[(30,_40),(30,_30)]: tower-placement[30,40]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_40),(30,_50)]: tower-placement[30,40]
+   + tower-placement[30,50] <= 1
+ footprints[(30,_40),(40,_30)]: tower-placement[30,40]
+   + tower-placement[40,30] <= 1
+ footprints[(30,_40),(40,_40)]: tower-placement[30,40]
+   + tower-placement[40,40] <= 1
+ footprints[(30,_40),(40,_50)]: tower-placement[30,40]
+   + tower-placement[40,50] <= 1
+ footprints[(380,_340),(370,_340)]: tower-placement[380,340]
+   + tower-placement[370,340] <= 1
+ footprints[(380,_340),(370,_350)]: tower-placement[380,340]
+   + tower-placement[370,350] <= 1
+ footprints[(380,_340),(380,_350)]: tower-placement[380,340]
+   + tower-placement[380,350] <= 1
+ footprints[(380,_340),(390,_340)]: tower-placement[380,340]
+   + tower-placement[390,340] <= 1
+ footprints[(380,_340),(390,_350)]: tower-placement[380,340]
+   + tower-placement[390,350] <= 1
+ footprints[(460,_350),(460,_340)]: tower-placement[460,350]
+   + tower-placement[460,340] <= 1
+ footprints[(460,_350),(460,_360)]: tower-placement[460,350]
+   + tower-placement[460,360] <= 1
+ footprints[(450,_280),(440,_270)]: tower-placement[450,280]
+   + tower-placement[440,270] <= 1
+ footprints[(450,_280),(440,_280)]: tower-placement[450,280]
+   + tower-placement[440,280] <= 1
+ footprints[(450,_280),(440,_290)]: tower-placement[450,280]
+   + tower-placement[440,290] <= 1
+ footprints[(450,_280),(450,_270)]: tower-placement[450,280]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_280),(450,_290)]: tower-placement[450,280]
+   + tower-placement[450,290] <= 1
+ footprints[(450,_280),(460,_270)]: tower-placement[450,280]
+   + tower-placement[460,270] <= 1
+ footprints[(450,_280),(460,_280)]: tower-placement[450,280]
+   + tower-placement[460,280] <= 1
+ footprints[(450,_280),(460,_290)]: tower-placement[450,280]
+   + tower-placement[460,290] <= 1
+ footprints[(460,_220),(450,_210)]: tower-placement[460,220]
+   + tower-placement[450,210] <= 1
+ footprints[(460,_220),(450,_220)]: tower-placement[460,220]
+   + tower-placement[450,220] <= 1
+ footprints[(460,_220),(450,_230)]: tower-placement[460,220]
+   + tower-placement[450,230] <= 1
+ footprints[(460,_220),(460,_210)]: tower-placement[460,220]
+   + tower-placement[460,210] <= 1
+ footprints[(460,_220),(460,_230)]: tower-placement[460,220]
+   + tower-placement[460,230] <= 1
+ footprints[(400,_250),(390,_240)]: tower-placement[400,250]
+   + tower-placement[390,240] <= 1
+ footprints[(400,_250),(390,_250)]: tower-placement[400,250]
+   + tower-placement[390,250] <= 1
+ footprints[(400,_250),(390,_260)]: tower-placement[400,250]
+   + tower-placement[390,260] <= 1
+ footprints[(400,_250),(400,_240)]: tower-placement[400,250]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_250),(400,_260)]: tower-placement[400,250]
+   + tower-placement[400,260] <= 1
+ footprints[(400,_250),(410,_240)]: tower-placement[400,250]
+   + tower-placement[410,240] <= 1
+ footprints[(400,_250),(410,_250)]: tower-placement[400,250]
+   + tower-placement[410,250] <= 1
+ footprints[(400,_250),(410,_260)]: tower-placement[400,250]
+   + tower-placement[410,260] <= 1
+ footprints[(290,_350),(280,_340)]: tower-placement[290,350]
+   + tower-placement[280,340] <= 1
+ footprints[(290,_350),(280,_350)]: tower-placement[290,350]
+   + tower-placement[280,350] <= 1
+ footprints[(290,_350),(280,_360)]: tower-placement[290,350]
+   + tower-placement[280,360] <= 1
+ footprints[(290,_350),(290,_340)]: tower-placement[290,350]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_350),(290,_360)]: tower-placement[290,350]
+   + tower-placement[290,360] <= 1
+ footprints[(290,_350),(300,_340)]: tower-placement[290,350]
+   + tower-placement[300,340] <= 1
+ footprints[(290,_350),(300,_350)]: tower-placement[290,350]
+   + tower-placement[300,350] <= 1
+ footprints[(290,_350),(300,_360)]: tower-placement[290,350]
+   + tower-placement[300,360] <= 1
+ footprints[(350,_350),(340,_340)]: tower-placement[350,350]
+   + tower-placement[340,340] <= 1
+ footprints[(350,_350),(340,_350)]: tower-placement[350,350]
+   + tower-placement[340,350] <= 1
+ footprints[(350,_350),(340,_360)]: tower-placement[350,350]
+   + tower-placement[340,360] <= 1
+ footprints[(350,_350),(350,_340)]: tower-placement[350,350]
+   + tower-placement[350,340] <= 1
+ footprints[(350,_350),(350,_360)]: tower-placement[350,350]
+   + tower-placement[350,360] <= 1
+ footprints[(350,_350),(360,_340)]: tower-placement[350,350]
+   + tower-placement[360,340] <= 1
+ footprints[(350,_350),(360,_350)]: tower-placement[350,350]
+   + tower-placement[360,350] <= 1
+ footprints[(350,_350),(360,_360)]: tower-placement[350,350]
+   + tower-placement[360,360] <= 1
+ footprints[(420,_260),(410,_250)]: tower-placement[420,260]
+   + tower-placement[410,250] <= 1
+ footprints[(420,_260),(410,_260)]: tower-placement[420,260]
+   + tower-placement[410,260] <= 1
+ footprints[(420,_260),(410,_270)]: tower-placement[420,260]
+   + tower-placement[410,270] <= 1
+ footprints[(420,_260),(420,_250)]: tower-placement[420,260]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_260),(420,_270)]: tower-placement[420,260]
+   + tower-placement[420,270] <= 1
+ footprints[(420,_260),(430,_250)]: tower-placement[420,260]
+   + tower-placement[430,250] <= 1
+ footprints[(420,_260),(430,_260)]: tower-placement[420,260]
+   + tower-placement[430,260] <= 1
+ footprints[(420,_260),(430,_270)]: tower-placement[420,260]
+   + tower-placement[430,270] <= 1
+ footprints[(370,_360),(360,_350)]: tower-placement[370,360]
+   + tower-placement[360,350] <= 1
+ footprints[(370,_360),(360,_360)]: tower-placement[370,360]
+   + tower-placement[360,360] <= 1
+ footprints[(370,_360),(360,_370)]: tower-placement[370,360]
+   + tower-placement[360,370] <= 1
+ footprints[(370,_360),(370,_350)]: tower-placement[370,360]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_360),(370,_370)]: tower-placement[370,360]
+   + tower-placement[370,370] <= 1
+ footprints[(370,_360),(380,_350)]: tower-placement[370,360]
+   + tower-placement[380,350] <= 1
+ footprints[(370,_360),(380,_360)]: tower-placement[370,360]
+   + tower-placement[380,360] <= 1
+ footprints[(370,_360),(380,_370)]: tower-placement[370,360]
+   + tower-placement[380,370] <= 1
+ footprints[(450,_20),(440,_10)]: tower-placement[450,20]
+   + tower-placement[440,10] <= 1
+ footprints[(450,_20),(440,_20)]: tower-placement[450,20]
+   + tower-placement[440,20] <= 1
+ footprints[(450,_20),(440,_30)]: tower-placement[450,20]
+   + tower-placement[440,30] <= 1
+ footprints[(450,_20),(450,_10)]: tower-placement[450,20]
+   + tower-placement[450,10] <= 1
+ footprints[(450,_20),(450,_30)]: tower-placement[450,20]
+   + tower-placement[450,30] <= 1
+ footprints[(450,_20),(460,_10)]: tower-placement[450,20]
+   + tower-placement[460,10] <= 1
+ footprints[(450,_20),(460,_20)]: tower-placement[450,20]
+   + tower-placement[460,20] <= 1
+ footprints[(450,_20),(460,_30)]: tower-placement[450,20]
+   + tower-placement[460,30] <= 1
+ footprints[(310,_390),(300,_380)]: tower-placement[310,390]
+   + tower-placement[300,380] <= 1
+ footprints[(310,_390),(300,_390)]: tower-placement[310,390]
+   + tower-placement[300,390] <= 1
+ footprints[(310,_390),(310,_380)]: tower-placement[310,390]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_390),(320,_380)]: tower-placement[310,390]
+   + tower-placement[320,380] <= 1
+ footprints[(310,_390),(320,_390)]: tower-placement[310,390]
+   + tower-placement[320,390] <= 1
+ footprints[(230,_380),(220,_370)]: tower-placement[230,380]
+   + tower-placement[220,370] <= 1
+ footprints[(230,_380),(220,_380)]: tower-placement[230,380]
+   + tower-placement[220,380] <= 1
+ footprints[(230,_380),(220,_390)]: tower-placement[230,380]
+   + tower-placement[220,390] <= 1
+ footprints[(230,_380),(230,_370)]: tower-placement[230,380]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_380),(230,_390)]: tower-placement[230,380]
+   + tower-placement[230,390] <= 1
+ footprints[(230,_380),(240,_370)]: tower-placement[230,380]
+   + tower-placement[240,370] <= 1
+ footprints[(230,_380),(240,_380)]: tower-placement[230,380]
+   + tower-placement[240,380] <= 1
+ footprints[(230,_380),(240,_390)]: tower-placement[230,380]
+   + tower-placement[240,390] <= 1
+ footprints[(350,_220),(340,_220)]: tower-placement[350,220]
+   + tower-placement[340,220] <= 1
+ footprints[(350,_220),(340,_230)]: tower-placement[350,220]
+   + tower-placement[340,230] <= 1
+ footprints[(350,_220),(350,_230)]: tower-placement[350,220]
+   + tower-placement[350,230] <= 1
+ footprints[(350,_220),(360,_220)]: tower-placement[350,220]
+   + tower-placement[360,220] <= 1
+ footprints[(350,_220),(360,_230)]: tower-placement[350,220]
+   + tower-placement[360,230] <= 1
+ footprints[(300,_320),(290,_310)]: tower-placement[300,320]
+   + tower-placement[290,310] <= 1
+ footprints[(300,_320),(290,_320)]: tower-placement[300,320]
+   + tower-placement[290,320] <= 1
+ footprints[(300,_320),(290,_330)]: tower-placement[300,320]
+   + tower-placement[290,330] <= 1
+ footprints[(300,_320),(300,_330)]: tower-placement[300,320]
+   + tower-placement[300,330] <= 1
+ footprints[(300,_320),(310,_330)]: tower-placement[300,320]
+   + tower-placement[310,330] <= 1
+ footprints[(370,_230),(360,_220)]: tower-placement[370,230]
+   + tower-placement[360,220] <= 1
+ footprints[(370,_230),(360,_230)]: tower-placement[370,230]
+   + tower-placement[360,230] <= 1
+ footprints[(370,_230),(360,_240)]: tower-placement[370,230]
+   + tower-placement[360,240] <= 1
+ footprints[(370,_230),(370,_220)]: tower-placement[370,230]
+   + tower-placement[370,220] <= 1
+ footprints[(370,_230),(370,_240)]: tower-placement[370,230]
+   + tower-placement[370,240] <= 1
+ footprints[(370,_230),(380,_220)]: tower-placement[370,230]
+   + tower-placement[380,220] <= 1
+ footprints[(370,_230),(380,_230)]: tower-placement[370,230]
+   + tower-placement[380,230] <= 1
+ footprints[(370,_230),(380,_240)]: tower-placement[370,230]
+   + tower-placement[380,240] <= 1
+ footprints[(150,_240),(140,_230)]: tower-placement[150,240]
+   + tower-placement[140,230] <= 1
+ footprints[(150,_240),(140,_240)]: tower-placement[150,240]
+   + tower-placement[140,240] <= 1
+ footprints[(150,_240),(140,_250)]: tower-placement[150,240]
+   + tower-placement[140,250] <= 1
+ footprints[(150,_240),(150,_230)]: tower-placement[150,240]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_240),(150,_250)]: tower-placement[150,240]
+   + tower-placement[150,250] <= 1
+ footprints[(150,_240),(160,_230)]: tower-placement[150,240]
+   + tower-placement[160,230] <= 1
+ footprints[(150,_240),(160,_240)]: tower-placement[150,240]
+   + tower-placement[160,240] <= 1
+ footprints[(150,_240),(160,_250)]: tower-placement[150,240]
+   + tower-placement[160,250] <= 1
+ footprints[(430,_230),(420,_220)]: tower-placement[430,230]
+   + tower-placement[420,220] <= 1
+ footprints[(430,_230),(420,_230)]: tower-placement[430,230]
+   + tower-placement[420,230] <= 1
+ footprints[(430,_230),(420,_240)]: tower-placement[430,230]
+   + tower-placement[420,240] <= 1
+ footprints[(430,_230),(430,_220)]: tower-placement[430,230]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_230),(430,_240)]: tower-placement[430,230]
+   + tower-placement[430,240] <= 1
+ footprints[(430,_230),(440,_220)]: tower-placement[430,230]
+   + tower-placement[440,220] <= 1
+ footprints[(430,_230),(440,_230)]: tower-placement[430,230]
+   + tower-placement[440,230] <= 1
+ footprints[(430,_230),(440,_240)]: tower-placement[430,230]
+   + tower-placement[440,240] <= 1
+ footprints[(320,_330),(310,_330)]: tower-placement[320,330]
+   + tower-placement[310,330] <= 1
+ footprints[(320,_330),(310,_340)]: tower-placement[320,330]
+   + tower-placement[310,340] <= 1
+ footprints[(320,_330),(320,_340)]: tower-placement[320,330]
+   + tower-placement[320,340] <= 1
+ footprints[(320,_330),(330,_330)]: tower-placement[320,330]
+   + tower-placement[330,330] <= 1
+ footprints[(320,_330),(330,_340)]: tower-placement[320,330]
+   + tower-placement[330,340] <= 1
+ footprints[(280,_150),(270,_140)]: tower-placement[280,150]
+   + tower-placement[270,140] <= 1
+ footprints[(280,_150),(270,_150)]: tower-placement[280,150]
+   + tower-placement[270,150] <= 1
+ footprints[(280,_150),(270,_160)]: tower-placement[280,150]
+   + tower-placement[270,160] <= 1
+ footprints[(280,_150),(280,_140)]: tower-placement[280,150]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_150),(280,_160)]: tower-placement[280,150]
+   + tower-placement[280,160] <= 1
+ footprints[(280,_150),(290,_140)]: tower-placement[280,150]
+   + tower-placement[290,140] <= 1
+ footprints[(280,_150),(290,_150)]: tower-placement[280,150]
+   + tower-placement[290,150] <= 1
+ footprints[(280,_150),(290,_160)]: tower-placement[280,150]
+   + tower-placement[290,160] <= 1
+ footprints[(270,_80),(260,_80)]: tower-placement[270,80]
+   + tower-placement[260,80] <= 1
+ footprints[(270,_80),(260,_90)]: tower-placement[270,80]
+   + tower-placement[260,90] <= 1
+ footprints[(270,_80),(270,_90)]: tower-placement[270,80]
+   + tower-placement[270,90] <= 1
+ footprints[(270,_80),(280,_90)]: tower-placement[270,80]
+   + tower-placement[280,90] <= 1
+ footprints[(260,_360),(250,_350)]: tower-placement[260,360]
+   + tower-placement[250,350] <= 1
+ footprints[(260,_360),(250,_360)]: tower-placement[260,360]
+   + tower-placement[250,360] <= 1
+ footprints[(260,_360),(250,_370)]: tower-placement[260,360]
+   + tower-placement[250,370] <= 1
+ footprints[(260,_360),(260,_350)]: tower-placement[260,360]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_360),(260,_370)]: tower-placement[260,360]
+   + tower-placement[260,370] <= 1
+ footprints[(260,_360),(270,_350)]: tower-placement[260,360]
+   + tower-placement[270,350] <= 1
+ footprints[(260,_360),(270,_360)]: tower-placement[260,360]
+   + tower-placement[270,360] <= 1
+ footprints[(260,_360),(270,_370)]: tower-placement[260,360]
+   + tower-placement[270,370] <= 1
+ footprints[(290,_90),(280,_90)]: tower-placement[290,90]
+   + tower-placement[280,90] <= 1
+ footprints[(290,_90),(280,_100)]: tower-placement[290,90]
+   + tower-placement[280,100] <= 1
+ footprints[(290,_90),(290,_100)]: tower-placement[290,90]
+   + tower-placement[290,100] <= 1
+ footprints[(290,_90),(300,_90)]: tower-placement[290,90]
+   + tower-placement[300,90] <= 1
+ footprints[(290,_90),(300,_100)]: tower-placement[300,100]
+   + tower-placement[290,90] <= 1
+ footprints[(110,_280),(100,_270)]: tower-placement[110,280]
+   + tower-placement[100,270] <= 1
+ footprints[(110,_280),(100,_280)]: tower-placement[110,280]
+   + tower-placement[100,280] <= 1
+ footprints[(110,_280),(100,_290)]: tower-placement[110,280]
+   + tower-placement[100,290] <= 1
+ footprints[(110,_280),(110,_270)]: tower-placement[110,280]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_280),(110,_290)]: tower-placement[110,280]
+   + tower-placement[110,290] <= 1
+ footprints[(110,_280),(120,_270)]: tower-placement[110,280]
+   + tower-placement[120,270] <= 1
+ footprints[(110,_280),(120,_280)]: tower-placement[110,280]
+   + tower-placement[120,280] <= 1
+ footprints[(110,_280),(120,_290)]: tower-placement[120,290]
+   + tower-placement[110,280] <= 1
+ footprints[(350,_90),(340,_90)]: tower-placement[350,90]
+   + tower-placement[340,90] <= 1
+ footprints[(350,_90),(340,_100)]: tower-placement[350,90]
+   + tower-placement[340,100] <= 1
+ footprints[(350,_90),(350,_100)]: tower-placement[350,90]
+   + tower-placement[350,100] <= 1
+ footprints[(350,_90),(360,_90)]: tower-placement[350,90]
+   + tower-placement[360,90] <= 1
+ footprints[(350,_90),(360,_100)]: tower-placement[350,90]
+   + tower-placement[360,100] <= 1
+ footprints[(170,_280),(160,_270)]: tower-placement[170,280]
+   + tower-placement[160,270] <= 1
+ footprints[(170,_280),(160,_280)]: tower-placement[170,280]
+   + tower-placement[160,280] <= 1
+ footprints[(170,_280),(160,_290)]: tower-placement[170,280]
+   + tower-placement[160,290] <= 1
+ footprints[(170,_280),(170,_270)]: tower-placement[170,280]
+   + tower-placement[170,270] <= 1
+ footprints[(170,_280),(170,_290)]: tower-placement[170,280]
+   + tower-placement[170,290] <= 1
+ footprints[(200,_10),(190,_10)]: tower-placement[200,10]
+   + tower-placement[190,10] <= 1
+ footprints[(200,_10),(190,_20)]: tower-placement[200,10]
+   + tower-placement[190,20] <= 1
+ footprints[(200,_10),(200,_20)]: tower-placement[200,10]
+   + tower-placement[200,20] <= 1
+ footprints[(200,_10),(210,_10)]: tower-placement[200,10]
+   + tower-placement[210,10] <= 1
+ footprints[(200,_10),(210,_20)]: tower-placement[200,10]
+   + tower-placement[210,20] <= 1
+ footprints[(340,_370),(330,_360)]: tower-placement[340,370]
+   + tower-placement[330,360] <= 1
+ footprints[(340,_370),(330,_370)]: tower-placement[340,370]
+   + tower-placement[330,370] <= 1
+ footprints[(340,_370),(330,_380)]: tower-placement[340,370]
+   + tower-placement[330,380] <= 1
+ footprints[(340,_370),(340,_360)]: tower-placement[340,370]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_370),(340,_380)]: tower-placement[340,370]
+   + tower-placement[340,380] <= 1
+ footprints[(340,_370),(350,_360)]: tower-placement[340,370]
+   + tower-placement[350,360] <= 1
+ footprints[(340,_370),(350,_370)]: tower-placement[340,370]
+   + tower-placement[350,370] <= 1
+ footprints[(340,_370),(350,_380)]: tower-placement[340,370]
+   + tower-placement[350,380] <= 1
+ footprints[(370,_100),(360,_90)]: tower-placement[370,100]
+   + tower-placement[360,90] <= 1
+ footprints[(370,_100),(360,_100)]: tower-placement[370,100]
+   + tower-placement[360,100] <= 1
+ footprints[(370,_100),(360,_110)]: tower-placement[370,100]
+   + tower-placement[360,110] <= 1
+ footprints[(370,_100),(370,_90)]: tower-placement[370,100]
+   + tower-placement[370,90] <= 1
+ footprints[(370,_100),(370,_110)]: tower-placement[370,100]
+   + tower-placement[370,110] <= 1
+ footprints[(370,_100),(380,_90)]: tower-placement[370,100]
+   + tower-placement[380,90] <= 1
+ footprints[(370,_100),(380,_100)]: tower-placement[370,100]
+   + tower-placement[380,100] <= 1
+ footprints[(370,_100),(380,_110)]: tower-placement[370,100]
+   + tower-placement[380,110] <= 1
+ footprints[(250,_290),(250,_280)]: tower-placement[250,290]
+   + tower-placement[250,280] <= 1
+ footprints[(250,_290),(250,_300)]: tower-placement[250,290]
+   + tower-placement[250,300] <= 1
+ footprints[(250,_290),(260,_280)]: tower-placement[250,290]
+   + tower-placement[260,280] <= 1
+ footprints[(250,_290),(260,_290)]: tower-placement[250,290]
+   + tower-placement[260,290] <= 1
+ footprints[(250,_290),(260,_300)]: tower-placement[250,290]
+   + tower-placement[260,300] <= 1
+ footprints[(140,_390),(130,_390)]: tower-placement[140,390]
+   + tower-placement[130,390] <= 1
+ footprints[(140,_390),(150,_390)]: tower-placement[140,390]
+   + tower-placement[150,390] <= 1
+ footprints[(310,_130),(300,_120)]: tower-placement[310,130]
+   + tower-placement[300,120] <= 1
+ footprints[(310,_130),(300,_130)]: tower-placement[310,130]
+   + tower-placement[300,130] <= 1
+ footprints[(310,_130),(300,_140)]: tower-placement[310,130]
+   + tower-placement[300,140] <= 1
+ footprints[(310,_130),(310,_120)]: tower-placement[310,130]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_130),(310,_140)]: tower-placement[310,130]
+   + tower-placement[310,140] <= 1
+ footprints[(310,_130),(320,_120)]: tower-placement[310,130]
+   + tower-placement[320,120] <= 1
+ footprints[(310,_130),(320,_130)]: tower-placement[310,130]
+   + tower-placement[320,130] <= 1
+ footprints[(310,_130),(320,_140)]: tower-placement[310,130]
+   + tower-placement[320,140] <= 1
+ footprints[(270,_300),(260,_290)]: tower-placement[270,300]
+   + tower-placement[260,290] <= 1
+ footprints[(270,_300),(260,_300)]: tower-placement[270,300]
+   + tower-placement[260,300] <= 1
+ footprints[(270,_300),(260,_310)]: tower-placement[270,300]
+   + tower-placement[260,310] <= 1
+ footprints[(270,_300),(270,_290)]: tower-placement[270,300]
+   + tower-placement[270,290] <= 1
+ footprints[(270,_300),(270,_310)]: tower-placement[270,300]
+   + tower-placement[270,310] <= 1
+ footprints[(270,_300),(280,_300)]: tower-placement[270,300]
+   + tower-placement[280,300] <= 1
+ footprints[(270,_300),(280,_310)]: tower-placement[270,300]
+   + tower-placement[280,310] <= 1
+ footprints[(50,_310),(40,_300)]: tower-placement[50,310]
+   + tower-placement[40,300] <= 1
+ footprints[(50,_310),(40,_310)]: tower-placement[50,310]
+   + tower-placement[40,310] <= 1
+ footprints[(50,_310),(40,_320)]: tower-placement[50,310]
+   + tower-placement[40,320] <= 1
+ footprints[(50,_310),(50,_300)]: tower-placement[50,310]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_310),(50,_320)]: tower-placement[50,310]
+   + tower-placement[50,320] <= 1
+ footprints[(50,_310),(60,_300)]: tower-placement[50,310]
+   + tower-placement[60,300] <= 1
+ footprints[(50,_310),(60,_310)]: tower-placement[50,310]
+   + tower-placement[60,310] <= 1
+ footprints[(50,_310),(60,_320)]: tower-placement[50,310]
+   + tower-placement[60,320] <= 1
+ footprints[(440,_40),(430,_30)]: tower-placement[440,40]
+   + tower-placement[430,30] <= 1
+ footprints[(440,_40),(440,_30)]: tower-placement[440,40]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_40),(450,_30)]: tower-placement[440,40]
+   + tower-placement[450,30] <= 1
+ footprints[(440,_40),(450,_40)]: tower-placement[440,40]
+   + tower-placement[450,40] <= 1
+ footprints[(440,_40),(450,_50)]: tower-placement[440,40]
+   + tower-placement[450,50] <= 1
+ footprints[(260,_230),(250,_220)]: tower-placement[260,230]
+   + tower-placement[250,220] <= 1
+ footprints[(260,_230),(250,_230)]: tower-placement[260,230]
+   + tower-placement[250,230] <= 1
+ footprints[(260,_230),(250,_240)]: tower-placement[260,230]
+   + tower-placement[250,240] <= 1
+ footprints[(260,_230),(260,_220)]: tower-placement[260,230]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_230),(260,_240)]: tower-placement[260,230]
+   + tower-placement[260,240] <= 1
+ footprints[(260,_230),(270,_220)]: tower-placement[260,230]
+   + tower-placement[270,220] <= 1
+ footprints[(260,_230),(270,_230)]: tower-placement[260,230]
+   + tower-placement[270,230] <= 1
+ footprints[(260,_230),(270,_240)]: tower-placement[260,230]
+   + tower-placement[270,240] <= 1
+ footprints[(220,_50),(210,_40)]: tower-placement[220,50]
+   + tower-placement[210,40] <= 1
+ footprints[(220,_50),(210,_50)]: tower-placement[220,50]
+   + tower-placement[210,50] <= 1
+ footprints[(220,_50),(210,_60)]: tower-placement[220,50]
+   + tower-placement[210,60] <= 1
+ footprints[(220,_50),(220,_40)]: tower-placement[220,50]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_50),(220,_60)]: tower-placement[220,50]
+   + tower-placement[220,60] <= 1
+ footprints[(220,_50),(230,_40)]: tower-placement[220,50]
+   + tower-placement[230,40] <= 1
+ footprints[(220,_50),(230,_50)]: tower-placement[220,50]
+   + tower-placement[230,50] <= 1
+ footprints[(220,_50),(230,_60)]: tower-placement[220,50]
+   + tower-placement[230,60] <= 1
+ footprints[(390,_140),(380,_130)]: tower-placement[390,140]
+   + tower-placement[380,130] <= 1
+ footprints[(390,_140),(380,_140)]: tower-placement[390,140]
+   + tower-placement[380,140] <= 1
+ footprints[(390,_140),(380,_150)]: tower-placement[390,140]
+   + tower-placement[380,150] <= 1
+ footprints[(390,_140),(390,_130)]: tower-placement[390,140]
+   + tower-placement[390,130] <= 1
+ footprints[(390,_140),(390,_150)]: tower-placement[390,140]
+   + tower-placement[390,150] <= 1
+ footprints[(170,_150),(160,_140)]: tower-placement[170,150]
+   + tower-placement[160,140] <= 1
+ footprints[(170,_150),(160,_150)]: tower-placement[170,150]
+   + tower-placement[160,150] <= 1
+ footprints[(170,_150),(160,_160)]: tower-placement[170,150]
+   + tower-placement[160,160] <= 1
+ footprints[(170,_150),(170,_140)]: tower-placement[170,150]
+   + tower-placement[170,140] <= 1
+ footprints[(170,_150),(170,_160)]: tower-placement[170,150]
+   + tower-placement[170,160] <= 1
+ footprints[(240,_60),(230,_50)]: tower-placement[240,60]
+   + tower-placement[230,50] <= 1
+ footprints[(240,_60),(230,_60)]: tower-placement[240,60]
+   + tower-placement[230,60] <= 1
+ footprints[(240,_60),(230,_70)]: tower-placement[240,60]
+   + tower-placement[230,70] <= 1
+ footprints[(240,_60),(240,_50)]: tower-placement[240,60]
+   + tower-placement[240,50] <= 1
+ footprints[(240,_60),(240,_70)]: tower-placement[240,60]
+   + tower-placement[240,70] <= 1
+ footprints[(240,_60),(250,_70)]: tower-placement[250,70]
+   + tower-placement[240,60] <= 1
+ footprints[(20,_70),(10,_60)]: tower-placement[20,70]
+   + tower-placement[10,60] <= 1
+ footprints[(20,_70),(10,_70)]: tower-placement[20,70]
+   + tower-placement[10,70] <= 1
+ footprints[(20,_70),(10,_80)]: tower-placement[20,70]
+   + tower-placement[10,80] <= 1
+ footprints[(20,_70),(20,_60)]: tower-placement[20,70]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_70),(20,_80)]: tower-placement[20,70]
+   + tower-placement[20,80] <= 1
+ footprints[(20,_70),(30,_60)]: tower-placement[20,70]
+   + tower-placement[30,60] <= 1
+ footprints[(20,_70),(30,_70)]: tower-placement[20,70]
+   + tower-placement[30,70] <= 1
+ footprints[(20,_70),(30,_80)]: tower-placement[20,70]
+   + tower-placement[30,80] <= 1
+ footprints[(340,_240),(340,_230)]: tower-placement[340,240]
+   + tower-placement[340,230] <= 1
+ footprints[(340,_240),(340,_250)]: tower-placement[340,240]
+   + tower-placement[340,250] <= 1
+ footprints[(340,_240),(350,_230)]: tower-placement[340,240]
+   + tower-placement[350,230] <= 1
+ footprints[(340,_240),(350,_240)]: tower-placement[340,240]
+   + tower-placement[350,240] <= 1
+ footprints[(340,_240),(350,_250)]: tower-placement[340,240]
+   + tower-placement[350,250] <= 1
+ footprints[(20,_420),(10,_410)]: tower-placement[20,420]
+   + tower-placement[10,410] <= 1
+ footprints[(20,_420),(10,_420)]: tower-placement[20,420]
+   + tower-placement[10,420] <= 1
+ footprints[(20,_420),(10,_430)]: tower-placement[20,420]
+   + tower-placement[10,430] <= 1
+ footprints[(20,_420),(20,_410)]: tower-placement[20,420]
+   + tower-placement[20,410] <= 1
+ footprints[(20,_420),(20,_430)]: tower-placement[20,420]
+   + tower-placement[20,430] <= 1
+ footprints[(20,_420),(30,_430)]: tower-placement[30,430]
+   + tower-placement[20,420] <= 1
+ footprints[(120,_250),(110,_240)]: tower-placement[120,250]
+   + tower-placement[110,240] <= 1
+ footprints[(120,_250),(110,_250)]: tower-placement[120,250]
+   + tower-placement[110,250] <= 1
+ footprints[(120,_250),(110,_260)]: tower-placement[120,250]
+   + tower-placement[110,260] <= 1
+ footprints[(120,_250),(120,_240)]: tower-placement[120,250]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_250),(120,_260)]: tower-placement[120,250]
+   + tower-placement[120,260] <= 1
+ footprints[(120,_250),(130,_240)]: tower-placement[120,250]
+   + tower-placement[130,240] <= 1
+ footprints[(120,_250),(130,_250)]: tower-placement[120,250]
+   + tower-placement[130,250] <= 1
+ footprints[(120,_250),(130,_260)]: tower-placement[120,250]
+   + tower-placement[130,260] <= 1
+ footprints[(10,_350),(10,_340)]: tower-placement[10,350]
+   + tower-placement[10,340] <= 1
+ footprints[(10,_350),(10,_360)]: tower-placement[10,350]
+   + tower-placement[10,360] <= 1
+ footprints[(10,_350),(20,_340)]: tower-placement[10,350]
+   + tower-placement[20,340] <= 1
+ footprints[(10,_350),(20,_350)]: tower-placement[10,350]
+   + tower-placement[20,350] <= 1
+ footprints[(10,_350),(20,_360)]: tower-placement[10,350]
+   + tower-placement[20,360] <= 1
+ footprints[(250,_160),(250,_150)]: tower-placement[250,160]
+   + tower-placement[250,150] <= 1
+ footprints[(250,_160),(250,_170)]: tower-placement[250,160]
+   + tower-placement[250,170] <= 1
+ footprints[(250,_160),(260,_150)]: tower-placement[250,160]
+   + tower-placement[260,150] <= 1
+ footprints[(250,_160),(260,_160)]: tower-placement[250,160]
+   + tower-placement[260,160] <= 1
+ footprints[(250,_160),(260,_170)]: tower-placement[250,160]
+   + tower-placement[260,170] <= 1
+ footprints[(140,_260),(130,_250)]: tower-placement[140,260]
+   + tower-placement[130,250] <= 1
+ footprints[(140,_260),(130,_260)]: tower-placement[140,260]
+   + tower-placement[130,260] <= 1
+ footprints[(140,_260),(130,_270)]: tower-placement[140,260]
+   + tower-placement[130,270] <= 1
+ footprints[(140,_260),(140,_250)]: tower-placement[140,260]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_260),(140,_270)]: tower-placement[140,260]
+   + tower-placement[140,270] <= 1
+ footprints[(140,_260),(150,_250)]: tower-placement[140,260]
+   + tower-placement[150,250] <= 1
+ footprints[(140,_260),(150,_260)]: tower-placement[140,260]
+   + tower-placement[150,260] <= 1
+ footprints[(140,_260),(150,_270)]: tower-placement[140,260]
+   + tower-placement[150,270] <= 1
+ footprints[(50,_180),(40,_170)]: tower-placement[50,180]
+   + tower-placement[40,170] <= 1
+ footprints[(50,_180),(40,_180)]: tower-placement[50,180]
+   + tower-placement[40,180] <= 1
+ footprints[(50,_180),(40,_190)]: tower-placement[50,180]
+   + tower-placement[40,190] <= 1
+ footprints[(50,_180),(50,_170)]: tower-placement[50,180]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_180),(50,_190)]: tower-placement[50,180]
+   + tower-placement[50,190] <= 1
+ footprints[(50,_180),(60,_170)]: tower-placement[50,180]
+   + tower-placement[60,170] <= 1
+ footprints[(50,_180),(60,_180)]: tower-placement[50,180]
+   + tower-placement[60,180] <= 1
+ footprints[(50,_180),(60,_190)]: tower-placement[50,180]
+   + tower-placement[60,190] <= 1
+ footprints[(260,_100),(250,_90)]: tower-placement[260,100]
+   + tower-placement[250,90] <= 1
+ footprints[(260,_100),(250,_100)]: tower-placement[260,100]
+   + tower-placement[250,100] <= 1
+ footprints[(260,_100),(250,_110)]: tower-placement[260,100]
+   + tower-placement[250,110] <= 1
+ footprints[(260,_100),(260,_90)]: tower-placement[260,100]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_100),(260,_110)]: tower-placement[260,100]
+   + tower-placement[260,110] <= 1
+ footprints[(260,_100),(270,_90)]: tower-placement[260,100]
+   + tower-placement[270,90] <= 1
+ footprints[(260,_100),(270,_100)]: tower-placement[260,100]
+   + tower-placement[270,100] <= 1
+ footprints[(260,_100),(270,_110)]: tower-placement[260,100]
+   + tower-placement[270,110] <= 1
+ footprints[(80,_290),(70,_280)]: tower-placement[80,290]
+   + tower-placement[70,280] <= 1
+ footprints[(80,_290),(70,_290)]: tower-placement[80,290]
+   + tower-placement[70,290] <= 1
+ footprints[(80,_290),(70,_300)]: tower-placement[80,290]
+   + tower-placement[70,300] <= 1
+ footprints[(80,_290),(80,_280)]: tower-placement[80,290]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_290),(80,_300)]: tower-placement[80,290]
+   + tower-placement[80,300] <= 1
+ footprints[(80,_290),(90,_280)]: tower-placement[80,290]
+   + tower-placement[90,280] <= 1
+ footprints[(80,_290),(90,_290)]: tower-placement[80,290]
+   + tower-placement[90,290] <= 1
+ footprints[(80,_290),(90,_300)]: tower-placement[80,290]
+   + tower-placement[90,300] <= 1
+ footprints[(40,_460),(30,_450)]: tower-placement[40,460]
+   + tower-placement[30,450] <= 1
+ footprints[(40,_460),(30,_460)]: tower-placement[40,460]
+   + tower-placement[30,460] <= 1
+ footprints[(40,_460),(40,_450)]: tower-placement[40,460]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_460),(50,_450)]: tower-placement[40,460]
+   + tower-placement[50,450] <= 1
+ footprints[(40,_460),(50,_460)]: tower-placement[40,460]
+   + tower-placement[50,460] <= 1
+ footprints[(110,_20),(100,_10)]: tower-placement[110,20]
+   + tower-placement[100,10] <= 1
+ footprints[(110,_20),(100,_20)]: tower-placement[110,20]
+   + tower-placement[100,20] <= 1
+ footprints[(110,_20),(100,_30)]: tower-placement[110,20]
+   + tower-placement[100,30] <= 1
+ footprints[(110,_20),(110,_10)]: tower-placement[110,20]
+   + tower-placement[110,10] <= 1
+ footprints[(110,_20),(110,_30)]: tower-placement[110,20]
+   + tower-placement[110,30] <= 1
+ footprints[(110,_20),(120,_10)]: tower-placement[110,20]
+   + tower-placement[120,10] <= 1
+ footprints[(110,_20),(120,_20)]: tower-placement[110,20]
+   + tower-placement[120,20] <= 1
+ footprints[(110,_20),(120,_30)]: tower-placement[120,30]
+   + tower-placement[110,20] <= 1
+ footprints[(390,_10),(380,_10)]: tower-placement[390,10]
+   + tower-placement[380,10] <= 1
+ footprints[(390,_10),(380,_20)]: tower-placement[390,10]
+   + tower-placement[380,20] <= 1
+ footprints[(390,_10),(390,_20)]: tower-placement[390,10]
+   + tower-placement[390,20] <= 1
+ footprints[(390,_10),(400,_10)]: tower-placement[390,10]
+   + tower-placement[400,10] <= 1
+ footprints[(390,_10),(400,_20)]: tower-placement[390,10]
+   + tower-placement[400,20] <= 1
+ footprints[(170,_20),(160,_10)]: tower-placement[170,20]
+   + tower-placement[160,10] <= 1
+ footprints[(170,_20),(160,_20)]: tower-placement[170,20]
+   + tower-placement[160,20] <= 1
+ footprints[(170,_20),(160,_30)]: tower-placement[170,20]
+   + tower-placement[160,30] <= 1
+ footprints[(170,_20),(170,_10)]: tower-placement[170,20]
+   + tower-placement[170,10] <= 1
+ footprints[(170,_20),(170,_30)]: tower-placement[170,20]
+   + tower-placement[170,30] <= 1
+ footprints[(170,_20),(180,_10)]: tower-placement[170,20]
+   + tower-placement[180,10] <= 1
+ footprints[(170,_20),(180,_20)]: tower-placement[170,20]
+   + tower-placement[180,20] <= 1
+ footprints[(170,_20),(180,_30)]: tower-placement[170,20]
+   + tower-placement[180,30] <= 1
+ footprints[(130,_190),(130,_180)]: tower-placement[130,190]
+   + tower-placement[130,180] <= 1
+ footprints[(130,_190),(130,_200)]: tower-placement[130,190]
+   + tower-placement[130,200] <= 1
+ footprints[(130,_190),(140,_180)]: tower-placement[130,190]
+   + tower-placement[140,180] <= 1
+ footprints[(130,_190),(140,_190)]: tower-placement[130,190]
+   + tower-placement[140,190] <= 1
+ footprints[(130,_190),(140,_200)]: tower-placement[130,190]
+   + tower-placement[140,200] <= 1
+ footprints[(60,_120),(50,_110)]: tower-placement[60,120]
+   + tower-placement[50,110] <= 1
+ footprints[(60,_120),(50,_120)]: tower-placement[60,120]
+   + tower-placement[50,120] <= 1
+ footprints[(60,_120),(50,_130)]: tower-placement[60,120]
+   + tower-placement[50,130] <= 1
+ footprints[(60,_120),(60,_110)]: tower-placement[60,120]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_120),(60,_130)]: tower-placement[60,120]
+   + tower-placement[60,130] <= 1
+ footprints[(340,_110),(330,_100)]: tower-placement[340,110]
+   + tower-placement[330,100] <= 1
+ footprints[(340,_110),(330,_110)]: tower-placement[340,110]
+   + tower-placement[330,110] <= 1
+ footprints[(340,_110),(330,_120)]: tower-placement[340,110]
+   + tower-placement[330,120] <= 1
+ footprints[(340,_110),(340,_100)]: tower-placement[340,110]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_110),(340,_120)]: tower-placement[340,110]
+   + tower-placement[340,120] <= 1
+ footprints[(340,_110),(350,_100)]: tower-placement[340,110]
+   + tower-placement[350,100] <= 1
+ footprints[(340,_110),(350,_110)]: tower-placement[340,110]
+   + tower-placement[350,110] <= 1
+ footprints[(340,_110),(350,_120)]: tower-placement[340,110]
+   + tower-placement[350,120] <= 1
+ footprints[(20,_290),(10,_280)]: tower-placement[20,290]
+   + tower-placement[10,280] <= 1
+ footprints[(20,_290),(10,_290)]: tower-placement[20,290]
+   + tower-placement[10,290] <= 1
+ footprints[(20,_290),(10,_300)]: tower-placement[20,290]
+   + tower-placement[10,300] <= 1
+ footprints[(20,_290),(20,_280)]: tower-placement[20,290]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_290),(20,_300)]: tower-placement[20,290]
+   + tower-placement[20,300] <= 1
+ footprints[(20,_290),(30,_280)]: tower-placement[20,290]
+   + tower-placement[30,280] <= 1
+ footprints[(20,_290),(30,_290)]: tower-placement[20,290]
+   + tower-placement[30,290] <= 1
+ footprints[(20,_290),(30,_300)]: tower-placement[30,300]
+   + tower-placement[20,290] <= 1
+ footprints[(160,_300),(150,_290)]: tower-placement[160,300]
+   + tower-placement[150,290] <= 1
+ footprints[(160,_300),(150,_300)]: tower-placement[160,300]
+   + tower-placement[150,300] <= 1
+ footprints[(160,_300),(150,_310)]: tower-placement[160,300]
+   + tower-placement[150,310] <= 1
+ footprints[(160,_300),(160,_290)]: tower-placement[160,300]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_300),(160,_310)]: tower-placement[160,300]
+   + tower-placement[160,310] <= 1
+ footprints[(160,_300),(170,_290)]: tower-placement[160,300]
+   + tower-placement[170,290] <= 1
+ footprints[(160,_300),(170,_300)]: tower-placement[160,300]
+   + tower-placement[170,300] <= 1
+ footprints[(160,_300),(170,_310)]: tower-placement[160,300]
+   + tower-placement[170,310] <= 1
+ footprints[(190,_30),(180,_20)]: tower-placement[190,30]
+   + tower-placement[180,20] <= 1
+ footprints[(190,_30),(180,_30)]: tower-placement[190,30]
+   + tower-placement[180,30] <= 1
+ footprints[(190,_30),(180,_40)]: tower-placement[190,30]
+   + tower-placement[180,40] <= 1
+ footprints[(190,_30),(190,_20)]: tower-placement[190,30]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_30),(190,_40)]: tower-placement[190,30]
+   + tower-placement[190,40] <= 1
+ footprints[(190,_30),(200,_20)]: tower-placement[190,30]
+   + tower-placement[200,20] <= 1
+ footprints[(190,_30),(200,_30)]: tower-placement[190,30]
+   + tower-placement[200,30] <= 1
+ footprints[(190,_30),(200,_40)]: tower-placement[190,30]
+   + tower-placement[200,40] <= 1
+ footprints[(50,_50),(40,_40)]: tower-placement[50,50]
+   + tower-placement[40,40] <= 1
+ footprints[(50,_50),(40,_50)]: tower-placement[50,50]
+   + tower-placement[40,50] <= 1
+ footprints[(50,_50),(40,_60)]: tower-placement[50,50]
+   + tower-placement[40,60] <= 1
+ footprints[(50,_50),(50,_40)]: tower-placement[50,50]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_50),(50,_60)]: tower-placement[50,50]
+   + tower-placement[50,60] <= 1
+ footprints[(50,_50),(60,_40)]: tower-placement[50,50]
+   + tower-placement[60,40] <= 1
+ footprints[(50,_50),(60,_50)]: tower-placement[50,50]
+   + tower-placement[60,50] <= 1
+ footprints[(50,_50),(60,_60)]: tower-placement[50,50]
+   + tower-placement[60,60] <= 1
+ footprints[(40,_330),(30,_320)]: tower-placement[40,330]
+   + tower-placement[30,320] <= 1
+ footprints[(40,_330),(30,_330)]: tower-placement[40,330]
+   + tower-placement[30,330] <= 1
+ footprints[(40,_330),(30,_340)]: tower-placement[40,330]
+   + tower-placement[30,340] <= 1
+ footprints[(40,_330),(40,_320)]: tower-placement[40,330]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_330),(40,_340)]: tower-placement[40,330]
+   + tower-placement[40,340] <= 1
+ footprints[(40,_330),(50,_320)]: tower-placement[40,330]
+   + tower-placement[50,320] <= 1
+ footprints[(40,_330),(50,_330)]: tower-placement[40,330]
+   + tower-placement[50,330] <= 1
+ footprints[(210,_70),(200,_60)]: tower-placement[210,70]
+   + tower-placement[200,60] <= 1
+ footprints[(210,_70),(200,_70)]: tower-placement[210,70]
+   + tower-placement[200,70] <= 1
+ footprints[(210,_70),(210,_60)]: tower-placement[210,70]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_70),(220,_60)]: tower-placement[210,70]
+   + tower-placement[220,60] <= 1
+ footprints[(210,_70),(220,_70)]: tower-placement[210,70]
+   + tower-placement[220,70] <= 1
+ footprints[(210,_70),(220,_80)]: tower-placement[210,70]
+   + tower-placement[220,80] <= 1
+ footprints[(160,_170),(150,_160)]: tower-placement[160,170]
+   + tower-placement[150,160] <= 1
+ footprints[(160,_170),(150,_170)]: tower-placement[160,170]
+   + tower-placement[150,170] <= 1
+ footprints[(160,_170),(150,_180)]: tower-placement[160,170]
+   + tower-placement[150,180] <= 1
+ footprints[(160,_170),(160,_160)]: tower-placement[160,170]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_170),(160,_180)]: tower-placement[160,170]
+   + tower-placement[160,180] <= 1
+ footprints[(160,_170),(170,_160)]: tower-placement[160,170]
+   + tower-placement[170,160] <= 1
+ footprints[(160,_170),(170,_170)]: tower-placement[160,170]
+   + tower-placement[170,170] <= 1
+ footprints[(160,_170),(170,_180)]: tower-placement[160,170]
+   + tower-placement[170,180] <= 1
+ footprints[(10,_90),(10,_80)]: tower-placement[10,90]
+   + tower-placement[10,80] <= 1
+ footprints[(10,_90),(10,_100)]: tower-placement[10,90]
+   + tower-placement[10,100] <= 1
+ footprints[(10,_90),(20,_80)]: tower-placement[10,90]
+   + tower-placement[20,80] <= 1
+ footprints[(10,_90),(20,_90)]: tower-placement[10,90]
+   + tower-placement[20,90] <= 1
+ footprints[(10,_90),(20,_100)]: tower-placement[10,90]
+   + tower-placement[20,100] <= 1
+ footprints[(70,_90),(60,_80)]: tower-placement[70,90]
+   + tower-placement[60,80] <= 1
+ footprints[(70,_90),(60,_90)]: tower-placement[70,90]
+   + tower-placement[60,90] <= 1
+ footprints[(70,_90),(60,_100)]: tower-placement[70,90]
+   + tower-placement[60,100] <= 1
+ footprints[(70,_90),(70,_80)]: tower-placement[70,90]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_90),(70,_100)]: tower-placement[70,90]
+   + tower-placement[70,100] <= 1
+ footprints[(70,_90),(80,_80)]: tower-placement[70,90]
+   + tower-placement[80,80] <= 1
+ footprints[(70,_90),(80,_90)]: tower-placement[70,90]
+   + tower-placement[80,90] <= 1
+ footprints[(80,_30),(70,_20)]: tower-placement[80,30]
+   + tower-placement[70,20] <= 1
+ footprints[(80,_30),(70,_30)]: tower-placement[80,30]
+   + tower-placement[70,30] <= 1
+ footprints[(80,_30),(70,_40)]: tower-placement[80,30]
+   + tower-placement[70,40] <= 1
+ footprints[(80,_30),(80,_20)]: tower-placement[80,30]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_30),(80,_40)]: tower-placement[80,30]
+   + tower-placement[80,40] <= 1
+ footprints[(80,_30),(90,_20)]: tower-placement[80,30]
+   + tower-placement[90,20] <= 1
+ footprints[(80,_30),(90,_30)]: tower-placement[80,30]
+   + tower-placement[90,30] <= 1
+ footprints[(80,_30),(90,_40)]: tower-placement[80,30]
+   + tower-placement[90,40] <= 1
+ footprints[(30,_130),(20,_120)]: tower-placement[30,130]
+   + tower-placement[20,120] <= 1
+ footprints[(30,_130),(20,_130)]: tower-placement[30,130]
+   + tower-placement[20,130] <= 1
+ footprints[(30,_130),(20,_140)]: tower-placement[30,130]
+   + tower-placement[20,140] <= 1
+ footprints[(30,_130),(30,_120)]: tower-placement[30,130]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_130),(30,_140)]: tower-placement[30,130]
+   + tower-placement[30,140] <= 1
+ footprints[(30,_130),(40,_120)]: tower-placement[30,130]
+   + tower-placement[40,120] <= 1
+ footprints[(30,_130),(40,_130)]: tower-placement[30,130]
+   + tower-placement[40,130] <= 1
+ footprints[(30,_130),(40,_140)]: tower-placement[30,130]
+   + tower-placement[40,140] <= 1
+ footprints[(160,_40),(150,_30)]: tower-placement[160,40]
+   + tower-placement[150,30] <= 1
+ footprints[(160,_40),(150,_40)]: tower-placement[160,40]
+   + tower-placement[150,40] <= 1
+ footprints[(160,_40),(150,_50)]: tower-placement[160,40]
+   + tower-placement[150,50] <= 1
+ footprints[(160,_40),(160,_30)]: tower-placement[160,40]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_40),(160,_50)]: tower-placement[160,40]
+   + tower-placement[160,50] <= 1
+ footprints[(160,_40),(170,_30)]: tower-placement[160,40]
+   + tower-placement[170,30] <= 1
+ footprints[(160,_40),(170,_40)]: tower-placement[160,40]
+   + tower-placement[170,40] <= 1
+ footprints[(160,_40),(170,_50)]: tower-placement[160,40]
+   + tower-placement[170,50] <= 1
+ footprints[(460,_440),(450,_430)]: tower-placement[460,440]
+   + tower-placement[450,430] <= 1
+ footprints[(460,_440),(450,_440)]: tower-placement[460,440]
+   + tower-placement[450,440] <= 1
+ footprints[(460,_440),(450,_450)]: tower-placement[460,440]
+   + tower-placement[450,450] <= 1
+ footprints[(460,_440),(460,_430)]: tower-placement[460,440]
+   + tower-placement[460,430] <= 1
+ footprints[(460,_440),(460,_450)]: tower-placement[460,440]
+   + tower-placement[460,450] <= 1
+ footprints[(460,_310),(450,_300)]: tower-placement[460,310]
+   + tower-placement[450,300] <= 1
+ footprints[(460,_310),(460,_300)]: tower-placement[460,310]
+   + tower-placement[460,300] <= 1
+ footprints[(460,_310),(460,_320)]: tower-placement[460,310]
+   + tower-placement[460,320] <= 1
+ footprints[(450,_240),(440,_230)]: tower-placement[450,240]
+   + tower-placement[440,230] <= 1
+ footprints[(450,_240),(440,_240)]: tower-placement[450,240]
+   + tower-placement[440,240] <= 1
+ footprints[(450,_240),(440,_250)]: tower-placement[450,240]
+   + tower-placement[440,250] <= 1
+ footprints[(450,_240),(450,_230)]: tower-placement[450,240]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_240),(450,_250)]: tower-placement[450,240]
+   + tower-placement[450,250] <= 1
+ footprints[(450,_240),(460,_230)]: tower-placement[450,240]
+   + tower-placement[460,230] <= 1
+ footprints[(450,_240),(460,_240)]: tower-placement[450,240]
+   + tower-placement[460,240] <= 1
+ footprints[(450,_240),(460,_250)]: tower-placement[450,240]
+   + tower-placement[460,250] <= 1
+ footprints[(430,_450),(420,_460)]: tower-placement[430,450]
+   + tower-placement[420,460] <= 1
+ footprints[(430,_450),(430,_460)]: tower-placement[430,450]
+   + tower-placement[430,460] <= 1
+ footprints[(430,_450),(440,_440)]: tower-placement[430,450]
+   + tower-placement[440,440] <= 1
+ footprints[(430,_450),(440,_450)]: tower-placement[430,450]
+   + tower-placement[440,450] <= 1
+ footprints[(430,_450),(440,_460)]: tower-placement[430,450]
+   + tower-placement[440,460] <= 1
+ footprints[(360,_380),(350,_370)]: tower-placement[360,380]
+   + tower-placement[350,370] <= 1
+ footprints[(360,_380),(350,_380)]: tower-placement[360,380]
+   + tower-placement[350,380] <= 1
+ footprints[(360,_380),(350,_390)]: tower-placement[360,380]
+   + tower-placement[350,390] <= 1
+ footprints[(360,_380),(360,_370)]: tower-placement[360,380]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_380),(360,_390)]: tower-placement[360,380]
+   + tower-placement[360,390] <= 1
+ footprints[(360,_380),(370,_370)]: tower-placement[360,380]
+   + tower-placement[370,370] <= 1
+ footprints[(360,_380),(370,_380)]: tower-placement[360,380]
+   + tower-placement[370,380] <= 1
+ footprints[(360,_380),(370,_390)]: tower-placement[360,380]
+   + tower-placement[370,390] <= 1
+ footprints[(460,_180),(450,_190)]: tower-placement[460,180]
+   + tower-placement[450,190] <= 1
+ footprints[(460,_180),(460,_170)]: tower-placement[460,180]
+   + tower-placement[460,170] <= 1
+ footprints[(460,_180),(460,_190)]: tower-placement[460,180]
+   + tower-placement[460,190] <= 1
+ footprints[(280,_370),(270,_360)]: tower-placement[280,370]
+   + tower-placement[270,360] <= 1
+ footprints[(280,_370),(270,_370)]: tower-placement[280,370]
+   + tower-placement[270,370] <= 1
+ footprints[(280,_370),(270,_380)]: tower-placement[280,370]
+   + tower-placement[270,380] <= 1
+ footprints[(280,_370),(280,_360)]: tower-placement[280,370]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_370),(280,_380)]: tower-placement[280,370]
+   + tower-placement[280,380] <= 1
+ footprints[(280,_370),(290,_360)]: tower-placement[280,370]
+   + tower-placement[290,360] <= 1
+ footprints[(280,_370),(290,_370)]: tower-placement[280,370]
+   + tower-placement[290,370] <= 1
+ footprints[(280,_370),(290,_380)]: tower-placement[280,370]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_310),(280,_300)]: tower-placement[290,310]
+   + tower-placement[280,300] <= 1
+ footprints[(290,_310),(280,_310)]: tower-placement[290,310]
+   + tower-placement[280,310] <= 1
+ footprints[(290,_310),(280,_320)]: tower-placement[290,310]
+   + tower-placement[280,320] <= 1
+ footprints[(290,_310),(290,_320)]: tower-placement[290,310]
+   + tower-placement[290,320] <= 1
+ footprints[(290,_310),(300,_320)]: tower-placement[300,320]
+   + tower-placement[290,310] <= 1
+ footprints[(420,_220),(410,_220)]: tower-placement[420,220]
+   + tower-placement[410,220] <= 1
+ footprints[(420,_220),(410,_230)]: tower-placement[420,220]
+   + tower-placement[410,230] <= 1
+ footprints[(420,_220),(420,_230)]: tower-placement[420,220]
+   + tower-placement[420,230] <= 1
+ footprints[(420,_220),(430,_210)]: tower-placement[420,220]
+   + tower-placement[430,210] <= 1
+ footprints[(420,_220),(430,_220)]: tower-placement[420,220]
+   + tower-placement[430,220] <= 1
+ footprints[(420,_220),(430,_230)]: tower-placement[430,230]
+   + tower-placement[420,220] <= 1
+ footprints[(330,_140),(320,_130)]: tower-placement[330,140]
+   + tower-placement[320,130] <= 1
+ footprints[(330,_140),(320,_140)]: tower-placement[330,140]
+   + tower-placement[320,140] <= 1
+ footprints[(330,_140),(320,_150)]: tower-placement[330,140]
+   + tower-placement[320,150] <= 1
+ footprints[(330,_140),(330,_130)]: tower-placement[330,140]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_140),(330,_150)]: tower-placement[330,140]
+   + tower-placement[330,150] <= 1
+ footprints[(330,_140),(340,_130)]: tower-placement[330,140]
+   + tower-placement[340,130] <= 1
+ footprints[(330,_140),(340,_140)]: tower-placement[330,140]
+   + tower-placement[340,140] <= 1
+ footprints[(330,_140),(340,_150)]: tower-placement[340,150]
+   + tower-placement[330,140] <= 1
+ footprints[(360,_250),(350,_240)]: tower-placement[360,250]
+   + tower-placement[350,240] <= 1
+ footprints[(360,_250),(350,_250)]: tower-placement[360,250]
+   + tower-placement[350,250] <= 1
+ footprints[(360,_250),(350,_260)]: tower-placement[360,250]
+   + tower-placement[350,260] <= 1
+ footprints[(360,_250),(360,_240)]: tower-placement[360,250]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_250),(360,_260)]: tower-placement[360,250]
+   + tower-placement[360,260] <= 1
+ footprints[(360,_250),(370,_240)]: tower-placement[360,250]
+   + tower-placement[370,240] <= 1
+ footprints[(360,_250),(370,_250)]: tower-placement[360,250]
+   + tower-placement[370,250] <= 1
+ footprints[(360,_250),(370,_260)]: tower-placement[360,250]
+   + tower-placement[370,260] <= 1
+ footprints[(310,_350),(300,_340)]: tower-placement[310,350]
+   + tower-placement[300,340] <= 1
+ footprints[(310,_350),(300,_350)]: tower-placement[310,350]
+   + tower-placement[300,350] <= 1
+ footprints[(310,_350),(300,_360)]: tower-placement[310,350]
+   + tower-placement[300,360] <= 1
+ footprints[(310,_350),(310,_340)]: tower-placement[310,350]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_350),(310,_360)]: tower-placement[310,350]
+   + tower-placement[310,360] <= 1
+ footprints[(310,_350),(320,_340)]: tower-placement[310,350]
+   + tower-placement[320,340] <= 1
+ footprints[(310,_350),(320,_350)]: tower-placement[310,350]
+   + tower-placement[320,350] <= 1
+ footprints[(310,_350),(320,_360)]: tower-placement[310,350]
+   + tower-placement[320,360] <= 1
+ footprints[(270,_170),(260,_160)]: tower-placement[270,170]
+   + tower-placement[260,160] <= 1
+ footprints[(270,_170),(260,_170)]: tower-placement[270,170]
+   + tower-placement[260,170] <= 1
+ footprints[(270,_170),(260,_180)]: tower-placement[270,170]
+   + tower-placement[260,180] <= 1
+ footprints[(270,_170),(270,_160)]: tower-placement[270,170]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_170),(270,_180)]: tower-placement[270,170]
+   + tower-placement[270,180] <= 1
+ footprints[(270,_170),(280,_160)]: tower-placement[270,170]
+   + tower-placement[280,160] <= 1
+ footprints[(270,_170),(280,_170)]: tower-placement[270,170]
+   + tower-placement[280,170] <= 1
+ footprints[(270,_170),(280,_180)]: tower-placement[270,170]
+   + tower-placement[280,180] <= 1
+ footprints[(440,_260),(430,_250)]: tower-placement[440,260]
+   + tower-placement[430,250] <= 1
+ footprints[(440,_260),(430,_260)]: tower-placement[440,260]
+   + tower-placement[430,260] <= 1
+ footprints[(440,_260),(430,_270)]: tower-placement[440,260]
+   + tower-placement[430,270] <= 1
+ footprints[(440,_260),(440,_250)]: tower-placement[440,260]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_260),(440,_270)]: tower-placement[440,260]
+   + tower-placement[440,270] <= 1
+ footprints[(440,_260),(450,_250)]: tower-placement[440,260]
+   + tower-placement[450,250] <= 1
+ footprints[(440,_260),(450,_260)]: tower-placement[440,260]
+   + tower-placement[450,260] <= 1
+ footprints[(440,_260),(450,_270)]: tower-placement[440,260]
+   + tower-placement[450,270] <= 1
+ footprints[(390,_360),(380,_350)]: tower-placement[390,360]
+   + tower-placement[380,350] <= 1
+ footprints[(390,_360),(380,_360)]: tower-placement[390,360]
+   + tower-placement[380,360] <= 1
+ footprints[(390,_360),(380,_370)]: tower-placement[390,360]
+   + tower-placement[380,370] <= 1
+ footprints[(390,_360),(390,_350)]: tower-placement[390,360]
+   + tower-placement[390,350] <= 1
+ footprints[(390,_360),(390,_370)]: tower-placement[390,360]
+   + tower-placement[390,370] <= 1
+ footprints[(410,_20),(400,_10)]: tower-placement[410,20]
+   + tower-placement[400,10] <= 1
+ footprints[(410,_20),(400,_20)]: tower-placement[410,20]
+   + tower-placement[400,20] <= 1
+ footprints[(410,_20),(410,_10)]: tower-placement[410,20]
+   + tower-placement[410,10] <= 1
+ footprints[(410,_20),(420,_10)]: tower-placement[410,20]
+   + tower-placement[420,10] <= 1
+ footprints[(410,_20),(420,_20)]: tower-placement[410,20]
+   + tower-placement[420,20] <= 1
+ footprints[(330,_10),(320,_10)]: tower-placement[330,10]
+   + tower-placement[320,10] <= 1
+ footprints[(330,_10),(320,_20)]: tower-placement[330,10]
+   + tower-placement[320,20] <= 1
+ footprints[(330,_10),(330,_20)]: tower-placement[330,10]
+   + tower-placement[330,20] <= 1
+ footprints[(330,_10),(340,_10)]: tower-placement[330,10]
+   + tower-placement[340,10] <= 1
+ footprints[(330,_10),(340,_20)]: tower-placement[340,20]
+   + tower-placement[330,10] <= 1
+ footprints[(190,_380),(180,_390)]: tower-placement[180,390]
+   + tower-placement[190,380] <= 1
+ footprints[(190,_380),(190,_390)]: tower-placement[190,380]
+   + tower-placement[190,390] <= 1
+ footprints[(190,_380),(200,_380)]: tower-placement[190,380]
+   + tower-placement[200,380] <= 1
+ footprints[(190,_380),(200,_390)]: tower-placement[190,380]
+   + tower-placement[200,390] <= 1
+ footprints[(150,_200),(140,_190)]: tower-placement[150,200]
+   + tower-placement[140,190] <= 1
+ footprints[(150,_200),(140,_200)]: tower-placement[150,200]
+   + tower-placement[140,200] <= 1
+ footprints[(150,_200),(140,_210)]: tower-placement[150,200]
+   + tower-placement[140,210] <= 1
+ footprints[(150,_200),(150,_190)]: tower-placement[150,200]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_200),(150,_210)]: tower-placement[150,200]
+   + tower-placement[150,210] <= 1
+ footprints[(150,_200),(160,_190)]: tower-placement[150,200]
+   + tower-placement[160,190] <= 1
+ footprints[(150,_200),(160,_200)]: tower-placement[150,200]
+   + tower-placement[160,200] <= 1
+ footprints[(150,_200),(160,_210)]: tower-placement[160,210]
+   + tower-placement[150,200] <= 1
+ footprints[(250,_380),(240,_370)]: tower-placement[250,380]
+   + tower-placement[240,370] <= 1
+ footprints[(250,_380),(240,_380)]: tower-placement[250,380]
+   + tower-placement[240,380] <= 1
+ footprints[(250,_380),(240,_390)]: tower-placement[250,380]
+   + tower-placement[240,390] <= 1
+ footprints[(250,_380),(250,_370)]: tower-placement[250,380]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_380),(250,_390)]: tower-placement[250,380]
+   + tower-placement[250,390] <= 1
+ footprints[(250,_380),(260,_370)]: tower-placement[250,380]
+   + tower-placement[260,370] <= 1
+ footprints[(250,_380),(260,_380)]: tower-placement[250,380]
+   + tower-placement[260,380] <= 1
+ footprints[(250,_380),(260,_390)]: tower-placement[250,380]
+   + tower-placement[260,390] <= 1
+ footprints[(360,_120),(350,_110)]: tower-placement[360,120]
+   + tower-placement[350,110] <= 1
+ footprints[(360,_120),(350,_120)]: tower-placement[360,120]
+   + tower-placement[350,120] <= 1
+ footprints[(360,_120),(350,_130)]: tower-placement[350,130]
+   + tower-placement[360,120] <= 1
+ footprints[(360,_120),(360,_110)]: tower-placement[360,120]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_120),(360,_130)]: tower-placement[360,120]
+   + tower-placement[360,130] <= 1
+ footprints[(360,_120),(370,_110)]: tower-placement[360,120]
+   + tower-placement[370,110] <= 1
+ footprints[(360,_120),(370,_120)]: tower-placement[360,120]
+   + tower-placement[370,120] <= 1
+ footprints[(360,_120),(370,_130)]: tower-placement[360,120]
+   + tower-placement[370,130] <= 1
+ footprints[(280,_110),(270,_100)]: tower-placement[280,110]
+   + tower-placement[270,100] <= 1
+ footprints[(280,_110),(270,_110)]: tower-placement[280,110]
+   + tower-placement[270,110] <= 1
+ footprints[(280,_110),(270,_120)]: tower-placement[280,110]
+   + tower-placement[270,120] <= 1
+ footprints[(280,_110),(280,_100)]: tower-placement[280,110]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_110),(280,_120)]: tower-placement[280,110]
+   + tower-placement[280,120] <= 1
+ footprints[(280,_110),(290,_100)]: tower-placement[280,110]
+   + tower-placement[290,100] <= 1
+ footprints[(280,_110),(290,_110)]: tower-placement[280,110]
+   + tower-placement[290,110] <= 1
+ footprints[(280,_110),(290,_120)]: tower-placement[280,110]
+   + tower-placement[290,120] <= 1
+ footprints[(100,_300),(90,_290)]: tower-placement[100,300]
+   + tower-placement[90,290] <= 1
+ footprints[(100,_300),(90,_300)]: tower-placement[100,300]
+   + tower-placement[90,300] <= 1
+ footprints[(100,_300),(90,_310)]: tower-placement[100,300]
+   + tower-placement[90,310] <= 1
+ footprints[(100,_300),(100,_290)]: tower-placement[100,300]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_300),(100,_310)]: tower-placement[100,300]
+   + tower-placement[100,310] <= 1
+ footprints[(100,_300),(110,_290)]: tower-placement[100,300]
+   + tower-placement[110,290] <= 1
+ footprints[(100,_300),(110,_300)]: tower-placement[100,300]
+   + tower-placement[110,300] <= 1
+ footprints[(100,_300),(110,_310)]: tower-placement[100,300]
+   + tower-placement[110,310] <= 1
+ footprints[(270,_390),(260,_380)]: tower-placement[270,390]
+   + tower-placement[260,380] <= 1
+ footprints[(270,_390),(260,_390)]: tower-placement[270,390]
+   + tower-placement[260,390] <= 1
+ footprints[(270,_390),(270,_380)]: tower-placement[270,390]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_390),(280,_380)]: tower-placement[270,390]
+   + tower-placement[280,380] <= 1
+ footprints[(270,_390),(280,_390)]: tower-placement[270,390]
+   + tower-placement[280,390] <= 1
+ footprints[(260,_320),(250,_310)]: tower-placement[260,320]
+   + tower-placement[250,310] <= 1
+ footprints[(260,_320),(250,_320)]: tower-placement[260,320]
+   + tower-placement[250,320] <= 1
+ footprints[(260,_320),(250,_330)]: tower-placement[250,330]
+   + tower-placement[260,320] <= 1
+ footprints[(260,_320),(260,_310)]: tower-placement[260,320]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_320),(260,_330)]: tower-placement[260,320]
+   + tower-placement[260,330] <= 1
+ footprints[(260,_320),(270,_310)]: tower-placement[260,320]
+   + tower-placement[270,310] <= 1
+ footprints[(260,_320),(270,_320)]: tower-placement[260,320]
+   + tower-placement[270,320] <= 1
+ footprints[(260,_320),(270,_330)]: tower-placement[260,320]
+   + tower-placement[270,330] <= 1
+ footprints[(110,_240),(100,_250)]: tower-placement[100,250]
+   + tower-placement[110,240] <= 1
+ footprints[(110,_240),(110,_250)]: tower-placement[110,240]
+   + tower-placement[110,250] <= 1
+ footprints[(110,_240),(120,_230)]: tower-placement[110,240]
+   + tower-placement[120,230] <= 1
+ footprints[(110,_240),(120,_240)]: tower-placement[110,240]
+   + tower-placement[120,240] <= 1
+ footprints[(110,_240),(120,_250)]: tower-placement[120,250]
+   + tower-placement[110,240] <= 1
+ footprints[(390,_230),(380,_220)]: tower-placement[390,230]
+   + tower-placement[380,220] <= 1
+ footprints[(390,_230),(380,_230)]: tower-placement[390,230]
+   + tower-placement[380,230] <= 1
+ footprints[(390,_230),(380,_240)]: tower-placement[390,230]
+   + tower-placement[380,240] <= 1
+ footprints[(390,_230),(390,_220)]: tower-placement[390,230]
+   + tower-placement[390,220] <= 1
+ footprints[(390,_230),(390,_240)]: tower-placement[390,230]
+   + tower-placement[390,240] <= 1
+ footprints[(390,_230),(400,_220)]: tower-placement[390,230]
+   + tower-placement[400,220] <= 1
+ footprints[(390,_230),(400,_230)]: tower-placement[390,230]
+   + tower-placement[400,230] <= 1
+ footprints[(390,_230),(400,_240)]: tower-placement[390,230]
+   + tower-placement[400,240] <= 1
+ footprints[(170,_240),(160,_230)]: tower-placement[170,240]
+   + tower-placement[160,230] <= 1
+ footprints[(170,_240),(160,_240)]: tower-placement[170,240]
+   + tower-placement[160,240] <= 1
+ footprints[(170,_240),(160,_250)]: tower-placement[170,240]
+   + tower-placement[160,250] <= 1
+ footprints[(170,_240),(170,_230)]: tower-placement[170,240]
+   + tower-placement[170,230] <= 1
+ footprints[(170,_240),(170,_250)]: tower-placement[170,240]
+   + tower-placement[170,250] <= 1
+ footprints[(130,_60),(120,_50)]: tower-placement[130,60]
+   + tower-placement[120,50] <= 1
+ footprints[(130,_60),(120,_60)]: tower-placement[130,60]
+   + tower-placement[120,60] <= 1
+ footprints[(130,_60),(120,_70)]: tower-placement[130,60]
+   + tower-placement[120,70] <= 1
+ footprints[(130,_60),(130,_50)]: tower-placement[130,60]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_60),(140,_50)]: tower-placement[130,60]
+   + tower-placement[140,50] <= 1
+ footprints[(130,_60),(140,_60)]: tower-placement[130,60]
+   + tower-placement[140,60] <= 1
+ footprints[(20,_160),(10,_150)]: tower-placement[20,160]
+   + tower-placement[10,150] <= 1
+ footprints[(20,_160),(10,_160)]: tower-placement[20,160]
+   + tower-placement[10,160] <= 1
+ footprints[(20,_160),(10,_170)]: tower-placement[20,160]
+   + tower-placement[10,170] <= 1
+ footprints[(20,_160),(20,_150)]: tower-placement[20,160]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_160),(20,_170)]: tower-placement[20,160]
+   + tower-placement[20,170] <= 1
+ footprints[(20,_160),(30,_150)]: tower-placement[20,160]
+   + tower-placement[30,150] <= 1
+ footprints[(20,_160),(30,_160)]: tower-placement[20,160]
+   + tower-placement[30,160] <= 1
+ footprints[(20,_160),(30,_170)]: tower-placement[30,170]
+   + tower-placement[20,160] <= 1
+ footprints[(300,_150),(290,_140)]: tower-placement[300,150]
+   + tower-placement[290,140] <= 1
+ footprints[(300,_150),(290,_150)]: tower-placement[300,150]
+   + tower-placement[290,150] <= 1
+ footprints[(300,_150),(290,_160)]: tower-placement[300,150]
+   + tower-placement[290,160] <= 1
+ footprints[(300,_150),(300,_140)]: tower-placement[300,150]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_150),(300,_160)]: tower-placement[300,150]
+   + tower-placement[300,160] <= 1
+ footprints[(300,_150),(310,_140)]: tower-placement[300,150]
+   + tower-placement[310,140] <= 1
+ footprints[(300,_150),(310,_150)]: tower-placement[300,150]
+   + tower-placement[310,150] <= 1
+ footprints[(300,_150),(310,_160)]: tower-placement[300,150]
+   + tower-placement[310,160] <= 1
+ footprints[(10,_440),(10,_430)]: tower-placement[10,440]
+   + tower-placement[10,430] <= 1
+ footprints[(10,_440),(10,_450)]: tower-placement[10,440]
+   + tower-placement[10,450] <= 1
+ footprints[(10,_440),(20,_430)]: tower-placement[10,440]
+   + tower-placement[20,430] <= 1
+ footprints[(10,_440),(20,_440)]: tower-placement[10,440]
+   + tower-placement[20,440] <= 1
+ footprints[(10,_440),(20,_450)]: tower-placement[10,440]
+   + tower-placement[20,450] <= 1
+ footprints[(250,_250),(250,_240)]: tower-placement[250,250]
+   + tower-placement[250,240] <= 1
+ footprints[(250,_250),(250,_260)]: tower-placement[250,250]
+   + tower-placement[250,260] <= 1
+ footprints[(250,_250),(260,_240)]: tower-placement[250,250]
+   + tower-placement[260,240] <= 1
+ footprints[(250,_250),(260,_250)]: tower-placement[250,250]
+   + tower-placement[260,250] <= 1
+ footprints[(250,_250),(260,_260)]: tower-placement[250,250]
+   + tower-placement[260,260] <= 1
+ footprints[(310,_90),(300,_90)]: tower-placement[310,90]
+   + tower-placement[300,90] <= 1
+ footprints[(310,_90),(300,_100)]: tower-placement[300,100]
+   + tower-placement[310,90] <= 1
+ footprints[(310,_90),(310,_100)]: tower-placement[310,90]
+   + tower-placement[310,100] <= 1
+ footprints[(310,_90),(320,_90)]: tower-placement[310,90]
+   + tower-placement[320,90] <= 1
+ footprints[(310,_90),(320,_100)]: tower-placement[310,90]
+   + tower-placement[320,100] <= 1
+ footprints[(230,_80),(220,_70)]: tower-placement[230,80]
+   + tower-placement[220,70] <= 1
+ footprints[(230,_80),(220,_80)]: tower-placement[230,80]
+   + tower-placement[220,80] <= 1
+ footprints[(230,_80),(230,_70)]: tower-placement[230,80]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_80),(230,_90)]: tower-placement[230,80]
+   + tower-placement[230,90] <= 1
+ footprints[(230,_80),(240,_70)]: tower-placement[230,80]
+   + tower-placement[240,70] <= 1
+ footprints[(230,_80),(240,_80)]: tower-placement[230,80]
+   + tower-placement[240,80] <= 1
+ footprints[(230,_80),(240,_90)]: tower-placement[230,80]
+   + tower-placement[240,90] <= 1
+ footprints[(50,_270),(40,_270)]: tower-placement[50,270]
+   + tower-placement[40,270] <= 1
+ footprints[(50,_270),(40,_280)]: tower-placement[50,270]
+   + tower-placement[40,280] <= 1
+ footprints[(50,_270),(50,_280)]: tower-placement[50,270]
+   + tower-placement[50,280] <= 1
+ footprints[(50,_270),(60,_270)]: tower-placement[50,270]
+   + tower-placement[60,270] <= 1
+ footprints[(50,_270),(60,_280)]: tower-placement[50,270]
+   + tower-placement[60,280] <= 1
+ footprints[(260,_190),(250,_180)]: tower-placement[260,190]
+   + tower-placement[250,180] <= 1
+ footprints[(260,_190),(250,_190)]: tower-placement[260,190]
+   + tower-placement[250,190] <= 1
+ footprints[(260,_190),(250,_200)]: tower-placement[250,200]
+   + tower-placement[260,190] <= 1
+ footprints[(260,_190),(260,_180)]: tower-placement[260,190]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_190),(260,_200)]: tower-placement[260,190]
+   + tower-placement[260,200] <= 1
+ footprints[(260,_190),(270,_180)]: tower-placement[260,190]
+   + tower-placement[270,180] <= 1
+ footprints[(260,_190),(270,_190)]: tower-placement[260,190]
+   + tower-placement[270,190] <= 1
+ footprints[(260,_190),(270,_200)]: tower-placement[260,190]
+   + tower-placement[270,200] <= 1
+ footprints[(220,_10),(210,_10)]: tower-placement[220,10]
+   + tower-placement[210,10] <= 1
+ footprints[(220,_10),(210,_20)]: tower-placement[220,10]
+   + tower-placement[210,20] <= 1
+ footprints[(220,_10),(220,_20)]: tower-placement[220,10]
+   + tower-placement[220,20] <= 1
+ footprints[(220,_10),(230,_10)]: tower-placement[220,10]
+   + tower-placement[230,10] <= 1
+ footprints[(220,_10),(230,_20)]: tower-placement[220,10]
+   + tower-placement[230,20] <= 1
+ footprints[(390,_100),(380,_90)]: tower-placement[390,100]
+   + tower-placement[380,90] <= 1
+ footprints[(390,_100),(380,_100)]: tower-placement[390,100]
+   + tower-placement[380,100] <= 1
+ footprints[(390,_100),(380,_110)]: tower-placement[390,100]
+   + tower-placement[380,110] <= 1
+ footprints[(390,_100),(390,_90)]: tower-placement[390,100]
+   + tower-placement[390,90] <= 1
+ footprints[(390,_100),(390,_110)]: tower-placement[390,100]
+   + tower-placement[390,110] <= 1
+ footprints[(130,_280),(120,_270)]: tower-placement[130,280]
+   + tower-placement[120,270] <= 1
+ footprints[(130,_280),(120,_280)]: tower-placement[130,280]
+   + tower-placement[120,280] <= 1
+ footprints[(130,_280),(120,_290)]: tower-placement[120,290]
+   + tower-placement[130,280] <= 1
+ footprints[(130,_280),(130,_270)]: tower-placement[130,280]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_280),(130,_290)]: tower-placement[130,280]
+   + tower-placement[130,290] <= 1
+ footprints[(130,_280),(140,_270)]: tower-placement[130,280]
+   + tower-placement[140,270] <= 1
+ footprints[(130,_280),(140,_280)]: tower-placement[130,280]
+   + tower-placement[140,280] <= 1
+ footprints[(130,_280),(140,_290)]: tower-placement[130,280]
+   + tower-placement[140,290] <= 1
+ footprints[(20,_30),(10,_20)]: tower-placement[20,30]
+   + tower-placement[10,20] <= 1
+ footprints[(20,_30),(10,_30)]: tower-placement[20,30]
+   + tower-placement[10,30] <= 1
+ footprints[(20,_30),(10,_40)]: tower-placement[20,30]
+   + tower-placement[10,40] <= 1
+ footprints[(20,_30),(20,_20)]: tower-placement[20,30]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_30),(20,_40)]: tower-placement[20,30]
+   + tower-placement[20,40] <= 1
+ footprints[(20,_30),(30,_20)]: tower-placement[20,30]
+   + tower-placement[30,20] <= 1
+ footprints[(20,_30),(30,_30)]: tower-placement[20,30]
+   + tower-placement[30,30] <= 1
+ footprints[(20,_30),(30,_40)]: tower-placement[30,40]
+   + tower-placement[20,30] <= 1
+ footprints[(300,_20),(300,_10)]: tower-placement[300,20]
+   + tower-placement[300,10] <= 1
+ footprints[(300,_20),(310,_10)]: tower-placement[300,20]
+   + tower-placement[310,10] <= 1
+ footprints[(300,_20),(310,_20)]: tower-placement[300,20]
+   + tower-placement[310,20] <= 1
+ footprints[(20,_380),(10,_370)]: tower-placement[20,380]
+   + tower-placement[10,370] <= 1
+ footprints[(20,_380),(10,_380)]: tower-placement[20,380]
+   + tower-placement[10,380] <= 1
+ footprints[(20,_380),(10,_390)]: tower-placement[10,390]
+   + tower-placement[20,380] <= 1
+ footprints[(20,_380),(20,_370)]: tower-placement[20,380]
+   + tower-placement[20,370] <= 1
+ footprints[(20,_380),(20,_390)]: tower-placement[20,380]
+   + tower-placement[20,390] <= 1
+ footprints[(160,_390),(150,_390)]: tower-placement[160,390]
+   + tower-placement[150,390] <= 1
+ footprints[(160,_390),(170,_390)]: tower-placement[160,390]
+   + tower-placement[170,390] <= 1
+ footprints[(10,_310),(10,_300)]: tower-placement[10,310]
+   + tower-placement[10,300] <= 1
+ footprints[(10,_310),(10,_320)]: tower-placement[10,310]
+   + tower-placement[10,320] <= 1
+ footprints[(10,_310),(20,_300)]: tower-placement[10,310]
+   + tower-placement[20,300] <= 1
+ footprints[(10,_310),(20,_310)]: tower-placement[10,310]
+   + tower-placement[20,310] <= 1
+ footprints[(10,_310),(20,_320)]: tower-placement[10,310]
+   + tower-placement[20,320] <= 1
+ footprints[(250,_120),(240,_110)]: tower-placement[250,120]
+   + tower-placement[240,110] <= 1
+ footprints[(250,_120),(240,_120)]: tower-placement[250,120]
+   + tower-placement[240,120] <= 1
+ footprints[(250,_120),(250,_110)]: tower-placement[250,120]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_120),(250,_130)]: tower-placement[250,120]
+   + tower-placement[250,130] <= 1
+ footprints[(250,_120),(260,_110)]: tower-placement[250,120]
+   + tower-placement[260,110] <= 1
+ footprints[(250,_120),(260,_120)]: tower-placement[250,120]
+   + tower-placement[260,120] <= 1
+ footprints[(250,_120),(260,_130)]: tower-placement[250,120]
+   + tower-placement[260,130] <= 1
+ footprints[(70,_310),(60,_300)]: tower-placement[70,310]
+   + tower-placement[60,300] <= 1
+ footprints[(70,_310),(60,_310)]: tower-placement[70,310]
+   + tower-placement[60,310] <= 1
+ footprints[(70,_310),(60,_320)]: tower-placement[70,310]
+   + tower-placement[60,320] <= 1
+ footprints[(70,_310),(70,_300)]: tower-placement[70,310]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_310),(70,_320)]: tower-placement[70,310]
+   + tower-placement[70,320] <= 1
+ footprints[(70,_310),(80,_300)]: tower-placement[70,310]
+   + tower-placement[80,300] <= 1
+ footprints[(70,_310),(80,_310)]: tower-placement[70,310]
+   + tower-placement[80,310] <= 1
+ footprints[(70,_310),(80,_320)]: tower-placement[70,310]
+   + tower-placement[80,320] <= 1
+ footprints[(140,_220),(130,_210)]: tower-placement[140,220]
+   + tower-placement[130,210] <= 1
+ footprints[(140,_220),(130,_220)]: tower-placement[140,220]
+   + tower-placement[130,220] <= 1
+ footprints[(140,_220),(130,_230)]: tower-placement[130,230]
+   + tower-placement[140,220] <= 1
+ footprints[(140,_220),(140,_210)]: tower-placement[140,220]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_220),(140,_230)]: tower-placement[140,220]
+   + tower-placement[140,230] <= 1
+ footprints[(140,_220),(150,_210)]: tower-placement[140,220]
+   + tower-placement[150,210] <= 1
+ footprints[(140,_220),(150,_220)]: tower-placement[140,220]
+   + tower-placement[150,220] <= 1
+ footprints[(140,_220),(150,_230)]: tower-placement[140,220]
+   + tower-placement[150,230] <= 1
+ footprints[(100,_40),(90,_30)]: tower-placement[100,40]
+   + tower-placement[90,30] <= 1
+ footprints[(100,_40),(90,_40)]: tower-placement[100,40]
+   + tower-placement[90,40] <= 1
+ footprints[(100,_40),(90,_50)]: tower-placement[100,40]
+   + tower-placement[90,50] <= 1
+ footprints[(100,_40),(100,_30)]: tower-placement[100,40]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_40),(100,_50)]: tower-placement[100,40]
+   + tower-placement[100,50] <= 1
+ footprints[(100,_40),(110,_30)]: tower-placement[100,40]
+   + tower-placement[110,30] <= 1
+ footprints[(100,_40),(110,_40)]: tower-placement[100,40]
+   + tower-placement[110,40] <= 1
+ footprints[(100,_40),(110,_50)]: tower-placement[100,40]
+   + tower-placement[110,50] <= 1
+ footprints[(50,_140),(40,_130)]: tower-placement[50,140]
+   + tower-placement[40,130] <= 1
+ footprints[(50,_140),(40,_140)]: tower-placement[50,140]
+   + tower-placement[40,140] <= 1
+ footprints[(50,_140),(40,_150)]: tower-placement[50,140]
+   + tower-placement[40,150] <= 1
+ footprints[(50,_140),(50,_130)]: tower-placement[50,140]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_140),(50,_150)]: tower-placement[50,140]
+   + tower-placement[50,150] <= 1
+ footprints[(50,_140),(60,_130)]: tower-placement[50,140]
+   + tower-placement[60,130] <= 1
+ footprints[(50,_140),(60,_140)]: tower-placement[50,140]
+   + tower-placement[60,140] <= 1
+ footprints[(50,_140),(60,_150)]: tower-placement[50,140]
+   + tower-placement[60,150] <= 1
+ footprints[(40,_70),(30,_60)]: tower-placement[40,70]
+   + tower-placement[30,60] <= 1
+ footprints[(40,_70),(30,_70)]: tower-placement[40,70]
+   + tower-placement[30,70] <= 1
+ footprints[(40,_70),(30,_80)]: tower-placement[40,70]
+   + tower-placement[30,80] <= 1
+ footprints[(40,_70),(40,_60)]: tower-placement[40,70]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_70),(40,_80)]: tower-placement[40,70]
+   + tower-placement[40,80] <= 1
+ footprints[(40,_70),(50,_60)]: tower-placement[40,70]
+   + tower-placement[50,60] <= 1
+ footprints[(40,_70),(50,_70)]: tower-placement[40,70]
+   + tower-placement[50,70] <= 1
+ footprints[(40,_70),(50,_80)]: tower-placement[40,70]
+   + tower-placement[50,80] <= 1
+ footprints[(30,_350),(20,_340)]: tower-placement[30,350]
+   + tower-placement[20,340] <= 1
+ footprints[(30,_350),(20,_350)]: tower-placement[30,350]
+   + tower-placement[20,350] <= 1
+ footprints[(30,_350),(20,_360)]: tower-placement[30,350]
+   + tower-placement[20,360] <= 1
+ footprints[(30,_350),(30,_340)]: tower-placement[30,350]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_350),(40,_340)]: tower-placement[30,350]
+   + tower-placement[40,340] <= 1
+ footprints[(60,_80),(50,_70)]: tower-placement[60,80]
+   + tower-placement[50,70] <= 1
+ footprints[(60,_80),(50,_80)]: tower-placement[60,80]
+   + tower-placement[50,80] <= 1
+ footprints[(60,_80),(50,_90)]: tower-placement[50,90]
+   + tower-placement[60,80] <= 1
+ footprints[(60,_80),(60,_70)]: tower-placement[60,80]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_80),(60,_90)]: tower-placement[60,80]
+   + tower-placement[60,90] <= 1
+ footprints[(60,_80),(70,_70)]: tower-placement[60,80]
+   + tower-placement[70,70] <= 1
+ footprints[(60,_80),(70,_80)]: tower-placement[60,80]
+   + tower-placement[70,80] <= 1
+ footprints[(60,_80),(70,_90)]: tower-placement[70,90]
+   + tower-placement[60,80] <= 1
+ footprints[(160,_260),(150,_250)]: tower-placement[160,260]
+   + tower-placement[150,250] <= 1
+ footprints[(160,_260),(150,_260)]: tower-placement[160,260]
+   + tower-placement[150,260] <= 1
+ footprints[(160,_260),(150,_270)]: tower-placement[160,260]
+   + tower-placement[150,270] <= 1
+ footprints[(160,_260),(160,_250)]: tower-placement[160,260]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_260),(160,_270)]: tower-placement[160,260]
+   + tower-placement[160,270] <= 1
+ footprints[(160,_260),(170,_250)]: tower-placement[160,260]
+   + tower-placement[170,250] <= 1
+ footprints[(160,_260),(170,_260)]: tower-placement[160,260]
+   + tower-placement[170,260] <= 1
+ footprints[(160,_260),(170,_270)]: tower-placement[160,260]
+   + tower-placement[170,270] <= 1
+ footprints[(10,_180),(10,_170)]: tower-placement[10,180]
+   + tower-placement[10,170] <= 1
+ footprints[(10,_180),(10,_190)]: tower-placement[10,180]
+   + tower-placement[10,190] <= 1
+ footprints[(10,_180),(20,_170)]: tower-placement[10,180]
+   + tower-placement[20,170] <= 1
+ footprints[(10,_180),(20,_180)]: tower-placement[10,180]
+   + tower-placement[20,180] <= 1
+ footprints[(10,_180),(20,_190)]: tower-placement[10,180]
+   + tower-placement[20,190] <= 1
+ footprints[(50,_10),(40,_10)]: tower-placement[50,10]
+   + tower-placement[40,10] <= 1
+ footprints[(50,_10),(40,_20)]: tower-placement[50,10]
+   + tower-placement[40,20] <= 1
+ footprints[(50,_10),(50,_20)]: tower-placement[50,10]
+   + tower-placement[50,20] <= 1
+ footprints[(50,_10),(60,_10)]: tower-placement[50,10]
+   + tower-placement[60,10] <= 1
+ footprints[(50,_10),(60,_20)]: tower-placement[50,10]
+   + tower-placement[60,20] <= 1
+ footprints[(40,_290),(30,_280)]: tower-placement[40,290]
+   + tower-placement[30,280] <= 1
+ footprints[(40,_290),(30,_290)]: tower-placement[40,290]
+   + tower-placement[30,290] <= 1
+ footprints[(40,_290),(30,_300)]: tower-placement[30,300]
+   + tower-placement[40,290] <= 1
+ footprints[(40,_290),(40,_280)]: tower-placement[40,290]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_290),(40,_300)]: tower-placement[40,290]
+   + tower-placement[40,300] <= 1
+ footprints[(40,_290),(50,_280)]: tower-placement[40,290]
+   + tower-placement[50,280] <= 1
+ footprints[(40,_290),(50,_290)]: tower-placement[40,290]
+   + tower-placement[50,290] <= 1
+ footprints[(40,_290),(50,_300)]: tower-placement[40,290]
+   + tower-placement[50,300] <= 1
+ footprints[(210,_30),(200,_20)]: tower-placement[210,30]
+   + tower-placement[200,20] <= 1
+ footprints[(210,_30),(200,_30)]: tower-placement[210,30]
+   + tower-placement[200,30] <= 1
+ footprints[(210,_30),(200,_40)]: tower-placement[210,30]
+   + tower-placement[200,40] <= 1
+ footprints[(210,_30),(210,_20)]: tower-placement[210,30]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_30),(210,_40)]: tower-placement[210,30]
+   + tower-placement[210,40] <= 1
+ footprints[(210,_30),(220,_20)]: tower-placement[210,30]
+   + tower-placement[220,20] <= 1
+ footprints[(210,_30),(220,_30)]: tower-placement[210,30]
+   + tower-placement[220,30] <= 1
+ footprints[(210,_30),(220,_40)]: tower-placement[210,30]
+   + tower-placement[220,40] <= 1
+ footprints[(10,_50),(10,_40)]: tower-placement[10,50]
+   + tower-placement[10,40] <= 1
+ footprints[(10,_50),(10,_60)]: tower-placement[10,50]
+   + tower-placement[10,60] <= 1
+ footprints[(10,_50),(20,_40)]: tower-placement[10,50]
+   + tower-placement[20,40] <= 1
+ footprints[(10,_50),(20,_50)]: tower-placement[10,50]
+   + tower-placement[20,50] <= 1
+ footprints[(10,_50),(20,_60)]: tower-placement[10,50]
+   + tower-placement[20,60] <= 1
+ footprints[(70,_50),(60,_40)]: tower-placement[70,50]
+   + tower-placement[60,40] <= 1
+ footprints[(70,_50),(60,_50)]: tower-placement[70,50]
+   + tower-placement[60,50] <= 1
+ footprints[(70,_50),(60,_60)]: tower-placement[70,50]
+   + tower-placement[60,60] <= 1
+ footprints[(70,_50),(70,_40)]: tower-placement[70,50]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_50),(70,_60)]: tower-placement[70,50]
+   + tower-placement[70,60] <= 1
+ footprints[(70,_50),(80,_40)]: tower-placement[70,50]
+   + tower-placement[80,40] <= 1
+ footprints[(70,_50),(80,_50)]: tower-placement[70,50]
+   + tower-placement[80,50] <= 1
+ footprints[(70,_50),(80,_60)]: tower-placement[70,50]
+   + tower-placement[80,60] <= 1
+ footprints[(30,_90),(20,_80)]: tower-placement[30,90]
+   + tower-placement[20,80] <= 1
+ footprints[(30,_90),(20,_90)]: tower-placement[30,90]
+   + tower-placement[20,90] <= 1
+ footprints[(30,_90),(20,_100)]: tower-placement[30,90]
+   + tower-placement[20,100] <= 1
+ footprints[(30,_90),(30,_80)]: tower-placement[30,90]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_90),(30,_100)]: tower-placement[30,90]
+   + tower-placement[30,100] <= 1
+ footprints[(30,_90),(40,_80)]: tower-placement[30,90]
+   + tower-placement[40,80] <= 1
+ footprints[(30,_90),(40,_90)]: tower-placement[30,90]
+   + tower-placement[40,90] <= 1
+ footprints[(30,_90),(40,_100)]: tower-placement[30,90]
+   + tower-placement[40,100] <= 1
+ footprints[(450,_460),(440,_450)]: tower-placement[450,460]
+   + tower-placement[440,450] <= 1
+ footprints[(450,_460),(440,_460)]: tower-placement[450,460]
+   + tower-placement[440,460] <= 1
+ footprints[(450,_460),(450,_450)]: tower-placement[450,460]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_460),(460,_450)]: tower-placement[450,460]
+   + tower-placement[460,450] <= 1
+ footprints[(450,_460),(460,_460)]: tower-placement[450,460]
+   + tower-placement[460,460] <= 1
+ footprints[(380,_390),(370,_380)]: tower-placement[380,390]
+   + tower-placement[370,380] <= 1
+ footprints[(380,_390),(370,_390)]: tower-placement[380,390]
+   + tower-placement[370,390] <= 1
+ footprints[(380,_390),(380,_380)]: tower-placement[380,390]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_390),(390,_380)]: tower-placement[380,390]
+   + tower-placement[390,380] <= 1
+ footprints[(380,_390),(390,_390)]: tower-placement[380,390]
+   + tower-placement[390,390] <= 1
+ footprints[(460,_50),(450,_40)]: tower-placement[460,50]
+   + tower-placement[450,40] <= 1
+ footprints[(460,_50),(450,_50)]: tower-placement[460,50]
+   + tower-placement[450,50] <= 1
+ footprints[(460,_50),(460,_40)]: tower-placement[460,50]
+   + tower-placement[460,40] <= 1
+ footprints[(460,_50),(460,_60)]: tower-placement[460,50]
+   + tower-placement[460,60] <= 1
+ footprints[(460,_400),(460,_390)]: tower-placement[460,400]
+   + tower-placement[460,390] <= 1
+ footprints[(460,_400),(460,_410)]: tower-placement[460,400]
+   + tower-placement[460,410] <= 1
+ footprints[(380,_260),(370,_250)]: tower-placement[380,260]
+   + tower-placement[370,250] <= 1
+ footprints[(380,_260),(370,_260)]: tower-placement[380,260]
+   + tower-placement[370,260] <= 1
+ footprints[(380,_260),(380,_250)]: tower-placement[380,260]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_260),(390,_250)]: tower-placement[380,260]
+   + tower-placement[390,250] <= 1
+ footprints[(380,_260),(390,_260)]: tower-placement[380,260]
+   + tower-placement[390,260] <= 1
+ footprints[(330,_360),(320,_350)]: tower-placement[330,360]
+   + tower-placement[320,350] <= 1
+ footprints[(330,_360),(320,_360)]: tower-placement[330,360]
+   + tower-placement[320,360] <= 1
+ footprints[(330,_360),(320,_370)]: tower-placement[330,360]
+   + tower-placement[320,370] <= 1
+ footprints[(330,_360),(330,_350)]: tower-placement[330,360]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_360),(330,_370)]: tower-placement[330,360]
+   + tower-placement[330,370] <= 1
+ footprints[(330,_360),(340,_350)]: tower-placement[330,360]
+   + tower-placement[340,350] <= 1
+ footprints[(330,_360),(340,_360)]: tower-placement[330,360]
+   + tower-placement[340,360] <= 1
+ footprints[(330,_360),(340,_370)]: tower-placement[340,370]
+   + tower-placement[330,360] <= 1
+ footprints[(460,_270),(450,_260)]: tower-placement[460,270]
+   + tower-placement[450,260] <= 1
+ footprints[(460,_270),(450,_270)]: tower-placement[460,270]
+   + tower-placement[450,270] <= 1
+ footprints[(460,_270),(450,_280)]: tower-placement[450,280]
+   + tower-placement[460,270] <= 1
+ footprints[(460,_270),(460,_260)]: tower-placement[460,270]
+   + tower-placement[460,260] <= 1
+ footprints[(460,_270),(460,_280)]: tower-placement[460,270]
+   + tower-placement[460,280] <= 1
+ footprints[(450,_200),(440,_200)]: tower-placement[450,200]
+   + tower-placement[440,200] <= 1
+ footprints[(450,_200),(440,_210)]: tower-placement[440,210]
+   + tower-placement[450,200] <= 1
+ footprints[(450,_200),(450,_190)]: tower-placement[450,200]
+   + tower-placement[450,190] <= 1
+ footprints[(450,_200),(450,_210)]: tower-placement[450,200]
+   + tower-placement[450,210] <= 1
+ footprints[(450,_200),(460,_190)]: tower-placement[450,200]
+   + tower-placement[460,190] <= 1
+ footprints[(450,_200),(460,_200)]: tower-placement[450,200]
+   + tower-placement[460,200] <= 1
+ footprints[(450,_200),(460,_210)]: tower-placement[450,200]
+   + tower-placement[460,210] <= 1
+ footprints[(380,_130),(370,_120)]: tower-placement[380,130]
+   + tower-placement[370,120] <= 1
+ footprints[(380,_130),(370,_130)]: tower-placement[380,130]
+   + tower-placement[370,130] <= 1
+ footprints[(380,_130),(370,_140)]: tower-placement[370,140]
+   + tower-placement[380,130] <= 1
+ footprints[(380,_130),(380,_120)]: tower-placement[380,130]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_130),(380,_140)]: tower-placement[380,130]
+   + tower-placement[380,140] <= 1
+ footprints[(380,_130),(390,_120)]: tower-placement[380,130]
+   + tower-placement[390,120] <= 1
+ footprints[(380,_130),(390,_130)]: tower-placement[380,130]
+   + tower-placement[390,130] <= 1
+ footprints[(380,_130),(390,_140)]: tower-placement[390,140]
+   + tower-placement[380,130] <= 1
+ footprints[(410,_240),(400,_230)]: tower-placement[410,240]
+   + tower-placement[400,230] <= 1
+ footprints[(410,_240),(400,_240)]: tower-placement[410,240]
+   + tower-placement[400,240] <= 1
+ footprints[(410,_240),(400,_250)]: tower-placement[400,250]
+   + tower-placement[410,240] <= 1
+ footprints[(410,_240),(410,_230)]: tower-placement[410,240]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_240),(410,_250)]: tower-placement[410,240]
+   + tower-placement[410,250] <= 1
+ footprints[(410,_240),(420,_230)]: tower-placement[410,240]
+   + tower-placement[420,230] <= 1
+ footprints[(410,_240),(420,_240)]: tower-placement[410,240]
+   + tower-placement[420,240] <= 1
+ footprints[(410,_240),(420,_250)]: tower-placement[410,240]
+   + tower-placement[420,250] <= 1
+ footprints[(360,_340),(350,_340)]: tower-placement[360,340]
+   + tower-placement[350,340] <= 1
+ footprints[(360,_340),(350,_350)]: tower-placement[350,350]
+   + tower-placement[360,340] <= 1
+ footprints[(360,_340),(360,_350)]: tower-placement[360,340]
+   + tower-placement[360,350] <= 1
+ footprints[(360,_340),(370,_340)]: tower-placement[360,340]
+   + tower-placement[370,340] <= 1
+ footprints[(360,_340),(370,_350)]: tower-placement[360,340]
+   + tower-placement[370,350] <= 1
+ footprints[(280,_330),(270,_320)]: tower-placement[280,330]
+   + tower-placement[270,320] <= 1
+ footprints[(280,_330),(270,_330)]: tower-placement[280,330]
+   + tower-placement[270,330] <= 1
+ footprints[(280,_330),(270,_340)]: tower-placement[270,340]
+   + tower-placement[280,330] <= 1
+ footprints[(280,_330),(280,_320)]: tower-placement[280,330]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_330),(280,_340)]: tower-placement[280,330]
+   + tower-placement[280,340] <= 1
+ footprints[(280,_330),(290,_320)]: tower-placement[280,330]
+   + tower-placement[290,320] <= 1
+ footprints[(280,_330),(290,_330)]: tower-placement[280,330]
+   + tower-placement[290,330] <= 1
+ footprints[(280,_330),(290,_340)]: tower-placement[280,330]
+   + tower-placement[290,340] <= 1
+ footprints[(270,_260),(260,_250)]: tower-placement[270,260]
+   + tower-placement[260,250] <= 1
+ footprints[(270,_260),(260,_260)]: tower-placement[270,260]
+   + tower-placement[260,260] <= 1
+ footprints[(270,_260),(260,_270)]: tower-placement[260,270]
+   + tower-placement[270,260] <= 1
+ footprints[(270,_260),(270,_250)]: tower-placement[270,260]
+   + tower-placement[270,250] <= 1
+ footprints[(270,_260),(270,_270)]: tower-placement[270,260]
+   + tower-placement[270,270] <= 1
+ footprints[(240,_370),(230,_360)]: tower-placement[240,370]
+   + tower-placement[230,360] <= 1
+ footprints[(240,_370),(230,_370)]: tower-placement[240,370]
+   + tower-placement[230,370] <= 1
+ footprints[(240,_370),(230,_380)]: tower-placement[230,380]
+   + tower-placement[240,370] <= 1
+ footprints[(240,_370),(240,_360)]: tower-placement[240,370]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_370),(240,_380)]: tower-placement[240,370]
+   + tower-placement[240,380] <= 1
+ footprints[(240,_370),(250,_360)]: tower-placement[240,370]
+   + tower-placement[250,360] <= 1
+ footprints[(240,_370),(250,_370)]: tower-placement[240,370]
+   + tower-placement[250,370] <= 1
+ footprints[(240,_370),(250,_380)]: tower-placement[250,380]
+   + tower-placement[240,370] <= 1
+ footprints[(300,_370),(290,_360)]: tower-placement[300,370]
+   + tower-placement[290,360] <= 1
+ footprints[(300,_370),(290,_370)]: tower-placement[300,370]
+   + tower-placement[290,370] <= 1
+ footprints[(300,_370),(290,_380)]: tower-placement[300,370]
+   + tower-placement[290,380] <= 1
+ footprints[(300,_370),(300,_360)]: tower-placement[300,370]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_370),(300,_380)]: tower-placement[300,370]
+   + tower-placement[300,380] <= 1
+ footprints[(300,_370),(310,_360)]: tower-placement[300,370]
+   + tower-placement[310,360] <= 1
+ footprints[(300,_370),(310,_370)]: tower-placement[300,370]
+   + tower-placement[310,370] <= 1
+ footprints[(300,_370),(310,_380)]: tower-placement[300,370]
+   + tower-placement[310,380] <= 1
+ footprints[(330,_100),(320,_90)]: tower-placement[330,100]
+   + tower-placement[320,90] <= 1
+ footprints[(330,_100),(320,_100)]: tower-placement[330,100]
+   + tower-placement[320,100] <= 1
+ footprints[(330,_100),(320,_110)]: tower-placement[320,110]
+   + tower-placement[330,100] <= 1
+ footprints[(330,_100),(330,_90)]: tower-placement[330,100]
+   + tower-placement[330,90] <= 1
+ footprints[(330,_100),(330,_110)]: tower-placement[330,100]
+   + tower-placement[330,110] <= 1
+ footprints[(330,_100),(340,_90)]: tower-placement[330,100]
+   + tower-placement[340,90] <= 1
+ footprints[(330,_100),(340,_100)]: tower-placement[330,100]
+   + tower-placement[340,100] <= 1
+ footprints[(330,_100),(340,_110)]: tower-placement[340,110]
+   + tower-placement[330,100] <= 1
+ footprints[(150,_290),(140,_280)]: tower-placement[150,290]
+   + tower-placement[140,280] <= 1
+ footprints[(150,_290),(140,_290)]: tower-placement[150,290]
+   + tower-placement[140,290] <= 1
+ footprints[(150,_290),(140,_300)]: tower-placement[140,300]
+   + tower-placement[150,290] <= 1
+ footprints[(150,_290),(150,_280)]: tower-placement[150,290]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_290),(150,_300)]: tower-placement[150,290]
+   + tower-placement[150,300] <= 1
+ footprints[(150,_290),(160,_280)]: tower-placement[150,290]
+   + tower-placement[160,280] <= 1
+ footprints[(150,_290),(160,_290)]: tower-placement[150,290]
+   + tower-placement[160,290] <= 1
+ footprints[(150,_290),(160,_300)]: tower-placement[160,300]
+   + tower-placement[150,290] <= 1
+ footprints[(430,_280),(420,_270)]: tower-placement[430,280]
+   + tower-placement[420,270] <= 1
+ footprints[(430,_280),(430,_270)]: tower-placement[430,280]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_280),(440,_270)]: tower-placement[430,280]
+   + tower-placement[440,270] <= 1
+ footprints[(430,_280),(440,_280)]: tower-placement[430,280]
+   + tower-placement[440,280] <= 1
+ footprints[(430,_280),(440,_290)]: tower-placement[430,280]
+   + tower-placement[440,290] <= 1
+ footprints[(320,_380),(310,_370)]: tower-placement[320,380]
+   + tower-placement[310,370] <= 1
+ footprints[(320,_380),(310,_380)]: tower-placement[320,380]
+   + tower-placement[310,380] <= 1
+ footprints[(320,_380),(310,_390)]: tower-placement[310,390]
+   + tower-placement[320,380] <= 1
+ footprints[(320,_380),(320,_370)]: tower-placement[320,380]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_380),(320,_390)]: tower-placement[320,380]
+   + tower-placement[320,390] <= 1
+ footprints[(320,_380),(330,_370)]: tower-placement[320,380]
+   + tower-placement[330,370] <= 1
+ footprints[(320,_380),(330,_380)]: tower-placement[320,380]
+   + tower-placement[330,380] <= 1
+ footprints[(320,_380),(330,_390)]: tower-placement[320,380]
+   + tower-placement[330,390] <= 1
+ footprints[(100,_390),(90,_390)]: tower-placement[100,390]
+   + tower-placement[90,390] <= 1
+ footprints[(100,_390),(110,_390)]: tower-placement[100,390]
+   + tower-placement[110,390] <= 1
+ footprints[(270,_130),(260,_120)]: tower-placement[270,130]
+   + tower-placement[260,120] <= 1
+ footprints[(270,_130),(260,_130)]: tower-placement[270,130]
+   + tower-placement[260,130] <= 1
+ footprints[(270,_130),(260,_140)]: tower-placement[260,140]
+   + tower-placement[270,130] <= 1
+ footprints[(270,_130),(270,_120)]: tower-placement[270,130]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_130),(270,_140)]: tower-placement[270,130]
+   + tower-placement[270,140] <= 1
+ footprints[(270,_130),(280,_120)]: tower-placement[270,130]
+   + tower-placement[280,120] <= 1
+ footprints[(270,_130),(280,_130)]: tower-placement[270,130]
+   + tower-placement[280,130] <= 1
+ footprints[(270,_130),(280,_140)]: tower-placement[270,130]
+   + tower-placement[280,140] <= 1
+ footprints[(440,_220),(430,_210)]: tower-placement[440,220]
+   + tower-placement[430,210] <= 1
+ footprints[(440,_220),(430,_220)]: tower-placement[440,220]
+   + tower-placement[430,220] <= 1
+ footprints[(440,_220),(430,_230)]: tower-placement[430,230]
+   + tower-placement[440,220] <= 1
+ footprints[(440,_220),(440,_210)]: tower-placement[440,210]
+   + tower-placement[440,220] <= 1
+ footprints[(440,_220),(440,_230)]: tower-placement[440,220]
+   + tower-placement[440,230] <= 1
+ footprints[(440,_220),(450,_210)]: tower-placement[440,220]
+   + tower-placement[450,210] <= 1
+ footprints[(440,_220),(450,_220)]: tower-placement[440,220]
+   + tower-placement[450,220] <= 1
+ footprints[(440,_220),(450,_230)]: tower-placement[440,220]
+   + tower-placement[450,230] <= 1
+ footprints[(180,_50),(170,_40)]: tower-placement[180,50]
+   + tower-placement[170,40] <= 1
+ footprints[(180,_50),(170,_50)]: tower-placement[180,50]
+   + tower-placement[170,50] <= 1
+ footprints[(180,_50),(170,_60)]: tower-placement[170,60]
+   + tower-placement[180,50] <= 1
+ footprints[(180,_50),(180,_40)]: tower-placement[180,50]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_50),(180,_60)]: tower-placement[180,50]
+   + tower-placement[180,60] <= 1
+ footprints[(180,_50),(190,_40)]: tower-placement[180,50]
+   + tower-placement[190,40] <= 1
+ footprints[(180,_50),(190,_50)]: tower-placement[180,50]
+   + tower-placement[190,50] <= 1
+ footprints[(180,_50),(190,_60)]: tower-placement[180,50]
+   + tower-placement[190,60] <= 1
+ footprints[(290,_140),(280,_130)]: tower-placement[290,140]
+   + tower-placement[280,130] <= 1
+ footprints[(290,_140),(280,_140)]: tower-placement[290,140]
+   + tower-placement[280,140] <= 1
+ footprints[(290,_140),(280,_150)]: tower-placement[280,150]
+   + tower-placement[290,140] <= 1
+ footprints[(290,_140),(290,_130)]: tower-placement[290,130]
+   + tower-placement[290,140] <= 1
+ footprints[(290,_140),(290,_150)]: tower-placement[290,140]
+   + tower-placement[290,150] <= 1
+ footprints[(290,_140),(300,_130)]: tower-placement[290,140]
+   + tower-placement[300,130] <= 1
+ footprints[(290,_140),(300,_140)]: tower-placement[290,140]
+   + tower-placement[300,140] <= 1
+ footprints[(290,_140),(300,_150)]: tower-placement[300,150]
+   + tower-placement[290,140] <= 1
+ footprints[(350,_140),(340,_130)]: tower-placement[350,140]
+   + tower-placement[340,130] <= 1
+ footprints[(350,_140),(340,_140)]: tower-placement[350,140]
+   + tower-placement[340,140] <= 1
+ footprints[(350,_140),(340,_150)]: tower-placement[340,150]
+   + tower-placement[350,140] <= 1
+ footprints[(350,_140),(350,_130)]: tower-placement[350,130]
+   + tower-placement[350,140] <= 1
+ footprints[(350,_140),(350,_150)]: tower-placement[350,140]
+   + tower-placement[350,150] <= 1
+ footprints[(350,_140),(360,_130)]: tower-placement[350,140]
+   + tower-placement[360,130] <= 1
+ footprints[(350,_140),(360,_140)]: tower-placement[350,140]
+   + tower-placement[360,140] <= 1
+ footprints[(350,_140),(360,_150)]: tower-placement[350,140]
+   + tower-placement[360,150] <= 1
+ footprints[(130,_150),(130,_140)]: tower-placement[130,150]
+   + tower-placement[130,140] <= 1
+ footprints[(130,_150),(130,_160)]: tower-placement[130,150]
+   + tower-placement[130,160] <= 1
+ footprints[(130,_150),(140,_140)]: tower-placement[130,150]
+   + tower-placement[140,140] <= 1
+ footprints[(130,_150),(140,_150)]: tower-placement[130,150]
+   + tower-placement[140,150] <= 1
+ footprints[(130,_150),(140,_160)]: tower-placement[130,150]
+   + tower-placement[140,160] <= 1
+ footprints[(200,_60),(190,_50)]: tower-placement[200,60]
+   + tower-placement[190,50] <= 1
+ footprints[(200,_60),(190,_60)]: tower-placement[200,60]
+   + tower-placement[190,60] <= 1
+ footprints[(200,_60),(190,_70)]: tower-placement[190,70]
+   + tower-placement[200,60] <= 1
+ footprints[(200,_60),(200,_50)]: tower-placement[200,50]
+   + tower-placement[200,60] <= 1
+ footprints[(200,_60),(200,_70)]: tower-placement[200,60]
+   + tower-placement[200,70] <= 1
+ footprints[(200,_60),(210,_50)]: tower-placement[200,60]
+   + tower-placement[210,50] <= 1
+ footprints[(200,_60),(210,_60)]: tower-placement[200,60]
+   + tower-placement[210,60] <= 1
+ footprints[(200,_60),(210,_70)]: tower-placement[210,70]
+   + tower-placement[200,60] <= 1
+ footprints[(150,_160),(140,_150)]: tower-placement[150,160]
+   + tower-placement[140,150] <= 1
+ footprints[(150,_160),(140,_160)]: tower-placement[150,160]
+   + tower-placement[140,160] <= 1
+ footprints[(150,_160),(140,_170)]: tower-placement[140,170]
+   + tower-placement[150,160] <= 1
+ footprints[(150,_160),(150,_150)]: tower-placement[150,150]
+   + tower-placement[150,160] <= 1
+ footprints[(150,_160),(150,_170)]: tower-placement[150,160]
+   + tower-placement[150,170] <= 1
+ footprints[(150,_160),(160,_150)]: tower-placement[150,160]
+   + tower-placement[160,150] <= 1
+ footprints[(150,_160),(160,_160)]: tower-placement[150,160]
+   + tower-placement[160,160] <= 1
+ footprints[(150,_160),(160,_170)]: tower-placement[160,170]
+   + tower-placement[150,160] <= 1
+ footprints[(250,_340),(240,_330)]: tower-placement[250,340]
+   + tower-placement[240,330] <= 1
+ footprints[(250,_340),(240,_340)]: tower-placement[250,340]
+   + tower-placement[240,340] <= 1
+ footprints[(250,_340),(240,_350)]: tower-placement[250,340]
+   + tower-placement[240,350] <= 1
+ footprints[(250,_340),(250,_330)]: tower-placement[250,330]
+   + tower-placement[250,340] <= 1
+ footprints[(250,_340),(250,_350)]: tower-placement[250,340]
+   + tower-placement[250,350] <= 1
+ footprints[(250,_340),(260,_330)]: tower-placement[250,340]
+   + tower-placement[260,330] <= 1
+ footprints[(250,_340),(260,_340)]: tower-placement[250,340]
+   + tower-placement[260,340] <= 1
+ footprints[(250,_340),(260,_350)]: tower-placement[250,340]
+   + tower-placement[260,350] <= 1
+ footprints[(100,_260),(90,_260)]: tower-placement[100,260]
+   + tower-placement[90,260] <= 1
+ footprints[(100,_260),(90,_270)]: tower-placement[90,270]
+   + tower-placement[100,260] <= 1
+ footprints[(100,_260),(100,_250)]: tower-placement[100,250]
+   + tower-placement[100,260] <= 1
+ footprints[(100,_260),(100,_270)]: tower-placement[100,260]
+   + tower-placement[100,270] <= 1
+ footprints[(100,_260),(110,_250)]: tower-placement[100,260]
+   + tower-placement[110,250] <= 1
+ footprints[(100,_260),(110,_260)]: tower-placement[100,260]
+   + tower-placement[110,260] <= 1
+ footprints[(100,_260),(110,_270)]: tower-placement[100,260]
+   + tower-placement[110,270] <= 1
+ footprints[(260,_280),(250,_270)]: tower-placement[260,280]
+   + tower-placement[250,270] <= 1
+ footprints[(260,_280),(250,_280)]: tower-placement[260,280]
+   + tower-placement[250,280] <= 1
+ footprints[(260,_280),(250,_290)]: tower-placement[250,290]
+   + tower-placement[260,280] <= 1
+ footprints[(260,_280),(260,_270)]: tower-placement[260,270]
+   + tower-placement[260,280] <= 1
+ footprints[(260,_280),(260,_290)]: tower-placement[260,280]
+   + tower-placement[260,290] <= 1
+ footprints[(260,_280),(270,_270)]: tower-placement[260,280]
+   + tower-placement[270,270] <= 1
+ footprints[(260,_280),(270,_280)]: tower-placement[260,280]
+   + tower-placement[270,280] <= 1
+ footprints[(260,_280),(270,_290)]: tower-placement[260,280]
+   + tower-placement[270,290] <= 1
+ footprints[(350,_10),(340,_10)]: tower-placement[350,10]
+   + tower-placement[340,10] <= 1
+ footprints[(350,_10),(340,_20)]: tower-placement[340,20]
+   + tower-placement[350,10] <= 1
+ footprints[(350,_10),(350,_20)]: tower-placement[350,10]
+   + tower-placement[350,20] <= 1
+ footprints[(350,_10),(360,_10)]: tower-placement[350,10]
+   + tower-placement[360,10] <= 1
+ footprints[(350,_10),(360,_20)]: tower-placement[350,10]
+   + tower-placement[360,20] <= 1
+ footprints[(210,_380),(200,_380)]: tower-placement[210,380]
+   + tower-placement[200,380] <= 1
+ footprints[(210,_380),(200,_390)]: tower-placement[210,380]
+   + tower-placement[200,390] <= 1
+ footprints[(210,_380),(210,_390)]: tower-placement[210,380]
+   + tower-placement[210,390] <= 1
+ footprints[(210,_380),(220,_370)]: tower-placement[210,380]
+   + tower-placement[220,370] <= 1
+ footprints[(210,_380),(220,_380)]: tower-placement[210,380]
+   + tower-placement[220,380] <= 1
+ footprints[(210,_380),(220,_390)]: tower-placement[210,380]
+   + tower-placement[220,390] <= 1
+ footprints[(170,_200),(160,_190)]: tower-placement[170,200]
+   + tower-placement[160,190] <= 1
+ footprints[(170,_200),(160,_200)]: tower-placement[170,200]
+   + tower-placement[160,200] <= 1
+ footprints[(170,_200),(160,_210)]: tower-placement[160,210]
+   + tower-placement[170,200] <= 1
+ footprints[(170,_200),(170,_190)]: tower-placement[170,190]
+   + tower-placement[170,200] <= 1
+ footprints[(170,_200),(170,_210)]: tower-placement[170,200]
+   + tower-placement[170,210] <= 1
+ footprints[(130,_20),(120,_10)]: tower-placement[130,20]
+   + tower-placement[120,10] <= 1
+ footprints[(130,_20),(120,_20)]: tower-placement[130,20]
+   + tower-placement[120,20] <= 1
+ footprints[(130,_20),(120,_30)]: tower-placement[120,30]
+   + tower-placement[130,20] <= 1
+ footprints[(130,_20),(130,_10)]: tower-placement[130,20]
+   + tower-placement[130,10] <= 1
+ footprints[(130,_20),(130,_30)]: tower-placement[130,20]
+   + tower-placement[130,30] <= 1
+ footprints[(130,_20),(140,_10)]: tower-placement[130,20]
+   + tower-placement[140,10] <= 1
+ footprints[(130,_20),(140,_20)]: tower-placement[130,20]
+   + tower-placement[140,20] <= 1
+ footprints[(130,_20),(140,_30)]: tower-placement[130,20]
+   + tower-placement[140,30] <= 1
+ footprints[(240,_110),(240,_100)]: tower-placement[240,100]
+   + tower-placement[240,110] <= 1
+ footprints[(240,_110),(240,_120)]: tower-placement[240,110]
+   + tower-placement[240,120] <= 1
+ footprints[(240,_110),(250,_100)]: tower-placement[240,110]
+   + tower-placement[250,100] <= 1
+ footprints[(240,_110),(250,_110)]: tower-placement[240,110]
+   + tower-placement[250,110] <= 1
+ footprints[(240,_110),(250,_120)]: tower-placement[250,120]
+   + tower-placement[240,110] <= 1
+ footprints[(60,_300),(50,_290)]: tower-placement[60,300]
+   + tower-placement[50,290] <= 1
+ footprints[(60,_300),(50,_300)]: tower-placement[60,300]
+   + tower-placement[50,300] <= 1
+ footprints[(60,_300),(50,_310)]: tower-placement[50,310]
+   + tower-placement[60,300] <= 1
+ footprints[(60,_300),(60,_290)]: tower-placement[60,290]
+   + tower-placement[60,300] <= 1
+ footprints[(60,_300),(60,_310)]: tower-placement[60,300]
+   + tower-placement[60,310] <= 1
+ footprints[(60,_300),(70,_290)]: tower-placement[60,300]
+   + tower-placement[70,290] <= 1
+ footprints[(60,_300),(70,_300)]: tower-placement[60,300]
+   + tower-placement[70,300] <= 1
+ footprints[(60,_300),(70,_310)]: tower-placement[70,310]
+   + tower-placement[60,300] <= 1
+ footprints[(20,_120),(10,_110)]: tower-placement[20,120]
+   + tower-placement[10,110] <= 1
+ footprints[(20,_120),(10,_120)]: tower-placement[20,120]
+   + tower-placement[10,120] <= 1
+ footprints[(20,_120),(10,_130)]: tower-placement[10,130]
+   + tower-placement[20,120] <= 1
+ footprints[(20,_120),(20,_110)]: tower-placement[20,120]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_120),(20,_130)]: tower-placement[20,120]
+   + tower-placement[20,130] <= 1
+ footprints[(20,_120),(30,_110)]: tower-placement[20,120]
+   + tower-placement[30,110] <= 1
+ footprints[(20,_120),(30,_120)]: tower-placement[20,120]
+   + tower-placement[30,120] <= 1
+ footprints[(20,_120),(30,_130)]: tower-placement[30,130]
+   + tower-placement[20,120] <= 1
+ footprints[(300,_110),(290,_100)]: tower-placement[300,110]
+   + tower-placement[290,100] <= 1
+ footprints[(300,_110),(290,_110)]: tower-placement[300,110]
+   + tower-placement[290,110] <= 1
+ footprints[(300,_110),(290,_120)]: tower-placement[300,110]
+   + tower-placement[290,120] <= 1
+ footprints[(300,_110),(300,_100)]: tower-placement[300,100]
+   + tower-placement[300,110] <= 1
+ footprints[(300,_110),(300,_120)]: tower-placement[300,110]
+   + tower-placement[300,120] <= 1
+ footprints[(300,_110),(310,_100)]: tower-placement[300,110]
+   + tower-placement[310,100] <= 1
+ footprints[(300,_110),(310,_110)]: tower-placement[300,110]
+   + tower-placement[310,110] <= 1
+ footprints[(300,_110),(310,_120)]: tower-placement[300,110]
+   + tower-placement[310,120] <= 1
+ footprints[(120,_300),(110,_290)]: tower-placement[120,300]
+   + tower-placement[110,290] <= 1
+ footprints[(120,_300),(110,_300)]: tower-placement[120,300]
+   + tower-placement[110,300] <= 1
+ footprints[(120,_300),(110,_310)]: tower-placement[120,300]
+   + tower-placement[110,310] <= 1
+ footprints[(120,_300),(120,_290)]: tower-placement[120,290]
+   + tower-placement[120,300] <= 1
+ footprints[(120,_300),(120,_310)]: tower-placement[120,300]
+   + tower-placement[120,310] <= 1
+ footprints[(120,_300),(130,_290)]: tower-placement[120,300]
+   + tower-placement[130,290] <= 1
+ footprints[(120,_300),(130,_300)]: tower-placement[120,300]
+   + tower-placement[130,300] <= 1
+ footprints[(120,_300),(130,_310)]: tower-placement[120,300]
+   + tower-placement[130,310] <= 1
+ footprints[(150,_30),(140,_20)]: tower-placement[150,30]
+   + tower-placement[140,20] <= 1
+ footprints[(150,_30),(140,_30)]: tower-placement[150,30]
+   + tower-placement[140,30] <= 1
+ footprints[(150,_30),(140,_40)]: tower-placement[140,40]
+   + tower-placement[150,30] <= 1
+ footprints[(150,_30),(150,_20)]: tower-placement[150,20]
+   + tower-placement[150,30] <= 1
+ footprints[(150,_30),(150,_40)]: tower-placement[150,30]
+   + tower-placement[150,40] <= 1
+ footprints[(150,_30),(160,_20)]: tower-placement[150,30]
+   + tower-placement[160,20] <= 1
+ footprints[(150,_30),(160,_30)]: tower-placement[150,30]
+   + tower-placement[160,30] <= 1
+ footprints[(150,_30),(160,_40)]: tower-placement[160,40]
+   + tower-placement[150,30] <= 1
+ footprints[(10,_400),(10,_390)]: tower-placement[10,390]
+   + tower-placement[10,400] <= 1
+ footprints[(10,_400),(10,_410)]: tower-placement[10,400]
+   + tower-placement[10,410] <= 1
+ footprints[(10,_400),(20,_390)]: tower-placement[10,400]
+   + tower-placement[20,390] <= 1
+ footprints[(10,_400),(20,_400)]: tower-placement[10,400]
+   + tower-placement[20,400] <= 1
+ footprints[(10,_400),(20,_410)]: tower-placement[10,400]
+   + tower-placement[20,410] <= 1
+ footprints[(250,_210),(250,_200)]: tower-placement[250,200]
+   + tower-placement[250,210] <= 1
+ footprints[(250,_210),(250,_220)]: tower-placement[250,210]
+   + tower-placement[250,220] <= 1
+ footprints[(250,_210),(260,_200)]: tower-placement[250,210]
+   + tower-placement[260,200] <= 1
+ footprints[(250,_210),(260,_210)]: tower-placement[250,210]
+   + tower-placement[260,210] <= 1
+ footprints[(250,_210),(260,_220)]: tower-placement[250,210]
+   + tower-placement[260,220] <= 1
+ footprints[(140,_310),(130,_300)]: tower-placement[140,310]
+   + tower-placement[130,300] <= 1
+ footprints[(140,_310),(130,_310)]: tower-placement[140,310]
+   + tower-placement[130,310] <= 1
+ footprints[(140,_310),(140,_300)]: tower-placement[140,300]
+   + tower-placement[140,310] <= 1
+ footprints[(140,_310),(150,_300)]: tower-placement[140,310]
+   + tower-placement[150,300] <= 1
+ footprints[(140,_310),(150,_310)]: tower-placement[140,310]
+   + tower-placement[150,310] <= 1
+ footprints[(90,_60),(80,_50)]: tower-placement[90,60]
+   + tower-placement[80,50] <= 1
+ footprints[(90,_60),(80,_60)]: tower-placement[90,60]
+   + tower-placement[80,60] <= 1
+ footprints[(90,_60),(80,_70)]: tower-placement[80,70]
+   + tower-placement[90,60] <= 1
+ footprints[(90,_60),(90,_50)]: tower-placement[90,60]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_60),(90,_70)]: tower-placement[90,60]
+   + tower-placement[90,70] <= 1
+ footprints[(90,_60),(100,_50)]: tower-placement[90,60]
+   + tower-placement[100,50] <= 1
+ footprints[(90,_60),(100,_60)]: tower-placement[90,60]
+   + tower-placement[100,60] <= 1
+ footprints[(90,_60),(100,_70)]: tower-placement[90,60]
+   + tower-placement[100,70] <= 1
+ footprints[(260,_150),(250,_140)]: tower-placement[260,150]
+   + tower-placement[250,140] <= 1
+ footprints[(260,_150),(250,_150)]: tower-placement[260,150]
+   + tower-placement[250,150] <= 1
+ footprints[(260,_150),(250,_160)]: tower-placement[250,160]
+   + tower-placement[260,150] <= 1
+ footprints[(260,_150),(260,_140)]: tower-placement[260,140]
+   + tower-placement[260,150] <= 1
+ footprints[(260,_150),(260,_160)]: tower-placement[260,150]
+   + tower-placement[260,160] <= 1
+ footprints[(260,_150),(270,_140)]: tower-placement[260,150]
+   + tower-placement[270,140] <= 1
+ footprints[(260,_150),(270,_150)]: tower-placement[260,150]
+   + tower-placement[270,150] <= 1
+ footprints[(260,_150),(270,_160)]: tower-placement[260,150]
+   + tower-placement[270,160] <= 1
+ footprints[(40,_160),(30,_150)]: tower-placement[40,160]
+   + tower-placement[30,150] <= 1
+ footprints[(40,_160),(30,_160)]: tower-placement[40,160]
+   + tower-placement[30,160] <= 1
+ footprints[(40,_160),(30,_170)]: tower-placement[30,170]
+   + tower-placement[40,160] <= 1
+ footprints[(40,_160),(40,_150)]: tower-placement[40,160]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_160),(40,_170)]: tower-placement[40,160]
+   + tower-placement[40,170] <= 1
+ footprints[(40,_160),(50,_150)]: tower-placement[40,160]
+   + tower-placement[50,150] <= 1
+ footprints[(40,_160),(50,_160)]: tower-placement[40,160]
+   + tower-placement[50,160] <= 1
+ footprints[(40,_160),(50,_170)]: tower-placement[40,160]
+   + tower-placement[50,170] <= 1
+ footprints[(110,_70),(100,_60)]: tower-placement[110,70]
+   + tower-placement[100,60] <= 1
+ footprints[(110,_70),(100,_70)]: tower-placement[110,70]
+   + tower-placement[100,70] <= 1
+ footprints[(110,_70),(110,_60)]: tower-placement[110,60]
+   + tower-placement[110,70] <= 1
+ footprints[(110,_70),(120,_60)]: tower-placement[110,70]
+   + tower-placement[120,60] <= 1
+ footprints[(110,_70),(120,_70)]: tower-placement[110,70]
+   + tower-placement[120,70] <= 1
+ footprints[(30,_440),(20,_430)]: tower-placement[30,440]
+   + tower-placement[20,430] <= 1
+ footprints[(30,_440),(20,_440)]: tower-placement[30,440]
+   + tower-placement[20,440] <= 1
+ footprints[(30,_440),(20,_450)]: tower-placement[30,440]
+   + tower-placement[20,450] <= 1
+ footprints[(30,_440),(30,_430)]: tower-placement[30,430]
+   + tower-placement[30,440] <= 1
+ footprints[(30,_440),(30,_450)]: tower-placement[30,440]
+   + tower-placement[30,450] <= 1
+ footprints[(30,_440),(40,_440)]: tower-placement[30,440]
+   + tower-placement[40,440] <= 1
+ footprints[(30,_440),(40,_450)]: tower-placement[30,440]
+   + tower-placement[40,450] <= 1
+ footprints[(60,_170),(50,_160)]: tower-placement[60,170]
+   + tower-placement[50,160] <= 1
+ footprints[(60,_170),(50,_170)]: tower-placement[60,170]
+   + tower-placement[50,170] <= 1
+ footprints[(60,_170),(50,_180)]: tower-placement[50,180]
+   + tower-placement[60,170] <= 1
+ footprints[(60,_170),(60,_160)]: tower-placement[60,160]
+   + tower-placement[60,170] <= 1
+ footprints[(60,_170),(60,_180)]: tower-placement[60,170]
+   + tower-placement[60,180] <= 1
+ footprints[(10,_270),(10,_280)]: tower-placement[10,270]
+   + tower-placement[10,280] <= 1
+ footprints[(10,_270),(20,_270)]: tower-placement[10,270]
+   + tower-placement[20,270] <= 1
+ footprints[(10,_270),(20,_280)]: tower-placement[10,270]
+   + tower-placement[20,280] <= 1
+ footprints[(250,_80),(240,_70)]: tower-placement[250,80]
+   + tower-placement[240,70] <= 1
+ footprints[(250,_80),(240,_80)]: tower-placement[250,80]
+   + tower-placement[240,80] <= 1
+ footprints[(250,_80),(240,_90)]: tower-placement[250,80]
+   + tower-placement[240,90] <= 1
+ footprints[(250,_80),(250,_70)]: tower-placement[250,70]
+   + tower-placement[250,80] <= 1
+ footprints[(250,_80),(250,_90)]: tower-placement[250,80]
+   + tower-placement[250,90] <= 1
+ footprints[(250,_80),(260,_80)]: tower-placement[250,80]
+   + tower-placement[260,80] <= 1
+ footprints[(250,_80),(260,_90)]: tower-placement[250,80]
+   + tower-placement[260,90] <= 1
+ footprints[(70,_270),(60,_270)]: tower-placement[70,270]
+   + tower-placement[60,270] <= 1
+ footprints[(70,_270),(60,_280)]: tower-placement[70,270]
+   + tower-placement[60,280] <= 1
+ footprints[(70,_270),(70,_260)]: tower-placement[70,260]
+   + tower-placement[70,270] <= 1
+ footprints[(70,_270),(70,_280)]: tower-placement[70,270]
+   + tower-placement[70,280] <= 1
+ footprints[(70,_270),(80,_260)]: tower-placement[70,270]
+   + tower-placement[80,260] <= 1
+ footprints[(70,_270),(80,_270)]: tower-placement[70,270]
+   + tower-placement[80,270] <= 1
+ footprints[(70,_270),(80,_280)]: tower-placement[70,270]
+   + tower-placement[80,280] <= 1
+ footprints[(140,_180),(130,_170)]: tower-placement[140,180]
+   + tower-placement[130,170] <= 1
+ footprints[(140,_180),(130,_180)]: tower-placement[140,180]
+   + tower-placement[130,180] <= 1
+ footprints[(140,_180),(130,_190)]: tower-placement[130,190]
+   + tower-placement[140,180] <= 1
+ footprints[(140,_180),(140,_170)]: tower-placement[140,170]
+   + tower-placement[140,180] <= 1
+ footprints[(140,_180),(140,_190)]: tower-placement[140,180]
+   + tower-placement[140,190] <= 1
+ footprints[(140,_180),(150,_170)]: tower-placement[140,180]
+   + tower-placement[150,170] <= 1
+ footprints[(140,_180),(150,_180)]: tower-placement[140,180]
+   + tower-placement[150,180] <= 1
+ footprints[(140,_180),(150,_190)]: tower-placement[140,180]
+   + tower-placement[150,190] <= 1
+ footprints[(90,_280),(80,_270)]: tower-placement[90,280]
+   + tower-placement[80,270] <= 1
+ footprints[(90,_280),(80,_280)]: tower-placement[90,280]
+   + tower-placement[80,280] <= 1
+ footprints[(90,_280),(80,_290)]: tower-placement[80,290]
+   + tower-placement[90,280] <= 1
+ footprints[(90,_280),(90,_270)]: tower-placement[90,270]
+   + tower-placement[90,280] <= 1
+ footprints[(90,_280),(90,_290)]: tower-placement[90,280]
+   + tower-placement[90,290] <= 1
+ footprints[(90,_280),(100,_270)]: tower-placement[90,280]
+   + tower-placement[100,270] <= 1
+ footprints[(90,_280),(100,_280)]: tower-placement[90,280]
+   + tower-placement[100,280] <= 1
+ footprints[(90,_280),(100,_290)]: tower-placement[90,280]
+   + tower-placement[100,290] <= 1
+ footprints[(50,_100),(40,_90)]: tower-placement[50,100]
+   + tower-placement[40,90] <= 1
+ footprints[(50,_100),(40,_100)]: tower-placement[50,100]
+   + tower-placement[40,100] <= 1
+ footprints[(50,_100),(40,_110)]: tower-placement[40,110]
+   + tower-placement[50,100] <= 1
+ footprints[(50,_100),(50,_90)]: tower-placement[50,90]
+   + tower-placement[50,100] <= 1
+ footprints[(50,_100),(50,_110)]: tower-placement[50,100]
+   + tower-placement[50,110] <= 1
+ footprints[(50,_100),(60,_90)]: tower-placement[50,100]
+   + tower-placement[60,90] <= 1
+ footprints[(50,_100),(60,_100)]: tower-placement[50,100]
+   + tower-placement[60,100] <= 1
+ footprints[(50,_100),(60,_110)]: tower-placement[50,100]
+   + tower-placement[60,110] <= 1
+ footprints[(40,_30),(30,_20)]: tower-placement[40,30]
+   + tower-placement[30,20] <= 1
+ footprints[(40,_30),(30,_30)]: tower-placement[40,30]
+   + tower-placement[30,30] <= 1
+ footprints[(40,_30),(30,_40)]: tower-placement[30,40]
+   + tower-placement[40,30] <= 1
+ footprints[(40,_30),(40,_20)]: tower-placement[40,30]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_30),(40,_40)]: tower-placement[40,30]
+   + tower-placement[40,40] <= 1
+ footprints[(40,_30),(50,_20)]: tower-placement[40,30]
+   + tower-placement[50,20] <= 1
+ footprints[(40,_30),(50,_30)]: tower-placement[40,30]
+   + tower-placement[50,30] <= 1
+ footprints[(40,_30),(50,_40)]: tower-placement[40,30]
+   + tower-placement[50,40] <= 1
+ footprints[(30,_310),(20,_300)]: tower-placement[30,310]
+   + tower-placement[20,300] <= 1
+ footprints[(30,_310),(20,_310)]: tower-placement[30,310]
+   + tower-placement[20,310] <= 1
+ footprints[(30,_310),(20,_320)]: tower-placement[30,310]
+   + tower-placement[20,320] <= 1
+ footprints[(30,_310),(30,_300)]: tower-placement[30,300]
+   + tower-placement[30,310] <= 1
+ footprints[(30,_310),(30,_320)]: tower-placement[30,310]
+   + tower-placement[30,320] <= 1
+ footprints[(30,_310),(40,_300)]: tower-placement[30,310]
+   + tower-placement[40,300] <= 1
+ footprints[(30,_310),(40,_310)]: tower-placement[30,310]
+   + tower-placement[40,310] <= 1
+ footprints[(30,_310),(40,_320)]: tower-placement[30,310]
+   + tower-placement[40,320] <= 1
+ footprints[(60,_40),(50,_30)]: tower-placement[60,40]
+   + tower-placement[50,30] <= 1
+ footprints[(60,_40),(50,_40)]: tower-placement[60,40]
+   + tower-placement[50,40] <= 1
+ footprints[(60,_40),(50,_50)]: tower-placement[50,50]
+   + tower-placement[60,40] <= 1
+ footprints[(60,_40),(60,_30)]: tower-placement[60,30]
+   + tower-placement[60,40] <= 1
+ footprints[(60,_40),(60,_50)]: tower-placement[60,40]
+   + tower-placement[60,50] <= 1
+ footprints[(60,_40),(70,_30)]: tower-placement[60,40]
+   + tower-placement[70,30] <= 1
+ footprints[(60,_40),(70,_40)]: tower-placement[60,40]
+   + tower-placement[70,40] <= 1
+ footprints[(60,_40),(70,_50)]: tower-placement[70,50]
+   + tower-placement[60,40] <= 1
+ footprints[(160,_220),(150,_210)]: tower-placement[160,220]
+   + tower-placement[150,210] <= 1
+ footprints[(160,_220),(150,_220)]: tower-placement[160,220]
+   + tower-placement[150,220] <= 1
+ footprints[(160,_220),(150,_230)]: tower-placement[160,220]
+   + tower-placement[150,230] <= 1
+ footprints[(160,_220),(160,_210)]: tower-placement[160,210]
+   + tower-placement[160,220] <= 1
+ footprints[(160,_220),(160,_230)]: tower-placement[160,220]
+   + tower-placement[160,230] <= 1
+ footprints[(160,_220),(170,_210)]: tower-placement[160,220]
+   + tower-placement[170,210] <= 1
+ footprints[(160,_220),(170,_220)]: tower-placement[160,220]
+   + tower-placement[170,220] <= 1
+ footprints[(160,_220),(170,_230)]: tower-placement[160,220]
+   + tower-placement[170,230] <= 1
+ footprints[(120,_40),(110,_30)]: tower-placement[120,40]
+   + tower-placement[110,30] <= 1
+ footprints[(120,_40),(110,_40)]: tower-placement[120,40]
+   + tower-placement[110,40] <= 1
+ footprints[(120,_40),(110,_50)]: tower-placement[120,40]
+   + tower-placement[110,50] <= 1
+ footprints[(120,_40),(120,_30)]: tower-placement[120,30]
+   + tower-placement[120,40] <= 1
+ footprints[(120,_40),(120,_50)]: tower-placement[120,40]
+   + tower-placement[120,50] <= 1
+ footprints[(120,_40),(130,_30)]: tower-placement[120,40]
+   + tower-placement[130,30] <= 1
+ footprints[(120,_40),(130,_40)]: tower-placement[120,40]
+   + tower-placement[130,40] <= 1
+ footprints[(120,_40),(130,_50)]: tower-placement[120,40]
+   + tower-placement[130,50] <= 1
+ footprints[(10,_140),(10,_130)]: tower-placement[10,130]
+   + tower-placement[10,140] <= 1
+ footprints[(10,_140),(10,_150)]: tower-placement[10,140]
+   + tower-placement[10,150] <= 1
+ footprints[(10,_140),(20,_130)]: tower-placement[10,140]
+   + tower-placement[20,130] <= 1
+ footprints[(10,_140),(20,_140)]: tower-placement[10,140]
+   + tower-placement[20,140] <= 1
+ footprints[(10,_140),(20,_150)]: tower-placement[10,140]
+   + tower-placement[20,150] <= 1
+ footprints[(80,_80),(70,_70)]: tower-placement[80,80]
+   + tower-placement[70,70] <= 1
+ footprints[(80,_80),(70,_80)]: tower-placement[80,80]
+   + tower-placement[70,80] <= 1
+ footprints[(80,_80),(70,_90)]: tower-placement[70,90]
+   + tower-placement[80,80] <= 1
+ footprints[(80,_80),(80,_70)]: tower-placement[80,70]
+   + tower-placement[80,80] <= 1
+ footprints[(80,_80),(80,_90)]: tower-placement[80,80]
+   + tower-placement[80,90] <= 1
+ footprints[(80,_80),(90,_70)]: tower-placement[80,80]
+   + tower-placement[90,70] <= 1
+ footprints[(80,_80),(90,_80)]: tower-placement[80,80]
+   + tower-placement[90,80] <= 1
+ footprints[(30,_180),(20,_170)]: tower-placement[30,180]
+   + tower-placement[20,170] <= 1
+ footprints[(30,_180),(20,_180)]: tower-placement[30,180]
+   + tower-placement[20,180] <= 1
+ footprints[(30,_180),(20,_190)]: tower-placement[30,180]
+   + tower-placement[20,190] <= 1
+ footprints[(30,_180),(30,_170)]: tower-placement[30,170]
+   + tower-placement[30,180] <= 1
+ footprints[(30,_180),(30,_190)]: tower-placement[30,180]
+   + tower-placement[30,190] <= 1
+ footprints[(30,_180),(40,_170)]: tower-placement[30,180]
+   + tower-placement[40,170] <= 1
+ footprints[(30,_180),(40,_180)]: tower-placement[30,180]
+   + tower-placement[40,180] <= 1
+ footprints[(30,_180),(40,_190)]: tower-placement[30,180]
+   + tower-placement[40,190] <= 1
+ footprints[(10,_10),(10,_20)]: tower-placement[10,10]
+   + tower-placement[10,20] <= 1
+ footprints[(10,_10),(20,_10)]: tower-placement[10,10]
+   + tower-placement[20,10] <= 1
+ footprints[(10,_10),(20,_20)]: tower-placement[10,10]
+   + tower-placement[20,20] <= 1
+ footprints[(70,_10),(60,_10)]: tower-placement[70,10]
+   + tower-placement[60,10] <= 1
+ footprints[(70,_10),(60,_20)]: tower-placement[70,10]
+   + tower-placement[60,20] <= 1
+ footprints[(70,_10),(70,_20)]: tower-placement[70,10]
+   + tower-placement[70,20] <= 1
+ footprints[(70,_10),(80,_10)]: tower-placement[70,10]
+   + tower-placement[80,10] <= 1
+ footprints[(70,_10),(80,_20)]: tower-placement[70,10]
+   + tower-placement[80,20] <= 1
+ footprints[(30,_50),(20,_40)]: tower-placement[30,50]
+   + tower-placement[20,40] <= 1
+ footprints[(30,_50),(20,_50)]: tower-placement[30,50]
+   + tower-placement[20,50] <= 1
+ footprints[(30,_50),(20,_60)]: tower-placement[30,50]
+   + tower-placement[20,60] <= 1
+ footprints[(30,_50),(30,_40)]: tower-placement[30,40]
+   + tower-placement[30,50] <= 1
+ footprints[(30,_50),(30,_60)]: tower-placement[30,50]
+   + tower-placement[30,60] <= 1
+ footprints[(30,_50),(40,_40)]: tower-placement[30,50]
+   + tower-placement[40,40] <= 1
+ footprints[(30,_50),(40,_50)]: tower-placement[30,50]
+   + tower-placement[40,50] <= 1
+ footprints[(30,_50),(40,_60)]: tower-placement[30,50]
+   + tower-placement[40,60] <= 1
+ footprints[(380,_350),(370,_340)]: tower-placement[380,350]
+   + tower-placement[370,340] <= 1
+ footprints[(380,_350),(370,_350)]: tower-placement[380,350]
+   + tower-placement[370,350] <= 1
+ footprints[(380,_350),(370,_360)]: tower-placement[370,360]
+   + tower-placement[380,350] <= 1
+ footprints[(380,_350),(380,_340)]: tower-placement[380,340]
+   + tower-placement[380,350] <= 1
+ footprints[(380,_350),(380,_360)]: tower-placement[380,350]
+   + tower-placement[380,360] <= 1
+ footprints[(380,_350),(390,_340)]: tower-placement[380,350]
+   + tower-placement[390,340] <= 1
+ footprints[(380,_350),(390,_350)]: tower-placement[380,350]
+   + tower-placement[390,350] <= 1
+ footprints[(380,_350),(390,_360)]: tower-placement[390,360]
+   + tower-placement[380,350] <= 1
+ footprints[(410,_460),(400,_460)]: tower-placement[410,460]
+   + tower-placement[400,460] <= 1
+ footprints[(410,_460),(420,_460)]: tower-placement[410,460]
+   + tower-placement[420,460] <= 1
+ footprints[(460,_10),(450,_10)]: tower-placement[460,10]
+   + tower-placement[450,10] <= 1
+ footprints[(460,_10),(450,_20)]: tower-placement[450,20]
+   + tower-placement[460,10] <= 1
+ footprints[(460,_10),(460,_20)]: tower-placement[460,10]
+   + tower-placement[460,20] <= 1
+ footprints[(460,_360),(460,_350)]: tower-placement[460,350]
+   + tower-placement[460,360] <= 1
+ footprints[(460,_360),(460,_370)]: tower-placement[460,360]
+   + tower-placement[460,370] <= 1
+ footprints[(450,_290),(440,_280)]: tower-placement[450,290]
+   + tower-placement[440,280] <= 1
+ footprints[(450,_290),(440,_290)]: tower-placement[450,290]
+   + tower-placement[440,290] <= 1
+ footprints[(450,_290),(450,_280)]: tower-placement[450,280]
+   + tower-placement[450,290] <= 1
+ footprints[(450,_290),(450,_300)]: tower-placement[450,290]
+   + tower-placement[450,300] <= 1
+ footprints[(450,_290),(460,_280)]: tower-placement[450,290]
+   + tower-placement[460,280] <= 1
+ footprints[(450,_290),(460,_290)]: tower-placement[450,290]
+   + tower-placement[460,290] <= 1
+ footprints[(450,_290),(460,_300)]: tower-placement[450,290]
+   + tower-placement[460,300] <= 1
+ footprints[(380,_220),(370,_220)]: tower-placement[380,220]
+   + tower-placement[370,220] <= 1
+ footprints[(380,_220),(370,_230)]: tower-placement[370,230]
+   + tower-placement[380,220] <= 1
+ footprints[(380,_220),(380,_230)]: tower-placement[380,220]
+   + tower-placement[380,230] <= 1
+ footprints[(380,_220),(390,_220)]: tower-placement[380,220]
+   + tower-placement[390,220] <= 1
+ footprints[(380,_220),(390,_230)]: tower-placement[390,230]
+   + tower-placement[380,220] <= 1
+ footprints[(370,_150),(360,_140)]: tower-placement[370,150]
+   + tower-placement[360,140] <= 1
+ footprints[(370,_150),(360,_150)]: tower-placement[370,150]
+   + tower-placement[360,150] <= 1
+ footprints[(370,_150),(370,_140)]: tower-placement[370,140]
+   + tower-placement[370,150] <= 1
+ footprints[(370,_150),(380,_140)]: tower-placement[370,150]
+   + tower-placement[380,140] <= 1
+ footprints[(370,_150),(380,_150)]: tower-placement[370,150]
+   + tower-placement[380,150] <= 1
+ footprints[(270,_350),(260,_340)]: tower-placement[270,350]
+   + tower-placement[260,340] <= 1
+ footprints[(270,_350),(260,_350)]: tower-placement[270,350]
+   + tower-placement[260,350] <= 1
+ footprints[(270,_350),(260,_360)]: tower-placement[260,360]
+   + tower-placement[270,350] <= 1
+ footprints[(270,_350),(270,_340)]: tower-placement[270,340]
+   + tower-placement[270,350] <= 1
+ footprints[(270,_350),(270,_360)]: tower-placement[270,350]
+   + tower-placement[270,360] <= 1
+ footprints[(270,_350),(280,_340)]: tower-placement[270,350]
+   + tower-placement[280,340] <= 1
+ footprints[(270,_350),(280,_350)]: tower-placement[270,350]
+   + tower-placement[280,350] <= 1
+ footprints[(270,_350),(280,_360)]: tower-placement[270,350]
+   + tower-placement[280,360] <= 1
+ footprints[(440,_440),(430,_450)]: tower-placement[430,450]
+   + tower-placement[440,440] <= 1
+ footprints[(440,_440),(440,_450)]: tower-placement[440,440]
+   + tower-placement[440,450] <= 1
+ footprints[(440,_440),(450,_430)]: tower-placement[440,440]
+   + tower-placement[450,430] <= 1
+ footprints[(440,_440),(450,_440)]: tower-placement[440,440]
+   + tower-placement[450,440] <= 1
+ footprints[(440,_440),(450,_450)]: tower-placement[440,440]
+   + tower-placement[450,450] <= 1
+ footprints[(400,_260),(390,_250)]: tower-placement[400,260]
+   + tower-placement[390,250] <= 1
+ footprints[(400,_260),(390,_260)]: tower-placement[400,260]
+   + tower-placement[390,260] <= 1
+ footprints[(400,_260),(400,_250)]: tower-placement[400,250]
+   + tower-placement[400,260] <= 1
+ footprints[(400,_260),(400,_270)]: tower-placement[400,260]
+   + tower-placement[400,270] <= 1
+ footprints[(400,_260),(410,_250)]: tower-placement[400,260]
+   + tower-placement[410,250] <= 1
+ footprints[(400,_260),(410,_260)]: tower-placement[400,260]
+   + tower-placement[410,260] <= 1
+ footprints[(400,_260),(410,_270)]: tower-placement[400,260]
+   + tower-placement[410,270] <= 1
+ footprints[(290,_360),(280,_350)]: tower-placement[290,360]
+   + tower-placement[280,350] <= 1
+ footprints[(290,_360),(280,_360)]: tower-placement[290,360]
+   + tower-placement[280,360] <= 1
+ footprints[(290,_360),(280,_370)]: tower-placement[280,370]
+   + tower-placement[290,360] <= 1
+ footprints[(290,_360),(290,_350)]: tower-placement[290,350]
+   + tower-placement[290,360] <= 1
+ footprints[(290,_360),(290,_370)]: tower-placement[290,360]
+   + tower-placement[290,370] <= 1
+ footprints[(290,_360),(300,_350)]: tower-placement[290,360]
+   + tower-placement[300,350] <= 1
+ footprints[(290,_360),(300,_360)]: tower-placement[290,360]
+   + tower-placement[300,360] <= 1
+ footprints[(290,_360),(300,_370)]: tower-placement[300,370]
+   + tower-placement[290,360] <= 1
+ footprints[(350,_360),(340,_350)]: tower-placement[350,360]
+   + tower-placement[340,350] <= 1
+ footprints[(350,_360),(340,_360)]: tower-placement[350,360]
+   + tower-placement[340,360] <= 1
+ footprints[(350,_360),(340,_370)]: tower-placement[340,370]
+   + tower-placement[350,360] <= 1
+ footprints[(350,_360),(350,_350)]: tower-placement[350,350]
+   + tower-placement[350,360] <= 1
+ footprints[(350,_360),(350,_370)]: tower-placement[350,360]
+   + tower-placement[350,370] <= 1
+ footprints[(350,_360),(360,_350)]: tower-placement[350,360]
+   + tower-placement[360,350] <= 1
+ footprints[(350,_360),(360,_360)]: tower-placement[350,360]
+   + tower-placement[360,360] <= 1
+ footprints[(350,_360),(360,_370)]: tower-placement[350,360]
+   + tower-placement[360,370] <= 1
+ footprints[(420,_270),(410,_260)]: tower-placement[420,270]
+   + tower-placement[410,260] <= 1
+ footprints[(420,_270),(410,_270)]: tower-placement[420,270]
+   + tower-placement[410,270] <= 1
+ footprints[(420,_270),(420,_260)]: tower-placement[420,260]
+   + tower-placement[420,270] <= 1
+ footprints[(420,_270),(430,_260)]: tower-placement[420,270]
+   + tower-placement[430,260] <= 1
+ footprints[(420,_270),(430,_270)]: tower-placement[420,270]
+   + tower-placement[430,270] <= 1
+ footprints[(420,_270),(430,_280)]: tower-placement[430,280]
+   + tower-placement[420,270] <= 1
+ footprints[(380,_90),(370,_90)]: tower-placement[380,90]
+   + tower-placement[370,90] <= 1
+ footprints[(380,_90),(370,_100)]: tower-placement[370,100]
+   + tower-placement[380,90] <= 1
+ footprints[(380,_90),(380,_100)]: tower-placement[380,90]
+   + tower-placement[380,100] <= 1
+ footprints[(380,_90),(390,_90)]: tower-placement[380,90]
+   + tower-placement[390,90] <= 1
+ footprints[(380,_90),(390,_100)]: tower-placement[390,100]
+   + tower-placement[380,90] <= 1
+ footprints[(370,_20),(360,_10)]: tower-placement[370,20]
+   + tower-placement[360,10] <= 1
+ footprints[(370,_20),(360,_20)]: tower-placement[370,20]
+   + tower-placement[360,20] <= 1
+ footprints[(370,_20),(370,_10)]: tower-placement[370,10]
+   + tower-placement[370,20] <= 1
+ footprints[(370,_20),(380,_10)]: tower-placement[370,20]
+   + tower-placement[380,10] <= 1
+ footprints[(370,_20),(380,_20)]: tower-placement[370,20]
+   + tower-placement[380,20] <= 1
+ footprints[(370,_370),(360,_360)]: tower-placement[370,370]
+   + tower-placement[360,360] <= 1
+ footprints[(370,_370),(360,_370)]: tower-placement[370,370]
+   + tower-placement[360,370] <= 1
+ footprints[(370,_370),(360,_380)]: tower-placement[360,380]
+   + tower-placement[370,370] <= 1
+ footprints[(370,_370),(370,_360)]: tower-placement[370,360]
+   + tower-placement[370,370] <= 1
+ footprints[(370,_370),(370,_380)]: tower-placement[370,370]
+   + tower-placement[370,380] <= 1
+ footprints[(370,_370),(380,_360)]: tower-placement[370,370]
+   + tower-placement[380,360] <= 1
+ footprints[(370,_370),(380,_370)]: tower-placement[370,370]
+   + tower-placement[380,370] <= 1
+ footprints[(370,_370),(380,_380)]: tower-placement[370,370]
+   + tower-placement[380,380] <= 1
+ footprints[(430,_20),(420,_10)]: tower-placement[430,20]
+   + tower-placement[420,10] <= 1
+ footprints[(430,_20),(420,_20)]: tower-placement[430,20]
+   + tower-placement[420,20] <= 1
+ footprints[(430,_20),(430,_10)]: tower-placement[430,10]
+   + tower-placement[430,20] <= 1
+ footprints[(430,_20),(430,_30)]: tower-placement[430,20]
+   + tower-placement[430,30] <= 1
+ footprints[(430,_20),(440,_10)]: tower-placement[430,20]
+   + tower-placement[440,10] <= 1
+ footprints[(430,_20),(440,_20)]: tower-placement[430,20]
+   + tower-placement[440,20] <= 1
+ footprints[(430,_20),(440,_30)]: tower-placement[430,20]
+   + tower-placement[440,30] <= 1
+ footprints[(320,_120),(310,_110)]: tower-placement[320,120]
+   + tower-placement[310,110] <= 1
+ footprints[(320,_120),(310,_120)]: tower-placement[320,120]
+   + tower-placement[310,120] <= 1
+ footprints[(320,_120),(310,_130)]: tower-placement[310,130]
+   + tower-placement[320,120] <= 1
+ footprints[(320,_120),(320,_110)]: tower-placement[320,110]
+   + tower-placement[320,120] <= 1
+ footprints[(320,_120),(320,_130)]: tower-placement[320,120]
+   + tower-placement[320,130] <= 1
+ footprints[(320,_120),(330,_110)]: tower-placement[320,120]
+   + tower-placement[330,110] <= 1
+ footprints[(320,_120),(330,_120)]: tower-placement[320,120]
+   + tower-placement[330,120] <= 1
+ footprints[(320,_120),(330,_130)]: tower-placement[320,120]
+   + tower-placement[330,130] <= 1
+ footprints[(450,_30),(440,_20)]: tower-placement[450,30]
+   + tower-placement[440,20] <= 1
+ footprints[(450,_30),(440,_30)]: tower-placement[450,30]
+   + tower-placement[440,30] <= 1
+ footprints[(450,_30),(440,_40)]: tower-placement[440,40]
+   + tower-placement[450,30] <= 1
+ footprints[(450,_30),(450,_20)]: tower-placement[450,20]
+   + tower-placement[450,30] <= 1
+ footprints[(450,_30),(450,_40)]: tower-placement[450,30]
+   + tower-placement[450,40] <= 1
+ footprints[(450,_30),(460,_20)]: tower-placement[450,30]
+   + tower-placement[460,20] <= 1
+ footprints[(450,_30),(460,_30)]: tower-placement[450,30]
+   + tower-placement[460,30] <= 1
+ footprints[(450,_30),(460,_40)]: tower-placement[450,30]
+   + tower-placement[460,40] <= 1
+ footprints[(270,_220),(260,_210)]: tower-placement[270,220]
+   + tower-placement[260,210] <= 1
+ footprints[(270,_220),(260,_220)]: tower-placement[270,220]
+   + tower-placement[260,220] <= 1
+ footprints[(270,_220),(260,_230)]: tower-placement[260,230]
+   + tower-placement[270,220] <= 1
+ footprints[(270,_220),(270,_210)]: tower-placement[270,210]
+   + tower-placement[270,220] <= 1
+ footprints[(270,_220),(270,_230)]: tower-placement[270,220]
+   + tower-placement[270,230] <= 1
+ footprints[(230,_40),(220,_30)]: tower-placement[230,40]
+   + tower-placement[220,30] <= 1
+ footprints[(230,_40),(220,_40)]: tower-placement[230,40]
+   + tower-placement[220,40] <= 1
+ footprints[(230,_40),(220,_50)]: tower-placement[220,50]
+   + tower-placement[230,40] <= 1
+ footprints[(230,_40),(230,_30)]: tower-placement[230,30]
+   + tower-placement[230,40] <= 1
+ footprints[(230,_40),(230,_50)]: tower-placement[230,40]
+   + tower-placement[230,50] <= 1
+ footprints[(230,_40),(240,_50)]: tower-placement[230,40]
+   + tower-placement[240,50] <= 1
+ footprints[(230,_390),(220,_380)]: tower-placement[230,390]
+   + tower-placement[220,380] <= 1
+ footprints[(230,_390),(220,_390)]: tower-placement[230,390]
+   + tower-placement[220,390] <= 1
+ footprints[(230,_390),(230,_380)]: tower-placement[230,380]
+   + tower-placement[230,390] <= 1
+ footprints[(230,_390),(240,_380)]: tower-placement[230,390]
+   + tower-placement[240,380] <= 1
+ footprints[(230,_390),(240,_390)]: tower-placement[230,390]
+   + tower-placement[240,390] <= 1
+ footprints[(350,_230),(340,_220)]: tower-placement[350,230]
+   + tower-placement[340,220] <= 1
+ footprints[(350,_230),(340,_230)]: tower-placement[350,230]
+   + tower-placement[340,230] <= 1
+ footprints[(350,_230),(340,_240)]: tower-placement[340,240]
+   + tower-placement[350,230] <= 1
+ footprints[(350,_230),(350,_220)]: tower-placement[350,220]
+   + tower-placement[350,230] <= 1
+ footprints[(350,_230),(350,_240)]: tower-placement[350,230]
+   + tower-placement[350,240] <= 1
+ footprints[(350,_230),(360,_220)]: tower-placement[350,230]
+   + tower-placement[360,220] <= 1
+ footprints[(350,_230),(360,_230)]: tower-placement[350,230]
+   + tower-placement[360,230] <= 1
+ footprints[(350,_230),(360,_240)]: tower-placement[350,230]
+   + tower-placement[360,240] <= 1
+ footprints[(130,_240),(120,_230)]: tower-placement[130,240]
+   + tower-placement[120,230] <= 1
+ footprints[(130,_240),(120,_240)]: tower-placement[130,240]
+   + tower-placement[120,240] <= 1
+ footprints[(130,_240),(120,_250)]: tower-placement[120,250]
+   + tower-placement[130,240] <= 1
+ footprints[(130,_240),(130,_230)]: tower-placement[130,230]
+   + tower-placement[130,240] <= 1
+ footprints[(130,_240),(130,_250)]: tower-placement[130,240]
+   + tower-placement[130,250] <= 1
+ footprints[(130,_240),(140,_230)]: tower-placement[130,240]
+   + tower-placement[140,230] <= 1
+ footprints[(130,_240),(140,_240)]: tower-placement[130,240]
+   + tower-placement[140,240] <= 1
+ footprints[(130,_240),(140,_250)]: tower-placement[130,240]
+   + tower-placement[140,250] <= 1
+ footprints[(240,_330),(240,_340)]: tower-placement[240,330]
+   + tower-placement[240,340] <= 1
+ footprints[(240,_330),(250,_320)]: tower-placement[240,330]
+   + tower-placement[250,320] <= 1
+ footprints[(240,_330),(250,_330)]: tower-placement[250,330]
+   + tower-placement[240,330] <= 1
+ footprints[(240,_330),(250,_340)]: tower-placement[250,340]
+   + tower-placement[240,330] <= 1
+ footprints[(20,_340),(10,_330)]: tower-placement[20,340]
+   + tower-placement[10,330] <= 1
+ footprints[(20,_340),(10,_340)]: tower-placement[20,340]
+   + tower-placement[10,340] <= 1
+ footprints[(20,_340),(10,_350)]: tower-placement[10,350]
+   + tower-placement[20,340] <= 1
+ footprints[(20,_340),(20,_330)]: tower-placement[20,330]
+   + tower-placement[20,340] <= 1
+ footprints[(20,_340),(20,_350)]: tower-placement[20,340]
+   + tower-placement[20,350] <= 1
+ footprints[(20,_340),(30,_330)]: tower-placement[20,340]
+   + tower-placement[30,330] <= 1
+ footprints[(20,_340),(30,_340)]: tower-placement[20,340]
+   + tower-placement[30,340] <= 1
+ footprints[(20,_340),(30,_350)]: tower-placement[30,350]
+   + tower-placement[20,340] <= 1
+ footprints[(300,_330),(290,_320)]: tower-placement[300,330]
+   + tower-placement[290,320] <= 1
+ footprints[(300,_330),(290,_330)]: tower-placement[300,330]
+   + tower-placement[290,330] <= 1
+ footprints[(300,_330),(290,_340)]: tower-placement[300,330]
+   + tower-placement[290,340] <= 1
+ footprints[(300,_330),(300,_320)]: tower-placement[300,320]
+   + tower-placement[300,330] <= 1
+ footprints[(300,_330),(300,_340)]: tower-placement[300,330]
+   + tower-placement[300,340] <= 1
+ footprints[(300,_330),(310,_330)]: tower-placement[300,330]
+   + tower-placement[310,330] <= 1
+ footprints[(300,_330),(310,_340)]: tower-placement[300,330]
+   + tower-placement[310,340] <= 1
+ footprints[(150,_250),(140,_240)]: tower-placement[150,250]
+   + tower-placement[140,240] <= 1
+ footprints[(150,_250),(140,_250)]: tower-placement[150,250]
+   + tower-placement[140,250] <= 1
+ footprints[(150,_250),(140,_260)]: tower-placement[140,260]
+   + tower-placement[150,250] <= 1
+ footprints[(150,_250),(150,_240)]: tower-placement[150,240]
+   + tower-placement[150,250] <= 1
+ footprints[(150,_250),(150,_260)]: tower-placement[150,250]
+   + tower-placement[150,260] <= 1
+ footprints[(150,_250),(160,_240)]: tower-placement[150,250]
+   + tower-placement[160,240] <= 1
+ footprints[(150,_250),(160,_250)]: tower-placement[150,250]
+   + tower-placement[160,250] <= 1
+ footprints[(150,_250),(160,_260)]: tower-placement[160,260]
+   + tower-placement[150,250] <= 1
+ footprints[(280,_160),(270,_150)]: tower-placement[280,160]
+   + tower-placement[270,150] <= 1
+ footprints[(280,_160),(270,_160)]: tower-placement[280,160]
+   + tower-placement[270,160] <= 1
+ footprints[(280,_160),(270,_170)]: tower-placement[270,170]
+   + tower-placement[280,160] <= 1
+ footprints[(280,_160),(280,_150)]: tower-placement[280,150]
+   + tower-placement[280,160] <= 1
+ footprints[(280,_160),(280,_170)]: tower-placement[280,160]
+   + tower-placement[280,170] <= 1
+ footprints[(280,_160),(290,_150)]: tower-placement[280,160]
+   + tower-placement[290,150] <= 1
+ footprints[(280,_160),(290,_160)]: tower-placement[280,160]
+   + tower-placement[290,160] <= 1
+ footprints[(280,_160),(290,_170)]: tower-placement[280,160]
+   + tower-placement[290,170] <= 1
+ footprints[(270,_90),(260,_80)]: tower-placement[270,90]
+   + tower-placement[260,80] <= 1
+ footprints[(270,_90),(260,_90)]: tower-placement[270,90]
+   + tower-placement[260,90] <= 1
+ footprints[(270,_90),(260,_100)]: tower-placement[260,100]
+   + tower-placement[270,90] <= 1
+ footprints[(270,_90),(270,_80)]: tower-placement[270,80]
+   + tower-placement[270,90] <= 1
+ footprints[(270,_90),(270,_100)]: tower-placement[270,90]
+   + tower-placement[270,100] <= 1
+ footprints[(270,_90),(280,_90)]: tower-placement[270,90]
+   + tower-placement[280,90] <= 1
+ footprints[(270,_90),(280,_100)]: tower-placement[270,90]
+   + tower-placement[280,100] <= 1
+ footprints[(50,_450),(40,_440)]: tower-placement[50,450]
+   + tower-placement[40,440] <= 1
+ footprints[(50,_450),(40,_450)]: tower-placement[50,450]
+   + tower-placement[40,450] <= 1
+ footprints[(50,_450),(40,_460)]: tower-placement[40,460]
+   + tower-placement[50,450] <= 1
+ footprints[(50,_450),(50,_460)]: tower-placement[50,450]
+   + tower-placement[50,460] <= 1
+ footprints[(50,_450),(60,_460)]: tower-placement[50,450]
+   + tower-placement[60,460] <= 1
+ footprints[(260,_370),(250,_360)]: tower-placement[260,370]
+   + tower-placement[250,360] <= 1
+ footprints[(260,_370),(250,_370)]: tower-placement[260,370]
+   + tower-placement[250,370] <= 1
+ footprints[(260,_370),(250,_380)]: tower-placement[250,380]
+   + tower-placement[260,370] <= 1
+ footprints[(260,_370),(260,_360)]: tower-placement[260,360]
+   + tower-placement[260,370] <= 1
+ footprints[(260,_370),(260,_380)]: tower-placement[260,370]
+   + tower-placement[260,380] <= 1
+ footprints[(260,_370),(270,_360)]: tower-placement[260,370]
+   + tower-placement[270,360] <= 1
+ footprints[(260,_370),(270,_370)]: tower-placement[260,370]
+   + tower-placement[270,370] <= 1
+ footprints[(260,_370),(270,_380)]: tower-placement[260,370]
+   + tower-placement[270,380] <= 1
+ footprints[(180,_10),(170,_10)]: tower-placement[180,10]
+   + tower-placement[170,10] <= 1
+ footprints[(180,_10),(170,_20)]: tower-placement[170,20]
+   + tower-placement[180,10] <= 1
+ footprints[(180,_10),(180,_20)]: tower-placement[180,10]
+   + tower-placement[180,20] <= 1
+ footprints[(180,_10),(190,_10)]: tower-placement[180,10]
+   + tower-placement[190,10] <= 1
+ footprints[(180,_10),(190,_20)]: tower-placement[180,10]
+   + tower-placement[190,20] <= 1
+ footprints[(290,_100),(280,_90)]: tower-placement[290,100]
+   + tower-placement[280,90] <= 1
+ footprints[(290,_100),(280,_100)]: tower-placement[290,100]
+   + tower-placement[280,100] <= 1
+ footprints[(290,_100),(280,_110)]: tower-placement[280,110]
+   + tower-placement[290,100] <= 1
+ footprints[(290,_100),(290,_90)]: tower-placement[290,90]
+   + tower-placement[290,100] <= 1
+ footprints[(290,_100),(290,_110)]: tower-placement[290,100]
+   + tower-placement[290,110] <= 1
+ footprints[(290,_100),(300,_90)]: tower-placement[290,100]
+   + tower-placement[300,90] <= 1
+ footprints[(290,_100),(300,_100)]: tower-placement[300,100]
+   + tower-placement[290,100] <= 1
+ footprints[(290,_100),(300,_110)]: tower-placement[300,110]
+   + tower-placement[290,100] <= 1
+ footprints[(110,_290),(100,_280)]: tower-placement[110,290]
+   + tower-placement[100,280] <= 1
+ footprints[(110,_290),(100,_290)]: tower-placement[110,290]
+   + tower-placement[100,290] <= 1
+ footprints[(110,_290),(100,_300)]: tower-placement[100,300]
+   + tower-placement[110,290] <= 1
+ footprints[(110,_290),(110,_280)]: tower-placement[110,280]
+   + tower-placement[110,290] <= 1
+ footprints[(110,_290),(110,_300)]: tower-placement[110,290]
+   + tower-placement[110,300] <= 1
+ footprints[(110,_290),(120,_280)]: tower-placement[110,290]
+   + tower-placement[120,280] <= 1
+ footprints[(110,_290),(120,_290)]: tower-placement[120,290]
+   + tower-placement[110,290] <= 1
+ footprints[(110,_290),(120,_300)]: tower-placement[120,300]
+   + tower-placement[110,290] <= 1
+ footprints[(350,_100),(340,_90)]: tower-placement[350,100]
+   + tower-placement[340,90] <= 1
+ footprints[(350,_100),(340,_100)]: tower-placement[350,100]
+   + tower-placement[340,100] <= 1
+ footprints[(350,_100),(340,_110)]: tower-placement[340,110]
+   + tower-placement[350,100] <= 1
+ footprints[(350,_100),(350,_90)]: tower-placement[350,90]
+   + tower-placement[350,100] <= 1
+ footprints[(350,_100),(350,_110)]: tower-placement[350,100]
+   + tower-placement[350,110] <= 1
+ footprints[(350,_100),(360,_90)]: tower-placement[350,100]
+   + tower-placement[360,90] <= 1
+ footprints[(350,_100),(360,_100)]: tower-placement[350,100]
+   + tower-placement[360,100] <= 1
+ footprints[(350,_100),(360,_110)]: tower-placement[350,100]
+   + tower-placement[360,110] <= 1
+ footprints[(170,_290),(160,_280)]: tower-placement[170,290]
+   + tower-placement[160,280] <= 1
+ footprints[(170,_290),(160,_290)]: tower-placement[170,290]
+   + tower-placement[160,290] <= 1
+ footprints[(170,_290),(160,_300)]: tower-placement[160,300]
+   + tower-placement[170,290] <= 1
+ footprints[(170,_290),(170,_280)]: tower-placement[170,280]
+   + tower-placement[170,290] <= 1
+ footprints[(170,_290),(170,_300)]: tower-placement[170,290]
+   + tower-placement[170,300] <= 1
+ footprints[(200,_20),(190,_10)]: tower-placement[200,20]
+   + tower-placement[190,10] <= 1
+ footprints[(200,_20),(190,_20)]: tower-placement[200,20]
+   + tower-placement[190,20] <= 1
+ footprints[(200,_20),(190,_30)]: tower-placement[190,30]
+   + tower-placement[200,20] <= 1
+ footprints[(200,_20),(200,_10)]: tower-placement[200,10]
+   + tower-placement[200,20] <= 1
+ footprints[(200,_20),(200,_30)]: tower-placement[200,20]
+   + tower-placement[200,30] <= 1
+ footprints[(200,_20),(210,_10)]: tower-placement[200,20]
+   + tower-placement[210,10] <= 1
+ footprints[(200,_20),(210,_20)]: tower-placement[200,20]
+   + tower-placement[210,20] <= 1
+ footprints[(200,_20),(210,_30)]: tower-placement[210,30]
+   + tower-placement[200,20] <= 1
+ footprints[(340,_380),(330,_370)]: tower-placement[340,380]
+   + tower-placement[330,370] <= 1
+ footprints[(340,_380),(330,_380)]: tower-placement[340,380]
+   + tower-placement[330,380] <= 1
+ footprints[(340,_380),(330,_390)]: tower-placement[340,380]
+   + tower-placement[330,390] <= 1
+ footprints[(340,_380),(340,_370)]: tower-placement[340,370]
+   + tower-placement[340,380] <= 1
+ footprints[(340,_380),(340,_390)]: tower-placement[340,380]
+   + tower-placement[340,390] <= 1
+ footprints[(340,_380),(350,_370)]: tower-placement[340,380]
+   + tower-placement[350,370] <= 1
+ footprints[(340,_380),(350,_380)]: tower-placement[340,380]
+   + tower-placement[350,380] <= 1
+ footprints[(340,_380),(350,_390)]: tower-placement[340,380]
+   + tower-placement[350,390] <= 1
+ footprints[(120,_390),(110,_390)]: tower-placement[120,390]
+   + tower-placement[110,390] <= 1
+ footprints[(120,_390),(130,_390)]: tower-placement[120,390]
+   + tower-placement[130,390] <= 1
+ footprints[(250,_300),(250,_290)]: tower-placement[250,290]
+   + tower-placement[250,300] <= 1
+ footprints[(250,_300),(250,_310)]: tower-placement[250,300]
+   + tower-placement[250,310] <= 1
+ footprints[(250,_300),(260,_290)]: tower-placement[250,300]
+   + tower-placement[260,290] <= 1
+ footprints[(250,_300),(260,_300)]: tower-placement[250,300]
+   + tower-placement[260,300] <= 1
+ footprints[(250,_300),(260,_310)]: tower-placement[250,300]
+   + tower-placement[260,310] <= 1
+ footprints[(140,_50),(130,_40)]: tower-placement[140,50]
+   + tower-placement[130,40] <= 1
+ footprints[(140,_50),(130,_50)]: tower-placement[140,50]
+   + tower-placement[130,50] <= 1
+ footprints[(140,_50),(130,_60)]: tower-placement[130,60]
+   + tower-placement[140,50] <= 1
+ footprints[(140,_50),(140,_40)]: tower-placement[140,40]
+   + tower-placement[140,50] <= 1
+ footprints[(140,_50),(140,_60)]: tower-placement[140,50]
+   + tower-placement[140,60] <= 1
+ footprints[(140,_50),(150,_40)]: tower-placement[140,50]
+   + tower-placement[150,40] <= 1
+ footprints[(140,_50),(150,_50)]: tower-placement[140,50]
+   + tower-placement[150,50] <= 1
+ footprints[(140,_50),(150,_60)]: tower-placement[140,50]
+   + tower-placement[150,60] <= 1
+ footprints[(310,_140),(300,_130)]: tower-placement[310,140]
+   + tower-placement[300,130] <= 1
+ footprints[(310,_140),(300,_140)]: tower-placement[310,140]
+   + tower-placement[300,140] <= 1
+ footprints[(310,_140),(300,_150)]: tower-placement[300,150]
+   + tower-placement[310,140] <= 1
+ footprints[(310,_140),(310,_130)]: tower-placement[310,130]
+   + tower-placement[310,140] <= 1
+ footprints[(310,_140),(310,_150)]: tower-placement[310,140]
+   + tower-placement[310,150] <= 1
+ footprints[(310,_140),(320,_130)]: tower-placement[310,140]
+   + tower-placement[320,130] <= 1
+ footprints[(310,_140),(320,_140)]: tower-placement[310,140]
+   + tower-placement[320,140] <= 1
+ footprints[(310,_140),(320,_150)]: tower-placement[310,140]
+   + tower-placement[320,150] <= 1
+ footprints[(50,_320),(40,_310)]: tower-placement[50,320]
+   + tower-placement[40,310] <= 1
+ footprints[(50,_320),(40,_320)]: tower-placement[50,320]
+   + tower-placement[40,320] <= 1
+ footprints[(50,_320),(40,_330)]: tower-placement[40,330]
+   + tower-placement[50,320] <= 1
+ footprints[(50,_320),(50,_310)]: tower-placement[50,310]
+   + tower-placement[50,320] <= 1
+ footprints[(50,_320),(50,_330)]: tower-placement[50,320]
+   + tower-placement[50,330] <= 1
+ footprints[(50,_320),(60,_310)]: tower-placement[50,320]
+   + tower-placement[60,310] <= 1
+ footprints[(50,_320),(60,_320)]: tower-placement[50,320]
+   + tower-placement[60,320] <= 1
+ footprints[(260,_240),(250,_230)]: tower-placement[260,240]
+   + tower-placement[250,230] <= 1
+ footprints[(260,_240),(250,_240)]: tower-placement[260,240]
+   + tower-placement[250,240] <= 1
+ footprints[(260,_240),(250,_250)]: tower-placement[250,250]
+   + tower-placement[260,240] <= 1
+ footprints[(260,_240),(260,_230)]: tower-placement[260,230]
+   + tower-placement[260,240] <= 1
+ footprints[(260,_240),(260,_250)]: tower-placement[260,240]
+   + tower-placement[260,250] <= 1
+ footprints[(260,_240),(270,_230)]: tower-placement[260,240]
+   + tower-placement[270,230] <= 1
+ footprints[(260,_240),(270,_240)]: tower-placement[260,240]
+   + tower-placement[270,240] <= 1
+ footprints[(260,_240),(270,_250)]: tower-placement[260,240]
+   + tower-placement[270,250] <= 1
+ footprints[(220,_60),(210,_50)]: tower-placement[220,60]
+   + tower-placement[210,50] <= 1
+ footprints[(220,_60),(210,_60)]: tower-placement[220,60]
+   + tower-placement[210,60] <= 1
+ footprints[(220,_60),(210,_70)]: tower-placement[210,70]
+   + tower-placement[220,60] <= 1
+ footprints[(220,_60),(220,_50)]: tower-placement[220,50]
+   + tower-placement[220,60] <= 1
+ footprints[(220,_60),(220,_70)]: tower-placement[220,60]
+   + tower-placement[220,70] <= 1
+ footprints[(220,_60),(230,_50)]: tower-placement[220,60]
+   + tower-placement[230,50] <= 1
+ footprints[(220,_60),(230,_60)]: tower-placement[220,60]
+   + tower-placement[230,60] <= 1
+ footprints[(220,_60),(230,_70)]: tower-placement[220,60]
+   + tower-placement[230,70] <= 1
+ footprints[(170,_160),(160,_150)]: tower-placement[170,160]
+   + tower-placement[160,150] <= 1
+ footprints[(170,_160),(160,_160)]: tower-placement[170,160]
+   + tower-placement[160,160] <= 1
+ footprints[(170,_160),(160,_170)]: tower-placement[160,170]
+   + tower-placement[170,160] <= 1
+ footprints[(170,_160),(170,_150)]: tower-placement[170,150]
+   + tower-placement[170,160] <= 1
+ footprints[(170,_160),(170,_170)]: tower-placement[170,160]
+   + tower-placement[170,170] <= 1
+ footprints[(240,_70),(230,_60)]: tower-placement[240,70]
+   + tower-placement[230,60] <= 1
+ footprints[(240,_70),(230,_70)]: tower-placement[240,70]
+   + tower-placement[230,70] <= 1
+ footprints[(240,_70),(230,_80)]: tower-placement[230,80]
+   + tower-placement[240,70] <= 1
+ footprints[(240,_70),(240,_60)]: tower-placement[240,60]
+   + tower-placement[240,70] <= 1
+ footprints[(240,_70),(240,_80)]: tower-placement[240,70]
+   + tower-placement[240,80] <= 1
+ footprints[(240,_70),(250,_70)]: tower-placement[250,70]
+   + tower-placement[240,70] <= 1
+ footprints[(240,_70),(250,_80)]: tower-placement[250,80]
+   + tower-placement[240,70] <= 1
+ footprints[(20,_80),(10,_70)]: tower-placement[20,80]
+   + tower-placement[10,70] <= 1
+ footprints[(20,_80),(10,_80)]: tower-placement[20,80]
+   + tower-placement[10,80] <= 1
+ footprints[(20,_80),(10,_90)]: tower-placement[10,90]
+   + tower-placement[20,80] <= 1
+ footprints[(20,_80),(20,_70)]: tower-placement[20,70]
+   + tower-placement[20,80] <= 1
+ footprints[(20,_80),(20,_90)]: tower-placement[20,80]
+   + tower-placement[20,90] <= 1
+ footprints[(20,_80),(30,_70)]: tower-placement[20,80]
+   + tower-placement[30,70] <= 1
+ footprints[(20,_80),(30,_80)]: tower-placement[20,80]
+   + tower-placement[30,80] <= 1
+ footprints[(20,_80),(30,_90)]: tower-placement[30,90]
+   + tower-placement[20,80] <= 1
+ footprints[(120,_260),(110,_250)]: tower-placement[120,260]
+   + tower-placement[110,250] <= 1
+ footprints[(120,_260),(110,_260)]: tower-placement[120,260]
+   + tower-placement[110,260] <= 1
+ footprints[(120,_260),(110,_270)]: tower-placement[120,260]
+   + tower-placement[110,270] <= 1
+ footprints[(120,_260),(120,_250)]: tower-placement[120,250]
+   + tower-placement[120,260] <= 1
+ footprints[(120,_260),(120,_270)]: tower-placement[120,260]
+   + tower-placement[120,270] <= 1
+ footprints[(120,_260),(130,_250)]: tower-placement[120,260]
+   + tower-placement[130,250] <= 1
+ footprints[(120,_260),(130,_260)]: tower-placement[120,260]
+   + tower-placement[130,260] <= 1
+ footprints[(120,_260),(130,_270)]: tower-placement[120,260]
+   + tower-placement[130,270] <= 1
+ footprints[(10,_360),(10,_350)]: tower-placement[10,350]
+   + tower-placement[10,360] <= 1
+ footprints[(10,_360),(10,_370)]: tower-placement[10,360]
+   + tower-placement[10,370] <= 1
+ footprints[(10,_360),(20,_350)]: tower-placement[10,360]
+   + tower-placement[20,350] <= 1
+ footprints[(10,_360),(20,_360)]: tower-placement[10,360]
+   + tower-placement[20,360] <= 1
+ footprints[(10,_360),(20,_370)]: tower-placement[10,360]
+   + tower-placement[20,370] <= 1
+ footprints[(250,_170),(250,_160)]: tower-placement[250,160]
+   + tower-placement[250,170] <= 1
+ footprints[(250,_170),(250,_180)]: tower-placement[250,170]
+   + tower-placement[250,180] <= 1
+ footprints[(250,_170),(260,_160)]: tower-placement[250,170]
+   + tower-placement[260,160] <= 1
+ footprints[(250,_170),(260,_170)]: tower-placement[250,170]
+   + tower-placement[260,170] <= 1
+ footprints[(250,_170),(260,_180)]: tower-placement[250,170]
+   + tower-placement[260,180] <= 1
+ footprints[(140,_270),(130,_260)]: tower-placement[140,270]
+   + tower-placement[130,260] <= 1
+ footprints[(140,_270),(130,_270)]: tower-placement[140,270]
+   + tower-placement[130,270] <= 1
+ footprints[(140,_270),(130,_280)]: tower-placement[130,280]
+   + tower-placement[140,270] <= 1
+ footprints[(140,_270),(140,_260)]: tower-placement[140,260]
+   + tower-placement[140,270] <= 1
+ footprints[(140,_270),(140,_280)]: tower-placement[140,270]
+   + tower-placement[140,280] <= 1
+ footprints[(140,_270),(150,_260)]: tower-placement[140,270]
+   + tower-placement[150,260] <= 1
+ footprints[(140,_270),(150,_270)]: tower-placement[140,270]
+   + tower-placement[150,270] <= 1
+ footprints[(140,_270),(150,_280)]: tower-placement[140,270]
+   + tower-placement[150,280] <= 1
+ footprints[(310,_10),(300,_10)]: tower-placement[310,10]
+   + tower-placement[300,10] <= 1
+ footprints[(310,_10),(300,_20)]: tower-placement[300,20]
+   + tower-placement[310,10] <= 1
+ footprints[(310,_10),(310,_20)]: tower-placement[310,10]
+   + tower-placement[310,20] <= 1
+ footprints[(310,_10),(320,_10)]: tower-placement[310,10]
+   + tower-placement[320,10] <= 1
+ footprints[(310,_10),(320,_20)]: tower-placement[310,10]
+   + tower-placement[320,20] <= 1
+ footprints[(90,_20),(80,_10)]: tower-placement[90,20]
+   + tower-placement[80,10] <= 1
+ footprints[(90,_20),(80,_20)]: tower-placement[90,20]
+   + tower-placement[80,20] <= 1
+ footprints[(90,_20),(80,_30)]: tower-placement[80,30]
+   + tower-placement[90,20] <= 1
+ footprints[(90,_20),(90,_10)]: tower-placement[90,10]
+   + tower-placement[90,20] <= 1
+ footprints[(90,_20),(90,_30)]: tower-placement[90,20]
+   + tower-placement[90,30] <= 1
+ footprints[(90,_20),(100,_10)]: tower-placement[90,20]
+   + tower-placement[100,10] <= 1
+ footprints[(90,_20),(100,_20)]: tower-placement[90,20]
+   + tower-placement[100,20] <= 1
+ footprints[(90,_20),(100,_30)]: tower-placement[90,20]
+   + tower-placement[100,30] <= 1
+ footprints[(50,_190),(40,_180)]: tower-placement[50,190]
+   + tower-placement[40,180] <= 1
+ footprints[(50,_190),(40,_190)]: tower-placement[50,190]
+   + tower-placement[40,190] <= 1
+ footprints[(50,_190),(50,_180)]: tower-placement[50,180]
+   + tower-placement[50,190] <= 1
+ footprints[(50,_190),(60,_180)]: tower-placement[50,190]
+   + tower-placement[60,180] <= 1
+ footprints[(50,_190),(60,_190)]: tower-placement[50,190]
+   + tower-placement[60,190] <= 1
+ footprints[(260,_110),(250,_100)]: tower-placement[260,110]
+   + tower-placement[250,100] <= 1
+ footprints[(260,_110),(250,_110)]: tower-placement[260,110]
+   + tower-placement[250,110] <= 1
+ footprints[(260,_110),(250,_120)]: tower-placement[250,120]
+   + tower-placement[260,110] <= 1
+ footprints[(260,_110),(260,_100)]: tower-placement[260,100]
+   + tower-placement[260,110] <= 1
+ footprints[(260,_110),(260,_120)]: tower-placement[260,110]
+   + tower-placement[260,120] <= 1
+ footprints[(260,_110),(270,_100)]: tower-placement[260,110]
+   + tower-placement[270,100] <= 1
+ footprints[(260,_110),(270,_110)]: tower-placement[260,110]
+   + tower-placement[270,110] <= 1
+ footprints[(260,_110),(270,_120)]: tower-placement[260,110]
+   + tower-placement[270,120] <= 1
+ footprints[(80,_300),(70,_290)]: tower-placement[80,300]
+   + tower-placement[70,290] <= 1
+ footprints[(80,_300),(70,_300)]: tower-placement[80,300]
+   + tower-placement[70,300] <= 1
+ footprints[(80,_300),(70,_310)]: tower-placement[70,310]
+   + tower-placement[80,300] <= 1
+ footprints[(80,_300),(80,_290)]: tower-placement[80,290]
+   + tower-placement[80,300] <= 1
+ footprints[(80,_300),(80,_310)]: tower-placement[80,300]
+   + tower-placement[80,310] <= 1
+ footprints[(80,_300),(90,_290)]: tower-placement[80,300]
+   + tower-placement[90,290] <= 1
+ footprints[(80,_300),(90,_300)]: tower-placement[80,300]
+   + tower-placement[90,300] <= 1
+ footprints[(80,_300),(90,_310)]: tower-placement[80,300]
+   + tower-placement[90,310] <= 1
+ footprints[(40,_120),(30,_110)]: tower-placement[40,120]
+   + tower-placement[30,110] <= 1
+ footprints[(40,_120),(30,_120)]: tower-placement[40,120]
+   + tower-placement[30,120] <= 1
+ footprints[(40,_120),(30,_130)]: tower-placement[30,130]
+   + tower-placement[40,120] <= 1
+ footprints[(40,_120),(40,_110)]: tower-placement[40,110]
+   + tower-placement[40,120] <= 1
+ footprints[(40,_120),(40,_130)]: tower-placement[40,120]
+   + tower-placement[40,130] <= 1
+ footprints[(40,_120),(50,_110)]: tower-placement[40,120]
+   + tower-placement[50,110] <= 1
+ footprints[(40,_120),(50,_120)]: tower-placement[40,120]
+   + tower-placement[50,120] <= 1
+ footprints[(40,_120),(50,_130)]: tower-placement[40,120]
+   + tower-placement[50,130] <= 1
+ footprints[(110,_30),(100,_20)]: tower-placement[110,30]
+   + tower-placement[100,20] <= 1
+ footprints[(110,_30),(100,_30)]: tower-placement[110,30]
+   + tower-placement[100,30] <= 1
+ footprints[(110,_30),(100,_40)]: tower-placement[100,40]
+   + tower-placement[110,30] <= 1
+ footprints[(110,_30),(110,_20)]: tower-placement[110,20]
+   + tower-placement[110,30] <= 1
+ footprints[(110,_30),(110,_40)]: tower-placement[110,30]
+   + tower-placement[110,40] <= 1
+ footprints[(110,_30),(120,_20)]: tower-placement[110,30]
+   + tower-placement[120,20] <= 1
+ footprints[(110,_30),(120,_30)]: tower-placement[120,30]
+   + tower-placement[110,30] <= 1
+ footprints[(110,_30),(120,_40)]: tower-placement[120,40]
+   + tower-placement[110,30] <= 1
+ footprints[(170,_30),(160,_20)]: tower-placement[170,30]
+   + tower-placement[160,20] <= 1
+ footprints[(170,_30),(160,_30)]: tower-placement[170,30]
+   + tower-placement[160,30] <= 1
+ footprints[(170,_30),(160,_40)]: tower-placement[160,40]
+   + tower-placement[170,30] <= 1
+ footprints[(170,_30),(170,_20)]: tower-placement[170,20]
+   + tower-placement[170,30] <= 1
+ footprints[(170,_30),(170,_40)]: tower-placement[170,30]
+   + tower-placement[170,40] <= 1
+ footprints[(170,_30),(180,_20)]: tower-placement[170,30]
+   + tower-placement[180,20] <= 1
+ footprints[(170,_30),(180,_30)]: tower-placement[170,30]
+   + tower-placement[180,30] <= 1
+ footprints[(170,_30),(180,_40)]: tower-placement[170,30]
+   + tower-placement[180,40] <= 1
+ footprints[(60,_130),(50,_120)]: tower-placement[60,130]
+   + tower-placement[50,120] <= 1
+ footprints[(60,_130),(50,_130)]: tower-placement[60,130]
+   + tower-placement[50,130] <= 1
+ footprints[(60,_130),(50,_140)]: tower-placement[50,140]
+   + tower-placement[60,130] <= 1
+ footprints[(60,_130),(60,_120)]: tower-placement[60,120]
+   + tower-placement[60,130] <= 1
+ footprints[(60,_130),(60,_140)]: tower-placement[60,130]
+   + tower-placement[60,140] <= 1
+ footprints[(160,_310),(150,_300)]: tower-placement[160,310]
+   + tower-placement[150,300] <= 1
+ footprints[(160,_310),(150,_310)]: tower-placement[160,310]
+   + tower-placement[150,310] <= 1
+ footprints[(160,_310),(160,_300)]: tower-placement[160,300]
+   + tower-placement[160,310] <= 1
+ footprints[(160,_310),(170,_300)]: tower-placement[160,310]
+   + tower-placement[170,300] <= 1
+ footprints[(160,_310),(170,_310)]: tower-placement[160,310]
+   + tower-placement[170,310] <= 1
+ footprints[(50,_60),(40,_50)]: tower-placement[50,60]
+   + tower-placement[40,50] <= 1
+ footprints[(50,_60),(40,_60)]: tower-placement[50,60]
+   + tower-placement[40,60] <= 1
+ footprints[(50,_60),(40,_70)]: tower-placement[40,70]
+   + tower-placement[50,60] <= 1
+ footprints[(50,_60),(50,_50)]: tower-placement[50,50]
+   + tower-placement[50,60] <= 1
+ footprints[(50,_60),(50,_70)]: tower-placement[50,60]
+   + tower-placement[50,70] <= 1
+ footprints[(50,_60),(60,_50)]: tower-placement[50,60]
+   + tower-placement[60,50] <= 1
+ footprints[(50,_60),(60,_60)]: tower-placement[50,60]
+   + tower-placement[60,60] <= 1
+ footprints[(50,_60),(60,_70)]: tower-placement[50,60]
+   + tower-placement[60,70] <= 1
+ footprints[(30,_270),(20,_270)]: tower-placement[30,270]
+   + tower-placement[20,270] <= 1
+ footprints[(30,_270),(20,_280)]: tower-placement[30,270]
+   + tower-placement[20,280] <= 1
+ footprints[(30,_270),(30,_280)]: tower-placement[30,270]
+   + tower-placement[30,280] <= 1
+ footprints[(30,_270),(40,_270)]: tower-placement[30,270]
+   + tower-placement[40,270] <= 1
+ footprints[(30,_270),(40,_280)]: tower-placement[30,270]
+   + tower-placement[40,280] <= 1
+ footprints[(160,_180),(150,_170)]: tower-placement[160,180]
+   + tower-placement[150,170] <= 1
+ footprints[(160,_180),(150,_180)]: tower-placement[160,180]
+   + tower-placement[150,180] <= 1
+ footprints[(160,_180),(150,_190)]: tower-placement[160,180]
+   + tower-placement[150,190] <= 1
+ footprints[(160,_180),(160,_170)]: tower-placement[160,170]
+   + tower-placement[160,180] <= 1
+ footprints[(160,_180),(160,_190)]: tower-placement[160,180]
+   + tower-placement[160,190] <= 1
+ footprints[(160,_180),(170,_170)]: tower-placement[160,180]
+   + tower-placement[170,170] <= 1
+ footprints[(160,_180),(170,_180)]: tower-placement[160,180]
+   + tower-placement[170,180] <= 1
+ footprints[(160,_180),(170,_190)]: tower-placement[170,190]
+   + tower-placement[160,180] <= 1
+ footprints[(10,_100),(10,_90)]: tower-placement[10,90]
+   + tower-placement[10,100] <= 1
+ footprints[(10,_100),(10,_110)]: tower-placement[10,100]
+   + tower-placement[10,110] <= 1
+ footprints[(10,_100),(20,_90)]: tower-placement[10,100]
+   + tower-placement[20,90] <= 1
+ footprints[(10,_100),(20,_100)]: tower-placement[10,100]
+   + tower-placement[20,100] <= 1
+ footprints[(10,_100),(20,_110)]: tower-placement[10,100]
+   + tower-placement[20,110] <= 1
+ footprints[(70,_100),(60,_90)]: tower-placement[70,100]
+   + tower-placement[60,90] <= 1
+ footprints[(70,_100),(60,_100)]: tower-placement[70,100]
+   + tower-placement[60,100] <= 1
+ footprints[(70,_100),(60,_110)]: tower-placement[70,100]
+   + tower-placement[60,110] <= 1
+ footprints[(70,_100),(70,_90)]: tower-placement[70,90]
+   + tower-placement[70,100] <= 1
+ footprints[(70,_100),(80,_90)]: tower-placement[70,100]
+   + tower-placement[80,90] <= 1
+ footprints[(80,_40),(70,_30)]: tower-placement[80,40]
+   + tower-placement[70,30] <= 1
+ footprints[(80,_40),(70,_40)]: tower-placement[80,40]
+   + tower-placement[70,40] <= 1
+ footprints[(80,_40),(70,_50)]: tower-placement[70,50]
+   + tower-placement[80,40] <= 1
+ footprints[(80,_40),(80,_30)]: tower-placement[80,30]
+   + tower-placement[80,40] <= 1
+ footprints[(80,_40),(80,_50)]: tower-placement[80,40]
+   + tower-placement[80,50] <= 1
+ footprints[(80,_40),(90,_30)]: tower-placement[80,40]
+   + tower-placement[90,30] <= 1
+ footprints[(80,_40),(90,_40)]: tower-placement[80,40]
+   + tower-placement[90,40] <= 1
+ footprints[(80,_40),(90,_50)]: tower-placement[80,40]
+   + tower-placement[90,50] <= 1
+ footprints[(30,_140),(20,_130)]: tower-placement[30,140]
+   + tower-placement[20,130] <= 1
+ footprints[(30,_140),(20,_140)]: tower-placement[30,140]
+   + tower-placement[20,140] <= 1
+ footprints[(30,_140),(20,_150)]: tower-placement[30,140]
+   + tower-placement[20,150] <= 1
+ footprints[(30,_140),(30,_130)]: tower-placement[30,130]
+   + tower-placement[30,140] <= 1
+ footprints[(30,_140),(30,_150)]: tower-placement[30,140]
+   + tower-placement[30,150] <= 1
+ footprints[(30,_140),(40,_130)]: tower-placement[30,140]
+   + tower-placement[40,130] <= 1
+ footprints[(30,_140),(40,_140)]: tower-placement[30,140]
+   + tower-placement[40,140] <= 1
+ footprints[(30,_140),(40,_150)]: tower-placement[30,140]
+   + tower-placement[40,150] <= 1
+ footprints[(460,_230),(450,_220)]: tower-placement[460,230]
+   + tower-placement[450,220] <= 1
+ footprints[(460,_230),(450,_230)]: tower-placement[460,230]
+   + tower-placement[450,230] <= 1
+ footprints[(460,_230),(450,_240)]: tower-placement[450,240]
+   + tower-placement[460,230] <= 1
+ footprints[(460,_230),(460,_220)]: tower-placement[460,220]
+   + tower-placement[460,230] <= 1
+ footprints[(460,_230),(460,_240)]: tower-placement[460,230]
+   + tower-placement[460,240] <= 1
+ footprints[(30,_10),(20,_10)]: tower-placement[30,10]
+   + tower-placement[20,10] <= 1
+ footprints[(30,_10),(20,_20)]: tower-placement[30,10]
+   + tower-placement[20,20] <= 1
+ footprints[(30,_10),(30,_20)]: tower-placement[30,10]
+   + tower-placement[30,20] <= 1
+ footprints[(30,_10),(40,_10)]: tower-placement[30,10]
+   + tower-placement[40,10] <= 1
+ footprints[(30,_10),(40,_20)]: tower-placement[30,10]
+   + tower-placement[40,20] <= 1
+ footprints[(460,_450),(450,_440)]: tower-placement[460,450]
+   + tower-placement[450,440] <= 1
+ footprints[(460,_450),(450,_450)]: tower-placement[460,450]
+   + tower-placement[450,450] <= 1
+ footprints[(460,_450),(450,_460)]: tower-placement[450,460]
+   + tower-placement[460,450] <= 1
+ footprints[(460,_450),(460,_440)]: tower-placement[460,440]
+   + tower-placement[460,450] <= 1
+ footprints[(460,_450),(460,_460)]: tower-placement[460,450]
+   + tower-placement[460,460] <= 1
+ footprints[(370,_240),(360,_230)]: tower-placement[370,240]
+   + tower-placement[360,230] <= 1
+ footprints[(370,_240),(360,_240)]: tower-placement[370,240]
+   + tower-placement[360,240] <= 1
+ footprints[(370,_240),(360,_250)]: tower-placement[360,250]
+   + tower-placement[370,240] <= 1
+ footprints[(370,_240),(370,_230)]: tower-placement[370,230]
+   + tower-placement[370,240] <= 1
+ footprints[(370,_240),(370,_250)]: tower-placement[370,240]
+   + tower-placement[370,250] <= 1
+ footprints[(370,_240),(380,_230)]: tower-placement[370,240]
+   + tower-placement[380,230] <= 1
+ footprints[(370,_240),(380,_240)]: tower-placement[370,240]
+   + tower-placement[380,240] <= 1
+ footprints[(370,_240),(380,_250)]: tower-placement[370,240]
+   + tower-placement[380,250] <= 1
+ footprints[(430,_240),(420,_230)]: tower-placement[430,240]
+   + tower-placement[420,230] <= 1
+ footprints[(430,_240),(420,_240)]: tower-placement[430,240]
+   + tower-placement[420,240] <= 1
+ footprints[(430,_240),(420,_250)]: tower-placement[430,240]
+   + tower-placement[420,250] <= 1
+ footprints[(430,_240),(430,_230)]: tower-placement[430,230]
+   + tower-placement[430,240] <= 1
+ footprints[(430,_240),(430,_250)]: tower-placement[430,240]
+   + tower-placement[430,250] <= 1
+ footprints[(430,_240),(440,_230)]: tower-placement[430,240]
+   + tower-placement[440,230] <= 1
+ footprints[(430,_240),(440,_240)]: tower-placement[430,240]
+   + tower-placement[440,240] <= 1
+ footprints[(430,_240),(440,_250)]: tower-placement[430,240]
+   + tower-placement[440,250] <= 1
+ footprints[(320,_340),(310,_330)]: tower-placement[320,340]
+   + tower-placement[310,330] <= 1
+ footprints[(320,_340),(310,_340)]: tower-placement[320,340]
+   + tower-placement[310,340] <= 1
+ footprints[(320,_340),(310,_350)]: tower-placement[310,350]
+   + tower-placement[320,340] <= 1
+ footprints[(320,_340),(320,_330)]: tower-placement[320,330]
+   + tower-placement[320,340] <= 1
+ footprints[(320,_340),(320,_350)]: tower-placement[320,340]
+   + tower-placement[320,350] <= 1
+ footprints[(320,_340),(330,_330)]: tower-placement[320,340]
+   + tower-placement[330,330] <= 1
+ footprints[(320,_340),(330,_340)]: tower-placement[320,340]
+   + tower-placement[330,340] <= 1
+ footprints[(320,_340),(330,_350)]: tower-placement[320,340]
+   + tower-placement[330,350] <= 1
+ footprints[(450,_250),(440,_240)]: tower-placement[450,250]
+   + tower-placement[440,240] <= 1
+ footprints[(450,_250),(440,_250)]: tower-placement[450,250]
+   + tower-placement[440,250] <= 1
+ footprints[(450,_250),(440,_260)]: tower-placement[440,260]
+   + tower-placement[450,250] <= 1
+ footprints[(450,_250),(450,_240)]: tower-placement[450,240]
+   + tower-placement[450,250] <= 1
+ footprints[(450,_250),(450,_260)]: tower-placement[450,250]
+   + tower-placement[450,260] <= 1
+ footprints[(450,_250),(460,_240)]: tower-placement[450,250]
+   + tower-placement[460,240] <= 1
+ footprints[(450,_250),(460,_250)]: tower-placement[450,250]
+   + tower-placement[460,250] <= 1
+ footprints[(450,_250),(460,_260)]: tower-placement[450,250]
+   + tower-placement[460,260] <= 1
+ footprints[(420,_10),(410,_10)]: tower-placement[420,10]
+   + tower-placement[410,10] <= 1
+ footprints[(420,_10),(410,_20)]: tower-placement[410,20]
+   + tower-placement[420,10] <= 1
+ footprints[(420,_10),(420,_20)]: tower-placement[420,10]
+   + tower-placement[420,20] <= 1
+ footprints[(420,_10),(430,_10)]: tower-placement[430,10]
+   + tower-placement[420,10] <= 1
+ footprints[(420,_10),(430,_20)]: tower-placement[430,20]
+   + tower-placement[420,10] <= 1
+ footprints[(370,_110),(360,_100)]: tower-placement[370,110]
+   + tower-placement[360,100] <= 1
+ footprints[(370,_110),(360,_110)]: tower-placement[370,110]
+   + tower-placement[360,110] <= 1
+ footprints[(370,_110),(360,_120)]: tower-placement[360,120]
+   + tower-placement[370,110] <= 1
+ footprints[(370,_110),(370,_100)]: tower-placement[370,100]
+   + tower-placement[370,110] <= 1
+ footprints[(370,_110),(370,_120)]: tower-placement[370,110]
+   + tower-placement[370,120] <= 1
+ footprints[(370,_110),(380,_100)]: tower-placement[370,110]
+   + tower-placement[380,100] <= 1
+ footprints[(370,_110),(380,_110)]: tower-placement[370,110]
+   + tower-placement[380,110] <= 1
+ footprints[(370,_110),(380,_120)]: tower-placement[370,110]
+   + tower-placement[380,120] <= 1
+ footprints[(430,_460),(420,_460)]: tower-placement[430,460]
+   + tower-placement[420,460] <= 1
+ footprints[(430,_460),(430,_450)]: tower-placement[430,450]
+   + tower-placement[430,460] <= 1
+ footprints[(430,_460),(440,_450)]: tower-placement[430,460]
+   + tower-placement[440,450] <= 1
+ footprints[(430,_460),(440,_460)]: tower-placement[430,460]
+   + tower-placement[440,460] <= 1
+ footprints[(360,_390),(350,_380)]: tower-placement[360,390]
+   + tower-placement[350,380] <= 1
+ footprints[(360,_390),(350,_390)]: tower-placement[360,390]
+   + tower-placement[350,390] <= 1
+ footprints[(360,_390),(360,_380)]: tower-placement[360,380]
+   + tower-placement[360,390] <= 1
+ footprints[(360,_390),(370,_380)]: tower-placement[360,390]
+   + tower-placement[370,380] <= 1
+ footprints[(360,_390),(370,_390)]: tower-placement[360,390]
+   + tower-placement[370,390] <= 1
+ footprints[(280,_380),(270,_370)]: tower-placement[280,380]
+   + tower-placement[270,370] <= 1
+ footprints[(280,_380),(270,_380)]: tower-placement[280,380]
+   + tower-placement[270,380] <= 1
+ footprints[(280,_380),(270,_390)]: tower-placement[270,390]
+   + tower-placement[280,380] <= 1
+ footprints[(280,_380),(280,_370)]: tower-placement[280,370]
+   + tower-placement[280,380] <= 1
+ footprints[(280,_380),(280,_390)]: tower-placement[280,380]
+   + tower-placement[280,390] <= 1
+ footprints[(280,_380),(290,_370)]: tower-placement[280,380]
+   + tower-placement[290,370] <= 1
+ footprints[(280,_380),(290,_380)]: tower-placement[280,380]
+   + tower-placement[290,380] <= 1
+ footprints[(280,_380),(290,_390)]: tower-placement[280,380]
+   + tower-placement[290,390] <= 1
+ footprints[(270,_310),(260,_300)]: tower-placement[270,310]
+   + tower-placement[260,300] <= 1
+ footprints[(270,_310),(260,_310)]: tower-placement[270,310]
+   + tower-placement[260,310] <= 1
+ footprints[(270,_310),(260,_320)]: tower-placement[260,320]
+   + tower-placement[270,310] <= 1
+ footprints[(270,_310),(270,_300)]: tower-placement[270,300]
+   + tower-placement[270,310] <= 1
+ footprints[(270,_310),(270,_320)]: tower-placement[270,310]
+   + tower-placement[270,320] <= 1
+ footprints[(270,_310),(280,_300)]: tower-placement[270,310]
+   + tower-placement[280,300] <= 1
+ footprints[(270,_310),(280,_310)]: tower-placement[270,310]
+   + tower-placement[280,310] <= 1
+ footprints[(270,_310),(280,_320)]: tower-placement[270,310]
+   + tower-placement[280,320] <= 1
+ footprints[(400,_220),(390,_220)]: tower-placement[400,220]
+   + tower-placement[390,220] <= 1
+ footprints[(400,_220),(390,_230)]: tower-placement[390,230]
+   + tower-placement[400,220] <= 1
+ footprints[(400,_220),(400,_230)]: tower-placement[400,220]
+   + tower-placement[400,230] <= 1
+ footprints[(400,_220),(410,_220)]: tower-placement[400,220]
+   + tower-placement[410,220] <= 1
+ footprints[(400,_220),(410,_230)]: tower-placement[400,220]
+   + tower-placement[410,230] <= 1
+ footprints[(290,_320),(280,_310)]: tower-placement[290,320]
+   + tower-placement[280,310] <= 1
+ footprints[(290,_320),(280,_320)]: tower-placement[290,320]
+   + tower-placement[280,320] <= 1
+ footprints[(290,_320),(280,_330)]: tower-placement[280,330]
+   + tower-placement[290,320] <= 1
+ footprints[(290,_320),(290,_310)]: tower-placement[290,310]
+   + tower-placement[290,320] <= 1
+ footprints[(290,_320),(290,_330)]: tower-placement[290,320]
+   + tower-placement[290,330] <= 1
+ footprints[(290,_320),(300,_320)]: tower-placement[300,320]
+   + tower-placement[290,320] <= 1
+ footprints[(290,_320),(300,_330)]: tower-placement[300,330]
+   + tower-placement[290,320] <= 1
+ footprints[(390,_150),(380,_140)]: tower-placement[390,150]
+   + tower-placement[380,140] <= 1
+ footprints[(390,_150),(380,_150)]: tower-placement[390,150]
+   + tower-placement[380,150] <= 1
+ footprints[(390,_150),(390,_140)]: tower-placement[390,140]
+   + tower-placement[390,150] <= 1
+ footprints[(340,_250),(340,_240)]: tower-placement[340,240]
+   + tower-placement[340,250] <= 1
+ footprints[(340,_250),(340,_260)]: tower-placement[340,250]
+   + tower-placement[340,260] <= 1
+ footprints[(340,_250),(350,_240)]: tower-placement[340,250]
+   + tower-placement[350,240] <= 1
+ footprints[(340,_250),(350,_250)]: tower-placement[340,250]
+   + tower-placement[350,250] <= 1
+ footprints[(340,_250),(350,_260)]: tower-placement[340,250]
+   + tower-placement[350,260] <= 1
+ footprints[(20,_430),(10,_420)]: tower-placement[20,430]
+   + tower-placement[10,420] <= 1
+ footprints[(20,_430),(10,_430)]: tower-placement[20,430]
+   + tower-placement[10,430] <= 1
+ footprints[(20,_430),(10,_440)]: tower-placement[10,440]
+   + tower-placement[20,430] <= 1
+ footprints[(20,_430),(20,_420)]: tower-placement[20,420]
+   + tower-placement[20,430] <= 1
+ footprints[(20,_430),(20,_440)]: tower-placement[20,430]
+   + tower-placement[20,440] <= 1
+ footprints[(20,_430),(30,_430)]: tower-placement[30,430]
+   + tower-placement[20,430] <= 1
+ footprints[(20,_430),(30,_440)]: tower-placement[30,440]
+   + tower-placement[20,430] <= 1
+ footprints[(330,_150),(320,_140)]: tower-placement[330,150]
+   + tower-placement[320,140] <= 1
+ footprints[(330,_150),(320,_150)]: tower-placement[330,150]
+   + tower-placement[320,150] <= 1
+ footprints[(330,_150),(330,_140)]: tower-placement[330,140]
+   + tower-placement[330,150] <= 1
+ footprints[(330,_150),(340,_140)]: tower-placement[330,150]
+   + tower-placement[340,140] <= 1
+ footprints[(330,_150),(340,_150)]: tower-placement[340,150]
+   + tower-placement[330,150] <= 1
+ footprints[(360,_260),(350,_250)]: tower-placement[360,260]
+   + tower-placement[350,250] <= 1
+ footprints[(360,_260),(350,_260)]: tower-placement[360,260]
+   + tower-placement[350,260] <= 1
+ footprints[(360,_260),(360,_250)]: tower-placement[360,250]
+   + tower-placement[360,260] <= 1
+ footprints[(360,_260),(370,_250)]: tower-placement[360,260]
+   + tower-placement[370,250] <= 1
+ footprints[(360,_260),(370,_260)]: tower-placement[360,260]
+   + tower-placement[370,260] <= 1
+ footprints[(310,_360),(300,_350)]: tower-placement[310,360]
+   + tower-placement[300,350] <= 1
+ footprints[(310,_360),(300,_360)]: tower-placement[310,360]
+   + tower-placement[300,360] <= 1
+ footprints[(310,_360),(300,_370)]: tower-placement[300,370]
+   + tower-placement[310,360] <= 1
+ footprints[(310,_360),(310,_350)]: tower-placement[310,350]
+   + tower-placement[310,360] <= 1
+ footprints[(310,_360),(310,_370)]: tower-placement[310,360]
+   + tower-placement[310,370] <= 1
+ footprints[(310,_360),(320,_350)]: tower-placement[310,360]
+   + tower-placement[320,350] <= 1
+ footprints[(310,_360),(320,_360)]: tower-placement[310,360]
+   + tower-placement[320,360] <= 1
+ footprints[(310,_360),(320,_370)]: tower-placement[310,360]
+   + tower-placement[320,370] <= 1
+ footprints[(270,_180),(260,_170)]: tower-placement[270,180]
+   + tower-placement[260,170] <= 1
+ footprints[(270,_180),(260,_180)]: tower-placement[270,180]
+   + tower-placement[260,180] <= 1
+ footprints[(270,_180),(260,_190)]: tower-placement[260,190]
+   + tower-placement[270,180] <= 1
+ footprints[(270,_180),(270,_170)]: tower-placement[270,170]
+   + tower-placement[270,180] <= 1
+ footprints[(270,_180),(270,_190)]: tower-placement[270,180]
+   + tower-placement[270,190] <= 1
+ footprints[(270,_180),(280,_170)]: tower-placement[270,180]
+   + tower-placement[280,170] <= 1
+ footprints[(270,_180),(280,_180)]: tower-placement[270,180]
+   + tower-placement[280,180] <= 1
+ footprints[(270,_180),(280,_190)]: tower-placement[270,180]
+   + tower-placement[280,190] <= 1
+ footprints[(440,_270),(430,_260)]: tower-placement[440,270]
+   + tower-placement[430,260] <= 1
+ footprints[(440,_270),(430,_270)]: tower-placement[440,270]
+   + tower-placement[430,270] <= 1
+ footprints[(440,_270),(430,_280)]: tower-placement[430,280]
+   + tower-placement[440,270] <= 1
+ footprints[(440,_270),(440,_260)]: tower-placement[440,260]
+   + tower-placement[440,270] <= 1
+ footprints[(440,_270),(440,_280)]: tower-placement[440,270]
+   + tower-placement[440,280] <= 1
+ footprints[(440,_270),(450,_260)]: tower-placement[440,270]
+   + tower-placement[450,260] <= 1
+ footprints[(440,_270),(450,_270)]: tower-placement[440,270]
+   + tower-placement[450,270] <= 1
+ footprints[(440,_270),(450,_280)]: tower-placement[450,280]
+   + tower-placement[440,270] <= 1
+ footprints[(390,_20),(380,_10)]: tower-placement[390,20]
+   + tower-placement[380,10] <= 1
+ footprints[(390,_20),(380,_20)]: tower-placement[390,20]
+   + tower-placement[380,20] <= 1
+ footprints[(390,_20),(390,_10)]: tower-placement[390,10]
+   + tower-placement[390,20] <= 1
+ footprints[(390,_20),(400,_10)]: tower-placement[390,20]
+   + tower-placement[400,10] <= 1
+ footprints[(390,_20),(400,_20)]: tower-placement[390,20]
+   + tower-placement[400,20] <= 1
+ footprints[(390,_370),(380,_360)]: tower-placement[390,370]
+   + tower-placement[380,360] <= 1
+ footprints[(390,_370),(380,_370)]: tower-placement[390,370]
+   + tower-placement[380,370] <= 1
+ footprints[(390,_370),(380,_380)]: tower-placement[390,370]
+   + tower-placement[380,380] <= 1
+ footprints[(390,_370),(390,_360)]: tower-placement[390,360]
+   + tower-placement[390,370] <= 1
+ footprints[(390,_370),(390,_380)]: tower-placement[390,370]
+   + tower-placement[390,380] <= 1
+ footprints[(130,_200),(130,_190)]: tower-placement[130,190]
+   + tower-placement[130,200] <= 1
+ footprints[(130,_200),(130,_210)]: tower-placement[130,200]
+   + tower-placement[130,210] <= 1
+ footprints[(130,_200),(140,_190)]: tower-placement[130,200]
+   + tower-placement[140,190] <= 1
+ footprints[(130,_200),(140,_200)]: tower-placement[130,200]
+   + tower-placement[140,200] <= 1
+ footprints[(130,_200),(140,_210)]: tower-placement[130,200]
+   + tower-placement[140,210] <= 1
+ footprints[(340,_120),(330,_110)]: tower-placement[340,120]
+   + tower-placement[330,110] <= 1
+ footprints[(340,_120),(330,_120)]: tower-placement[340,120]
+   + tower-placement[330,120] <= 1
+ footprints[(340,_120),(330,_130)]: tower-placement[340,120]
+   + tower-placement[330,130] <= 1
+ footprints[(340,_120),(340,_110)]: tower-placement[340,110]
+   + tower-placement[340,120] <= 1
+ footprints[(340,_120),(340,_130)]: tower-placement[340,120]
+   + tower-placement[340,130] <= 1
+ footprints[(340,_120),(350,_110)]: tower-placement[340,120]
+   + tower-placement[350,110] <= 1
+ footprints[(340,_120),(350,_120)]: tower-placement[340,120]
+   + tower-placement[350,120] <= 1
+ footprints[(340,_120),(350,_130)]: tower-placement[350,130]
+   + tower-placement[340,120] <= 1
+ footprints[(20,_300),(10,_290)]: tower-placement[20,300]
+   + tower-placement[10,290] <= 1
+ footprints[(20,_300),(10,_300)]: tower-placement[20,300]
+   + tower-placement[10,300] <= 1
+ footprints[(20,_300),(10,_310)]: tower-placement[10,310]
+   + tower-placement[20,300] <= 1
+ footprints[(20,_300),(20,_290)]: tower-placement[20,290]
+   + tower-placement[20,300] <= 1
+ footprints[(20,_300),(20,_310)]: tower-placement[20,300]
+   + tower-placement[20,310] <= 1
+ footprints[(20,_300),(30,_290)]: tower-placement[20,300]
+   + tower-placement[30,290] <= 1
+ footprints[(20,_300),(30,_300)]: tower-placement[30,300]
+   + tower-placement[20,300] <= 1
+ footprints[(20,_300),(30,_310)]: tower-placement[30,310]
+   + tower-placement[20,300] <= 1
+ footprints[(190,_40),(180,_30)]: tower-placement[190,40]
+   + tower-placement[180,30] <= 1
+ footprints[(190,_40),(180,_40)]: tower-placement[190,40]
+   + tower-placement[180,40] <= 1
+ footprints[(190,_40),(180,_50)]: tower-placement[180,50]
+   + tower-placement[190,40] <= 1
+ footprints[(190,_40),(190,_30)]: tower-placement[190,30]
+   + tower-placement[190,40] <= 1
+ footprints[(190,_40),(190,_50)]: tower-placement[190,40]
+   + tower-placement[190,50] <= 1
+ footprints[(190,_40),(200,_30)]: tower-placement[190,40]
+   + tower-placement[200,30] <= 1
+ footprints[(190,_40),(200,_40)]: tower-placement[190,40]
+   + tower-placement[200,40] <= 1
+ footprints[(190,_40),(200,_50)]: tower-placement[200,50]
+   + tower-placement[190,40] <= 1
+ footprints[(330,_20),(320,_10)]: tower-placement[330,20]
+   + tower-placement[320,10] <= 1
+ footprints[(330,_20),(320,_20)]: tower-placement[330,20]
+   + tower-placement[320,20] <= 1
+ footprints[(330,_20),(330,_10)]: tower-placement[330,10]
+   + tower-placement[330,20] <= 1
+ footprints[(330,_20),(340,_10)]: tower-placement[330,20]
+   + tower-placement[340,10] <= 1
+ footprints[(330,_20),(340,_20)]: tower-placement[340,20]
+   + tower-placement[330,20] <= 1
+ footprints[(190,_390),(180,_390)]: tower-placement[180,390]
+   + tower-placement[190,390] <= 1
+ footprints[(190,_390),(190,_380)]: tower-placement[190,380]
+   + tower-placement[190,390] <= 1
+ footprints[(190,_390),(200,_380)]: tower-placement[190,390]
+   + tower-placement[200,380] <= 1
+ footprints[(190,_390),(200,_390)]: tower-placement[190,390]
+   + tower-placement[200,390] <= 1
+ footprints[(150,_210),(140,_200)]: tower-placement[150,210]
+   + tower-placement[140,200] <= 1
+ footprints[(150,_210),(140,_210)]: tower-placement[150,210]
+   + tower-placement[140,210] <= 1
+ footprints[(150,_210),(140,_220)]: tower-placement[140,220]
+   + tower-placement[150,210] <= 1
+ footprints[(150,_210),(150,_200)]: tower-placement[150,200]
+   + tower-placement[150,210] <= 1
+ footprints[(150,_210),(150,_220)]: tower-placement[150,210]
+   + tower-placement[150,220] <= 1
+ footprints[(150,_210),(160,_200)]: tower-placement[150,210]
+   + tower-placement[160,200] <= 1
+ footprints[(150,_210),(160,_210)]: tower-placement[160,210]
+   + tower-placement[150,210] <= 1
+ footprints[(150,_210),(160,_220)]: tower-placement[160,220]
+   + tower-placement[150,210] <= 1
+ footprints[(250,_390),(240,_380)]: tower-placement[250,390]
+   + tower-placement[240,380] <= 1
+ footprints[(250,_390),(240,_390)]: tower-placement[250,390]
+   + tower-placement[240,390] <= 1
+ footprints[(250,_390),(250,_380)]: tower-placement[250,380]
+   + tower-placement[250,390] <= 1
+ footprints[(250,_390),(260,_380)]: tower-placement[250,390]
+   + tower-placement[260,380] <= 1
+ footprints[(250,_390),(260,_390)]: tower-placement[250,390]
+   + tower-placement[260,390] <= 1
+ footprints[(360,_130),(350,_120)]: tower-placement[360,130]
+   + tower-placement[350,120] <= 1
+ footprints[(360,_130),(350,_130)]: tower-placement[350,130]
+   + tower-placement[360,130] <= 1
+ footprints[(360,_130),(350,_140)]: tower-placement[350,140]
+   + tower-placement[360,130] <= 1
+ footprints[(360,_130),(360,_120)]: tower-placement[360,120]
+   + tower-placement[360,130] <= 1
+ footprints[(360,_130),(360,_140)]: tower-placement[360,130]
+   + tower-placement[360,140] <= 1
+ footprints[(360,_130),(370,_120)]: tower-placement[360,130]
+   + tower-placement[370,120] <= 1
+ footprints[(360,_130),(370,_130)]: tower-placement[360,130]
+   + tower-placement[370,130] <= 1
+ footprints[(360,_130),(370,_140)]: tower-placement[370,140]
+   + tower-placement[360,130] <= 1
+ footprints[(140,_140),(130,_140)]: tower-placement[140,140]
+   + tower-placement[130,140] <= 1
+ footprints[(140,_140),(130,_150)]: tower-placement[130,150]
+   + tower-placement[140,140] <= 1
+ footprints[(140,_140),(140,_150)]: tower-placement[140,140]
+   + tower-placement[140,150] <= 1
+ footprints[(140,_140),(150,_140)]: tower-placement[140,140]
+   + tower-placement[150,140] <= 1
+ footprints[(140,_140),(150,_150)]: tower-placement[150,150]
+   + tower-placement[140,140] <= 1
+ footprints[(280,_120),(270,_110)]: tower-placement[280,120]
+   + tower-placement[270,110] <= 1
+ footprints[(280,_120),(270,_120)]: tower-placement[280,120]
+   + tower-placement[270,120] <= 1
+ footprints[(280,_120),(270,_130)]: tower-placement[270,130]
+   + tower-placement[280,120] <= 1
+ footprints[(280,_120),(280,_110)]: tower-placement[280,110]
+   + tower-placement[280,120] <= 1
+ footprints[(280,_120),(280,_130)]: tower-placement[280,120]
+   + tower-placement[280,130] <= 1
+ footprints[(280,_120),(290,_110)]: tower-placement[280,120]
+   + tower-placement[290,110] <= 1
+ footprints[(280,_120),(290,_120)]: tower-placement[280,120]
+   + tower-placement[290,120] <= 1
+ footprints[(280,_120),(290,_130)]: tower-placement[290,130]
+   + tower-placement[280,120] <= 1
+ footprints[(100,_310),(90,_300)]: tower-placement[100,310]
+   + tower-placement[90,300] <= 1
+ footprints[(100,_310),(90,_310)]: tower-placement[100,310]
+   + tower-placement[90,310] <= 1
+ footprints[(100,_310),(100,_300)]: tower-placement[100,300]
+   + tower-placement[100,310] <= 1
+ footprints[(100,_310),(110,_300)]: tower-placement[100,310]
+   + tower-placement[110,300] <= 1
+ footprints[(100,_310),(110,_310)]: tower-placement[100,310]
+   + tower-placement[110,310] <= 1
+ footprints[(260,_330),(250,_320)]: tower-placement[260,330]
+   + tower-placement[250,320] <= 1
+ footprints[(260,_330),(250,_330)]: tower-placement[250,330]
+   + tower-placement[260,330] <= 1
+ footprints[(260,_330),(250,_340)]: tower-placement[250,340]
+   + tower-placement[260,330] <= 1
+ footprints[(260,_330),(260,_320)]: tower-placement[260,320]
+   + tower-placement[260,330] <= 1
+ footprints[(260,_330),(260,_340)]: tower-placement[260,330]
+   + tower-placement[260,340] <= 1
+ footprints[(260,_330),(270,_320)]: tower-placement[260,330]
+   + tower-placement[270,320] <= 1
+ footprints[(260,_330),(270,_330)]: tower-placement[260,330]
+   + tower-placement[270,330] <= 1
+ footprints[(260,_330),(270,_340)]: tower-placement[270,340]
+   + tower-placement[260,330] <= 1
+ footprints[(40,_340),(30,_330)]: tower-placement[40,340]
+   + tower-placement[30,330] <= 1
+ footprints[(40,_340),(30,_340)]: tower-placement[40,340]
+   + tower-placement[30,340] <= 1
+ footprints[(40,_340),(30,_350)]: tower-placement[30,350]
+   + tower-placement[40,340] <= 1
+ footprints[(40,_340),(40,_330)]: tower-placement[40,330]
+   + tower-placement[40,340] <= 1
+ footprints[(40,_340),(50,_330)]: tower-placement[40,340]
+   + tower-placement[50,330] <= 1
+ footprints[(110,_250),(100,_250)]: tower-placement[100,250]
+   + tower-placement[110,250] <= 1
+ footprints[(110,_250),(100,_260)]: tower-placement[100,260]
+   + tower-placement[110,250] <= 1
+ footprints[(110,_250),(110,_240)]: tower-placement[110,240]
+   + tower-placement[110,250] <= 1
+ footprints[(110,_250),(110,_260)]: tower-placement[110,250]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_250),(120,_240)]: tower-placement[110,250]
+   + tower-placement[120,240] <= 1
+ footprints[(110,_250),(120,_250)]: tower-placement[120,250]
+   + tower-placement[110,250] <= 1
+ footprints[(110,_250),(120,_260)]: tower-placement[120,260]
+   + tower-placement[110,250] <= 1
+ footprints[(170,_250),(160,_240)]: tower-placement[170,250]
+   + tower-placement[160,240] <= 1
+ footprints[(170,_250),(160,_250)]: tower-placement[170,250]
+   + tower-placement[160,250] <= 1
+ footprints[(170,_250),(160,_260)]: tower-placement[160,260]
+   + tower-placement[170,250] <= 1
+ footprints[(170,_250),(170,_240)]: tower-placement[170,240]
+   + tower-placement[170,250] <= 1
+ footprints[(170,_250),(170,_260)]: tower-placement[170,250]
+   + tower-placement[170,260] <= 1
+ footprints[(20,_170),(10,_160)]: tower-placement[20,170]
+   + tower-placement[10,160] <= 1
+ footprints[(20,_170),(10,_170)]: tower-placement[20,170]
+   + tower-placement[10,170] <= 1
+ footprints[(20,_170),(10,_180)]: tower-placement[10,180]
+   + tower-placement[20,170] <= 1
+ footprints[(20,_170),(20,_160)]: tower-placement[20,160]
+   + tower-placement[20,170] <= 1
+ footprints[(20,_170),(20,_180)]: tower-placement[20,170]
+   + tower-placement[20,180] <= 1
+ footprints[(20,_170),(30,_160)]: tower-placement[20,170]
+   + tower-placement[30,160] <= 1
+ footprints[(20,_170),(30,_170)]: tower-placement[30,170]
+   + tower-placement[20,170] <= 1
+ footprints[(20,_170),(30,_180)]: tower-placement[30,180]
+   + tower-placement[20,170] <= 1
+ footprints[(300,_160),(290,_150)]: tower-placement[300,160]
+   + tower-placement[290,150] <= 1
+ footprints[(300,_160),(290,_160)]: tower-placement[300,160]
+   + tower-placement[290,160] <= 1
+ footprints[(300,_160),(290,_170)]: tower-placement[300,160]
+   + tower-placement[290,170] <= 1
+ footprints[(300,_160),(300,_150)]: tower-placement[300,150]
+   + tower-placement[300,160] <= 1
+ footprints[(300,_160),(310,_150)]: tower-placement[300,160]
+   + tower-placement[310,150] <= 1
+ footprints[(300,_160),(310,_160)]: tower-placement[300,160]
+   + tower-placement[310,160] <= 1
+ footprints[(10,_450),(10,_440)]: tower-placement[10,440]
+   + tower-placement[10,450] <= 1
+ footprints[(10,_450),(10,_460)]: tower-placement[10,450]
+   + tower-placement[10,460] <= 1
+ footprints[(10,_450),(20,_440)]: tower-placement[10,450]
+   + tower-placement[20,440] <= 1
+ footprints[(10,_450),(20,_450)]: tower-placement[10,450]
+   + tower-placement[20,450] <= 1
+ footprints[(10,_450),(20,_460)]: tower-placement[20,460]
+   + tower-placement[10,450] <= 1
+ footprints[(250,_260),(250,_250)]: tower-placement[250,250]
+   + tower-placement[250,260] <= 1
+ footprints[(250,_260),(250,_270)]: tower-placement[250,260]
+   + tower-placement[250,270] <= 1
+ footprints[(250,_260),(260,_250)]: tower-placement[250,260]
+   + tower-placement[260,250] <= 1
+ footprints[(250,_260),(260,_260)]: tower-placement[250,260]
+   + tower-placement[260,260] <= 1
+ footprints[(250,_260),(260,_270)]: tower-placement[260,270]
+   + tower-placement[250,260] <= 1
+ footprints[(140,_10),(130,_10)]: tower-placement[140,10]
+   + tower-placement[130,10] <= 1
+ footprints[(140,_10),(130,_20)]: tower-placement[130,20]
+   + tower-placement[140,10] <= 1
+ footprints[(140,_10),(140,_20)]: tower-placement[140,10]
+   + tower-placement[140,20] <= 1
+ footprints[(140,_10),(150,_10)]: tower-placement[140,10]
+   + tower-placement[150,10] <= 1
+ footprints[(140,_10),(150,_20)]: tower-placement[150,20]
+   + tower-placement[140,10] <= 1
+ footprints[(310,_100),(300,_90)]: tower-placement[310,100]
+   + tower-placement[300,90] <= 1
+ footprints[(310,_100),(300,_100)]: tower-placement[300,100]
+   + tower-placement[310,100] <= 1
+ footprints[(310,_100),(300,_110)]: tower-placement[300,110]
+   + tower-placement[310,100] <= 1
+ footprints[(310,_100),(310,_90)]: tower-placement[310,90]
+   + tower-placement[310,100] <= 1
+ footprints[(310,_100),(310,_110)]: tower-placement[310,100]
+   + tower-placement[310,110] <= 1
+ footprints[(310,_100),(320,_90)]: tower-placement[310,100]
+   + tower-placement[320,90] <= 1
+ footprints[(310,_100),(320,_100)]: tower-placement[310,100]
+   + tower-placement[320,100] <= 1
+ footprints[(310,_100),(320,_110)]: tower-placement[320,110]
+   + tower-placement[310,100] <= 1
+ footprints[(50,_280),(40,_270)]: tower-placement[50,280]
+   + tower-placement[40,270] <= 1
+ footprints[(50,_280),(40,_280)]: tower-placement[50,280]
+   + tower-placement[40,280] <= 1
+ footprints[(50,_280),(40,_290)]: tower-placement[40,290]
+   + tower-placement[50,280] <= 1
+ footprints[(50,_280),(50,_270)]: tower-placement[50,270]
+   + tower-placement[50,280] <= 1
+ footprints[(50,_280),(50,_290)]: tower-placement[50,280]
+   + tower-placement[50,290] <= 1
+ footprints[(50,_280),(60,_270)]: tower-placement[50,280]
+   + tower-placement[60,270] <= 1
+ footprints[(50,_280),(60,_280)]: tower-placement[50,280]
+   + tower-placement[60,280] <= 1
+ footprints[(50,_280),(60,_290)]: tower-placement[60,290]
+   + tower-placement[50,280] <= 1
+ footprints[(260,_200),(250,_190)]: tower-placement[260,200]
+   + tower-placement[250,190] <= 1
+ footprints[(260,_200),(250,_200)]: tower-placement[250,200]
+   + tower-placement[260,200] <= 1
+ footprints[(260,_200),(250,_210)]: tower-placement[250,210]
+   + tower-placement[260,200] <= 1
+ footprints[(260,_200),(260,_190)]: tower-placement[260,190]
+   + tower-placement[260,200] <= 1
+ footprints[(260,_200),(260,_210)]: tower-placement[260,200]
+   + tower-placement[260,210] <= 1
+ footprints[(260,_200),(270,_190)]: tower-placement[260,200]
+   + tower-placement[270,190] <= 1
+ footprints[(260,_200),(270,_200)]: tower-placement[260,200]
+   + tower-placement[270,200] <= 1
+ footprints[(260,_200),(270,_210)]: tower-placement[270,210]
+   + tower-placement[260,200] <= 1
+ footprints[(220,_20),(210,_10)]: tower-placement[220,20]
+   + tower-placement[210,10] <= 1
+ footprints[(220,_20),(210,_20)]: tower-placement[220,20]
+   + tower-placement[210,20] <= 1
+ footprints[(220,_20),(210,_30)]: tower-placement[210,30]
+   + tower-placement[220,20] <= 1
+ footprints[(220,_20),(220,_10)]: tower-placement[220,10]
+   + tower-placement[220,20] <= 1
+ footprints[(220,_20),(220,_30)]: tower-placement[220,20]
+   + tower-placement[220,30] <= 1
+ footprints[(220,_20),(230,_10)]: tower-placement[220,20]
+   + tower-placement[230,10] <= 1
+ footprints[(220,_20),(230,_20)]: tower-placement[220,20]
+   + tower-placement[230,20] <= 1
+ footprints[(220,_20),(230,_30)]: tower-placement[230,30]
+   + tower-placement[220,20] <= 1
+ footprints[(20,_40),(10,_30)]: tower-placement[20,40]
+   + tower-placement[10,30] <= 1
+ footprints[(20,_40),(10,_40)]: tower-placement[20,40]
+   + tower-placement[10,40] <= 1
+ footprints[(20,_40),(10,_50)]: tower-placement[10,50]
+   + tower-placement[20,40] <= 1
+ footprints[(20,_40),(20,_30)]: tower-placement[20,30]
+   + tower-placement[20,40] <= 1
+ footprints[(20,_40),(20,_50)]: tower-placement[20,40]
+   + tower-placement[20,50] <= 1
+ footprints[(20,_40),(30,_30)]: tower-placement[20,40]
+   + tower-placement[30,30] <= 1
+ footprints[(20,_40),(30,_40)]: tower-placement[30,40]
+   + tower-placement[20,40] <= 1
+ footprints[(20,_40),(30,_50)]: tower-placement[30,50]
+   + tower-placement[20,40] <= 1
+ footprints[(160,_50),(150,_40)]: tower-placement[160,50]
+   + tower-placement[150,40] <= 1
+ footprints[(160,_50),(150,_50)]: tower-placement[160,50]
+   + tower-placement[150,50] <= 1
+ footprints[(160,_50),(150,_60)]: tower-placement[160,50]
+   + tower-placement[150,60] <= 1
+ footprints[(160,_50),(160,_40)]: tower-placement[160,40]
+   + tower-placement[160,50] <= 1
+ footprints[(160,_50),(160,_60)]: tower-placement[160,50]
+   + tower-placement[160,60] <= 1
+ footprints[(160,_50),(170,_40)]: tower-placement[160,50]
+   + tower-placement[170,40] <= 1
+ footprints[(160,_50),(170,_50)]: tower-placement[160,50]
+   + tower-placement[170,50] <= 1
+ footprints[(160,_50),(170,_60)]: tower-placement[170,60]
+   + tower-placement[160,50] <= 1
+ footprints[(10,_320),(10,_310)]: tower-placement[10,310]
+   + tower-placement[10,320] <= 1
+ footprints[(10,_320),(10,_330)]: tower-placement[10,320]
+   + tower-placement[10,330] <= 1
+ footprints[(10,_320),(20,_310)]: tower-placement[10,320]
+   + tower-placement[20,310] <= 1
+ footprints[(10,_320),(20,_320)]: tower-placement[10,320]
+   + tower-placement[20,320] <= 1
+ footprints[(10,_320),(20,_330)]: tower-placement[20,330]
+   + tower-placement[10,320] <= 1
+ footprints[(250,_130),(240,_120)]: tower-placement[250,130]
+   + tower-placement[240,120] <= 1
+ footprints[(250,_130),(250,_120)]: tower-placement[250,120]
+   + tower-placement[250,130] <= 1
+ footprints[(250,_130),(250,_140)]: tower-placement[250,130]
+   + tower-placement[250,140] <= 1
+ footprints[(250,_130),(260,_120)]: tower-placement[250,130]
+   + tower-placement[260,120] <= 1
+ footprints[(250,_130),(260,_130)]: tower-placement[250,130]
+   + tower-placement[260,130] <= 1
+ footprints[(250,_130),(260,_140)]: tower-placement[260,140]
+   + tower-placement[250,130] <= 1
+ footprints[(70,_320),(60,_310)]: tower-placement[70,320]
+   + tower-placement[60,310] <= 1
+ footprints[(70,_320),(60,_320)]: tower-placement[70,320]
+   + tower-placement[60,320] <= 1
+ footprints[(70,_320),(70,_310)]: tower-placement[70,310]
+   + tower-placement[70,320] <= 1
+ footprints[(70,_320),(80,_310)]: tower-placement[70,320]
+   + tower-placement[80,310] <= 1
+ footprints[(70,_320),(80,_320)]: tower-placement[70,320]
+   + tower-placement[80,320] <= 1
+ footprints[(100,_50),(90,_40)]: tower-placement[100,50]
+   + tower-placement[90,40] <= 1
+ footprints[(100,_50),(90,_50)]: tower-placement[100,50]
+   + tower-placement[90,50] <= 1
+ footprints[(100,_50),(90,_60)]: tower-placement[90,60]
+   + tower-placement[100,50] <= 1
+ footprints[(100,_50),(100,_40)]: tower-placement[100,40]
+   + tower-placement[100,50] <= 1
+ footprints[(100,_50),(100,_60)]: tower-placement[100,50]
+   + tower-placement[100,60] <= 1
+ footprints[(100,_50),(110,_40)]: tower-placement[100,50]
+   + tower-placement[110,40] <= 1
+ footprints[(100,_50),(110,_50)]: tower-placement[100,50]
+   + tower-placement[110,50] <= 1
+ footprints[(100,_50),(110,_60)]: tower-placement[110,60]
+   + tower-placement[100,50] <= 1
+ footprints[(50,_150),(40,_140)]: tower-placement[50,150]
+   + tower-placement[40,140] <= 1
+ footprints[(50,_150),(40,_150)]: tower-placement[50,150]
+   + tower-placement[40,150] <= 1
+ footprints[(50,_150),(40,_160)]: tower-placement[40,160]
+   + tower-placement[50,150] <= 1
+ footprints[(50,_150),(50,_140)]: tower-placement[50,140]
+   + tower-placement[50,150] <= 1
+ footprints[(50,_150),(50,_160)]: tower-placement[50,150]
+   + tower-placement[50,160] <= 1
+ footprints[(50,_150),(60,_140)]: tower-placement[50,150]
+   + tower-placement[60,140] <= 1
+ footprints[(50,_150),(60,_150)]: tower-placement[50,150]
+   + tower-placement[60,150] <= 1
+ footprints[(50,_150),(60,_160)]: tower-placement[60,160]
+   + tower-placement[50,150] <= 1
+ footprints[(80,_260),(70,_260)]: tower-placement[70,260]
+   + tower-placement[80,260] <= 1
+ footprints[(80,_260),(70,_270)]: tower-placement[70,270]
+   + tower-placement[80,260] <= 1
+ footprints[(80,_260),(80,_270)]: tower-placement[80,260]
+   + tower-placement[80,270] <= 1
+ footprints[(80,_260),(90,_260)]: tower-placement[80,260]
+   + tower-placement[90,260] <= 1
+ footprints[(80,_260),(90,_270)]: tower-placement[90,270]
+   + tower-placement[80,260] <= 1
+ footprints[(40,_80),(30,_70)]: tower-placement[40,80]
+   + tower-placement[30,70] <= 1
+ footprints[(40,_80),(30,_80)]: tower-placement[40,80]
+   + tower-placement[30,80] <= 1
+ footprints[(40,_80),(30,_90)]: tower-placement[30,90]
+   + tower-placement[40,80] <= 1
+ footprints[(40,_80),(40,_70)]: tower-placement[40,70]
+   + tower-placement[40,80] <= 1
+ footprints[(40,_80),(40,_90)]: tower-placement[40,80]
+   + tower-placement[40,90] <= 1
+ footprints[(40,_80),(50,_70)]: tower-placement[40,80]
+   + tower-placement[50,70] <= 1
+ footprints[(40,_80),(50,_80)]: tower-placement[40,80]
+   + tower-placement[50,80] <= 1
+ footprints[(40,_80),(50,_90)]: tower-placement[50,90]
+   + tower-placement[40,80] <= 1
+ footprints[(60,_90),(50,_80)]: tower-placement[60,90]
+   + tower-placement[50,80] <= 1
+ footprints[(60,_90),(50,_90)]: tower-placement[50,90]
+   + tower-placement[60,90] <= 1
+ footprints[(60,_90),(50,_100)]: tower-placement[50,100]
+   + tower-placement[60,90] <= 1
+ footprints[(60,_90),(60,_80)]: tower-placement[60,80]
+   + tower-placement[60,90] <= 1
+ footprints[(60,_90),(60,_100)]: tower-placement[60,90]
+   + tower-placement[60,100] <= 1
+ footprints[(60,_90),(70,_80)]: tower-placement[60,90]
+   + tower-placement[70,80] <= 1
+ footprints[(60,_90),(70,_90)]: tower-placement[70,90]
+   + tower-placement[60,90] <= 1
+ footprints[(60,_90),(70,_100)]: tower-placement[70,100]
+   + tower-placement[60,90] <= 1
+ footprints[(160,_270),(150,_260)]: tower-placement[160,270]
+   + tower-placement[150,260] <= 1
+ footprints[(160,_270),(150,_270)]: tower-placement[160,270]
+   + tower-placement[150,270] <= 1
+ footprints[(160,_270),(150,_280)]: tower-placement[160,270]
+   + tower-placement[150,280] <= 1
+ footprints[(160,_270),(160,_260)]: tower-placement[160,260]
+   + tower-placement[160,270] <= 1
+ footprints[(160,_270),(160,_280)]: tower-placement[160,270]
+   + tower-placement[160,280] <= 1
+ footprints[(160,_270),(170,_260)]: tower-placement[160,270]
+   + tower-placement[170,260] <= 1
+ footprints[(160,_270),(170,_270)]: tower-placement[160,270]
+   + tower-placement[170,270] <= 1
+ footprints[(160,_270),(170,_280)]: tower-placement[170,280]
+   + tower-placement[160,270] <= 1
+ footprints[(10,_190),(10,_180)]: tower-placement[10,180]
+   + tower-placement[10,190] <= 1
+ footprints[(10,_190),(20,_180)]: tower-placement[10,190]
+   + tower-placement[20,180] <= 1
+ footprints[(10,_190),(20,_190)]: tower-placement[10,190]
+   + tower-placement[20,190] <= 1
+ footprints[(50,_20),(40,_10)]: tower-placement[50,20]
+   + tower-placement[40,10] <= 1
+ footprints[(50,_20),(40,_20)]: tower-placement[50,20]
+   + tower-placement[40,20] <= 1
+ footprints[(50,_20),(40,_30)]: tower-placement[40,30]
+   + tower-placement[50,20] <= 1
+ footprints[(50,_20),(50,_10)]: tower-placement[50,10]
+   + tower-placement[50,20] <= 1
+ footprints[(50,_20),(50,_30)]: tower-placement[50,20]
+   + tower-placement[50,30] <= 1
+ footprints[(50,_20),(60,_10)]: tower-placement[50,20]
+   + tower-placement[60,10] <= 1
+ footprints[(50,_20),(60,_20)]: tower-placement[50,20]
+   + tower-placement[60,20] <= 1
+ footprints[(50,_20),(60,_30)]: tower-placement[60,30]
+   + tower-placement[50,20] <= 1
+ footprints[(460,_320),(460,_310)]: tower-placement[460,310]
+   + tower-placement[460,320] <= 1
+ footprints[(460,_320),(460,_330)]: tower-placement[460,320]
+   + tower-placement[460,330] <= 1
+ footprints[(10,_60),(10,_50)]: tower-placement[10,50]
+   + tower-placement[10,60] <= 1
+ footprints[(10,_60),(10,_70)]: tower-placement[10,60]
+   + tower-placement[10,70] <= 1
+ footprints[(10,_60),(20,_50)]: tower-placement[10,60]
+   + tower-placement[20,50] <= 1
+ footprints[(10,_60),(20,_60)]: tower-placement[10,60]
+   + tower-placement[20,60] <= 1
+ footprints[(10,_60),(20,_70)]: tower-placement[20,70]
+   + tower-placement[10,60] <= 1
+ footprints[(70,_60),(60,_50)]: tower-placement[70,60]
+   + tower-placement[60,50] <= 1
+ footprints[(70,_60),(60,_60)]: tower-placement[70,60]
+   + tower-placement[60,60] <= 1
+ footprints[(70,_60),(60,_70)]: tower-placement[70,60]
+   + tower-placement[60,70] <= 1
+ footprints[(70,_60),(70,_50)]: tower-placement[70,50]
+   + tower-placement[70,60] <= 1
+ footprints[(70,_60),(70,_70)]: tower-placement[70,60]
+   + tower-placement[70,70] <= 1
+ footprints[(70,_60),(80,_50)]: tower-placement[70,60]
+   + tower-placement[80,50] <= 1
+ footprints[(70,_60),(80,_60)]: tower-placement[70,60]
+   + tower-placement[80,60] <= 1
+ footprints[(70,_60),(80,_70)]: tower-placement[80,70]
+   + tower-placement[70,60] <= 1
+ footprints[(30,_100),(20,_90)]: tower-placement[30,100]
+   + tower-placement[20,90] <= 1
+ footprints[(30,_100),(20,_100)]: tower-placement[30,100]
+   + tower-placement[20,100] <= 1
+ footprints[(30,_100),(20,_110)]: tower-placement[30,100]
+   + tower-placement[20,110] <= 1
+ footprints[(30,_100),(30,_90)]: tower-placement[30,90]
+   + tower-placement[30,100] <= 1
+ footprints[(30,_100),(30,_110)]: tower-placement[30,100]
+   + tower-placement[30,110] <= 1
+ footprints[(30,_100),(40,_90)]: tower-placement[30,100]
+   + tower-placement[40,90] <= 1
+ footprints[(30,_100),(40,_100)]: tower-placement[30,100]
+   + tower-placement[40,100] <= 1
+ footprints[(30,_100),(40,_110)]: tower-placement[40,110]
+   + tower-placement[30,100] <= 1
+ footprints[(460,_190),(450,_190)]: tower-placement[460,190]
+   + tower-placement[450,190] <= 1
+ footprints[(460,_190),(450,_200)]: tower-placement[450,200]
+   + tower-placement[460,190] <= 1
+ footprints[(460,_190),(460,_180)]: tower-placement[460,180]
+   + tower-placement[460,190] <= 1
+ footprints[(460,_190),(460,_200)]: tower-placement[460,190]
+   + tower-placement[460,200] <= 1
+ footprints[(420,_230),(410,_220)]: tower-placement[420,230]
+   + tower-placement[410,220] <= 1
+ footprints[(420,_230),(410,_230)]: tower-placement[420,230]
+   + tower-placement[410,230] <= 1
+ footprints[(420,_230),(410,_240)]: tower-placement[410,240]
+   + tower-placement[420,230] <= 1
+ footprints[(420,_230),(420,_220)]: tower-placement[420,220]
+   + tower-placement[420,230] <= 1
+ footprints[(420,_230),(420,_240)]: tower-placement[420,230]
+   + tower-placement[420,240] <= 1
+ footprints[(420,_230),(430,_220)]: tower-placement[420,230]
+   + tower-placement[430,220] <= 1
+ footprints[(420,_230),(430,_230)]: tower-placement[430,230]
+   + tower-placement[420,230] <= 1
+ footprints[(420,_230),(430,_240)]: tower-placement[430,240]
+   + tower-placement[420,230] <= 1
+ footprints[(460,_60),(450,_50)]: tower-placement[460,60]
+   + tower-placement[450,50] <= 1
+ footprints[(460,_60),(460,_50)]: tower-placement[460,50]
+   + tower-placement[460,60] <= 1
+ footprints[(460,_60),(460,_70)]: tower-placement[460,60]
+   + tower-placement[460,70] <= 1
+ footprints[(330,_370),(320,_360)]: tower-placement[330,370]
+   + tower-placement[320,360] <= 1
+ footprints[(330,_370),(320,_370)]: tower-placement[330,370]
+   + tower-placement[320,370] <= 1
+ footprints[(330,_370),(320,_380)]: tower-placement[320,380]
+   + tower-placement[330,370] <= 1
+ footprints[(330,_370),(330,_360)]: tower-placement[330,360]
+   + tower-placement[330,370] <= 1
+ footprints[(330,_370),(330,_380)]: tower-placement[330,370]
+   + tower-placement[330,380] <= 1
+ footprints[(330,_370),(340,_360)]: tower-placement[330,370]
+   + tower-placement[340,360] <= 1
+ footprints[(330,_370),(340,_370)]: tower-placement[340,370]
+   + tower-placement[330,370] <= 1
+ footprints[(330,_370),(340,_380)]: tower-placement[340,380]
+   + tower-placement[330,370] <= 1
+ footprints[(450,_210),(440,_200)]: tower-placement[450,210]
+   + tower-placement[440,200] <= 1
+ footprints[(450,_210),(440,_210)]: tower-placement[440,210]
+   + tower-placement[450,210] <= 1
+ footprints[(450,_210),(440,_220)]: tower-placement[440,220]
+   + tower-placement[450,210] <= 1
+ footprints[(450,_210),(450,_200)]: tower-placement[450,200]
+   + tower-placement[450,210] <= 1
+ footprints[(450,_210),(450,_220)]: tower-placement[450,210]
+   + tower-placement[450,220] <= 1
+ footprints[(450,_210),(460,_200)]: tower-placement[450,210]
+   + tower-placement[460,200] <= 1
+ footprints[(450,_210),(460,_210)]: tower-placement[450,210]
+   + tower-placement[460,210] <= 1
+ footprints[(450,_210),(460,_220)]: tower-placement[460,220]
+   + tower-placement[450,210] <= 1
+ footprints[(390,_240),(380,_230)]: tower-placement[390,240]
+   + tower-placement[380,230] <= 1
+ footprints[(390,_240),(380,_240)]: tower-placement[390,240]
+   + tower-placement[380,240] <= 1
+ footprints[(390,_240),(380,_250)]: tower-placement[390,240]
+   + tower-placement[380,250] <= 1
+ footprints[(390,_240),(390,_230)]: tower-placement[390,230]
+   + tower-placement[390,240] <= 1
+ footprints[(390,_240),(390,_250)]: tower-placement[390,240]
+   + tower-placement[390,250] <= 1
+ footprints[(390,_240),(400,_230)]: tower-placement[390,240]
+   + tower-placement[400,230] <= 1
+ footprints[(390,_240),(400,_240)]: tower-placement[390,240]
+   + tower-placement[400,240] <= 1
+ footprints[(390,_240),(400,_250)]: tower-placement[400,250]
+   + tower-placement[390,240] <= 1
+ footprints[(380,_140),(370,_130)]: tower-placement[380,140]
+   + tower-placement[370,130] <= 1
+ footprints[(380,_140),(370,_140)]: tower-placement[370,140]
+   + tower-placement[380,140] <= 1
+ footprints[(380,_140),(370,_150)]: tower-placement[370,150]
+   + tower-placement[380,140] <= 1
+ footprints[(380,_140),(380,_130)]: tower-placement[380,130]
+   + tower-placement[380,140] <= 1
+ footprints[(380,_140),(380,_150)]: tower-placement[380,140]
+   + tower-placement[380,150] <= 1
+ footprints[(380,_140),(390,_130)]: tower-placement[380,140]
+   + tower-placement[390,130] <= 1
+ footprints[(380,_140),(390,_140)]: tower-placement[390,140]
+   + tower-placement[380,140] <= 1
+ footprints[(380,_140),(390,_150)]: tower-placement[390,150]
+   + tower-placement[380,140] <= 1
+ footprints[(340,_340),(330,_330)]: tower-placement[340,340]
+   + tower-placement[330,330] <= 1
+ footprints[(340,_340),(330,_340)]: tower-placement[340,340]
+   + tower-placement[330,340] <= 1
+ footprints[(340,_340),(330,_350)]: tower-placement[340,340]
+   + tower-placement[330,350] <= 1
+ footprints[(340,_340),(340,_350)]: tower-placement[340,340]
+   + tower-placement[340,350] <= 1
+ footprints[(340,_340),(350,_340)]: tower-placement[340,340]
+   + tower-placement[350,340] <= 1
+ footprints[(340,_340),(350,_350)]: tower-placement[350,350]
+   + tower-placement[340,340] <= 1
+ footprints[(410,_250),(400,_240)]: tower-placement[410,250]
+   + tower-placement[400,240] <= 1
+ footprints[(410,_250),(400,_250)]: tower-placement[400,250]
+   + tower-placement[410,250] <= 1
+ footprints[(410,_250),(400,_260)]: tower-placement[400,260]
+   + tower-placement[410,250] <= 1
+ footprints[(410,_250),(410,_240)]: tower-placement[410,240]
+   + tower-placement[410,250] <= 1
+ footprints[(410,_250),(410,_260)]: tower-placement[410,250]
+   + tower-placement[410,260] <= 1
+ footprints[(410,_250),(420,_240)]: tower-placement[410,250]
+   + tower-placement[420,240] <= 1
+ footprints[(410,_250),(420,_250)]: tower-placement[410,250]
+   + tower-placement[420,250] <= 1
+ footprints[(410,_250),(420,_260)]: tower-placement[420,260]
+   + tower-placement[410,250] <= 1
+ footprints[(360,_350),(350,_340)]: tower-placement[360,350]
+   + tower-placement[350,340] <= 1
+ footprints[(360,_350),(350,_350)]: tower-placement[350,350]
+   + tower-placement[360,350] <= 1
+ footprints[(360,_350),(350,_360)]: tower-placement[350,360]
+   + tower-placement[360,350] <= 1
+ footprints[(360,_350),(360,_340)]: tower-placement[360,340]
+   + tower-placement[360,350] <= 1
+ footprints[(360,_350),(360,_360)]: tower-placement[360,350]
+   + tower-placement[360,360] <= 1
+ footprints[(360,_350),(370,_340)]: tower-placement[360,350]
+   + tower-placement[370,340] <= 1
+ footprints[(360,_350),(370,_350)]: tower-placement[360,350]
+   + tower-placement[370,350] <= 1
+ footprints[(360,_350),(370,_360)]: tower-placement[370,360]
+   + tower-placement[360,350] <= 1
+ footprints[(280,_340),(270,_330)]: tower-placement[280,340]
+   + tower-placement[270,330] <= 1
+ footprints[(280,_340),(270,_340)]: tower-placement[270,340]
+   + tower-placement[280,340] <= 1
+ footprints[(280,_340),(270,_350)]: tower-placement[270,350]
+   + tower-placement[280,340] <= 1
+ footprints[(280,_340),(280,_330)]: tower-placement[280,330]
+   + tower-placement[280,340] <= 1
+ footprints[(280,_340),(280,_350)]: tower-placement[280,340]
+   + tower-placement[280,350] <= 1
+ footprints[(280,_340),(290,_330)]: tower-placement[280,340]
+   + tower-placement[290,330] <= 1
+ footprints[(280,_340),(290,_340)]: tower-placement[280,340]
+   + tower-placement[290,340] <= 1
+ footprints[(280,_340),(290,_350)]: tower-placement[290,350]
+   + tower-placement[280,340] <= 1
+ footprints[(270,_270),(260,_260)]: tower-placement[270,270]
+   + tower-placement[260,260] <= 1
+ footprints[(270,_270),(260,_270)]: tower-placement[260,270]
+   + tower-placement[270,270] <= 1
+ footprints[(270,_270),(260,_280)]: tower-placement[260,280]
+   + tower-placement[270,270] <= 1
+ footprints[(270,_270),(270,_260)]: tower-placement[270,260]
+   + tower-placement[270,270] <= 1
+ footprints[(270,_270),(270,_280)]: tower-placement[270,270]
+   + tower-placement[270,280] <= 1
+ footprints[(230,_90),(220,_80)]: tower-placement[230,90]
+   + tower-placement[220,80] <= 1
+ footprints[(230,_90),(230,_80)]: tower-placement[230,80]
+   + tower-placement[230,90] <= 1
+ footprints[(230,_90),(240,_80)]: tower-placement[230,90]
+   + tower-placement[240,80] <= 1
+ footprints[(230,_90),(240,_90)]: tower-placement[230,90]
+   + tower-placement[240,90] <= 1
+ footprints[(230,_90),(240,_100)]: tower-placement[240,100]
+   + tower-placement[230,90] <= 1
+ footprints[(440,_10),(430,_10)]: tower-placement[430,10]
+   + tower-placement[440,10] <= 1
+ footprints[(440,_10),(430,_20)]: tower-placement[430,20]
+   + tower-placement[440,10] <= 1
+ footprints[(440,_10),(440,_20)]: tower-placement[440,10]
+   + tower-placement[440,20] <= 1
+ footprints[(440,_10),(450,_10)]: tower-placement[440,10]
+   + tower-placement[450,10] <= 1
+ footprints[(440,_10),(450,_20)]: tower-placement[450,20]
+   + tower-placement[440,10] <= 1
+ footprints[(220,_370),(210,_380)]: tower-placement[210,380]
+   + tower-placement[220,370] <= 1
+ footprints[(220,_370),(220,_380)]: tower-placement[220,370]
+   + tower-placement[220,380] <= 1
+ footprints[(220,_370),(230,_360)]: tower-placement[220,370]
+   + tower-placement[230,360] <= 1
+ footprints[(220,_370),(230,_370)]: tower-placement[220,370]
+   + tower-placement[230,370] <= 1
+ footprints[(220,_370),(230,_380)]: tower-placement[230,380]
+   + tower-placement[220,370] <= 1
+ footprints[(390,_110),(380,_100)]: tower-placement[390,110]
+   + tower-placement[380,100] <= 1
+ footprints[(390,_110),(380,_110)]: tower-placement[390,110]
+   + tower-placement[380,110] <= 1
+ footprints[(390,_110),(380,_120)]: tower-placement[390,110]
+   + tower-placement[380,120] <= 1
+ footprints[(390,_110),(390,_100)]: tower-placement[390,100]
+   + tower-placement[390,110] <= 1
+ footprints[(390,_110),(390,_120)]: tower-placement[390,110]
+   + tower-placement[390,120] <= 1
+ footprints[(130,_290),(120,_280)]: tower-placement[130,290]
+   + tower-placement[120,280] <= 1
+ footprints[(130,_290),(120,_290)]: tower-placement[120,290]
+   + tower-placement[130,290] <= 1
+ footprints[(130,_290),(120,_300)]: tower-placement[120,300]
+   + tower-placement[130,290] <= 1
+ footprints[(130,_290),(130,_280)]: tower-placement[130,280]
+   + tower-placement[130,290] <= 1
+ footprints[(130,_290),(130,_300)]: tower-placement[130,290]
+   + tower-placement[130,300] <= 1
+ footprints[(130,_290),(140,_280)]: tower-placement[130,290]
+   + tower-placement[140,280] <= 1
+ footprints[(130,_290),(140,_290)]: tower-placement[130,290]
+   + tower-placement[140,290] <= 1
+ footprints[(130,_290),(140,_300)]: tower-placement[140,300]
+   + tower-placement[130,290] <= 1
+ footprints[(380,_10),(370,_10)]: tower-placement[370,10]
+   + tower-placement[380,10] <= 1
+ footprints[(380,_10),(370,_20)]: tower-placement[370,20]
+   + tower-placement[380,10] <= 1
+ footprints[(380,_10),(380,_20)]: tower-placement[380,10]
+   + tower-placement[380,20] <= 1
+ footprints[(380,_10),(390,_10)]: tower-placement[390,10]
+   + tower-placement[380,10] <= 1
+ footprints[(380,_10),(390,_20)]: tower-placement[390,20]
+   + tower-placement[380,10] <= 1
+ footprints[(240,_380),(230,_370)]: tower-placement[240,380]
+   + tower-placement[230,370] <= 1
+ footprints[(240,_380),(230,_380)]: tower-placement[230,380]
+   + tower-placement[240,380] <= 1
+ footprints[(240,_380),(230,_390)]: tower-placement[230,390]
+   + tower-placement[240,380] <= 1
+ footprints[(240,_380),(240,_370)]: tower-placement[240,370]
+   + tower-placement[240,380] <= 1
+ footprints[(240,_380),(240,_390)]: tower-placement[240,380]
+   + tower-placement[240,390] <= 1
+ footprints[(240,_380),(250,_370)]: tower-placement[240,380]
+   + tower-placement[250,370] <= 1
+ footprints[(240,_380),(250,_380)]: tower-placement[250,380]
+   + tower-placement[240,380] <= 1
+ footprints[(240,_380),(250,_390)]: tower-placement[250,390]
+   + tower-placement[240,380] <= 1
+ footprints[(20,_390),(10,_380)]: tower-placement[20,390]
+   + tower-placement[10,380] <= 1
+ footprints[(20,_390),(10,_390)]: tower-placement[10,390]
+   + tower-placement[20,390] <= 1
+ footprints[(20,_390),(10,_400)]: tower-placement[10,400]
+   + tower-placement[20,390] <= 1
+ footprints[(20,_390),(20,_380)]: tower-placement[20,380]
+   + tower-placement[20,390] <= 1
+ footprints[(20,_390),(20,_400)]: tower-placement[20,390]
+   + tower-placement[20,400] <= 1
+ footprints[(300,_380),(290,_370)]: tower-placement[300,380]
+   + tower-placement[290,370] <= 1
+ footprints[(300,_380),(290,_380)]: tower-placement[300,380]
+   + tower-placement[290,380] <= 1
+ footprints[(300,_380),(290,_390)]: tower-placement[300,380]
+   + tower-placement[290,390] <= 1
+ footprints[(300,_380),(300,_370)]: tower-placement[300,370]
+   + tower-placement[300,380] <= 1
+ footprints[(300,_380),(300,_390)]: tower-placement[300,380]
+   + tower-placement[300,390] <= 1
+ footprints[(300,_380),(310,_370)]: tower-placement[300,380]
+   + tower-placement[310,370] <= 1
+ footprints[(300,_380),(310,_380)]: tower-placement[300,380]
+   + tower-placement[310,380] <= 1
+ footprints[(300,_380),(310,_390)]: tower-placement[310,390]
+   + tower-placement[300,380] <= 1
+ footprints[(330,_110),(320,_100)]: tower-placement[330,110]
+   + tower-placement[320,100] <= 1
+ footprints[(330,_110),(320,_110)]: tower-placement[320,110]
+   + tower-placement[330,110] <= 1
+ footprints[(330,_110),(320,_120)]: tower-placement[320,120]
+   + tower-placement[330,110] <= 1
+ footprints[(330,_110),(330,_100)]: tower-placement[330,100]
+   + tower-placement[330,110] <= 1
+ footprints[(330,_110),(330,_120)]: tower-placement[330,110]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_110),(340,_100)]: tower-placement[330,110]
+   + tower-placement[340,100] <= 1
+ footprints[(330,_110),(340,_110)]: tower-placement[340,110]
+   + tower-placement[330,110] <= 1
+ footprints[(330,_110),(340,_120)]: tower-placement[340,120]
+   + tower-placement[330,110] <= 1
+ footprints[(150,_300),(140,_290)]: tower-placement[150,300]
+   + tower-placement[140,290] <= 1
+ footprints[(150,_300),(140,_300)]: tower-placement[140,300]
+   + tower-placement[150,300] <= 1
+ footprints[(150,_300),(140,_310)]: tower-placement[140,310]
+   + tower-placement[150,300] <= 1
+ footprints[(150,_300),(150,_290)]: tower-placement[150,290]
+   + tower-placement[150,300] <= 1
+ footprints[(150,_300),(150,_310)]: tower-placement[150,300]
+   + tower-placement[150,310] <= 1
+ footprints[(150,_300),(160,_290)]: tower-placement[150,300]
+   + tower-placement[160,290] <= 1
+ footprints[(150,_300),(160,_300)]: tower-placement[160,300]
+   + tower-placement[150,300] <= 1
+ footprints[(150,_300),(160,_310)]: tower-placement[160,310]
+   + tower-placement[150,300] <= 1
+ footprints[(360,_220),(350,_220)]: tower-placement[350,220]
+   + tower-placement[360,220] <= 1
+ footprints[(360,_220),(350,_230)]: tower-placement[350,230]
+   + tower-placement[360,220] <= 1
+ footprints[(360,_220),(360,_230)]: tower-placement[360,220]
+   + tower-placement[360,230] <= 1
+ footprints[(360,_220),(370,_220)]: tower-placement[360,220]
+   + tower-placement[370,220] <= 1
+ footprints[(360,_220),(370,_230)]: tower-placement[370,230]
+   + tower-placement[360,220] <= 1
+ footprints[(140,_230),(130,_220)]: tower-placement[140,230]
+   + tower-placement[130,220] <= 1
+ footprints[(140,_230),(130,_230)]: tower-placement[130,230]
+   + tower-placement[140,230] <= 1
+ footprints[(140,_230),(130,_240)]: tower-placement[130,240]
+   + tower-placement[140,230] <= 1
+ footprints[(140,_230),(140,_220)]: tower-placement[140,220]
+   + tower-placement[140,230] <= 1
+ footprints[(140,_230),(140,_240)]: tower-placement[140,230]
+   + tower-placement[140,240] <= 1
+ footprints[(140,_230),(150,_220)]: tower-placement[140,230]
+   + tower-placement[150,220] <= 1
+ footprints[(140,_230),(150,_230)]: tower-placement[140,230]
+   + tower-placement[150,230] <= 1
+ footprints[(140,_230),(150,_240)]: tower-placement[150,240]
+   + tower-placement[140,230] <= 1
+ footprints[(270,_140),(260,_130)]: tower-placement[270,140]
+   + tower-placement[260,130] <= 1
+ footprints[(270,_140),(260,_140)]: tower-placement[260,140]
+   + tower-placement[270,140] <= 1
+ footprints[(270,_140),(260,_150)]: tower-placement[260,150]
+   + tower-placement[270,140] <= 1
+ footprints[(270,_140),(270,_130)]: tower-placement[270,130]
+   + tower-placement[270,140] <= 1
+ footprints[(270,_140),(270,_150)]: tower-placement[270,140]
+   + tower-placement[270,150] <= 1
+ footprints[(270,_140),(280,_130)]: tower-placement[270,140]
+   + tower-placement[280,130] <= 1
+ footprints[(270,_140),(280,_140)]: tower-placement[270,140]
+   + tower-placement[280,140] <= 1
+ footprints[(270,_140),(280,_150)]: tower-placement[280,150]
+   + tower-placement[270,140] <= 1
+ footprints[(180,_60),(170,_50)]: tower-placement[180,60]
+   + tower-placement[170,50] <= 1
+ footprints[(180,_60),(170,_60)]: tower-placement[170,60]
+   + tower-placement[180,60] <= 1
+ footprints[(180,_60),(180,_50)]: tower-placement[180,50]
+   + tower-placement[180,60] <= 1
+ footprints[(180,_60),(190,_50)]: tower-placement[180,60]
+   + tower-placement[190,50] <= 1
+ footprints[(180,_60),(190,_60)]: tower-placement[180,60]
+   + tower-placement[190,60] <= 1
+ footprints[(180,_60),(190,_70)]: tower-placement[190,70]
+   + tower-placement[180,60] <= 1
+ footprints[(290,_150),(280,_140)]: tower-placement[290,150]
+   + tower-placement[280,140] <= 1
+ footprints[(290,_150),(280,_150)]: tower-placement[280,150]
+   + tower-placement[290,150] <= 1
+ footprints[(290,_150),(280,_160)]: tower-placement[280,160]
+   + tower-placement[290,150] <= 1
+ footprints[(290,_150),(290,_140)]: tower-placement[290,140]
+   + tower-placement[290,150] <= 1
+ footprints[(290,_150),(290,_160)]: tower-placement[290,150]
+   + tower-placement[290,160] <= 1
+ footprints[(290,_150),(300,_140)]: tower-placement[290,150]
+   + tower-placement[300,140] <= 1
+ footprints[(290,_150),(300,_150)]: tower-placement[300,150]
+   + tower-placement[290,150] <= 1
+ footprints[(290,_150),(300,_160)]: tower-placement[300,160]
+   + tower-placement[290,150] <= 1
+ footprints[(350,_150),(340,_140)]: tower-placement[350,150]
+   + tower-placement[340,140] <= 1
+ footprints[(350,_150),(340,_150)]: tower-placement[340,150]
+   + tower-placement[350,150] <= 1
+ footprints[(350,_150),(350,_140)]: tower-placement[350,140]
+   + tower-placement[350,150] <= 1
+ footprints[(350,_150),(360,_140)]: tower-placement[350,150]
+   + tower-placement[360,140] <= 1
+ footprints[(350,_150),(360,_150)]: tower-placement[350,150]
+   + tower-placement[360,150] <= 1
+ footprints[(130,_160),(130,_150)]: tower-placement[130,150]
+   + tower-placement[130,160] <= 1
+ footprints[(130,_160),(130,_170)]: tower-placement[130,160]
+   + tower-placement[130,170] <= 1
+ footprints[(130,_160),(140,_150)]: tower-placement[130,160]
+   + tower-placement[140,150] <= 1
+ footprints[(130,_160),(140,_160)]: tower-placement[130,160]
+   + tower-placement[140,160] <= 1
+ footprints[(130,_160),(140,_170)]: tower-placement[140,170]
+   + tower-placement[130,160] <= 1
+ footprints[(200,_70),(190,_60)]: tower-placement[200,70]
+   + tower-placement[190,60] <= 1
+ footprints[(200,_70),(190,_70)]: tower-placement[190,70]
+   + tower-placement[200,70] <= 1
+ footprints[(200,_70),(200,_60)]: tower-placement[200,60]
+   + tower-placement[200,70] <= 1
+ footprints[(200,_70),(210,_60)]: tower-placement[200,70]
+   + tower-placement[210,60] <= 1
+ footprints[(200,_70),(210,_70)]: tower-placement[210,70]
+   + tower-placement[200,70] <= 1
+ footprints[(150,_170),(140,_160)]: tower-placement[150,170]
+   + tower-placement[140,160] <= 1
+ footprints[(150,_170),(140,_170)]: tower-placement[140,170]
+   + tower-placement[150,170] <= 1
+ footprints[(150,_170),(140,_180)]: tower-placement[140,180]
+   + tower-placement[150,170] <= 1
+ footprints[(150,_170),(150,_160)]: tower-placement[150,160]
+   + tower-placement[150,170] <= 1
+ footprints[(150,_170),(150,_180)]: tower-placement[150,170]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_170),(160,_160)]: tower-placement[150,170]
+   + tower-placement[160,160] <= 1
+ footprints[(150,_170),(160,_170)]: tower-placement[160,170]
+   + tower-placement[150,170] <= 1
+ footprints[(150,_170),(160,_180)]: tower-placement[160,180]
+   + tower-placement[150,170] <= 1
+ footprints[(250,_350),(240,_340)]: tower-placement[250,350]
+   + tower-placement[240,340] <= 1
+ footprints[(250,_350),(240,_350)]: tower-placement[250,350]
+   + tower-placement[240,350] <= 1
+ footprints[(250,_350),(240,_360)]: tower-placement[250,350]
+   + tower-placement[240,360] <= 1
+ footprints[(250,_350),(250,_340)]: tower-placement[250,340]
+   + tower-placement[250,350] <= 1
+ footprints[(250,_350),(250,_360)]: tower-placement[250,350]
+   + tower-placement[250,360] <= 1
+ footprints[(250,_350),(260,_340)]: tower-placement[250,350]
+   + tower-placement[260,340] <= 1
+ footprints[(250,_350),(260,_350)]: tower-placement[250,350]
+   + tower-placement[260,350] <= 1
+ footprints[(250,_350),(260,_360)]: tower-placement[260,360]
+   + tower-placement[250,350] <= 1
+ footprints[(360,_90),(350,_90)]: tower-placement[350,90]
+   + tower-placement[360,90] <= 1
+ footprints[(360,_90),(350,_100)]: tower-placement[350,100]
+   + tower-placement[360,90] <= 1
+ footprints[(360,_90),(360,_100)]: tower-placement[360,90]
+   + tower-placement[360,100] <= 1
+ footprints[(360,_90),(370,_90)]: tower-placement[360,90]
+   + tower-placement[370,90] <= 1
+ footprints[(360,_90),(370,_100)]: tower-placement[370,100]
+   + tower-placement[360,90] <= 1
+ footprints[(100,_270),(90,_260)]: tower-placement[100,270]
+   + tower-placement[90,260] <= 1
+ footprints[(100,_270),(90,_270)]: tower-placement[90,270]
+   + tower-placement[100,270] <= 1
+ footprints[(100,_270),(90,_280)]: tower-placement[90,280]
+   + tower-placement[100,270] <= 1
+ footprints[(100,_270),(100,_260)]: tower-placement[100,260]
+   + tower-placement[100,270] <= 1
+ footprints[(100,_270),(100,_280)]: tower-placement[100,270]
+   + tower-placement[100,280] <= 1
+ footprints[(100,_270),(110,_260)]: tower-placement[100,270]
+   + tower-placement[110,260] <= 1
+ footprints[(100,_270),(110,_270)]: tower-placement[100,270]
+   + tower-placement[110,270] <= 1
+ footprints[(100,_270),(110,_280)]: tower-placement[110,280]
+   + tower-placement[100,270] <= 1
+ footprints[(260,_290),(250,_280)]: tower-placement[260,290]
+   + tower-placement[250,280] <= 1
+ footprints[(260,_290),(250,_290)]: tower-placement[250,290]
+   + tower-placement[260,290] <= 1
+ footprints[(260,_290),(250,_300)]: tower-placement[250,300]
+   + tower-placement[260,290] <= 1
+ footprints[(260,_290),(260,_280)]: tower-placement[260,280]
+   + tower-placement[260,290] <= 1
+ footprints[(260,_290),(260,_300)]: tower-placement[260,290]
+   + tower-placement[260,300] <= 1
+ footprints[(260,_290),(270,_280)]: tower-placement[260,290]
+   + tower-placement[270,280] <= 1
+ footprints[(260,_290),(270,_290)]: tower-placement[260,290]
+   + tower-placement[270,290] <= 1
+ footprints[(260,_290),(270,_300)]: tower-placement[270,300]
+   + tower-placement[260,290] <= 1
+ footprints[(40,_300),(30,_290)]: tower-placement[40,300]
+   + tower-placement[30,290] <= 1
+ footprints[(40,_300),(30,_300)]: tower-placement[30,300]
+   + tower-placement[40,300] <= 1
+ footprints[(40,_300),(30,_310)]: tower-placement[30,310]
+   + tower-placement[40,300] <= 1
+ footprints[(40,_300),(40,_290)]: tower-placement[40,290]
+   + tower-placement[40,300] <= 1
+ footprints[(40,_300),(40,_310)]: tower-placement[40,300]
+   + tower-placement[40,310] <= 1
+ footprints[(40,_300),(50,_290)]: tower-placement[40,300]
+   + tower-placement[50,290] <= 1
+ footprints[(40,_300),(50,_300)]: tower-placement[40,300]
+   + tower-placement[50,300] <= 1
+ footprints[(40,_300),(50,_310)]: tower-placement[50,310]
+   + tower-placement[40,300] <= 1
+ footprints[(210,_40),(200,_30)]: tower-placement[210,40]
+   + tower-placement[200,30] <= 1
+ footprints[(210,_40),(200,_40)]: tower-placement[210,40]
+   + tower-placement[200,40] <= 1
+ footprints[(210,_40),(200,_50)]: tower-placement[200,50]
+   + tower-placement[210,40] <= 1
+ footprints[(210,_40),(210,_30)]: tower-placement[210,30]
+   + tower-placement[210,40] <= 1
+ footprints[(210,_40),(210,_50)]: tower-placement[210,40]
+   + tower-placement[210,50] <= 1
+ footprints[(210,_40),(220,_30)]: tower-placement[210,40]
+   + tower-placement[220,30] <= 1
+ footprints[(210,_40),(220,_40)]: tower-placement[210,40]
+   + tower-placement[220,40] <= 1
+ footprints[(210,_40),(220,_50)]: tower-placement[220,50]
+   + tower-placement[210,40] <= 1
+ footprints[(350,_20),(340,_10)]: tower-placement[350,20]
+   + tower-placement[340,10] <= 1
+ footprints[(350,_20),(340,_20)]: tower-placement[340,20]
+   + tower-placement[350,20] <= 1
+ footprints[(350,_20),(350,_10)]: tower-placement[350,10]
+   + tower-placement[350,20] <= 1
+ footprints[(350,_20),(360,_10)]: tower-placement[350,20]
+   + tower-placement[360,10] <= 1
+ footprints[(350,_20),(360,_20)]: tower-placement[350,20]
+   + tower-placement[360,20] <= 1
+ footprints[(210,_390),(200,_380)]: tower-placement[210,390]
+   + tower-placement[200,380] <= 1
+ footprints[(210,_390),(200,_390)]: tower-placement[210,390]
+   + tower-placement[200,390] <= 1
+ footprints[(210,_390),(210,_380)]: tower-placement[210,380]
+   + tower-placement[210,390] <= 1
+ footprints[(210,_390),(220,_380)]: tower-placement[210,390]
+   + tower-placement[220,380] <= 1
+ footprints[(210,_390),(220,_390)]: tower-placement[210,390]
+   + tower-placement[220,390] <= 1
+ footprints[(170,_210),(160,_200)]: tower-placement[170,210]
+   + tower-placement[160,200] <= 1
+ footprints[(170,_210),(160,_210)]: tower-placement[160,210]
+   + tower-placement[170,210] <= 1
+ footprints[(170,_210),(160,_220)]: tower-placement[160,220]
+   + tower-placement[170,210] <= 1
+ footprints[(170,_210),(170,_200)]: tower-placement[170,200]
+   + tower-placement[170,210] <= 1
+ footprints[(170,_210),(170,_220)]: tower-placement[170,210]
+   + tower-placement[170,220] <= 1
+ footprints[(130,_30),(120,_20)]: tower-placement[130,30]
+   + tower-placement[120,20] <= 1
+ footprints[(130,_30),(120,_30)]: tower-placement[120,30]
+   + tower-placement[130,30] <= 1
+ footprints[(130,_30),(120,_40)]: tower-placement[120,40]
+   + tower-placement[130,30] <= 1
+ footprints[(130,_30),(130,_20)]: tower-placement[130,20]
+   + tower-placement[130,30] <= 1
+ footprints[(130,_30),(130,_40)]: tower-placement[130,30]
+   + tower-placement[130,40] <= 1
+ footprints[(130,_30),(140,_20)]: tower-placement[130,30]
+   + tower-placement[140,20] <= 1
+ footprints[(130,_30),(140,_30)]: tower-placement[130,30]
+   + tower-placement[140,30] <= 1
+ footprints[(130,_30),(140,_40)]: tower-placement[140,40]
+   + tower-placement[130,30] <= 1
+ footprints[(60,_310),(50,_300)]: tower-placement[60,310]
+   + tower-placement[50,300] <= 1
+ footprints[(60,_310),(50,_310)]: tower-placement[50,310]
+   + tower-placement[60,310] <= 1
+ footprints[(60,_310),(50,_320)]: tower-placement[50,320]
+   + tower-placement[60,310] <= 1
+ footprints[(60,_310),(60,_300)]: tower-placement[60,300]
+   + tower-placement[60,310] <= 1
+ footprints[(60,_310),(60,_320)]: tower-placement[60,310]
+   + tower-placement[60,320] <= 1
+ footprints[(60,_310),(70,_300)]: tower-placement[60,310]
+   + tower-placement[70,300] <= 1
+ footprints[(60,_310),(70,_310)]: tower-placement[70,310]
+   + tower-placement[60,310] <= 1
+ footprints[(60,_310),(70,_320)]: tower-placement[70,320]
+   + tower-placement[60,310] <= 1
+ footprints[(20,_130),(10,_120)]: tower-placement[20,130]
+   + tower-placement[10,120] <= 1
+ footprints[(20,_130),(10,_130)]: tower-placement[10,130]
+   + tower-placement[20,130] <= 1
+ footprints[(20,_130),(10,_140)]: tower-placement[10,140]
+   + tower-placement[20,130] <= 1
+ footprints[(20,_130),(20,_120)]: tower-placement[20,120]
+   + tower-placement[20,130] <= 1
+ footprints[(20,_130),(20,_140)]: tower-placement[20,130]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_130),(30,_120)]: tower-placement[20,130]
+   + tower-placement[30,120] <= 1
+ footprints[(20,_130),(30,_130)]: tower-placement[30,130]
+   + tower-placement[20,130] <= 1
+ footprints[(20,_130),(30,_140)]: tower-placement[30,140]
+   + tower-placement[20,130] <= 1
+ footprints[(160,_140),(150,_140)]: tower-placement[160,140]
+   + tower-placement[150,140] <= 1
+ footprints[(160,_140),(150,_150)]: tower-placement[150,150]
+   + tower-placement[160,140] <= 1
+ footprints[(160,_140),(160,_150)]: tower-placement[160,140]
+   + tower-placement[160,150] <= 1
+ footprints[(160,_140),(170,_140)]: tower-placement[160,140]
+   + tower-placement[170,140] <= 1
+ footprints[(160,_140),(170,_150)]: tower-placement[170,150]
+   + tower-placement[160,140] <= 1
+ footprints[(300,_120),(290,_110)]: tower-placement[300,120]
+   + tower-placement[290,110] <= 1
+ footprints[(300,_120),(290,_120)]: tower-placement[300,120]
+   + tower-placement[290,120] <= 1
+ footprints[(300,_120),(290,_130)]: tower-placement[290,130]
+   + tower-placement[300,120] <= 1
+ footprints[(300,_120),(300,_110)]: tower-placement[300,110]
+   + tower-placement[300,120] <= 1
+ footprints[(300,_120),(300,_130)]: tower-placement[300,120]
+   + tower-placement[300,130] <= 1
+ footprints[(300,_120),(310,_110)]: tower-placement[300,120]
+   + tower-placement[310,110] <= 1
+ footprints[(300,_120),(310,_120)]: tower-placement[300,120]
+   + tower-placement[310,120] <= 1
+ footprints[(300,_120),(310,_130)]: tower-placement[310,130]
+   + tower-placement[300,120] <= 1
+ footprints[(120,_310),(110,_300)]: tower-placement[120,310]
+   + tower-placement[110,300] <= 1
+ footprints[(120,_310),(110,_310)]: tower-placement[120,310]
+   + tower-placement[110,310] <= 1
+ footprints[(120,_310),(120,_300)]: tower-placement[120,300]
+   + tower-placement[120,310] <= 1
+ footprints[(120,_310),(130,_300)]: tower-placement[120,310]
+   + tower-placement[130,300] <= 1
+ footprints[(120,_310),(130,_310)]: tower-placement[120,310]
+   + tower-placement[130,310] <= 1
+ footprints[(150,_40),(140,_30)]: tower-placement[150,40]
+   + tower-placement[140,30] <= 1
+ footprints[(150,_40),(140,_40)]: tower-placement[140,40]
+   + tower-placement[150,40] <= 1
+ footprints[(150,_40),(140,_50)]: tower-placement[140,50]
+   + tower-placement[150,40] <= 1
+ footprints[(150,_40),(150,_30)]: tower-placement[150,30]
+   + tower-placement[150,40] <= 1
+ footprints[(150,_40),(150,_50)]: tower-placement[150,40]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_40),(160,_30)]: tower-placement[150,40]
+   + tower-placement[160,30] <= 1
+ footprints[(150,_40),(160,_40)]: tower-placement[160,40]
+   + tower-placement[150,40] <= 1
+ footprints[(150,_40),(160,_50)]: tower-placement[160,50]
+   + tower-placement[150,40] <= 1
+ footprints[(10,_410),(10,_400)]: tower-placement[10,400]
+   + tower-placement[10,410] <= 1
+ footprints[(10,_410),(10,_420)]: tower-placement[10,410]
+   + tower-placement[10,420] <= 1
+ footprints[(10,_410),(20,_400)]: tower-placement[10,410]
+   + tower-placement[20,400] <= 1
+ footprints[(10,_410),(20,_410)]: tower-placement[10,410]
+   + tower-placement[20,410] <= 1
+ footprints[(10,_410),(20,_420)]: tower-placement[20,420]
+   + tower-placement[10,410] <= 1
+ footprints[(250,_220),(250,_210)]: tower-placement[250,210]
+   + tower-placement[250,220] <= 1
+ footprints[(250,_220),(250,_230)]: tower-placement[250,220]
+   + tower-placement[250,230] <= 1
+ footprints[(250,_220),(260,_210)]: tower-placement[250,220]
+   + tower-placement[260,210] <= 1
+ footprints[(250,_220),(260,_220)]: tower-placement[250,220]
+   + tower-placement[260,220] <= 1
+ footprints[(250,_220),(260,_230)]: tower-placement[260,230]
+   + tower-placement[250,220] <= 1
+ footprints[(90,_70),(80,_60)]: tower-placement[90,70]
+   + tower-placement[80,60] <= 1
+ footprints[(90,_70),(80,_70)]: tower-placement[80,70]
+   + tower-placement[90,70] <= 1
+ footprints[(90,_70),(80,_80)]: tower-placement[80,80]
+   + tower-placement[90,70] <= 1
+ footprints[(90,_70),(90,_60)]: tower-placement[90,60]
+   + tower-placement[90,70] <= 1
+ footprints[(90,_70),(90,_80)]: tower-placement[90,70]
+   + tower-placement[90,80] <= 1
+ footprints[(90,_70),(100,_60)]: tower-placement[90,70]
+   + tower-placement[100,60] <= 1
+ footprints[(90,_70),(100,_70)]: tower-placement[90,70]
+   + tower-placement[100,70] <= 1
+ footprints[(260,_160),(250,_150)]: tower-placement[260,160]
+   + tower-placement[250,150] <= 1
+ footprints[(260,_160),(250,_160)]: tower-placement[250,160]
+   + tower-placement[260,160] <= 1
+ footprints[(260,_160),(250,_170)]: tower-placement[250,170]
+   + tower-placement[260,160] <= 1
+ footprints[(260,_160),(260,_150)]: tower-placement[260,150]
+   + tower-placement[260,160] <= 1
+ footprints[(260,_160),(260,_170)]: tower-placement[260,160]
+   + tower-placement[260,170] <= 1
+ footprints[(260,_160),(270,_150)]: tower-placement[260,160]
+   + tower-placement[270,150] <= 1
+ footprints[(260,_160),(270,_160)]: tower-placement[260,160]
+   + tower-placement[270,160] <= 1
+ footprints[(260,_160),(270,_170)]: tower-placement[270,170]
+   + tower-placement[260,160] <= 1
+ footprints[(40,_170),(30,_160)]: tower-placement[40,170]
+   + tower-placement[30,160] <= 1
+ footprints[(40,_170),(30,_170)]: tower-placement[30,170]
+   + tower-placement[40,170] <= 1
+ footprints[(40,_170),(30,_180)]: tower-placement[30,180]
+   + tower-placement[40,170] <= 1
+ footprints[(40,_170),(40,_160)]: tower-placement[40,160]
+   + tower-placement[40,170] <= 1
+ footprints[(40,_170),(40,_180)]: tower-placement[40,170]
+   + tower-placement[40,180] <= 1
+ footprints[(40,_170),(50,_160)]: tower-placement[40,170]
+   + tower-placement[50,160] <= 1
+ footprints[(40,_170),(50,_170)]: tower-placement[40,170]
+   + tower-placement[50,170] <= 1
+ footprints[(40,_170),(50,_180)]: tower-placement[50,180]
+   + tower-placement[40,170] <= 1
+ footprints[(30,_450),(20,_440)]: tower-placement[30,450]
+   + tower-placement[20,440] <= 1
+ footprints[(30,_450),(20,_450)]: tower-placement[30,450]
+   + tower-placement[20,450] <= 1
+ footprints[(30,_450),(20,_460)]: tower-placement[20,460]
+   + tower-placement[30,450] <= 1
+ footprints[(30,_450),(30,_440)]: tower-placement[30,440]
+   + tower-placement[30,450] <= 1
+ footprints[(30,_450),(30,_460)]: tower-placement[30,450]
+   + tower-placement[30,460] <= 1
+ footprints[(30,_450),(40,_440)]: tower-placement[30,450]
+   + tower-placement[40,440] <= 1
+ footprints[(30,_450),(40,_450)]: tower-placement[30,450]
+   + tower-placement[40,450] <= 1
+ footprints[(30,_450),(40,_460)]: tower-placement[40,460]
+   + tower-placement[30,450] <= 1
+ footprints[(60,_180),(50,_170)]: tower-placement[60,180]
+   + tower-placement[50,170] <= 1
+ footprints[(60,_180),(50,_180)]: tower-placement[50,180]
+   + tower-placement[60,180] <= 1
+ footprints[(60,_180),(50,_190)]: tower-placement[50,190]
+   + tower-placement[60,180] <= 1
+ footprints[(60,_180),(60,_170)]: tower-placement[60,170]
+   + tower-placement[60,180] <= 1
+ footprints[(60,_180),(60,_190)]: tower-placement[60,180]
+   + tower-placement[60,190] <= 1
+ footprints[(160,_10),(150,_10)]: tower-placement[160,10]
+   + tower-placement[150,10] <= 1
+ footprints[(160,_10),(150,_20)]: tower-placement[150,20]
+   + tower-placement[160,10] <= 1
+ footprints[(160,_10),(160,_20)]: tower-placement[160,10]
+   + tower-placement[160,20] <= 1
+ footprints[(160,_10),(170,_10)]: tower-placement[160,10]
+   + tower-placement[170,10] <= 1
+ footprints[(160,_10),(170,_20)]: tower-placement[170,20]
+   + tower-placement[160,10] <= 1
+ footprints[(10,_280),(10,_270)]: tower-placement[10,270]
+   + tower-placement[10,280] <= 1
+ footprints[(10,_280),(10,_290)]: tower-placement[10,280]
+   + tower-placement[10,290] <= 1
+ footprints[(10,_280),(20,_270)]: tower-placement[10,280]
+   + tower-placement[20,270] <= 1
+ footprints[(10,_280),(20,_280)]: tower-placement[10,280]
+   + tower-placement[20,280] <= 1
+ footprints[(10,_280),(20,_290)]: tower-placement[20,290]
+   + tower-placement[10,280] <= 1
+ footprints[(70,_280),(60,_270)]: tower-placement[70,280]
+   + tower-placement[60,270] <= 1
+ footprints[(70,_280),(60,_280)]: tower-placement[70,280]
+   + tower-placement[60,280] <= 1
+ footprints[(70,_280),(60,_290)]: tower-placement[60,290]
+   + tower-placement[70,280] <= 1
+ footprints[(70,_280),(70,_270)]: tower-placement[70,270]
+   + tower-placement[70,280] <= 1
+ footprints[(70,_280),(70,_290)]: tower-placement[70,280]
+   + tower-placement[70,290] <= 1
+ footprints[(70,_280),(80,_270)]: tower-placement[70,280]
+   + tower-placement[80,270] <= 1
+ footprints[(70,_280),(80,_280)]: tower-placement[70,280]
+   + tower-placement[80,280] <= 1
+ footprints[(70,_280),(80,_290)]: tower-placement[80,290]
+   + tower-placement[70,280] <= 1
+ footprints[(100,_10),(90,_10)]: tower-placement[90,10]
+   + tower-placement[100,10] <= 1
+ footprints[(100,_10),(90,_20)]: tower-placement[90,20]
+   + tower-placement[100,10] <= 1
+ footprints[(100,_10),(100,_20)]: tower-placement[100,10]
+   + tower-placement[100,20] <= 1
+ footprints[(100,_10),(110,_10)]: tower-placement[100,10]
+   + tower-placement[110,10] <= 1
+ footprints[(100,_10),(110,_20)]: tower-placement[110,20]
+   + tower-placement[100,10] <= 1
+ footprints[(50,_110),(40,_100)]: tower-placement[50,110]
+   + tower-placement[40,100] <= 1
+ footprints[(50,_110),(40,_110)]: tower-placement[40,110]
+   + tower-placement[50,110] <= 1
+ footprints[(50,_110),(40,_120)]: tower-placement[40,120]
+   + tower-placement[50,110] <= 1
+ footprints[(50,_110),(50,_100)]: tower-placement[50,100]
+   + tower-placement[50,110] <= 1
+ footprints[(50,_110),(50,_120)]: tower-placement[50,110]
+   + tower-placement[50,120] <= 1
+ footprints[(50,_110),(60,_100)]: tower-placement[50,110]
+   + tower-placement[60,100] <= 1
+ footprints[(50,_110),(60,_110)]: tower-placement[50,110]
+   + tower-placement[60,110] <= 1
+ footprints[(50,_110),(60,_120)]: tower-placement[60,120]
+   + tower-placement[50,110] <= 1
+ footprints[(40,_40),(30,_30)]: tower-placement[40,40]
+   + tower-placement[30,30] <= 1
+ footprints[(40,_40),(30,_40)]: tower-placement[30,40]
+   + tower-placement[40,40] <= 1
+ footprints[(40,_40),(30,_50)]: tower-placement[30,50]
+   + tower-placement[40,40] <= 1
+ footprints[(40,_40),(40,_30)]: tower-placement[40,30]
+   + tower-placement[40,40] <= 1
+ footprints[(40,_40),(40,_50)]: tower-placement[40,40]
+   + tower-placement[40,50] <= 1
+ footprints[(40,_40),(50,_30)]: tower-placement[40,40]
+   + tower-placement[50,30] <= 1
+ footprints[(40,_40),(50,_40)]: tower-placement[40,40]
+   + tower-placement[50,40] <= 1
+ footprints[(40,_40),(50,_50)]: tower-placement[50,50]
+   + tower-placement[40,40] <= 1
+ footprints[(30,_320),(20,_310)]: tower-placement[30,320]
+   + tower-placement[20,310] <= 1
+ footprints[(30,_320),(20,_320)]: tower-placement[30,320]
+   + tower-placement[20,320] <= 1
+ footprints[(30,_320),(20,_330)]: tower-placement[20,330]
+   + tower-placement[30,320] <= 1
+ footprints[(30,_320),(30,_310)]: tower-placement[30,310]
+   + tower-placement[30,320] <= 1
+ footprints[(30,_320),(30,_330)]: tower-placement[30,320]
+   + tower-placement[30,330] <= 1
+ footprints[(30,_320),(40,_310)]: tower-placement[30,320]
+   + tower-placement[40,310] <= 1
+ footprints[(30,_320),(40,_320)]: tower-placement[30,320]
+   + tower-placement[40,320] <= 1
+ footprints[(30,_320),(40,_330)]: tower-placement[40,330]
+   + tower-placement[30,320] <= 1
+ footprints[(60,_50),(50,_40)]: tower-placement[60,50]
+   + tower-placement[50,40] <= 1
+ footprints[(60,_50),(50,_50)]: tower-placement[50,50]
+   + tower-placement[60,50] <= 1
+ footprints[(60,_50),(50,_60)]: tower-placement[50,60]
+   + tower-placement[60,50] <= 1
+ footprints[(60,_50),(60,_40)]: tower-placement[60,40]
+   + tower-placement[60,50] <= 1
+ footprints[(60,_50),(60,_60)]: tower-placement[60,50]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_50),(70,_40)]: tower-placement[60,50]
+   + tower-placement[70,40] <= 1
+ footprints[(60,_50),(70,_50)]: tower-placement[70,50]
+   + tower-placement[60,50] <= 1
+ footprints[(60,_50),(70,_60)]: tower-placement[70,60]
+   + tower-placement[60,50] <= 1
+ footprints[(120,_50),(110,_40)]: tower-placement[120,50]
+   + tower-placement[110,40] <= 1
+ footprints[(120,_50),(110,_50)]: tower-placement[120,50]
+   + tower-placement[110,50] <= 1
+ footprints[(120,_50),(110,_60)]: tower-placement[110,60]
+   + tower-placement[120,50] <= 1
+ footprints[(120,_50),(120,_40)]: tower-placement[120,40]
+   + tower-placement[120,50] <= 1
+ footprints[(120,_50),(120,_60)]: tower-placement[120,50]
+   + tower-placement[120,60] <= 1
+ footprints[(120,_50),(130,_40)]: tower-placement[120,50]
+   + tower-placement[130,40] <= 1
+ footprints[(120,_50),(130,_50)]: tower-placement[120,50]
+   + tower-placement[130,50] <= 1
+ footprints[(120,_50),(130,_60)]: tower-placement[130,60]
+   + tower-placement[120,50] <= 1
+ footprints[(460,_410),(460,_400)]: tower-placement[460,400]
+   + tower-placement[460,410] <= 1
+ footprints[(460,_410),(460,_420)]: tower-placement[460,410]
+   + tower-placement[460,420] <= 1
+ footprints[(10,_150),(10,_140)]: tower-placement[10,140]
+   + tower-placement[10,150] <= 1
+ footprints[(10,_150),(10,_160)]: tower-placement[10,150]
+   + tower-placement[10,160] <= 1
+ footprints[(10,_150),(20,_140)]: tower-placement[10,150]
+   + tower-placement[20,140] <= 1
+ footprints[(10,_150),(20,_150)]: tower-placement[10,150]
+   + tower-placement[20,150] <= 1
+ footprints[(10,_150),(20,_160)]: tower-placement[20,160]
+   + tower-placement[10,150] <= 1
+ footprints[(80,_90),(70,_80)]: tower-placement[80,90]
+   + tower-placement[70,80] <= 1
+ footprints[(80,_90),(70,_90)]: tower-placement[70,90]
+   + tower-placement[80,90] <= 1
+ footprints[(80,_90),(70,_100)]: tower-placement[70,100]
+   + tower-placement[80,90] <= 1
+ footprints[(80,_90),(80,_80)]: tower-placement[80,80]
+   + tower-placement[80,90] <= 1
+ footprints[(80,_90),(90,_80)]: tower-placement[80,90]
+   + tower-placement[90,80] <= 1
+ footprints[(30,_190),(20,_180)]: tower-placement[30,190]
+   + tower-placement[20,180] <= 1
+ footprints[(30,_190),(20,_190)]: tower-placement[30,190]
+   + tower-placement[20,190] <= 1
+ footprints[(30,_190),(30,_180)]: tower-placement[30,180]
+   + tower-placement[30,190] <= 1
+ footprints[(30,_190),(40,_180)]: tower-placement[30,190]
+   + tower-placement[40,180] <= 1
+ footprints[(30,_190),(40,_190)]: tower-placement[30,190]
+   + tower-placement[40,190] <= 1
+ footprints[(460,_280),(450,_270)]: tower-placement[460,280]
+   + tower-placement[450,270] <= 1
+ footprints[(460,_280),(450,_280)]: tower-placement[450,280]
+   + tower-placement[460,280] <= 1
+ footprints[(460,_280),(450,_290)]: tower-placement[450,290]
+   + tower-placement[460,280] <= 1
+ footprints[(460,_280),(460,_270)]: tower-placement[460,270]
+   + tower-placement[460,280] <= 1
+ footprints[(460,_280),(460,_290)]: tower-placement[460,280]
+   + tower-placement[460,290] <= 1
+ footprints[(10,_20),(10,_10)]: tower-placement[10,10]
+   + tower-placement[10,20] <= 1
+ footprints[(10,_20),(10,_30)]: tower-placement[10,20]
+   + tower-placement[10,30] <= 1
+ footprints[(10,_20),(20,_10)]: tower-placement[10,20]
+   + tower-placement[20,10] <= 1
+ footprints[(10,_20),(20,_20)]: tower-placement[10,20]
+   + tower-placement[20,20] <= 1
+ footprints[(10,_20),(20,_30)]: tower-placement[20,30]
+   + tower-placement[10,20] <= 1
+ footprints[(70,_20),(60,_10)]: tower-placement[70,20]
+   + tower-placement[60,10] <= 1
+ footprints[(70,_20),(60,_20)]: tower-placement[70,20]
+   + tower-placement[60,20] <= 1
+ footprints[(70,_20),(60,_30)]: tower-placement[60,30]
+   + tower-placement[70,20] <= 1
+ footprints[(70,_20),(70,_10)]: tower-placement[70,10]
+   + tower-placement[70,20] <= 1
+ footprints[(70,_20),(70,_30)]: tower-placement[70,20]
+   + tower-placement[70,30] <= 1
+ footprints[(70,_20),(80,_10)]: tower-placement[70,20]
+   + tower-placement[80,10] <= 1
+ footprints[(70,_20),(80,_20)]: tower-placement[70,20]
+   + tower-placement[80,20] <= 1
+ footprints[(70,_20),(80,_30)]: tower-placement[80,30]
+   + tower-placement[70,20] <= 1
+ footprints[(30,_60),(20,_50)]: tower-placement[30,60]
+   + tower-placement[20,50] <= 1
+ footprints[(30,_60),(20,_60)]: tower-placement[30,60]
+   + tower-placement[20,60] <= 1
+ footprints[(30,_60),(20,_70)]: tower-placement[20,70]
+   + tower-placement[30,60] <= 1
+ footprints[(30,_60),(30,_50)]: tower-placement[30,50]
+   + tower-placement[30,60] <= 1
+ footprints[(30,_60),(30,_70)]: tower-placement[30,60]
+   + tower-placement[30,70] <= 1
+ footprints[(30,_60),(40,_50)]: tower-placement[30,60]
+   + tower-placement[40,50] <= 1
+ footprints[(30,_60),(40,_60)]: tower-placement[30,60]
+   + tower-placement[40,60] <= 1
+ footprints[(30,_60),(40,_70)]: tower-placement[40,70]
+   + tower-placement[30,60] <= 1
+ footprints[(450,_430),(440,_440)]: tower-placement[440,440]
+   + tower-placement[450,430] <= 1
+ footprints[(450,_430),(450,_440)]: tower-placement[450,430]
+   + tower-placement[450,440] <= 1
+ footprints[(450,_430),(460,_420)]: tower-placement[450,430]
+   + tower-placement[460,420] <= 1
+ footprints[(450,_430),(460,_430)]: tower-placement[450,430]
+   + tower-placement[460,430] <= 1
+ footprints[(450,_430),(460,_440)]: tower-placement[460,440]
+   + tower-placement[450,430] <= 1
+ footprints[(380,_360),(370,_350)]: tower-placement[380,360]
+   + tower-placement[370,350] <= 1
+ footprints[(380,_360),(370,_360)]: tower-placement[370,360]
+   + tower-placement[380,360] <= 1
+ footprints[(380,_360),(370,_370)]: tower-placement[370,370]
+   + tower-placement[380,360] <= 1
+ footprints[(380,_360),(380,_350)]: tower-placement[380,350]
+   + tower-placement[380,360] <= 1
+ footprints[(380,_360),(380,_370)]: tower-placement[380,360]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_360),(390,_350)]: tower-placement[380,360]
+   + tower-placement[390,350] <= 1
+ footprints[(380,_360),(390,_360)]: tower-placement[390,360]
+   + tower-placement[380,360] <= 1
+ footprints[(380,_360),(390,_370)]: tower-placement[390,370]
+   + tower-placement[380,360] <= 1
+ footprints[(460,_20),(450,_10)]: tower-placement[460,20]
+   + tower-placement[450,10] <= 1
+ footprints[(460,_20),(450,_20)]: tower-placement[450,20]
+   + tower-placement[460,20] <= 1
+ footprints[(460,_20),(450,_30)]: tower-placement[450,30]
+   + tower-placement[460,20] <= 1
+ footprints[(460,_20),(460,_10)]: tower-placement[460,10]
+   + tower-placement[460,20] <= 1
+ footprints[(460,_20),(460,_30)]: tower-placement[460,20]
+   + tower-placement[460,30] <= 1
+ footprints[(320,_390),(310,_380)]: tower-placement[320,390]
+   + tower-placement[310,380] <= 1
+ footprints[(320,_390),(310,_390)]: tower-placement[310,390]
+   + tower-placement[320,390] <= 1
+ footprints[(320,_390),(320,_380)]: tower-placement[320,380]
+   + tower-placement[320,390] <= 1
+ footprints[(320,_390),(330,_380)]: tower-placement[320,390]
+   + tower-placement[330,380] <= 1
+ footprints[(320,_390),(330,_390)]: tower-placement[320,390]
+   + tower-placement[330,390] <= 1
+ footprints[(450,_300),(440,_290)]: tower-placement[450,300]
+   + tower-placement[440,290] <= 1
+ footprints[(450,_300),(450,_290)]: tower-placement[450,290]
+   + tower-placement[450,300] <= 1
+ footprints[(450,_300),(460,_290)]: tower-placement[450,300]
+   + tower-placement[460,290] <= 1
+ footprints[(450,_300),(460,_300)]: tower-placement[450,300]
+   + tower-placement[460,300] <= 1
+ footprints[(450,_300),(460,_310)]: tower-placement[460,310]
+   + tower-placement[450,300] <= 1
+ footprints[(440,_230),(430,_220)]: tower-placement[440,230]
+   + tower-placement[430,220] <= 1
+ footprints[(440,_230),(430,_230)]: tower-placement[430,230]
+   + tower-placement[440,230] <= 1
+ footprints[(440,_230),(430,_240)]: tower-placement[430,240]
+   + tower-placement[440,230] <= 1
+ footprints[(440,_230),(440,_220)]: tower-placement[440,220]
+   + tower-placement[440,230] <= 1
+ footprints[(440,_230),(440,_240)]: tower-placement[440,230]
+   + tower-placement[440,240] <= 1
+ footprints[(440,_230),(450,_220)]: tower-placement[440,230]
+   + tower-placement[450,220] <= 1
+ footprints[(440,_230),(450,_230)]: tower-placement[440,230]
+   + tower-placement[450,230] <= 1
+ footprints[(440,_230),(450,_240)]: tower-placement[450,240]
+   + tower-placement[440,230] <= 1
+ footprints[(380,_230),(370,_220)]: tower-placement[380,230]
+   + tower-placement[370,220] <= 1
+ footprints[(380,_230),(370,_230)]: tower-placement[370,230]
+   + tower-placement[380,230] <= 1
+ footprints[(380,_230),(370,_240)]: tower-placement[370,240]
+   + tower-placement[380,230] <= 1
+ footprints[(380,_230),(380,_220)]: tower-placement[380,220]
+   + tower-placement[380,230] <= 1
+ footprints[(380,_230),(380,_240)]: tower-placement[380,230]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_230),(390,_220)]: tower-placement[380,230]
+   + tower-placement[390,220] <= 1
+ footprints[(380,_230),(390,_230)]: tower-placement[390,230]
+   + tower-placement[380,230] <= 1
+ footprints[(380,_230),(390,_240)]: tower-placement[390,240]
+   + tower-placement[380,230] <= 1
+ footprints[(330,_330),(320,_330)]: tower-placement[320,330]
+   + tower-placement[330,330] <= 1
+ footprints[(330,_330),(320,_340)]: tower-placement[320,340]
+   + tower-placement[330,330] <= 1
+ footprints[(330,_330),(330,_340)]: tower-placement[330,330]
+   + tower-placement[330,340] <= 1
+ footprints[(330,_330),(340,_340)]: tower-placement[340,340]
+   + tower-placement[330,330] <= 1
+ footprints[(270,_360),(260,_350)]: tower-placement[270,360]
+   + tower-placement[260,350] <= 1
+ footprints[(270,_360),(260,_360)]: tower-placement[260,360]
+   + tower-placement[270,360] <= 1
+ footprints[(270,_360),(260,_370)]: tower-placement[260,370]
+   + tower-placement[270,360] <= 1
+ footprints[(270,_360),(270,_350)]: tower-placement[270,350]
+   + tower-placement[270,360] <= 1
+ footprints[(270,_360),(270,_370)]: tower-placement[270,360]
+   + tower-placement[270,370] <= 1
+ footprints[(270,_360),(280,_350)]: tower-placement[270,360]
+   + tower-placement[280,350] <= 1
+ footprints[(270,_360),(280,_360)]: tower-placement[270,360]
+   + tower-placement[280,360] <= 1
+ footprints[(270,_360),(280,_370)]: tower-placement[280,370]
+   + tower-placement[270,360] <= 1
+ footprints[(440,_450),(430,_450)]: tower-placement[430,450]
+   + tower-placement[440,450] <= 1
+ footprints[(440,_450),(430,_460)]: tower-placement[430,460]
+   + tower-placement[440,450] <= 1
+ footprints[(440,_450),(440,_440)]: tower-placement[440,440]
+   + tower-placement[440,450] <= 1
+ footprints[(440,_450),(440,_460)]: tower-placement[440,450]
+   + tower-placement[440,460] <= 1
+ footprints[(440,_450),(450,_440)]: tower-placement[440,450]
+   + tower-placement[450,440] <= 1
+ footprints[(440,_450),(450,_450)]: tower-placement[440,450]
+   + tower-placement[450,450] <= 1
+ footprints[(440,_450),(450,_460)]: tower-placement[450,460]
+   + tower-placement[440,450] <= 1
+ footprints[(400,_270),(390,_260)]: tower-placement[400,270]
+   + tower-placement[390,260] <= 1
+ footprints[(400,_270),(400,_260)]: tower-placement[400,260]
+   + tower-placement[400,270] <= 1
+ footprints[(400,_270),(410,_260)]: tower-placement[400,270]
+   + tower-placement[410,260] <= 1
+ footprints[(400,_270),(410,_270)]: tower-placement[400,270]
+   + tower-placement[410,270] <= 1
+ footprints[(290,_370),(280,_360)]: tower-placement[290,370]
+   + tower-placement[280,360] <= 1
+ footprints[(290,_370),(280,_370)]: tower-placement[280,370]
+   + tower-placement[290,370] <= 1
+ footprints[(290,_370),(280,_380)]: tower-placement[280,380]
+   + tower-placement[290,370] <= 1
+ footprints[(290,_370),(290,_360)]: tower-placement[290,360]
+   + tower-placement[290,370] <= 1
+ footprints[(290,_370),(290,_380)]: tower-placement[290,370]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_370),(300,_360)]: tower-placement[290,370]
+   + tower-placement[300,360] <= 1
+ footprints[(290,_370),(300,_370)]: tower-placement[300,370]
+   + tower-placement[290,370] <= 1
+ footprints[(290,_370),(300,_380)]: tower-placement[300,380]
+   + tower-placement[290,370] <= 1
+ footprints[(350,_370),(340,_360)]: tower-placement[350,370]
+   + tower-placement[340,360] <= 1
+ footprints[(350,_370),(340,_370)]: tower-placement[340,370]
+   + tower-placement[350,370] <= 1
+ footprints[(350,_370),(340,_380)]: tower-placement[340,380]
+   + tower-placement[350,370] <= 1
+ footprints[(350,_370),(350,_360)]: tower-placement[350,360]
+   + tower-placement[350,370] <= 1
+ footprints[(350,_370),(350,_380)]: tower-placement[350,370]
+   + tower-placement[350,380] <= 1
+ footprints[(350,_370),(360,_360)]: tower-placement[350,370]
+   + tower-placement[360,360] <= 1
+ footprints[(350,_370),(360,_370)]: tower-placement[350,370]
+   + tower-placement[360,370] <= 1
+ footprints[(350,_370),(360,_380)]: tower-placement[360,380]
+   + tower-placement[350,370] <= 1
+ footprints[(240,_120),(240,_110)]: tower-placement[240,110]
+   + tower-placement[240,120] <= 1
+ footprints[(240,_120),(250,_110)]: tower-placement[240,120]
+   + tower-placement[250,110] <= 1
+ footprints[(240,_120),(250,_120)]: tower-placement[250,120]
+   + tower-placement[240,120] <= 1
+ footprints[(240,_120),(250,_130)]: tower-placement[250,130]
+   + tower-placement[240,120] <= 1
+ footprints[(380,_100),(370,_90)]: tower-placement[380,100]
+   + tower-placement[370,90] <= 1
+ footprints[(380,_100),(370,_100)]: tower-placement[370,100]
+   + tower-placement[380,100] <= 1
+ footprints[(380,_100),(370,_110)]: tower-placement[370,110]
+   + tower-placement[380,100] <= 1
+ footprints[(380,_100),(380,_90)]: tower-placement[380,90]
+   + tower-placement[380,100] <= 1
+ footprints[(380,_100),(380,_110)]: tower-placement[380,100]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_100),(390,_90)]: tower-placement[380,100]
+   + tower-placement[390,90] <= 1
+ footprints[(380,_100),(390,_100)]: tower-placement[390,100]
+   + tower-placement[380,100] <= 1
+ footprints[(380,_100),(390,_110)]: tower-placement[390,110]
+   + tower-placement[380,100] <= 1
+ footprints[(430,_30),(420,_20)]: tower-placement[430,30]
+   + tower-placement[420,20] <= 1
+ footprints[(430,_30),(430,_20)]: tower-placement[430,20]
+   + tower-placement[430,30] <= 1
+ footprints[(430,_30),(440,_20)]: tower-placement[430,30]
+   + tower-placement[440,20] <= 1
+ footprints[(430,_30),(440,_30)]: tower-placement[430,30]
+   + tower-placement[440,30] <= 1
+ footprints[(430,_30),(440,_40)]: tower-placement[440,40]
+   + tower-placement[430,30] <= 1
+ footprints[(150,_390),(140,_390)]: tower-placement[140,390]
+   + tower-placement[150,390] <= 1
+ footprints[(150,_390),(160,_390)]: tower-placement[160,390]
+   + tower-placement[150,390] <= 1
+ footprints[(320,_130),(310,_120)]: tower-placement[320,130]
+   + tower-placement[310,120] <= 1
+ footprints[(320,_130),(310,_130)]: tower-placement[310,130]
+   + tower-placement[320,130] <= 1
+ footprints[(320,_130),(310,_140)]: tower-placement[310,140]
+   + tower-placement[320,130] <= 1
+ footprints[(320,_130),(320,_120)]: tower-placement[320,120]
+   + tower-placement[320,130] <= 1
+ footprints[(320,_130),(320,_140)]: tower-placement[320,130]
+   + tower-placement[320,140] <= 1
+ footprints[(320,_130),(330,_120)]: tower-placement[320,130]
+   + tower-placement[330,120] <= 1
+ footprints[(320,_130),(330,_130)]: tower-placement[320,130]
+   + tower-placement[330,130] <= 1
+ footprints[(320,_130),(330,_140)]: tower-placement[330,140]
+   + tower-placement[320,130] <= 1
+ footprints[(280,_300),(270,_290)]: tower-placement[280,300]
+   + tower-placement[270,290] <= 1
+ footprints[(280,_300),(270,_300)]: tower-placement[270,300]
+   + tower-placement[280,300] <= 1
+ footprints[(280,_300),(270,_310)]: tower-placement[270,310]
+   + tower-placement[280,300] <= 1
+ footprints[(280,_300),(280,_310)]: tower-placement[280,300]
+   + tower-placement[280,310] <= 1
+ footprints[(280,_300),(290,_310)]: tower-placement[290,310]
+   + tower-placement[280,300] <= 1
+ footprints[(450,_40),(440,_30)]: tower-placement[450,40]
+   + tower-placement[440,30] <= 1
+ footprints[(450,_40),(440,_40)]: tower-placement[440,40]
+   + tower-placement[450,40] <= 1
+ footprints[(450,_40),(450,_30)]: tower-placement[450,30]
+   + tower-placement[450,40] <= 1
+ footprints[(450,_40),(450,_50)]: tower-placement[450,40]
+   + tower-placement[450,50] <= 1
+ footprints[(450,_40),(460,_30)]: tower-placement[450,40]
+   + tower-placement[460,30] <= 1
+ footprints[(450,_40),(460,_40)]: tower-placement[450,40]
+   + tower-placement[460,40] <= 1
+ footprints[(450,_40),(460,_50)]: tower-placement[460,50]
+   + tower-placement[450,40] <= 1
+ footprints[(270,_230),(260,_220)]: tower-placement[270,230]
+   + tower-placement[260,220] <= 1
+ footprints[(270,_230),(260,_230)]: tower-placement[260,230]
+   + tower-placement[270,230] <= 1
+ footprints[(270,_230),(260,_240)]: tower-placement[260,240]
+   + tower-placement[270,230] <= 1
+ footprints[(270,_230),(270,_220)]: tower-placement[270,220]
+   + tower-placement[270,230] <= 1
+ footprints[(270,_230),(270,_240)]: tower-placement[270,230]
+   + tower-placement[270,240] <= 1
+ footprints[(230,_50),(220,_40)]: tower-placement[230,50]
+   + tower-placement[220,40] <= 1
+ footprints[(230,_50),(220,_50)]: tower-placement[220,50]
+   + tower-placement[230,50] <= 1
+ footprints[(230,_50),(220,_60)]: tower-placement[220,60]
+   + tower-placement[230,50] <= 1
+ footprints[(230,_50),(230,_40)]: tower-placement[230,40]
+   + tower-placement[230,50] <= 1
+ footprints[(230,_50),(230,_60)]: tower-placement[230,50]
+   + tower-placement[230,60] <= 1
+ footprints[(230,_50),(240,_50)]: tower-placement[230,50]
+   + tower-placement[240,50] <= 1
+ footprints[(230,_50),(240,_60)]: tower-placement[240,60]
+   + tower-placement[230,50] <= 1
+ footprints[(350,_240),(340,_230)]: tower-placement[350,240]
+   + tower-placement[340,230] <= 1
+ footprints[(350,_240),(340,_240)]: tower-placement[340,240]
+   + tower-placement[350,240] <= 1
+ footprints[(350,_240),(340,_250)]: tower-placement[340,250]
+   + tower-placement[350,240] <= 1
+ footprints[(350,_240),(350,_230)]: tower-placement[350,230]
+   + tower-placement[350,240] <= 1
+ footprints[(350,_240),(350,_250)]: tower-placement[350,240]
+   + tower-placement[350,250] <= 1
+ footprints[(350,_240),(360,_230)]: tower-placement[350,240]
+   + tower-placement[360,230] <= 1
+ footprints[(350,_240),(360,_240)]: tower-placement[350,240]
+   + tower-placement[360,240] <= 1
+ footprints[(350,_240),(360,_250)]: tower-placement[360,250]
+   + tower-placement[350,240] <= 1
+ footprints[(130,_250),(120,_240)]: tower-placement[130,250]
+   + tower-placement[120,240] <= 1
+ footprints[(130,_250),(120,_250)]: tower-placement[120,250]
+   + tower-placement[130,250] <= 1
+ footprints[(130,_250),(120,_260)]: tower-placement[120,260]
+   + tower-placement[130,250] <= 1
+ footprints[(130,_250),(130,_240)]: tower-placement[130,240]
+   + tower-placement[130,250] <= 1
+ footprints[(130,_250),(130,_260)]: tower-placement[130,250]
+   + tower-placement[130,260] <= 1
+ footprints[(130,_250),(140,_240)]: tower-placement[130,250]
+   + tower-placement[140,240] <= 1
+ footprints[(130,_250),(140,_250)]: tower-placement[130,250]
+   + tower-placement[140,250] <= 1
+ footprints[(130,_250),(140,_260)]: tower-placement[140,260]
+   + tower-placement[130,250] <= 1
+ footprints[(240,_340),(240,_330)]: tower-placement[240,330]
+   + tower-placement[240,340] <= 1
+ footprints[(240,_340),(240,_350)]: tower-placement[240,340]
+   + tower-placement[240,350] <= 1
+ footprints[(240,_340),(250,_330)]: tower-placement[250,330]
+   + tower-placement[240,340] <= 1
+ footprints[(240,_340),(250,_340)]: tower-placement[250,340]
+   + tower-placement[240,340] <= 1
+ footprints[(240,_340),(250,_350)]: tower-placement[250,350]
+   + tower-placement[240,340] <= 1
+ footprints[(20,_350),(10,_340)]: tower-placement[20,350]
+   + tower-placement[10,340] <= 1
+ footprints[(20,_350),(10,_350)]: tower-placement[10,350]
+   + tower-placement[20,350] <= 1
+ footprints[(20,_350),(10,_360)]: tower-placement[10,360]
+   + tower-placement[20,350] <= 1
+ footprints[(20,_350),(20,_340)]: tower-placement[20,340]
+   + tower-placement[20,350] <= 1
+ footprints[(20,_350),(20,_360)]: tower-placement[20,350]
+   + tower-placement[20,360] <= 1
+ footprints[(20,_350),(30,_340)]: tower-placement[20,350]
+   + tower-placement[30,340] <= 1
+ footprints[(20,_350),(30,_350)]: tower-placement[30,350]
+   + tower-placement[20,350] <= 1
+ footprints[(300,_340),(290,_330)]: tower-placement[300,340]
+   + tower-placement[290,330] <= 1
+ footprints[(300,_340),(290,_340)]: tower-placement[300,340]
+   + tower-placement[290,340] <= 1
+ footprints[(300,_340),(290,_350)]: tower-placement[290,350]
+   + tower-placement[300,340] <= 1
+ footprints[(300,_340),(300,_330)]: tower-placement[300,330]
+   + tower-placement[300,340] <= 1
+ footprints[(300,_340),(300,_350)]: tower-placement[300,340]
+   + tower-placement[300,350] <= 1
+ footprints[(300,_340),(310,_330)]: tower-placement[300,340]
+   + tower-placement[310,330] <= 1
+ footprints[(300,_340),(310,_340)]: tower-placement[300,340]
+   + tower-placement[310,340] <= 1
+ footprints[(300,_340),(310,_350)]: tower-placement[310,350]
+   + tower-placement[300,340] <= 1
+ footprints[(150,_260),(140,_250)]: tower-placement[150,260]
+   + tower-placement[140,250] <= 1
+ footprints[(150,_260),(140,_260)]: tower-placement[140,260]
+   + tower-placement[150,260] <= 1
+ footprints[(150,_260),(140,_270)]: tower-placement[140,270]
+   + tower-placement[150,260] <= 1
+ footprints[(150,_260),(150,_250)]: tower-placement[150,250]
+   + tower-placement[150,260] <= 1
+ footprints[(150,_260),(150,_270)]: tower-placement[150,260]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_260),(160,_250)]: tower-placement[150,260]
+   + tower-placement[160,250] <= 1
+ footprints[(150,_260),(160,_260)]: tower-placement[160,260]
+   + tower-placement[150,260] <= 1
+ footprints[(150,_260),(160,_270)]: tower-placement[160,270]
+   + tower-placement[150,260] <= 1
+ footprints[(250,_90),(240,_80)]: tower-placement[250,90]
+   + tower-placement[240,80] <= 1
+ footprints[(250,_90),(240,_90)]: tower-placement[250,90]
+   + tower-placement[240,90] <= 1
+ footprints[(250,_90),(240,_100)]: tower-placement[240,100]
+   + tower-placement[250,90] <= 1
+ footprints[(250,_90),(250,_80)]: tower-placement[250,80]
+   + tower-placement[250,90] <= 1
+ footprints[(250,_90),(250,_100)]: tower-placement[250,90]
+   + tower-placement[250,100] <= 1
+ footprints[(250,_90),(260,_80)]: tower-placement[250,90]
+   + tower-placement[260,80] <= 1
+ footprints[(250,_90),(260,_90)]: tower-placement[250,90]
+   + tower-placement[260,90] <= 1
+ footprints[(250,_90),(260,_100)]: tower-placement[260,100]
+   + tower-placement[250,90] <= 1
+ footprints[(140,_190),(130,_180)]: tower-placement[140,190]
+   + tower-placement[130,180] <= 1
+ footprints[(140,_190),(130,_190)]: tower-placement[130,190]
+   + tower-placement[140,190] <= 1
+ footprints[(140,_190),(130,_200)]: tower-placement[130,200]
+   + tower-placement[140,190] <= 1
+ footprints[(140,_190),(140,_180)]: tower-placement[140,180]
+   + tower-placement[140,190] <= 1
+ footprints[(140,_190),(140,_200)]: tower-placement[140,190]
+   + tower-placement[140,200] <= 1
+ footprints[(140,_190),(150,_180)]: tower-placement[140,190]
+   + tower-placement[150,180] <= 1
+ footprints[(140,_190),(150,_190)]: tower-placement[140,190]
+   + tower-placement[150,190] <= 1
+ footprints[(140,_190),(150,_200)]: tower-placement[150,200]
+   + tower-placement[140,190] <= 1
+ footprints[(270,_100),(260,_90)]: tower-placement[270,100]
+   + tower-placement[260,90] <= 1
+ footprints[(270,_100),(260,_100)]: tower-placement[260,100]
+   + tower-placement[270,100] <= 1
+ footprints[(270,_100),(260,_110)]: tower-placement[260,110]
+   + tower-placement[270,100] <= 1
+ footprints[(270,_100),(270,_90)]: tower-placement[270,90]
+   + tower-placement[270,100] <= 1
+ footprints[(270,_100),(270,_110)]: tower-placement[270,100]
+   + tower-placement[270,110] <= 1
+ footprints[(270,_100),(280,_90)]: tower-placement[270,100]
+   + tower-placement[280,90] <= 1
+ footprints[(270,_100),(280,_100)]: tower-placement[270,100]
+   + tower-placement[280,100] <= 1
+ footprints[(270,_100),(280,_110)]: tower-placement[280,110]
+   + tower-placement[270,100] <= 1
+ footprints[(90,_290),(80,_280)]: tower-placement[90,290]
+   + tower-placement[80,280] <= 1
+ footprints[(90,_290),(80,_290)]: tower-placement[80,290]
+   + tower-placement[90,290] <= 1
+ footprints[(90,_290),(80,_300)]: tower-placement[80,300]
+   + tower-placement[90,290] <= 1
+ footprints[(90,_290),(90,_280)]: tower-placement[90,280]
+   + tower-placement[90,290] <= 1
+ footprints[(90,_290),(90,_300)]: tower-placement[90,290]
+   + tower-placement[90,300] <= 1
+ footprints[(90,_290),(100,_280)]: tower-placement[90,290]
+   + tower-placement[100,280] <= 1
+ footprints[(90,_290),(100,_290)]: tower-placement[90,290]
+   + tower-placement[100,290] <= 1
+ footprints[(90,_290),(100,_300)]: tower-placement[100,300]
+   + tower-placement[90,290] <= 1
+ footprints[(50,_460),(40,_450)]: tower-placement[50,460]
+   + tower-placement[40,450] <= 1
+ footprints[(50,_460),(40,_460)]: tower-placement[40,460]
+   + tower-placement[50,460] <= 1
+ footprints[(50,_460),(50,_450)]: tower-placement[50,450]
+   + tower-placement[50,460] <= 1
+ footprints[(50,_460),(60,_460)]: tower-placement[50,460]
+   + tower-placement[60,460] <= 1
+ footprints[(400,_10),(390,_10)]: tower-placement[390,10]
+   + tower-placement[400,10] <= 1
+ footprints[(400,_10),(390,_20)]: tower-placement[390,20]
+   + tower-placement[400,10] <= 1
+ footprints[(400,_10),(400,_20)]: tower-placement[400,10]
+   + tower-placement[400,20] <= 1
+ footprints[(400,_10),(410,_10)]: tower-placement[400,10]
+   + tower-placement[410,10] <= 1
+ footprints[(400,_10),(410,_20)]: tower-placement[410,20]
+   + tower-placement[400,10] <= 1
+ footprints[(260,_380),(250,_370)]: tower-placement[260,380]
+   + tower-placement[250,370] <= 1
+ footprints[(260,_380),(250,_380)]: tower-placement[250,380]
+   + tower-placement[260,380] <= 1
+ footprints[(260,_380),(250,_390)]: tower-placement[250,390]
+   + tower-placement[260,380] <= 1
+ footprints[(260,_380),(260,_370)]: tower-placement[260,370]
+   + tower-placement[260,380] <= 1
+ footprints[(260,_380),(260,_390)]: tower-placement[260,380]
+   + tower-placement[260,390] <= 1
+ footprints[(260,_380),(270,_370)]: tower-placement[260,380]
+   + tower-placement[270,370] <= 1
+ footprints[(260,_380),(270,_380)]: tower-placement[260,380]
+   + tower-placement[270,380] <= 1
+ footprints[(260,_380),(270,_390)]: tower-placement[270,390]
+   + tower-placement[260,380] <= 1
+ footprints[(180,_20),(170,_10)]: tower-placement[180,20]
+   + tower-placement[170,10] <= 1
+ footprints[(180,_20),(170,_20)]: tower-placement[170,20]
+   + tower-placement[180,20] <= 1
+ footprints[(180,_20),(170,_30)]: tower-placement[170,30]
+   + tower-placement[180,20] <= 1
+ footprints[(180,_20),(180,_10)]: tower-placement[180,10]
+   + tower-placement[180,20] <= 1
+ footprints[(180,_20),(180,_30)]: tower-placement[180,20]
+   + tower-placement[180,30] <= 1
+ footprints[(180,_20),(190,_10)]: tower-placement[180,20]
+   + tower-placement[190,10] <= 1
+ footprints[(180,_20),(190,_20)]: tower-placement[180,20]
+   + tower-placement[190,20] <= 1
+ footprints[(180,_20),(190,_30)]: tower-placement[190,30]
+   + tower-placement[180,20] <= 1
+ footprints[(110,_300),(100,_290)]: tower-placement[110,300]
+   + tower-placement[100,290] <= 1
+ footprints[(110,_300),(100,_300)]: tower-placement[100,300]
+   + tower-placement[110,300] <= 1
+ footprints[(110,_300),(100,_310)]: tower-placement[100,310]
+   + tower-placement[110,300] <= 1
+ footprints[(110,_300),(110,_290)]: tower-placement[110,290]
+   + tower-placement[110,300] <= 1
+ footprints[(110,_300),(110,_310)]: tower-placement[110,300]
+   + tower-placement[110,310] <= 1
+ footprints[(110,_300),(120,_290)]: tower-placement[120,290]
+   + tower-placement[110,300] <= 1
+ footprints[(110,_300),(120,_300)]: tower-placement[120,300]
+   + tower-placement[110,300] <= 1
+ footprints[(110,_300),(120,_310)]: tower-placement[120,310]
+   + tower-placement[110,300] <= 1
+ footprints[(350,_110),(340,_100)]: tower-placement[350,110]
+   + tower-placement[340,100] <= 1
+ footprints[(350,_110),(340,_110)]: tower-placement[340,110]
+   + tower-placement[350,110] <= 1
+ footprints[(350,_110),(340,_120)]: tower-placement[340,120]
+   + tower-placement[350,110] <= 1
+ footprints[(350,_110),(350,_100)]: tower-placement[350,100]
+   + tower-placement[350,110] <= 1
+ footprints[(350,_110),(350,_120)]: tower-placement[350,110]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_110),(360,_100)]: tower-placement[350,110]
+   + tower-placement[360,100] <= 1
+ footprints[(350,_110),(360,_110)]: tower-placement[350,110]
+   + tower-placement[360,110] <= 1
+ footprints[(350,_110),(360,_120)]: tower-placement[360,120]
+   + tower-placement[350,110] <= 1
+ footprints[(170,_300),(160,_290)]: tower-placement[170,300]
+   + tower-placement[160,290] <= 1
+ footprints[(170,_300),(160,_300)]: tower-placement[160,300]
+   + tower-placement[170,300] <= 1
+ footprints[(170,_300),(160,_310)]: tower-placement[160,310]
+   + tower-placement[170,300] <= 1
+ footprints[(170,_300),(170,_290)]: tower-placement[170,290]
+   + tower-placement[170,300] <= 1
+ footprints[(170,_300),(170,_310)]: tower-placement[170,300]
+   + tower-placement[170,310] <= 1
+ footprints[(200,_30),(190,_20)]: tower-placement[200,30]
+   + tower-placement[190,20] <= 1
+ footprints[(200,_30),(190,_30)]: tower-placement[190,30]
+   + tower-placement[200,30] <= 1
+ footprints[(200,_30),(190,_40)]: tower-placement[190,40]
+   + tower-placement[200,30] <= 1
+ footprints[(200,_30),(200,_20)]: tower-placement[200,20]
+   + tower-placement[200,30] <= 1
+ footprints[(200,_30),(200,_40)]: tower-placement[200,30]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_30),(210,_20)]: tower-placement[200,30]
+   + tower-placement[210,20] <= 1
+ footprints[(200,_30),(210,_30)]: tower-placement[210,30]
+   + tower-placement[200,30] <= 1
+ footprints[(200,_30),(210,_40)]: tower-placement[210,40]
+   + tower-placement[200,30] <= 1
+ footprints[(160,_230),(150,_220)]: tower-placement[160,230]
+   + tower-placement[150,220] <= 1
+ footprints[(160,_230),(150,_230)]: tower-placement[160,230]
+   + tower-placement[150,230] <= 1
+ footprints[(160,_230),(150,_240)]: tower-placement[150,240]
+   + tower-placement[160,230] <= 1
+ footprints[(160,_230),(160,_220)]: tower-placement[160,220]
+   + tower-placement[160,230] <= 1
+ footprints[(160,_230),(160,_240)]: tower-placement[160,230]
+   + tower-placement[160,240] <= 1
+ footprints[(160,_230),(170,_220)]: tower-placement[160,230]
+   + tower-placement[170,220] <= 1
+ footprints[(160,_230),(170,_230)]: tower-placement[160,230]
+   + tower-placement[170,230] <= 1
+ footprints[(160,_230),(170,_240)]: tower-placement[170,240]
+   + tower-placement[160,230] <= 1
+ footprints[(250,_310),(250,_300)]: tower-placement[250,300]
+   + tower-placement[250,310] <= 1
+ footprints[(250,_310),(250,_320)]: tower-placement[250,310]
+   + tower-placement[250,320] <= 1
+ footprints[(250,_310),(260,_300)]: tower-placement[250,310]
+   + tower-placement[260,300] <= 1
+ footprints[(250,_310),(260,_310)]: tower-placement[250,310]
+   + tower-placement[260,310] <= 1
+ footprints[(250,_310),(260,_320)]: tower-placement[260,320]
+   + tower-placement[250,310] <= 1
+ footprints[(140,_60),(130,_50)]: tower-placement[140,60]
+   + tower-placement[130,50] <= 1
+ footprints[(140,_60),(130,_60)]: tower-placement[130,60]
+   + tower-placement[140,60] <= 1
+ footprints[(140,_60),(140,_50)]: tower-placement[140,50]
+   + tower-placement[140,60] <= 1
+ footprints[(140,_60),(150,_50)]: tower-placement[140,60]
+   + tower-placement[150,50] <= 1
+ footprints[(140,_60),(150,_60)]: tower-placement[140,60]
+   + tower-placement[150,60] <= 1
+ footprints[(310,_150),(300,_140)]: tower-placement[310,150]
+   + tower-placement[300,140] <= 1
+ footprints[(310,_150),(300,_150)]: tower-placement[300,150]
+   + tower-placement[310,150] <= 1
+ footprints[(310,_150),(300,_160)]: tower-placement[300,160]
+   + tower-placement[310,150] <= 1
+ footprints[(310,_150),(310,_140)]: tower-placement[310,140]
+   + tower-placement[310,150] <= 1
+ footprints[(310,_150),(310,_160)]: tower-placement[310,150]
+   + tower-placement[310,160] <= 1
+ footprints[(310,_150),(320,_140)]: tower-placement[310,150]
+   + tower-placement[320,140] <= 1
+ footprints[(310,_150),(320,_150)]: tower-placement[310,150]
+   + tower-placement[320,150] <= 1
+ footprints[(50,_330),(40,_320)]: tower-placement[50,330]
+   + tower-placement[40,320] <= 1
+ footprints[(50,_330),(40,_330)]: tower-placement[40,330]
+   + tower-placement[50,330] <= 1
+ footprints[(50,_330),(40,_340)]: tower-placement[40,340]
+   + tower-placement[50,330] <= 1
+ footprints[(50,_330),(50,_320)]: tower-placement[50,320]
+   + tower-placement[50,330] <= 1
+ footprints[(50,_330),(60,_320)]: tower-placement[50,330]
+   + tower-placement[60,320] <= 1
+ footprints[(260,_250),(250,_240)]: tower-placement[260,250]
+   + tower-placement[250,240] <= 1
+ footprints[(260,_250),(250,_250)]: tower-placement[250,250]
+   + tower-placement[260,250] <= 1
+ footprints[(260,_250),(250,_260)]: tower-placement[250,260]
+   + tower-placement[260,250] <= 1
+ footprints[(260,_250),(260,_240)]: tower-placement[260,240]
+   + tower-placement[260,250] <= 1
+ footprints[(260,_250),(260,_260)]: tower-placement[260,250]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_250),(270,_240)]: tower-placement[260,250]
+   + tower-placement[270,240] <= 1
+ footprints[(260,_250),(270,_250)]: tower-placement[260,250]
+   + tower-placement[270,250] <= 1
+ footprints[(260,_250),(270,_260)]: tower-placement[270,260]
+   + tower-placement[260,250] <= 1
+ footprints[(220,_70),(210,_60)]: tower-placement[220,70]
+   + tower-placement[210,60] <= 1
+ footprints[(220,_70),(210,_70)]: tower-placement[210,70]
+   + tower-placement[220,70] <= 1
+ footprints[(220,_70),(220,_60)]: tower-placement[220,60]
+   + tower-placement[220,70] <= 1
+ footprints[(220,_70),(220,_80)]: tower-placement[220,70]
+   + tower-placement[220,80] <= 1
+ footprints[(220,_70),(230,_60)]: tower-placement[220,70]
+   + tower-placement[230,60] <= 1
+ footprints[(220,_70),(230,_70)]: tower-placement[220,70]
+   + tower-placement[230,70] <= 1
+ footprints[(220,_70),(230,_80)]: tower-placement[230,80]
+   + tower-placement[220,70] <= 1
+ footprints[(170,_170),(160,_160)]: tower-placement[170,170]
+   + tower-placement[160,160] <= 1
+ footprints[(170,_170),(160,_170)]: tower-placement[160,170]
+   + tower-placement[170,170] <= 1
+ footprints[(170,_170),(160,_180)]: tower-placement[160,180]
+   + tower-placement[170,170] <= 1
+ footprints[(170,_170),(170,_160)]: tower-placement[170,160]
+   + tower-placement[170,170] <= 1
+ footprints[(170,_170),(170,_180)]: tower-placement[170,170]
+   + tower-placement[170,180] <= 1
+ footprints[(60,_270),(50,_270)]: tower-placement[50,270]
+   + tower-placement[60,270] <= 1
+ footprints[(60,_270),(50,_280)]: tower-placement[50,280]
+   + tower-placement[60,270] <= 1
+ footprints[(60,_270),(60,_280)]: tower-placement[60,270]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_270),(70,_260)]: tower-placement[70,260]
+   + tower-placement[60,270] <= 1
+ footprints[(60,_270),(70,_270)]: tower-placement[70,270]
+   + tower-placement[60,270] <= 1
+ footprints[(60,_270),(70,_280)]: tower-placement[70,280]
+   + tower-placement[60,270] <= 1
+ footprints[(20,_90),(10,_80)]: tower-placement[20,90]
+   + tower-placement[10,80] <= 1
+ footprints[(20,_90),(10,_90)]: tower-placement[10,90]
+   + tower-placement[20,90] <= 1
+ footprints[(20,_90),(10,_100)]: tower-placement[10,100]
+   + tower-placement[20,90] <= 1
+ footprints[(20,_90),(20,_80)]: tower-placement[20,80]
+   + tower-placement[20,90] <= 1
+ footprints[(20,_90),(20,_100)]: tower-placement[20,90]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_90),(30,_80)]: tower-placement[20,90]
+   + tower-placement[30,80] <= 1
+ footprints[(20,_90),(30,_90)]: tower-placement[30,90]
+   + tower-placement[20,90] <= 1
+ footprints[(20,_90),(30,_100)]: tower-placement[30,100]
+   + tower-placement[20,90] <= 1
+ footprints[(120,_270),(110,_260)]: tower-placement[120,270]
+   + tower-placement[110,260] <= 1
+ footprints[(120,_270),(110,_270)]: tower-placement[120,270]
+   + tower-placement[110,270] <= 1
+ footprints[(120,_270),(110,_280)]: tower-placement[110,280]
+   + tower-placement[120,270] <= 1
+ footprints[(120,_270),(120,_260)]: tower-placement[120,260]
+   + tower-placement[120,270] <= 1
+ footprints[(120,_270),(120,_280)]: tower-placement[120,270]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_270),(130,_260)]: tower-placement[120,270]
+   + tower-placement[130,260] <= 1
+ footprints[(120,_270),(130,_270)]: tower-placement[120,270]
+   + tower-placement[130,270] <= 1
+ footprints[(120,_270),(130,_280)]: tower-placement[130,280]
+   + tower-placement[120,270] <= 1
+ footprints[(10,_370),(10,_360)]: tower-placement[10,360]
+   + tower-placement[10,370] <= 1
+ footprints[(10,_370),(10,_380)]: tower-placement[10,370]
+   + tower-placement[10,380] <= 1
+ footprints[(10,_370),(20,_360)]: tower-placement[10,370]
+   + tower-placement[20,360] <= 1
+ footprints[(10,_370),(20,_370)]: tower-placement[10,370]
+   + tower-placement[20,370] <= 1
+ footprints[(10,_370),(20,_380)]: tower-placement[20,380]
+   + tower-placement[10,370] <= 1
+ footprints[(310,_20),(300,_10)]: tower-placement[310,20]
+   + tower-placement[300,10] <= 1
+ footprints[(310,_20),(300,_20)]: tower-placement[300,20]
+   + tower-placement[310,20] <= 1
+ footprints[(310,_20),(310,_10)]: tower-placement[310,10]
+   + tower-placement[310,20] <= 1
+ footprints[(310,_20),(320,_10)]: tower-placement[310,20]
+   + tower-placement[320,10] <= 1
+ footprints[(310,_20),(320,_20)]: tower-placement[310,20]
+   + tower-placement[320,20] <= 1
+ footprints[(90,_30),(80,_20)]: tower-placement[90,30]
+   + tower-placement[80,20] <= 1
+ footprints[(90,_30),(80,_30)]: tower-placement[80,30]
+   + tower-placement[90,30] <= 1
+ footprints[(90,_30),(80,_40)]: tower-placement[80,40]
+   + tower-placement[90,30] <= 1
+ footprints[(90,_30),(90,_20)]: tower-placement[90,20]
+   + tower-placement[90,30] <= 1
+ footprints[(90,_30),(90,_40)]: tower-placement[90,30]
+   + tower-placement[90,40] <= 1
+ footprints[(90,_30),(100,_20)]: tower-placement[90,30]
+   + tower-placement[100,20] <= 1
+ footprints[(90,_30),(100,_30)]: tower-placement[90,30]
+   + tower-placement[100,30] <= 1
+ footprints[(90,_30),(100,_40)]: tower-placement[100,40]
+   + tower-placement[90,30] <= 1
+ footprints[(80,_310),(70,_300)]: tower-placement[80,310]
+   + tower-placement[70,300] <= 1
+ footprints[(80,_310),(70,_310)]: tower-placement[70,310]
+   + tower-placement[80,310] <= 1
+ footprints[(80,_310),(70,_320)]: tower-placement[70,320]
+   + tower-placement[80,310] <= 1
+ footprints[(80,_310),(80,_300)]: tower-placement[80,300]
+   + tower-placement[80,310] <= 1
+ footprints[(80,_310),(80,_320)]: tower-placement[80,310]
+   + tower-placement[80,320] <= 1
+ footprints[(80,_310),(90,_300)]: tower-placement[80,310]
+   + tower-placement[90,300] <= 1
+ footprints[(80,_310),(90,_310)]: tower-placement[80,310]
+   + tower-placement[90,310] <= 1
+ footprints[(40,_130),(30,_120)]: tower-placement[40,130]
+   + tower-placement[30,120] <= 1
+ footprints[(40,_130),(30,_130)]: tower-placement[30,130]
+   + tower-placement[40,130] <= 1
+ footprints[(40,_130),(30,_140)]: tower-placement[30,140]
+   + tower-placement[40,130] <= 1
+ footprints[(40,_130),(40,_120)]: tower-placement[40,120]
+   + tower-placement[40,130] <= 1
+ footprints[(40,_130),(40,_140)]: tower-placement[40,130]
+   + tower-placement[40,140] <= 1
+ footprints[(40,_130),(50,_120)]: tower-placement[40,130]
+   + tower-placement[50,120] <= 1
+ footprints[(40,_130),(50,_130)]: tower-placement[40,130]
+   + tower-placement[50,130] <= 1
+ footprints[(40,_130),(50,_140)]: tower-placement[50,140]
+   + tower-placement[40,130] <= 1
+ footprints[(110,_40),(100,_30)]: tower-placement[110,40]
+   + tower-placement[100,30] <= 1
+ footprints[(110,_40),(100,_40)]: tower-placement[100,40]
+   + tower-placement[110,40] <= 1
+ footprints[(110,_40),(100,_50)]: tower-placement[100,50]
+   + tower-placement[110,40] <= 1
+ footprints[(110,_40),(110,_30)]: tower-placement[110,30]
+   + tower-placement[110,40] <= 1
+ footprints[(110,_40),(110,_50)]: tower-placement[110,40]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_40),(120,_30)]: tower-placement[120,30]
+   + tower-placement[110,40] <= 1
+ footprints[(110,_40),(120,_40)]: tower-placement[120,40]
+   + tower-placement[110,40] <= 1
+ footprints[(110,_40),(120,_50)]: tower-placement[120,50]
+   + tower-placement[110,40] <= 1
+ footprints[(170,_40),(160,_30)]: tower-placement[170,40]
+   + tower-placement[160,30] <= 1
+ footprints[(170,_40),(160,_40)]: tower-placement[160,40]
+   + tower-placement[170,40] <= 1
+ footprints[(170,_40),(160,_50)]: tower-placement[160,50]
+   + tower-placement[170,40] <= 1
+ footprints[(170,_40),(170,_30)]: tower-placement[170,30]
+   + tower-placement[170,40] <= 1
+ footprints[(170,_40),(170,_50)]: tower-placement[170,40]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_40),(180,_30)]: tower-placement[170,40]
+   + tower-placement[180,30] <= 1
+ footprints[(170,_40),(180,_40)]: tower-placement[170,40]
+   + tower-placement[180,40] <= 1
+ footprints[(170,_40),(180,_50)]: tower-placement[180,50]
+   + tower-placement[170,40] <= 1
+ footprints[(60,_140),(50,_130)]: tower-placement[60,140]
+   + tower-placement[50,130] <= 1
+ footprints[(60,_140),(50,_140)]: tower-placement[50,140]
+   + tower-placement[60,140] <= 1
+ footprints[(60,_140),(50,_150)]: tower-placement[50,150]
+   + tower-placement[60,140] <= 1
+ footprints[(60,_140),(60,_130)]: tower-placement[60,130]
+   + tower-placement[60,140] <= 1
+ footprints[(60,_140),(60,_150)]: tower-placement[60,140]
+   + tower-placement[60,150] <= 1
+ footprints[(30,_280),(20,_270)]: tower-placement[30,280]
+   + tower-placement[20,270] <= 1
+ footprints[(30,_280),(20,_280)]: tower-placement[30,280]
+   + tower-placement[20,280] <= 1
+ footprints[(30,_280),(20,_290)]: tower-placement[20,290]
+   + tower-placement[30,280] <= 1
+ footprints[(30,_280),(30,_270)]: tower-placement[30,270]
+   + tower-placement[30,280] <= 1
+ footprints[(30,_280),(30,_290)]: tower-placement[30,280]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_280),(40,_270)]: tower-placement[30,280]
+   + tower-placement[40,270] <= 1
+ footprints[(30,_280),(40,_280)]: tower-placement[30,280]
+   + tower-placement[40,280] <= 1
+ footprints[(30,_280),(40,_290)]: tower-placement[40,290]
+   + tower-placement[30,280] <= 1
+ footprints[(60,_10),(50,_10)]: tower-placement[50,10]
+   + tower-placement[60,10] <= 1
+ footprints[(60,_10),(50,_20)]: tower-placement[50,20]
+   + tower-placement[60,10] <= 1
+ footprints[(60,_10),(60,_20)]: tower-placement[60,10]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_10),(70,_10)]: tower-placement[70,10]
+   + tower-placement[60,10] <= 1
+ footprints[(60,_10),(70,_20)]: tower-placement[70,20]
+   + tower-placement[60,10] <= 1
+ footprints[(120,_10),(110,_10)]: tower-placement[120,10]
+   + tower-placement[110,10] <= 1
+ footprints[(120,_10),(110,_20)]: tower-placement[110,20]
+   + tower-placement[120,10] <= 1
+ footprints[(120,_10),(120,_20)]: tower-placement[120,10]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_10),(130,_10)]: tower-placement[120,10]
+   + tower-placement[130,10] <= 1
+ footprints[(120,_10),(130,_20)]: tower-placement[130,20]
+   + tower-placement[120,10] <= 1
+ footprints[(460,_370),(460,_360)]: tower-placement[460,360]
+   + tower-placement[460,370] <= 1
+ footprints[(460,_370),(460,_380)]: tower-placement[460,370]
+   + tower-placement[460,380] <= 1
+ footprints[(10,_110),(10,_100)]: tower-placement[10,100]
+   + tower-placement[10,110] <= 1
+ footprints[(10,_110),(10,_120)]: tower-placement[10,110]
+   + tower-placement[10,120] <= 1
+ footprints[(10,_110),(20,_100)]: tower-placement[10,110]
+   + tower-placement[20,100] <= 1
+ footprints[(10,_110),(20,_110)]: tower-placement[10,110]
+   + tower-placement[20,110] <= 1
+ footprints[(10,_110),(20,_120)]: tower-placement[20,120]
+   + tower-placement[10,110] <= 1
+ footprints[(80,_50),(70,_40)]: tower-placement[80,50]
+   + tower-placement[70,40] <= 1
+ footprints[(80,_50),(70,_50)]: tower-placement[70,50]
+   + tower-placement[80,50] <= 1
+ footprints[(80,_50),(70,_60)]: tower-placement[70,60]
+   + tower-placement[80,50] <= 1
+ footprints[(80,_50),(80,_40)]: tower-placement[80,40]
+   + tower-placement[80,50] <= 1
+ footprints[(80,_50),(80,_60)]: tower-placement[80,50]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_50),(90,_40)]: tower-placement[80,50]
+   + tower-placement[90,40] <= 1
+ footprints[(80,_50),(90,_50)]: tower-placement[80,50]
+   + tower-placement[90,50] <= 1
+ footprints[(80,_50),(90,_60)]: tower-placement[90,60]
+   + tower-placement[80,50] <= 1
+ footprints[(30,_150),(20,_140)]: tower-placement[30,150]
+   + tower-placement[20,140] <= 1
+ footprints[(30,_150),(20,_150)]: tower-placement[30,150]
+   + tower-placement[20,150] <= 1
+ footprints[(30,_150),(20,_160)]: tower-placement[20,160]
+   + tower-placement[30,150] <= 1
+ footprints[(30,_150),(30,_140)]: tower-placement[30,140]
+   + tower-placement[30,150] <= 1
+ footprints[(30,_150),(30,_160)]: tower-placement[30,150]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_150),(40,_140)]: tower-placement[30,150]
+   + tower-placement[40,140] <= 1
+ footprints[(30,_150),(40,_150)]: tower-placement[30,150]
+   + tower-placement[40,150] <= 1
+ footprints[(30,_150),(40,_160)]: tower-placement[40,160]
+   + tower-placement[30,150] <= 1
+ footprints[(460,_240),(450,_230)]: tower-placement[460,240]
+   + tower-placement[450,230] <= 1
+ footprints[(460,_240),(450,_240)]: tower-placement[450,240]
+   + tower-placement[460,240] <= 1
+ footprints[(460,_240),(450,_250)]: tower-placement[450,250]
+   + tower-placement[460,240] <= 1
+ footprints[(460,_240),(460,_230)]: tower-placement[460,230]
+   + tower-placement[460,240] <= 1
+ footprints[(460,_240),(460,_250)]: tower-placement[460,240]
+   + tower-placement[460,250] <= 1
+ footprints[(30,_20),(20,_10)]: tower-placement[30,20]
+   + tower-placement[20,10] <= 1
+ footprints[(30,_20),(20,_20)]: tower-placement[30,20]
+   + tower-placement[20,20] <= 1
+ footprints[(30,_20),(20,_30)]: tower-placement[20,30]
+   + tower-placement[30,20] <= 1
+ footprints[(30,_20),(30,_10)]: tower-placement[30,10]
+   + tower-placement[30,20] <= 1
+ footprints[(30,_20),(30,_30)]: tower-placement[30,20]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_20),(40,_10)]: tower-placement[30,20]
+   + tower-placement[40,10] <= 1
+ footprints[(30,_20),(40,_20)]: tower-placement[30,20]
+   + tower-placement[40,20] <= 1
+ footprints[(30,_20),(40,_30)]: tower-placement[40,30]
+   + tower-placement[30,20] <= 1
+ footprints[(370,_380),(360,_370)]: tower-placement[370,380]
+   + tower-placement[360,370] <= 1
+ footprints[(370,_380),(360,_380)]: tower-placement[360,380]
+   + tower-placement[370,380] <= 1
+ footprints[(370,_380),(360,_390)]: tower-placement[360,390]
+   + tower-placement[370,380] <= 1
+ footprints[(370,_380),(370,_370)]: tower-placement[370,370]
+   + tower-placement[370,380] <= 1
+ footprints[(370,_380),(370,_390)]: tower-placement[370,380]
+   + tower-placement[370,390] <= 1
+ footprints[(370,_380),(380,_370)]: tower-placement[370,380]
+   + tower-placement[380,370] <= 1
+ footprints[(370,_380),(380,_380)]: tower-placement[370,380]
+   + tower-placement[380,380] <= 1
+ footprints[(370,_380),(380,_390)]: tower-placement[380,390]
+   + tower-placement[370,380] <= 1
+ footprints[(370,_250),(360,_240)]: tower-placement[370,250]
+   + tower-placement[360,240] <= 1
+ footprints[(370,_250),(360,_250)]: tower-placement[360,250]
+   + tower-placement[370,250] <= 1
+ footprints[(370,_250),(360,_260)]: tower-placement[360,260]
+   + tower-placement[370,250] <= 1
+ footprints[(370,_250),(370,_240)]: tower-placement[370,240]
+   + tower-placement[370,250] <= 1
+ footprints[(370,_250),(370,_260)]: tower-placement[370,250]
+   + tower-placement[370,260] <= 1
+ footprints[(370,_250),(380,_240)]: tower-placement[370,250]
+   + tower-placement[380,240] <= 1
+ footprints[(370,_250),(380,_250)]: tower-placement[370,250]
+   + tower-placement[380,250] <= 1
+ footprints[(370,_250),(380,_260)]: tower-placement[380,260]
+   + tower-placement[370,250] <= 1
+ footprints[(430,_250),(420,_240)]: tower-placement[430,250]
+   + tower-placement[420,240] <= 1
+ footprints[(430,_250),(420,_250)]: tower-placement[430,250]
+   + tower-placement[420,250] <= 1
+ footprints[(430,_250),(420,_260)]: tower-placement[420,260]
+   + tower-placement[430,250] <= 1
+ footprints[(430,_250),(430,_240)]: tower-placement[430,240]
+   + tower-placement[430,250] <= 1
+ footprints[(430,_250),(430,_260)]: tower-placement[430,250]
+   + tower-placement[430,260] <= 1
+ footprints[(430,_250),(440,_240)]: tower-placement[430,250]
+   + tower-placement[440,240] <= 1
+ footprints[(430,_250),(440,_250)]: tower-placement[430,250]
+   + tower-placement[440,250] <= 1
+ footprints[(430,_250),(440,_260)]: tower-placement[440,260]
+   + tower-placement[430,250] <= 1
+ footprints[(320,_350),(310,_340)]: tower-placement[320,350]
+   + tower-placement[310,340] <= 1
+ footprints[(320,_350),(310,_350)]: tower-placement[310,350]
+   + tower-placement[320,350] <= 1
+ footprints[(320,_350),(310,_360)]: tower-placement[310,360]
+   + tower-placement[320,350] <= 1
+ footprints[(320,_350),(320,_340)]: tower-placement[320,340]
+   + tower-placement[320,350] <= 1
+ footprints[(320,_350),(320,_360)]: tower-placement[320,350]
+   + tower-placement[320,360] <= 1
+ footprints[(320,_350),(330,_340)]: tower-placement[320,350]
+   + tower-placement[330,340] <= 1
+ footprints[(320,_350),(330,_350)]: tower-placement[320,350]
+   + tower-placement[330,350] <= 1
+ footprints[(320,_350),(330,_360)]: tower-placement[330,360]
+   + tower-placement[320,350] <= 1
+ footprints[(280,_170),(270,_160)]: tower-placement[280,170]
+   + tower-placement[270,160] <= 1
+ footprints[(280,_170),(270,_170)]: tower-placement[270,170]
+   + tower-placement[280,170] <= 1
+ footprints[(280,_170),(270,_180)]: tower-placement[270,180]
+   + tower-placement[280,170] <= 1
+ footprints[(280,_170),(280,_160)]: tower-placement[280,160]
+   + tower-placement[280,170] <= 1
+ footprints[(280,_170),(280,_180)]: tower-placement[280,170]
+   + tower-placement[280,180] <= 1
+ footprints[(280,_170),(290,_160)]: tower-placement[280,170]
+   + tower-placement[290,160] <= 1
+ footprints[(280,_170),(290,_170)]: tower-placement[280,170]
+   + tower-placement[290,170] <= 1
+ footprints[(450,_260),(440,_250)]: tower-placement[450,260]
+   + tower-placement[440,250] <= 1
+ footprints[(450,_260),(440,_260)]: tower-placement[440,260]
+   + tower-placement[450,260] <= 1
+ footprints[(450,_260),(440,_270)]: tower-placement[440,270]
+   + tower-placement[450,260] <= 1
+ footprints[(450,_260),(450,_250)]: tower-placement[450,250]
+   + tower-placement[450,260] <= 1
+ footprints[(450,_260),(450,_270)]: tower-placement[450,260]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_260),(460,_250)]: tower-placement[450,260]
+   + tower-placement[460,250] <= 1
+ footprints[(450,_260),(460,_260)]: tower-placement[450,260]
+   + tower-placement[460,260] <= 1
+ footprints[(450,_260),(460,_270)]: tower-placement[460,270]
+   + tower-placement[450,260] <= 1
+ footprints[(290,_110),(280,_100)]: tower-placement[290,110]
+   + tower-placement[280,100] <= 1
+ footprints[(290,_110),(280,_110)]: tower-placement[280,110]
+   + tower-placement[290,110] <= 1
+ footprints[(290,_110),(280,_120)]: tower-placement[280,120]
+   + tower-placement[290,110] <= 1
+ footprints[(290,_110),(290,_100)]: tower-placement[290,100]
+   + tower-placement[290,110] <= 1
+ footprints[(290,_110),(290,_120)]: tower-placement[290,110]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_110),(300,_100)]: tower-placement[300,100]
+   + tower-placement[290,110] <= 1
+ footprints[(290,_110),(300,_110)]: tower-placement[300,110]
+   + tower-placement[290,110] <= 1
+ footprints[(290,_110),(300,_120)]: tower-placement[300,120]
+   + tower-placement[290,110] <= 1
+ footprints[(420,_20),(410,_10)]: tower-placement[420,20]
+   + tower-placement[410,10] <= 1
+ footprints[(420,_20),(410,_20)]: tower-placement[410,20]
+   + tower-placement[420,20] <= 1
+ footprints[(420,_20),(420,_10)]: tower-placement[420,10]
+   + tower-placement[420,20] <= 1
+ footprints[(420,_20),(430,_10)]: tower-placement[430,10]
+   + tower-placement[420,20] <= 1
+ footprints[(420,_20),(430,_20)]: tower-placement[430,20]
+   + tower-placement[420,20] <= 1
+ footprints[(420,_20),(430,_30)]: tower-placement[430,30]
+   + tower-placement[420,20] <= 1
+ footprints[(200,_380),(190,_380)]: tower-placement[190,380]
+   + tower-placement[200,380] <= 1
+ footprints[(200,_380),(190,_390)]: tower-placement[190,390]
+   + tower-placement[200,380] <= 1
+ footprints[(200,_380),(200,_390)]: tower-placement[200,380]
+   + tower-placement[200,390] <= 1
+ footprints[(200,_380),(210,_380)]: tower-placement[210,380]
+   + tower-placement[200,380] <= 1
+ footprints[(200,_380),(210,_390)]: tower-placement[210,390]
+   + tower-placement[200,380] <= 1
+ footprints[(340,_390),(330,_380)]: tower-placement[340,390]
+   + tower-placement[330,380] <= 1
+ footprints[(340,_390),(330,_390)]: tower-placement[340,390]
+   + tower-placement[330,390] <= 1
+ footprints[(340,_390),(340,_380)]: tower-placement[340,380]
+   + tower-placement[340,390] <= 1
+ footprints[(340,_390),(350,_380)]: tower-placement[340,390]
+   + tower-placement[350,380] <= 1
+ footprints[(340,_390),(350,_390)]: tower-placement[340,390]
+   + tower-placement[350,390] <= 1
+ footprints[(370,_120),(360,_110)]: tower-placement[370,120]
+   + tower-placement[360,110] <= 1
+ footprints[(370,_120),(360,_120)]: tower-placement[360,120]
+   + tower-placement[370,120] <= 1
+ footprints[(370,_120),(360,_130)]: tower-placement[360,130]
+   + tower-placement[370,120] <= 1
+ footprints[(370,_120),(370,_110)]: tower-placement[370,110]
+   + tower-placement[370,120] <= 1
+ footprints[(370,_120),(370,_130)]: tower-placement[370,120]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_120),(380,_110)]: tower-placement[370,120]
+   + tower-placement[380,110] <= 1
+ footprints[(370,_120),(380,_120)]: tower-placement[370,120]
+   + tower-placement[380,120] <= 1
+ footprints[(370,_120),(380,_130)]: tower-placement[380,130]
+   + tower-placement[370,120] <= 1
+ footprints[(280,_390),(270,_380)]: tower-placement[280,390]
+   + tower-placement[270,380] <= 1
+ footprints[(280,_390),(270,_390)]: tower-placement[270,390]
+   + tower-placement[280,390] <= 1
+ footprints[(280,_390),(280,_380)]: tower-placement[280,380]
+   + tower-placement[280,390] <= 1
+ footprints[(280,_390),(290,_380)]: tower-placement[280,390]
+   + tower-placement[290,380] <= 1
+ footprints[(280,_390),(290,_390)]: tower-placement[280,390]
+   + tower-placement[290,390] <= 1
+ footprints[(270,_320),(260,_310)]: tower-placement[270,320]
+   + tower-placement[260,310] <= 1
+ footprints[(270,_320),(260,_320)]: tower-placement[260,320]
+   + tower-placement[270,320] <= 1
+ footprints[(270,_320),(260,_330)]: tower-placement[260,330]
+   + tower-placement[270,320] <= 1
+ footprints[(270,_320),(270,_310)]: tower-placement[270,310]
+   + tower-placement[270,320] <= 1
+ footprints[(270,_320),(270,_330)]: tower-placement[270,320]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_320),(280,_310)]: tower-placement[270,320]
+   + tower-placement[280,310] <= 1
+ footprints[(270,_320),(280,_320)]: tower-placement[270,320]
+   + tower-placement[280,320] <= 1
+ footprints[(270,_320),(280,_330)]: tower-placement[280,330]
+   + tower-placement[270,320] <= 1
+ footprints[(400,_230),(390,_220)]: tower-placement[400,230]
+   + tower-placement[390,220] <= 1
+ footprints[(400,_230),(390,_230)]: tower-placement[390,230]
+   + tower-placement[400,230] <= 1
+ footprints[(400,_230),(390,_240)]: tower-placement[390,240]
+   + tower-placement[400,230] <= 1
+ footprints[(400,_230),(400,_220)]: tower-placement[400,220]
+   + tower-placement[400,230] <= 1
+ footprints[(400,_230),(400,_240)]: tower-placement[400,230]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_230),(410,_220)]: tower-placement[400,230]
+   + tower-placement[410,220] <= 1
+ footprints[(400,_230),(410,_230)]: tower-placement[400,230]
+   + tower-placement[410,230] <= 1
+ footprints[(400,_230),(410,_240)]: tower-placement[410,240]
+   + tower-placement[400,230] <= 1
+ footprints[(290,_330),(280,_320)]: tower-placement[290,330]
+   + tower-placement[280,320] <= 1
+ footprints[(290,_330),(280,_330)]: tower-placement[280,330]
+   + tower-placement[290,330] <= 1
+ footprints[(290,_330),(280,_340)]: tower-placement[280,340]
+   + tower-placement[290,330] <= 1
+ footprints[(290,_330),(290,_320)]: tower-placement[290,320]
+   + tower-placement[290,330] <= 1
+ footprints[(290,_330),(290,_340)]: tower-placement[290,330]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_330),(300,_320)]: tower-placement[300,320]
+   + tower-placement[290,330] <= 1
+ footprints[(290,_330),(300,_330)]: tower-placement[300,330]
+   + tower-placement[290,330] <= 1
+ footprints[(290,_330),(300,_340)]: tower-placement[300,340]
+   + tower-placement[290,330] <= 1
+ footprints[(240,_80),(230,_70)]: tower-placement[240,80]
+   + tower-placement[230,70] <= 1
+ footprints[(240,_80),(230,_80)]: tower-placement[230,80]
+   + tower-placement[240,80] <= 1
+ footprints[(240,_80),(230,_90)]: tower-placement[230,90]
+   + tower-placement[240,80] <= 1
+ footprints[(240,_80),(240,_70)]: tower-placement[240,70]
+   + tower-placement[240,80] <= 1
+ footprints[(240,_80),(240,_90)]: tower-placement[240,80]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_80),(250,_70)]: tower-placement[250,70]
+   + tower-placement[240,80] <= 1
+ footprints[(240,_80),(250,_80)]: tower-placement[250,80]
+   + tower-placement[240,80] <= 1
+ footprints[(240,_80),(250,_90)]: tower-placement[250,90]
+   + tower-placement[240,80] <= 1
+ footprints[(340,_260),(340,_250)]: tower-placement[340,250]
+   + tower-placement[340,260] <= 1
+ footprints[(340,_260),(350,_250)]: tower-placement[340,260]
+   + tower-placement[350,250] <= 1
+ footprints[(340,_260),(350,_260)]: tower-placement[340,260]
+   + tower-placement[350,260] <= 1
+ footprints[(20,_440),(10,_430)]: tower-placement[20,440]
+   + tower-placement[10,430] <= 1
+ footprints[(20,_440),(10,_440)]: tower-placement[10,440]
+   + tower-placement[20,440] <= 1
+ footprints[(20,_440),(10,_450)]: tower-placement[10,450]
+   + tower-placement[20,440] <= 1
+ footprints[(20,_440),(20,_430)]: tower-placement[20,430]
+   + tower-placement[20,440] <= 1
+ footprints[(20,_440),(20,_450)]: tower-placement[20,440]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_440),(30,_430)]: tower-placement[30,430]
+   + tower-placement[20,440] <= 1
+ footprints[(20,_440),(30,_440)]: tower-placement[30,440]
+   + tower-placement[20,440] <= 1
+ footprints[(20,_440),(30,_450)]: tower-placement[30,450]
+   + tower-placement[20,440] <= 1
+ footprints[(250,_180),(250,_170)]: tower-placement[250,170]
+   + tower-placement[250,180] <= 1
+ footprints[(250,_180),(250,_190)]: tower-placement[250,180]
+   + tower-placement[250,190] <= 1
+ footprints[(250,_180),(260,_170)]: tower-placement[250,180]
+   + tower-placement[260,170] <= 1
+ footprints[(250,_180),(260,_180)]: tower-placement[250,180]
+   + tower-placement[260,180] <= 1
+ footprints[(250,_180),(260,_190)]: tower-placement[260,190]
+   + tower-placement[250,180] <= 1
+ footprints[(320,_90),(310,_90)]: tower-placement[310,90]
+   + tower-placement[320,90] <= 1
+ footprints[(320,_90),(310,_100)]: tower-placement[310,100]
+   + tower-placement[320,90] <= 1
+ footprints[(320,_90),(320,_100)]: tower-placement[320,90]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_90),(330,_90)]: tower-placement[320,90]
+   + tower-placement[330,90] <= 1
+ footprints[(320,_90),(330,_100)]: tower-placement[330,100]
+   + tower-placement[320,90] <= 1
+ footprints[(140,_280),(130,_270)]: tower-placement[140,280]
+   + tower-placement[130,270] <= 1
+ footprints[(140,_280),(130,_280)]: tower-placement[130,280]
+   + tower-placement[140,280] <= 1
+ footprints[(140,_280),(130,_290)]: tower-placement[130,290]
+   + tower-placement[140,280] <= 1
+ footprints[(140,_280),(140,_270)]: tower-placement[140,270]
+   + tower-placement[140,280] <= 1
+ footprints[(140,_280),(140,_290)]: tower-placement[140,280]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_280),(150,_270)]: tower-placement[140,280]
+   + tower-placement[150,270] <= 1
+ footprints[(140,_280),(150,_280)]: tower-placement[140,280]
+   + tower-placement[150,280] <= 1
+ footprints[(140,_280),(150,_290)]: tower-placement[150,290]
+   + tower-placement[140,280] <= 1
+ footprints[(310,_370),(300,_360)]: tower-placement[310,370]
+   + tower-placement[300,360] <= 1
+ footprints[(310,_370),(300,_370)]: tower-placement[300,370]
+   + tower-placement[310,370] <= 1
+ footprints[(310,_370),(300,_380)]: tower-placement[300,380]
+   + tower-placement[310,370] <= 1
+ footprints[(310,_370),(310,_360)]: tower-placement[310,360]
+   + tower-placement[310,370] <= 1
+ footprints[(310,_370),(310,_380)]: tower-placement[310,370]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_370),(320,_360)]: tower-placement[310,370]
+   + tower-placement[320,360] <= 1
+ footprints[(310,_370),(320,_370)]: tower-placement[310,370]
+   + tower-placement[320,370] <= 1
+ footprints[(310,_370),(320,_380)]: tower-placement[320,380]
+   + tower-placement[310,370] <= 1
+ footprints[(270,_190),(260,_180)]: tower-placement[270,190]
+   + tower-placement[260,180] <= 1
+ footprints[(270,_190),(260,_190)]: tower-placement[260,190]
+   + tower-placement[270,190] <= 1
+ footprints[(270,_190),(260,_200)]: tower-placement[260,200]
+   + tower-placement[270,190] <= 1
+ footprints[(270,_190),(270,_180)]: tower-placement[270,180]
+   + tower-placement[270,190] <= 1
+ footprints[(270,_190),(270,_200)]: tower-placement[270,190]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_190),(280,_180)]: tower-placement[270,190]
+   + tower-placement[280,180] <= 1
+ footprints[(270,_190),(280,_190)]: tower-placement[270,190]
+   + tower-placement[280,190] <= 1
+ footprints[(230,_10),(220,_10)]: tower-placement[220,10]
+   + tower-placement[230,10] <= 1
+ footprints[(230,_10),(220,_20)]: tower-placement[220,20]
+   + tower-placement[230,10] <= 1
+ footprints[(230,_10),(230,_20)]: tower-placement[230,10]
+   + tower-placement[230,20] <= 1
+ footprints[(260,_120),(250,_110)]: tower-placement[260,120]
+   + tower-placement[250,110] <= 1
+ footprints[(260,_120),(250,_120)]: tower-placement[250,120]
+   + tower-placement[260,120] <= 1
+ footprints[(260,_120),(250,_130)]: tower-placement[250,130]
+   + tower-placement[260,120] <= 1
+ footprints[(260,_120),(260,_110)]: tower-placement[260,110]
+   + tower-placement[260,120] <= 1
+ footprints[(260,_120),(260,_130)]: tower-placement[260,120]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_120),(270,_110)]: tower-placement[260,120]
+   + tower-placement[270,110] <= 1
+ footprints[(260,_120),(270,_120)]: tower-placement[260,120]
+   + tower-placement[270,120] <= 1
+ footprints[(260,_120),(270,_130)]: tower-placement[270,130]
+   + tower-placement[260,120] <= 1
+ footprints[(110,_390),(100,_390)]: tower-placement[100,390]
+   + tower-placement[110,390] <= 1
+ footprints[(110,_390),(120,_390)]: tower-placement[120,390]
+   + tower-placement[110,390] <= 1
+ footprints[(170,_390),(160,_390)]: tower-placement[160,390]
+   + tower-placement[170,390] <= 1
+ footprints[(170,_390),(180,_390)]: tower-placement[180,390]
+   + tower-placement[170,390] <= 1
+ footprints[(130,_210),(130,_200)]: tower-placement[130,200]
+   + tower-placement[130,210] <= 1
+ footprints[(130,_210),(130,_220)]: tower-placement[130,210]
+   + tower-placement[130,220] <= 1
+ footprints[(130,_210),(140,_200)]: tower-placement[130,210]
+   + tower-placement[140,200] <= 1
+ footprints[(130,_210),(140,_210)]: tower-placement[130,210]
+   + tower-placement[140,210] <= 1
+ footprints[(130,_210),(140,_220)]: tower-placement[140,220]
+   + tower-placement[130,210] <= 1
+ footprints[(340,_130),(330,_120)]: tower-placement[340,130]
+   + tower-placement[330,120] <= 1
+ footprints[(340,_130),(330,_130)]: tower-placement[340,130]
+   + tower-placement[330,130] <= 1
+ footprints[(340,_130),(330,_140)]: tower-placement[330,140]
+   + tower-placement[340,130] <= 1
+ footprints[(340,_130),(340,_120)]: tower-placement[340,120]
+   + tower-placement[340,130] <= 1
+ footprints[(340,_130),(340,_140)]: tower-placement[340,130]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_130),(350,_120)]: tower-placement[340,130]
+   + tower-placement[350,120] <= 1
+ footprints[(340,_130),(350,_130)]: tower-placement[350,130]
+   + tower-placement[340,130] <= 1
+ footprints[(340,_130),(350,_140)]: tower-placement[350,140]
+   + tower-placement[340,130] <= 1
+ footprints[(20,_310),(10,_300)]: tower-placement[20,310]
+   + tower-placement[10,300] <= 1
+ footprints[(20,_310),(10,_310)]: tower-placement[10,310]
+   + tower-placement[20,310] <= 1
+ footprints[(20,_310),(10,_320)]: tower-placement[10,320]
+   + tower-placement[20,310] <= 1
+ footprints[(20,_310),(20,_300)]: tower-placement[20,300]
+   + tower-placement[20,310] <= 1
+ footprints[(20,_310),(20,_320)]: tower-placement[20,310]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_310),(30,_300)]: tower-placement[30,300]
+   + tower-placement[20,310] <= 1
+ footprints[(20,_310),(30,_310)]: tower-placement[30,310]
+   + tower-placement[20,310] <= 1
+ footprints[(20,_310),(30,_320)]: tower-placement[30,320]
+   + tower-placement[20,310] <= 1
+ footprints[(190,_50),(180,_40)]: tower-placement[190,50]
+   + tower-placement[180,40] <= 1
+ footprints[(190,_50),(180,_50)]: tower-placement[180,50]
+   + tower-placement[190,50] <= 1
+ footprints[(190,_50),(180,_60)]: tower-placement[180,60]
+   + tower-placement[190,50] <= 1
+ footprints[(190,_50),(190,_40)]: tower-placement[190,40]
+   + tower-placement[190,50] <= 1
+ footprints[(190,_50),(190,_60)]: tower-placement[190,50]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_50),(200,_40)]: tower-placement[190,50]
+   + tower-placement[200,40] <= 1
+ footprints[(190,_50),(200,_50)]: tower-placement[200,50]
+   + tower-placement[190,50] <= 1
+ footprints[(190,_50),(200,_60)]: tower-placement[200,60]
+   + tower-placement[190,50] <= 1
+ footprints[(150,_220),(140,_210)]: tower-placement[150,220]
+   + tower-placement[140,210] <= 1
+ footprints[(150,_220),(140,_220)]: tower-placement[140,220]
+   + tower-placement[150,220] <= 1
+ footprints[(150,_220),(140,_230)]: tower-placement[140,230]
+   + tower-placement[150,220] <= 1
+ footprints[(150,_220),(150,_210)]: tower-placement[150,210]
+   + tower-placement[150,220] <= 1
+ footprints[(150,_220),(150,_230)]: tower-placement[150,220]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_220),(160,_210)]: tower-placement[160,210]
+   + tower-placement[150,220] <= 1
+ footprints[(150,_220),(160,_220)]: tower-placement[160,220]
+   + tower-placement[150,220] <= 1
+ footprints[(150,_220),(160,_230)]: tower-placement[160,230]
+   + tower-placement[150,220] <= 1
+ footprints[(360,_140),(350,_130)]: tower-placement[350,130]
+   + tower-placement[360,140] <= 1
+ footprints[(360,_140),(350,_140)]: tower-placement[350,140]
+   + tower-placement[360,140] <= 1
+ footprints[(360,_140),(350,_150)]: tower-placement[350,150]
+   + tower-placement[360,140] <= 1
+ footprints[(360,_140),(360,_130)]: tower-placement[360,130]
+   + tower-placement[360,140] <= 1
+ footprints[(360,_140),(360,_150)]: tower-placement[360,140]
+   + tower-placement[360,150] <= 1
+ footprints[(360,_140),(370,_130)]: tower-placement[360,140]
+   + tower-placement[370,130] <= 1
+ footprints[(360,_140),(370,_140)]: tower-placement[370,140]
+   + tower-placement[360,140] <= 1
+ footprints[(360,_140),(370,_150)]: tower-placement[370,150]
+   + tower-placement[360,140] <= 1
+ footprints[(140,_150),(130,_140)]: tower-placement[140,150]
+   + tower-placement[130,140] <= 1
+ footprints[(140,_150),(130,_150)]: tower-placement[130,150]
+   + tower-placement[140,150] <= 1
+ footprints[(140,_150),(130,_160)]: tower-placement[130,160]
+   + tower-placement[140,150] <= 1
+ footprints[(140,_150),(140,_140)]: tower-placement[140,140]
+   + tower-placement[140,150] <= 1
+ footprints[(140,_150),(140,_160)]: tower-placement[140,150]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_150),(150,_140)]: tower-placement[140,150]
+   + tower-placement[150,140] <= 1
+ footprints[(140,_150),(150,_150)]: tower-placement[150,150]
+   + tower-placement[140,150] <= 1
+ footprints[(140,_150),(150,_160)]: tower-placement[150,160]
+   + tower-placement[140,150] <= 1
+ footprints[(50,_70),(40,_60)]: tower-placement[50,70]
+   + tower-placement[40,60] <= 1
+ footprints[(50,_70),(40,_70)]: tower-placement[40,70]
+   + tower-placement[50,70] <= 1
+ footprints[(50,_70),(40,_80)]: tower-placement[40,80]
+   + tower-placement[50,70] <= 1
+ footprints[(50,_70),(50,_60)]: tower-placement[50,60]
+   + tower-placement[50,70] <= 1
+ footprints[(50,_70),(50,_80)]: tower-placement[50,70]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_70),(60,_60)]: tower-placement[50,70]
+   + tower-placement[60,60] <= 1
+ footprints[(50,_70),(60,_70)]: tower-placement[50,70]
+   + tower-placement[60,70] <= 1
+ footprints[(50,_70),(60,_80)]: tower-placement[60,80]
+   + tower-placement[50,70] <= 1
+ footprints[(260,_340),(250,_330)]: tower-placement[250,330]
+   + tower-placement[260,340] <= 1
+ footprints[(260,_340),(250,_340)]: tower-placement[250,340]
+   + tower-placement[260,340] <= 1
+ footprints[(260,_340),(250,_350)]: tower-placement[250,350]
+   + tower-placement[260,340] <= 1
+ footprints[(260,_340),(260,_330)]: tower-placement[260,330]
+   + tower-placement[260,340] <= 1
+ footprints[(260,_340),(260,_350)]: tower-placement[260,340]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_340),(270,_330)]: tower-placement[260,340]
+   + tower-placement[270,330] <= 1
+ footprints[(260,_340),(270,_340)]: tower-placement[270,340]
+   + tower-placement[260,340] <= 1
+ footprints[(260,_340),(270,_350)]: tower-placement[270,350]
+   + tower-placement[260,340] <= 1
+ footprints[(110,_260),(100,_250)]: tower-placement[100,250]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_260),(100,_260)]: tower-placement[100,260]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_260),(100,_270)]: tower-placement[100,270]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_260),(110,_250)]: tower-placement[110,250]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_260),(110,_270)]: tower-placement[110,260]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_260),(120,_250)]: tower-placement[120,250]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_260),(120,_260)]: tower-placement[120,260]
+   + tower-placement[110,260] <= 1
+ footprints[(110,_260),(120,_270)]: tower-placement[120,270]
+   + tower-placement[110,260] <= 1
+ footprints[(170,_260),(160,_250)]: tower-placement[170,260]
+   + tower-placement[160,250] <= 1
+ footprints[(170,_260),(160,_260)]: tower-placement[160,260]
+   + tower-placement[170,260] <= 1
+ footprints[(170,_260),(160,_270)]: tower-placement[160,270]
+   + tower-placement[170,260] <= 1
+ footprints[(170,_260),(170,_250)]: tower-placement[170,250]
+   + tower-placement[170,260] <= 1
+ footprints[(170,_260),(170,_270)]: tower-placement[170,260]
+   + tower-placement[170,270] <= 1
+ footprints[(20,_180),(10,_170)]: tower-placement[20,180]
+   + tower-placement[10,170] <= 1
+ footprints[(20,_180),(10,_180)]: tower-placement[10,180]
+   + tower-placement[20,180] <= 1
+ footprints[(20,_180),(10,_190)]: tower-placement[10,190]
+   + tower-placement[20,180] <= 1
+ footprints[(20,_180),(20,_170)]: tower-placement[20,170]
+   + tower-placement[20,180] <= 1
+ footprints[(20,_180),(20,_190)]: tower-placement[20,180]
+   + tower-placement[20,190] <= 1
+ footprints[(20,_180),(30,_170)]: tower-placement[30,170]
+   + tower-placement[20,180] <= 1
+ footprints[(20,_180),(30,_180)]: tower-placement[30,180]
+   + tower-placement[20,180] <= 1
+ footprints[(20,_180),(30,_190)]: tower-placement[30,190]
+   + tower-placement[20,180] <= 1
+ footprints[(160,_190),(150,_180)]: tower-placement[160,190]
+   + tower-placement[150,180] <= 1
+ footprints[(160,_190),(150,_190)]: tower-placement[160,190]
+   + tower-placement[150,190] <= 1
+ footprints[(160,_190),(150,_200)]: tower-placement[150,200]
+   + tower-placement[160,190] <= 1
+ footprints[(160,_190),(160,_180)]: tower-placement[160,180]
+   + tower-placement[160,190] <= 1
+ footprints[(160,_190),(160,_200)]: tower-placement[160,190]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_190),(170,_180)]: tower-placement[160,190]
+   + tower-placement[170,180] <= 1
+ footprints[(160,_190),(170,_190)]: tower-placement[170,190]
+   + tower-placement[160,190] <= 1
+ footprints[(160,_190),(170,_200)]: tower-placement[170,200]
+   + tower-placement[160,190] <= 1
+ footprints[(10,_460),(10,_450)]: tower-placement[10,450]
+   + tower-placement[10,460] <= 1
+ footprints[(10,_460),(20,_450)]: tower-placement[10,460]
+   + tower-placement[20,450] <= 1
+ footprints[(10,_460),(20,_460)]: tower-placement[20,460]
+   + tower-placement[10,460] <= 1
+ footprints[(70,_460),(60,_460)]: tower-placement[70,460]
+   + tower-placement[60,460] <= 1
+ footprints[(70,_460),(80,_460)]: tower-placement[70,460]
+   + tower-placement[80,460] <= 1
+ footprints[(360,_10),(350,_10)]: tower-placement[350,10]
+   + tower-placement[360,10] <= 1
+ footprints[(360,_10),(350,_20)]: tower-placement[350,20]
+   + tower-placement[360,10] <= 1
+ footprints[(360,_10),(360,_20)]: tower-placement[360,10]
+   + tower-placement[360,20] <= 1
+ footprints[(360,_10),(370,_10)]: tower-placement[370,10]
+   + tower-placement[360,10] <= 1
+ footprints[(360,_10),(370,_20)]: tower-placement[370,20]
+   + tower-placement[360,10] <= 1
+ footprints[(140,_20),(130,_10)]: tower-placement[140,20]
+   + tower-placement[130,10] <= 1
+ footprints[(140,_20),(130,_20)]: tower-placement[130,20]
+   + tower-placement[140,20] <= 1
+ footprints[(140,_20),(130,_30)]: tower-placement[130,30]
+   + tower-placement[140,20] <= 1
+ footprints[(140,_20),(140,_10)]: tower-placement[140,10]
+   + tower-placement[140,20] <= 1
+ footprints[(140,_20),(140,_30)]: tower-placement[140,20]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_20),(150,_10)]: tower-placement[140,20]
+   + tower-placement[150,10] <= 1
+ footprints[(140,_20),(150,_20)]: tower-placement[150,20]
+   + tower-placement[140,20] <= 1
+ footprints[(140,_20),(150,_30)]: tower-placement[150,30]
+   + tower-placement[140,20] <= 1
+ footprints[(310,_110),(300,_100)]: tower-placement[300,100]
+   + tower-placement[310,110] <= 1
+ footprints[(310,_110),(300,_110)]: tower-placement[300,110]
+   + tower-placement[310,110] <= 1
+ footprints[(310,_110),(300,_120)]: tower-placement[300,120]
+   + tower-placement[310,110] <= 1
+ footprints[(310,_110),(310,_100)]: tower-placement[310,100]
+   + tower-placement[310,110] <= 1
+ footprints[(310,_110),(310,_120)]: tower-placement[310,110]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_110),(320,_100)]: tower-placement[310,110]
+   + tower-placement[320,100] <= 1
+ footprints[(310,_110),(320,_110)]: tower-placement[320,110]
+   + tower-placement[310,110] <= 1
+ footprints[(310,_110),(320,_120)]: tower-placement[320,120]
+   + tower-placement[310,110] <= 1
+ footprints[(50,_290),(40,_280)]: tower-placement[50,290]
+   + tower-placement[40,280] <= 1
+ footprints[(50,_290),(40,_290)]: tower-placement[40,290]
+   + tower-placement[50,290] <= 1
+ footprints[(50,_290),(40,_300)]: tower-placement[40,300]
+   + tower-placement[50,290] <= 1
+ footprints[(50,_290),(50,_280)]: tower-placement[50,280]
+   + tower-placement[50,290] <= 1
+ footprints[(50,_290),(50,_300)]: tower-placement[50,290]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_290),(60,_280)]: tower-placement[50,290]
+   + tower-placement[60,280] <= 1
+ footprints[(50,_290),(60,_290)]: tower-placement[60,290]
+   + tower-placement[50,290] <= 1
+ footprints[(50,_290),(60,_300)]: tower-placement[60,300]
+   + tower-placement[50,290] <= 1
+ footprints[(220,_30),(210,_20)]: tower-placement[220,30]
+   + tower-placement[210,20] <= 1
+ footprints[(220,_30),(210,_30)]: tower-placement[210,30]
+   + tower-placement[220,30] <= 1
+ footprints[(220,_30),(210,_40)]: tower-placement[210,40]
+   + tower-placement[220,30] <= 1
+ footprints[(220,_30),(220,_20)]: tower-placement[220,20]
+   + tower-placement[220,30] <= 1
+ footprints[(220,_30),(220,_40)]: tower-placement[220,30]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_30),(230,_20)]: tower-placement[220,30]
+   + tower-placement[230,20] <= 1
+ footprints[(220,_30),(230,_30)]: tower-placement[230,30]
+   + tower-placement[220,30] <= 1
+ footprints[(220,_30),(230,_40)]: tower-placement[230,40]
+   + tower-placement[220,30] <= 1
+ footprints[(20,_50),(10,_40)]: tower-placement[20,50]
+   + tower-placement[10,40] <= 1
+ footprints[(20,_50),(10,_50)]: tower-placement[10,50]
+   + tower-placement[20,50] <= 1
+ footprints[(20,_50),(10,_60)]: tower-placement[10,60]
+   + tower-placement[20,50] <= 1
+ footprints[(20,_50),(20,_40)]: tower-placement[20,40]
+   + tower-placement[20,50] <= 1
+ footprints[(20,_50),(20,_60)]: tower-placement[20,50]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_50),(30,_40)]: tower-placement[30,40]
+   + tower-placement[20,50] <= 1
+ footprints[(20,_50),(30,_50)]: tower-placement[30,50]
+   + tower-placement[20,50] <= 1
+ footprints[(20,_50),(30,_60)]: tower-placement[30,60]
+   + tower-placement[20,50] <= 1
+ footprints[(160,_60),(150,_50)]: tower-placement[160,60]
+   + tower-placement[150,50] <= 1
+ footprints[(160,_60),(150,_60)]: tower-placement[160,60]
+   + tower-placement[150,60] <= 1
+ footprints[(160,_60),(160,_50)]: tower-placement[160,50]
+   + tower-placement[160,60] <= 1
+ footprints[(160,_60),(170,_50)]: tower-placement[160,60]
+   + tower-placement[170,50] <= 1
+ footprints[(160,_60),(170,_60)]: tower-placement[170,60]
+   + tower-placement[160,60] <= 1
+ footprints[(120,_230),(110,_240)]: tower-placement[110,240]
+   + tower-placement[120,230] <= 1
+ footprints[(120,_230),(120,_240)]: tower-placement[120,230]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_230),(130,_220)]: tower-placement[120,230]
+   + tower-placement[130,220] <= 1
+ footprints[(120,_230),(130,_230)]: tower-placement[130,230]
+   + tower-placement[120,230] <= 1
+ footprints[(120,_230),(130,_240)]: tower-placement[130,240]
+   + tower-placement[120,230] <= 1
+ footprints[(10,_330),(10,_320)]: tower-placement[10,320]
+   + tower-placement[10,330] <= 1
+ footprints[(10,_330),(10,_340)]: tower-placement[10,330]
+   + tower-placement[10,340] <= 1
+ footprints[(10,_330),(20,_320)]: tower-placement[10,330]
+   + tower-placement[20,320] <= 1
+ footprints[(10,_330),(20,_330)]: tower-placement[20,330]
+   + tower-placement[10,330] <= 1
+ footprints[(10,_330),(20,_340)]: tower-placement[20,340]
+   + tower-placement[10,330] <= 1
+ footprints[(80,_270),(70,_260)]: tower-placement[70,260]
+   + tower-placement[80,270] <= 1
+ footprints[(80,_270),(70,_270)]: tower-placement[70,270]
+   + tower-placement[80,270] <= 1
+ footprints[(80,_270),(70,_280)]: tower-placement[70,280]
+   + tower-placement[80,270] <= 1
+ footprints[(80,_270),(80,_260)]: tower-placement[80,260]
+   + tower-placement[80,270] <= 1
+ footprints[(80,_270),(80,_280)]: tower-placement[80,270]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_270),(90,_260)]: tower-placement[80,270]
+   + tower-placement[90,260] <= 1
+ footprints[(80,_270),(90,_270)]: tower-placement[90,270]
+   + tower-placement[80,270] <= 1
+ footprints[(80,_270),(90,_280)]: tower-placement[90,280]
+   + tower-placement[80,270] <= 1
+ footprints[(40,_90),(30,_80)]: tower-placement[40,90]
+   + tower-placement[30,80] <= 1
+ footprints[(40,_90),(30,_90)]: tower-placement[30,90]
+   + tower-placement[40,90] <= 1
+ footprints[(40,_90),(30,_100)]: tower-placement[30,100]
+   + tower-placement[40,90] <= 1
+ footprints[(40,_90),(40,_80)]: tower-placement[40,80]
+   + tower-placement[40,90] <= 1
+ footprints[(40,_90),(40,_100)]: tower-placement[40,90]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_90),(50,_80)]: tower-placement[40,90]
+   + tower-placement[50,80] <= 1
+ footprints[(40,_90),(50,_90)]: tower-placement[50,90]
+   + tower-placement[40,90] <= 1
+ footprints[(40,_90),(50,_100)]: tower-placement[50,100]
+   + tower-placement[40,90] <= 1
+ footprints[(60,_100),(50,_90)]: tower-placement[50,90]
+   + tower-placement[60,100] <= 1
+ footprints[(60,_100),(50,_100)]: tower-placement[50,100]
+   + tower-placement[60,100] <= 1
+ footprints[(60,_100),(50,_110)]: tower-placement[50,110]
+   + tower-placement[60,100] <= 1
+ footprints[(60,_100),(60,_90)]: tower-placement[60,90]
+   + tower-placement[60,100] <= 1
+ footprints[(60,_100),(60,_110)]: tower-placement[60,100]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_100),(70,_90)]: tower-placement[70,90]
+   + tower-placement[60,100] <= 1
+ footprints[(60,_100),(70,_100)]: tower-placement[70,100]
+   + tower-placement[60,100] <= 1
+ footprints[(460,_460),(450,_450)]: tower-placement[460,460]
+   + tower-placement[450,450] <= 1
+ footprints[(460,_460),(450,_460)]: tower-placement[450,460]
+   + tower-placement[460,460] <= 1
+ footprints[(460,_460),(460,_450)]: tower-placement[460,450]
+   + tower-placement[460,460] <= 1
+ footprints[(460,_330),(460,_320)]: tower-placement[460,320]
+   + tower-placement[460,330] <= 1
+ footprints[(460,_330),(460,_340)]: tower-placement[460,330]
+   + tower-placement[460,340] <= 1
+ footprints[(80,_10),(70,_10)]: tower-placement[70,10]
+   + tower-placement[80,10] <= 1
+ footprints[(80,_10),(70,_20)]: tower-placement[70,20]
+   + tower-placement[80,10] <= 1
+ footprints[(80,_10),(80,_20)]: tower-placement[80,10]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_10),(90,_10)]: tower-placement[90,10]
+   + tower-placement[80,10] <= 1
+ footprints[(80,_10),(90,_20)]: tower-placement[90,20]
+   + tower-placement[80,10] <= 1
+ footprints[(30,_110),(20,_100)]: tower-placement[30,110]
+   + tower-placement[20,100] <= 1
+ footprints[(30,_110),(20,_110)]: tower-placement[30,110]
+   + tower-placement[20,110] <= 1
+ footprints[(30,_110),(20,_120)]: tower-placement[20,120]
+   + tower-placement[30,110] <= 1
+ footprints[(30,_110),(30,_100)]: tower-placement[30,100]
+   + tower-placement[30,110] <= 1
+ footprints[(30,_110),(30,_120)]: tower-placement[30,110]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_110),(40,_100)]: tower-placement[30,110]
+   + tower-placement[40,100] <= 1
+ footprints[(30,_110),(40,_110)]: tower-placement[40,110]
+   + tower-placement[30,110] <= 1
+ footprints[(30,_110),(40,_120)]: tower-placement[40,120]
+   + tower-placement[30,110] <= 1
+ footprints[(460,_200),(450,_190)]: tower-placement[460,200]
+   + tower-placement[450,190] <= 1
+ footprints[(460,_200),(450,_200)]: tower-placement[450,200]
+   + tower-placement[460,200] <= 1
+ footprints[(460,_200),(450,_210)]: tower-placement[450,210]
+   + tower-placement[460,200] <= 1
+ footprints[(460,_200),(460,_190)]: tower-placement[460,190]
+   + tower-placement[460,200] <= 1
+ footprints[(460,_200),(460,_210)]: tower-placement[460,200]
+   + tower-placement[460,210] <= 1
+ footprints[(420,_240),(410,_230)]: tower-placement[420,240]
+   + tower-placement[410,230] <= 1
+ footprints[(420,_240),(410,_240)]: tower-placement[410,240]
+   + tower-placement[420,240] <= 1
+ footprints[(420,_240),(410,_250)]: tower-placement[410,250]
+   + tower-placement[420,240] <= 1
+ footprints[(420,_240),(420,_230)]: tower-placement[420,230]
+   + tower-placement[420,240] <= 1
+ footprints[(420,_240),(420,_250)]: tower-placement[420,240]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_240),(430,_230)]: tower-placement[430,230]
+   + tower-placement[420,240] <= 1
+ footprints[(420,_240),(430,_240)]: tower-placement[430,240]
+   + tower-placement[420,240] <= 1
+ footprints[(420,_240),(430,_250)]: tower-placement[430,250]
+   + tower-placement[420,240] <= 1
+ footprints[(370,_340),(360,_340)]: tower-placement[360,340]
+   + tower-placement[370,340] <= 1
+ footprints[(370,_340),(360,_350)]: tower-placement[360,350]
+   + tower-placement[370,340] <= 1
+ footprints[(370,_340),(370,_350)]: tower-placement[370,340]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_340),(380,_340)]: tower-placement[380,340]
+   + tower-placement[370,340] <= 1
+ footprints[(370,_340),(380,_350)]: tower-placement[380,350]
+   + tower-placement[370,340] <= 1
+ footprints[(460,_70),(460,_60)]: tower-placement[460,60]
+   + tower-placement[460,70] <= 1
+ footprints[(460,_70),(460,_80)]: tower-placement[460,70]
+   + tower-placement[460,80] <= 1
+ footprints[(230,_360),(220,_370)]: tower-placement[220,370]
+   + tower-placement[230,360] <= 1
+ footprints[(230,_360),(230,_370)]: tower-placement[230,360]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_360),(240,_350)]: tower-placement[230,360]
+   + tower-placement[240,350] <= 1
+ footprints[(230,_360),(240,_360)]: tower-placement[230,360]
+   + tower-placement[240,360] <= 1
+ footprints[(230,_360),(240,_370)]: tower-placement[240,370]
+   + tower-placement[230,360] <= 1
+ footprints[(440,_280),(430,_270)]: tower-placement[440,280]
+   + tower-placement[430,270] <= 1
+ footprints[(440,_280),(430,_280)]: tower-placement[430,280]
+   + tower-placement[440,280] <= 1
+ footprints[(440,_280),(440,_270)]: tower-placement[440,270]
+   + tower-placement[440,280] <= 1
+ footprints[(440,_280),(440,_290)]: tower-placement[440,280]
+   + tower-placement[440,290] <= 1
+ footprints[(440,_280),(450,_270)]: tower-placement[440,280]
+   + tower-placement[450,270] <= 1
+ footprints[(440,_280),(450,_280)]: tower-placement[450,280]
+   + tower-placement[440,280] <= 1
+ footprints[(440,_280),(450,_290)]: tower-placement[450,290]
+   + tower-placement[440,280] <= 1
+ footprints[(390,_380),(380,_370)]: tower-placement[390,380]
+   + tower-placement[380,370] <= 1
+ footprints[(390,_380),(380,_380)]: tower-placement[390,380]
+   + tower-placement[380,380] <= 1
+ footprints[(390,_380),(380,_390)]: tower-placement[380,390]
+   + tower-placement[390,380] <= 1
+ footprints[(390,_380),(390,_370)]: tower-placement[390,370]
+   + tower-placement[390,380] <= 1
+ footprints[(390,_380),(390,_390)]: tower-placement[390,380]
+   + tower-placement[390,390] <= 1
+ footprints[(330,_380),(320,_370)]: tower-placement[330,380]
+   + tower-placement[320,370] <= 1
+ footprints[(330,_380),(320,_380)]: tower-placement[320,380]
+   + tower-placement[330,380] <= 1
+ footprints[(330,_380),(320,_390)]: tower-placement[320,390]
+   + tower-placement[330,380] <= 1
+ footprints[(330,_380),(330,_370)]: tower-placement[330,370]
+   + tower-placement[330,380] <= 1
+ footprints[(330,_380),(330,_390)]: tower-placement[330,380]
+   + tower-placement[330,390] <= 1
+ footprints[(330,_380),(340,_370)]: tower-placement[340,370]
+   + tower-placement[330,380] <= 1
+ footprints[(330,_380),(340,_380)]: tower-placement[340,380]
+   + tower-placement[330,380] <= 1
+ footprints[(330,_380),(340,_390)]: tower-placement[340,390]
+   + tower-placement[330,380] <= 1
+ footprints[(430,_210),(420,_220)]: tower-placement[420,220]
+   + tower-placement[430,210] <= 1
+ footprints[(430,_210),(430,_220)]: tower-placement[430,210]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_210),(440,_200)]: tower-placement[430,210]
+   + tower-placement[440,200] <= 1
+ footprints[(430,_210),(440,_210)]: tower-placement[440,210]
+   + tower-placement[430,210] <= 1
+ footprints[(430,_210),(440,_220)]: tower-placement[440,220]
+   + tower-placement[430,210] <= 1
+ footprints[(280,_130),(270,_120)]: tower-placement[280,130]
+   + tower-placement[270,120] <= 1
+ footprints[(280,_130),(270,_130)]: tower-placement[270,130]
+   + tower-placement[280,130] <= 1
+ footprints[(280,_130),(270,_140)]: tower-placement[270,140]
+   + tower-placement[280,130] <= 1
+ footprints[(280,_130),(280,_120)]: tower-placement[280,120]
+   + tower-placement[280,130] <= 1
+ footprints[(280,_130),(280,_140)]: tower-placement[280,130]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_130),(290,_120)]: tower-placement[280,130]
+   + tower-placement[290,120] <= 1
+ footprints[(280,_130),(290,_130)]: tower-placement[290,130]
+   + tower-placement[280,130] <= 1
+ footprints[(280,_130),(290,_140)]: tower-placement[290,140]
+   + tower-placement[280,130] <= 1
+ footprints[(450,_220),(440,_210)]: tower-placement[440,210]
+   + tower-placement[450,220] <= 1
+ footprints[(450,_220),(440,_220)]: tower-placement[440,220]
+   + tower-placement[450,220] <= 1
+ footprints[(450,_220),(440,_230)]: tower-placement[440,230]
+   + tower-placement[450,220] <= 1
+ footprints[(450,_220),(450,_210)]: tower-placement[450,210]
+   + tower-placement[450,220] <= 1
+ footprints[(450,_220),(450,_230)]: tower-placement[450,220]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_220),(460,_210)]: tower-placement[450,220]
+   + tower-placement[460,210] <= 1
+ footprints[(450,_220),(460,_220)]: tower-placement[460,220]
+   + tower-placement[450,220] <= 1
+ footprints[(450,_220),(460,_230)]: tower-placement[460,230]
+   + tower-placement[450,220] <= 1
+ footprints[(390,_250),(380,_240)]: tower-placement[390,250]
+   + tower-placement[380,240] <= 1
+ footprints[(390,_250),(380,_250)]: tower-placement[390,250]
+   + tower-placement[380,250] <= 1
+ footprints[(390,_250),(380,_260)]: tower-placement[380,260]
+   + tower-placement[390,250] <= 1
+ footprints[(390,_250),(390,_240)]: tower-placement[390,240]
+   + tower-placement[390,250] <= 1
+ footprints[(390,_250),(390,_260)]: tower-placement[390,250]
+   + tower-placement[390,260] <= 1
+ footprints[(390,_250),(400,_240)]: tower-placement[390,250]
+   + tower-placement[400,240] <= 1
+ footprints[(390,_250),(400,_250)]: tower-placement[400,250]
+   + tower-placement[390,250] <= 1
+ footprints[(390,_250),(400,_260)]: tower-placement[400,260]
+   + tower-placement[390,250] <= 1
+ footprints[(340,_350),(330,_340)]: tower-placement[340,350]
+   + tower-placement[330,340] <= 1
+ footprints[(340,_350),(330,_350)]: tower-placement[340,350]
+   + tower-placement[330,350] <= 1
+ footprints[(340,_350),(330,_360)]: tower-placement[330,360]
+   + tower-placement[340,350] <= 1
+ footprints[(340,_350),(340,_340)]: tower-placement[340,340]
+   + tower-placement[340,350] <= 1
+ footprints[(340,_350),(340,_360)]: tower-placement[340,350]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_350),(350,_340)]: tower-placement[340,350]
+   + tower-placement[350,340] <= 1
+ footprints[(340,_350),(350,_350)]: tower-placement[350,350]
+   + tower-placement[340,350] <= 1
+ footprints[(340,_350),(350,_360)]: tower-placement[350,360]
+   + tower-placement[340,350] <= 1
+ footprints[(410,_260),(400,_250)]: tower-placement[400,250]
+   + tower-placement[410,260] <= 1
+ footprints[(410,_260),(400,_260)]: tower-placement[400,260]
+   + tower-placement[410,260] <= 1
+ footprints[(410,_260),(400,_270)]: tower-placement[400,270]
+   + tower-placement[410,260] <= 1
+ footprints[(410,_260),(410,_250)]: tower-placement[410,250]
+   + tower-placement[410,260] <= 1
+ footprints[(410,_260),(410,_270)]: tower-placement[410,260]
+   + tower-placement[410,270] <= 1
+ footprints[(410,_260),(420,_250)]: tower-placement[410,260]
+   + tower-placement[420,250] <= 1
+ footprints[(410,_260),(420,_260)]: tower-placement[420,260]
+   + tower-placement[410,260] <= 1
+ footprints[(410,_260),(420,_270)]: tower-placement[420,270]
+   + tower-placement[410,260] <= 1
+ footprints[(250,_270),(250,_260)]: tower-placement[250,260]
+   + tower-placement[250,270] <= 1
+ footprints[(250,_270),(250,_280)]: tower-placement[250,270]
+   + tower-placement[250,280] <= 1
+ footprints[(250,_270),(260,_260)]: tower-placement[250,270]
+   + tower-placement[260,260] <= 1
+ footprints[(250,_270),(260,_270)]: tower-placement[260,270]
+   + tower-placement[250,270] <= 1
+ footprints[(250,_270),(260,_280)]: tower-placement[260,280]
+   + tower-placement[250,270] <= 1
+ footprints[(360,_360),(350,_350)]: tower-placement[350,350]
+   + tower-placement[360,360] <= 1
+ footprints[(360,_360),(350,_360)]: tower-placement[350,360]
+   + tower-placement[360,360] <= 1
+ footprints[(360,_360),(350,_370)]: tower-placement[350,370]
+   + tower-placement[360,360] <= 1
+ footprints[(360,_360),(360,_350)]: tower-placement[360,350]
+   + tower-placement[360,360] <= 1
+ footprints[(360,_360),(360,_370)]: tower-placement[360,360]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_360),(370,_350)]: tower-placement[360,360]
+   + tower-placement[370,350] <= 1
+ footprints[(360,_360),(370,_360)]: tower-placement[370,360]
+   + tower-placement[360,360] <= 1
+ footprints[(360,_360),(370,_370)]: tower-placement[370,370]
+   + tower-placement[360,360] <= 1
+ footprints[(270,_280),(260,_270)]: tower-placement[260,270]
+   + tower-placement[270,280] <= 1
+ footprints[(270,_280),(260,_280)]: tower-placement[260,280]
+   + tower-placement[270,280] <= 1
+ footprints[(270,_280),(260,_290)]: tower-placement[260,290]
+   + tower-placement[270,280] <= 1
+ footprints[(270,_280),(270,_270)]: tower-placement[270,270]
+   + tower-placement[270,280] <= 1
+ footprints[(270,_280),(270,_290)]: tower-placement[270,280]
+   + tower-placement[270,290] <= 1
+ footprints[(440,_20),(430,_10)]: tower-placement[430,10]
+   + tower-placement[440,20] <= 1
+ footprints[(440,_20),(430,_20)]: tower-placement[430,20]
+   + tower-placement[440,20] <= 1
+ footprints[(440,_20),(430,_30)]: tower-placement[430,30]
+   + tower-placement[440,20] <= 1
+ footprints[(440,_20),(440,_10)]: tower-placement[440,10]
+   + tower-placement[440,20] <= 1
+ footprints[(440,_20),(440,_30)]: tower-placement[440,20]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_20),(450,_10)]: tower-placement[440,20]
+   + tower-placement[450,10] <= 1
+ footprints[(440,_20),(450,_20)]: tower-placement[450,20]
+   + tower-placement[440,20] <= 1
+ footprints[(440,_20),(450,_30)]: tower-placement[450,30]
+   + tower-placement[440,20] <= 1
+ footprints[(260,_210),(250,_200)]: tower-placement[250,200]
+   + tower-placement[260,210] <= 1
+ footprints[(260,_210),(250,_210)]: tower-placement[250,210]
+   + tower-placement[260,210] <= 1
+ footprints[(260,_210),(250,_220)]: tower-placement[250,220]
+   + tower-placement[260,210] <= 1
+ footprints[(260,_210),(260,_200)]: tower-placement[260,200]
+   + tower-placement[260,210] <= 1
+ footprints[(260,_210),(260,_220)]: tower-placement[260,210]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_210),(270,_200)]: tower-placement[260,210]
+   + tower-placement[270,200] <= 1
+ footprints[(260,_210),(270,_210)]: tower-placement[270,210]
+   + tower-placement[260,210] <= 1
+ footprints[(260,_210),(270,_220)]: tower-placement[270,220]
+   + tower-placement[260,210] <= 1
+ footprints[(220,_380),(210,_380)]: tower-placement[210,380]
+   + tower-placement[220,380] <= 1
+ footprints[(220,_380),(210,_390)]: tower-placement[210,390]
+   + tower-placement[220,380] <= 1
+ footprints[(220,_380),(220,_370)]: tower-placement[220,370]
+   + tower-placement[220,380] <= 1
+ footprints[(220,_380),(220,_390)]: tower-placement[220,380]
+   + tower-placement[220,390] <= 1
+ footprints[(220,_380),(230,_370)]: tower-placement[220,380]
+   + tower-placement[230,370] <= 1
+ footprints[(220,_380),(230,_380)]: tower-placement[230,380]
+   + tower-placement[220,380] <= 1
+ footprints[(220,_380),(230,_390)]: tower-placement[230,390]
+   + tower-placement[220,380] <= 1
+ footprints[(390,_120),(380,_110)]: tower-placement[390,120]
+   + tower-placement[380,110] <= 1
+ footprints[(390,_120),(380,_120)]: tower-placement[390,120]
+   + tower-placement[380,120] <= 1
+ footprints[(390,_120),(380,_130)]: tower-placement[380,130]
+   + tower-placement[390,120] <= 1
+ footprints[(390,_120),(390,_110)]: tower-placement[390,110]
+   + tower-placement[390,120] <= 1
+ footprints[(390,_120),(390,_130)]: tower-placement[390,120]
+   + tower-placement[390,130] <= 1
+ footprints[(130,_300),(120,_290)]: tower-placement[120,290]
+   + tower-placement[130,300] <= 1
+ footprints[(130,_300),(120,_300)]: tower-placement[120,300]
+   + tower-placement[130,300] <= 1
+ footprints[(130,_300),(120,_310)]: tower-placement[120,310]
+   + tower-placement[130,300] <= 1
+ footprints[(130,_300),(130,_290)]: tower-placement[130,290]
+   + tower-placement[130,300] <= 1
+ footprints[(130,_300),(130,_310)]: tower-placement[130,300]
+   + tower-placement[130,310] <= 1
+ footprints[(130,_300),(140,_290)]: tower-placement[130,300]
+   + tower-placement[140,290] <= 1
+ footprints[(130,_300),(140,_300)]: tower-placement[140,300]
+   + tower-placement[130,300] <= 1
+ footprints[(130,_300),(140,_310)]: tower-placement[140,310]
+   + tower-placement[130,300] <= 1
+ footprints[(340,_220),(340,_230)]: tower-placement[340,220]
+   + tower-placement[340,230] <= 1
+ footprints[(340,_220),(350,_220)]: tower-placement[350,220]
+   + tower-placement[340,220] <= 1
+ footprints[(340,_220),(350,_230)]: tower-placement[350,230]
+   + tower-placement[340,220] <= 1
+ footprints[(20,_400),(10,_390)]: tower-placement[10,390]
+   + tower-placement[20,400] <= 1
+ footprints[(20,_400),(10,_400)]: tower-placement[10,400]
+   + tower-placement[20,400] <= 1
+ footprints[(20,_400),(10,_410)]: tower-placement[10,410]
+   + tower-placement[20,400] <= 1
+ footprints[(20,_400),(20,_390)]: tower-placement[20,390]
+   + tower-placement[20,400] <= 1
+ footprints[(20,_400),(20,_410)]: tower-placement[20,400]
+   + tower-placement[20,410] <= 1
+ footprints[(300,_390),(290,_380)]: tower-placement[300,390]
+   + tower-placement[290,380] <= 1
+ footprints[(300,_390),(290,_390)]: tower-placement[300,390]
+   + tower-placement[290,390] <= 1
+ footprints[(300,_390),(300,_380)]: tower-placement[300,380]
+   + tower-placement[300,390] <= 1
+ footprints[(300,_390),(310,_380)]: tower-placement[300,390]
+   + tower-placement[310,380] <= 1
+ footprints[(300,_390),(310,_390)]: tower-placement[310,390]
+   + tower-placement[300,390] <= 1
+ footprints[(150,_310),(140,_300)]: tower-placement[140,300]
+   + tower-placement[150,310] <= 1
+ footprints[(150,_310),(140,_310)]: tower-placement[140,310]
+   + tower-placement[150,310] <= 1
+ footprints[(150,_310),(150,_300)]: tower-placement[150,300]
+   + tower-placement[150,310] <= 1
+ footprints[(150,_310),(160,_300)]: tower-placement[160,300]
+   + tower-placement[150,310] <= 1
+ footprints[(150,_310),(160,_310)]: tower-placement[160,310]
+   + tower-placement[150,310] <= 1
+ footprints[(250,_140),(250,_130)]: tower-placement[250,130]
+   + tower-placement[250,140] <= 1
+ footprints[(250,_140),(250,_150)]: tower-placement[250,140]
+   + tower-placement[250,150] <= 1
+ footprints[(250,_140),(260,_130)]: tower-placement[250,140]
+   + tower-placement[260,130] <= 1
+ footprints[(250,_140),(260,_140)]: tower-placement[260,140]
+   + tower-placement[250,140] <= 1
+ footprints[(250,_140),(260,_150)]: tower-placement[260,150]
+   + tower-placement[250,140] <= 1
+ footprints[(360,_230),(350,_220)]: tower-placement[350,220]
+   + tower-placement[360,230] <= 1
+ footprints[(360,_230),(350,_230)]: tower-placement[350,230]
+   + tower-placement[360,230] <= 1
+ footprints[(360,_230),(350,_240)]: tower-placement[350,240]
+   + tower-placement[360,230] <= 1
+ footprints[(360,_230),(360,_220)]: tower-placement[360,220]
+   + tower-placement[360,230] <= 1
+ footprints[(360,_230),(360,_240)]: tower-placement[360,230]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_230),(370,_220)]: tower-placement[360,230]
+   + tower-placement[370,220] <= 1
+ footprints[(360,_230),(370,_230)]: tower-placement[370,230]
+   + tower-placement[360,230] <= 1
+ footprints[(360,_230),(370,_240)]: tower-placement[370,240]
+   + tower-placement[360,230] <= 1
+ footprints[(140,_240),(130,_230)]: tower-placement[130,230]
+   + tower-placement[140,240] <= 1
+ footprints[(140,_240),(130,_240)]: tower-placement[130,240]
+   + tower-placement[140,240] <= 1
+ footprints[(140,_240),(130,_250)]: tower-placement[130,250]
+   + tower-placement[140,240] <= 1
+ footprints[(140,_240),(140,_230)]: tower-placement[140,230]
+   + tower-placement[140,240] <= 1
+ footprints[(140,_240),(140,_250)]: tower-placement[140,240]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_240),(150,_230)]: tower-placement[140,240]
+   + tower-placement[150,230] <= 1
+ footprints[(140,_240),(150,_240)]: tower-placement[150,240]
+   + tower-placement[140,240] <= 1
+ footprints[(140,_240),(150,_250)]: tower-placement[150,250]
+   + tower-placement[140,240] <= 1
+ footprints[(100,_60),(90,_50)]: tower-placement[100,60]
+   + tower-placement[90,50] <= 1
+ footprints[(100,_60),(90,_60)]: tower-placement[90,60]
+   + tower-placement[100,60] <= 1
+ footprints[(100,_60),(90,_70)]: tower-placement[90,70]
+   + tower-placement[100,60] <= 1
+ footprints[(100,_60),(100,_50)]: tower-placement[100,50]
+   + tower-placement[100,60] <= 1
+ footprints[(100,_60),(100,_70)]: tower-placement[100,60]
+   + tower-placement[100,70] <= 1
+ footprints[(100,_60),(110,_50)]: tower-placement[100,60]
+   + tower-placement[110,50] <= 1
+ footprints[(100,_60),(110,_60)]: tower-placement[110,60]
+   + tower-placement[100,60] <= 1
+ footprints[(100,_60),(110,_70)]: tower-placement[110,70]
+   + tower-placement[100,60] <= 1
+ footprints[(310,_330),(300,_320)]: tower-placement[300,320]
+   + tower-placement[310,330] <= 1
+ footprints[(310,_330),(300,_330)]: tower-placement[300,330]
+   + tower-placement[310,330] <= 1
+ footprints[(310,_330),(300,_340)]: tower-placement[300,340]
+   + tower-placement[310,330] <= 1
+ footprints[(310,_330),(310,_340)]: tower-placement[310,330]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_330),(320,_330)]: tower-placement[320,330]
+   + tower-placement[310,330] <= 1
+ footprints[(310,_330),(320,_340)]: tower-placement[320,340]
+   + tower-placement[310,330] <= 1
+ footprints[(270,_150),(260,_140)]: tower-placement[260,140]
+   + tower-placement[270,150] <= 1
+ footprints[(270,_150),(260,_150)]: tower-placement[260,150]
+   + tower-placement[270,150] <= 1
+ footprints[(270,_150),(260,_160)]: tower-placement[260,160]
+   + tower-placement[270,150] <= 1
+ footprints[(270,_150),(270,_140)]: tower-placement[270,140]
+   + tower-placement[270,150] <= 1
+ footprints[(270,_150),(270,_160)]: tower-placement[270,150]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_150),(280,_140)]: tower-placement[270,150]
+   + tower-placement[280,140] <= 1
+ footprints[(270,_150),(280,_150)]: tower-placement[280,150]
+   + tower-placement[270,150] <= 1
+ footprints[(270,_150),(280,_160)]: tower-placement[280,160]
+   + tower-placement[270,150] <= 1
+ footprints[(50,_160),(40,_150)]: tower-placement[50,160]
+   + tower-placement[40,150] <= 1
+ footprints[(50,_160),(40,_160)]: tower-placement[40,160]
+   + tower-placement[50,160] <= 1
+ footprints[(50,_160),(40,_170)]: tower-placement[40,170]
+   + tower-placement[50,160] <= 1
+ footprints[(50,_160),(50,_150)]: tower-placement[50,150]
+   + tower-placement[50,160] <= 1
+ footprints[(50,_160),(50,_170)]: tower-placement[50,160]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_160),(60,_150)]: tower-placement[50,160]
+   + tower-placement[60,150] <= 1
+ footprints[(50,_160),(60,_160)]: tower-placement[60,160]
+   + tower-placement[50,160] <= 1
+ footprints[(50,_160),(60,_170)]: tower-placement[60,170]
+   + tower-placement[50,160] <= 1
+ footprints[(260,_80),(250,_70)]: tower-placement[250,70]
+   + tower-placement[260,80] <= 1
+ footprints[(260,_80),(250,_80)]: tower-placement[250,80]
+   + tower-placement[260,80] <= 1
+ footprints[(260,_80),(250,_90)]: tower-placement[250,90]
+   + tower-placement[260,80] <= 1
+ footprints[(260,_80),(260,_90)]: tower-placement[260,80]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_80),(270,_80)]: tower-placement[270,80]
+   + tower-placement[260,80] <= 1
+ footprints[(260,_80),(270,_90)]: tower-placement[270,90]
+   + tower-placement[260,80] <= 1
+ footprints[(40,_440),(30,_430)]: tower-placement[30,430]
+   + tower-placement[40,440] <= 1
+ footprints[(40,_440),(30,_440)]: tower-placement[30,440]
+   + tower-placement[40,440] <= 1
+ footprints[(40,_440),(30,_450)]: tower-placement[30,450]
+   + tower-placement[40,440] <= 1
+ footprints[(40,_440),(40,_450)]: tower-placement[40,440]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_440),(50,_450)]: tower-placement[50,450]
+   + tower-placement[40,440] <= 1
+ footprints[(130,_170),(130,_160)]: tower-placement[130,160]
+   + tower-placement[130,170] <= 1
+ footprints[(130,_170),(130,_180)]: tower-placement[130,170]
+   + tower-placement[130,180] <= 1
+ footprints[(130,_170),(140,_160)]: tower-placement[130,170]
+   + tower-placement[140,160] <= 1
+ footprints[(130,_170),(140,_170)]: tower-placement[140,170]
+   + tower-placement[130,170] <= 1
+ footprints[(130,_170),(140,_180)]: tower-placement[140,180]
+   + tower-placement[130,170] <= 1
+ footprints[(340,_90),(330,_90)]: tower-placement[340,90]
+   + tower-placement[330,90] <= 1
+ footprints[(340,_90),(330,_100)]: tower-placement[330,100]
+   + tower-placement[340,90] <= 1
+ footprints[(340,_90),(340,_100)]: tower-placement[340,90]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_90),(350,_90)]: tower-placement[350,90]
+   + tower-placement[340,90] <= 1
+ footprints[(340,_90),(350,_100)]: tower-placement[350,100]
+   + tower-placement[340,90] <= 1
+ footprints[(20,_270),(10,_270)]: tower-placement[10,270]
+   + tower-placement[20,270] <= 1
+ footprints[(20,_270),(10,_280)]: tower-placement[10,280]
+   + tower-placement[20,270] <= 1
+ footprints[(20,_270),(20,_280)]: tower-placement[20,270]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_270),(30,_270)]: tower-placement[30,270]
+   + tower-placement[20,270] <= 1
+ footprints[(20,_270),(30,_280)]: tower-placement[30,280]
+   + tower-placement[20,270] <= 1
+ footprints[(160,_280),(150,_270)]: tower-placement[160,280]
+   + tower-placement[150,270] <= 1
+ footprints[(160,_280),(150,_280)]: tower-placement[160,280]
+   + tower-placement[150,280] <= 1
+ footprints[(160,_280),(150,_290)]: tower-placement[150,290]
+   + tower-placement[160,280] <= 1
+ footprints[(160,_280),(160,_270)]: tower-placement[160,270]
+   + tower-placement[160,280] <= 1
+ footprints[(160,_280),(160,_290)]: tower-placement[160,280]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_280),(170,_270)]: tower-placement[160,280]
+   + tower-placement[170,270] <= 1
+ footprints[(160,_280),(170,_280)]: tower-placement[170,280]
+   + tower-placement[160,280] <= 1
+ footprints[(160,_280),(170,_290)]: tower-placement[170,290]
+   + tower-placement[160,280] <= 1
+ footprints[(190,_10),(180,_10)]: tower-placement[180,10]
+   + tower-placement[190,10] <= 1
+ footprints[(190,_10),(180,_20)]: tower-placement[180,20]
+   + tower-placement[190,10] <= 1
+ footprints[(190,_10),(190,_20)]: tower-placement[190,10]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_10),(200,_10)]: tower-placement[200,10]
+   + tower-placement[190,10] <= 1
+ footprints[(190,_10),(200,_20)]: tower-placement[200,20]
+   + tower-placement[190,10] <= 1
+ footprints[(150,_180),(140,_170)]: tower-placement[140,170]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_180),(140,_180)]: tower-placement[140,180]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_180),(140,_190)]: tower-placement[140,190]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_180),(150,_170)]: tower-placement[150,170]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_180),(150,_190)]: tower-placement[150,180]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_180),(160,_170)]: tower-placement[160,170]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_180),(160,_180)]: tower-placement[160,180]
+   + tower-placement[150,180] <= 1
+ footprints[(150,_180),(160,_190)]: tower-placement[160,190]
+   + tower-placement[150,180] <= 1
+ footprints[(360,_100),(350,_90)]: tower-placement[350,90]
+   + tower-placement[360,100] <= 1
+ footprints[(360,_100),(350,_100)]: tower-placement[350,100]
+   + tower-placement[360,100] <= 1
+ footprints[(360,_100),(350,_110)]: tower-placement[350,110]
+   + tower-placement[360,100] <= 1
+ footprints[(360,_100),(360,_90)]: tower-placement[360,90]
+   + tower-placement[360,100] <= 1
+ footprints[(360,_100),(360,_110)]: tower-placement[360,100]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_100),(370,_90)]: tower-placement[360,100]
+   + tower-placement[370,90] <= 1
+ footprints[(360,_100),(370,_100)]: tower-placement[370,100]
+   + tower-placement[360,100] <= 1
+ footprints[(360,_100),(370,_110)]: tower-placement[370,110]
+   + tower-placement[360,100] <= 1
+ footprints[(100,_280),(90,_270)]: tower-placement[90,270]
+   + tower-placement[100,280] <= 1
+ footprints[(100,_280),(90,_280)]: tower-placement[90,280]
+   + tower-placement[100,280] <= 1
+ footprints[(100,_280),(90,_290)]: tower-placement[90,290]
+   + tower-placement[100,280] <= 1
+ footprints[(100,_280),(100,_270)]: tower-placement[100,270]
+   + tower-placement[100,280] <= 1
+ footprints[(100,_280),(100,_290)]: tower-placement[100,280]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_280),(110,_270)]: tower-placement[100,280]
+   + tower-placement[110,270] <= 1
+ footprints[(100,_280),(110,_280)]: tower-placement[110,280]
+   + tower-placement[100,280] <= 1
+ footprints[(100,_280),(110,_290)]: tower-placement[110,290]
+   + tower-placement[100,280] <= 1
+ footprints[(50,_30),(40,_20)]: tower-placement[50,30]
+   + tower-placement[40,20] <= 1
+ footprints[(50,_30),(40,_30)]: tower-placement[40,30]
+   + tower-placement[50,30] <= 1
+ footprints[(50,_30),(40,_40)]: tower-placement[40,40]
+   + tower-placement[50,30] <= 1
+ footprints[(50,_30),(50,_20)]: tower-placement[50,20]
+   + tower-placement[50,30] <= 1
+ footprints[(50,_30),(50,_40)]: tower-placement[50,30]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_30),(60,_20)]: tower-placement[50,30]
+   + tower-placement[60,20] <= 1
+ footprints[(50,_30),(60,_30)]: tower-placement[60,30]
+   + tower-placement[50,30] <= 1
+ footprints[(50,_30),(60,_40)]: tower-placement[60,40]
+   + tower-placement[50,30] <= 1
+ footprints[(40,_310),(30,_300)]: tower-placement[30,300]
+   + tower-placement[40,310] <= 1
+ footprints[(40,_310),(30,_310)]: tower-placement[30,310]
+   + tower-placement[40,310] <= 1
+ footprints[(40,_310),(30,_320)]: tower-placement[30,320]
+   + tower-placement[40,310] <= 1
+ footprints[(40,_310),(40,_300)]: tower-placement[40,300]
+   + tower-placement[40,310] <= 1
+ footprints[(40,_310),(40,_320)]: tower-placement[40,310]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_310),(50,_300)]: tower-placement[40,310]
+   + tower-placement[50,300] <= 1
+ footprints[(40,_310),(50,_310)]: tower-placement[50,310]
+   + tower-placement[40,310] <= 1
+ footprints[(40,_310),(50,_320)]: tower-placement[50,320]
+   + tower-placement[40,310] <= 1
+ footprints[(210,_50),(200,_40)]: tower-placement[210,50]
+   + tower-placement[200,40] <= 1
+ footprints[(210,_50),(200,_50)]: tower-placement[200,50]
+   + tower-placement[210,50] <= 1
+ footprints[(210,_50),(200,_60)]: tower-placement[200,60]
+   + tower-placement[210,50] <= 1
+ footprints[(210,_50),(210,_40)]: tower-placement[210,40]
+   + tower-placement[210,50] <= 1
+ footprints[(210,_50),(210,_60)]: tower-placement[210,50]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_50),(220,_40)]: tower-placement[210,50]
+   + tower-placement[220,40] <= 1
+ footprints[(210,_50),(220,_50)]: tower-placement[220,50]
+   + tower-placement[210,50] <= 1
+ footprints[(210,_50),(220,_60)]: tower-placement[220,60]
+   + tower-placement[210,50] <= 1
+ footprints[(170,_220),(160,_210)]: tower-placement[160,210]
+   + tower-placement[170,220] <= 1
+ footprints[(170,_220),(160,_220)]: tower-placement[160,220]
+   + tower-placement[170,220] <= 1
+ footprints[(170,_220),(160,_230)]: tower-placement[160,230]
+   + tower-placement[170,220] <= 1
+ footprints[(170,_220),(170,_210)]: tower-placement[170,210]
+   + tower-placement[170,220] <= 1
+ footprints[(170,_220),(170,_230)]: tower-placement[170,220]
+   + tower-placement[170,230] <= 1
+ footprints[(130,_40),(120,_30)]: tower-placement[120,30]
+   + tower-placement[130,40] <= 1
+ footprints[(130,_40),(120,_40)]: tower-placement[120,40]
+   + tower-placement[130,40] <= 1
+ footprints[(130,_40),(120,_50)]: tower-placement[120,50]
+   + tower-placement[130,40] <= 1
+ footprints[(130,_40),(130,_30)]: tower-placement[130,30]
+   + tower-placement[130,40] <= 1
+ footprints[(130,_40),(130,_50)]: tower-placement[130,40]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_40),(140,_30)]: tower-placement[130,40]
+   + tower-placement[140,30] <= 1
+ footprints[(130,_40),(140,_40)]: tower-placement[140,40]
+   + tower-placement[130,40] <= 1
+ footprints[(130,_40),(140,_50)]: tower-placement[140,50]
+   + tower-placement[130,40] <= 1
+ footprints[(60,_320),(50,_310)]: tower-placement[50,310]
+   + tower-placement[60,320] <= 1
+ footprints[(60,_320),(50,_320)]: tower-placement[50,320]
+   + tower-placement[60,320] <= 1
+ footprints[(60,_320),(50,_330)]: tower-placement[50,330]
+   + tower-placement[60,320] <= 1
+ footprints[(60,_320),(60,_310)]: tower-placement[60,310]
+   + tower-placement[60,320] <= 1
+ footprints[(60,_320),(70,_310)]: tower-placement[70,310]
+   + tower-placement[60,320] <= 1
+ footprints[(60,_320),(70,_320)]: tower-placement[70,320]
+   + tower-placement[60,320] <= 1
+ footprints[(20,_140),(10,_130)]: tower-placement[10,130]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_140),(10,_140)]: tower-placement[10,140]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_140),(10,_150)]: tower-placement[10,150]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_140),(20,_130)]: tower-placement[20,130]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_140),(20,_150)]: tower-placement[20,140]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_140),(30,_130)]: tower-placement[30,130]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_140),(30,_140)]: tower-placement[30,140]
+   + tower-placement[20,140] <= 1
+ footprints[(20,_140),(30,_150)]: tower-placement[30,150]
+   + tower-placement[20,140] <= 1
+ footprints[(160,_150),(150,_140)]: tower-placement[160,150]
+   + tower-placement[150,140] <= 1
+ footprints[(160,_150),(150,_150)]: tower-placement[150,150]
+   + tower-placement[160,150] <= 1
+ footprints[(160,_150),(150,_160)]: tower-placement[150,160]
+   + tower-placement[160,150] <= 1
+ footprints[(160,_150),(160,_140)]: tower-placement[160,140]
+   + tower-placement[160,150] <= 1
+ footprints[(160,_150),(160,_160)]: tower-placement[160,150]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_150),(170,_140)]: tower-placement[160,150]
+   + tower-placement[170,140] <= 1
+ footprints[(160,_150),(170,_150)]: tower-placement[170,150]
+   + tower-placement[160,150] <= 1
+ footprints[(160,_150),(170,_160)]: tower-placement[170,160]
+   + tower-placement[160,150] <= 1
+ footprints[(10,_70),(10,_60)]: tower-placement[10,60]
+   + tower-placement[10,70] <= 1
+ footprints[(10,_70),(10,_80)]: tower-placement[10,70]
+   + tower-placement[10,80] <= 1
+ footprints[(10,_70),(20,_60)]: tower-placement[10,70]
+   + tower-placement[20,60] <= 1
+ footprints[(10,_70),(20,_70)]: tower-placement[20,70]
+   + tower-placement[10,70] <= 1
+ footprints[(10,_70),(20,_80)]: tower-placement[20,80]
+   + tower-placement[10,70] <= 1
+ footprints[(10,_420),(10,_410)]: tower-placement[10,410]
+   + tower-placement[10,420] <= 1
+ footprints[(10,_420),(10,_430)]: tower-placement[10,420]
+   + tower-placement[10,430] <= 1
+ footprints[(10,_420),(20,_410)]: tower-placement[10,420]
+   + tower-placement[20,410] <= 1
+ footprints[(10,_420),(20,_420)]: tower-placement[20,420]
+   + tower-placement[10,420] <= 1
+ footprints[(10,_420),(20,_430)]: tower-placement[20,430]
+   + tower-placement[10,420] <= 1
+ footprints[(70,_70),(60,_60)]: tower-placement[70,70]
+   + tower-placement[60,60] <= 1
+ footprints[(70,_70),(60,_70)]: tower-placement[70,70]
+   + tower-placement[60,70] <= 1
+ footprints[(70,_70),(60,_80)]: tower-placement[60,80]
+   + tower-placement[70,70] <= 1
+ footprints[(70,_70),(70,_60)]: tower-placement[70,60]
+   + tower-placement[70,70] <= 1
+ footprints[(70,_70),(70,_80)]: tower-placement[70,70]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_70),(80,_60)]: tower-placement[70,70]
+   + tower-placement[80,60] <= 1
+ footprints[(70,_70),(80,_70)]: tower-placement[80,70]
+   + tower-placement[70,70] <= 1
+ footprints[(70,_70),(80,_80)]: tower-placement[80,80]
+   + tower-placement[70,70] <= 1
+ footprints[(90,_80),(80,_70)]: tower-placement[80,70]
+   + tower-placement[90,80] <= 1
+ footprints[(90,_80),(80,_80)]: tower-placement[80,80]
+   + tower-placement[90,80] <= 1
+ footprints[(90,_80),(80,_90)]: tower-placement[80,90]
+   + tower-placement[90,80] <= 1
+ footprints[(90,_80),(90,_70)]: tower-placement[90,70]
+   + tower-placement[90,80] <= 1
+ footprints[(90,_80),(100,_70)]: tower-placement[90,80]
+   + tower-placement[100,70] <= 1
+ footprints[(40,_180),(30,_170)]: tower-placement[30,170]
+   + tower-placement[40,180] <= 1
+ footprints[(40,_180),(30,_180)]: tower-placement[30,180]
+   + tower-placement[40,180] <= 1
+ footprints[(40,_180),(30,_190)]: tower-placement[30,190]
+   + tower-placement[40,180] <= 1
+ footprints[(40,_180),(40,_170)]: tower-placement[40,170]
+   + tower-placement[40,180] <= 1
+ footprints[(40,_180),(40,_190)]: tower-placement[40,180]
+   + tower-placement[40,190] <= 1
+ footprints[(40,_180),(50,_170)]: tower-placement[40,180]
+   + tower-placement[50,170] <= 1
+ footprints[(40,_180),(50,_180)]: tower-placement[50,180]
+   + tower-placement[40,180] <= 1
+ footprints[(40,_180),(50,_190)]: tower-placement[50,190]
+   + tower-placement[40,180] <= 1
+ footprints[(30,_460),(20,_450)]: tower-placement[30,460]
+   + tower-placement[20,450] <= 1
+ footprints[(30,_460),(20,_460)]: tower-placement[20,460]
+   + tower-placement[30,460] <= 1
+ footprints[(30,_460),(30,_450)]: tower-placement[30,450]
+   + tower-placement[30,460] <= 1
+ footprints[(30,_460),(40,_450)]: tower-placement[30,460]
+   + tower-placement[40,450] <= 1
+ footprints[(30,_460),(40,_460)]: tower-placement[40,460]
+   + tower-placement[30,460] <= 1
+ footprints[(60,_190),(50,_180)]: tower-placement[50,180]
+   + tower-placement[60,190] <= 1
+ footprints[(60,_190),(50,_190)]: tower-placement[50,190]
+   + tower-placement[60,190] <= 1
+ footprints[(60,_190),(60,_180)]: tower-placement[60,180]
+   + tower-placement[60,190] <= 1
+ footprints[(20,_10),(10,_10)]: tower-placement[10,10]
+   + tower-placement[20,10] <= 1
+ footprints[(20,_10),(10,_20)]: tower-placement[10,20]
+   + tower-placement[20,10] <= 1
+ footprints[(20,_10),(20,_20)]: tower-placement[20,10]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_10),(30,_10)]: tower-placement[30,10]
+   + tower-placement[20,10] <= 1
+ footprints[(20,_10),(30,_20)]: tower-placement[30,20]
+   + tower-placement[20,10] <= 1
+ footprints[(160,_20),(150,_10)]: tower-placement[160,20]
+   + tower-placement[150,10] <= 1
+ footprints[(160,_20),(150,_20)]: tower-placement[150,20]
+   + tower-placement[160,20] <= 1
+ footprints[(160,_20),(150,_30)]: tower-placement[150,30]
+   + tower-placement[160,20] <= 1
+ footprints[(160,_20),(160,_10)]: tower-placement[160,10]
+   + tower-placement[160,20] <= 1
+ footprints[(160,_20),(160,_30)]: tower-placement[160,20]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_20),(170,_10)]: tower-placement[160,20]
+   + tower-placement[170,10] <= 1
+ footprints[(160,_20),(170,_20)]: tower-placement[170,20]
+   + tower-placement[160,20] <= 1
+ footprints[(160,_20),(170,_30)]: tower-placement[170,30]
+   + tower-placement[160,20] <= 1
+ footprints[(10,_290),(10,_280)]: tower-placement[10,280]
+   + tower-placement[10,290] <= 1
+ footprints[(10,_290),(10,_300)]: tower-placement[10,290]
+   + tower-placement[10,300] <= 1
+ footprints[(10,_290),(20,_280)]: tower-placement[10,290]
+   + tower-placement[20,280] <= 1
+ footprints[(10,_290),(20,_290)]: tower-placement[20,290]
+   + tower-placement[10,290] <= 1
+ footprints[(10,_290),(20,_300)]: tower-placement[20,300]
+   + tower-placement[10,290] <= 1
+ footprints[(70,_290),(60,_280)]: tower-placement[70,290]
+   + tower-placement[60,280] <= 1
+ footprints[(70,_290),(60,_290)]: tower-placement[60,290]
+   + tower-placement[70,290] <= 1
+ footprints[(70,_290),(60,_300)]: tower-placement[60,300]
+   + tower-placement[70,290] <= 1
+ footprints[(70,_290),(70,_280)]: tower-placement[70,280]
+   + tower-placement[70,290] <= 1
+ footprints[(70,_290),(70,_300)]: tower-placement[70,290]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_290),(80,_280)]: tower-placement[70,290]
+   + tower-placement[80,280] <= 1
+ footprints[(70,_290),(80,_290)]: tower-placement[80,290]
+   + tower-placement[70,290] <= 1
+ footprints[(70,_290),(80,_300)]: tower-placement[80,300]
+   + tower-placement[70,290] <= 1
+ footprints[(40,_50),(30,_40)]: tower-placement[30,40]
+   + tower-placement[40,50] <= 1
+ footprints[(40,_50),(30,_50)]: tower-placement[30,50]
+   + tower-placement[40,50] <= 1
+ footprints[(40,_50),(30,_60)]: tower-placement[30,60]
+   + tower-placement[40,50] <= 1
+ footprints[(40,_50),(40,_40)]: tower-placement[40,40]
+   + tower-placement[40,50] <= 1
+ footprints[(40,_50),(40,_60)]: tower-placement[40,50]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_50),(50,_40)]: tower-placement[40,50]
+   + tower-placement[50,40] <= 1
+ footprints[(40,_50),(50,_50)]: tower-placement[50,50]
+   + tower-placement[40,50] <= 1
+ footprints[(40,_50),(50,_60)]: tower-placement[50,60]
+   + tower-placement[40,50] <= 1
+ footprints[(30,_330),(20,_320)]: tower-placement[30,330]
+   + tower-placement[20,320] <= 1
+ footprints[(30,_330),(20,_330)]: tower-placement[20,330]
+   + tower-placement[30,330] <= 1
+ footprints[(30,_330),(20,_340)]: tower-placement[20,340]
+   + tower-placement[30,330] <= 1
+ footprints[(30,_330),(30,_320)]: tower-placement[30,320]
+   + tower-placement[30,330] <= 1
+ footprints[(30,_330),(30,_340)]: tower-placement[30,330]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_330),(40,_320)]: tower-placement[30,330]
+   + tower-placement[40,320] <= 1
+ footprints[(30,_330),(40,_330)]: tower-placement[40,330]
+   + tower-placement[30,330] <= 1
+ footprints[(30,_330),(40,_340)]: tower-placement[40,340]
+   + tower-placement[30,330] <= 1
+ footprints[(460,_420),(450,_430)]: tower-placement[450,430]
+   + tower-placement[460,420] <= 1
+ footprints[(460,_420),(460,_410)]: tower-placement[460,410]
+   + tower-placement[460,420] <= 1
+ footprints[(460,_420),(460,_430)]: tower-placement[460,420]
+   + tower-placement[460,430] <= 1
+ footprints[(420,_460),(410,_460)]: tower-placement[410,460]
+   + tower-placement[420,460] <= 1
+ footprints[(420,_460),(430,_450)]: tower-placement[430,450]
+   + tower-placement[420,460] <= 1
+ footprints[(420,_460),(430,_460)]: tower-placement[430,460]
+   + tower-placement[420,460] <= 1
+ footprints[(460,_290),(450,_280)]: tower-placement[450,280]
+   + tower-placement[460,290] <= 1
+ footprints[(460,_290),(450,_290)]: tower-placement[450,290]
+   + tower-placement[460,290] <= 1
+ footprints[(460,_290),(450,_300)]: tower-placement[450,300]
+   + tower-placement[460,290] <= 1
+ footprints[(460,_290),(460,_280)]: tower-placement[460,280]
+   + tower-placement[460,290] <= 1
+ footprints[(460,_290),(460,_300)]: tower-placement[460,290]
+   + tower-placement[460,300] <= 1
+ footprints[(380,_150),(370,_140)]: tower-placement[370,140]
+   + tower-placement[380,150] <= 1
+ footprints[(380,_150),(370,_150)]: tower-placement[370,150]
+   + tower-placement[380,150] <= 1
+ footprints[(380,_150),(380,_140)]: tower-placement[380,140]
+   + tower-placement[380,150] <= 1
+ footprints[(380,_150),(390,_140)]: tower-placement[390,140]
+   + tower-placement[380,150] <= 1
+ footprints[(380,_150),(390,_150)]: tower-placement[390,150]
+   + tower-placement[380,150] <= 1
+ footprints[(460,_160),(460,_170)]: tower-placement[460,160]
+   + tower-placement[460,170] <= 1
+ footprints[(280,_350),(270,_340)]: tower-placement[270,340]
+   + tower-placement[280,350] <= 1
+ footprints[(280,_350),(270,_350)]: tower-placement[270,350]
+   + tower-placement[280,350] <= 1
+ footprints[(280,_350),(270,_360)]: tower-placement[270,360]
+   + tower-placement[280,350] <= 1
+ footprints[(280,_350),(280,_340)]: tower-placement[280,340]
+   + tower-placement[280,350] <= 1
+ footprints[(280,_350),(280,_360)]: tower-placement[280,350]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_350),(290,_340)]: tower-placement[280,350]
+   + tower-placement[290,340] <= 1
+ footprints[(280,_350),(290,_350)]: tower-placement[290,350]
+   + tower-placement[280,350] <= 1
+ footprints[(280,_350),(290,_360)]: tower-placement[290,360]
+   + tower-placement[280,350] <= 1
+ footprints[(450,_440),(440,_440)]: tower-placement[440,440]
+   + tower-placement[450,440] <= 1
+ footprints[(450,_440),(440,_450)]: tower-placement[440,450]
+   + tower-placement[450,440] <= 1
+ footprints[(450,_440),(450,_430)]: tower-placement[450,430]
+   + tower-placement[450,440] <= 1
+ footprints[(450,_440),(450,_450)]: tower-placement[450,440]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_440),(460,_430)]: tower-placement[450,440]
+   + tower-placement[460,430] <= 1
+ footprints[(450,_440),(460,_440)]: tower-placement[460,440]
+   + tower-placement[450,440] <= 1
+ footprints[(450,_440),(460,_450)]: tower-placement[460,450]
+   + tower-placement[450,440] <= 1
+ footprints[(380,_20),(370,_10)]: tower-placement[370,10]
+   + tower-placement[380,20] <= 1
+ footprints[(380,_20),(370,_20)]: tower-placement[370,20]
+   + tower-placement[380,20] <= 1
+ footprints[(380,_20),(380,_10)]: tower-placement[380,10]
+   + tower-placement[380,20] <= 1
+ footprints[(380,_20),(390,_10)]: tower-placement[390,10]
+   + tower-placement[380,20] <= 1
+ footprints[(380,_20),(390,_20)]: tower-placement[390,20]
+   + tower-placement[380,20] <= 1
+ footprints[(240,_390),(230,_380)]: tower-placement[230,380]
+   + tower-placement[240,390] <= 1
+ footprints[(240,_390),(230,_390)]: tower-placement[230,390]
+   + tower-placement[240,390] <= 1
+ footprints[(240,_390),(240,_380)]: tower-placement[240,380]
+   + tower-placement[240,390] <= 1
+ footprints[(240,_390),(250,_380)]: tower-placement[250,380]
+   + tower-placement[240,390] <= 1
+ footprints[(240,_390),(250,_390)]: tower-placement[250,390]
+   + tower-placement[240,390] <= 1
+ footprints[(380,_370),(370,_360)]: tower-placement[370,360]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_370),(370,_370)]: tower-placement[370,370]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_370),(370,_380)]: tower-placement[370,380]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_370),(380,_360)]: tower-placement[380,360]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_370),(380,_380)]: tower-placement[380,370]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_370),(390,_360)]: tower-placement[390,360]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_370),(390,_370)]: tower-placement[390,370]
+   + tower-placement[380,370] <= 1
+ footprints[(380,_370),(390,_380)]: tower-placement[390,380]
+   + tower-placement[380,370] <= 1
+ footprints[(330,_120),(320,_110)]: tower-placement[320,110]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_120),(320,_120)]: tower-placement[320,120]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_120),(320,_130)]: tower-placement[320,130]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_120),(330,_110)]: tower-placement[330,110]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_120),(330,_130)]: tower-placement[330,120]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_120),(340,_110)]: tower-placement[340,110]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_120),(340,_120)]: tower-placement[340,120]
+   + tower-placement[330,120] <= 1
+ footprints[(330,_120),(340,_130)]: tower-placement[340,130]
+   + tower-placement[330,120] <= 1
+ footprints[(460,_30),(450,_20)]: tower-placement[450,20]
+   + tower-placement[460,30] <= 1
+ footprints[(460,_30),(450,_30)]: tower-placement[450,30]
+   + tower-placement[460,30] <= 1
+ footprints[(460,_30),(450,_40)]: tower-placement[450,40]
+   + tower-placement[460,30] <= 1
+ footprints[(460,_30),(460,_20)]: tower-placement[460,20]
+   + tower-placement[460,30] <= 1
+ footprints[(460,_30),(460,_40)]: tower-placement[460,30]
+   + tower-placement[460,40] <= 1
+ footprints[(440,_240),(430,_230)]: tower-placement[430,230]
+   + tower-placement[440,240] <= 1
+ footprints[(440,_240),(430,_240)]: tower-placement[430,240]
+   + tower-placement[440,240] <= 1
+ footprints[(440,_240),(430,_250)]: tower-placement[430,250]
+   + tower-placement[440,240] <= 1
+ footprints[(440,_240),(440,_230)]: tower-placement[440,230]
+   + tower-placement[440,240] <= 1
+ footprints[(440,_240),(440,_250)]: tower-placement[440,240]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_240),(450,_230)]: tower-placement[440,240]
+   + tower-placement[450,230] <= 1
+ footprints[(440,_240),(450,_240)]: tower-placement[450,240]
+   + tower-placement[440,240] <= 1
+ footprints[(440,_240),(450,_250)]: tower-placement[450,250]
+   + tower-placement[440,240] <= 1
+ footprints[(290,_160),(280,_150)]: tower-placement[280,150]
+   + tower-placement[290,160] <= 1
+ footprints[(290,_160),(280,_160)]: tower-placement[280,160]
+   + tower-placement[290,160] <= 1
+ footprints[(290,_160),(280,_170)]: tower-placement[280,170]
+   + tower-placement[290,160] <= 1
+ footprints[(290,_160),(290,_150)]: tower-placement[290,150]
+   + tower-placement[290,160] <= 1
+ footprints[(290,_160),(290,_170)]: tower-placement[290,160]
+   + tower-placement[290,170] <= 1
+ footprints[(290,_160),(300,_150)]: tower-placement[300,150]
+   + tower-placement[290,160] <= 1
+ footprints[(290,_160),(300,_160)]: tower-placement[300,160]
+   + tower-placement[290,160] <= 1
+ footprints[(390,_340),(380,_340)]: tower-placement[380,340]
+   + tower-placement[390,340] <= 1
+ footprints[(390,_340),(380,_350)]: tower-placement[380,350]
+   + tower-placement[390,340] <= 1
+ footprints[(390,_340),(390,_350)]: tower-placement[390,340]
+   + tower-placement[390,350] <= 1
+ footprints[(250,_360),(240,_350)]: tower-placement[250,360]
+   + tower-placement[240,350] <= 1
+ footprints[(250,_360),(240,_360)]: tower-placement[250,360]
+   + tower-placement[240,360] <= 1
+ footprints[(250,_360),(240,_370)]: tower-placement[240,370]
+   + tower-placement[250,360] <= 1
+ footprints[(250,_360),(250,_350)]: tower-placement[250,350]
+   + tower-placement[250,360] <= 1
+ footprints[(250,_360),(250,_370)]: tower-placement[250,360]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_360),(260,_350)]: tower-placement[250,360]
+   + tower-placement[260,350] <= 1
+ footprints[(250,_360),(260,_360)]: tower-placement[260,360]
+   + tower-placement[250,360] <= 1
+ footprints[(250,_360),(260,_370)]: tower-placement[260,370]
+   + tower-placement[250,360] <= 1
+ footprints[(280,_90),(270,_80)]: tower-placement[270,80]
+   + tower-placement[280,90] <= 1
+ footprints[(280,_90),(270,_90)]: tower-placement[270,90]
+   + tower-placement[280,90] <= 1
+ footprints[(280,_90),(270,_100)]: tower-placement[270,100]
+   + tower-placement[280,90] <= 1
+ footprints[(280,_90),(280,_100)]: tower-placement[280,90]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_90),(290,_90)]: tower-placement[290,90]
+   + tower-placement[280,90] <= 1
+ footprints[(280,_90),(290,_100)]: tower-placement[290,100]
+   + tower-placement[280,90] <= 1
+ footprints[(270,_370),(260,_360)]: tower-placement[260,360]
+   + tower-placement[270,370] <= 1
+ footprints[(270,_370),(260,_370)]: tower-placement[260,370]
+   + tower-placement[270,370] <= 1
+ footprints[(270,_370),(260,_380)]: tower-placement[260,380]
+   + tower-placement[270,370] <= 1
+ footprints[(270,_370),(270,_360)]: tower-placement[270,360]
+   + tower-placement[270,370] <= 1
+ footprints[(270,_370),(270,_380)]: tower-placement[270,370]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_370),(280,_360)]: tower-placement[270,370]
+   + tower-placement[280,360] <= 1
+ footprints[(270,_370),(280,_370)]: tower-placement[280,370]
+   + tower-placement[270,370] <= 1
+ footprints[(270,_370),(280,_380)]: tower-placement[280,380]
+   + tower-placement[270,370] <= 1
+ footprints[(260,_300),(250,_290)]: tower-placement[250,290]
+   + tower-placement[260,300] <= 1
+ footprints[(260,_300),(250,_300)]: tower-placement[250,300]
+   + tower-placement[260,300] <= 1
+ footprints[(260,_300),(250,_310)]: tower-placement[250,310]
+   + tower-placement[260,300] <= 1
+ footprints[(260,_300),(260,_290)]: tower-placement[260,290]
+   + tower-placement[260,300] <= 1
+ footprints[(260,_300),(260,_310)]: tower-placement[260,300]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_300),(270,_290)]: tower-placement[260,300]
+   + tower-placement[270,290] <= 1
+ footprints[(260,_300),(270,_300)]: tower-placement[270,300]
+   + tower-placement[260,300] <= 1
+ footprints[(260,_300),(270,_310)]: tower-placement[270,310]
+   + tower-placement[260,300] <= 1
+ footprints[(290,_380),(280,_370)]: tower-placement[280,370]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_380),(280,_380)]: tower-placement[280,380]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_380),(280,_390)]: tower-placement[280,390]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_380),(290,_370)]: tower-placement[290,370]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_380),(290,_390)]: tower-placement[290,380]
+   + tower-placement[290,390] <= 1
+ footprints[(290,_380),(300,_370)]: tower-placement[300,370]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_380),(300,_380)]: tower-placement[300,380]
+   + tower-placement[290,380] <= 1
+ footprints[(290,_380),(300,_390)]: tower-placement[300,390]
+   + tower-placement[290,380] <= 1
+ footprints[(350,_380),(340,_370)]: tower-placement[340,370]
+   + tower-placement[350,380] <= 1
+ footprints[(350,_380),(340,_380)]: tower-placement[340,380]
+   + tower-placement[350,380] <= 1
+ footprints[(350,_380),(340,_390)]: tower-placement[340,390]
+   + tower-placement[350,380] <= 1
+ footprints[(350,_380),(350,_370)]: tower-placement[350,370]
+   + tower-placement[350,380] <= 1
+ footprints[(350,_380),(350,_390)]: tower-placement[350,380]
+   + tower-placement[350,390] <= 1
+ footprints[(350,_380),(360,_370)]: tower-placement[350,380]
+   + tower-placement[360,370] <= 1
+ footprints[(350,_380),(360,_380)]: tower-placement[360,380]
+   + tower-placement[350,380] <= 1
+ footprints[(350,_380),(360,_390)]: tower-placement[360,390]
+   + tower-placement[350,380] <= 1
+ footprints[(130,_390),(120,_390)]: tower-placement[120,390]
+   + tower-placement[130,390] <= 1
+ footprints[(130,_390),(140,_390)]: tower-placement[140,390]
+   + tower-placement[130,390] <= 1
+ footprints[(300,_130),(290,_120)]: tower-placement[300,130]
+   + tower-placement[290,120] <= 1
+ footprints[(300,_130),(290,_130)]: tower-placement[290,130]
+   + tower-placement[300,130] <= 1
+ footprints[(300,_130),(290,_140)]: tower-placement[290,140]
+   + tower-placement[300,130] <= 1
+ footprints[(300,_130),(300,_120)]: tower-placement[300,120]
+   + tower-placement[300,130] <= 1
+ footprints[(300,_130),(300,_140)]: tower-placement[300,130]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_130),(310,_120)]: tower-placement[300,130]
+   + tower-placement[310,120] <= 1
+ footprints[(300,_130),(310,_130)]: tower-placement[310,130]
+   + tower-placement[300,130] <= 1
+ footprints[(300,_130),(310,_140)]: tower-placement[310,140]
+   + tower-placement[300,130] <= 1
+ footprints[(410,_220),(400,_220)]: tower-placement[400,220]
+   + tower-placement[410,220] <= 1
+ footprints[(410,_220),(400,_230)]: tower-placement[400,230]
+   + tower-placement[410,220] <= 1
+ footprints[(410,_220),(410,_230)]: tower-placement[410,220]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_220),(420,_220)]: tower-placement[420,220]
+   + tower-placement[410,220] <= 1
+ footprints[(410,_220),(420,_230)]: tower-placement[420,230]
+   + tower-placement[410,220] <= 1
+ footprints[(150,_50),(140,_40)]: tower-placement[140,40]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_50),(140,_50)]: tower-placement[140,50]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_50),(140,_60)]: tower-placement[140,60]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_50),(150,_40)]: tower-placement[150,40]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_50),(150,_60)]: tower-placement[150,50]
+   + tower-placement[150,60] <= 1
+ footprints[(150,_50),(160,_40)]: tower-placement[160,40]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_50),(160,_50)]: tower-placement[160,50]
+   + tower-placement[150,50] <= 1
+ footprints[(150,_50),(160,_60)]: tower-placement[160,60]
+   + tower-placement[150,50] <= 1
+ footprints[(250,_230),(250,_220)]: tower-placement[250,220]
+   + tower-placement[250,230] <= 1
+ footprints[(250,_230),(250,_240)]: tower-placement[250,230]
+   + tower-placement[250,240] <= 1
+ footprints[(250,_230),(260,_220)]: tower-placement[250,230]
+   + tower-placement[260,220] <= 1
+ footprints[(250,_230),(260,_230)]: tower-placement[260,230]
+   + tower-placement[250,230] <= 1
+ footprints[(250,_230),(260,_240)]: tower-placement[260,240]
+   + tower-placement[250,230] <= 1
+ footprints[(320,_140),(310,_130)]: tower-placement[310,130]
+   + tower-placement[320,140] <= 1
+ footprints[(320,_140),(310,_140)]: tower-placement[310,140]
+   + tower-placement[320,140] <= 1
+ footprints[(320,_140),(310,_150)]: tower-placement[310,150]
+   + tower-placement[320,140] <= 1
+ footprints[(320,_140),(320,_130)]: tower-placement[320,130]
+   + tower-placement[320,140] <= 1
+ footprints[(320,_140),(320,_150)]: tower-placement[320,140]
+   + tower-placement[320,150] <= 1
+ footprints[(320,_140),(330,_130)]: tower-placement[320,140]
+   + tower-placement[330,130] <= 1
+ footprints[(320,_140),(330,_140)]: tower-placement[330,140]
+   + tower-placement[320,140] <= 1
+ footprints[(320,_140),(330,_150)]: tower-placement[330,150]
+   + tower-placement[320,140] <= 1
+ footprints[(270,_240),(260,_230)]: tower-placement[260,230]
+   + tower-placement[270,240] <= 1
+ footprints[(270,_240),(260,_240)]: tower-placement[260,240]
+   + tower-placement[270,240] <= 1
+ footprints[(270,_240),(260,_250)]: tower-placement[260,250]
+   + tower-placement[270,240] <= 1
+ footprints[(270,_240),(270,_230)]: tower-placement[270,230]
+   + tower-placement[270,240] <= 1
+ footprints[(270,_240),(270,_250)]: tower-placement[270,240]
+   + tower-placement[270,250] <= 1
+ footprints[(230,_60),(220,_50)]: tower-placement[220,50]
+   + tower-placement[230,60] <= 1
+ footprints[(230,_60),(220,_60)]: tower-placement[220,60]
+   + tower-placement[230,60] <= 1
+ footprints[(230,_60),(220,_70)]: tower-placement[220,70]
+   + tower-placement[230,60] <= 1
+ footprints[(230,_60),(230,_50)]: tower-placement[230,50]
+   + tower-placement[230,60] <= 1
+ footprints[(230,_60),(230,_70)]: tower-placement[230,60]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_60),(240,_50)]: tower-placement[230,60]
+   + tower-placement[240,50] <= 1
+ footprints[(230,_60),(240,_60)]: tower-placement[240,60]
+   + tower-placement[230,60] <= 1
+ footprints[(230,_60),(240,_70)]: tower-placement[240,70]
+   + tower-placement[230,60] <= 1
+ footprints[(260,_170),(250,_160)]: tower-placement[250,160]
+   + tower-placement[260,170] <= 1
+ footprints[(260,_170),(250,_170)]: tower-placement[250,170]
+   + tower-placement[260,170] <= 1
+ footprints[(260,_170),(250,_180)]: tower-placement[250,180]
+   + tower-placement[260,170] <= 1
+ footprints[(260,_170),(260,_160)]: tower-placement[260,160]
+   + tower-placement[260,170] <= 1
+ footprints[(260,_170),(260,_180)]: tower-placement[260,170]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_170),(270,_160)]: tower-placement[260,170]
+   + tower-placement[270,160] <= 1
+ footprints[(260,_170),(270,_170)]: tower-placement[270,170]
+   + tower-placement[260,170] <= 1
+ footprints[(260,_170),(270,_180)]: tower-placement[270,180]
+   + tower-placement[260,170] <= 1
+ footprints[(130,_260),(120,_250)]: tower-placement[120,250]
+   + tower-placement[130,260] <= 1
+ footprints[(130,_260),(120,_260)]: tower-placement[120,260]
+   + tower-placement[130,260] <= 1
+ footprints[(130,_260),(120,_270)]: tower-placement[120,270]
+   + tower-placement[130,260] <= 1
+ footprints[(130,_260),(130,_250)]: tower-placement[130,250]
+   + tower-placement[130,260] <= 1
+ footprints[(130,_260),(130,_270)]: tower-placement[130,260]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_260),(140,_250)]: tower-placement[130,260]
+   + tower-placement[140,250] <= 1
+ footprints[(130,_260),(140,_260)]: tower-placement[140,260]
+   + tower-placement[130,260] <= 1
+ footprints[(130,_260),(140,_270)]: tower-placement[140,270]
+   + tower-placement[130,260] <= 1
+ footprints[(20,_360),(10,_350)]: tower-placement[10,350]
+   + tower-placement[20,360] <= 1
+ footprints[(20,_360),(10,_360)]: tower-placement[10,360]
+   + tower-placement[20,360] <= 1
+ footprints[(20,_360),(10,_370)]: tower-placement[10,370]
+   + tower-placement[20,360] <= 1
+ footprints[(20,_360),(20,_350)]: tower-placement[20,350]
+   + tower-placement[20,360] <= 1
+ footprints[(20,_360),(20,_370)]: tower-placement[20,360]
+   + tower-placement[20,370] <= 1
+ footprints[(20,_360),(30,_350)]: tower-placement[30,350]
+   + tower-placement[20,360] <= 1
+ footprints[(150,_270),(140,_260)]: tower-placement[140,260]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_270),(140,_270)]: tower-placement[140,270]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_270),(140,_280)]: tower-placement[140,280]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_270),(150,_260)]: tower-placement[150,260]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_270),(150,_280)]: tower-placement[150,270]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_270),(160,_260)]: tower-placement[160,260]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_270),(160,_270)]: tower-placement[160,270]
+   + tower-placement[150,270] <= 1
+ footprints[(150,_270),(160,_280)]: tower-placement[160,280]
+   + tower-placement[150,270] <= 1
+ footprints[(250,_100),(240,_90)]: tower-placement[250,100]
+   + tower-placement[240,90] <= 1
+ footprints[(250,_100),(240,_100)]: tower-placement[240,100]
+   + tower-placement[250,100] <= 1
+ footprints[(250,_100),(240,_110)]: tower-placement[240,110]
+   + tower-placement[250,100] <= 1
+ footprints[(250,_100),(250,_90)]: tower-placement[250,90]
+   + tower-placement[250,100] <= 1
+ footprints[(250,_100),(250,_110)]: tower-placement[250,100]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_100),(260,_90)]: tower-placement[250,100]
+   + tower-placement[260,90] <= 1
+ footprints[(250,_100),(260,_100)]: tower-placement[260,100]
+   + tower-placement[250,100] <= 1
+ footprints[(250,_100),(260,_110)]: tower-placement[260,110]
+   + tower-placement[250,100] <= 1
+ footprints[(320,_10),(310,_10)]: tower-placement[310,10]
+   + tower-placement[320,10] <= 1
+ footprints[(320,_10),(310,_20)]: tower-placement[310,20]
+   + tower-placement[320,10] <= 1
+ footprints[(320,_10),(320,_20)]: tower-placement[320,10]
+   + tower-placement[320,20] <= 1
+ footprints[(320,_10),(330,_10)]: tower-placement[330,10]
+   + tower-placement[320,10] <= 1
+ footprints[(320,_10),(330,_20)]: tower-placement[330,20]
+   + tower-placement[320,10] <= 1
+ footprints[(140,_200),(130,_190)]: tower-placement[130,190]
+   + tower-placement[140,200] <= 1
+ footprints[(140,_200),(130,_200)]: tower-placement[130,200]
+   + tower-placement[140,200] <= 1
+ footprints[(140,_200),(130,_210)]: tower-placement[130,210]
+   + tower-placement[140,200] <= 1
+ footprints[(140,_200),(140,_190)]: tower-placement[140,190]
+   + tower-placement[140,200] <= 1
+ footprints[(140,_200),(140,_210)]: tower-placement[140,200]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_200),(150,_190)]: tower-placement[140,200]
+   + tower-placement[150,190] <= 1
+ footprints[(140,_200),(150,_200)]: tower-placement[150,200]
+   + tower-placement[140,200] <= 1
+ footprints[(140,_200),(150,_210)]: tower-placement[150,210]
+   + tower-placement[140,200] <= 1
+ footprints[(100,_20),(90,_10)]: tower-placement[90,10]
+   + tower-placement[100,20] <= 1
+ footprints[(100,_20),(90,_20)]: tower-placement[90,20]
+   + tower-placement[100,20] <= 1
+ footprints[(100,_20),(90,_30)]: tower-placement[90,30]
+   + tower-placement[100,20] <= 1
+ footprints[(100,_20),(100,_10)]: tower-placement[100,10]
+   + tower-placement[100,20] <= 1
+ footprints[(100,_20),(100,_30)]: tower-placement[100,20]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_20),(110,_10)]: tower-placement[100,20]
+   + tower-placement[110,10] <= 1
+ footprints[(100,_20),(110,_20)]: tower-placement[110,20]
+   + tower-placement[100,20] <= 1
+ footprints[(100,_20),(110,_30)]: tower-placement[110,30]
+   + tower-placement[100,20] <= 1
+ footprints[(270,_110),(260,_100)]: tower-placement[260,100]
+   + tower-placement[270,110] <= 1
+ footprints[(270,_110),(260,_110)]: tower-placement[260,110]
+   + tower-placement[270,110] <= 1
+ footprints[(270,_110),(260,_120)]: tower-placement[260,120]
+   + tower-placement[270,110] <= 1
+ footprints[(270,_110),(270,_100)]: tower-placement[270,100]
+   + tower-placement[270,110] <= 1
+ footprints[(270,_110),(270,_120)]: tower-placement[270,110]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_110),(280,_100)]: tower-placement[270,110]
+   + tower-placement[280,100] <= 1
+ footprints[(270,_110),(280,_110)]: tower-placement[280,110]
+   + tower-placement[270,110] <= 1
+ footprints[(270,_110),(280,_120)]: tower-placement[280,120]
+   + tower-placement[270,110] <= 1
+ footprints[(90,_300),(80,_290)]: tower-placement[80,290]
+   + tower-placement[90,300] <= 1
+ footprints[(90,_300),(80,_300)]: tower-placement[80,300]
+   + tower-placement[90,300] <= 1
+ footprints[(90,_300),(80,_310)]: tower-placement[80,310]
+   + tower-placement[90,300] <= 1
+ footprints[(90,_300),(90,_290)]: tower-placement[90,290]
+   + tower-placement[90,300] <= 1
+ footprints[(90,_300),(90,_310)]: tower-placement[90,300]
+   + tower-placement[90,310] <= 1
+ footprints[(90,_300),(100,_290)]: tower-placement[90,300]
+   + tower-placement[100,290] <= 1
+ footprints[(90,_300),(100,_300)]: tower-placement[100,300]
+   + tower-placement[90,300] <= 1
+ footprints[(90,_300),(100,_310)]: tower-placement[100,310]
+   + tower-placement[90,300] <= 1
+ footprints[(50,_120),(40,_110)]: tower-placement[40,110]
+   + tower-placement[50,120] <= 1
+ footprints[(50,_120),(40,_120)]: tower-placement[40,120]
+   + tower-placement[50,120] <= 1
+ footprints[(50,_120),(40,_130)]: tower-placement[40,130]
+   + tower-placement[50,120] <= 1
+ footprints[(50,_120),(50,_110)]: tower-placement[50,110]
+   + tower-placement[50,120] <= 1
+ footprints[(50,_120),(50,_130)]: tower-placement[50,120]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_120),(60,_110)]: tower-placement[50,120]
+   + tower-placement[60,110] <= 1
+ footprints[(50,_120),(60,_120)]: tower-placement[60,120]
+   + tower-placement[50,120] <= 1
+ footprints[(50,_120),(60,_130)]: tower-placement[60,130]
+   + tower-placement[50,120] <= 1
+ footprints[(180,_30),(170,_20)]: tower-placement[170,20]
+   + tower-placement[180,30] <= 1
+ footprints[(180,_30),(170,_30)]: tower-placement[170,30]
+   + tower-placement[180,30] <= 1
+ footprints[(180,_30),(170,_40)]: tower-placement[170,40]
+   + tower-placement[180,30] <= 1
+ footprints[(180,_30),(180,_20)]: tower-placement[180,20]
+   + tower-placement[180,30] <= 1
+ footprints[(180,_30),(180,_40)]: tower-placement[180,30]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_30),(190,_20)]: tower-placement[180,30]
+   + tower-placement[190,20] <= 1
+ footprints[(180,_30),(190,_30)]: tower-placement[190,30]
+   + tower-placement[180,30] <= 1
+ footprints[(180,_30),(190,_40)]: tower-placement[190,40]
+   + tower-placement[180,30] <= 1
+ footprints[(110,_310),(100,_300)]: tower-placement[100,300]
+   + tower-placement[110,310] <= 1
+ footprints[(110,_310),(100,_310)]: tower-placement[100,310]
+   + tower-placement[110,310] <= 1
+ footprints[(110,_310),(110,_300)]: tower-placement[110,300]
+   + tower-placement[110,310] <= 1
+ footprints[(110,_310),(120,_300)]: tower-placement[120,300]
+   + tower-placement[110,310] <= 1
+ footprints[(110,_310),(120,_310)]: tower-placement[120,310]
+   + tower-placement[110,310] <= 1
+ footprints[(170,_310),(160,_300)]: tower-placement[160,300]
+   + tower-placement[170,310] <= 1
+ footprints[(170,_310),(160,_310)]: tower-placement[160,310]
+   + tower-placement[170,310] <= 1
+ footprints[(170,_310),(170,_300)]: tower-placement[170,300]
+   + tower-placement[170,310] <= 1
+ footprints[(60,_60),(50,_50)]: tower-placement[50,50]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_60),(50,_60)]: tower-placement[50,60]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_60),(50,_70)]: tower-placement[50,70]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_60),(60,_50)]: tower-placement[60,50]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_60),(60,_70)]: tower-placement[60,60]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_60),(70,_50)]: tower-placement[70,50]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_60),(70,_60)]: tower-placement[70,60]
+   + tower-placement[60,60] <= 1
+ footprints[(60,_60),(70,_70)]: tower-placement[70,70]
+   + tower-placement[60,60] <= 1
+ footprints[(160,_240),(150,_230)]: tower-placement[160,240]
+   + tower-placement[150,230] <= 1
+ footprints[(160,_240),(150,_240)]: tower-placement[150,240]
+   + tower-placement[160,240] <= 1
+ footprints[(160,_240),(150,_250)]: tower-placement[150,250]
+   + tower-placement[160,240] <= 1
+ footprints[(160,_240),(160,_230)]: tower-placement[160,230]
+   + tower-placement[160,240] <= 1
+ footprints[(160,_240),(160,_250)]: tower-placement[160,240]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_240),(170,_230)]: tower-placement[160,240]
+   + tower-placement[170,230] <= 1
+ footprints[(160,_240),(170,_240)]: tower-placement[170,240]
+   + tower-placement[160,240] <= 1
+ footprints[(160,_240),(170,_250)]: tower-placement[170,250]
+   + tower-placement[160,240] <= 1
+ footprints[(120,_60),(110,_50)]: tower-placement[120,60]
+   + tower-placement[110,50] <= 1
+ footprints[(120,_60),(110,_60)]: tower-placement[110,60]
+   + tower-placement[120,60] <= 1
+ footprints[(120,_60),(110,_70)]: tower-placement[110,70]
+   + tower-placement[120,60] <= 1
+ footprints[(120,_60),(120,_50)]: tower-placement[120,50]
+   + tower-placement[120,60] <= 1
+ footprints[(120,_60),(120,_70)]: tower-placement[120,60]
+   + tower-placement[120,70] <= 1
+ footprints[(120,_60),(130,_50)]: tower-placement[120,60]
+   + tower-placement[130,50] <= 1
+ footprints[(120,_60),(130,_60)]: tower-placement[130,60]
+   + tower-placement[120,60] <= 1
+ footprints[(10,_160),(10,_150)]: tower-placement[10,150]
+   + tower-placement[10,160] <= 1
+ footprints[(10,_160),(10,_170)]: tower-placement[10,160]
+   + tower-placement[10,170] <= 1
+ footprints[(10,_160),(20,_150)]: tower-placement[10,160]
+   + tower-placement[20,150] <= 1
+ footprints[(10,_160),(20,_160)]: tower-placement[20,160]
+   + tower-placement[10,160] <= 1
+ footprints[(10,_160),(20,_170)]: tower-placement[20,170]
+   + tower-placement[10,160] <= 1
+ footprints[(220,_80),(210,_70)]: tower-placement[210,70]
+   + tower-placement[220,80] <= 1
+ footprints[(220,_80),(220,_70)]: tower-placement[220,70]
+   + tower-placement[220,80] <= 1
+ footprints[(220,_80),(230,_70)]: tower-placement[220,80]
+   + tower-placement[230,70] <= 1
+ footprints[(220,_80),(230,_80)]: tower-placement[230,80]
+   + tower-placement[220,80] <= 1
+ footprints[(220,_80),(230,_90)]: tower-placement[230,90]
+   + tower-placement[220,80] <= 1
+ footprints[(40,_270),(30,_270)]: tower-placement[30,270]
+   + tower-placement[40,270] <= 1
+ footprints[(40,_270),(30,_280)]: tower-placement[30,280]
+   + tower-placement[40,270] <= 1
+ footprints[(40,_270),(40,_280)]: tower-placement[40,270]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_270),(50,_270)]: tower-placement[50,270]
+   + tower-placement[40,270] <= 1
+ footprints[(40,_270),(50,_280)]: tower-placement[50,280]
+   + tower-placement[40,270] <= 1
+ footprints[(210,_10),(200,_10)]: tower-placement[200,10]
+   + tower-placement[210,10] <= 1
+ footprints[(210,_10),(200,_20)]: tower-placement[200,20]
+   + tower-placement[210,10] <= 1
+ footprints[(210,_10),(210,_20)]: tower-placement[210,10]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_10),(220,_10)]: tower-placement[220,10]
+   + tower-placement[210,10] <= 1
+ footprints[(210,_10),(220,_20)]: tower-placement[220,20]
+   + tower-placement[210,10] <= 1
+ footprints[(170,_180),(160,_170)]: tower-placement[160,170]
+   + tower-placement[170,180] <= 1
+ footprints[(170,_180),(160,_180)]: tower-placement[160,180]
+   + tower-placement[170,180] <= 1
+ footprints[(170,_180),(160,_190)]: tower-placement[160,190]
+   + tower-placement[170,180] <= 1
+ footprints[(170,_180),(170,_170)]: tower-placement[170,170]
+   + tower-placement[170,180] <= 1
+ footprints[(170,_180),(170,_190)]: tower-placement[170,190]
+   + tower-placement[170,180] <= 1
+ footprints[(60,_280),(50,_270)]: tower-placement[50,270]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(50,_280)]: tower-placement[50,280]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(50,_290)]: tower-placement[50,290]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(60,_270)]: tower-placement[60,270]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(60,_290)]: tower-placement[60,290]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(70,_270)]: tower-placement[70,270]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(70,_280)]: tower-placement[70,280]
+   + tower-placement[60,280] <= 1
+ footprints[(60,_280),(70,_290)]: tower-placement[70,290]
+   + tower-placement[60,280] <= 1
+ footprints[(20,_100),(10,_90)]: tower-placement[10,90]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_100),(10,_100)]: tower-placement[10,100]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_100),(10,_110)]: tower-placement[10,110]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_100),(20,_90)]: tower-placement[20,90]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_100),(20,_110)]: tower-placement[20,100]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_100),(30,_90)]: tower-placement[30,90]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_100),(30,_100)]: tower-placement[30,100]
+   + tower-placement[20,100] <= 1
+ footprints[(20,_100),(30,_110)]: tower-placement[30,110]
+   + tower-placement[20,100] <= 1
+ footprints[(120,_280),(110,_270)]: tower-placement[120,280]
+   + tower-placement[110,270] <= 1
+ footprints[(120,_280),(110,_280)]: tower-placement[110,280]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_280),(110,_290)]: tower-placement[110,290]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_280),(120,_270)]: tower-placement[120,270]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_280),(120,_290)]: tower-placement[120,290]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_280),(130,_270)]: tower-placement[120,280]
+   + tower-placement[130,270] <= 1
+ footprints[(120,_280),(130,_280)]: tower-placement[130,280]
+   + tower-placement[120,280] <= 1
+ footprints[(120,_280),(130,_290)]: tower-placement[130,290]
+   + tower-placement[120,280] <= 1
+ footprints[(10,_30),(10,_20)]: tower-placement[10,20]
+   + tower-placement[10,30] <= 1
+ footprints[(10,_30),(10,_40)]: tower-placement[10,30]
+   + tower-placement[10,40] <= 1
+ footprints[(10,_30),(20,_20)]: tower-placement[10,30]
+   + tower-placement[20,20] <= 1
+ footprints[(10,_30),(20,_30)]: tower-placement[20,30]
+   + tower-placement[10,30] <= 1
+ footprints[(10,_30),(20,_40)]: tower-placement[20,40]
+   + tower-placement[10,30] <= 1
+ footprints[(10,_380),(10,_370)]: tower-placement[10,370]
+   + tower-placement[10,380] <= 1
+ footprints[(10,_380),(10,_390)]: tower-placement[10,390]
+   + tower-placement[10,380] <= 1
+ footprints[(10,_380),(20,_370)]: tower-placement[10,380]
+   + tower-placement[20,370] <= 1
+ footprints[(10,_380),(20,_380)]: tower-placement[20,380]
+   + tower-placement[10,380] <= 1
+ footprints[(10,_380),(20,_390)]: tower-placement[20,390]
+   + tower-placement[10,380] <= 1
+ footprints[(70,_30),(60,_20)]: tower-placement[70,30]
+   + tower-placement[60,20] <= 1
+ footprints[(70,_30),(60,_30)]: tower-placement[60,30]
+   + tower-placement[70,30] <= 1
+ footprints[(70,_30),(60,_40)]: tower-placement[60,40]
+   + tower-placement[70,30] <= 1
+ footprints[(70,_30),(70,_20)]: tower-placement[70,20]
+   + tower-placement[70,30] <= 1
+ footprints[(70,_30),(70,_40)]: tower-placement[70,30]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_30),(80,_20)]: tower-placement[70,30]
+   + tower-placement[80,20] <= 1
+ footprints[(70,_30),(80,_30)]: tower-placement[80,30]
+   + tower-placement[70,30] <= 1
+ footprints[(70,_30),(80,_40)]: tower-placement[80,40]
+   + tower-placement[70,30] <= 1
+ footprints[(90,_40),(80,_30)]: tower-placement[80,30]
+   + tower-placement[90,40] <= 1
+ footprints[(90,_40),(80,_40)]: tower-placement[80,40]
+   + tower-placement[90,40] <= 1
+ footprints[(90,_40),(80,_50)]: tower-placement[80,50]
+   + tower-placement[90,40] <= 1
+ footprints[(90,_40),(90,_30)]: tower-placement[90,30]
+   + tower-placement[90,40] <= 1
+ footprints[(90,_40),(90,_50)]: tower-placement[90,40]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_40),(100,_30)]: tower-placement[90,40]
+   + tower-placement[100,30] <= 1
+ footprints[(90,_40),(100,_40)]: tower-placement[100,40]
+   + tower-placement[90,40] <= 1
+ footprints[(90,_40),(100,_50)]: tower-placement[100,50]
+   + tower-placement[90,40] <= 1
+ footprints[(80,_320),(70,_310)]: tower-placement[70,310]
+   + tower-placement[80,320] <= 1
+ footprints[(80,_320),(70,_320)]: tower-placement[70,320]
+   + tower-placement[80,320] <= 1
+ footprints[(80,_320),(80,_310)]: tower-placement[80,310]
+   + tower-placement[80,320] <= 1
+ footprints[(80,_320),(90,_310)]: tower-placement[80,320]
+   + tower-placement[90,310] <= 1
+ footprints[(40,_140),(30,_130)]: tower-placement[30,130]
+   + tower-placement[40,140] <= 1
+ footprints[(40,_140),(30,_140)]: tower-placement[30,140]
+   + tower-placement[40,140] <= 1
+ footprints[(40,_140),(30,_150)]: tower-placement[30,150]
+   + tower-placement[40,140] <= 1
+ footprints[(40,_140),(40,_130)]: tower-placement[40,130]
+   + tower-placement[40,140] <= 1
+ footprints[(40,_140),(40,_150)]: tower-placement[40,140]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_140),(50,_130)]: tower-placement[40,140]
+   + tower-placement[50,130] <= 1
+ footprints[(40,_140),(50,_140)]: tower-placement[50,140]
+   + tower-placement[40,140] <= 1
+ footprints[(40,_140),(50,_150)]: tower-placement[50,150]
+   + tower-placement[40,140] <= 1
+ footprints[(30,_70),(20,_60)]: tower-placement[30,70]
+   + tower-placement[20,60] <= 1
+ footprints[(30,_70),(20,_70)]: tower-placement[20,70]
+   + tower-placement[30,70] <= 1
+ footprints[(30,_70),(20,_80)]: tower-placement[20,80]
+   + tower-placement[30,70] <= 1
+ footprints[(30,_70),(30,_60)]: tower-placement[30,60]
+   + tower-placement[30,70] <= 1
+ footprints[(30,_70),(30,_80)]: tower-placement[30,70]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_70),(40,_60)]: tower-placement[30,70]
+   + tower-placement[40,60] <= 1
+ footprints[(30,_70),(40,_70)]: tower-placement[40,70]
+   + tower-placement[30,70] <= 1
+ footprints[(30,_70),(40,_80)]: tower-placement[40,80]
+   + tower-placement[30,70] <= 1
+ footprints[(40,_10),(30,_10)]: tower-placement[30,10]
+   + tower-placement[40,10] <= 1
+ footprints[(40,_10),(30,_20)]: tower-placement[30,20]
+   + tower-placement[40,10] <= 1
+ footprints[(40,_10),(40,_20)]: tower-placement[40,10]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_10),(50,_10)]: tower-placement[50,10]
+   + tower-placement[40,10] <= 1
+ footprints[(40,_10),(50,_20)]: tower-placement[50,20]
+   + tower-placement[40,10] <= 1
+ footprints[(30,_290),(20,_280)]: tower-placement[30,290]
+   + tower-placement[20,280] <= 1
+ footprints[(30,_290),(20,_290)]: tower-placement[20,290]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_290),(20,_300)]: tower-placement[20,300]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_290),(30,_280)]: tower-placement[30,280]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_290),(30,_300)]: tower-placement[30,300]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_290),(40,_280)]: tower-placement[30,290]
+   + tower-placement[40,280] <= 1
+ footprints[(30,_290),(40,_290)]: tower-placement[40,290]
+   + tower-placement[30,290] <= 1
+ footprints[(30,_290),(40,_300)]: tower-placement[40,300]
+   + tower-placement[30,290] <= 1
+ footprints[(460,_380),(460,_370)]: tower-placement[460,370]
+   + tower-placement[460,380] <= 1
+ footprints[(460,_380),(460,_390)]: tower-placement[460,380]
+   + tower-placement[460,390] <= 1
+ footprints[(380,_240),(370,_230)]: tower-placement[370,230]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_240),(370,_240)]: tower-placement[370,240]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_240),(370,_250)]: tower-placement[370,250]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_240),(380,_230)]: tower-placement[380,230]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_240),(380,_250)]: tower-placement[380,240]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_240),(390,_230)]: tower-placement[390,230]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_240),(390,_240)]: tower-placement[390,240]
+   + tower-placement[380,240] <= 1
+ footprints[(380,_240),(390,_250)]: tower-placement[390,250]
+   + tower-placement[380,240] <= 1
+ footprints[(330,_340),(320,_330)]: tower-placement[320,330]
+   + tower-placement[330,340] <= 1
+ footprints[(330,_340),(320,_340)]: tower-placement[320,340]
+   + tower-placement[330,340] <= 1
+ footprints[(330,_340),(320,_350)]: tower-placement[320,350]
+   + tower-placement[330,340] <= 1
+ footprints[(330,_340),(330,_330)]: tower-placement[330,330]
+   + tower-placement[330,340] <= 1
+ footprints[(330,_340),(330,_350)]: tower-placement[330,340]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_340),(340,_340)]: tower-placement[340,340]
+   + tower-placement[330,340] <= 1
+ footprints[(330,_340),(340,_350)]: tower-placement[340,350]
+   + tower-placement[330,340] <= 1
+ footprints[(460,_250),(450,_240)]: tower-placement[450,240]
+   + tower-placement[460,250] <= 1
+ footprints[(460,_250),(450,_250)]: tower-placement[450,250]
+   + tower-placement[460,250] <= 1
+ footprints[(460,_250),(450,_260)]: tower-placement[450,260]
+   + tower-placement[460,250] <= 1
+ footprints[(460,_250),(460,_240)]: tower-placement[460,240]
+   + tower-placement[460,250] <= 1
+ footprints[(460,_250),(460,_260)]: tower-placement[460,250]
+   + tower-placement[460,260] <= 1
+ footprints[(440,_460),(430,_450)]: tower-placement[430,450]
+   + tower-placement[440,460] <= 1
+ footprints[(440,_460),(430,_460)]: tower-placement[430,460]
+   + tower-placement[440,460] <= 1
+ footprints[(440,_460),(440,_450)]: tower-placement[440,450]
+   + tower-placement[440,460] <= 1
+ footprints[(440,_460),(450,_450)]: tower-placement[440,460]
+   + tower-placement[450,450] <= 1
+ footprints[(440,_460),(450,_460)]: tower-placement[450,460]
+   + tower-placement[440,460] <= 1
+ footprints[(380,_110),(370,_100)]: tower-placement[370,100]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_110),(370,_110)]: tower-placement[370,110]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_110),(370,_120)]: tower-placement[370,120]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_110),(380,_100)]: tower-placement[380,100]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_110),(380,_120)]: tower-placement[380,110]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_110),(390,_100)]: tower-placement[390,100]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_110),(390,_110)]: tower-placement[390,110]
+   + tower-placement[380,110] <= 1
+ footprints[(380,_110),(390,_120)]: tower-placement[390,120]
+   + tower-placement[380,110] <= 1
+ footprints[(370,_390),(360,_380)]: tower-placement[360,380]
+   + tower-placement[370,390] <= 1
+ footprints[(370,_390),(360,_390)]: tower-placement[360,390]
+   + tower-placement[370,390] <= 1
+ footprints[(370,_390),(370,_380)]: tower-placement[370,380]
+   + tower-placement[370,390] <= 1
+ footprints[(370,_390),(380,_380)]: tower-placement[370,390]
+   + tower-placement[380,380] <= 1
+ footprints[(370,_390),(380,_390)]: tower-placement[380,390]
+   + tower-placement[370,390] <= 1
+ footprints[(280,_310),(270,_300)]: tower-placement[270,300]
+   + tower-placement[280,310] <= 1
+ footprints[(280,_310),(270,_310)]: tower-placement[270,310]
+   + tower-placement[280,310] <= 1
+ footprints[(280,_310),(270,_320)]: tower-placement[270,320]
+   + tower-placement[280,310] <= 1
+ footprints[(280,_310),(280,_300)]: tower-placement[280,300]
+   + tower-placement[280,310] <= 1
+ footprints[(280,_310),(280,_320)]: tower-placement[280,310]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_310),(290,_310)]: tower-placement[290,310]
+   + tower-placement[280,310] <= 1
+ footprints[(280,_310),(290,_320)]: tower-placement[290,320]
+   + tower-placement[280,310] <= 1
+ footprints[(450,_50),(440,_40)]: tower-placement[440,40]
+   + tower-placement[450,50] <= 1
+ footprints[(450,_50),(450,_40)]: tower-placement[450,40]
+   + tower-placement[450,50] <= 1
+ footprints[(450,_50),(460,_40)]: tower-placement[450,50]
+   + tower-placement[460,40] <= 1
+ footprints[(450,_50),(460,_50)]: tower-placement[460,50]
+   + tower-placement[450,50] <= 1
+ footprints[(450,_50),(460,_60)]: tower-placement[460,60]
+   + tower-placement[450,50] <= 1
+ footprints[(350,_250),(340,_240)]: tower-placement[340,240]
+   + tower-placement[350,250] <= 1
+ footprints[(350,_250),(340,_250)]: tower-placement[340,250]
+   + tower-placement[350,250] <= 1
+ footprints[(350,_250),(340,_260)]: tower-placement[340,260]
+   + tower-placement[350,250] <= 1
+ footprints[(350,_250),(350,_240)]: tower-placement[350,240]
+   + tower-placement[350,250] <= 1
+ footprints[(350,_250),(350,_260)]: tower-placement[350,250]
+   + tower-placement[350,260] <= 1
+ footprints[(350,_250),(360,_240)]: tower-placement[350,250]
+   + tower-placement[360,240] <= 1
+ footprints[(350,_250),(360,_250)]: tower-placement[360,250]
+   + tower-placement[350,250] <= 1
+ footprints[(350,_250),(360,_260)]: tower-placement[360,260]
+   + tower-placement[350,250] <= 1
+ footprints[(240,_350),(230,_360)]: tower-placement[230,360]
+   + tower-placement[240,350] <= 1
+ footprints[(240,_350),(240,_340)]: tower-placement[240,340]
+   + tower-placement[240,350] <= 1
+ footprints[(240,_350),(240,_360)]: tower-placement[240,350]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_350),(250,_340)]: tower-placement[250,340]
+   + tower-placement[240,350] <= 1
+ footprints[(240,_350),(250,_350)]: tower-placement[250,350]
+   + tower-placement[240,350] <= 1
+ footprints[(240,_350),(250,_360)]: tower-placement[250,360]
+   + tower-placement[240,350] <= 1
+ footprints[(300,_350),(290,_340)]: tower-placement[300,350]
+   + tower-placement[290,340] <= 1
+ footprints[(300,_350),(290,_350)]: tower-placement[290,350]
+   + tower-placement[300,350] <= 1
+ footprints[(300,_350),(290,_360)]: tower-placement[290,360]
+   + tower-placement[300,350] <= 1
+ footprints[(300,_350),(300,_340)]: tower-placement[300,340]
+   + tower-placement[300,350] <= 1
+ footprints[(300,_350),(300,_360)]: tower-placement[300,350]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_350),(310,_340)]: tower-placement[300,350]
+   + tower-placement[310,340] <= 1
+ footprints[(300,_350),(310,_350)]: tower-placement[310,350]
+   + tower-placement[300,350] <= 1
+ footprints[(300,_350),(310,_360)]: tower-placement[310,360]
+   + tower-placement[300,350] <= 1
+ footprints[(370,_260),(360,_250)]: tower-placement[360,250]
+   + tower-placement[370,260] <= 1
+ footprints[(370,_260),(360,_260)]: tower-placement[360,260]
+   + tower-placement[370,260] <= 1
+ footprints[(370,_260),(370,_250)]: tower-placement[370,250]
+   + tower-placement[370,260] <= 1
+ footprints[(370,_260),(380,_250)]: tower-placement[370,260]
+   + tower-placement[380,250] <= 1
+ footprints[(370,_260),(380,_260)]: tower-placement[380,260]
+   + tower-placement[370,260] <= 1
+ footprints[(430,_260),(420,_250)]: tower-placement[430,260]
+   + tower-placement[420,250] <= 1
+ footprints[(430,_260),(420,_260)]: tower-placement[420,260]
+   + tower-placement[430,260] <= 1
+ footprints[(430,_260),(420,_270)]: tower-placement[420,270]
+   + tower-placement[430,260] <= 1
+ footprints[(430,_260),(430,_250)]: tower-placement[430,250]
+   + tower-placement[430,260] <= 1
+ footprints[(430,_260),(430,_270)]: tower-placement[430,260]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_260),(440,_250)]: tower-placement[430,260]
+   + tower-placement[440,250] <= 1
+ footprints[(430,_260),(440,_260)]: tower-placement[440,260]
+   + tower-placement[430,260] <= 1
+ footprints[(430,_260),(440,_270)]: tower-placement[440,270]
+   + tower-placement[430,260] <= 1
+ footprints[(320,_360),(310,_350)]: tower-placement[310,350]
+   + tower-placement[320,360] <= 1
+ footprints[(320,_360),(310,_360)]: tower-placement[310,360]
+   + tower-placement[320,360] <= 1
+ footprints[(320,_360),(310,_370)]: tower-placement[310,370]
+   + tower-placement[320,360] <= 1
+ footprints[(320,_360),(320,_350)]: tower-placement[320,350]
+   + tower-placement[320,360] <= 1
+ footprints[(320,_360),(320,_370)]: tower-placement[320,360]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_360),(330,_350)]: tower-placement[320,360]
+   + tower-placement[330,350] <= 1
+ footprints[(320,_360),(330,_360)]: tower-placement[330,360]
+   + tower-placement[320,360] <= 1
+ footprints[(320,_360),(330,_370)]: tower-placement[330,370]
+   + tower-placement[320,360] <= 1
+ footprints[(280,_180),(270,_170)]: tower-placement[270,170]
+   + tower-placement[280,180] <= 1
+ footprints[(280,_180),(270,_180)]: tower-placement[270,180]
+   + tower-placement[280,180] <= 1
+ footprints[(280,_180),(270,_190)]: tower-placement[270,190]
+   + tower-placement[280,180] <= 1
+ footprints[(280,_180),(280,_170)]: tower-placement[280,170]
+   + tower-placement[280,180] <= 1
+ footprints[(280,_180),(280,_190)]: tower-placement[280,180]
+   + tower-placement[280,190] <= 1
+ footprints[(280,_180),(290,_170)]: tower-placement[280,180]
+   + tower-placement[290,170] <= 1
+ footprints[(450,_270),(440,_260)]: tower-placement[440,260]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_270),(440,_270)]: tower-placement[440,270]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_270),(440,_280)]: tower-placement[440,280]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_270),(450,_260)]: tower-placement[450,260]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_270),(450,_280)]: tower-placement[450,280]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_270),(460,_260)]: tower-placement[450,270]
+   + tower-placement[460,260] <= 1
+ footprints[(450,_270),(460,_270)]: tower-placement[460,270]
+   + tower-placement[450,270] <= 1
+ footprints[(450,_270),(460,_280)]: tower-placement[460,280]
+   + tower-placement[450,270] <= 1
+ footprints[(440,_200),(430,_210)]: tower-placement[430,210]
+   + tower-placement[440,200] <= 1
+ footprints[(440,_200),(440,_210)]: tower-placement[440,210]
+   + tower-placement[440,200] <= 1
+ footprints[(440,_200),(450,_190)]: tower-placement[440,200]
+   + tower-placement[450,190] <= 1
+ footprints[(440,_200),(450,_200)]: tower-placement[450,200]
+   + tower-placement[440,200] <= 1
+ footprints[(440,_200),(450,_210)]: tower-placement[450,210]
+   + tower-placement[440,200] <= 1
+ footprints[(400,_20),(390,_10)]: tower-placement[390,10]
+   + tower-placement[400,20] <= 1
+ footprints[(400,_20),(390,_20)]: tower-placement[390,20]
+   + tower-placement[400,20] <= 1
+ footprints[(400,_20),(400,_10)]: tower-placement[400,10]
+   + tower-placement[400,20] <= 1
+ footprints[(400,_20),(410,_10)]: tower-placement[400,20]
+   + tower-placement[410,10] <= 1
+ footprints[(400,_20),(410,_20)]: tower-placement[410,20]
+   + tower-placement[400,20] <= 1
+ footprints[(260,_390),(250,_380)]: tower-placement[250,380]
+   + tower-placement[260,390] <= 1
+ footprints[(260,_390),(250,_390)]: tower-placement[250,390]
+   + tower-placement[260,390] <= 1
+ footprints[(260,_390),(260,_380)]: tower-placement[260,380]
+   + tower-placement[260,390] <= 1
+ footprints[(260,_390),(270,_380)]: tower-placement[260,390]
+   + tower-placement[270,380] <= 1
+ footprints[(260,_390),(270,_390)]: tower-placement[270,390]
+   + tower-placement[260,390] <= 1
+ footprints[(290,_120),(280,_110)]: tower-placement[280,110]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(280,_120)]: tower-placement[280,120]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(280,_130)]: tower-placement[280,130]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(290,_110)]: tower-placement[290,110]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(290,_130)]: tower-placement[290,130]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(300,_110)]: tower-placement[300,110]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(300,_120)]: tower-placement[300,120]
+   + tower-placement[290,120] <= 1
+ footprints[(290,_120),(300,_130)]: tower-placement[300,130]
+   + tower-placement[290,120] <= 1
+ footprints[(350,_120),(340,_110)]: tower-placement[340,110]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_120),(340,_120)]: tower-placement[340,120]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_120),(340,_130)]: tower-placement[340,130]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_120),(350,_110)]: tower-placement[350,110]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_120),(350,_130)]: tower-placement[350,130]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_120),(360,_110)]: tower-placement[350,120]
+   + tower-placement[360,110] <= 1
+ footprints[(350,_120),(360,_120)]: tower-placement[360,120]
+   + tower-placement[350,120] <= 1
+ footprints[(350,_120),(360,_130)]: tower-placement[360,130]
+   + tower-placement[350,120] <= 1
+ footprints[(200,_40),(190,_30)]: tower-placement[190,30]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(190,_40)]: tower-placement[190,40]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(190,_50)]: tower-placement[190,50]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(200,_30)]: tower-placement[200,30]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(200,_50)]: tower-placement[200,50]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(210,_30)]: tower-placement[210,30]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(210,_40)]: tower-placement[210,40]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_40),(210,_50)]: tower-placement[210,50]
+   + tower-placement[200,40] <= 1
+ footprints[(200,_390),(190,_380)]: tower-placement[190,380]
+   + tower-placement[200,390] <= 1
+ footprints[(200,_390),(190,_390)]: tower-placement[190,390]
+   + tower-placement[200,390] <= 1
+ footprints[(200,_390),(200,_380)]: tower-placement[200,380]
+   + tower-placement[200,390] <= 1
+ footprints[(200,_390),(210,_380)]: tower-placement[210,380]
+   + tower-placement[200,390] <= 1
+ footprints[(200,_390),(210,_390)]: tower-placement[210,390]
+   + tower-placement[200,390] <= 1
+ footprints[(370,_130),(360,_120)]: tower-placement[360,120]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_130),(360,_130)]: tower-placement[360,130]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_130),(360,_140)]: tower-placement[360,140]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_130),(370,_120)]: tower-placement[370,120]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_130),(370,_140)]: tower-placement[370,140]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_130),(380,_120)]: tower-placement[370,130]
+   + tower-placement[380,120] <= 1
+ footprints[(370,_130),(380,_130)]: tower-placement[380,130]
+   + tower-placement[370,130] <= 1
+ footprints[(370,_130),(380,_140)]: tower-placement[380,140]
+   + tower-placement[370,130] <= 1
+ footprints[(150,_140),(140,_140)]: tower-placement[140,140]
+   + tower-placement[150,140] <= 1
+ footprints[(150,_140),(140,_150)]: tower-placement[140,150]
+   + tower-placement[150,140] <= 1
+ footprints[(150,_140),(150,_150)]: tower-placement[150,150]
+   + tower-placement[150,140] <= 1
+ footprints[(150,_140),(160,_140)]: tower-placement[160,140]
+   + tower-placement[150,140] <= 1
+ footprints[(150,_140),(160,_150)]: tower-placement[160,150]
+   + tower-placement[150,140] <= 1
+ footprints[(250,_320),(240,_330)]: tower-placement[240,330]
+   + tower-placement[250,320] <= 1
+ footprints[(250,_320),(250,_310)]: tower-placement[250,310]
+   + tower-placement[250,320] <= 1
+ footprints[(250,_320),(250,_330)]: tower-placement[250,330]
+   + tower-placement[250,320] <= 1
+ footprints[(250,_320),(260,_310)]: tower-placement[250,320]
+   + tower-placement[260,310] <= 1
+ footprints[(250,_320),(260,_320)]: tower-placement[260,320]
+   + tower-placement[250,320] <= 1
+ footprints[(250,_320),(260,_330)]: tower-placement[260,330]
+   + tower-placement[250,320] <= 1
+ footprints[(310,_160),(300,_150)]: tower-placement[300,150]
+   + tower-placement[310,160] <= 1
+ footprints[(310,_160),(300,_160)]: tower-placement[300,160]
+   + tower-placement[310,160] <= 1
+ footprints[(310,_160),(310,_150)]: tower-placement[310,150]
+   + tower-placement[310,160] <= 1
+ footprints[(310,_160),(320,_150)]: tower-placement[310,160]
+   + tower-placement[320,150] <= 1
+ footprints[(270,_330),(260,_320)]: tower-placement[260,320]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_330),(260,_330)]: tower-placement[260,330]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_330),(260,_340)]: tower-placement[260,340]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_330),(270,_320)]: tower-placement[270,320]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_330),(270,_340)]: tower-placement[270,340]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_330),(280,_320)]: tower-placement[270,330]
+   + tower-placement[280,320] <= 1
+ footprints[(270,_330),(280,_330)]: tower-placement[280,330]
+   + tower-placement[270,330] <= 1
+ footprints[(270,_330),(280,_340)]: tower-placement[280,340]
+   + tower-placement[270,330] <= 1
+ footprints[(260,_260),(250,_250)]: tower-placement[250,250]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_260),(250,_260)]: tower-placement[250,260]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_260),(250,_270)]: tower-placement[250,270]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_260),(260,_250)]: tower-placement[260,250]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_260),(260,_270)]: tower-placement[260,270]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_260),(270,_250)]: tower-placement[260,260]
+   + tower-placement[270,250] <= 1
+ footprints[(260,_260),(270,_260)]: tower-placement[270,260]
+   + tower-placement[260,260] <= 1
+ footprints[(260,_260),(270,_270)]: tower-placement[270,270]
+   + tower-placement[260,260] <= 1
+ footprints[(240,_90),(230,_80)]: tower-placement[230,80]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_90),(230,_90)]: tower-placement[230,90]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_90),(240,_80)]: tower-placement[240,80]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_90),(240,_100)]: tower-placement[240,100]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_90),(250,_80)]: tower-placement[250,80]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_90),(250,_90)]: tower-placement[250,90]
+   + tower-placement[240,90] <= 1
+ footprints[(240,_90),(250,_100)]: tower-placement[250,100]
+   + tower-placement[240,90] <= 1
+ footprints[(300,_90),(290,_90)]: tower-placement[290,90]
+   + tower-placement[300,90] <= 1
+ footprints[(300,_90),(290,_100)]: tower-placement[290,100]
+   + tower-placement[300,90] <= 1
+ footprints[(300,_90),(300,_100)]: tower-placement[300,100]
+   + tower-placement[300,90] <= 1
+ footprints[(300,_90),(310,_90)]: tower-placement[310,90]
+   + tower-placement[300,90] <= 1
+ footprints[(300,_90),(310,_100)]: tower-placement[310,100]
+   + tower-placement[300,90] <= 1
+ footprints[(20,_450),(10,_440)]: tower-placement[10,440]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(10,_450)]: tower-placement[10,450]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(10,_460)]: tower-placement[10,460]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(20,_440)]: tower-placement[20,440]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(20,_460)]: tower-placement[20,460]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(30,_440)]: tower-placement[30,440]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(30,_450)]: tower-placement[30,450]
+   + tower-placement[20,450] <= 1
+ footprints[(20,_450),(30,_460)]: tower-placement[30,460]
+   + tower-placement[20,450] <= 1
+ footprints[(150,_10),(140,_10)]: tower-placement[140,10]
+   + tower-placement[150,10] <= 1
+ footprints[(150,_10),(140,_20)]: tower-placement[140,20]
+   + tower-placement[150,10] <= 1
+ footprints[(150,_10),(150,_20)]: tower-placement[150,20]
+   + tower-placement[150,10] <= 1
+ footprints[(150,_10),(160,_10)]: tower-placement[160,10]
+   + tower-placement[150,10] <= 1
+ footprints[(150,_10),(160,_20)]: tower-placement[160,20]
+   + tower-placement[150,10] <= 1
+ footprints[(250,_190),(250,_180)]: tower-placement[250,180]
+   + tower-placement[250,190] <= 1
+ footprints[(250,_190),(250,_200)]: tower-placement[250,200]
+   + tower-placement[250,190] <= 1
+ footprints[(250,_190),(260,_180)]: tower-placement[250,190]
+   + tower-placement[260,180] <= 1
+ footprints[(250,_190),(260,_190)]: tower-placement[260,190]
+   + tower-placement[250,190] <= 1
+ footprints[(250,_190),(260,_200)]: tower-placement[260,200]
+   + tower-placement[250,190] <= 1
+ footprints[(320,_100),(310,_90)]: tower-placement[310,90]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_100),(310,_100)]: tower-placement[310,100]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_100),(310,_110)]: tower-placement[310,110]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_100),(320,_90)]: tower-placement[320,90]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_100),(320,_110)]: tower-placement[320,110]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_100),(330,_90)]: tower-placement[320,100]
+   + tower-placement[330,90] <= 1
+ footprints[(320,_100),(330,_100)]: tower-placement[330,100]
+   + tower-placement[320,100] <= 1
+ footprints[(320,_100),(330,_110)]: tower-placement[330,110]
+   + tower-placement[320,100] <= 1
+ footprints[(140,_290),(130,_280)]: tower-placement[130,280]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_290),(130,_290)]: tower-placement[130,290]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_290),(130,_300)]: tower-placement[130,300]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_290),(140,_280)]: tower-placement[140,280]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_290),(140,_300)]: tower-placement[140,300]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_290),(150,_280)]: tower-placement[140,290]
+   + tower-placement[150,280] <= 1
+ footprints[(140,_290),(150,_290)]: tower-placement[150,290]
+   + tower-placement[140,290] <= 1
+ footprints[(140,_290),(150,_300)]: tower-placement[150,300]
+   + tower-placement[140,290] <= 1
+ footprints[(310,_380),(300,_370)]: tower-placement[300,370]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_380),(300,_380)]: tower-placement[300,380]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_380),(300,_390)]: tower-placement[300,390]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_380),(310,_370)]: tower-placement[310,370]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_380),(310,_390)]: tower-placement[310,390]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_380),(320,_370)]: tower-placement[310,380]
+   + tower-placement[320,370] <= 1
+ footprints[(310,_380),(320,_380)]: tower-placement[320,380]
+   + tower-placement[310,380] <= 1
+ footprints[(310,_380),(320,_390)]: tower-placement[320,390]
+   + tower-placement[310,380] <= 1
+ footprints[(270,_200),(260,_190)]: tower-placement[260,190]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_200),(260,_200)]: tower-placement[260,200]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_200),(260,_210)]: tower-placement[260,210]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_200),(270,_190)]: tower-placement[270,190]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_200),(270,_210)]: tower-placement[270,210]
+   + tower-placement[270,200] <= 1
+ footprints[(270,_200),(280,_190)]: tower-placement[270,200]
+   + tower-placement[280,190] <= 1
+ footprints[(230,_20),(220,_10)]: tower-placement[220,10]
+   + tower-placement[230,20] <= 1
+ footprints[(230,_20),(220,_20)]: tower-placement[220,20]
+   + tower-placement[230,20] <= 1
+ footprints[(230,_20),(220,_30)]: tower-placement[220,30]
+   + tower-placement[230,20] <= 1
+ footprints[(230,_20),(230,_10)]: tower-placement[230,10]
+   + tower-placement[230,20] <= 1
+ footprints[(230,_20),(230,_30)]: tower-placement[230,30]
+   + tower-placement[230,20] <= 1
+ footprints[(90,_390),(100,_390)]: tower-placement[100,390]
+   + tower-placement[90,390] <= 1
+ footprints[(260,_130),(250,_120)]: tower-placement[250,120]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_130),(250,_130)]: tower-placement[250,130]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_130),(250,_140)]: tower-placement[250,140]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_130),(260,_120)]: tower-placement[260,120]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_130),(260,_140)]: tower-placement[260,140]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_130),(270,_120)]: tower-placement[260,130]
+   + tower-placement[270,120] <= 1
+ footprints[(260,_130),(270,_130)]: tower-placement[270,130]
+   + tower-placement[260,130] <= 1
+ footprints[(260,_130),(270,_140)]: tower-placement[270,140]
+   + tower-placement[260,130] <= 1
+ footprints[(110,_50),(100,_40)]: tower-placement[100,40]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(100,_50)]: tower-placement[100,50]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(100,_60)]: tower-placement[100,60]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(110,_40)]: tower-placement[110,40]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(110,_60)]: tower-placement[110,60]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(120,_40)]: tower-placement[120,40]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(120,_50)]: tower-placement[120,50]
+   + tower-placement[110,50] <= 1
+ footprints[(110,_50),(120,_60)]: tower-placement[120,60]
+   + tower-placement[110,50] <= 1
+ footprints[(170,_50),(160,_40)]: tower-placement[160,40]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_50),(160,_50)]: tower-placement[160,50]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_50),(160,_60)]: tower-placement[160,60]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_50),(170,_40)]: tower-placement[170,40]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_50),(170,_60)]: tower-placement[170,60]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_50),(180,_40)]: tower-placement[170,50]
+   + tower-placement[180,40] <= 1
+ footprints[(170,_50),(180,_50)]: tower-placement[180,50]
+   + tower-placement[170,50] <= 1
+ footprints[(170,_50),(180,_60)]: tower-placement[180,60]
+   + tower-placement[170,50] <= 1
+ footprints[(130,_220),(120,_230)]: tower-placement[120,230]
+   + tower-placement[130,220] <= 1
+ footprints[(130,_220),(130,_210)]: tower-placement[130,210]
+   + tower-placement[130,220] <= 1
+ footprints[(130,_220),(130,_230)]: tower-placement[130,230]
+   + tower-placement[130,220] <= 1
+ footprints[(130,_220),(140,_210)]: tower-placement[130,220]
+   + tower-placement[140,210] <= 1
+ footprints[(130,_220),(140,_220)]: tower-placement[140,220]
+   + tower-placement[130,220] <= 1
+ footprints[(130,_220),(140,_230)]: tower-placement[140,230]
+   + tower-placement[130,220] <= 1
+ footprints[(60,_150),(50,_140)]: tower-placement[50,140]
+   + tower-placement[60,150] <= 1
+ footprints[(60,_150),(50,_150)]: tower-placement[50,150]
+   + tower-placement[60,150] <= 1
+ footprints[(60,_150),(50,_160)]: tower-placement[50,160]
+   + tower-placement[60,150] <= 1
+ footprints[(60,_150),(60,_140)]: tower-placement[60,140]
+   + tower-placement[60,150] <= 1
+ footprints[(60,_150),(60,_160)]: tower-placement[60,160]
+   + tower-placement[60,150] <= 1
+ footprints[(340,_140),(330,_130)]: tower-placement[340,140]
+   + tower-placement[330,130] <= 1
+ footprints[(340,_140),(330,_140)]: tower-placement[330,140]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_140),(330,_150)]: tower-placement[330,150]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_140),(340,_130)]: tower-placement[340,130]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_140),(340,_150)]: tower-placement[340,150]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_140),(350,_130)]: tower-placement[350,130]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_140),(350,_140)]: tower-placement[350,140]
+   + tower-placement[340,140] <= 1
+ footprints[(340,_140),(350,_150)]: tower-placement[350,150]
+   + tower-placement[340,140] <= 1
+ footprints[(20,_320),(10,_310)]: tower-placement[10,310]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(10,_320)]: tower-placement[10,320]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(10,_330)]: tower-placement[10,330]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(20,_310)]: tower-placement[20,310]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(20,_330)]: tower-placement[20,330]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(30,_310)]: tower-placement[30,310]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(30,_320)]: tower-placement[30,320]
+   + tower-placement[20,320] <= 1
+ footprints[(20,_320),(30,_330)]: tower-placement[30,330]
+   + tower-placement[20,320] <= 1
+ footprints[(190,_60),(180,_50)]: tower-placement[180,50]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_60),(180,_60)]: tower-placement[180,60]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_60),(190,_50)]: tower-placement[190,50]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_60),(190,_70)]: tower-placement[190,70]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_60),(200,_50)]: tower-placement[200,50]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_60),(200,_60)]: tower-placement[200,60]
+   + tower-placement[190,60] <= 1
+ footprints[(190,_60),(200,_70)]: tower-placement[200,70]
+   + tower-placement[190,60] <= 1
+ footprints[(140,_160),(130,_150)]: tower-placement[130,150]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(130,_160)]: tower-placement[130,160]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(130,_170)]: tower-placement[130,170]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(140,_150)]: tower-placement[140,150]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(140,_170)]: tower-placement[140,170]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(150,_150)]: tower-placement[150,150]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(150,_160)]: tower-placement[150,160]
+   + tower-placement[140,160] <= 1
+ footprints[(140,_160),(150,_170)]: tower-placement[150,170]
+   + tower-placement[140,160] <= 1
+ footprints[(90,_260),(80,_260)]: tower-placement[80,260]
+   + tower-placement[90,260] <= 1
+ footprints[(90,_260),(80,_270)]: tower-placement[80,270]
+   + tower-placement[90,260] <= 1
+ footprints[(90,_260),(90,_270)]: tower-placement[90,270]
+   + tower-placement[90,260] <= 1
+ footprints[(90,_260),(100,_250)]: tower-placement[100,250]
+   + tower-placement[90,260] <= 1
+ footprints[(90,_260),(100,_260)]: tower-placement[100,260]
+   + tower-placement[90,260] <= 1
+ footprints[(90,_260),(100,_270)]: tower-placement[100,270]
+   + tower-placement[90,260] <= 1
+ footprints[(50,_80),(40,_70)]: tower-placement[40,70]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_80),(40,_80)]: tower-placement[40,80]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_80),(40,_90)]: tower-placement[40,90]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_80),(50,_70)]: tower-placement[50,70]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_80),(50,_90)]: tower-placement[50,90]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_80),(60,_70)]: tower-placement[50,80]
+   + tower-placement[60,70] <= 1
+ footprints[(50,_80),(60,_80)]: tower-placement[60,80]
+   + tower-placement[50,80] <= 1
+ footprints[(50,_80),(60,_90)]: tower-placement[60,90]
+   + tower-placement[50,80] <= 1
+ footprints[(110,_270),(100,_260)]: tower-placement[100,260]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(100,_270)]: tower-placement[100,270]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(100,_280)]: tower-placement[100,280]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(110,_260)]: tower-placement[110,260]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(110,_280)]: tower-placement[110,280]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(120,_260)]: tower-placement[120,260]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(120,_270)]: tower-placement[120,270]
+   + tower-placement[110,270] <= 1
+ footprints[(110,_270),(120,_280)]: tower-placement[120,280]
+   + tower-placement[110,270] <= 1
+ footprints[(170,_270),(160,_260)]: tower-placement[160,260]
+   + tower-placement[170,270] <= 1
+ footprints[(170,_270),(160,_270)]: tower-placement[160,270]
+   + tower-placement[170,270] <= 1
+ footprints[(170,_270),(160,_280)]: tower-placement[160,280]
+   + tower-placement[170,270] <= 1
+ footprints[(170,_270),(170,_260)]: tower-placement[170,260]
+   + tower-placement[170,270] <= 1
+ footprints[(170,_270),(170,_280)]: tower-placement[170,280]
+   + tower-placement[170,270] <= 1
+ footprints[(60,_20),(50,_10)]: tower-placement[50,10]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(50,_20)]: tower-placement[50,20]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(50,_30)]: tower-placement[50,30]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(60,_10)]: tower-placement[60,10]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(60,_30)]: tower-placement[60,30]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(70,_10)]: tower-placement[70,10]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(70,_20)]: tower-placement[70,20]
+   + tower-placement[60,20] <= 1
+ footprints[(60,_20),(70,_30)]: tower-placement[70,30]
+   + tower-placement[60,20] <= 1
+ footprints[(340,_10),(330,_10)]: tower-placement[330,10]
+   + tower-placement[340,10] <= 1
+ footprints[(340,_10),(330,_20)]: tower-placement[330,20]
+   + tower-placement[340,10] <= 1
+ footprints[(340,_10),(340,_20)]: tower-placement[340,20]
+   + tower-placement[340,10] <= 1
+ footprints[(340,_10),(350,_10)]: tower-placement[350,10]
+   + tower-placement[340,10] <= 1
+ footprints[(340,_10),(350,_20)]: tower-placement[350,20]
+   + tower-placement[340,10] <= 1
+ footprints[(20,_190),(10,_180)]: tower-placement[10,180]
+   + tower-placement[20,190] <= 1
+ footprints[(20,_190),(10,_190)]: tower-placement[10,190]
+   + tower-placement[20,190] <= 1
+ footprints[(20,_190),(20,_180)]: tower-placement[20,180]
+   + tower-placement[20,190] <= 1
+ footprints[(20,_190),(30,_180)]: tower-placement[30,180]
+   + tower-placement[20,190] <= 1
+ footprints[(20,_190),(30,_190)]: tower-placement[30,190]
+   + tower-placement[20,190] <= 1
+ footprints[(160,_200),(150,_190)]: tower-placement[160,200]
+   + tower-placement[150,190] <= 1
+ footprints[(160,_200),(150,_200)]: tower-placement[150,200]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_200),(150,_210)]: tower-placement[150,210]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_200),(160,_190)]: tower-placement[160,190]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_200),(160,_210)]: tower-placement[160,210]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_200),(170,_190)]: tower-placement[170,190]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_200),(170,_200)]: tower-placement[170,200]
+   + tower-placement[160,200] <= 1
+ footprints[(160,_200),(170,_210)]: tower-placement[170,210]
+   + tower-placement[160,200] <= 1
+ footprints[(120,_20),(110,_10)]: tower-placement[120,20]
+   + tower-placement[110,10] <= 1
+ footprints[(120,_20),(110,_20)]: tower-placement[110,20]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_20),(110,_30)]: tower-placement[110,30]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_20),(120,_10)]: tower-placement[120,10]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_20),(120,_30)]: tower-placement[120,30]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_20),(130,_10)]: tower-placement[120,20]
+   + tower-placement[130,10] <= 1
+ footprints[(120,_20),(130,_20)]: tower-placement[130,20]
+   + tower-placement[120,20] <= 1
+ footprints[(120,_20),(130,_30)]: tower-placement[130,30]
+   + tower-placement[120,20] <= 1
+ footprints[(10,_120),(10,_110)]: tower-placement[10,110]
+   + tower-placement[10,120] <= 1
+ footprints[(10,_120),(10,_130)]: tower-placement[10,130]
+   + tower-placement[10,120] <= 1
+ footprints[(10,_120),(20,_110)]: tower-placement[10,120]
+   + tower-placement[20,110] <= 1
+ footprints[(10,_120),(20,_120)]: tower-placement[20,120]
+   + tower-placement[10,120] <= 1
+ footprints[(10,_120),(20,_130)]: tower-placement[20,130]
+   + tower-placement[10,120] <= 1
+ footprints[(140,_30),(130,_20)]: tower-placement[130,20]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(130,_30)]: tower-placement[130,30]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(130,_40)]: tower-placement[130,40]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(140,_20)]: tower-placement[140,20]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(140,_40)]: tower-placement[140,40]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(150,_20)]: tower-placement[150,20]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(150,_30)]: tower-placement[150,30]
+   + tower-placement[140,30] <= 1
+ footprints[(140,_30),(150,_40)]: tower-placement[150,40]
+   + tower-placement[140,30] <= 1
+ footprints[(80,_60),(70,_50)]: tower-placement[70,50]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_60),(70,_60)]: tower-placement[70,60]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_60),(70,_70)]: tower-placement[70,70]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_60),(80,_50)]: tower-placement[80,50]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_60),(80,_70)]: tower-placement[80,70]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_60),(90,_50)]: tower-placement[80,60]
+   + tower-placement[90,50] <= 1
+ footprints[(80,_60),(90,_60)]: tower-placement[90,60]
+   + tower-placement[80,60] <= 1
+ footprints[(80,_60),(90,_70)]: tower-placement[90,70]
+   + tower-placement[80,60] <= 1
+ footprints[(30,_160),(20,_150)]: tower-placement[30,160]
+   + tower-placement[20,150] <= 1
+ footprints[(30,_160),(20,_160)]: tower-placement[20,160]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_160),(20,_170)]: tower-placement[20,170]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_160),(30,_150)]: tower-placement[30,150]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_160),(30,_170)]: tower-placement[30,170]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_160),(40,_150)]: tower-placement[30,160]
+   + tower-placement[40,150] <= 1
+ footprints[(30,_160),(40,_160)]: tower-placement[40,160]
+   + tower-placement[30,160] <= 1
+ footprints[(30,_160),(40,_170)]: tower-placement[40,170]
+   + tower-placement[30,160] <= 1
+ footprints[(20,_60),(10,_50)]: tower-placement[10,50]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(10,_60)]: tower-placement[10,60]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(10,_70)]: tower-placement[10,70]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(20,_50)]: tower-placement[20,50]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(20,_70)]: tower-placement[20,70]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(30,_50)]: tower-placement[30,50]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(30,_60)]: tower-placement[30,60]
+   + tower-placement[20,60] <= 1
+ footprints[(20,_60),(30,_70)]: tower-placement[30,70]
+   + tower-placement[20,60] <= 1
+ footprints[(80,_280),(70,_270)]: tower-placement[70,270]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(70,_280)]: tower-placement[70,280]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(70,_290)]: tower-placement[70,290]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(80,_270)]: tower-placement[80,270]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(80,_290)]: tower-placement[80,290]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(90,_270)]: tower-placement[90,270]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(90,_280)]: tower-placement[90,280]
+   + tower-placement[80,280] <= 1
+ footprints[(80,_280),(90,_290)]: tower-placement[90,290]
+   + tower-placement[80,280] <= 1
+ footprints[(40,_100),(30,_90)]: tower-placement[30,90]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(30,_100)]: tower-placement[30,100]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(30,_110)]: tower-placement[30,110]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(40,_90)]: tower-placement[40,90]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(40,_110)]: tower-placement[40,110]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(50,_90)]: tower-placement[50,90]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(50,_100)]: tower-placement[50,100]
+   + tower-placement[40,100] <= 1
+ footprints[(40,_100),(50,_110)]: tower-placement[50,110]
+   + tower-placement[40,100] <= 1
+ footprints[(30,_30),(20,_20)]: tower-placement[30,30]
+   + tower-placement[20,20] <= 1
+ footprints[(30,_30),(20,_30)]: tower-placement[20,30]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_30),(20,_40)]: tower-placement[20,40]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_30),(30,_20)]: tower-placement[30,20]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_30),(30,_40)]: tower-placement[30,40]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_30),(40,_20)]: tower-placement[30,30]
+   + tower-placement[40,20] <= 1
+ footprints[(30,_30),(40,_30)]: tower-placement[40,30]
+   + tower-placement[30,30] <= 1
+ footprints[(30,_30),(40,_40)]: tower-placement[40,40]
+   + tower-placement[30,30] <= 1
+ footprints[(460,_340),(460,_330)]: tower-placement[460,330]
+   + tower-placement[460,340] <= 1
+ footprints[(460,_340),(460,_350)]: tower-placement[460,350]
+   + tower-placement[460,340] <= 1
+ footprints[(460,_210),(450,_200)]: tower-placement[450,200]
+   + tower-placement[460,210] <= 1
+ footprints[(460,_210),(450,_210)]: tower-placement[450,210]
+   + tower-placement[460,210] <= 1
+ footprints[(460,_210),(450,_220)]: tower-placement[450,220]
+   + tower-placement[460,210] <= 1
+ footprints[(460,_210),(460,_200)]: tower-placement[460,200]
+   + tower-placement[460,210] <= 1
+ footprints[(460,_210),(460,_220)]: tower-placement[460,220]
+   + tower-placement[460,210] <= 1
+ footprints[(400,_240),(390,_230)]: tower-placement[390,230]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_240),(390,_240)]: tower-placement[390,240]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_240),(390,_250)]: tower-placement[390,250]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_240),(400,_230)]: tower-placement[400,230]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_240),(400,_250)]: tower-placement[400,250]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_240),(410,_230)]: tower-placement[400,240]
+   + tower-placement[410,230] <= 1
+ footprints[(400,_240),(410,_240)]: tower-placement[410,240]
+   + tower-placement[400,240] <= 1
+ footprints[(400,_240),(410,_250)]: tower-placement[410,250]
+   + tower-placement[400,240] <= 1
+ footprints[(290,_340),(280,_330)]: tower-placement[280,330]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(280,_340)]: tower-placement[280,340]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(280,_350)]: tower-placement[280,350]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(290,_330)]: tower-placement[290,330]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(290,_350)]: tower-placement[290,350]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(300,_330)]: tower-placement[300,330]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(300,_340)]: tower-placement[300,340]
+   + tower-placement[290,340] <= 1
+ footprints[(290,_340),(300,_350)]: tower-placement[300,350]
+   + tower-placement[290,340] <= 1
+ footprints[(350,_340),(340,_340)]: tower-placement[340,340]
+   + tower-placement[350,340] <= 1
+ footprints[(350,_340),(340,_350)]: tower-placement[340,350]
+   + tower-placement[350,340] <= 1
+ footprints[(350,_340),(350,_350)]: tower-placement[350,350]
+   + tower-placement[350,340] <= 1
+ footprints[(350,_340),(360,_340)]: tower-placement[360,340]
+   + tower-placement[350,340] <= 1
+ footprints[(350,_340),(360,_350)]: tower-placement[360,350]
+   + tower-placement[350,340] <= 1
+ footprints[(420,_250),(410,_240)]: tower-placement[410,240]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(410,_250)]: tower-placement[410,250]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(410,_260)]: tower-placement[410,260]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(420,_240)]: tower-placement[420,240]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(420,_260)]: tower-placement[420,260]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(430,_240)]: tower-placement[430,240]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(430,_250)]: tower-placement[430,250]
+   + tower-placement[420,250] <= 1
+ footprints[(420,_250),(430,_260)]: tower-placement[430,260]
+   + tower-placement[420,250] <= 1
+ footprints[(370,_350),(360,_340)]: tower-placement[360,340]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(360,_350)]: tower-placement[360,350]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(360,_360)]: tower-placement[360,360]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(370,_340)]: tower-placement[370,340]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(370,_360)]: tower-placement[370,360]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(380,_340)]: tower-placement[380,340]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(380,_350)]: tower-placement[380,350]
+   + tower-placement[370,350] <= 1
+ footprints[(370,_350),(380,_360)]: tower-placement[380,360]
+   + tower-placement[370,350] <= 1
+ footprints[(460,_80),(460,_70)]: tower-placement[460,70]
+   + tower-placement[460,80] <= 1
+ footprints[(450,_10),(440,_10)]: tower-placement[440,10]
+   + tower-placement[450,10] <= 1
+ footprints[(450,_10),(440,_20)]: tower-placement[440,20]
+   + tower-placement[450,10] <= 1
+ footprints[(450,_10),(450,_20)]: tower-placement[450,20]
+   + tower-placement[450,10] <= 1
+ footprints[(450,_10),(460,_10)]: tower-placement[460,10]
+   + tower-placement[450,10] <= 1
+ footprints[(450,_10),(460,_20)]: tower-placement[460,20]
+   + tower-placement[450,10] <= 1
+ footprints[(230,_370),(220,_370)]: tower-placement[220,370]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_370),(220,_380)]: tower-placement[220,380]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_370),(230,_360)]: tower-placement[230,360]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_370),(230,_380)]: tower-placement[230,380]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_370),(240,_360)]: tower-placement[230,370]
+   + tower-placement[240,360] <= 1
+ footprints[(230,_370),(240,_370)]: tower-placement[240,370]
+   + tower-placement[230,370] <= 1
+ footprints[(230,_370),(240,_380)]: tower-placement[240,380]
+   + tower-placement[230,370] <= 1
+ footprints[(440,_290),(430,_280)]: tower-placement[430,280]
+   + tower-placement[440,290] <= 1
+ footprints[(440,_290),(440,_280)]: tower-placement[440,280]
+   + tower-placement[440,290] <= 1
+ footprints[(440,_290),(450,_280)]: tower-placement[450,280]
+   + tower-placement[440,290] <= 1
+ footprints[(440,_290),(450,_290)]: tower-placement[450,290]
+   + tower-placement[440,290] <= 1
+ footprints[(440,_290),(450,_300)]: tower-placement[450,300]
+   + tower-placement[440,290] <= 1
+ footprints[(400,_460),(410,_460)]: tower-placement[410,460]
+   + tower-placement[400,460] <= 1
+ footprints[(390,_390),(380,_380)]: tower-placement[390,390]
+   + tower-placement[380,380] <= 1
+ footprints[(390,_390),(380,_390)]: tower-placement[380,390]
+   + tower-placement[390,390] <= 1
+ footprints[(390,_390),(390,_380)]: tower-placement[390,380]
+   + tower-placement[390,390] <= 1
+ footprints[(370,_220),(360,_220)]: tower-placement[360,220]
+   + tower-placement[370,220] <= 1
+ footprints[(370,_220),(360,_230)]: tower-placement[360,230]
+   + tower-placement[370,220] <= 1
+ footprints[(370,_220),(370,_230)]: tower-placement[370,230]
+   + tower-placement[370,220] <= 1
+ footprints[(370,_220),(380,_220)]: tower-placement[380,220]
+   + tower-placement[370,220] <= 1
+ footprints[(370,_220),(380,_230)]: tower-placement[380,230]
+   + tower-placement[370,220] <= 1
+ footprints[(150,_230),(140,_220)]: tower-placement[140,220]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(140,_230)]: tower-placement[140,230]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(140,_240)]: tower-placement[140,240]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(150,_220)]: tower-placement[150,220]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(150,_240)]: tower-placement[150,240]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(160,_220)]: tower-placement[160,220]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(160,_230)]: tower-placement[160,230]
+   + tower-placement[150,230] <= 1
+ footprints[(150,_230),(160,_240)]: tower-placement[160,240]
+   + tower-placement[150,230] <= 1
+ footprints[(430,_220),(420,_220)]: tower-placement[420,220]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_220),(420,_230)]: tower-placement[420,230]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_220),(430,_210)]: tower-placement[430,210]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_220),(430,_230)]: tower-placement[430,230]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_220),(440,_210)]: tower-placement[440,210]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_220),(440,_220)]: tower-placement[440,220]
+   + tower-placement[430,220] <= 1
+ footprints[(430,_220),(440,_230)]: tower-placement[440,230]
+   + tower-placement[430,220] <= 1
+ footprints[(360,_150),(350,_140)]: tower-placement[350,140]
+   + tower-placement[360,150] <= 1
+ footprints[(360,_150),(350,_150)]: tower-placement[350,150]
+   + tower-placement[360,150] <= 1
+ footprints[(360,_150),(360,_140)]: tower-placement[360,140]
+   + tower-placement[360,150] <= 1
+ footprints[(360,_150),(370,_140)]: tower-placement[370,140]
+   + tower-placement[360,150] <= 1
+ footprints[(360,_150),(370,_150)]: tower-placement[370,150]
+   + tower-placement[360,150] <= 1
+ footprints[(280,_140),(270,_130)]: tower-placement[270,130]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(270,_140)]: tower-placement[270,140]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(270,_150)]: tower-placement[270,150]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(280,_130)]: tower-placement[280,130]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(280,_150)]: tower-placement[280,150]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(290,_130)]: tower-placement[290,130]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(290,_140)]: tower-placement[290,140]
+   + tower-placement[280,140] <= 1
+ footprints[(280,_140),(290,_150)]: tower-placement[290,150]
+   + tower-placement[280,140] <= 1
+ footprints[(260,_350),(250,_340)]: tower-placement[250,340]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(250,_350)]: tower-placement[250,350]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(250,_360)]: tower-placement[250,360]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(260,_340)]: tower-placement[260,340]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(260,_360)]: tower-placement[260,360]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(270,_340)]: tower-placement[270,340]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(270,_350)]: tower-placement[270,350]
+   + tower-placement[260,350] <= 1
+ footprints[(260,_350),(270,_360)]: tower-placement[270,360]
+   + tower-placement[260,350] <= 1
+ footprints[(390,_260),(380,_250)]: tower-placement[390,260]
+   + tower-placement[380,250] <= 1
+ footprints[(390,_260),(380,_260)]: tower-placement[380,260]
+   + tower-placement[390,260] <= 1
+ footprints[(390,_260),(390,_250)]: tower-placement[390,250]
+   + tower-placement[390,260] <= 1
+ footprints[(390,_260),(400,_250)]: tower-placement[400,250]
+   + tower-placement[390,260] <= 1
+ footprints[(390,_260),(400,_260)]: tower-placement[400,260]
+   + tower-placement[390,260] <= 1
+ footprints[(390,_260),(400,_270)]: tower-placement[400,270]
+   + tower-placement[390,260] <= 1
+ footprints[(340,_360),(330,_350)]: tower-placement[340,360]
+   + tower-placement[330,350] <= 1
+ footprints[(340,_360),(330,_360)]: tower-placement[330,360]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_360),(330,_370)]: tower-placement[330,370]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_360),(340,_350)]: tower-placement[340,350]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_360),(340,_370)]: tower-placement[340,370]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_360),(350,_350)]: tower-placement[350,350]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_360),(350,_360)]: tower-placement[350,360]
+   + tower-placement[340,360] <= 1
+ footprints[(340,_360),(350,_370)]: tower-placement[350,370]
+   + tower-placement[340,360] <= 1
+ footprints[(410,_270),(400,_260)]: tower-placement[400,260]
+   + tower-placement[410,270] <= 1
+ footprints[(410,_270),(400,_270)]: tower-placement[400,270]
+   + tower-placement[410,270] <= 1
+ footprints[(410,_270),(410,_260)]: tower-placement[410,260]
+   + tower-placement[410,270] <= 1
+ footprints[(410,_270),(420,_260)]: tower-placement[420,260]
+   + tower-placement[410,270] <= 1
+ footprints[(410,_270),(420,_270)]: tower-placement[420,270]
+   + tower-placement[410,270] <= 1
+ footprints[(370,_90),(360,_90)]: tower-placement[360,90]
+   + tower-placement[370,90] <= 1
+ footprints[(370,_90),(360,_100)]: tower-placement[360,100]
+   + tower-placement[370,90] <= 1
+ footprints[(370,_90),(370,_100)]: tower-placement[370,100]
+   + tower-placement[370,90] <= 1
+ footprints[(370,_90),(380,_90)]: tower-placement[380,90]
+   + tower-placement[370,90] <= 1
+ footprints[(370,_90),(380,_100)]: tower-placement[380,100]
+   + tower-placement[370,90] <= 1
+ footprints[(250,_280),(250,_270)]: tower-placement[250,270]
+   + tower-placement[250,280] <= 1
+ footprints[(250,_280),(250,_290)]: tower-placement[250,290]
+   + tower-placement[250,280] <= 1
+ footprints[(250,_280),(260,_270)]: tower-placement[260,270]
+   + tower-placement[250,280] <= 1
+ footprints[(250,_280),(260,_280)]: tower-placement[260,280]
+   + tower-placement[250,280] <= 1
+ footprints[(250,_280),(260,_290)]: tower-placement[260,290]
+   + tower-placement[250,280] <= 1
+ footprints[(360,_20),(350,_10)]: tower-placement[350,10]
+   + tower-placement[360,20] <= 1
+ footprints[(360,_20),(350,_20)]: tower-placement[350,20]
+   + tower-placement[360,20] <= 1
+ footprints[(360,_20),(360,_10)]: tower-placement[360,10]
+   + tower-placement[360,20] <= 1
+ footprints[(360,_20),(370,_10)]: tower-placement[370,10]
+   + tower-placement[360,20] <= 1
+ footprints[(360,_20),(370,_20)]: tower-placement[370,20]
+   + tower-placement[360,20] <= 1
+ footprints[(360,_370),(350,_360)]: tower-placement[350,360]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(350,_370)]: tower-placement[350,370]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(350,_380)]: tower-placement[350,380]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(360,_360)]: tower-placement[360,360]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(360,_380)]: tower-placement[360,380]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(370,_360)]: tower-placement[370,360]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(370,_370)]: tower-placement[370,370]
+   + tower-placement[360,370] <= 1
+ footprints[(360,_370),(370,_380)]: tower-placement[370,380]
+   + tower-placement[360,370] <= 1
+ footprints[(310,_120),(300,_110)]: tower-placement[300,110]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(300,_120)]: tower-placement[300,120]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(300,_130)]: tower-placement[300,130]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(310,_110)]: tower-placement[310,110]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(310,_130)]: tower-placement[310,130]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(320,_110)]: tower-placement[320,110]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(320,_120)]: tower-placement[320,120]
+   + tower-placement[310,120] <= 1
+ footprints[(310,_120),(320,_130)]: tower-placement[320,130]
+   + tower-placement[310,120] <= 1
+ footprints[(270,_290),(260,_280)]: tower-placement[260,280]
+   + tower-placement[270,290] <= 1
+ footprints[(270,_290),(260,_290)]: tower-placement[260,290]
+   + tower-placement[270,290] <= 1
+ footprints[(270,_290),(260,_300)]: tower-placement[260,300]
+   + tower-placement[270,290] <= 1
+ footprints[(270,_290),(270,_280)]: tower-placement[270,280]
+   + tower-placement[270,290] <= 1
+ footprints[(270,_290),(270,_300)]: tower-placement[270,300]
+   + tower-placement[270,290] <= 1
+ footprints[(270,_290),(280,_300)]: tower-placement[280,300]
+   + tower-placement[270,290] <= 1
+ footprints[(50,_300),(40,_290)]: tower-placement[40,290]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(40,_300)]: tower-placement[40,300]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(40,_310)]: tower-placement[40,310]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(50,_290)]: tower-placement[50,290]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(50,_310)]: tower-placement[50,310]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(60,_290)]: tower-placement[60,290]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(60,_300)]: tower-placement[60,300]
+   + tower-placement[50,300] <= 1
+ footprints[(50,_300),(60,_310)]: tower-placement[60,310]
+   + tower-placement[50,300] <= 1
+ footprints[(440,_30),(430,_20)]: tower-placement[430,20]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_30),(430,_30)]: tower-placement[430,30]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_30),(440,_20)]: tower-placement[440,20]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_30),(440,_40)]: tower-placement[440,40]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_30),(450,_20)]: tower-placement[450,20]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_30),(450,_30)]: tower-placement[450,30]
+   + tower-placement[440,30] <= 1
+ footprints[(440,_30),(450,_40)]: tower-placement[450,40]
+   + tower-placement[440,30] <= 1
+ footprints[(260,_220),(250,_210)]: tower-placement[250,210]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(250,_220)]: tower-placement[250,220]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(250,_230)]: tower-placement[250,230]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(260,_210)]: tower-placement[260,210]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(260,_230)]: tower-placement[260,230]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(270,_210)]: tower-placement[270,210]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(270,_220)]: tower-placement[270,220]
+   + tower-placement[260,220] <= 1
+ footprints[(260,_220),(270,_230)]: tower-placement[270,230]
+   + tower-placement[260,220] <= 1
+ footprints[(220,_40),(210,_30)]: tower-placement[210,30]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(210,_40)]: tower-placement[210,40]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(210,_50)]: tower-placement[210,50]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(220,_30)]: tower-placement[220,30]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(220,_50)]: tower-placement[220,50]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(230,_30)]: tower-placement[230,30]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(230,_40)]: tower-placement[230,40]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_40),(230,_50)]: tower-placement[230,50]
+   + tower-placement[220,40] <= 1
+ footprints[(220,_390),(210,_380)]: tower-placement[210,380]
+   + tower-placement[220,390] <= 1
+ footprints[(220,_390),(210,_390)]: tower-placement[210,390]
+   + tower-placement[220,390] <= 1
+ footprints[(220,_390),(220,_380)]: tower-placement[220,380]
+   + tower-placement[220,390] <= 1
+ footprints[(220,_390),(230,_380)]: tower-placement[230,380]
+   + tower-placement[220,390] <= 1
+ footprints[(220,_390),(230,_390)]: tower-placement[230,390]
+   + tower-placement[220,390] <= 1
+ footprints[(390,_130),(380,_120)]: tower-placement[390,130]
+   + tower-placement[380,120] <= 1
+ footprints[(390,_130),(380,_130)]: tower-placement[380,130]
+   + tower-placement[390,130] <= 1
+ footprints[(390,_130),(380,_140)]: tower-placement[380,140]
+   + tower-placement[390,130] <= 1
+ footprints[(390,_130),(390,_120)]: tower-placement[390,120]
+   + tower-placement[390,130] <= 1
+ footprints[(390,_130),(390,_140)]: tower-placement[390,140]
+   + tower-placement[390,130] <= 1
+ footprints[(170,_140),(160,_140)]: tower-placement[160,140]
+   + tower-placement[170,140] <= 1
+ footprints[(170,_140),(160,_150)]: tower-placement[160,150]
+   + tower-placement[170,140] <= 1
+ footprints[(170,_140),(170,_150)]: tower-placement[170,150]
+   + tower-placement[170,140] <= 1
+ footprints[(130,_310),(120,_300)]: tower-placement[120,300]
+   + tower-placement[130,310] <= 1
+ footprints[(130,_310),(120,_310)]: tower-placement[120,310]
+   + tower-placement[130,310] <= 1
+ footprints[(130,_310),(130,_300)]: tower-placement[130,300]
+   + tower-placement[130,310] <= 1
+ footprints[(130,_310),(140,_300)]: tower-placement[140,300]
+   + tower-placement[130,310] <= 1
+ footprints[(130,_310),(140,_310)]: tower-placement[140,310]
+   + tower-placement[130,310] <= 1
+ footprints[(240,_50),(230,_40)]: tower-placement[230,40]
+   + tower-placement[240,50] <= 1
+ footprints[(240,_50),(230,_50)]: tower-placement[230,50]
+   + tower-placement[240,50] <= 1
+ footprints[(240,_50),(230,_60)]: tower-placement[230,60]
+   + tower-placement[240,50] <= 1
+ footprints[(240,_50),(240,_60)]: tower-placement[240,60]
+   + tower-placement[240,50] <= 1
+ footprints[(340,_230),(340,_220)]: tower-placement[340,220]
+   + tower-placement[340,230] <= 1
+ footprints[(340,_230),(340,_240)]: tower-placement[340,240]
+   + tower-placement[340,230] <= 1
+ footprints[(340,_230),(350,_220)]: tower-placement[350,220]
+   + tower-placement[340,230] <= 1
+ footprints[(340,_230),(350,_230)]: tower-placement[350,230]
+   + tower-placement[340,230] <= 1
+ footprints[(340,_230),(350,_240)]: tower-placement[350,240]
+   + tower-placement[340,230] <= 1
+ footprints[(20,_410),(10,_400)]: tower-placement[10,400]
+   + tower-placement[20,410] <= 1
+ footprints[(20,_410),(10,_410)]: tower-placement[10,410]
+   + tower-placement[20,410] <= 1
+ footprints[(20,_410),(10,_420)]: tower-placement[10,420]
+   + tower-placement[20,410] <= 1
+ footprints[(20,_410),(20,_400)]: tower-placement[20,400]
+   + tower-placement[20,410] <= 1
+ footprints[(20,_410),(20,_420)]: tower-placement[20,420]
+   + tower-placement[20,410] <= 1
+ footprints[(120,_240),(110,_240)]: tower-placement[110,240]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_240),(110,_250)]: tower-placement[110,250]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_240),(120,_230)]: tower-placement[120,230]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_240),(120,_250)]: tower-placement[120,250]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_240),(130,_230)]: tower-placement[130,230]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_240),(130,_240)]: tower-placement[130,240]
+   + tower-placement[120,240] <= 1
+ footprints[(120,_240),(130,_250)]: tower-placement[130,250]
+   + tower-placement[120,240] <= 1
+ footprints[(10,_340),(10,_330)]: tower-placement[10,330]
+   + tower-placement[10,340] <= 1
+ footprints[(10,_340),(10,_350)]: tower-placement[10,350]
+   + tower-placement[10,340] <= 1
+ footprints[(10,_340),(20,_330)]: tower-placement[20,330]
+   + tower-placement[10,340] <= 1
+ footprints[(10,_340),(20,_340)]: tower-placement[20,340]
+   + tower-placement[10,340] <= 1
+ footprints[(10,_340),(20,_350)]: tower-placement[20,350]
+   + tower-placement[10,340] <= 1
+ footprints[(250,_150),(250,_140)]: tower-placement[250,140]
+   + tower-placement[250,150] <= 1
+ footprints[(250,_150),(250,_160)]: tower-placement[250,160]
+   + tower-placement[250,150] <= 1
+ footprints[(250,_150),(260,_140)]: tower-placement[260,140]
+   + tower-placement[250,150] <= 1
+ footprints[(250,_150),(260,_150)]: tower-placement[260,150]
+   + tower-placement[250,150] <= 1
+ footprints[(250,_150),(260,_160)]: tower-placement[260,160]
+   + tower-placement[250,150] <= 1
+ footprints[(140,_250),(130,_240)]: tower-placement[130,240]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(130,_250)]: tower-placement[130,250]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(130,_260)]: tower-placement[130,260]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(140,_240)]: tower-placement[140,240]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(140,_260)]: tower-placement[140,260]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(150,_240)]: tower-placement[150,240]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(150,_250)]: tower-placement[150,250]
+   + tower-placement[140,250] <= 1
+ footprints[(140,_250),(150,_260)]: tower-placement[150,260]
+   + tower-placement[140,250] <= 1
+ footprints[(100,_70),(90,_60)]: tower-placement[90,60]
+   + tower-placement[100,70] <= 1
+ footprints[(100,_70),(90,_70)]: tower-placement[90,70]
+   + tower-placement[100,70] <= 1
+ footprints[(100,_70),(90,_80)]: tower-placement[90,80]
+   + tower-placement[100,70] <= 1
+ footprints[(100,_70),(100,_60)]: tower-placement[100,60]
+   + tower-placement[100,70] <= 1
+ footprints[(100,_70),(110,_60)]: tower-placement[110,60]
+   + tower-placement[100,70] <= 1
+ footprints[(100,_70),(110,_70)]: tower-placement[110,70]
+   + tower-placement[100,70] <= 1
+ footprints[(270,_160),(260,_150)]: tower-placement[260,150]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(260,_160)]: tower-placement[260,160]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(260,_170)]: tower-placement[260,170]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(270,_150)]: tower-placement[270,150]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(270,_170)]: tower-placement[270,170]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(280,_150)]: tower-placement[280,150]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(280,_160)]: tower-placement[280,160]
+   + tower-placement[270,160] <= 1
+ footprints[(270,_160),(280,_170)]: tower-placement[280,170]
+   + tower-placement[270,160] <= 1
+ footprints[(50,_170),(40,_160)]: tower-placement[40,160]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(40,_170)]: tower-placement[40,170]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(40,_180)]: tower-placement[40,180]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(50,_160)]: tower-placement[50,160]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(50,_180)]: tower-placement[50,180]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(60,_160)]: tower-placement[60,160]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(60,_170)]: tower-placement[60,170]
+   + tower-placement[50,170] <= 1
+ footprints[(50,_170),(60,_180)]: tower-placement[60,180]
+   + tower-placement[50,170] <= 1
+ footprints[(260,_90),(250,_80)]: tower-placement[250,80]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(250,_90)]: tower-placement[250,90]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(250,_100)]: tower-placement[250,100]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(260,_80)]: tower-placement[260,80]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(260,_100)]: tower-placement[260,100]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(270,_80)]: tower-placement[270,80]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(270,_90)]: tower-placement[270,90]
+   + tower-placement[260,90] <= 1
+ footprints[(260,_90),(270,_100)]: tower-placement[270,100]
+   + tower-placement[260,90] <= 1
+ footprints[(40,_450),(30,_440)]: tower-placement[30,440]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_450),(30,_450)]: tower-placement[30,450]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_450),(30,_460)]: tower-placement[30,460]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_450),(40,_440)]: tower-placement[40,440]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_450),(40,_460)]: tower-placement[40,460]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_450),(50,_450)]: tower-placement[50,450]
+   + tower-placement[40,450] <= 1
+ footprints[(40,_450),(50,_460)]: tower-placement[50,460]
+   + tower-placement[40,450] <= 1
+ footprints[(110,_10),(100,_10)]: tower-placement[100,10]
+   + tower-placement[110,10] <= 1
+ footprints[(110,_10),(100,_20)]: tower-placement[100,20]
+   + tower-placement[110,10] <= 1
+ footprints[(110,_10),(110,_20)]: tower-placement[110,20]
+   + tower-placement[110,10] <= 1
+ footprints[(110,_10),(120,_10)]: tower-placement[120,10]
+   + tower-placement[110,10] <= 1
+ footprints[(110,_10),(120,_20)]: tower-placement[120,20]
+   + tower-placement[110,10] <= 1
+ footprints[(170,_10),(160,_10)]: tower-placement[160,10]
+   + tower-placement[170,10] <= 1
+ footprints[(170,_10),(160,_20)]: tower-placement[160,20]
+   + tower-placement[170,10] <= 1
+ footprints[(170,_10),(170,_20)]: tower-placement[170,20]
+   + tower-placement[170,10] <= 1
+ footprints[(170,_10),(180,_10)]: tower-placement[180,10]
+   + tower-placement[170,10] <= 1
+ footprints[(170,_10),(180,_20)]: tower-placement[180,20]
+   + tower-placement[170,10] <= 1
+ footprints[(130,_180),(130,_170)]: tower-placement[130,170]
+   + tower-placement[130,180] <= 1
+ footprints[(130,_180),(130,_190)]: tower-placement[130,190]
+   + tower-placement[130,180] <= 1
+ footprints[(130,_180),(140,_170)]: tower-placement[140,170]
+   + tower-placement[130,180] <= 1
+ footprints[(130,_180),(140,_180)]: tower-placement[140,180]
+   + tower-placement[130,180] <= 1
+ footprints[(130,_180),(140,_190)]: tower-placement[140,190]
+   + tower-placement[130,180] <= 1
+ footprints[(60,_110),(50,_100)]: tower-placement[50,100]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_110),(50,_110)]: tower-placement[50,110]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_110),(50,_120)]: tower-placement[50,120]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_110),(60,_100)]: tower-placement[60,100]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_110),(60,_120)]: tower-placement[60,120]
+   + tower-placement[60,110] <= 1
+ footprints[(60,_110),(70,_100)]: tower-placement[70,100]
+   + tower-placement[60,110] <= 1
+ footprints[(340,_100),(330,_90)]: tower-placement[340,100]
+   + tower-placement[330,90] <= 1
+ footprints[(340,_100),(330,_100)]: tower-placement[330,100]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_100),(330,_110)]: tower-placement[330,110]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_100),(340,_90)]: tower-placement[340,90]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_100),(340,_110)]: tower-placement[340,110]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_100),(350,_90)]: tower-placement[350,90]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_100),(350,_100)]: tower-placement[350,100]
+   + tower-placement[340,100] <= 1
+ footprints[(340,_100),(350,_110)]: tower-placement[350,110]
+   + tower-placement[340,100] <= 1
+ footprints[(60,_460),(50,_450)]: tower-placement[50,450]
+   + tower-placement[60,460] <= 1
+ footprints[(60,_460),(50,_460)]: tower-placement[50,460]
+   + tower-placement[60,460] <= 1
+ footprints[(60,_460),(70,_460)]: tower-placement[70,460]
+   + tower-placement[60,460] <= 1
+ footprints[(20,_280),(10,_270)]: tower-placement[10,270]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(10,_280)]: tower-placement[10,280]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(10,_290)]: tower-placement[10,290]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(20,_270)]: tower-placement[20,270]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(20,_290)]: tower-placement[20,290]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(30,_270)]: tower-placement[30,270]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(30,_280)]: tower-placement[30,280]
+   + tower-placement[20,280] <= 1
+ footprints[(20,_280),(30,_290)]: tower-placement[30,290]
+   + tower-placement[20,280] <= 1
+ footprints[(160,_290),(150,_280)]: tower-placement[160,290]
+   + tower-placement[150,280] <= 1
+ footprints[(160,_290),(150,_290)]: tower-placement[150,290]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_290),(150,_300)]: tower-placement[150,300]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_290),(160,_280)]: tower-placement[160,280]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_290),(160,_300)]: tower-placement[160,300]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_290),(170,_280)]: tower-placement[170,280]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_290),(170,_290)]: tower-placement[170,290]
+   + tower-placement[160,290] <= 1
+ footprints[(160,_290),(170,_300)]: tower-placement[170,300]
+   + tower-placement[160,290] <= 1
+ footprints[(190,_20),(180,_10)]: tower-placement[180,10]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(180,_20)]: tower-placement[180,20]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(180,_30)]: tower-placement[180,30]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(190,_10)]: tower-placement[190,10]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(190,_30)]: tower-placement[190,30]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(200,_10)]: tower-placement[200,10]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(200,_20)]: tower-placement[200,20]
+   + tower-placement[190,20] <= 1
+ footprints[(190,_20),(200,_30)]: tower-placement[200,30]
+   + tower-placement[190,20] <= 1
+ footprints[(50,_40),(40,_30)]: tower-placement[40,30]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(40,_40)]: tower-placement[40,40]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(40,_50)]: tower-placement[40,50]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(50,_30)]: tower-placement[50,30]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(50,_50)]: tower-placement[50,50]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(60,_30)]: tower-placement[60,30]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(60,_40)]: tower-placement[60,40]
+   + tower-placement[50,40] <= 1
+ footprints[(50,_40),(60,_50)]: tower-placement[60,50]
+   + tower-placement[50,40] <= 1
+ footprints[(40,_320),(30,_310)]: tower-placement[30,310]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(30,_320)]: tower-placement[30,320]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(30,_330)]: tower-placement[30,330]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(40,_310)]: tower-placement[40,310]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(40,_330)]: tower-placement[40,330]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(50,_310)]: tower-placement[50,310]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(50,_320)]: tower-placement[50,320]
+   + tower-placement[40,320] <= 1
+ footprints[(40,_320),(50,_330)]: tower-placement[50,330]
+   + tower-placement[40,320] <= 1
+ footprints[(210,_60),(200,_50)]: tower-placement[200,50]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(200,_60)]: tower-placement[200,60]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(200,_70)]: tower-placement[200,70]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(210,_50)]: tower-placement[210,50]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(210,_70)]: tower-placement[210,70]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(220,_50)]: tower-placement[220,50]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(220,_60)]: tower-placement[220,60]
+   + tower-placement[210,60] <= 1
+ footprints[(210,_60),(220,_70)]: tower-placement[220,70]
+   + tower-placement[210,60] <= 1
+ footprints[(130,_50),(120,_40)]: tower-placement[120,40]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(120,_50)]: tower-placement[120,50]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(120,_60)]: tower-placement[120,60]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(130,_40)]: tower-placement[130,40]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(130,_60)]: tower-placement[130,60]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(140,_40)]: tower-placement[140,40]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(140,_50)]: tower-placement[140,50]
+   + tower-placement[130,50] <= 1
+ footprints[(130,_50),(140,_60)]: tower-placement[140,60]
+   + tower-placement[130,50] <= 1
+ footprints[(20,_150),(10,_140)]: tower-placement[10,140]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(10,_150)]: tower-placement[10,150]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(10,_160)]: tower-placement[10,160]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(20,_140)]: tower-placement[20,140]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(20,_160)]: tower-placement[20,160]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(30,_140)]: tower-placement[30,140]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(30,_150)]: tower-placement[30,150]
+   + tower-placement[20,150] <= 1
+ footprints[(20,_150),(30,_160)]: tower-placement[30,160]
+   + tower-placement[20,150] <= 1
+ footprints[(160,_160),(150,_150)]: tower-placement[150,150]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(150,_160)]: tower-placement[150,160]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(150,_170)]: tower-placement[150,170]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(160,_150)]: tower-placement[160,150]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(160,_170)]: tower-placement[160,170]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(170,_150)]: tower-placement[170,150]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(170,_160)]: tower-placement[170,160]
+   + tower-placement[160,160] <= 1
+ footprints[(160,_160),(170,_170)]: tower-placement[170,170]
+   + tower-placement[160,160] <= 1
+ footprints[(10,_80),(10,_70)]: tower-placement[10,70]
+   + tower-placement[10,80] <= 1
+ footprints[(10,_80),(10,_90)]: tower-placement[10,90]
+   + tower-placement[10,80] <= 1
+ footprints[(10,_80),(20,_70)]: tower-placement[20,70]
+   + tower-placement[10,80] <= 1
+ footprints[(10,_80),(20,_80)]: tower-placement[20,80]
+   + tower-placement[10,80] <= 1
+ footprints[(10,_80),(20,_90)]: tower-placement[20,90]
+   + tower-placement[10,80] <= 1
+ footprints[(70,_80),(60,_70)]: tower-placement[70,80]
+   + tower-placement[60,70] <= 1
+ footprints[(70,_80),(60,_80)]: tower-placement[60,80]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_80),(60,_90)]: tower-placement[60,90]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_80),(70,_70)]: tower-placement[70,70]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_80),(70,_90)]: tower-placement[70,90]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_80),(80,_70)]: tower-placement[80,70]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_80),(80,_80)]: tower-placement[80,80]
+   + tower-placement[70,80] <= 1
+ footprints[(70,_80),(80,_90)]: tower-placement[80,90]
+   + tower-placement[70,80] <= 1
+ footprints[(80,_20),(70,_10)]: tower-placement[70,10]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(70,_20)]: tower-placement[70,20]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(70,_30)]: tower-placement[70,30]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(80,_10)]: tower-placement[80,10]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(80,_30)]: tower-placement[80,30]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(90,_10)]: tower-placement[90,10]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(90,_20)]: tower-placement[90,20]
+   + tower-placement[80,20] <= 1
+ footprints[(80,_20),(90,_30)]: tower-placement[90,30]
+   + tower-placement[80,20] <= 1
+ footprints[(40,_190),(30,_180)]: tower-placement[30,180]
+   + tower-placement[40,190] <= 1
+ footprints[(40,_190),(30,_190)]: tower-placement[30,190]
+   + tower-placement[40,190] <= 1
+ footprints[(40,_190),(40,_180)]: tower-placement[40,180]
+   + tower-placement[40,190] <= 1
+ footprints[(40,_190),(50,_180)]: tower-placement[50,180]
+   + tower-placement[40,190] <= 1
+ footprints[(40,_190),(50,_190)]: tower-placement[50,190]
+   + tower-placement[40,190] <= 1
+ footprints[(30,_120),(20,_110)]: tower-placement[30,120]
+   + tower-placement[20,110] <= 1
+ footprints[(30,_120),(20,_120)]: tower-placement[20,120]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_120),(20,_130)]: tower-placement[20,130]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_120),(30,_110)]: tower-placement[30,110]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_120),(30,_130)]: tower-placement[30,130]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_120),(40,_110)]: tower-placement[40,110]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_120),(40,_120)]: tower-placement[40,120]
+   + tower-placement[30,120] <= 1
+ footprints[(30,_120),(40,_130)]: tower-placement[40,130]
+   + tower-placement[30,120] <= 1
+ footprints[(20,_20),(10,_10)]: tower-placement[10,10]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(10,_20)]: tower-placement[10,20]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(10,_30)]: tower-placement[10,30]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(20,_10)]: tower-placement[20,10]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(20,_30)]: tower-placement[20,30]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(30,_10)]: tower-placement[30,10]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(30,_20)]: tower-placement[30,20]
+   + tower-placement[20,20] <= 1
+ footprints[(20,_20),(30,_30)]: tower-placement[30,30]
+   + tower-placement[20,20] <= 1
+ footprints[(160,_30),(150,_20)]: tower-placement[150,20]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(150,_30)]: tower-placement[150,30]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(150,_40)]: tower-placement[150,40]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(160,_20)]: tower-placement[160,20]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(160,_40)]: tower-placement[160,40]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(170,_20)]: tower-placement[170,20]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(170,_30)]: tower-placement[170,30]
+   + tower-placement[160,30] <= 1
+ footprints[(160,_30),(170,_40)]: tower-placement[170,40]
+   + tower-placement[160,30] <= 1
+ footprints[(40,_60),(30,_50)]: tower-placement[30,50]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(30,_60)]: tower-placement[30,60]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(30,_70)]: tower-placement[30,70]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(40,_50)]: tower-placement[40,50]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(40,_70)]: tower-placement[40,70]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(50,_50)]: tower-placement[50,50]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(50,_60)]: tower-placement[50,60]
+   + tower-placement[40,60] <= 1
+ footprints[(40,_60),(50,_70)]: tower-placement[50,70]
+   + tower-placement[40,60] <= 1
+ footprints[(460,_430),(450,_430)]: tower-placement[450,430]
+   + tower-placement[460,430] <= 1
+ footprints[(460,_430),(450,_440)]: tower-placement[450,440]
+   + tower-placement[460,430] <= 1
+ footprints[(460,_430),(460,_420)]: tower-placement[460,420]
+   + tower-placement[460,430] <= 1
+ footprints[(460,_430),(460,_440)]: tower-placement[460,440]
+   + tower-placement[460,430] <= 1
+ footprints[(330,_390),(320,_380)]: tower-placement[320,380]
+   + tower-placement[330,390] <= 1
+ footprints[(330,_390),(320,_390)]: tower-placement[320,390]
+   + tower-placement[330,390] <= 1
+ footprints[(330,_390),(330,_380)]: tower-placement[330,380]
+   + tower-placement[330,390] <= 1
+ footprints[(330,_390),(340,_380)]: tower-placement[340,380]
+   + tower-placement[330,390] <= 1
+ footprints[(330,_390),(340,_390)]: tower-placement[340,390]
+   + tower-placement[330,390] <= 1
+ footprints[(460,_300),(450,_290)]: tower-placement[450,290]
+   + tower-placement[460,300] <= 1
+ footprints[(460,_300),(450,_300)]: tower-placement[450,300]
+   + tower-placement[460,300] <= 1
+ footprints[(460,_300),(460,_290)]: tower-placement[460,290]
+   + tower-placement[460,300] <= 1
+ footprints[(460,_300),(460,_310)]: tower-placement[460,310]
+   + tower-placement[460,300] <= 1
+ footprints[(450,_230),(440,_220)]: tower-placement[440,220]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(440,_230)]: tower-placement[440,230]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(440,_240)]: tower-placement[440,240]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(450,_220)]: tower-placement[450,220]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(450,_240)]: tower-placement[450,240]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(460,_220)]: tower-placement[460,220]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(460,_230)]: tower-placement[460,230]
+   + tower-placement[450,230] <= 1
+ footprints[(450,_230),(460,_240)]: tower-placement[460,240]
+   + tower-placement[450,230] <= 1
+ footprints[(460,_170),(460,_160)]: tower-placement[460,160]
+   + tower-placement[460,170] <= 1
+ footprints[(460,_170),(460,_180)]: tower-placement[460,180]
+   + tower-placement[460,170] <= 1
+ footprints[(280,_360),(270,_350)]: tower-placement[270,350]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(270,_360)]: tower-placement[270,360]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(270,_370)]: tower-placement[270,370]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(280,_350)]: tower-placement[280,350]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(280,_370)]: tower-placement[280,370]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(290,_350)]: tower-placement[290,350]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(290,_360)]: tower-placement[290,360]
+   + tower-placement[280,360] <= 1
+ footprints[(280,_360),(290,_370)]: tower-placement[290,370]
+   + tower-placement[280,360] <= 1
+ footprints[(450,_450),(440,_440)]: tower-placement[440,440]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(440,_450)]: tower-placement[440,450]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(440,_460)]: tower-placement[440,460]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(450,_440)]: tower-placement[450,440]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(450,_460)]: tower-placement[450,460]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(460,_440)]: tower-placement[460,440]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(460,_450)]: tower-placement[460,450]
+   + tower-placement[450,450] <= 1
+ footprints[(450,_450),(460,_460)]: tower-placement[460,460]
+   + tower-placement[450,450] <= 1
+ footprints[(330,_130),(320,_120)]: tower-placement[320,120]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(320,_130)]: tower-placement[320,130]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(320,_140)]: tower-placement[320,140]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(330,_120)]: tower-placement[330,120]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(330,_140)]: tower-placement[330,140]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(340,_120)]: tower-placement[340,120]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(340,_130)]: tower-placement[340,130]
+   + tower-placement[330,130] <= 1
+ footprints[(330,_130),(340,_140)]: tower-placement[340,140]
+   + tower-placement[330,130] <= 1
+ footprints[(360,_240),(350,_230)]: tower-placement[350,230]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(350,_240)]: tower-placement[350,240]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(350,_250)]: tower-placement[350,250]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(360,_230)]: tower-placement[360,230]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(360,_250)]: tower-placement[360,250]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(370,_230)]: tower-placement[370,230]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(370,_240)]: tower-placement[370,240]
+   + tower-placement[360,240] <= 1
+ footprints[(360,_240),(370,_250)]: tower-placement[370,250]
+   + tower-placement[360,240] <= 1
+ footprints[(460,_40),(450,_30)]: tower-placement[450,30]
+   + tower-placement[460,40] <= 1
+ footprints[(460,_40),(450,_40)]: tower-placement[450,40]
+   + tower-placement[460,40] <= 1
+ footprints[(460,_40),(450,_50)]: tower-placement[450,50]
+   + tower-placement[460,40] <= 1
+ footprints[(460,_40),(460,_30)]: tower-placement[460,30]
+   + tower-placement[460,40] <= 1
+ footprints[(460,_40),(460,_50)]: tower-placement[460,50]
+   + tower-placement[460,40] <= 1
+ footprints[(310,_340),(300,_330)]: tower-placement[300,330]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(300,_340)]: tower-placement[300,340]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(300,_350)]: tower-placement[300,350]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(310,_330)]: tower-placement[310,330]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(310,_350)]: tower-placement[310,350]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(320,_330)]: tower-placement[320,330]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(320,_340)]: tower-placement[320,340]
+   + tower-placement[310,340] <= 1
+ footprints[(310,_340),(320,_350)]: tower-placement[320,350]
+   + tower-placement[310,340] <= 1
+ footprints[(440,_250),(430,_240)]: tower-placement[430,240]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(430,_250)]: tower-placement[430,250]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(430,_260)]: tower-placement[430,260]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(440,_240)]: tower-placement[440,240]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(440,_260)]: tower-placement[440,260]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(450,_240)]: tower-placement[450,240]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(450,_250)]: tower-placement[450,250]
+   + tower-placement[440,250] <= 1
+ footprints[(440,_250),(450,_260)]: tower-placement[450,260]
+   + tower-placement[440,250] <= 1
+ footprints[(290,_170),(280,_160)]: tower-placement[280,160]
+   + tower-placement[290,170] <= 1
+ footprints[(290,_170),(280,_170)]: tower-placement[280,170]
+   + tower-placement[290,170] <= 1
+ footprints[(290,_170),(280,_180)]: tower-placement[280,180]
+   + tower-placement[290,170] <= 1
+ footprints[(290,_170),(290,_160)]: tower-placement[290,160]
+   + tower-placement[290,170] <= 1
+ footprints[(290,_170),(300,_160)]: tower-placement[300,160]
+   + tower-placement[290,170] <= 1
+ footprints[(390,_350),(380,_340)]: tower-placement[380,340]
+   + tower-placement[390,350] <= 1
+ footprints[(390,_350),(380,_350)]: tower-placement[380,350]
+   + tower-placement[390,350] <= 1
+ footprints[(390,_350),(380,_360)]: tower-placement[380,360]
+   + tower-placement[390,350] <= 1
+ footprints[(390,_350),(390,_340)]: tower-placement[390,340]
+   + tower-placement[390,350] <= 1
+ footprints[(390,_350),(390,_360)]: tower-placement[390,360]
+   + tower-placement[390,350] <= 1
+ footprints[(410,_10),(400,_10)]: tower-placement[400,10]
+   + tower-placement[410,10] <= 1
+ footprints[(410,_10),(400,_20)]: tower-placement[400,20]
+   + tower-placement[410,10] <= 1
+ footprints[(410,_10),(410,_20)]: tower-placement[410,20]
+   + tower-placement[410,10] <= 1
+ footprints[(410,_10),(420,_10)]: tower-placement[420,10]
+   + tower-placement[410,10] <= 1
+ footprints[(410,_10),(420,_20)]: tower-placement[420,20]
+   + tower-placement[410,10] <= 1
+ footprints[(150,_190),(140,_180)]: tower-placement[140,180]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(140,_190)]: tower-placement[140,190]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(140,_200)]: tower-placement[140,200]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(150,_180)]: tower-placement[150,180]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(150,_200)]: tower-placement[150,200]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(160,_180)]: tower-placement[160,180]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(160,_190)]: tower-placement[160,190]
+   + tower-placement[150,190] <= 1
+ footprints[(150,_190),(160,_200)]: tower-placement[160,200]
+   + tower-placement[150,190] <= 1
+ footprints[(250,_370),(240,_360)]: tower-placement[250,370]
+   + tower-placement[240,360] <= 1
+ footprints[(250,_370),(240,_370)]: tower-placement[240,370]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_370),(240,_380)]: tower-placement[240,380]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_370),(250,_360)]: tower-placement[250,360]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_370),(250,_380)]: tower-placement[250,380]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_370),(260,_360)]: tower-placement[260,360]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_370),(260,_370)]: tower-placement[260,370]
+   + tower-placement[250,370] <= 1
+ footprints[(250,_370),(260,_380)]: tower-placement[260,380]
+   + tower-placement[250,370] <= 1
+ footprints[(360,_110),(350,_100)]: tower-placement[350,100]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(350,_110)]: tower-placement[350,110]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(350,_120)]: tower-placement[350,120]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(360,_100)]: tower-placement[360,100]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(360,_120)]: tower-placement[360,120]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(370,_100)]: tower-placement[370,100]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(370,_110)]: tower-placement[370,110]
+   + tower-placement[360,110] <= 1
+ footprints[(360,_110),(370,_120)]: tower-placement[370,120]
+   + tower-placement[360,110] <= 1
+ footprints[(280,_100),(270,_90)]: tower-placement[270,90]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(270,_100)]: tower-placement[270,100]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(270,_110)]: tower-placement[270,110]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(280,_90)]: tower-placement[280,90]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(280,_110)]: tower-placement[280,110]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(290,_90)]: tower-placement[290,90]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(290,_100)]: tower-placement[290,100]
+   + tower-placement[280,100] <= 1
+ footprints[(280,_100),(290,_110)]: tower-placement[290,110]
+   + tower-placement[280,100] <= 1
+ footprints[(100,_290),(90,_280)]: tower-placement[90,280]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(90,_290)]: tower-placement[90,290]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(90,_300)]: tower-placement[90,300]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(100,_280)]: tower-placement[100,280]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(100,_300)]: tower-placement[100,300]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(110,_280)]: tower-placement[110,280]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(110,_290)]: tower-placement[110,290]
+   + tower-placement[100,290] <= 1
+ footprints[(100,_290),(110,_300)]: tower-placement[110,300]
+   + tower-placement[100,290] <= 1
+ footprints[(270,_380),(260,_370)]: tower-placement[260,370]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(260,_380)]: tower-placement[260,380]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(260,_390)]: tower-placement[260,390]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(270,_370)]: tower-placement[270,370]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(270,_390)]: tower-placement[270,390]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(280,_370)]: tower-placement[280,370]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(280,_380)]: tower-placement[280,380]
+   + tower-placement[270,380] <= 1
+ footprints[(270,_380),(280,_390)]: tower-placement[280,390]
+   + tower-placement[270,380] <= 1
+ footprints[(260,_310),(250,_300)]: tower-placement[250,300]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(250,_310)]: tower-placement[250,310]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(250,_320)]: tower-placement[250,320]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(260,_300)]: tower-placement[260,300]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(260,_320)]: tower-placement[260,320]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(270,_300)]: tower-placement[270,300]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(270,_310)]: tower-placement[270,310]
+   + tower-placement[260,310] <= 1
+ footprints[(260,_310),(270,_320)]: tower-placement[270,320]
+   + tower-placement[260,310] <= 1
+ footprints[(390,_220),(380,_220)]: tower-placement[380,220]
+   + tower-placement[390,220] <= 1
+ footprints[(390,_220),(380,_230)]: tower-placement[380,230]
+   + tower-placement[390,220] <= 1
+ footprints[(390,_220),(390,_230)]: tower-placement[390,230]
+   + tower-placement[390,220] <= 1
+ footprints[(390,_220),(400,_220)]: tower-placement[400,220]
+   + tower-placement[390,220] <= 1
+ footprints[(390,_220),(400,_230)]: tower-placement[400,230]
+   + tower-placement[390,220] <= 1
+ footprints[(170,_230),(160,_220)]: tower-placement[160,220]
+   + tower-placement[170,230] <= 1
+ footprints[(170,_230),(160,_230)]: tower-placement[160,230]
+   + tower-placement[170,230] <= 1
+ footprints[(170,_230),(160,_240)]: tower-placement[160,240]
+   + tower-placement[170,230] <= 1
+ footprints[(170,_230),(170,_220)]: tower-placement[170,220]
+   + tower-placement[170,230] <= 1
+ footprints[(170,_230),(170,_240)]: tower-placement[170,240]
+   + tower-placement[170,230] <= 1
+ footprints[(300,_140),(290,_130)]: tower-placement[290,130]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(290,_140)]: tower-placement[290,140]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(290,_150)]: tower-placement[290,150]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(300,_130)]: tower-placement[300,130]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(300,_150)]: tower-placement[300,150]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(310,_130)]: tower-placement[310,130]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(310,_140)]: tower-placement[310,140]
+   + tower-placement[300,140] <= 1
+ footprints[(300,_140),(310,_150)]: tower-placement[310,150]
+   + tower-placement[300,140] <= 1
+ footprints[(150,_60),(140,_50)]: tower-placement[140,50]
+   + tower-placement[150,60] <= 1
+ footprints[(150,_60),(140,_60)]: tower-placement[140,60]
+   + tower-placement[150,60] <= 1
+ footprints[(150,_60),(150,_50)]: tower-placement[150,50]
+   + tower-placement[150,60] <= 1
+ footprints[(150,_60),(160,_50)]: tower-placement[160,50]
+   + tower-placement[150,60] <= 1
+ footprints[(150,_60),(160,_60)]: tower-placement[160,60]
+   + tower-placement[150,60] <= 1
+ footprints[(10,_430),(10,_420)]: tower-placement[10,420]
+   + tower-placement[10,430] <= 1
+ footprints[(10,_430),(10,_440)]: tower-placement[10,440]
+   + tower-placement[10,430] <= 1
+ footprints[(10,_430),(20,_420)]: tower-placement[20,420]
+   + tower-placement[10,430] <= 1
+ footprints[(10,_430),(20,_430)]: tower-placement[20,430]
+   + tower-placement[10,430] <= 1
+ footprints[(10,_430),(20,_440)]: tower-placement[20,440]
+   + tower-placement[10,430] <= 1
+ footprints[(250,_240),(250,_230)]: tower-placement[250,230]
+   + tower-placement[250,240] <= 1
+ footprints[(250,_240),(250,_250)]: tower-placement[250,250]
+   + tower-placement[250,240] <= 1
+ footprints[(250,_240),(260,_230)]: tower-placement[260,230]
+   + tower-placement[250,240] <= 1
+ footprints[(250,_240),(260,_240)]: tower-placement[260,240]
+   + tower-placement[250,240] <= 1
+ footprints[(250,_240),(260,_250)]: tower-placement[260,250]
+   + tower-placement[250,240] <= 1
+ footprints[(320,_150),(310,_140)]: tower-placement[310,140]
+   + tower-placement[320,150] <= 1
+ footprints[(320,_150),(310,_150)]: tower-placement[310,150]
+   + tower-placement[320,150] <= 1
+ footprints[(320,_150),(310,_160)]: tower-placement[310,160]
+   + tower-placement[320,150] <= 1
+ footprints[(320,_150),(320,_140)]: tower-placement[320,140]
+   + tower-placement[320,150] <= 1
+ footprints[(320,_150),(330,_140)]: tower-placement[330,140]
+   + tower-placement[320,150] <= 1
+ footprints[(320,_150),(330,_150)]: tower-placement[330,150]
+   + tower-placement[320,150] <= 1
+ footprints[(270,_250),(260,_240)]: tower-placement[260,240]
+   + tower-placement[270,250] <= 1
+ footprints[(270,_250),(260,_250)]: tower-placement[260,250]
+   + tower-placement[270,250] <= 1
+ footprints[(270,_250),(260,_260)]: tower-placement[260,260]
+   + tower-placement[270,250] <= 1
+ footprints[(270,_250),(270,_240)]: tower-placement[270,240]
+   + tower-placement[270,250] <= 1
+ footprints[(270,_250),(270,_260)]: tower-placement[270,260]
+   + tower-placement[270,250] <= 1
+ footprints[(230,_70),(220,_60)]: tower-placement[220,60]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(220,_70)]: tower-placement[220,70]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(220,_80)]: tower-placement[220,80]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(230,_60)]: tower-placement[230,60]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(230,_80)]: tower-placement[230,80]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(240,_60)]: tower-placement[240,60]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(240,_70)]: tower-placement[240,70]
+   + tower-placement[230,70] <= 1
+ footprints[(230,_70),(240,_80)]: tower-placement[240,80]
+   + tower-placement[230,70] <= 1
+ footprints[(260,_180),(250,_170)]: tower-placement[250,170]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(250,_180)]: tower-placement[250,180]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(250,_190)]: tower-placement[250,190]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(260,_170)]: tower-placement[260,170]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(260,_190)]: tower-placement[260,190]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(270,_170)]: tower-placement[270,170]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(270,_180)]: tower-placement[270,180]
+   + tower-placement[260,180] <= 1
+ footprints[(260,_180),(270,_190)]: tower-placement[270,190]
+   + tower-placement[260,180] <= 1
+ footprints[(390,_90),(380,_90)]: tower-placement[380,90]
+   + tower-placement[390,90] <= 1
+ footprints[(390,_90),(380,_100)]: tower-placement[380,100]
+   + tower-placement[390,90] <= 1
+ footprints[(390,_90),(390,_100)]: tower-placement[390,100]
+   + tower-placement[390,90] <= 1
+ footprints[(130,_270),(120,_260)]: tower-placement[120,260]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(120,_270)]: tower-placement[120,270]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(120,_280)]: tower-placement[120,280]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(130,_260)]: tower-placement[130,260]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(130,_280)]: tower-placement[130,280]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(140,_260)]: tower-placement[140,260]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(140,_270)]: tower-placement[140,270]
+   + tower-placement[130,270] <= 1
+ footprints[(130,_270),(140,_280)]: tower-placement[140,280]
+   + tower-placement[130,270] <= 1
+ footprints[(300,_10),(300,_20)]: tower-placement[300,20]
+   + tower-placement[300,10] <= 1
+ footprints[(300,_10),(310,_10)]: tower-placement[310,10]
+   + tower-placement[300,10] <= 1
+ footprints[(300,_10),(310,_20)]: tower-placement[310,20]
+   + tower-placement[300,10] <= 1
+ footprints[(20,_370),(10,_360)]: tower-placement[10,360]
+   + tower-placement[20,370] <= 1
+ footprints[(20,_370),(10,_370)]: tower-placement[10,370]
+   + tower-placement[20,370] <= 1
+ footprints[(20,_370),(10,_380)]: tower-placement[10,380]
+   + tower-placement[20,370] <= 1
+ footprints[(20,_370),(20,_360)]: tower-placement[20,360]
+   + tower-placement[20,370] <= 1
+ footprints[(20,_370),(20,_380)]: tower-placement[20,380]
+   + tower-placement[20,370] <= 1
+ footprints[(10,_300),(10,_290)]: tower-placement[10,290]
+   + tower-placement[10,300] <= 1
+ footprints[(10,_300),(10,_310)]: tower-placement[10,310]
+   + tower-placement[10,300] <= 1
+ footprints[(10,_300),(20,_290)]: tower-placement[20,290]
+   + tower-placement[10,300] <= 1
+ footprints[(10,_300),(20,_300)]: tower-placement[20,300]
+   + tower-placement[10,300] <= 1
+ footprints[(10,_300),(20,_310)]: tower-placement[20,310]
+   + tower-placement[10,300] <= 1
+ footprints[(250,_110),(240,_100)]: tower-placement[240,100]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(240,_110)]: tower-placement[240,110]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(240,_120)]: tower-placement[240,120]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(250,_100)]: tower-placement[250,100]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(250,_120)]: tower-placement[250,120]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(260,_100)]: tower-placement[260,100]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(260,_110)]: tower-placement[260,110]
+   + tower-placement[250,110] <= 1
+ footprints[(250,_110),(260,_120)]: tower-placement[260,120]
+   + tower-placement[250,110] <= 1
+ footprints[(70,_300),(60,_290)]: tower-placement[60,290]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(60,_300)]: tower-placement[60,300]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(60,_310)]: tower-placement[60,310]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(70,_290)]: tower-placement[70,290]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(70,_310)]: tower-placement[70,310]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(80,_290)]: tower-placement[80,290]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(80,_300)]: tower-placement[80,300]
+   + tower-placement[70,300] <= 1
+ footprints[(70,_300),(80,_310)]: tower-placement[80,310]
+   + tower-placement[70,300] <= 1
+ footprints[(320,_20),(310,_10)]: tower-placement[310,10]
+   + tower-placement[320,20] <= 1
+ footprints[(320,_20),(310,_20)]: tower-placement[310,20]
+   + tower-placement[320,20] <= 1
+ footprints[(320,_20),(320,_10)]: tower-placement[320,10]
+   + tower-placement[320,20] <= 1
+ footprints[(320,_20),(330,_10)]: tower-placement[330,10]
+   + tower-placement[320,20] <= 1
+ footprints[(320,_20),(330,_20)]: tower-placement[330,20]
+   + tower-placement[320,20] <= 1
+ footprints[(140,_210),(130,_200)]: tower-placement[130,200]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(130,_210)]: tower-placement[130,210]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(130,_220)]: tower-placement[130,220]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(140,_200)]: tower-placement[140,200]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(140,_220)]: tower-placement[140,220]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(150,_200)]: tower-placement[150,200]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(150,_210)]: tower-placement[150,210]
+   + tower-placement[140,210] <= 1
+ footprints[(140,_210),(150,_220)]: tower-placement[150,220]
+   + tower-placement[140,210] <= 1
+ footprints[(100,_30),(90,_20)]: tower-placement[90,20]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(90,_30)]: tower-placement[90,30]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(90,_40)]: tower-placement[90,40]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(100,_20)]: tower-placement[100,20]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(100,_40)]: tower-placement[100,40]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(110,_20)]: tower-placement[110,20]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(110,_30)]: tower-placement[110,30]
+   + tower-placement[100,30] <= 1
+ footprints[(100,_30),(110,_40)]: tower-placement[110,40]
+   + tower-placement[100,30] <= 1
+ footprints[(270,_120),(260,_110)]: tower-placement[260,110]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(260,_120)]: tower-placement[260,120]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(260,_130)]: tower-placement[260,130]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(270,_110)]: tower-placement[270,110]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(270,_130)]: tower-placement[270,130]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(280,_110)]: tower-placement[280,110]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(280,_120)]: tower-placement[280,120]
+   + tower-placement[270,120] <= 1
+ footprints[(270,_120),(280,_130)]: tower-placement[280,130]
+   + tower-placement[270,120] <= 1
+ footprints[(90,_310),(80,_300)]: tower-placement[80,300]
+   + tower-placement[90,310] <= 1
+ footprints[(90,_310),(80,_310)]: tower-placement[80,310]
+   + tower-placement[90,310] <= 1
+ footprints[(90,_310),(80,_320)]: tower-placement[80,320]
+   + tower-placement[90,310] <= 1
+ footprints[(90,_310),(90,_300)]: tower-placement[90,300]
+   + tower-placement[90,310] <= 1
+ footprints[(90,_310),(100,_300)]: tower-placement[100,300]
+   + tower-placement[90,310] <= 1
+ footprints[(90,_310),(100,_310)]: tower-placement[100,310]
+   + tower-placement[90,310] <= 1
+ footprints[(50,_130),(40,_120)]: tower-placement[40,120]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(40,_130)]: tower-placement[40,130]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(40,_140)]: tower-placement[40,140]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(50,_120)]: tower-placement[50,120]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(50,_140)]: tower-placement[50,140]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(60,_120)]: tower-placement[60,120]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(60,_130)]: tower-placement[60,130]
+   + tower-placement[50,130] <= 1
+ footprints[(50,_130),(60,_140)]: tower-placement[60,140]
+   + tower-placement[50,130] <= 1
+ footprints[(180,_40),(170,_30)]: tower-placement[170,30]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(170,_40)]: tower-placement[170,40]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(170,_50)]: tower-placement[170,50]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(180,_30)]: tower-placement[180,30]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(180,_50)]: tower-placement[180,50]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(190,_30)]: tower-placement[190,30]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(190,_40)]: tower-placement[190,40]
+   + tower-placement[180,40] <= 1
+ footprints[(180,_40),(190,_50)]: tower-placement[190,50]
+   + tower-placement[180,40] <= 1
+ footprints[(30,_340),(20,_330)]: tower-placement[20,330]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_340),(20,_340)]: tower-placement[20,340]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_340),(20,_350)]: tower-placement[20,350]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_340),(30,_330)]: tower-placement[30,330]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_340),(30,_350)]: tower-placement[30,350]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_340),(40,_330)]: tower-placement[40,330]
+   + tower-placement[30,340] <= 1
+ footprints[(30,_340),(40,_340)]: tower-placement[40,340]
+   + tower-placement[30,340] <= 1
+ footprints[(130,_140),(130,_150)]: tower-placement[130,150]
+   + tower-placement[130,140] <= 1
+ footprints[(130,_140),(140,_140)]: tower-placement[140,140]
+   + tower-placement[130,140] <= 1
+ footprints[(130,_140),(140,_150)]: tower-placement[140,150]
+   + tower-placement[130,140] <= 1
+ footprints[(60,_70),(50,_60)]: tower-placement[50,60]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(50,_70)]: tower-placement[50,70]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(50,_80)]: tower-placement[50,80]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(60,_60)]: tower-placement[60,60]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(60,_80)]: tower-placement[60,80]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(70,_60)]: tower-placement[70,60]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(70,_70)]: tower-placement[70,70]
+   + tower-placement[60,70] <= 1
+ footprints[(60,_70),(70,_80)]: tower-placement[70,80]
+   + tower-placement[60,70] <= 1
+ footprints[(160,_250),(150,_240)]: tower-placement[150,240]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(150,_250)]: tower-placement[150,250]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(150,_260)]: tower-placement[150,260]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(160,_240)]: tower-placement[160,240]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(160,_260)]: tower-placement[160,260]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(170,_240)]: tower-placement[170,240]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(170,_250)]: tower-placement[170,250]
+   + tower-placement[160,250] <= 1
+ footprints[(160,_250),(170,_260)]: tower-placement[170,260]
+   + tower-placement[160,250] <= 1
+ footprints[(120,_70),(110,_60)]: tower-placement[110,60]
+   + tower-placement[120,70] <= 1
+ footprints[(120,_70),(110,_70)]: tower-placement[110,70]
+   + tower-placement[120,70] <= 1
+ footprints[(120,_70),(120,_60)]: tower-placement[120,60]
+   + tower-placement[120,70] <= 1
+ footprints[(120,_70),(130,_60)]: tower-placement[130,60]
+   + tower-placement[120,70] <= 1
+ footprints[(10,_170),(10,_160)]: tower-placement[10,160]
+   + tower-placement[10,170] <= 1
+ footprints[(10,_170),(10,_180)]: tower-placement[10,180]
+   + tower-placement[10,170] <= 1
+ footprints[(10,_170),(20,_160)]: tower-placement[20,160]
+   + tower-placement[10,170] <= 1
+ footprints[(10,_170),(20,_170)]: tower-placement[20,170]
+   + tower-placement[10,170] <= 1
+ footprints[(10,_170),(20,_180)]: tower-placement[20,180]
+   + tower-placement[10,170] <= 1
+ footprints[(80,_460),(70,_460)]: tower-placement[70,460]
+   + tower-placement[80,460] <= 1
+ footprints[(40,_280),(30,_270)]: tower-placement[30,270]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(30,_280)]: tower-placement[30,280]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(30,_290)]: tower-placement[30,290]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(40,_270)]: tower-placement[40,270]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(40,_290)]: tower-placement[40,290]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(50,_270)]: tower-placement[50,270]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(50,_280)]: tower-placement[50,280]
+   + tower-placement[40,280] <= 1
+ footprints[(40,_280),(50,_290)]: tower-placement[50,290]
+   + tower-placement[40,280] <= 1
+ footprints[(210,_20),(200,_10)]: tower-placement[200,10]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(200,_20)]: tower-placement[200,20]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(200,_30)]: tower-placement[200,30]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(210,_10)]: tower-placement[210,10]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(210,_30)]: tower-placement[210,30]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(220,_10)]: tower-placement[220,10]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(220,_20)]: tower-placement[220,20]
+   + tower-placement[210,20] <= 1
+ footprints[(210,_20),(220,_30)]: tower-placement[220,30]
+   + tower-placement[210,20] <= 1
+ footprints[(130,_10),(120,_10)]: tower-placement[120,10]
+   + tower-placement[130,10] <= 1
+ footprints[(130,_10),(120,_20)]: tower-placement[120,20]
+   + tower-placement[130,10] <= 1
+ footprints[(130,_10),(130,_20)]: tower-placement[130,20]
+   + tower-placement[130,10] <= 1
+ footprints[(130,_10),(140,_10)]: tower-placement[140,10]
+   + tower-placement[130,10] <= 1
+ footprints[(130,_10),(140,_20)]: tower-placement[140,20]
+   + tower-placement[130,10] <= 1
+ footprints[(20,_110),(10,_100)]: tower-placement[10,100]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(10,_110)]: tower-placement[10,110]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(10,_120)]: tower-placement[10,120]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(20,_100)]: tower-placement[20,100]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(20,_120)]: tower-placement[20,120]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(30,_100)]: tower-placement[30,100]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(30,_110)]: tower-placement[30,110]
+   + tower-placement[20,110] <= 1
+ footprints[(20,_110),(30,_120)]: tower-placement[30,120]
+   + tower-placement[20,110] <= 1
+ footprints[(10,_40),(10,_30)]: tower-placement[10,30]
+   + tower-placement[10,40] <= 1
+ footprints[(10,_40),(10,_50)]: tower-placement[10,50]
+   + tower-placement[10,40] <= 1
+ footprints[(10,_40),(20,_30)]: tower-placement[20,30]
+   + tower-placement[10,40] <= 1
+ footprints[(10,_40),(20,_40)]: tower-placement[20,40]
+   + tower-placement[10,40] <= 1
+ footprints[(10,_40),(20,_50)]: tower-placement[20,50]
+   + tower-placement[10,40] <= 1
+ footprints[(70,_40),(60,_30)]: tower-placement[60,30]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(60,_40)]: tower-placement[60,40]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(60,_50)]: tower-placement[60,50]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(70,_30)]: tower-placement[70,30]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(70,_50)]: tower-placement[70,50]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(80,_30)]: tower-placement[80,30]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(80,_40)]: tower-placement[80,40]
+   + tower-placement[70,40] <= 1
+ footprints[(70,_40),(80,_50)]: tower-placement[80,50]
+   + tower-placement[70,40] <= 1
+ footprints[(90,_50),(80,_40)]: tower-placement[80,40]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(80,_50)]: tower-placement[80,50]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(80,_60)]: tower-placement[80,60]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(90,_40)]: tower-placement[90,40]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(90,_60)]: tower-placement[90,60]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(100,_40)]: tower-placement[100,40]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(100,_50)]: tower-placement[100,50]
+   + tower-placement[90,50] <= 1
+ footprints[(90,_50),(100,_60)]: tower-placement[100,60]
+   + tower-placement[90,50] <= 1
+ footprints[(40,_150),(30,_140)]: tower-placement[30,140]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(30,_150)]: tower-placement[30,150]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(30,_160)]: tower-placement[30,160]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(40,_140)]: tower-placement[40,140]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(40,_160)]: tower-placement[40,160]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(50,_140)]: tower-placement[50,140]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(50,_150)]: tower-placement[50,150]
+   + tower-placement[40,150] <= 1
+ footprints[(40,_150),(50,_160)]: tower-placement[50,160]
+   + tower-placement[40,150] <= 1
+ footprints[(30,_80),(20,_70)]: tower-placement[20,70]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(20,_80)]: tower-placement[20,80]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(20,_90)]: tower-placement[20,90]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(30,_70)]: tower-placement[30,70]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(30,_90)]: tower-placement[30,90]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(40,_70)]: tower-placement[40,70]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(40,_80)]: tower-placement[40,80]
+   + tower-placement[30,80] <= 1
+ footprints[(30,_80),(40,_90)]: tower-placement[40,90]
+   + tower-placement[30,80] <= 1
+ footprints[(40,_20),(30,_10)]: tower-placement[30,10]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(30,_20)]: tower-placement[30,20]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(30,_30)]: tower-placement[30,30]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(40,_10)]: tower-placement[40,10]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(40,_30)]: tower-placement[40,30]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(50,_10)]: tower-placement[50,10]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(50,_20)]: tower-placement[50,20]
+   + tower-placement[40,20] <= 1
+ footprints[(40,_20),(50,_30)]: tower-placement[50,30]
+   + tower-placement[40,20] <= 1
+ footprints[(380,_380),(370,_370)]: tower-placement[370,370]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(370,_380)]: tower-placement[370,380]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(370,_390)]: tower-placement[370,390]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(380,_370)]: tower-placement[380,370]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(380,_390)]: tower-placement[380,390]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(390,_370)]: tower-placement[390,370]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(390,_380)]: tower-placement[390,380]
+   + tower-placement[380,380] <= 1
+ footprints[(380,_380),(390,_390)]: tower-placement[390,390]
+   + tower-placement[380,380] <= 1
+ footprints[(460,_390),(460,_380)]: tower-placement[460,380]
+   + tower-placement[460,390] <= 1
+ footprints[(460,_390),(460,_400)]: tower-placement[460,400]
+   + tower-placement[460,390] <= 1
+ footprints[(380,_250),(370,_240)]: tower-placement[370,240]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(370,_250)]: tower-placement[370,250]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(370,_260)]: tower-placement[370,260]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(380,_240)]: tower-placement[380,240]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(380,_260)]: tower-placement[380,260]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(390,_240)]: tower-placement[390,240]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(390,_250)]: tower-placement[390,250]
+   + tower-placement[380,250] <= 1
+ footprints[(380,_250),(390,_260)]: tower-placement[390,260]
+   + tower-placement[380,250] <= 1
+ footprints[(330,_350),(320,_340)]: tower-placement[320,340]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(320,_350)]: tower-placement[320,350]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(320,_360)]: tower-placement[320,360]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(330,_340)]: tower-placement[330,340]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(330,_360)]: tower-placement[330,360]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(340,_340)]: tower-placement[340,340]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(340,_350)]: tower-placement[340,350]
+   + tower-placement[330,350] <= 1
+ footprints[(330,_350),(340,_360)]: tower-placement[340,360]
+   + tower-placement[330,350] <= 1
+ footprints[(460,_260),(450,_250)]: tower-placement[450,250]
+   + tower-placement[460,260] <= 1
+ footprints[(460,_260),(450,_260)]: tower-placement[450,260]
+   + tower-placement[460,260] <= 1
+ footprints[(460,_260),(450,_270)]: tower-placement[450,270]
+   + tower-placement[460,260] <= 1
+ footprints[(460,_260),(460,_250)]: tower-placement[460,250]
+   + tower-placement[460,260] <= 1
+ footprints[(460,_260),(460,_270)]: tower-placement[460,270]
+   + tower-placement[460,260] <= 1
+ footprints[(450,_190),(440,_200)]: tower-placement[440,200]
+   + tower-placement[450,190] <= 1
+ footprints[(450,_190),(450,_200)]: tower-placement[450,200]
+   + tower-placement[450,190] <= 1
+ footprints[(450,_190),(460,_180)]: tower-placement[460,180]
+   + tower-placement[450,190] <= 1
+ footprints[(450,_190),(460,_190)]: tower-placement[460,190]
+   + tower-placement[450,190] <= 1
+ footprints[(450,_190),(460,_200)]: tower-placement[460,200]
+   + tower-placement[450,190] <= 1
+ footprints[(290,_390),(280,_380)]: tower-placement[280,380]
+   + tower-placement[290,390] <= 1
+ footprints[(290,_390),(280,_390)]: tower-placement[280,390]
+   + tower-placement[290,390] <= 1
+ footprints[(290,_390),(290,_380)]: tower-placement[290,380]
+   + tower-placement[290,390] <= 1
+ footprints[(290,_390),(300,_380)]: tower-placement[300,380]
+   + tower-placement[290,390] <= 1
+ footprints[(290,_390),(300,_390)]: tower-placement[300,390]
+   + tower-placement[290,390] <= 1
+ footprints[(350,_390),(340,_380)]: tower-placement[340,380]
+   + tower-placement[350,390] <= 1
+ footprints[(350,_390),(340,_390)]: tower-placement[340,390]
+   + tower-placement[350,390] <= 1
+ footprints[(350,_390),(350,_380)]: tower-placement[350,380]
+   + tower-placement[350,390] <= 1
+ footprints[(350,_390),(360,_380)]: tower-placement[360,380]
+   + tower-placement[350,390] <= 1
+ footprints[(350,_390),(360,_390)]: tower-placement[360,390]
+   + tower-placement[350,390] <= 1
+ footprints[(380,_120),(370,_110)]: tower-placement[370,110]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(370,_120)]: tower-placement[370,120]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(370,_130)]: tower-placement[370,130]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(380,_110)]: tower-placement[380,110]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(380,_130)]: tower-placement[380,130]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(390,_110)]: tower-placement[390,110]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(390,_120)]: tower-placement[390,120]
+   + tower-placement[380,120] <= 1
+ footprints[(380,_120),(390,_130)]: tower-placement[390,130]
+   + tower-placement[380,120] <= 1
+ footprints[(410,_230),(400,_220)]: tower-placement[400,220]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(400,_230)]: tower-placement[400,230]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(400,_240)]: tower-placement[400,240]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(410,_220)]: tower-placement[410,220]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(410,_240)]: tower-placement[410,240]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(420,_220)]: tower-placement[420,220]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(420,_230)]: tower-placement[420,230]
+   + tower-placement[410,230] <= 1
+ footprints[(410,_230),(420,_240)]: tower-placement[420,240]
+   + tower-placement[410,230] <= 1
+ footprints[(280,_320),(270,_310)]: tower-placement[270,310]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(270,_320)]: tower-placement[270,320]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(270,_330)]: tower-placement[270,330]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(280,_310)]: tower-placement[280,310]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(280,_330)]: tower-placement[280,330]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(290,_310)]: tower-placement[290,310]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(290,_320)]: tower-placement[290,320]
+   + tower-placement[280,320] <= 1
+ footprints[(280,_320),(290,_330)]: tower-placement[290,330]
+   + tower-placement[280,320] <= 1
+ footprints[(350,_260),(340,_250)]: tower-placement[340,250]
+   + tower-placement[350,260] <= 1
+ footprints[(350,_260),(340,_260)]: tower-placement[340,260]
+   + tower-placement[350,260] <= 1
+ footprints[(350,_260),(350,_250)]: tower-placement[350,250]
+   + tower-placement[350,260] <= 1
+ footprints[(350,_260),(360,_250)]: tower-placement[360,250]
+   + tower-placement[350,260] <= 1
+ footprints[(350,_260),(360,_260)]: tower-placement[360,260]
+   + tower-placement[350,260] <= 1
+ footprints[(240,_360),(230,_360)]: tower-placement[230,360]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_360),(230,_370)]: tower-placement[230,370]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_360),(240,_350)]: tower-placement[240,350]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_360),(240,_370)]: tower-placement[240,370]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_360),(250,_350)]: tower-placement[250,350]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_360),(250,_360)]: tower-placement[250,360]
+   + tower-placement[240,360] <= 1
+ footprints[(240,_360),(250,_370)]: tower-placement[250,370]
+   + tower-placement[240,360] <= 1
+ footprints[(300,_360),(290,_350)]: tower-placement[290,350]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(290,_360)]: tower-placement[290,360]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(290,_370)]: tower-placement[290,370]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(300,_350)]: tower-placement[300,350]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(300,_370)]: tower-placement[300,370]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(310,_350)]: tower-placement[310,350]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(310,_360)]: tower-placement[310,360]
+   + tower-placement[300,360] <= 1
+ footprints[(300,_360),(310,_370)]: tower-placement[310,370]
+   + tower-placement[300,360] <= 1
+ footprints[(330,_90),(320,_90)]: tower-placement[320,90]
+   + tower-placement[330,90] <= 1
+ footprints[(330,_90),(320,_100)]: tower-placement[320,100]
+   + tower-placement[330,90] <= 1
+ footprints[(330,_90),(330,_100)]: tower-placement[330,100]
+   + tower-placement[330,90] <= 1
+ footprints[(330,_90),(340,_90)]: tower-placement[340,90]
+   + tower-placement[330,90] <= 1
+ footprints[(330,_90),(340,_100)]: tower-placement[340,100]
+   + tower-placement[330,90] <= 1
+ footprints[(150,_280),(140,_270)]: tower-placement[140,270]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(140,_280)]: tower-placement[140,280]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(140,_290)]: tower-placement[140,290]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(150,_270)]: tower-placement[150,270]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(150,_290)]: tower-placement[150,290]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(160,_270)]: tower-placement[160,270]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(160,_280)]: tower-placement[160,280]
+   + tower-placement[150,280] <= 1
+ footprints[(150,_280),(160,_290)]: tower-placement[160,290]
+   + tower-placement[150,280] <= 1
+ footprints[(430,_270),(420,_260)]: tower-placement[420,260]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_270),(420,_270)]: tower-placement[420,270]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_270),(430,_260)]: tower-placement[430,260]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_270),(430,_280)]: tower-placement[430,280]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_270),(440,_260)]: tower-placement[440,260]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_270),(440,_270)]: tower-placement[440,270]
+   + tower-placement[430,270] <= 1
+ footprints[(430,_270),(440,_280)]: tower-placement[440,280]
+   + tower-placement[430,270] <= 1
+ footprints[(320,_370),(310,_360)]: tower-placement[310,360]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(310,_370)]: tower-placement[310,370]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(310,_380)]: tower-placement[310,380]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(320,_360)]: tower-placement[320,360]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(320,_380)]: tower-placement[320,380]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(330,_360)]: tower-placement[330,360]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(330,_370)]: tower-placement[330,370]
+   + tower-placement[320,370] <= 1
+ footprints[(320,_370),(330,_380)]: tower-placement[330,380]
+   + tower-placement[320,370] <= 1
+ footprints[(280,_190),(270,_180)]: tower-placement[270,180]
+   + tower-placement[280,190] <= 1
+ footprints[(280,_190),(270,_190)]: tower-placement[270,190]
+   + tower-placement[280,190] <= 1
+ footprints[(280,_190),(270,_200)]: tower-placement[270,200]
+   + tower-placement[280,190] <= 1
+ footprints[(280,_190),(280,_180)]: tower-placement[280,180]
+   + tower-placement[280,190] <= 1
+ R6074: tower-placement[440,210] + tower-placement[180,390]
+   + tower-placement[290,130] + tower-placement[350,130]
+   + tower-placement[200,50] + tower-placement[370,140]
+   + tower-placement[150,150] + tower-placement[250,330]
+   + tower-placement[100,250] + tower-placement[270,340]
+   + tower-placement[260,270] + tower-placement[170,190]
+   + tower-placement[240,100] + tower-placement[60,290]
+   + tower-placement[300,100] + tower-placement[20,460]
+   + tower-placement[120,290] + tower-placement[370,10]
+   + tower-placement[150,20] + tower-placement[430,10]
+   + tower-placement[10,390] + tower-placement[250,200]
+   + tower-placement[320,110] + tower-placement[140,300]
+   + tower-placement[270,210] + tower-placement[230,30]
+   + tower-placement[260,140] + tower-placement[110,60]
+   + tower-placement[170,60] + tower-placement[30,430]
+   + tower-placement[130,230] + tower-placement[60,160]
+   + tower-placement[340,150] + tower-placement[20,330]
+   + tower-placement[190,70] + tower-placement[250,70]
+   + tower-placement[70,260] + tower-placement[140,170]
+   + tower-placement[90,270] + tower-placement[50,90]
+   + tower-placement[30,300] + tower-placement[60,30]
+   + tower-placement[340,20] + tower-placement[160,210]
+   + tower-placement[120,30] + tower-placement[10,130]
+   + tower-placement[140,40] + tower-placement[80,70]
+   + tower-placement[30,170] + tower-placement[90,10]
+   + tower-placement[40,110] + tower-placement[30,40]
+   + tower-placement[380,340] + tower-placement[460,350]
+   + tower-placement[450,280] + tower-placement[460,220]
+   + tower-placement[400,250] + tower-placement[290,350]
+   + tower-placement[350,350] + tower-placement[420,260]
+   + tower-placement[370,360] + tower-placement[450,20]
+   + tower-placement[310,390] + tower-placement[230,380]
+   + tower-placement[350,220] + tower-placement[300,320]
+   + tower-placement[370,230] + tower-placement[150,240]
+   + tower-placement[430,230] + tower-placement[320,330]
+   + tower-placement[280,150] + tower-placement[270,80]
+   + tower-placement[260,360] + tower-placement[290,90]
+   + tower-placement[110,280] + tower-placement[350,90]
+   + tower-placement[170,280] + tower-placement[200,10]
+   + tower-placement[340,370] + tower-placement[370,100]
+   + tower-placement[250,290] + tower-placement[140,390]
+   + tower-placement[310,130] + tower-placement[270,300]
+   + tower-placement[50,310] + tower-placement[440,40]
+   + tower-placement[260,230] + tower-placement[220,50]
+   + tower-placement[390,140] + tower-placement[170,150]
+   + tower-placement[240,60] + tower-placement[20,70]
+   + tower-placement[340,240] + tower-placement[20,420]
+   + tower-placement[120,250] + tower-placement[10,350]
+   + tower-placement[250,160] + tower-placement[140,260]
+   + tower-placement[50,180] + tower-placement[260,100]
+   + tower-placement[80,290] + tower-placement[40,460]
+   + tower-placement[110,20] + tower-placement[390,10]
+   + tower-placement[170,20] + tower-placement[130,190]
+   + tower-placement[60,120] + tower-placement[340,110]
+   + tower-placement[20,290] + tower-placement[160,300]
+   + tower-placement[190,30] + tower-placement[50,50]
+   + tower-placement[40,330] + tower-placement[210,70]
+   + tower-placement[160,170] + tower-placement[10,90]
+   + tower-placement[70,90] + tower-placement[80,30]
+   + tower-placement[30,130] + tower-placement[160,40]
+   + tower-placement[460,440] + tower-placement[460,310]
+   + tower-placement[450,240] + tower-placement[430,450]
+   + tower-placement[360,380] + tower-placement[460,180]
+   + tower-placement[280,370] + tower-placement[290,310]
+   + tower-placement[420,220] + tower-placement[330,140]
+   + tower-placement[360,250] + tower-placement[310,350]
+   + tower-placement[270,170] + tower-placement[440,260]
+   + tower-placement[390,360] + tower-placement[410,20]
+   + tower-placement[330,10] + tower-placement[190,380]
+   + tower-placement[150,200] + tower-placement[250,380]
+   + tower-placement[360,120] + tower-placement[280,110]
+   + tower-placement[100,300] + tower-placement[270,390]
+   + tower-placement[260,320] + tower-placement[110,240]
+   + tower-placement[390,230] + tower-placement[170,240]
+   + tower-placement[130,60] + tower-placement[20,160]
+   + tower-placement[300,150] + tower-placement[10,440]
+   + tower-placement[250,250] + tower-placement[310,90]
+   + tower-placement[230,80] + tower-placement[50,270]
+   + tower-placement[260,190] + tower-placement[220,10]
+   + tower-placement[390,100] + tower-placement[130,280]
+   + tower-placement[20,30] + tower-placement[300,20]
+   + tower-placement[20,380] + tower-placement[160,390]
+   + tower-placement[10,310] + tower-placement[250,120]
+   + tower-placement[70,310] + tower-placement[140,220]
+   + tower-placement[100,40] + tower-placement[50,140]
+   + tower-placement[40,70] + tower-placement[30,350]
+   + tower-placement[60,80] + tower-placement[160,260]
+   + tower-placement[10,180] + tower-placement[50,10]
+   + tower-placement[40,290] + tower-placement[210,30]
+   + tower-placement[10,50] + tower-placement[70,50]
+   + tower-placement[30,90] + tower-placement[450,460]
+   + tower-placement[380,390] + tower-placement[460,50]
+   + tower-placement[460,400] + tower-placement[380,260]
+   + tower-placement[330,360] + tower-placement[460,270]
+   + tower-placement[450,200] + tower-placement[380,130]
+   + tower-placement[410,240] + tower-placement[360,340]
+   + tower-placement[280,330] + tower-placement[270,260]
+   + tower-placement[240,370] + tower-placement[300,370]
+   + tower-placement[330,100] + tower-placement[150,290]
+   + tower-placement[430,280] + tower-placement[320,380]
+   + tower-placement[100,390] + tower-placement[270,130]
+   + tower-placement[440,220] + tower-placement[180,50]
+   + tower-placement[290,140] + tower-placement[350,140]
+   + tower-placement[130,150] + tower-placement[200,60]
+   + tower-placement[150,160] + tower-placement[250,340]
+   + tower-placement[100,260] + tower-placement[260,280]
+   + tower-placement[350,10] + tower-placement[210,380]
+   + tower-placement[170,200] + tower-placement[130,20]
+   + tower-placement[240,110] + tower-placement[60,300]
+   + tower-placement[20,120] + tower-placement[300,110]
+   + tower-placement[120,300] + tower-placement[150,30]
+   + tower-placement[10,400] + tower-placement[250,210]
+   + tower-placement[140,310] + tower-placement[90,60]
+   + tower-placement[260,150] + tower-placement[40,160]
+   + tower-placement[110,70] + tower-placement[30,440]
+   + tower-placement[60,170] + tower-placement[10,270]
+   + tower-placement[250,80] + tower-placement[70,270]
+   + tower-placement[140,180] + tower-placement[90,280]
+   + tower-placement[50,100] + tower-placement[40,30]
+   + tower-placement[30,310] + tower-placement[60,40]
+   + tower-placement[160,220] + tower-placement[120,40]
+   + tower-placement[10,140] + tower-placement[80,80]
+   + tower-placement[30,180] + tower-placement[10,10]
+   + tower-placement[70,10] + tower-placement[30,50]
+   + tower-placement[380,350] + tower-placement[410,460]
+   + tower-placement[460,10] + tower-placement[460,360]
+   + tower-placement[450,290] + tower-placement[380,220]
+   + tower-placement[370,150] + tower-placement[270,350]
+   + tower-placement[440,440] + tower-placement[400,260]
+   + tower-placement[290,360] + tower-placement[350,360]
+   + tower-placement[420,270] + tower-placement[380,90]
+   + tower-placement[370,20] + tower-placement[370,370]
+   + tower-placement[430,20] + tower-placement[320,120]
+   + tower-placement[450,30] + tower-placement[270,220]
+   + tower-placement[230,40] + tower-placement[230,390]
+   + tower-placement[350,230] + tower-placement[130,240]
+   + tower-placement[240,330] + tower-placement[20,340]
+   + tower-placement[300,330] + tower-placement[150,250]
+   + tower-placement[280,160] + tower-placement[270,90]
+   + tower-placement[50,450] + tower-placement[260,370]
+   + tower-placement[180,10] + tower-placement[290,100]
+   + tower-placement[110,290] + tower-placement[350,100]
+   + tower-placement[170,290] + tower-placement[200,20]
+   + tower-placement[340,380] + tower-placement[120,390]
+   + tower-placement[250,300] + tower-placement[140,50]
+   + tower-placement[310,140] + tower-placement[50,320]
+   + tower-placement[260,240] + tower-placement[220,60]
+   + tower-placement[170,160] + tower-placement[240,70]
+   + tower-placement[20,80] + tower-placement[120,260]
+   + tower-placement[10,360] + tower-placement[250,170]
+   + tower-placement[140,270] + tower-placement[310,10]
+   + tower-placement[90,20] + tower-placement[50,190]
+   + tower-placement[260,110] + tower-placement[80,300]
+   + tower-placement[40,120] + tower-placement[110,30]
+   + tower-placement[170,30] + tower-placement[60,130]
+   + tower-placement[160,310] + tower-placement[50,60]
+   + tower-placement[30,270] + tower-placement[160,180]
+   + tower-placement[10,100] + tower-placement[70,100]
+   + tower-placement[80,40] + tower-placement[30,140]
+   + tower-placement[460,230] + tower-placement[30,10]
+   + tower-placement[460,450] + tower-placement[370,240]
+   + tower-placement[430,240] + tower-placement[320,340]
+   + tower-placement[450,250] + tower-placement[420,10]
+   + tower-placement[370,110] + tower-placement[430,460]
+   + tower-placement[360,390] + tower-placement[280,380]
+   + tower-placement[270,310] + tower-placement[400,220]
+   + tower-placement[290,320] + tower-placement[390,150]
+   + tower-placement[340,250] + tower-placement[20,430]
+   + tower-placement[330,150] + tower-placement[360,260]
+   + tower-placement[310,360] + tower-placement[270,180]
+   + tower-placement[440,270] + tower-placement[390,20]
+   + tower-placement[390,370] + tower-placement[130,200]
+   + tower-placement[340,120] + tower-placement[20,300]
+   + tower-placement[190,40] + tower-placement[330,20]
+   + tower-placement[190,390] + tower-placement[150,210]
+   + tower-placement[250,390] + tower-placement[360,130]
+   + tower-placement[140,140] + tower-placement[280,120]
+   + tower-placement[100,310] + tower-placement[260,330]
+   + tower-placement[40,340] + tower-placement[110,250]
+   + tower-placement[170,250] + tower-placement[20,170]
+   + tower-placement[300,160] + tower-placement[10,450]
+   + tower-placement[250,260] + tower-placement[140,10]
+   + tower-placement[310,100] + tower-placement[50,280]
+   + tower-placement[260,200] + tower-placement[220,20]
+   + tower-placement[20,40] + tower-placement[160,50]
+   + tower-placement[10,320] + tower-placement[250,130]
+   + tower-placement[70,320] + tower-placement[100,50]
+   + tower-placement[50,150] + tower-placement[80,260]
+   + tower-placement[40,80] + tower-placement[60,90]
+   + tower-placement[160,270] + tower-placement[10,190]
+   + tower-placement[50,20] + tower-placement[460,320]
+   + tower-placement[10,60] + tower-placement[70,60]
+   + tower-placement[30,100] + tower-placement[460,190]
+   + tower-placement[420,230] + tower-placement[460,60]
+   + tower-placement[330,370] + tower-placement[450,210]
+   + tower-placement[390,240] + tower-placement[380,140]
+   + tower-placement[340,340] + tower-placement[410,250]
+   + tower-placement[360,350] + tower-placement[280,340]
+   + tower-placement[270,270] + tower-placement[230,90]
+   + tower-placement[440,10] + tower-placement[220,370]
+   + tower-placement[390,110] + tower-placement[130,290]
+   + tower-placement[380,10] + tower-placement[240,380]
+   + tower-placement[20,390] + tower-placement[300,380]
+   + tower-placement[330,110] + tower-placement[150,300]
+   + tower-placement[360,220] + tower-placement[140,230]
+   + tower-placement[270,140] + tower-placement[180,60]
+   + tower-placement[290,150] + tower-placement[350,150]
+   + tower-placement[130,160] + tower-placement[200,70]
+   + tower-placement[150,170] + tower-placement[250,350]
+   + tower-placement[360,90] + tower-placement[100,270]
+   + tower-placement[260,290] + tower-placement[40,300]
+   + tower-placement[210,40] + tower-placement[350,20]
+   + tower-placement[210,390] + tower-placement[170,210]
+   + tower-placement[130,30] + tower-placement[60,310]
+   + tower-placement[20,130] + tower-placement[160,140]
+   + tower-placement[300,120] + tower-placement[120,310]
+   + tower-placement[150,40] + tower-placement[10,410]
+   + tower-placement[250,220] + tower-placement[90,70]
+   + tower-placement[260,160] + tower-placement[40,170]
+   + tower-placement[30,450] + tower-placement[60,180]
+   + tower-placement[160,10] + tower-placement[10,280]
+   + tower-placement[70,280] + tower-placement[100,10]
+   + tower-placement[50,110] + tower-placement[40,40]
+   + tower-placement[30,320] + tower-placement[60,50]
+   + tower-placement[120,50] + tower-placement[460,410]
+   + tower-placement[10,150] + tower-placement[80,90]
+   + tower-placement[30,190] + tower-placement[460,280]
+   + tower-placement[10,20] + tower-placement[70,20]
+   + tower-placement[30,60] + tower-placement[450,430]
+   + tower-placement[380,360] + tower-placement[460,20]
+   + tower-placement[320,390] + tower-placement[450,300]
+   + tower-placement[440,230] + tower-placement[380,230]
+   + tower-placement[330,330] + tower-placement[270,360]
+   + tower-placement[440,450] + tower-placement[400,270]
+   + tower-placement[290,370] + tower-placement[350,370]
+   + tower-placement[240,120] + tower-placement[380,100]
+   + tower-placement[430,30] + tower-placement[150,390]
+   + tower-placement[320,130] + tower-placement[280,300]
+   + tower-placement[450,40] + tower-placement[270,230]
+   + tower-placement[230,50] + tower-placement[350,240]
+   + tower-placement[130,250] + tower-placement[240,340]
+   + tower-placement[20,350] + tower-placement[300,340]
+   + tower-placement[150,260] + tower-placement[250,90]
+   + tower-placement[140,190] + tower-placement[270,100]
+   + tower-placement[90,290] + tower-placement[50,460]
+   + tower-placement[400,10] + tower-placement[260,380]
+   + tower-placement[180,20] + tower-placement[110,300]
+   + tower-placement[350,110] + tower-placement[170,300]
+   + tower-placement[200,30] + tower-placement[160,230]
+   + tower-placement[250,310] + tower-placement[140,60]
+   + tower-placement[310,150] + tower-placement[50,330]
+   + tower-placement[260,250] + tower-placement[220,70]
+   + tower-placement[170,170] + tower-placement[60,270]
+   + tower-placement[20,90] + tower-placement[120,270]
+   + tower-placement[10,370] + tower-placement[310,20]
+   + tower-placement[90,30] + tower-placement[80,310]
+   + tower-placement[40,130] + tower-placement[110,40]
+   + tower-placement[170,40] + tower-placement[60,140]
+   + tower-placement[30,280] + tower-placement[60,10]
+   + tower-placement[120,10] + tower-placement[460,370]
+   + tower-placement[10,110] + tower-placement[80,50]
+   + tower-placement[30,150] + tower-placement[460,240]
+   + tower-placement[30,20] + tower-placement[370,380]
+   + tower-placement[370,250] + tower-placement[430,250]
+   + tower-placement[320,350] + tower-placement[280,170]
+   + tower-placement[450,260] + tower-placement[290,110]
+   + tower-placement[420,20] + tower-placement[200,380]
+   + tower-placement[340,390] + tower-placement[370,120]
+   + tower-placement[280,390] + tower-placement[270,320]
+   + tower-placement[400,230] + tower-placement[290,330]
+   + tower-placement[240,80] + tower-placement[340,260]
+   + tower-placement[20,440] + tower-placement[250,180]
+   + tower-placement[320,90] + tower-placement[140,280]
+   + tower-placement[310,370] + tower-placement[270,190]
+   + tower-placement[230,10] + tower-placement[260,120]
+   + tower-placement[110,390] + tower-placement[170,390]
+   + tower-placement[130,210] + tower-placement[340,130]
+   + tower-placement[20,310] + tower-placement[190,50]
+   + tower-placement[150,220] + tower-placement[360,140]
+   + tower-placement[140,150] + tower-placement[50,70]
+   + tower-placement[260,340] + tower-placement[110,260]
+   + tower-placement[170,260] + tower-placement[20,180]
+   + tower-placement[160,190] + tower-placement[10,460]
+   + tower-placement[70,460] + tower-placement[360,10]
+   + tower-placement[140,20] + tower-placement[310,110]
+   + tower-placement[50,290] + tower-placement[220,30]
+   + tower-placement[20,50] + tower-placement[160,60]
+   + tower-placement[120,230] + tower-placement[10,330]
+   + tower-placement[80,270] + tower-placement[40,90]
+   + tower-placement[60,100] + tower-placement[460,460]
+   + tower-placement[460,330] + tower-placement[80,10]
+   + tower-placement[30,110] + tower-placement[460,200]
+   + tower-placement[420,240] + tower-placement[370,340]
+   + tower-placement[460,70] + tower-placement[230,360]
+   + tower-placement[440,280] + tower-placement[390,380]
+   + tower-placement[330,380] + tower-placement[430,210]
+   + tower-placement[280,130] + tower-placement[450,220]
+   + tower-placement[390,250] + tower-placement[340,350]
+   + tower-placement[410,260] + tower-placement[250,270]
+   + tower-placement[360,360] + tower-placement[270,280]
+   + tower-placement[440,20] + tower-placement[260,210]
+   + tower-placement[220,380] + tower-placement[390,120]
+   + tower-placement[130,300] + tower-placement[340,220]
+   + tower-placement[20,400] + tower-placement[300,390]
+   + tower-placement[150,310] + tower-placement[250,140]
+   + tower-placement[360,230] + tower-placement[140,240]
+   + tower-placement[100,60] + tower-placement[310,330]
+   + tower-placement[270,150] + tower-placement[50,160]
+   + tower-placement[260,80] + tower-placement[40,440]
+   + tower-placement[130,170] + tower-placement[340,90]
+   + tower-placement[20,270] + tower-placement[160,280]
+   + tower-placement[190,10] + tower-placement[150,180]
+   + tower-placement[360,100] + tower-placement[100,280]
+   + tower-placement[50,30] + tower-placement[40,310]
+   + tower-placement[210,50] + tower-placement[170,220]
+   + tower-placement[130,40] + tower-placement[60,320]
+   + tower-placement[20,140] + tower-placement[160,150]
+   + tower-placement[10,70] + tower-placement[10,420]
+   + tower-placement[70,70] + tower-placement[90,80]
+   + tower-placement[40,180] + tower-placement[30,460]
+   + tower-placement[60,190] + tower-placement[20,10]
+   + tower-placement[160,20] + tower-placement[10,290]
+   + tower-placement[70,290] + tower-placement[40,50]
+   + tower-placement[30,330] + tower-placement[460,420]
+   + tower-placement[420,460] + tower-placement[460,290]
+   + tower-placement[380,150] + tower-placement[460,160]
+   + tower-placement[280,350] + tower-placement[450,440]
+   + tower-placement[380,20] + tower-placement[240,390]
+   + tower-placement[380,370] + tower-placement[330,120]
+   + tower-placement[460,30] + tower-placement[440,240]
+   + tower-placement[290,160] + tower-placement[390,340]
+   + tower-placement[250,360] + tower-placement[280,90]
+   + tower-placement[270,370] + tower-placement[260,300]
+   + tower-placement[290,380] + tower-placement[350,380]
+   + tower-placement[130,390] + tower-placement[300,130]
+   + tower-placement[410,220] + tower-placement[150,50]
+   + tower-placement[250,230] + tower-placement[320,140]
+   + tower-placement[270,240] + tower-placement[230,60]
+   + tower-placement[260,170] + tower-placement[130,260]
+   + tower-placement[20,360] + tower-placement[150,270]
+   + tower-placement[250,100] + tower-placement[320,10]
+   + tower-placement[140,200] + tower-placement[100,20]
+   + tower-placement[270,110] + tower-placement[90,300]
+   + tower-placement[50,120] + tower-placement[180,30]
+   + tower-placement[110,310] + tower-placement[170,310]
+   + tower-placement[60,60] + tower-placement[160,240]
+   + tower-placement[120,60] + tower-placement[10,160]
+   + tower-placement[220,80] + tower-placement[40,270]
+   + tower-placement[210,10] + tower-placement[170,180]
+   + tower-placement[60,280] + tower-placement[20,100]
+   + tower-placement[120,280] + tower-placement[10,30]
+   + tower-placement[10,380] + tower-placement[70,30]
+   + tower-placement[90,40] + tower-placement[80,320]
+   + tower-placement[40,140] + tower-placement[30,70]
+   + tower-placement[40,10] + tower-placement[30,290]
+   + tower-placement[460,380] + tower-placement[380,240]
+   + tower-placement[330,340] + tower-placement[460,250]
+   + tower-placement[440,460] + tower-placement[380,110]
+   + tower-placement[370,390] + tower-placement[280,310]
+   + tower-placement[450,50] + tower-placement[350,250]
+   + tower-placement[240,350] + tower-placement[300,350]
+   + tower-placement[370,260] + tower-placement[430,260]
+   + tower-placement[320,360] + tower-placement[280,180]
+   + tower-placement[450,270] + tower-placement[440,200]
+   + tower-placement[400,20] + tower-placement[260,390]
+   + tower-placement[290,120] + tower-placement[350,120]
+   + tower-placement[200,40] + tower-placement[200,390]
+   + tower-placement[370,130] + tower-placement[150,140]
+   + tower-placement[250,320] + tower-placement[310,160]
+   + tower-placement[270,330] + tower-placement[260,260]
+   + tower-placement[240,90] + tower-placement[300,90]
+   + tower-placement[20,450] + tower-placement[150,10]
+   + tower-placement[250,190] + tower-placement[320,100]
+   + tower-placement[140,290] + tower-placement[310,380]
+   + tower-placement[270,200] + tower-placement[230,20]
+   + tower-placement[90,390] + tower-placement[260,130]
+   + tower-placement[110,50] + tower-placement[170,50]
+   + tower-placement[130,220] + tower-placement[60,150]
+   + tower-placement[340,140] + tower-placement[20,320]
+   + tower-placement[190,60] + tower-placement[140,160]
+   + tower-placement[90,260] + tower-placement[50,80]
+   + tower-placement[110,270] + tower-placement[170,270]
+   + tower-placement[60,20] + tower-placement[340,10]
+   + tower-placement[20,190] + tower-placement[160,200]
+   + tower-placement[120,20] + tower-placement[10,120]
+   + tower-placement[140,30] + tower-placement[80,60]
+   + tower-placement[30,160] + tower-placement[20,60]
+   + tower-placement[80,280] + tower-placement[40,100]
+   + tower-placement[30,30] + tower-placement[460,340]
+   + tower-placement[460,210] + tower-placement[400,240]
+   + tower-placement[290,340] + tower-placement[350,340]
+   + tower-placement[420,250] + tower-placement[370,350]
+   + tower-placement[460,80] + tower-placement[450,10]
+   + tower-placement[230,370] + tower-placement[440,290]
+   + tower-placement[400,460] + tower-placement[390,390]
+   + tower-placement[370,220] + tower-placement[150,230]
+   + tower-placement[430,220] + tower-placement[360,150]
+   + tower-placement[280,140] + tower-placement[260,350]
+   + tower-placement[390,260] + tower-placement[340,360]
+   + tower-placement[410,270] + tower-placement[370,90]
+   + tower-placement[250,280] + tower-placement[360,20]
+   + tower-placement[360,370] + tower-placement[310,120]
+   + tower-placement[270,290] + tower-placement[50,300]
+   + tower-placement[440,30] + tower-placement[260,220]
+   + tower-placement[220,40] + tower-placement[220,390]
+   + tower-placement[390,130] + tower-placement[170,140]
+   + tower-placement[130,310] + tower-placement[240,50]
+   + tower-placement[340,230] + tower-placement[20,410]
+   + tower-placement[120,240] + tower-placement[10,340]
+   + tower-placement[250,150] + tower-placement[140,250]
+   + tower-placement[100,70] + tower-placement[270,160]
+   + tower-placement[50,170] + tower-placement[260,90]
+   + tower-placement[40,450] + tower-placement[110,10]
+   + tower-placement[170,10] + tower-placement[130,180]
+   + tower-placement[60,110] + tower-placement[340,100]
+   + tower-placement[60,460] + tower-placement[20,280]
+   + tower-placement[160,290] + tower-placement[190,20]
+   + tower-placement[50,40] + tower-placement[40,320]
+   + tower-placement[210,60] + tower-placement[130,50]
+   + tower-placement[20,150] + tower-placement[160,160]
+   + tower-placement[10,80] + tower-placement[70,80]
+   + tower-placement[80,20] + tower-placement[40,190]
+   + tower-placement[30,120] + tower-placement[20,20]
+   + tower-placement[160,30] + tower-placement[40,60]
+   + tower-placement[460,430] + tower-placement[330,390]
+   + tower-placement[460,300] + tower-placement[450,230]
+   + tower-placement[460,170] + tower-placement[280,360]
+   + tower-placement[450,450] + tower-placement[330,130]
+   + tower-placement[360,240] + tower-placement[460,40]
+   + tower-placement[310,340] + tower-placement[440,250]
+   + tower-placement[290,170] + tower-placement[390,350]
+   + tower-placement[410,10] + tower-placement[150,190]
+   + tower-placement[250,370] + tower-placement[360,110]
+   + tower-placement[280,100] + tower-placement[100,290]
+   + tower-placement[270,380] + tower-placement[260,310]
+   + tower-placement[390,220] + tower-placement[170,230]
+   + tower-placement[300,140] + tower-placement[150,60]
+   + tower-placement[10,430] + tower-placement[250,240]
+   + tower-placement[320,150] + tower-placement[270,250]
+   + tower-placement[230,70] + tower-placement[260,180]
+   + tower-placement[390,90] + tower-placement[130,270]
+   + tower-placement[300,10] + tower-placement[20,370]
+   + tower-placement[10,300] + tower-placement[250,110]
+   + tower-placement[70,300] + tower-placement[320,20]
+   + tower-placement[140,210] + tower-placement[100,30]
+   + tower-placement[270,120] + tower-placement[90,310]
+   + tower-placement[50,130] + tower-placement[180,40]
+   + tower-placement[30,340] + tower-placement[130,140]
+   + tower-placement[60,70] + tower-placement[160,250]
+   + tower-placement[120,70] + tower-placement[10,170]
+   + tower-placement[80,460] + tower-placement[40,280]
+   + tower-placement[210,20] + tower-placement[130,10]
+   + tower-placement[20,110] + tower-placement[10,40]
+   + tower-placement[70,40] + tower-placement[90,50]
+   + tower-placement[40,150] + tower-placement[30,80]
+   + tower-placement[40,20] + tower-placement[380,380]
+   + tower-placement[460,390] + tower-placement[380,250]
+   + tower-placement[330,350] + tower-placement[460,260]
+   + tower-placement[450,190] + tower-placement[290,390]
+   + tower-placement[350,390] + tower-placement[380,120]
+   + tower-placement[410,230] + tower-placement[280,320]
+   + tower-placement[350,260] + tower-placement[240,360]
+   + tower-placement[300,360] + tower-placement[330,90]
+   + tower-placement[150,280] + tower-placement[430,270]
+   + tower-placement[320,370] + tower-placement[280,190] <= 0
+ R6075: 250 tower-placement[440,210] + 250 tower-placement[180,390]
+   + 250 tower-placement[290,130] + 250 tower-placement[350,130]
+   + 250 tower-placement[200,50] + 250 tower-placement[370,140]
+   + 250 tower-placement[150,150] + 250 tower-placement[250,330]
+   + 250 tower-placement[100,250] + 250 tower-placement[270,340]
+   + 250 tower-placement[260,270] + 250 tower-placement[170,190]
+   + 250 tower-placement[240,100] + 250 tower-placement[60,290]
+   + 250 tower-placement[300,100] + 250 tower-placement[20,460]
+   + 250 tower-placement[120,290] + 250 tower-placement[370,10]
+   + 250 tower-placement[150,20] + 250 tower-placement[430,10]
+   + 250 tower-placement[10,390] + 250 tower-placement[250,200]
+   + 250 tower-placement[320,110] + 250 tower-placement[140,300]
+   + 250 tower-placement[270,210] + 250 tower-placement[230,30]
+   + 250 tower-placement[260,140] + 250 tower-placement[110,60]
+   + 250 tower-placement[170,60] + 250 tower-placement[30,430]
+   + 250 tower-placement[130,230] + 250 tower-placement[60,160]
+   + 250 tower-placement[340,150] + 250 tower-placement[20,330]
+   + 250 tower-placement[190,70] + 250 tower-placement[250,70]
+   + 250 tower-placement[70,260] + 250 tower-placement[140,170]
+   + 250 tower-placement[90,270] + 250 tower-placement[50,90]
+   + 250 tower-placement[30,300] + 250 tower-placement[60,30]
+   + 250 tower-placement[340,20] + 250 tower-placement[160,210]
+   + 250 tower-placement[120,30] + 250 tower-placement[10,130]
+   + 250 tower-placement[140,40] + 250 tower-placement[80,70]
+   + 250 tower-placement[30,170] + 250 tower-placement[90,10]
+   + 250 tower-placement[40,110] + 250 tower-placement[30,40]
+   + 250 tower-placement[380,340] + 250 tower-placement[460,350]
+   + 250 tower-placement[450,280] + 250 tower-placement[460,220]
+   + 250 tower-placement[400,250] + 250 tower-placement[290,350]
+   + 250 tower-placement[350,350] + 250 tower-placement[420,260]
+   + 250 tower-placement[370,360] + 250 tower-placement[450,20]
+   + 250 tower-placement[310,390] + 250 tower-placement[230,380]
+   + 250 tower-placement[350,220] + 250 tower-placement[300,320]
+   + 250 tower-placement[370,230] + 250 tower-placement[150,240]
+   + 250 tower-placement[430,230] + 250 tower-placement[320,330]
+   + 250 tower-placement[280,150] + 250 tower-placement[270,80]
+   + 250 tower-placement[260,360] + 250 tower-placement[290,90]
+   + 250 tower-placement[110,280] + 250 tower-placement[350,90]
+   + 250 tower-placement[170,280] + 250 tower-placement[200,10]
+   + 250 tower-placement[340,370] + 250 tower-placement[370,100]
+   + 250 tower-placement[250,290] + 250 tower-placement[140,390]
+   + 250 tower-placement[310,130] + 250 tower-placement[270,300]
+   + 250 tower-placement[50,310] + 250 tower-placement[440,40]
+   + 250 tower-placement[260,230] + 250 tower-placement[220,50]
+   + 250 tower-placement[390,140] + 250 tower-placement[170,150]
+   + 250 tower-placement[240,60] + 250 tower-placement[20,70]
+   + 250 tower-placement[340,240] + 250 tower-placement[20,420]
+   + 250 tower-placement[120,250] + 250 tower-placement[10,350]
+   + 250 tower-placement[250,160] + 250 tower-placement[140,260]
+   + 250 tower-placement[50,180] + 250 tower-placement[260,100]
+   + 250 tower-placement[80,290] + 250 tower-placement[40,460]
+   + 250 tower-placement[110,20] + 250 tower-placement[390,10]
+   + 250 tower-placement[170,20] + 250 tower-placement[130,190]
+   + 250 tower-placement[60,120] + 250 tower-placement[340,110]
+   + 250 tower-placement[20,290] + 250 tower-placement[160,300]
+   + 250 tower-placement[190,30] + 250 tower-placement[50,50]
+   + 250 tower-placement[40,330] + 250 tower-placement[210,70]
+   + 250 tower-placement[160,170] + 250 tower-placement[10,90]
+   + 250 tower-placement[70,90] + 250 tower-placement[80,30]
+   + 250 tower-placement[30,130] + 250 tower-placement[160,40]
+   + 250 tower-placement[460,440] + 250 tower-placement[460,310]
+   + 250 tower-placement[450,240] + 250 tower-placement[430,450]
+   + 250 tower-placement[360,380] + 250 tower-placement[460,180]
+   + 250 tower-placement[280,370] + 250 tower-placement[290,310]
+   + 250 tower-placement[420,220] + 250 tower-placement[330,140]
+   + 250 tower-placement[360,250] + 250 tower-placement[310,350]
+   + 250 tower-placement[270,170] + 250 tower-placement[440,260]
+   + 250 tower-placement[390,360] + 250 tower-placement[410,20]
+   + 250 tower-placement[330,10] + 250 tower-placement[190,380]
+   + 250 tower-placement[150,200] + 250 tower-placement[250,380]
+   + 250 tower-placement[360,120] + 250 tower-placement[280,110]
+   + 250 tower-placement[100,300] + 250 tower-placement[270,390]
+   + 250 tower-placement[260,320] + 250 tower-placement[110,240]
+   + 250 tower-placement[390,230] + 250 tower-placement[170,240]
+   + 250 tower-placement[130,60] + 250 tower-placement[20,160]
+   + 250 tower-placement[300,150] + 250 tower-placement[10,440]
+   + 250 tower-placement[250,250] + 250 tower-placement[310,90]
+   + 250 tower-placement[230,80] + 250 tower-placement[50,270]
+   + 250 tower-placement[260,190] + 250 tower-placement[220,10]
+   + 250 tower-placement[390,100] + 250 tower-placement[130,280]
+   + 250 tower-placement[20,30] + 250 tower-placement[300,20]
+   + 250 tower-placement[20,380] + 250 tower-placement[160,390]
+   + 250 tower-placement[10,310] + 250 tower-placement[250,120]
+   + 250 tower-placement[70,310] + 250 tower-placement[140,220]
+   + 250 tower-placement[100,40] + 250 tower-placement[50,140]
+   + 250 tower-placement[40,70] + 250 tower-placement[30,350]
+   + 250 tower-placement[60,80] + 250 tower-placement[160,260]
+   + 250 tower-placement[10,180] + 250 tower-placement[50,10]
+   + 250 tower-placement[40,290] + 250 tower-placement[210,30]
+   + 250 tower-placement[10,50] + 250 tower-placement[70,50]
+   + 250 tower-placement[30,90] + 250 tower-placement[450,460]
+   + 250 tower-placement[380,390] + 250 tower-placement[460,50]
+   + 250 tower-placement[460,400] + 250 tower-placement[380,260]
+   + 250 tower-placement[330,360] + 250 tower-placement[460,270]
+   + 250 tower-placement[450,200] + 250 tower-placement[380,130]
+   + 250 tower-placement[410,240] + 250 tower-placement[360,340]
+   + 250 tower-placement[280,330] + 250 tower-placement[270,260]
+   + 250 tower-placement[240,370] + 250 tower-placement[300,370]
+   + 250 tower-placement[330,100] + 250 tower-placement[150,290]
+   + 250 tower-placement[430,280] + 250 tower-placement[320,380]
+   + 250 tower-placement[100,390] + 250 tower-placement[270,130]
+   + 250 tower-placement[440,220] + 250 tower-placement[180,50]
+   + 250 tower-placement[290,140] + 250 tower-placement[350,140]
+   + 250 tower-placement[130,150] + 250 tower-placement[200,60]
+   + 250 tower-placement[150,160] + 250 tower-placement[250,340]
+   + 250 tower-placement[100,260] + 250 tower-placement[260,280]
+   + 250 tower-placement[350,10] + 250 tower-placement[210,380]
+   + 250 tower-placement[170,200] + 250 tower-placement[130,20]
+   + 250 tower-placement[240,110] + 250 tower-placement[60,300]
+   + 250 tower-placement[20,120] + 250 tower-placement[300,110]
+   + 250 tower-placement[120,300] + 250 tower-placement[150,30]
+   + 250 tower-placement[10,400] + 250 tower-placement[250,210]
+   + 250 tower-placement[140,310] + 250 tower-placement[90,60]
+   + 250 tower-placement[260,150] + 250 tower-placement[40,160]
+   + 250 tower-placement[110,70] + 250 tower-placement[30,440]
+   + 250 tower-placement[60,170] + 250 tower-placement[10,270]
+   + 250 tower-placement[250,80] + 250 tower-placement[70,270]
+   + 250 tower-placement[140,180] + 250 tower-placement[90,280]
+   + 250 tower-placement[50,100] + 250 tower-placement[40,30]
+   + 250 tower-placement[30,310] + 250 tower-placement[60,40]
+   + 250 tower-placement[160,220] + 250 tower-placement[120,40]
+   + 250 tower-placement[10,140] + 250 tower-placement[80,80]
+   + 250 tower-placement[30,180] + 250 tower-placement[10,10]
+   + 250 tower-placement[70,10] + 250 tower-placement[30,50]
+   + 250 tower-placement[380,350] + 250 tower-placement[410,460]
+   + 250 tower-placement[460,10] + 250 tower-placement[460,360]
+   + 250 tower-placement[450,290] + 250 tower-placement[380,220]
+   + 250 tower-placement[370,150] + 250 tower-placement[270,350]
+   + 250 tower-placement[440,440] + 250 tower-placement[400,260]
+   + 250 tower-placement[290,360] + 250 tower-placement[350,360]
+   + 250 tower-placement[420,270] + 250 tower-placement[380,90]
+   + 250 tower-placement[370,20] + 250 tower-placement[370,370]
+   + 250 tower-placement[430,20] + 250 tower-placement[320,120]
+   + 250 tower-placement[450,30] + 250 tower-placement[270,220]
+   + 250 tower-placement[230,40] + 250 tower-placement[230,390]
+   + 250 tower-placement[350,230] + 250 tower-placement[130,240]
+   + 250 tower-placement[240,330] + 250 tower-placement[20,340]
+   + 250 tower-placement[300,330] + 250 tower-placement[150,250]
+   + 250 tower-placement[280,160] + 250 tower-placement[270,90]
+   + 250 tower-placement[50,450] + 250 tower-placement[260,370]
+   + 250 tower-placement[180,10] + 250 tower-placement[290,100]
+   + 250 tower-placement[110,290] + 250 tower-placement[350,100]
+   + 250 tower-placement[170,290] + 250 tower-placement[200,20]
+   + 250 tower-placement[340,380] + 250 tower-placement[120,390]
+   + 250 tower-placement[250,300] + 250 tower-placement[140,50]
+   + 250 tower-placement[310,140] + 250 tower-placement[50,320]
+   + 250 tower-placement[260,240] + 250 tower-placement[220,60]
+   + 250 tower-placement[170,160] + 250 tower-placement[240,70]
+   + 250 tower-placement[20,80] + 250 tower-placement[120,260]
+   + 250 tower-placement[10,360] + 250 tower-placement[250,170]
+   + 250 tower-placement[140,270] + 250 tower-placement[310,10]
+   + 250 tower-placement[90,20] + 250 tower-placement[50,190]
+   + 250 tower-placement[260,110] + 250 tower-placement[80,300]
+   + 250 tower-placement[40,120] + 250 tower-placement[110,30]
+   + 250 tower-placement[170,30] + 250 tower-placement[60,130]
+   + 250 tower-placement[160,310] + 250 tower-placement[50,60]
+   + 250 tower-placement[30,270] + 250 tower-placement[160,180]
+   + 250 tower-placement[10,100] + 250 tower-placement[70,100]
+   + 250 tower-placement[80,40] + 250 tower-placement[30,140]
+   + 250 tower-placement[460,230] + 250 tower-placement[30,10]
+   + 250 tower-placement[460,450] + 250 tower-placement[370,240]
+   + 250 tower-placement[430,240] + 250 tower-placement[320,340]
+   + 250 tower-placement[450,250] + 250 tower-placement[420,10]
+   + 250 tower-placement[370,110] + 250 tower-placement[430,460]
+   + 250 tower-placement[360,390] + 250 tower-placement[280,380]
+   + 250 tower-placement[270,310] + 250 tower-placement[400,220]
+   + 250 tower-placement[290,320] + 250 tower-placement[390,150]
+   + 250 tower-placement[340,250] + 250 tower-placement[20,430]
+   + 250 tower-placement[330,150] + 250 tower-placement[360,260]
+   + 250 tower-placement[310,360] + 250 tower-placement[270,180]
+   + 250 tower-placement[440,270] + 250 tower-placement[390,20]
+   + 250 tower-placement[390,370] + 250 tower-placement[130,200]
+   + 250 tower-placement[340,120] + 250 tower-placement[20,300]
+   + 250 tower-placement[190,40] + 250 tower-placement[330,20]
+   + 250 tower-placement[190,390] + 250 tower-placement[150,210]
+   + 250 tower-placement[250,390] + 250 tower-placement[360,130]
+   + 250 tower-placement[140,140] + 250 tower-placement[280,120]
+   + 250 tower-placement[100,310] + 250 tower-placement[260,330]
+   + 250 tower-placement[40,340] + 250 tower-placement[110,250]
+   + 250 tower-placement[170,250] + 250 tower-placement[20,170]
+   + 250 tower-placement[300,160] + 250 tower-placement[10,450]
+   + 250 tower-placement[250,260] + 250 tower-placement[140,10]
+   + 250 tower-placement[310,100] + 250 tower-placement[50,280]
+   + 250 tower-placement[260,200] + 250 tower-placement[220,20]
+   + 250 tower-placement[20,40] + 250 tower-placement[160,50]
+   + 250 tower-placement[10,320] + 250 tower-placement[250,130]
+   + 250 tower-placement[70,320] + 250 tower-placement[100,50]
+   + 250 tower-placement[50,150] + 250 tower-placement[80,260]
+   + 250 tower-placement[40,80] + 250 tower-placement[60,90]
+   + 250 tower-placement[160,270] + 250 tower-placement[10,190]
+   + 250 tower-placement[50,20] + 250 tower-placement[460,320]
+   + 250 tower-placement[10,60] + 250 tower-placement[70,60]
+   + 250 tower-placement[30,100] + 250 tower-placement[460,190]
+   + 250 tower-placement[420,230] + 250 tower-placement[460,60]
+   + 250 tower-placement[330,370] + 250 tower-placement[450,210]
+   + 250 tower-placement[390,240] + 250 tower-placement[380,140]
+   + 250 tower-placement[340,340] + 250 tower-placement[410,250]
+   + 250 tower-placement[360,350] + 250 tower-placement[280,340]
+   + 250 tower-placement[270,270] + 250 tower-placement[230,90]
+   + 250 tower-placement[440,10] + 250 tower-placement[220,370]
+   + 250 tower-placement[390,110] + 250 tower-placement[130,290]
+   + 250 tower-placement[380,10] + 250 tower-placement[240,380]
+   + 250 tower-placement[20,390] + 250 tower-placement[300,380]
+   + 250 tower-placement[330,110] + 250 tower-placement[150,300]
+   + 250 tower-placement[360,220] + 250 tower-placement[140,230]
+   + 250 tower-placement[270,140] + 250 tower-placement[180,60]
+   + 250 tower-placement[290,150] + 250 tower-placement[350,150]
+   + 250 tower-placement[130,160] + 250 tower-placement[200,70]
+   + 250 tower-placement[150,170] + 250 tower-placement[250,350]
+   + 250 tower-placement[360,90] + 250 tower-placement[100,270]
+   + 250 tower-placement[260,290] + 250 tower-placement[40,300]
+   + 250 tower-placement[210,40] + 250 tower-placement[350,20]
+   + 250 tower-placement[210,390] + 250 tower-placement[170,210]
+   + 250 tower-placement[130,30] + 250 tower-placement[60,310]
+   + 250 tower-placement[20,130] + 250 tower-placement[160,140]
+   + 250 tower-placement[300,120] + 250 tower-placement[120,310]
+   + 250 tower-placement[150,40] + 250 tower-placement[10,410]
+   + 250 tower-placement[250,220] + 250 tower-placement[90,70]
+   + 250 tower-placement[260,160] + 250 tower-placement[40,170]
+   + 250 tower-placement[30,450] + 250 tower-placement[60,180]
+   + 250 tower-placement[160,10] + 250 tower-placement[10,280]
+   + 250 tower-placement[70,280] + 250 tower-placement[100,10]
+   + 250 tower-placement[50,110] + 250 tower-placement[40,40]
+   + 250 tower-placement[30,320] + 250 tower-placement[60,50]
+   + 250 tower-placement[120,50] + 250 tower-placement[460,410]
+   + 250 tower-placement[10,150] + 250 tower-placement[80,90]
+   + 250 tower-placement[30,190] + 250 tower-placement[460,280]
+   + 250 tower-placement[10,20] + 250 tower-placement[70,20]
+   + 250 tower-placement[30,60] + 250 tower-placement[450,430]
+   + 250 tower-placement[380,360] + 250 tower-placement[460,20]
+   + 250 tower-placement[320,390] + 250 tower-placement[450,300]
+   + 250 tower-placement[440,230] + 250 tower-placement[380,230]
+   + 250 tower-placement[330,330] + 250 tower-placement[270,360]
+   + 250 tower-placement[440,450] + 250 tower-placement[400,270]
+   + 250 tower-placement[290,370] + 250 tower-placement[350,370]
+   + 250 tower-placement[240,120] + 250 tower-placement[380,100]
+   + 250 tower-placement[430,30] + 250 tower-placement[150,390]
+   + 250 tower-placement[320,130] + 250 tower-placement[280,300]
+   + 250 tower-placement[450,40] + 250 tower-placement[270,230]
+   + 250 tower-placement[230,50] + 250 tower-placement[350,240]
+   + 250 tower-placement[130,250] + 250 tower-placement[240,340]
+   + 250 tower-placement[20,350] + 250 tower-placement[300,340]
+   + 250 tower-placement[150,260] + 250 tower-placement[250,90]
+   + 250 tower-placement[140,190] + 250 tower-placement[270,100]
+   + 250 tower-placement[90,290] + 250 tower-placement[50,460]
+   + 250 tower-placement[400,10] + 250 tower-placement[260,380]
+   + 250 tower-placement[180,20] + 250 tower-placement[110,300]
+   + 250 tower-placement[350,110] + 250 tower-placement[170,300]
+   + 250 tower-placement[200,30] + 250 tower-placement[160,230]
+   + 250 tower-placement[250,310] + 250 tower-placement[140,60]
+   + 250 tower-placement[310,150] + 250 tower-placement[50,330]
+   + 250 tower-placement[260,250] + 250 tower-placement[220,70]
+   + 250 tower-placement[170,170] + 250 tower-placement[60,270]
+   + 250 tower-placement[20,90] + 250 tower-placement[120,270]
+   + 250 tower-placement[10,370] + 250 tower-placement[310,20]
+   + 250 tower-placement[90,30] + 250 tower-placement[80,310]
+   + 250 tower-placement[40,130] + 250 tower-placement[110,40]
+   + 250 tower-placement[170,40] + 250 tower-placement[60,140]
+   + 250 tower-placement[30,280] + 250 tower-placement[60,10]
+   + 250 tower-placement[120,10] + 250 tower-placement[460,370]
+   + 250 tower-placement[10,110] + 250 tower-placement[80,50]
+   + 250 tower-placement[30,150] + 250 tower-placement[460,240]
+   + 250 tower-placement[30,20] + 250 tower-placement[370,380]
+   + 250 tower-placement[370,250] + 250 tower-placement[430,250]
+   + 250 tower-placement[320,350] + 250 tower-placement[280,170]
+   + 250 tower-placement[450,260] + 250 tower-placement[290,110]
+   + 250 tower-placement[420,20] + 250 tower-placement[200,380]
+   + 250 tower-placement[340,390] + 250 tower-placement[370,120]
+   + 250 tower-placement[280,390] + 250 tower-placement[270,320]
+   + 250 tower-placement[400,230] + 250 tower-placement[290,330]
+   + 250 tower-placement[240,80] + 250 tower-placement[340,260]
+   + 250 tower-placement[20,440] + 250 tower-placement[250,180]
+   + 250 tower-placement[320,90] + 250 tower-placement[140,280]
+   + 250 tower-placement[310,370] + 250 tower-placement[270,190]
+   + 250 tower-placement[230,10] + 250 tower-placement[260,120]
+   + 250 tower-placement[110,390] + 250 tower-placement[170,390]
+   + 250 tower-placement[130,210] + 250 tower-placement[340,130]
+   + 250 tower-placement[20,310] + 250 tower-placement[190,50]
+   + 250 tower-placement[150,220] + 250 tower-placement[360,140]
+   + 250 tower-placement[140,150] + 250 tower-placement[50,70]
+   + 250 tower-placement[260,340] + 250 tower-placement[110,260]
+   + 250 tower-placement[170,260] + 250 tower-placement[20,180]
+   + 250 tower-placement[160,190] + 250 tower-placement[10,460]
+   + 250 tower-placement[70,460] + 250 tower-placement[360,10]
+   + 250 tower-placement[140,20] + 250 tower-placement[310,110]
+   + 250 tower-placement[50,290] + 250 tower-placement[220,30]
+   + 250 tower-placement[20,50] + 250 tower-placement[160,60]
+   + 250 tower-placement[120,230] + 250 tower-placement[10,330]
+   + 250 tower-placement[80,270] + 250 tower-placement[40,90]
+   + 250 tower-placement[60,100] + 250 tower-placement[460,460]
+   + 250 tower-placement[460,330] + 250 tower-placement[80,10]
+   + 250 tower-placement[30,110] + 250 tower-placement[460,200]
+   + 250 tower-placement[420,240] + 250 tower-placement[370,340]
+   + 250 tower-placement[460,70] + 250 tower-placement[230,360]
+   + 250 tower-placement[440,280] + 250 tower-placement[390,380]
+   + 250 tower-placement[330,380] + 250 tower-placement[430,210]
+   + 250 tower-placement[280,130] + 250 tower-placement[450,220]
+   + 250 tower-placement[390,250] + 250 tower-placement[340,350]
+   + 250 tower-placement[410,260] + 250 tower-placement[250,270]
+   + 250 tower-placement[360,360] + 250 tower-placement[270,280]
+   + 250 tower-placement[440,20] + 250 tower-placement[260,210]
+   + 250 tower-placement[220,380] + 250 tower-placement[390,120]
+   + 250 tower-placement[130,300] + 250 tower-placement[340,220]
+   + 250 tower-placement[20,400] + 250 tower-placement[300,390]
+   + 250 tower-placement[150,310] + 250 tower-placement[250,140]
+   + 250 tower-placement[360,230] + 250 tower-placement[140,240]
+   + 250 tower-placement[100,60] + 250 tower-placement[310,330]
+   + 250 tower-placement[270,150] + 250 tower-placement[50,160]
+   + 250 tower-placement[260,80] + 250 tower-placement[40,440]
+   + 250 tower-placement[130,170] + 250 tower-placement[340,90]
+   + 250 tower-placement[20,270] + 250 tower-placement[160,280]
+   + 250 tower-placement[190,10] + 250 tower-placement[150,180]
+   + 250 tower-placement[360,100] + 250 tower-placement[100,280]
+   + 250 tower-placement[50,30] + 250 tower-placement[40,310]
+   + 250 tower-placement[210,50] + 250 tower-placement[170,220]
+   + 250 tower-placement[130,40] + 250 tower-placement[60,320]
+   + 250 tower-placement[20,140] + 250 tower-placement[160,150]
+   + 250 tower-placement[10,70] + 250 tower-placement[10,420]
+   + 250 tower-placement[70,70] + 250 tower-placement[90,80]
+   + 250 tower-placement[40,180] + 250 tower-placement[30,460]
+   + 250 tower-placement[60,190] + 250 tower-placement[20,10]
+   + 250 tower-placement[160,20] + 250 tower-placement[10,290]
+   + 250 tower-placement[70,290] + 250 tower-placement[40,50]
+   + 250 tower-placement[30,330] + 250 tower-placement[460,420]
+   + 250 tower-placement[420,460] + 250 tower-placement[460,290]
+   + 250 tower-placement[380,150] + 250 tower-placement[460,160]
+   + 250 tower-placement[280,350] + 250 tower-placement[450,440]
+   + 250 tower-placement[380,20] + 250 tower-placement[240,390]
+   + 250 tower-placement[380,370] + 250 tower-placement[330,120]
+   + 250 tower-placement[460,30] + 250 tower-placement[440,240]
+   + 250 tower-placement[290,160] + 250 tower-placement[390,340]
+   + 250 tower-placement[250,360] + 250 tower-placement[280,90]
+   + 250 tower-placement[270,370] + 250 tower-placement[260,300]
+   + 250 tower-placement[290,380] + 250 tower-placement[350,380]
+   + 250 tower-placement[130,390] + 250 tower-placement[300,130]
+   + 250 tower-placement[410,220] + 250 tower-placement[150,50]
+   + 250 tower-placement[250,230] + 250 tower-placement[320,140]
+   + 250 tower-placement[270,240] + 250 tower-placement[230,60]
+   + 250 tower-placement[260,170] + 250 tower-placement[130,260]
+   + 250 tower-placement[20,360] + 250 tower-placement[150,270]
+   + 250 tower-placement[250,100] + 250 tower-placement[320,10]
+   + 250 tower-placement[140,200] + 250 tower-placement[100,20]
+   + 250 tower-placement[270,110] + 250 tower-placement[90,300]
+   + 250 tower-placement[50,120] + 250 tower-placement[180,30]
+   + 250 tower-placement[110,310] + 250 tower-placement[170,310]
+   + 250 tower-placement[60,60] + 250 tower-placement[160,240]
+   + 250 tower-placement[120,60] + 250 tower-placement[10,160]
+   + 250 tower-placement[220,80] + 250 tower-placement[40,270]
+   + 250 tower-placement[210,10] + 250 tower-placement[170,180]
+   + 250 tower-placement[60,280] + 250 tower-placement[20,100]
+   + 250 tower-placement[120,280] + 250 tower-placement[10,30]
+   + 250 tower-placement[10,380] + 250 tower-placement[70,30]
+   + 250 tower-placement[90,40] + 250 tower-placement[80,320]
+   + 250 tower-placement[40,140] + 250 tower-placement[30,70]
+   + 250 tower-placement[40,10] + 250 tower-placement[30,290]
+   + 250 tower-placement[460,380] + 250 tower-placement[380,240]
+   + 250 tower-placement[330,340] + 250 tower-placement[460,250]
+   + 250 tower-placement[440,460] + 250 tower-placement[380,110]
+   + 250 tower-placement[370,390] + 250 tower-placement[280,310]
+   + 250 tower-placement[450,50] + 250 tower-placement[350,250]
+   + 250 tower-placement[240,350] + 250 tower-placement[300,350]
+   + 250 tower-placement[370,260] + 250 tower-placement[430,260]
+   + 250 tower-placement[320,360] + 250 tower-placement[280,180]
+   + 250 tower-placement[450,270] + 250 tower-placement[440,200]
+   + 250 tower-placement[400,20] + 250 tower-placement[260,390]
+   + 250 tower-placement[290,120] + 250 tower-placement[350,120]
+   + 250 tower-placement[200,40] + 250 tower-placement[200,390]
+   + 250 tower-placement[370,130] + 250 tower-placement[150,140]
+   + 250 tower-placement[250,320] + 250 tower-placement[310,160]
+   + 250 tower-placement[270,330] + 250 tower-placement[260,260]
+   + 250 tower-placement[240,90] + 250 tower-placement[300,90]
+   + 250 tower-placement[20,450] + 250 tower-placement[150,10]
+   + 250 tower-placement[250,190] + 250 tower-placement[320,100]
+   + 250 tower-placement[140,290] + 250 tower-placement[310,380]
+   + 250 tower-placement[270,200] + 250 tower-placement[230,20]
+   + 250 tower-placement[90,390] + 250 tower-placement[260,130]
+   + 250 tower-placement[110,50] + 250 tower-placement[170,50]
+   + 250 tower-placement[130,220] + 250 tower-placement[60,150]
+   + 250 tower-placement[340,140] + 250 tower-placement[20,320]
+   + 250 tower-placement[190,60] + 250 tower-placement[140,160]
+   + 250 tower-placement[90,260] + 250 tower-placement[50,80]
+   + 250 tower-placement[110,270] + 250 tower-placement[170,270]
+   + 250 tower-placement[60,20] + 250 tower-placement[340,10]
+   + 250 tower-placement[20,190] + 250 tower-placement[160,200]
+   + 250 tower-placement[120,20] + 250 tower-placement[10,120]
+   + 250 tower-placement[140,30] + 250 tower-placement[80,60]
+   + 250 tower-placement[30,160] + 250 tower-placement[20,60]
+   + 250 tower-placement[80,280] + 250 tower-placement[40,100]
+   + 250 tower-placement[30,30] + 250 tower-placement[460,340]
+   + 250 tower-placement[460,210] + 250 tower-placement[400,240]
+   + 250 tower-placement[290,340] + 250 tower-placement[350,340]
+   + 250 tower-placement[420,250] + 250 tower-placement[370,350]
+   + 250 tower-placement[460,80] + 250 tower-placement[450,10]
+   + 250 tower-placement[230,370] + 250 tower-placement[440,290]
+   + 250 tower-placement[400,460] + 250 tower-placement[390,390]
+   + 250 tower-placement[370,220] + 250 tower-placement[150,230]
+   + 250 tower-placement[430,220] + 250 tower-placement[360,150]
+   + 250 tower-placement[280,140] + 250 tower-placement[260,350]
+   + 250 tower-placement[390,260] + 250 tower-placement[340,360]
+   + 250 tower-placement[410,270] + 250 tower-placement[370,90]
+   + 250 tower-placement[250,280] + 250 tower-placement[360,20]
+   + 250 tower-placement[360,370] + 250 tower-placement[310,120]
+   + 250 tower-placement[270,290] + 250 tower-placement[50,300]
+   + 250 tower-placement[440,30] + 250 tower-placement[260,220]
+   + 250 tower-placement[220,40] + 250 tower-placement[220,390]
+   + 250 tower-placement[390,130] + 250 tower-placement[170,140]
+   + 250 tower-placement[130,310] + 250 tower-placement[240,50]
+   + 250 tower-placement[340,230] + 250 tower-placement[20,410]
+   + 250 tower-placement[120,240] + 250 tower-placement[10,340]
+   + 250 tower-placement[250,150] + 250 tower-placement[140,250]
+   + 250 tower-placement[100,70] + 250 tower-placement[270,160]
+   + 250 tower-placement[50,170] + 250 tower-placement[260,90]
+   + 250 tower-placement[40,450] + 250 tower-placement[110,10]
+   + 250 tower-placement[170,10] + 250 tower-placement[130,180]
+   + 250 tower-placement[60,110] + 250 tower-placement[340,100]
+   + 250 tower-placement[60,460] + 250 tower-placement[20,280]
+   + 250 tower-placement[160,290] + 250 tower-placement[190,20]
+   + 250 tower-placement[50,40] + 250 tower-placement[40,320]
+   + 250 tower-placement[210,60] + 250 tower-placement[130,50]
+   + 250 tower-placement[20,150] + 250 tower-placement[160,160]
+   + 250 tower-placement[10,80] + 250 tower-placement[70,80]
+   + 250 tower-placement[80,20] + 250 tower-placement[40,190]
+   + 250 tower-placement[30,120] + 250 tower-placement[20,20]
+   + 250 tower-placement[160,30] + 250 tower-placement[40,60]
+   + 250 tower-placement[460,430] + 250 tower-placement[330,390]
+   + 250 tower-placement[460,300] + 250 tower-placement[450,230]
+   + 250 tower-placement[460,170] + 250 tower-placement[280,360]
+   + 250 tower-placement[450,450] + 250 tower-placement[330,130]
+   + 250 tower-placement[360,240] + 250 tower-placement[460,40]
+   + 250 tower-placement[310,340] + 250 tower-placement[440,250]
+   + 250 tower-placement[290,170] + 250 tower-placement[390,350]
+   + 250 tower-placement[410,10] + 250 tower-placement[150,190]
+   + 250 tower-placement[250,370] + 250 tower-placement[360,110]
+   + 250 tower-placement[280,100] + 250 tower-placement[100,290]
+   + 250 tower-placement[270,380] + 250 tower-placement[260,310]
+   + 250 tower-placement[390,220] + 250 tower-placement[170,230]
+   + 250 tower-placement[300,140] + 250 tower-placement[150,60]
+   + 250 tower-placement[10,430] + 250 tower-placement[250,240]
+   + 250 tower-placement[320,150] + 250 tower-placement[270,250]
+   + 250 tower-placement[230,70] + 250 tower-placement[260,180]
+   + 250 tower-placement[390,90] + 250 tower-placement[130,270]
+   + 250 tower-placement[300,10] + 250 tower-placement[20,370]
+   + 250 tower-placement[10,300] + 250 tower-placement[250,110]
+   + 250 tower-placement[70,300] + 250 tower-placement[320,20]
+   + 250 tower-placement[140,210] + 250 tower-placement[100,30]
+   + 250 tower-placement[270,120] + 250 tower-placement[90,310]
+   + 250 tower-placement[50,130] + 250 tower-placement[180,40]
+   + 250 tower-placement[30,340] + 250 tower-placement[130,140]
+   + 250 tower-placement[60,70] + 250 tower-placement[160,250]
+   + 250 tower-placement[120,70] + 250 tower-placement[10,170]
+   + 250 tower-placement[80,460] + 250 tower-placement[40,280]
+   + 250 tower-placement[210,20] + 250 tower-placement[130,10]
+   + 250 tower-placement[20,110] + 250 tower-placement[10,40]
+   + 250 tower-placement[70,40] + 250 tower-placement[90,50]
+   + 250 tower-placement[40,150] + 250 tower-placement[30,80]
+   + 250 tower-placement[40,20] + 250 tower-placement[380,380]
+   + 250 tower-placement[460,390] + 250 tower-placement[380,250]
+   + 250 tower-placement[330,350] + 250 tower-placement[460,260]
+   + 250 tower-placement[450,190] + 250 tower-placement[290,390]
+   + 250 tower-placement[350,390] + 250 tower-placement[380,120]
+   + 250 tower-placement[410,230] + 250 tower-placement[280,320]
+   + 250 tower-placement[350,260] + 250 tower-placement[240,360]
+   + 250 tower-placement[300,360] + 250 tower-placement[330,90]
+   + 250 tower-placement[150,280] + 250 tower-placement[430,270]
+   + 250 tower-placement[320,370] + 250 tower-placement[280,190] <= 29019
+Bounds
+Binaries
+ tower-placement[440,210] tower-placement[180,390] tower-placement[290,130]
+ tower-placement[350,130] tower-placement[200,50] tower-placement[370,140]
+ tower-placement[150,150] tower-placement[250,330] tower-placement[100,250]
+ tower-placement[270,340] tower-placement[260,270] tower-placement[170,190]
+ tower-placement[240,100] tower-placement[60,290] tower-placement[300,100]
+ tower-placement[20,460] tower-placement[120,290] tower-placement[370,10]
+ tower-placement[150,20] tower-placement[430,10] tower-placement[10,390]
+ tower-placement[250,200] tower-placement[320,110] tower-placement[140,300]
+ tower-placement[270,210] tower-placement[230,30] tower-placement[260,140]
+ tower-placement[110,60] tower-placement[170,60] tower-placement[30,430]
+ tower-placement[130,230] tower-placement[60,160] tower-placement[340,150]
+ tower-placement[20,330] tower-placement[190,70] tower-placement[250,70]
+ tower-placement[70,260] tower-placement[140,170] tower-placement[90,270]
+ tower-placement[50,90] tower-placement[30,300] tower-placement[60,30]
+ tower-placement[340,20] tower-placement[160,210] tower-placement[120,30]
+ tower-placement[10,130] tower-placement[140,40] tower-placement[80,70]
+ tower-placement[30,170] tower-placement[90,10] tower-placement[40,110]
+ tower-placement[30,40] tower-placement[380,340] tower-placement[460,350]
+ tower-placement[450,280] tower-placement[460,220] tower-placement[400,250]
+ tower-placement[290,350] tower-placement[350,350] tower-placement[420,260]
+ tower-placement[370,360] tower-placement[450,20] tower-placement[310,390]
+ tower-placement[230,380] tower-placement[350,220] tower-placement[300,320]
+ tower-placement[370,230] tower-placement[150,240] tower-placement[430,230]
+ tower-placement[320,330] tower-placement[280,150] tower-placement[270,80]
+ tower-placement[260,360] tower-placement[290,90] tower-placement[110,280]
+ tower-placement[350,90] tower-placement[170,280] tower-placement[200,10]
+ tower-placement[340,370] tower-placement[370,100] tower-placement[250,290]
+ tower-placement[140,390] tower-placement[310,130] tower-placement[270,300]
+ tower-placement[50,310] tower-placement[440,40] tower-placement[260,230]
+ tower-placement[220,50] tower-placement[390,140] tower-placement[170,150]
+ tower-placement[240,60] tower-placement[20,70] tower-placement[340,240]
+ tower-placement[20,420] tower-placement[120,250] tower-placement[10,350]
+ tower-placement[250,160] tower-placement[140,260] tower-placement[50,180]
+ tower-placement[260,100] tower-placement[80,290] tower-placement[40,460]
+ tower-placement[110,20] tower-placement[390,10] tower-placement[170,20]
+ tower-placement[130,190] tower-placement[60,120] tower-placement[340,110]
+ tower-placement[20,290] tower-placement[160,300] tower-placement[190,30]
+ tower-placement[50,50] tower-placement[40,330] tower-placement[210,70]
+ tower-placement[160,170] tower-placement[10,90] tower-placement[70,90]
+ tower-placement[80,30] tower-placement[30,130] tower-placement[160,40]
+ tower-placement[460,440] tower-placement[460,310] tower-placement[450,240]
+ tower-placement[430,450] tower-placement[360,380] tower-placement[460,180]
+ tower-placement[280,370] tower-placement[290,310] tower-placement[420,220]
+ tower-placement[330,140] tower-placement[360,250] tower-placement[310,350]
+ tower-placement[270,170] tower-placement[440,260] tower-placement[390,360]
+ tower-placement[410,20] tower-placement[330,10] tower-placement[190,380]
+ tower-placement[150,200] tower-placement[250,380] tower-placement[360,120]
+ tower-placement[280,110] tower-placement[100,300] tower-placement[270,390]
+ tower-placement[260,320] tower-placement[110,240] tower-placement[390,230]
+ tower-placement[170,240] tower-placement[130,60] tower-placement[20,160]
+ tower-placement[300,150] tower-placement[10,440] tower-placement[250,250]
+ tower-placement[310,90] tower-placement[230,80] tower-placement[50,270]
+ tower-placement[260,190] tower-placement[220,10] tower-placement[390,100]
+ tower-placement[130,280] tower-placement[20,30] tower-placement[300,20]
+ tower-placement[20,380] tower-placement[160,390] tower-placement[10,310]
+ tower-placement[250,120] tower-placement[70,310] tower-placement[140,220]
+ tower-placement[100,40] tower-placement[50,140] tower-placement[40,70]
+ tower-placement[30,350] tower-placement[60,80] tower-placement[160,260]
+ tower-placement[10,180] tower-placement[50,10] tower-placement[40,290]
+ tower-placement[210,30] tower-placement[10,50] tower-placement[70,50]
+ tower-placement[30,90] tower-placement[450,460] tower-placement[380,390]
+ tower-placement[460,50] tower-placement[460,400] tower-placement[380,260]
+ tower-placement[330,360] tower-placement[460,270] tower-placement[450,200]
+ tower-placement[380,130] tower-placement[410,240] tower-placement[360,340]
+ tower-placement[280,330] tower-placement[270,260] tower-placement[240,370]
+ tower-placement[300,370] tower-placement[330,100] tower-placement[150,290]
+ tower-placement[430,280] tower-placement[320,380] tower-placement[100,390]
+ tower-placement[270,130] tower-placement[440,220] tower-placement[180,50]
+ tower-placement[290,140] tower-placement[350,140] tower-placement[130,150]
+ tower-placement[200,60] tower-placement[150,160] tower-placement[250,340]
+ tower-placement[100,260] tower-placement[260,280] tower-placement[350,10]
+ tower-placement[210,380] tower-placement[170,200] tower-placement[130,20]
+ tower-placement[240,110] tower-placement[60,300] tower-placement[20,120]
+ tower-placement[300,110] tower-placement[120,300] tower-placement[150,30]
+ tower-placement[10,400] tower-placement[250,210] tower-placement[140,310]
+ tower-placement[90,60] tower-placement[260,150] tower-placement[40,160]
+ tower-placement[110,70] tower-placement[30,440] tower-placement[60,170]
+ tower-placement[10,270] tower-placement[250,80] tower-placement[70,270]
+ tower-placement[140,180] tower-placement[90,280] tower-placement[50,100]
+ tower-placement[40,30] tower-placement[30,310] tower-placement[60,40]
+ tower-placement[160,220] tower-placement[120,40] tower-placement[10,140]
+ tower-placement[80,80] tower-placement[30,180] tower-placement[10,10]
+ tower-placement[70,10] tower-placement[30,50] tower-placement[380,350]
+ tower-placement[410,460] tower-placement[460,10] tower-placement[460,360]
+ tower-placement[450,290] tower-placement[380,220] tower-placement[370,150]
+ tower-placement[270,350] tower-placement[440,440] tower-placement[400,260]
+ tower-placement[290,360] tower-placement[350,360] tower-placement[420,270]
+ tower-placement[380,90] tower-placement[370,20] tower-placement[370,370]
+ tower-placement[430,20] tower-placement[320,120] tower-placement[450,30]
+ tower-placement[270,220] tower-placement[230,40] tower-placement[230,390]
+ tower-placement[350,230] tower-placement[130,240] tower-placement[240,330]
+ tower-placement[20,340] tower-placement[300,330] tower-placement[150,250]
+ tower-placement[280,160] tower-placement[270,90] tower-placement[50,450]
+ tower-placement[260,370] tower-placement[180,10] tower-placement[290,100]
+ tower-placement[110,290] tower-placement[350,100] tower-placement[170,290]
+ tower-placement[200,20] tower-placement[340,380] tower-placement[120,390]
+ tower-placement[250,300] tower-placement[140,50] tower-placement[310,140]
+ tower-placement[50,320] tower-placement[260,240] tower-placement[220,60]
+ tower-placement[170,160] tower-placement[240,70] tower-placement[20,80]
+ tower-placement[120,260] tower-placement[10,360] tower-placement[250,170]
+ tower-placement[140,270] tower-placement[310,10] tower-placement[90,20]
+ tower-placement[50,190] tower-placement[260,110] tower-placement[80,300]
+ tower-placement[40,120] tower-placement[110,30] tower-placement[170,30]
+ tower-placement[60,130] tower-placement[160,310] tower-placement[50,60]
+ tower-placement[30,270] tower-placement[160,180] tower-placement[10,100]
+ tower-placement[70,100] tower-placement[80,40] tower-placement[30,140]
+ tower-placement[460,230] tower-placement[30,10] tower-placement[460,450]
+ tower-placement[370,240] tower-placement[430,240] tower-placement[320,340]
+ tower-placement[450,250] tower-placement[420,10] tower-placement[370,110]
+ tower-placement[430,460] tower-placement[360,390] tower-placement[280,380]
+ tower-placement[270,310] tower-placement[400,220] tower-placement[290,320]
+ tower-placement[390,150] tower-placement[340,250] tower-placement[20,430]
+ tower-placement[330,150] tower-placement[360,260] tower-placement[310,360]
+ tower-placement[270,180] tower-placement[440,270] tower-placement[390,20]
+ tower-placement[390,370] tower-placement[130,200] tower-placement[340,120]
+ tower-placement[20,300] tower-placement[190,40] tower-placement[330,20]
+ tower-placement[190,390] tower-placement[150,210] tower-placement[250,390]
+ tower-placement[360,130] tower-placement[140,140] tower-placement[280,120]
+ tower-placement[100,310] tower-placement[260,330] tower-placement[40,340]
+ tower-placement[110,250] tower-placement[170,250] tower-placement[20,170]
+ tower-placement[300,160] tower-placement[10,450] tower-placement[250,260]
+ tower-placement[140,10] tower-placement[310,100] tower-placement[50,280]
+ tower-placement[260,200] tower-placement[220,20] tower-placement[20,40]
+ tower-placement[160,50] tower-placement[10,320] tower-placement[250,130]
+ tower-placement[70,320] tower-placement[100,50] tower-placement[50,150]
+ tower-placement[80,260] tower-placement[40,80] tower-placement[60,90]
+ tower-placement[160,270] tower-placement[10,190] tower-placement[50,20]
+ tower-placement[460,320] tower-placement[10,60] tower-placement[70,60]
+ tower-placement[30,100] tower-placement[460,190] tower-placement[420,230]
+ tower-placement[460,60] tower-placement[330,370] tower-placement[450,210]
+ tower-placement[390,240] tower-placement[380,140] tower-placement[340,340]
+ tower-placement[410,250] tower-placement[360,350] tower-placement[280,340]
+ tower-placement[270,270] tower-placement[230,90] tower-placement[440,10]
+ tower-placement[220,370] tower-placement[390,110] tower-placement[130,290]
+ tower-placement[380,10] tower-placement[240,380] tower-placement[20,390]
+ tower-placement[300,380] tower-placement[330,110] tower-placement[150,300]
+ tower-placement[360,220] tower-placement[140,230] tower-placement[270,140]
+ tower-placement[180,60] tower-placement[290,150] tower-placement[350,150]
+ tower-placement[130,160] tower-placement[200,70] tower-placement[150,170]
+ tower-placement[250,350] tower-placement[360,90] tower-placement[100,270]
+ tower-placement[260,290] tower-placement[40,300] tower-placement[210,40]
+ tower-placement[350,20] tower-placement[210,390] tower-placement[170,210]
+ tower-placement[130,30] tower-placement[60,310] tower-placement[20,130]
+ tower-placement[160,140] tower-placement[300,120] tower-placement[120,310]
+ tower-placement[150,40] tower-placement[10,410] tower-placement[250,220]
+ tower-placement[90,70] tower-placement[260,160] tower-placement[40,170]
+ tower-placement[30,450] tower-placement[60,180] tower-placement[160,10]
+ tower-placement[10,280] tower-placement[70,280] tower-placement[100,10]
+ tower-placement[50,110] tower-placement[40,40] tower-placement[30,320]
+ tower-placement[60,50] tower-placement[120,50] tower-placement[460,410]
+ tower-placement[10,150] tower-placement[80,90] tower-placement[30,190]
+ tower-placement[460,280] tower-placement[10,20] tower-placement[70,20]
+ tower-placement[30,60] tower-placement[450,430] tower-placement[380,360]
+ tower-placement[460,20] tower-placement[320,390] tower-placement[450,300]
+ tower-placement[440,230] tower-placement[380,230] tower-placement[330,330]
+ tower-placement[270,360] tower-placement[440,450] tower-placement[400,270]
+ tower-placement[290,370] tower-placement[350,370] tower-placement[240,120]
+ tower-placement[380,100] tower-placement[430,30] tower-placement[150,390]
+ tower-placement[320,130] tower-placement[280,300] tower-placement[450,40]
+ tower-placement[270,230] tower-placement[230,50] tower-placement[350,240]
+ tower-placement[130,250] tower-placement[240,340] tower-placement[20,350]
+ tower-placement[300,340] tower-placement[150,260] tower-placement[250,90]
+ tower-placement[140,190] tower-placement[270,100] tower-placement[90,290]
+ tower-placement[50,460] tower-placement[400,10] tower-placement[260,380]
+ tower-placement[180,20] tower-placement[110,300] tower-placement[350,110]
+ tower-placement[170,300] tower-placement[200,30] tower-placement[160,230]
+ tower-placement[250,310] tower-placement[140,60] tower-placement[310,150]
+ tower-placement[50,330] tower-placement[260,250] tower-placement[220,70]
+ tower-placement[170,170] tower-placement[60,270] tower-placement[20,90]
+ tower-placement[120,270] tower-placement[10,370] tower-placement[310,20]
+ tower-placement[90,30] tower-placement[80,310] tower-placement[40,130]
+ tower-placement[110,40] tower-placement[170,40] tower-placement[60,140]
+ tower-placement[30,280] tower-placement[60,10] tower-placement[120,10]
+ tower-placement[460,370] tower-placement[10,110] tower-placement[80,50]
+ tower-placement[30,150] tower-placement[460,240] tower-placement[30,20]
+ tower-placement[370,380] tower-placement[370,250] tower-placement[430,250]
+ tower-placement[320,350] tower-placement[280,170] tower-placement[450,260]
+ tower-placement[290,110] tower-placement[420,20] tower-placement[200,380]
+ tower-placement[340,390] tower-placement[370,120] tower-placement[280,390]
+ tower-placement[270,320] tower-placement[400,230] tower-placement[290,330]
+ tower-placement[240,80] tower-placement[340,260] tower-placement[20,440]
+ tower-placement[250,180] tower-placement[320,90] tower-placement[140,280]
+ tower-placement[310,370] tower-placement[270,190] tower-placement[230,10]
+ tower-placement[260,120] tower-placement[110,390] tower-placement[170,390]
+ tower-placement[130,210] tower-placement[340,130] tower-placement[20,310]
+ tower-placement[190,50] tower-placement[150,220] tower-placement[360,140]
+ tower-placement[140,150] tower-placement[50,70] tower-placement[260,340]
+ tower-placement[110,260] tower-placement[170,260] tower-placement[20,180]
+ tower-placement[160,190] tower-placement[10,460] tower-placement[70,460]
+ tower-placement[360,10] tower-placement[140,20] tower-placement[310,110]
+ tower-placement[50,290] tower-placement[220,30] tower-placement[20,50]
+ tower-placement[160,60] tower-placement[120,230] tower-placement[10,330]
+ tower-placement[80,270] tower-placement[40,90] tower-placement[60,100]
+ tower-placement[460,460] tower-placement[460,330] tower-placement[80,10]
+ tower-placement[30,110] tower-placement[460,200] tower-placement[420,240]
+ tower-placement[370,340] tower-placement[460,70] tower-placement[230,360]
+ tower-placement[440,280] tower-placement[390,380] tower-placement[330,380]
+ tower-placement[430,210] tower-placement[280,130] tower-placement[450,220]
+ tower-placement[390,250] tower-placement[340,350] tower-placement[410,260]
+ tower-placement[250,270] tower-placement[360,360] tower-placement[270,280]
+ tower-placement[440,20] tower-placement[260,210] tower-placement[220,380]
+ tower-placement[390,120] tower-placement[130,300] tower-placement[340,220]
+ tower-placement[20,400] tower-placement[300,390] tower-placement[150,310]
+ tower-placement[250,140] tower-placement[360,230] tower-placement[140,240]
+ tower-placement[100,60] tower-placement[310,330] tower-placement[270,150]
+ tower-placement[50,160] tower-placement[260,80] tower-placement[40,440]
+ tower-placement[130,170] tower-placement[340,90] tower-placement[20,270]
+ tower-placement[160,280] tower-placement[190,10] tower-placement[150,180]
+ tower-placement[360,100] tower-placement[100,280] tower-placement[50,30]
+ tower-placement[40,310] tower-placement[210,50] tower-placement[170,220]
+ tower-placement[130,40] tower-placement[60,320] tower-placement[20,140]
+ tower-placement[160,150] tower-placement[10,70] tower-placement[10,420]
+ tower-placement[70,70] tower-placement[90,80] tower-placement[40,180]
+ tower-placement[30,460] tower-placement[60,190] tower-placement[20,10]
+ tower-placement[160,20] tower-placement[10,290] tower-placement[70,290]
+ tower-placement[40,50] tower-placement[30,330] tower-placement[460,420]
+ tower-placement[420,460] tower-placement[460,290] tower-placement[380,150]
+ tower-placement[460,160] tower-placement[280,350] tower-placement[450,440]
+ tower-placement[380,20] tower-placement[240,390] tower-placement[380,370]
+ tower-placement[330,120] tower-placement[460,30] tower-placement[440,240]
+ tower-placement[290,160] tower-placement[390,340] tower-placement[250,360]
+ tower-placement[280,90] tower-placement[270,370] tower-placement[260,300]
+ tower-placement[290,380] tower-placement[350,380] tower-placement[130,390]
+ tower-placement[300,130] tower-placement[410,220] tower-placement[150,50]
+ tower-placement[250,230] tower-placement[320,140] tower-placement[270,240]
+ tower-placement[230,60] tower-placement[260,170] tower-placement[130,260]
+ tower-placement[20,360] tower-placement[150,270] tower-placement[250,100]
+ tower-placement[320,10] tower-placement[140,200] tower-placement[100,20]
+ tower-placement[270,110] tower-placement[90,300] tower-placement[50,120]
+ tower-placement[180,30] tower-placement[110,310] tower-placement[170,310]
+ tower-placement[60,60] tower-placement[160,240] tower-placement[120,60]
+ tower-placement[10,160] tower-placement[220,80] tower-placement[40,270]
+ tower-placement[210,10] tower-placement[170,180] tower-placement[60,280]
+ tower-placement[20,100] tower-placement[120,280] tower-placement[10,30]
+ tower-placement[10,380] tower-placement[70,30] tower-placement[90,40]
+ tower-placement[80,320] tower-placement[40,140] tower-placement[30,70]
+ tower-placement[40,10] tower-placement[30,290] tower-placement[460,380]
+ tower-placement[380,240] tower-placement[330,340] tower-placement[460,250]
+ tower-placement[440,460] tower-placement[380,110] tower-placement[370,390]
+ tower-placement[280,310] tower-placement[450,50] tower-placement[350,250]
+ tower-placement[240,350] tower-placement[300,350] tower-placement[370,260]
+ tower-placement[430,260] tower-placement[320,360] tower-placement[280,180]
+ tower-placement[450,270] tower-placement[440,200] tower-placement[400,20]
+ tower-placement[260,390] tower-placement[290,120] tower-placement[350,120]
+ tower-placement[200,40] tower-placement[200,390] tower-placement[370,130]
+ tower-placement[150,140] tower-placement[250,320] tower-placement[310,160]
+ tower-placement[270,330] tower-placement[260,260] tower-placement[240,90]
+ tower-placement[300,90] tower-placement[20,450] tower-placement[150,10]
+ tower-placement[250,190] tower-placement[320,100] tower-placement[140,290]
+ tower-placement[310,380] tower-placement[270,200] tower-placement[230,20]
+ tower-placement[90,390] tower-placement[260,130] tower-placement[110,50]
+ tower-placement[170,50] tower-placement[130,220] tower-placement[60,150]
+ tower-placement[340,140] tower-placement[20,320] tower-placement[190,60]
+ tower-placement[140,160] tower-placement[90,260] tower-placement[50,80]
+ tower-placement[110,270] tower-placement[170,270] tower-placement[60,20]
+ tower-placement[340,10] tower-placement[20,190] tower-placement[160,200]
+ tower-placement[120,20] tower-placement[10,120] tower-placement[140,30]
+ tower-placement[80,60] tower-placement[30,160] tower-placement[20,60]
+ tower-placement[80,280] tower-placement[40,100] tower-placement[30,30]
+ tower-placement[460,340] tower-placement[460,210] tower-placement[400,240]
+ tower-placement[290,340] tower-placement[350,340] tower-placement[420,250]
+ tower-placement[370,350] tower-placement[460,80] tower-placement[450,10]
+ tower-placement[230,370] tower-placement[440,290] tower-placement[400,460]
+ tower-placement[390,390] tower-placement[370,220] tower-placement[150,230]
+ tower-placement[430,220] tower-placement[360,150] tower-placement[280,140]
+ tower-placement[260,350] tower-placement[390,260] tower-placement[340,360]
+ tower-placement[410,270] tower-placement[370,90] tower-placement[250,280]
+ tower-placement[360,20] tower-placement[360,370] tower-placement[310,120]
+ tower-placement[270,290] tower-placement[50,300] tower-placement[440,30]
+ tower-placement[260,220] tower-placement[220,40] tower-placement[220,390]
+ tower-placement[390,130] tower-placement[170,140] tower-placement[130,310]
+ tower-placement[240,50] tower-placement[340,230] tower-placement[20,410]
+ tower-placement[120,240] tower-placement[10,340] tower-placement[250,150]
+ tower-placement[140,250] tower-placement[100,70] tower-placement[270,160]
+ tower-placement[50,170] tower-placement[260,90] tower-placement[40,450]
+ tower-placement[110,10] tower-placement[170,10] tower-placement[130,180]
+ tower-placement[60,110] tower-placement[340,100] tower-placement[60,460]
+ tower-placement[20,280] tower-placement[160,290] tower-placement[190,20]
+ tower-placement[50,40] tower-placement[40,320] tower-placement[210,60]
+ tower-placement[130,50] tower-placement[20,150] tower-placement[160,160]
+ tower-placement[10,80] tower-placement[70,80] tower-placement[80,20]
+ tower-placement[40,190] tower-placement[30,120] tower-placement[20,20]
+ tower-placement[160,30] tower-placement[40,60] tower-placement[460,430]
+ tower-placement[330,390] tower-placement[460,300] tower-placement[450,230]
+ tower-placement[460,170] tower-placement[280,360] tower-placement[450,450]
+ tower-placement[330,130] tower-placement[360,240] tower-placement[460,40]
+ tower-placement[310,340] tower-placement[440,250] tower-placement[290,170]
+ tower-placement[390,350] tower-placement[410,10] tower-placement[150,190]
+ tower-placement[250,370] tower-placement[360,110] tower-placement[280,100]
+ tower-placement[100,290] tower-placement[270,380] tower-placement[260,310]
+ tower-placement[390,220] tower-placement[170,230] tower-placement[300,140]
+ tower-placement[150,60] tower-placement[10,430] tower-placement[250,240]
+ tower-placement[320,150] tower-placement[270,250] tower-placement[230,70]
+ tower-placement[260,180] tower-placement[390,90] tower-placement[130,270]
+ tower-placement[300,10] tower-placement[20,370] tower-placement[10,300]
+ tower-placement[250,110] tower-placement[70,300] tower-placement[320,20]
+ tower-placement[140,210] tower-placement[100,30] tower-placement[270,120]
+ tower-placement[90,310] tower-placement[50,130] tower-placement[180,40]
+ tower-placement[30,340] tower-placement[130,140] tower-placement[60,70]
+ tower-placement[160,250] tower-placement[120,70] tower-placement[10,170]
+ tower-placement[80,460] tower-placement[40,280] tower-placement[210,20]
+ tower-placement[130,10] tower-placement[20,110] tower-placement[10,40]
+ tower-placement[70,40] tower-placement[90,50] tower-placement[40,150]
+ tower-placement[30,80] tower-placement[40,20] tower-placement[380,380]
+ tower-placement[460,390] tower-placement[380,250] tower-placement[330,350]
+ tower-placement[460,260] tower-placement[450,190] tower-placement[290,390]
+ tower-placement[350,390] tower-placement[380,120] tower-placement[410,230]
+ tower-placement[280,320] tower-placement[350,260] tower-placement[240,360]
+ tower-placement[300,360] tower-placement[330,90] tower-placement[150,280]
+ tower-placement[430,270] tower-placement[320,370] tower-placement[280,190]
+End

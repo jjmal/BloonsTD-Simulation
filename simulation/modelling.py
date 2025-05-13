@@ -2,8 +2,10 @@ import re
 
 from typing import List, Tuple, Dict, Any
 from gurobipy import Model, GRB, quicksum
-from modelling_sets import generate_vars_1a, generate_coverage_dict, generate_all_footprint_constraint_sets, get_money_constraint_rhs, generate_sets_1a, generate_sets_1b, generate_sets_1c
-
+from datasets import create_towers_dataframe
+from modelling_sets import  get_money_constraint_rhs, generate_sets_1a, generate_sets_1b, generate_sets_1c, \
+      generate_sets_2a, generate_sets_2b, generate_sets_2c
+ 
 class GameModel:
     """
     Template class for models that will derive the solutions for the game.
@@ -64,27 +66,45 @@ class GameModel:
     def save_model(self):
         self.model.write(f"{self.name}.lp")
 
-class Model1a(GameModel):
+def extract_pos_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
     """
-    Represents Model 1a (Maximum Track Coverage as objective; Dart Tower only; No Upgrades)
+    Extracts Tower positions from the Gurobi names given to the model variables
+    :param var_name_list: List of variables to perform extraction on
     """
-    def __init__(self, modulo, logging = True):
-        super().__init__('Model 1 (Max Coverage, Dart Only, No Upgrades)', modulo, logging)
+    out = []
+    for var_name in var_name_list:
+        pos_str = re.search('\[.*\]', var_name).group(0).strip('[]')
+        pos_str_sep = pos_str.split(",")
+        pos = (int(pos_str_sep[0]), int(pos_str_sep[1]))
+        out.append(pos)
+    return out
+
+class Model1(GameModel):
+    """
+    Represents a model that maximises some kind of coverage as an objective function, and only places Dart Towers. 
+    """
+    def __init__(self, modulo: int, type_: str, scaling_bracket: Tuple[float, float] = (0,1), dart_monkey_nr: int = 37, logging = True):
+        super().__init__('Model 1 (Maximize Coverage, Dart Tower Only, No Upgrades)', modulo, logging)
+        self.type = type_
+        self.dart_monkey_nr = dart_monkey_nr
+        self.scaling_bracket = scaling_bracket
 
     def generate_sets(self):
-
-        self.TOWER_PLACEMENTS = generate_vars_1a(self.modulo)
-        if self.logging:
-            print('TOWER PLACEMENT SET CREATED')
-
-        self.COVERAGE = generate_coverage_dict()
-        if self.logging:
-            print('COVERAGE VECTOR CREATED')
+        if self.type == 'a':
+            sets = generate_sets_1a(self.modulo)
+            self.COVERAGE = sets['COV']
         
-        self.FOOTPRINTS = generate_all_footprint_constraint_sets("nn", self.modulo)
-        if self.logging:
-            print('FOOTPRINT SETS CREATED')
-    
+        elif self.type == 'b':
+            sets = generate_sets_1b(self.modulo, self.scaling_bracket)
+            self.DISTANCE = sets['DIST']
+
+        elif self.type == 'c':
+            sets = generate_sets_1c(self.modulo, self.scaling_bracket)
+            self.ANGLE_COVERAGE = sets['ANG_COV']
+                
+        self.TOWER_PLACEMENTS = sets['TP']
+        self.FOOTPRINTS = sets['FP']
+
     def set_variables(self):
         # Define variables
         self.varss = self.model.addVars(
@@ -96,10 +116,24 @@ class Model1a(GameModel):
 
     def set_objective(self):
         # Define the objective function
-        obj = quicksum(
-            self.COVERAGE[pos] * self.varss[pos] 
-            for pos in self.TOWER_PLACEMENTS
+        if self.type == 'a':
+            obj = quicksum(
+                self.COVERAGE[pos, 'Dart', 0] * self.varss[pos] 
+                for pos in self.TOWER_PLACEMENTS
+                )
+
+        elif self.type == 'b':
+            obj = quicksum(
+                self.DISTANCE[pos, 'Dart', 0]* self.varss[pos] 
+                for pos in self.TOWER_PLACEMENTS
             )
+        
+        elif self.type == 'c':
+            obj = quicksum(
+                self.ANGLE_COVERAGE[pos, 'Dart', 0]* self.varss[pos] 
+                for pos in self.TOWER_PLACEMENTS
+            )
+
         self.objective_function = obj
 
         # Set the objective function
@@ -107,6 +141,7 @@ class Model1a(GameModel):
             obj,
             sense=GRB.MAXIMIZE
         )
+
         # Update model
         self.model.update()
     
@@ -118,20 +153,21 @@ class Model1a(GameModel):
             name='footprints'
         )
         
-        # CONSTRAINT 2 - We want a solution that does not use more Dart Towers than S1 (i.e. uses less than 37 Dart Towers)
+        # CONSTRAINT 2 - We want a solution that does not use more Dart Towers than S1. Customizable, build 37 monkeys normally
         self.model.addConstr(
-            quicksum(self.varss[pos] for pos in self.TOWER_PLACEMENTS) <= 37
+            quicksum(self.varss[pos] for pos in self.TOWER_PLACEMENTS) <= self.dart_monkey_nr
         )
         self.model.update()
-    
+
     @staticmethod 
-    def model_1a_per_round(modulo: int, round_19_correction: bool = True) -> Dict[int, List[Tuple[int,int]]]:
+    def model1_per_round(modulo: int, type_: str, scaling_bracket: Tuple[int,int] = (0,1), dart_monkey_nr: int = 37, round_19_correction: bool = True) -> Dict[int, List[Tuple[int,int]]]:
         """
-        Runs Model 1a for each round, fixing previous choices.
+        Runs Model 1 for each round, fixing previous choices.
         :param modulo: number for the divisibility filter
-        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 for modulo 10 (not enough money for the build), as it
-        by default does not account for lost lives. With correction enabled, the model will take the lives lost into account when calculating
-        money from round 19 onwards, enabling the game to last until its properly lost.
+        :param type_: type of Model ('a', 'b', or 'c'), which determines the objective function
+        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 for modulo 10 (not enough money for the build) for 
+        types 'a' and 'b', as it by default does not account for lost lives. With correction enabled, the model will take the lives lost into account 
+        when calculating money from round 19 onwards, enabling the game to last until its properly lost.
         :returns: a Dict of the form (round_nr, choices) with round_nr being the round
         in which we perform Dart Tower Build actions specified in choices
         """
@@ -140,22 +176,38 @@ class Model1a(GameModel):
         rounds = 50
 
         # Define sets:
-        sets = generate_sets_1a(modulo)
-        TP = sets['TP']
-        COV = sets['COV']
-        FP = sets['FP']
-
-        print("SETS CREATED")
+        if type_ == 'a':
+            sets = generate_sets_1a(modulo) 
+            TP = sets['TP']
+            COV = sets['COV']
+            FP = sets['FP']
+        elif type_ == 'b':
+            sets = generate_sets_1b(modulo, scaling_bracket)
+            TP = sets['TP']
+            DIST = sets['DIST']
+            FP = sets['FP']
+        elif type_ == 'c':
+            sets = generate_sets_1c(modulo, scaling_bracket)
+            TP = sets['TP']
+            ANG_COV = sets['ANG_COV']
+            FP = sets['FP']
+        else:
+            raise ValueError('type_ must be one of: "a", "b", "c" ')
 
         for r in range(1, rounds + 1):
             # Get money for round r
             money = get_money_constraint_rhs(r)
 
-            m = Model1a(modulo, False)
+            m = Model1(modulo, type_, (0,1), dart_monkey_nr, False)
 
             # Set sets
+            if type_ == 'a':
+                m.COVERAGE = COV
+            elif type_ == 'b':
+                m.DISTANCE = DIST
+            elif type_ == 'c':
+                m.ANGLE_COVERAGE = ANG_COV
             m.TOWER_PLACEMENTS = TP
-            m.COVERAGE = COV
             m.FOOTPRINTS = FP
             
             # Build baseline model
@@ -198,7 +250,7 @@ class Model1a(GameModel):
         return out
 
     @staticmethod
-    def model_to_simulation(result_dict: Dict[int, List[Tuple[int,int]]]) -> List[Tuple]:
+    def model1_to_simulation(result_dict: Dict[int, List[Tuple[int,int]]]) -> List[Tuple]:
         out = []
         for key, val in result_dict.items():
             if len(val) > 0:
@@ -208,28 +260,66 @@ class Model1a(GameModel):
         return out
 
 
-class Model1b(Model1a):
-    """
-    Represents Model 1b (Maximum Track Coverage as objective; Dart Tower only; No Upgrades; Ensuring all points are covered)
-    """
-    def __init__(self, modulo: int, alpha: float, beta: float, logging: bool = True):
-        super().__init__(modulo, logging)
-        self.alpha = alpha
-        self.beta = beta
-
+class Model2(GameModel):
+    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)], money_limit: int = 9250, logging = True):
+        super().__init__('Model 2 (Maximize coverage all rounds, Dart Monkey with upgrades)', modulo, logging)
+        self.type = type_
+        self.scaling_bracket = scaling_bracket
+        self.human_strategy_cost = human_strategy_cost
+        self.round_weights = round_weights
+        self.money_limit = money_limit
+        
     def generate_sets(self):
-        sets = generate_sets_1b(self.modulo)
-        self.TOWER_PLACEMENTS = sets['TP']
-        self.DISTANCE = sets['DIST']
+        if self.type == 'a':
+            sets = generate_sets_2a(self.modulo)
+            self.COVERAGE = sets['COV']
+        
+        elif self.type == 'b':
+            sets = generate_sets_2b(self.modulo, self.scaling_bracket)
+            self.DISTANCE = sets['DIST']
+
+        elif self.type == 'c':
+            sets = generate_sets_2c(self.modulo, self.scaling_bracket)
+            self.ANGLE_COVERAGE = sets['ANG_COV']
+                
+        VARIABLE_LIST = sets['VAR']
+        self.ROUNDS = VARIABLE_LIST[0]
+        self.TOWER_PLACEMENTS = VARIABLE_LIST[1]
+        self.UPGRADES = VARIABLE_LIST[2]
+
         self.FOOTPRINTS = sets['FP']
-        self.COVERAGE = sets['COV']
+        self.COST = sets['COST']
+        self.MONEY = sets['MONEY']
+
+    def set_variables(self):
+        # Define variables
+        self.varss = self.model.addVars(
+            self.ROUNDS, self.TOWER_PLACEMENTS, self.UPGRADES,
+            name='round-towerplacement-upgrade',
+            vtype=GRB.BINARY
+            )
+        self.model.update()
 
     def set_objective(self):
-         # Define the objective function
-        obj = quicksum(
-            (self.alpha*self.COVERAGE[pos] - self.beta*self.DISTANCE[pos])* self.varss[pos] 
-            for pos in self.TOWER_PLACEMENTS
+        # Define the objective function
+        if self.type == 'a':
+            obj = quicksum(
+                self.round_weights[r]*self.COVERAGE[ij, 'Dart', u]*self.varss[r, ij, u] 
+                for r in self.ROUNDS for ij in self.TOWER_PLACEMENTS for u in self.UPGRADES
+                )
+
+        elif self.type == 'b':
+            obj = quicksum(
+                self.round_weights[r]*self.DISTANCE[ij, 'Dart', u] * self.varss[(r, ij, u)] 
+                for r in self.ROUNDS for ij in self.TOWER_PLACEMENTS for u in self.UPGRADES
             )
+        
+        elif self.type == 'c':
+            obj = quicksum(
+                self.round_weights[r]*self.ANGLE_COVERAGE[ij, 'Dart', u] * self.varss[(r, ij, u)] 
+                for r in self.ROUNDS for ij in self.TOWER_PLACEMENTS for u in self.UPGRADES
+            )
+
         self.objective_function = obj
 
         # Set the objective function
@@ -237,201 +327,37 @@ class Model1b(Model1a):
             obj,
             sense=GRB.MAXIMIZE
         )
+
         # Update model
         self.model.update()
-    
-    @staticmethod 
-    def model_1b_per_round(modulo: int, alpha: float, beta: float, round_19_correction: bool = False) -> Dict[int, List[Tuple[int,int]]]:
-        """
-        Runs Model 1b for each round, fixing previous choices.
-        :param modulo: number for the divisibility filter
-        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 for modulo 10 (not enough money for the build), as it
-        by default does not account for lost lives. With correction enabled, the model will take the lives lost into account when calculating
-        money from round 19 onwards, enabling the game to last until its properly lost.
-        :returns: a Dict of the form (round_nr, choices) with round_nr being the round
-        in which we perform Dart Tower Build actions specified in choices
-        """
-        fixed_points = []
-        out = {}
-        rounds = 50
 
-        # Define sets:
-        sets = generate_sets_1b(modulo)
-        TP = sets['TP']
-        DIST = sets['DIST']
-        FP = sets['FP']
-        COV = sets['COV']
-
-        print("SETS CREATED")
-
-        for r in range(1, rounds + 1):
-            # Get money for round r
-            money = get_money_constraint_rhs(r)
-
-            m = Model1b(modulo, alpha, beta)
-
-            # Set sets
-            m.TOWER_PLACEMENTS = TP
-            m.DISTANCE = DIST
-            m.FOOTPRINTS = FP
-            m.COVERAGE = COV
-            
-            # Build baseline model
-            m.set_variables()
-            m.set_objective()
-            m.set_constraints()
-
-            # CONSTRAINT 3 - Money constraints per round
-            if not round_19_correction:
-                m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money)
-            else:
-                if r < 19:
-                    m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money)
-                else:
-                    m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money - 31)
-
-            # CONSTRAINT 4 - Points fixed in previous rounds must stay fixed
-            if len(fixed_points) > 0:
-                m.model.addConstrs(m.varss[fixed] == 1 for fixed in fixed_points)
-            
-            # Update model
-            m.model.update()
-
-            # Run model
-            m.solve()
-
-            # Get results
-            d = m.get_results()
-            choices = d['choices']
-
-            # Update out
-            out[r] = list(set(choices) - set(fixed_points))
-
-            # Update fixed choices
-            fixed_points = choices
-
-            # Print progress
-            print(f"Model progress: {r}/{rounds}")
-
-        return out
-    
-
-class Model1c(Model1a):
-    """
-    Represents Model 1c (Maximum Track Coverage as objective; Dart Tower only; No Upgrades; Ensuring all points are covered)
-    """
-    def __init__(self, modulo: int, logging: bool = True):
-        super().__init__(modulo, logging)
-
-    def generate_sets(self):
-        sets = generate_sets_1b(self.modulo)
-        self.TOWER_PLACEMENTS = sets['TP']
-        self.ANGLE_COVERAGE - sets['ANG_COV']
-        self.FOOTPRINTS = sets['FP']
-       
-
-    def set_objective(self):
-         # Define the objective function
-        obj = quicksum(
-            self.ANGLE_COVERAGE[pos]* self.varss[pos] 
-            for pos in self.TOWER_PLACEMENTS
-            )
-        self.objective_function = obj
-
-        # Set the objective function
-        self.model.setObjective(
-            obj,
-            sense=GRB.MAXIMIZE
+    def set_constraints(self):
+        # CONSTRAINT 1 - towers cannot be placed inside other towers' footprints
+        self.model.addConstrs(
+            (self.varss[r, ij, u] + self.varss[r, kl, u] <= 1
+            for r in range(1,51) for u in range(4) for ij in self.TOWER_PLACEMENTS for kl in self.FOOTPRINTS[ij] if ij != kl),
+            name = 'footprints'
         )
-        # Update model
-        self.model.update()
-    
-    @staticmethod 
-    def model_1c_per_round(modulo: int, round_19_correction: bool = False) -> Dict[int, List[Tuple[int,int]]]:
-        """
-        Runs Model 1c for each round, fixing previous choices.
-        :param modulo: number for the divisibility filter
-        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 for modulo 10 (not enough money for the build), as it
-        by default does not account for lost lives. With correction enabled, the model will take the lives lost into account when calculating
-        money from round 19 onwards, enabling the game to last until its properly lost.
-        :returns: a Dict of the form (round_nr, choices) with round_nr being the round
-        in which we perform Dart Tower Build actions specified in choices
-        """
-        fixed_points = []
-        out = {}
-        rounds = 50
 
-        # Define sets:
-        sets = generate_sets_1c(modulo)
-        TP = sets['TP']
-        FP = sets['FP']
-        ANG_COV = sets['ANG_COV']
+        # CONSTRAINT 2 - We must afford the build each round
+        self.model.addConstrs(
+            ((quicksum(self.COST['Dart', u]*self.varss[r, ij, u] for ij in self.TOWER_PLACEMENTS for u in range(4)) <= self.MONEY[r])
+            for r in range(1,51)),
+            name='money'
+        )
+        
+        # CONSTRAINT 3 - We want to beat the human strategy cost
+        self.model.addConstrs(
+            ((quicksum(self.COST['Dart', u]*self.varss[r, ij, u] for ij in self.TOWER_PLACEMENTS for u in range(4)) <= self.human_strategy_cost)
+            for r in range(1,51)),
+            name='beathuman'
+        )
 
-        print("SETS CREATED")
-
-        for r in range(1, rounds + 1):
-            # Get money for round r
-            money = get_money_constraint_rhs(r)
-
-            m = Model1c(modulo)
-
-            # Set sets
-            m.TOWER_PLACEMENTS = TP
-            m.FOOTPRINTS = FP
-            m.ANGLE_COVERAGE = ANG_COV
-            
-            # Build baseline model
-            m.set_variables()
-            m.set_objective()
-            m.set_constraints()
-
-            # CONSTRAINT 3 - Money constraints per round
-            if not round_19_correction:
-                m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money)
-            else:
-                if r < 19:
-                    m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money)
-                else:
-                    m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money - 31)
-
-            # CONSTRAINT 4 - Points fixed in previous rounds must stay fixed
-            if len(fixed_points) > 0:
-                m.model.addConstrs(m.varss[fixed] == 1 for fixed in fixed_points)
-            
-            # Update model
-            m.model.update()
-
-            # Run model
-            m.solve()
-
-            # Get results
-            d = m.get_results()
-            choices = d['choices']
-
-            # Update out
-            out[r] = list(set(choices) - set(fixed_points))
-
-            # Update fixed choices
-            fixed_points = choices
-
-            # Print progress
-            print(f"Model progress: {r}/{rounds}")
-
-        return out
-
-
-def extract_pos_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
-    """
-    Extracts Tower positions from the Gurobi names given to the model variables
-    :param var_name_list: List of variables to perform extraction on
-    """
-    out = []
-    for var_name in var_name_list:
-        pos_str = re.search('\[.*\]', var_name).group(0).strip('[]')
-        pos_str_sep = pos_str.split(",")
-        pos = (int(pos_str_sep[0]), int(pos_str_sep[1]))
-        out.append(pos)
-    return out
-
+        # CONSTRAINT 4 - We treat each upgrade as a separate tower - only one (tower, upgrade) pair can be active at each position
+        self.model.addConstrs(
+            ((quicksum(self.varss[r, ij, u] for u in range(4)) <= 1)
+            for r in range(1,51) for ij in self.TOWER_PLACEMENTS),
+            name = 'upgradecoding'
+        )
 
 

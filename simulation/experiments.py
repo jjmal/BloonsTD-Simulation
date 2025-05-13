@@ -1,13 +1,14 @@
+from typing import Tuple
 from Game import Game, prepare_tower_queue
 from GameHeuristic import GameS1, get_s1_tower_positions
-from modelling import Model1a, Model1b, Model1c
+from modelling import Model1
 
-def run_s1(graphics: bool = False, speed_multiplier = 5):
+def run_s1(graphics: bool = False, speed_multiplier = 5, dart_monkey_nr: int = 37):
     """
     Runs the experiment for S1.
     :param graphics: whether to run with graphics (True) or not (False)
     """ 
-    positions = get_s1_tower_positions()
+    positions = get_s1_tower_positions()[1:dart_monkey_nr]
     g = GameS1(40,650,1, graphics, positions, speed_multiplier)
     g.run_game()
 
@@ -23,73 +24,30 @@ def run_s2(graphics: bool = False, speed_multiplier = 5):
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-def run_1a(modulo: int, graphics: bool = False, speed_multiplier: int = 5, round_19_correction: bool = False):
+def run_1a(modulo: int, graphics: bool = False, speed_multiplier: int = 5, dart_monkey_nr: int = 37,  round_19_correction: bool = False):
     """
     Runs the experiment for model 1a.
     """
-    results = Model1a.model_1a_per_round(modulo, round_19_correction)
-    actions = Model1a.model_to_simulation(results)
+    results = Model1.model1_per_round(modulo, 'a', (0,1), dart_monkey_nr, round_19_correction)
+    actions = Model1.model1_to_simulation(results)
     queue = prepare_tower_queue(actions)
-    # actions = [
-    #     (1, ('Dart', (150, 180), 0)), 
-    #     (1, ('Dart', (140, 390), 0)), 
-    #     (2, ('Dart', (380, 240), 0)), 
-    #     (4, ('Dart', (360, 120), 0)), 
-    #     (6, ('Dart', (350, 360), 0)), 
-    #     (8, ('Dart', (370, 260), 0)), 
-    #     (9, ('Dart', (170, 170), 0)), 
-    #     (9, ('Dart', (140, 160), 0)), 
-    #     (10, ('Dart', (370, 220), 0)), 
-    #     (12, ('Dart', (120, 390), 0)), 
-    #     (13, ('Dart', (360, 380), 0)), 
-    #     (14, ('Dart', (130, 180), 0)), 
-    #     (15, ('Dart', (360, 240), 0)), 
-    #     (16, ('Dart', (370, 360), 0)), 
-    #     (17, ('Dart', (170, 190), 0)), 
-    #     (17, ('Dart', (390, 260), 0)), 
-    #     (18, ('Dart', (360, 140), 0)), 
-    #     (18, ('Dart', (380, 130), 0)), 
-    #     (19, ('Dart', (380, 110), 0)), 
-    #     (19, ('Dart', (340, 380), 0)), 
-    #     (20, ('Dart', (350, 100), 0)), 
-    #     (21, ('Dart', (340, 120), 0)), 
-    #     (22, ('Dart', (160, 150), 0)), 
-    #     (22, ('Dart', (390, 220), 0)), 
-    #     (23, ('Dart', (350, 260), 0)), 
-    #     (24, ('Dart', (160, 390), 0)), 
-    #     (24, ('Dart', (350, 220), 0)), 
-    #     (25, ('Dart', (370, 340), 0)), 
-    #     (25, ('Dart', (270, 240), 0)), 
-    #     (26, ('Dart', (380, 380), 0)), 
-    #     (26, ('Dart', (340, 140), 0)), 
-    #     (27, ('Dart', (140, 280), 0)), 
-    #     (27, ('Dart', (350, 340), 0)), 
-    #     (28, ('Dart', (270, 260), 0)), 
-    #     (29, ('Dart', (180, 390), 0)), 
-    #     (30, ('Dart', (270, 220), 0)), 
-    #     (30, ('Dart', (400, 240), 0))
-    #     ]
+   
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-def run_1b(modulo: int, alpha, beta, graphics: bool = False, speed_multiplier = 5, round_19_correction: bool = False):
-    results = Model1b.model_1b_per_round(modulo, alpha, beta, round_19_correction)
-    actions = Model1b.model_to_simulation(results)
+def run_1b(modulo: int, scaling_bracket: Tuple[int,int], graphics: bool = False, speed_multiplier = 5, dart_monkey_nr: int = 37, round_19_correction: bool = False):
+    results = Model1.model1_per_round(modulo, 'b', scaling_bracket,  dart_monkey_nr,  round_19_correction)
+    actions = Model1.model1_to_simulation(results)
     queue = prepare_tower_queue(actions)
 
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-
-run_1b(10, 0.99, 0.01, False, 2, True)
-
-
-def run_1c(modulo: int, graphics: bool = False, speed_multiplier: int = 5, round_19_correction: bool = False):
-    results = Model1c.model_1c_per_round(modulo, round_19_correction)
-    actions = Model1c.model_to_simulation(results)
+def run_1c(modulo: int,  scaling_bracket: Tuple[int,int], graphics: bool = False, speed_multiplier: int = 5, dart_monkey_nr: int = 37, round_19_correction: bool = False):
+    results = Model1.model1_per_round(modulo, 'c', scaling_bracket, dart_monkey_nr,  round_19_correction)
+    actions = Model1.model1_to_simulation(results)
     queue = prepare_tower_queue(actions)
 
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-run_1c(10, True, 5)

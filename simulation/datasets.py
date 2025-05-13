@@ -68,9 +68,9 @@ def create_towers_dataframe() -> pd.DataFrame:
     )
 
     # Add cumulative cost information
-    # towers_dataset['cumulative_cost_upgrade_1'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost']
-    # towers_dataset['cumulative_cost_upgrade_2'] = towers_dataset['cost'] + towers_dataset['upgrade_2_cost']
-    # towers_dataset['cumulative_cost'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost'] + towers_dataset['upgrade_2_cost']
+    towers_dataset['cumulative_cost_upgrade_1'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost']
+    towers_dataset['cumulative_cost_upgrade_2'] = towers_dataset['cost'] + towers_dataset['upgrade_2_cost']
+    towers_dataset['cumulative_cost_upgrade_12'] = towers_dataset['cost'] + towers_dataset['upgrade_1_cost'] + towers_dataset['upgrade_2_cost']
 
     # Set index to be Bloon type
     towers_dataset.set_index('name', inplace=True)
