@@ -51,3 +51,5 @@ def run_1c(modulo: int,  scaling_bracket: Tuple[int,int], graphics: bool = False
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
+# run_1a(10, False, 20, 37, True)
+run_1c(10, (0,1), False, 20, 37, True)
