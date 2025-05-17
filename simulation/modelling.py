@@ -13,6 +13,7 @@ class GameModel:
     Template class for models that will derive the solutions for the game.
     """
     def __init__(self, name: str, modulo: int, logging: bool = True):
+        self.name = name
         self.modulo = modulo
         self.model = Model(name=name)
         self.logging = logging
@@ -51,11 +52,11 @@ class GameModel:
         out = {}
         out['objective_value'] = objective_value
         out['choices'] = chosen
-        out['parameters'] = vars(self)
+        out['parameters'] = self.get_parameters()
 
         # Save result as pickle, if Model is not Model 1 (as for Model 1 we care about the final result after 50 models are run)
         if self.name != 'Model1':
-            write_pickle(out, f"{self.name}{self.type}mod{self.modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+            write_pickle(out, f"{self.name}{self.type}mod{self.modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}", True)
 
         return out 
     
@@ -70,6 +71,9 @@ class GameModel:
         
         return self.get_results()
     
+    def get_parameters(self):
+        pass
+
     def save_model(self):
         self.model.write(f"{self.name}.lp")
 
@@ -158,6 +162,17 @@ class Model1(GameModel):
             quicksum(self.varss[pos] for pos in self.TOWER_PLACEMENTS) <= self.dart_monkey_nr
         )
         self.model.update()
+
+    def get_parameters(self) -> Dict[str, Any]:
+        out = {}
+        out['name'] = self.name
+        out['modulo'] = self.modulo
+        out['type'] = self.type
+        out['dart_monkey_nr'] = self.dart_monkey_nr
+        out['scaling_bracket'] = self.scaling_bracket
+
+        return out
+        
 
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
@@ -262,7 +277,11 @@ class Model1(GameModel):
             print(f"Model progress: {r}/{rounds}")
         
         # Save result as pickle
-        write_pickle(out, f"Model1{type_}mod{modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+        m = Model1(modulo, type_, scaling_bracket, dart_monkey_nr, False) # dummy model just to get the parameters
+        params = m.get_parameters()
+        params['round_19_correction'] = round_19_correction
+        out['parameters'] = params
+        write_pickle(out, f"Model1{type_}mod{modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}", True)
 
         return out
 
@@ -270,7 +289,7 @@ class Model1(GameModel):
     def model1_to_simulation(result_dict: Dict[int, List[Tuple[int,int]]]) -> List[Tuple]:
         out = []
         for key, val in result_dict.items():
-            if len(val) > 0:
+            if len(val) > 0 and key != 'parameters':
                 for pos in val:
                     out.append((key, ('Dart', pos, 0)))
 
@@ -421,6 +440,18 @@ class Model2(GameModel):
             name = 'nodowngrades20'
         )
 
+    def get_parameters(self) -> Dict[str, Any]:
+        out = {}
+        out['name'] = self.name
+        out['modulo'] = self.modulo
+        out['type'] = self.type
+        out['human_strategy_cost'] = self.human_strategy_cost
+        out['scaling_bracket'] = self.scaling_bracket
+        out['round_weights'] = self.round_weights
+
+        return out
+
+    
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
         """

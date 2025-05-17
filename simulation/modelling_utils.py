@@ -212,12 +212,18 @@ def min_max_distance(mn: float, mx: float, val: float) -> float:
     std = (val - min_dist_inv) / (max_dist_inv - min_dist_inv)
     return std*(mx - mn) + mn
 
-def write_pickle(obj, savename):
-    filename = f'simulation/data/{savename}.pkl'
+def write_pickle(obj, savename, experiments: bool = False):
+    if not experiments:
+        filename = f'simulation/data/{savename}.pkl'
+    else:
+        filename = f'simulation/experiments/{savename}.pkl'
     with open(filename, 'wb') as f:
         pickle.dump(obj, f)
 
-def read_pickle(filename):
-    path = f'simulation/data/{filename}.pkl'
+def read_pickle(filename, experiments: bool = False):
+    if not experiments:
+        path = f'simulation/data/{filename}.pkl'
+    else:
+        path = f'simulation/experiments/{filename}.pkl'
     with open(path, 'rb') as f:
         return pickle.load(f)
