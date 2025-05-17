@@ -481,7 +481,7 @@ class TowerManager:
             self.tower_list.append(new_tower)
             self.position_tower_map[(new_tower.x, new_tower.y)] = new_tower
             out_cost += new_tower.cost
-        elif action_type == 1:
+        elif action_type == 1 or action_type == 2:
             upgraded_tower = self.position_tower_map[pos]
             self.upgrade_tower_at_position(upgraded_tower.x, upgraded_tower.y, action_type)
             if action_type == 1:
@@ -555,7 +555,7 @@ def convert_name_to_tower(tower_name: str, pos: Tuple[int, int]) -> Tower:
         return BombTower(pos[0], pos[1])
     elif tower_name == 'Ice':
         return IceTower(pos[0], pos[1])
-    elif tower_name == 'SuperMonkey':
+    elif tower_name == 'Super Monkey':
         return SuperMonkeyTower(pos[0], pos[1])
     else:
         raise ValueError(f"Conversion from name to Tower object impossible (no tower with name {tower_name} exists)")
