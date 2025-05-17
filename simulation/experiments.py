@@ -1,7 +1,7 @@
-from typing import Tuple
+from typing import Tuple, List
 from Game import Game, prepare_tower_queue
 from GameHeuristic import GameS1, get_s1_tower_positions
-from modelling import Model1
+from modelling import Model1, Model2
 
 def run_s1(graphics: bool = False, speed_multiplier = 5, dart_monkey_nr: int = 37):
     """
@@ -52,3 +52,15 @@ def run_1c(modulo: int,  scaling_bracket: Tuple[int,int], graphics: bool = False
     g.run_game()
 
 
+def run_2a(modulo: int, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)]):
+    model = Model2(modulo, 'a', (0,1), human_strategy_cost, round_weights, False)
+    results = model.run()
+    extracted = Model2.extract_vars_from_gurobi(results['choices'])
+    actions = Model2.model2_to_simulation(extracted)
+    queue = prepare_tower_queue(actions)
+
+    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    g.run_game()
+
+
+run_s1(True, 5, 37)

@@ -1,10 +1,12 @@
 import re
 
 from typing import List, Tuple, Dict, Any
+from datetime import datetime
 from gurobipy import Model, GRB, quicksum
 from datasets import create_towers_dataframe
 from modelling_sets import  get_money_constraint_rhs, generate_sets_1a, generate_sets_1b, generate_sets_1c, \
       generate_sets_2a, generate_sets_2b, generate_sets_2c
+from modelling_utils import write_pickle
  
 class GameModel:
     """
@@ -44,11 +46,16 @@ class GameModel:
         for var in self.model.getVars():
             if int(var.X) == 1:
                 chosen_positions_name_list.append(var.VarName)
-        chosen = extract_pos_from_gurobi(chosen_positions_name_list)
+        chosen = self.extract_vars_from_gurobi(chosen_positions_name_list)
 
         out = {}
         out['objective_value'] = objective_value
         out['choices'] = chosen
+        out['parameters'] = vars(self)
+
+        # Save result as pickle, if Model is not Model 1 (as for Model 1 we care about the final result after 50 models are run)
+        if self.name != 'Model1':
+            write_pickle(out, f"{self.name}{self.type}mod{self.modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
 
         return out 
     
@@ -66,25 +73,18 @@ class GameModel:
     def save_model(self):
         self.model.write(f"{self.name}.lp")
 
-def extract_pos_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
-    """
-    Extracts Tower positions from the Gurobi names given to the model variables
-    :param var_name_list: List of variables to perform extraction on
-    """
-    out = []
-    for var_name in var_name_list:
-        pos_str = re.search('\[.*\]', var_name).group(0).strip('[]')
-        pos_str_sep = pos_str.split(",")
-        pos = (int(pos_str_sep[0]), int(pos_str_sep[1]))
-        out.append(pos)
-    return out
+    @staticmethod
+    def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
+        pass
+    
 
 class Model1(GameModel):
     """
     Represents a model that maximises some kind of coverage as an objective function, and only places Dart Towers. 
+    (Maximize Coverage, Dart Tower Only, No Upgrades)
     """
     def __init__(self, modulo: int, type_: str, scaling_bracket: Tuple[float, float] = (0,1), dart_monkey_nr: int = 37, logging = True):
-        super().__init__('Model 1 (Maximize Coverage, Dart Tower Only, No Upgrades)', modulo, logging)
+        super().__init__('Model1', modulo, logging)
         self.type = type_
         self.dart_monkey_nr = dart_monkey_nr
         self.scaling_bracket = scaling_bracket
@@ -158,6 +158,20 @@ class Model1(GameModel):
             quicksum(self.varss[pos] for pos in self.TOWER_PLACEMENTS) <= self.dart_monkey_nr
         )
         self.model.update()
+
+    @staticmethod
+    def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
+        """
+        Extracts Tower positions from the Gurobi names given to the model variables.
+        :param var_name_list: List of variables to perform extraction on
+        """
+        out = []
+        for var_name in var_name_list:
+            pos_str = re.search('\[.*\]', var_name).group(0).strip('[]')
+            pos_str_sep = pos_str.split(",")
+            pos = (int(pos_str_sep[0]), int(pos_str_sep[1]))
+            out.append(pos)
+        return out
 
     @staticmethod 
     def model1_per_round(modulo: int, type_: str, scaling_bracket: Tuple[int,int] = (0,1), dart_monkey_nr: int = 37, round_19_correction: bool = True) -> Dict[int, List[Tuple[int,int]]]:
@@ -246,6 +260,9 @@ class Model1(GameModel):
 
             # Print progress
             print(f"Model progress: {r}/{rounds}")
+        
+        # Save result as pickle
+        write_pickle(out, f"Model1{type_}mod{modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
 
         return out
 
@@ -261,13 +278,15 @@ class Model1(GameModel):
 
 
 class Model2(GameModel):
-    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)], money_limit: int = 9250, logging = True):
-        super().__init__('Model 2 (Maximize coverage all rounds, Dart Monkey with upgrades)', modulo, logging)
+    """
+    (Maximize coverage all rounds, Dart Monkey with upgrades)
+    """
+    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)], logging = True):
+        super().__init__('Model2', modulo, logging)
         self.type = type_
         self.scaling_bracket = scaling_bracket
         self.human_strategy_cost = human_strategy_cost
         self.round_weights = round_weights
-        self.money_limit = money_limit
         
     def generate_sets(self):
         if self.type == 'a':
@@ -402,6 +421,51 @@ class Model2(GameModel):
             name = 'nodowngrades20'
         )
 
+    @staticmethod
+    def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
+        """
+        Extracts Tower positions from the Gurobi names given to the model variables.
+        :param var_name_list: List of variables to perform extraction on
+        """
+        out = []
+        for var_name in var_name_list:
+            var_str = re.search('\[.*\]', var_name).group(0).strip('[]')
+            var_str_sep = var_str.split(",")
+            var = (int(var_str_sep[0]), int(var_str_sep[1]), int(var_str_sep[2]), int(var_str_sep[3]))
+            out.append(var)
+        return out
+    
+    @staticmethod
+    def model2_to_simulation(result_tuple_list: List[Tuple[int,int,int,int]]) -> List[Tuple]:
+        out = []
+        for round_, position_x, position_y, upgrade in result_tuple_list:
+            out.append((round_, ('Dart', (position_x, position_y), upgrade)))
 
-m2 = Model2(10, "a")
-m2.run()
+        return out
+        
+
+class Model3(GameModel):
+    @staticmethod
+    def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
+        """
+        Extracts Tower positions from the Gurobi names given to the model variables.
+        :param var_name_list: List of variables to perform extraction on
+        """
+        out = []
+        for var_name in var_name_list:
+            var_str = re.search('\[.*\]', var_name).group(0).strip('[]')
+            var_str_sep = var_str.split(",")
+            var = (int(var_str_sep[0]), int(var_str_sep[1]), int(var_str_sep[2]), int(var_str_sep[3]), int(var_str_sep[4]))
+            out.append(var)
+        return out
+        
+    @staticmethod
+    def model3_to_simulation(result_tuple_list: List[Tuple[int,int,int,str,int]]) -> List[Tuple]:
+        out = []
+        for round_, position_x, position_y, tower, upgrade in result_tuple_list:
+            out.append((round_, (tower, (position_x, position_y), upgrade)))
+
+        return out
+
+# m2 = Model2(10, "a")
+# m2.run()
