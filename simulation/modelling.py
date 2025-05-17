@@ -304,20 +304,20 @@ class Model2(GameModel):
         # Define the objective function
         if self.type == 'a':
             obj = quicksum(
-                self.round_weights[r]*self.COVERAGE[ij, 'Dart', u]*self.varss[r, ij, u] 
-                for r in self.ROUNDS for ij in self.TOWER_PLACEMENTS for u in self.UPGRADES
+                self.round_weights[r-1]*self.COVERAGE[(i,j), 'Dart', u]*self.varss[r, i,j, u] 
+                for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS for u in self.UPGRADES
                 )
 
         elif self.type == 'b':
             obj = quicksum(
-                self.round_weights[r]*self.DISTANCE[ij, 'Dart', u] * self.varss[(r, ij, u)] 
-                for r in self.ROUNDS for ij in self.TOWER_PLACEMENTS for u in self.UPGRADES
+                self.round_weights[r]*self.DISTANCE[(i,j), 'Dart', u] * self.varss[(r, i,j, u)] 
+                for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS for u in self.UPGRADES
             )
         
         elif self.type == 'c':
             obj = quicksum(
-                self.round_weights[r]*self.ANGLE_COVERAGE[ij, 'Dart', u] * self.varss[(r, ij, u)] 
-                for r in self.ROUNDS for ij in self.TOWER_PLACEMENTS for u in self.UPGRADES
+                self.round_weights[r]*self.ANGLE_COVERAGE[(i,j), 'Dart', u] * self.varss[(r, i,j, u)] 
+                for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS for u in self.UPGRADES
             )
 
         self.objective_function = obj
@@ -334,30 +334,74 @@ class Model2(GameModel):
     def set_constraints(self):
         # CONSTRAINT 1 - towers cannot be placed inside other towers' footprints
         self.model.addConstrs(
-            (self.varss[r, ij, u] + self.varss[r, kl, u] <= 1
-            for r in range(1,51) for u in range(4) for ij in self.TOWER_PLACEMENTS for kl in self.FOOTPRINTS[ij] if ij != kl),
+            (self.varss[r, i,j, u] + self.varss[r, k,l, u] <= 1
+            for r in range(1,51) for u in range(4) for i,j in self.TOWER_PLACEMENTS for k,l in self.FOOTPRINTS[(i,j)] if (i,j) != (k,l)),
             name = 'footprints'
         )
 
         # CONSTRAINT 2 - We must afford the build each round
         self.model.addConstrs(
-            ((quicksum(self.COST['Dart', u]*self.varss[r, ij, u] for ij in self.TOWER_PLACEMENTS for u in range(4)) <= self.MONEY[r])
+            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= self.MONEY[r])
             for r in range(1,51)),
             name='money'
         )
         
         # CONSTRAINT 3 - We want to beat the human strategy cost
         self.model.addConstrs(
-            ((quicksum(self.COST['Dart', u]*self.varss[r, ij, u] for ij in self.TOWER_PLACEMENTS for u in range(4)) <= self.human_strategy_cost)
+            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= self.human_strategy_cost)
             for r in range(1,51)),
             name='beathuman'
         )
 
         # CONSTRAINT 4 - We treat each upgrade as a separate tower - only one (tower, upgrade) pair can be active at each position
         self.model.addConstrs(
-            ((quicksum(self.varss[r, ij, u] for u in range(4)) <= 1)
-            for r in range(1,51) for ij in self.TOWER_PLACEMENTS),
+            ((quicksum(self.varss[r, i,j, u] for u in range(4)) <= 1)
+            for r in range(1,51) for i,j in self.TOWER_PLACEMENTS),
             name = 'upgradecoding'
         )
 
+        # CONSTRAINT 5 - To have upgrade 1 at round r, you must have had either upgrade 0 or upgrade 1 at one of the previous rounds
+        self.model.addConstrs(
+            (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 1] >= self.varss[r, i,j, 1]
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'upgradeflow01'
+        )
 
+        # CONSTRAINT 6 - To have upgrade 2 at round r, you must have had either upgrade 0 or upgrade 2 at one of the previous rounds
+        self.model.addConstrs(
+            (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 2] >= self.varss[r, i,j, 2]
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'upgradeflow02'
+        )
+
+        # CONSTRAINT 7 - To have upgrade 1+2 (coded as 3) at round r, you must have had either upgrade 1 or upgrade 2 or upgrade 3 at one of the previous rounds
+        self.model.addConstrs(
+            (self.varss[r_prim, i,j, 1] + self.varss[r_prim, i,j, 2] + self.varss[r_prim, i,j, 3] >= self.varss[r, i,j, 3]
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'upgradeflow123'
+        )
+
+        # CONSTRAINT 8 - Fix previous placement choices
+        self.model.addConstrs(
+            (quicksum(self.varss[r_prim, i, j, u] for u in range(4)) <= quicksum(self.varss[r, i, j, u] for u in range(4))
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'fixpreviouschoices'
+        )
+
+        # CONSTRAINT 9 - No downgrades from upgrade 1, 2, 3 to upgrade 0
+        self.model.addConstrs(
+            (self.varss[r_prim, i, j, 1] + self.varss[r_prim, i, j, 2] + self.varss[r_prim, i, j, 3] + self.varss[r,i,j,0] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'nodowngrades1230'
+        )
+
+        # CONSTRAINT 10 - No downgrades from upgrade 3 to upgrade 1 or 2
+        self.model.addConstrs(
+            (self.varss[r_prim, i, j, 3] + self.varss[r,i,j,1] + self.varss[r,i,j,2] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'nodowngrades20'
+        )
+
+
+m2 = Model2(10, "a")
+m2.run()

@@ -205,6 +205,13 @@ def min_max_cosine(mn: float, mx: float, val: float) -> float:
     """
     return val*(mx - mn) + mn
 
+def min_max_distance(mn: float, mx: float, val: float) -> float:
+    min_dist_inv = 1/240 # inverse of range of upgraded Super Monkey Tower
+    max_dist_inv = 1/30  # inverse of smallest possible distace from Tower (radius 10) to the middle of the track (width 20)
+
+    std = (val - min_dist_inv) / (max_dist_inv - min_dist_inv)
+    return std*(mx - mn) + mn
+
 def write_pickle(obj, savename):
     filename = f'simulation/data/{savename}.pkl'
     with open(filename, 'wb') as f:
