@@ -37,11 +37,11 @@ def create_pathline() -> List:
      
 def create_towers_dataframe() -> pd.DataFrame:
     tower_name = ['Dart', 'Tack', 'Ice', 'Bomb', 'Super Monkey']
-    tower_cost = [250, 320, 850, 720, 4000]
-    tower_upgrade_1_cost = [210, 250, 450, 650, 0]
+    tower_cost = [250, 400, 850, 900, 4000]
+    tower_upgrade_1_cost = [210, 250, 450, 650, pd.NA]
     tower_upgrade_2_cost = [100, 150, 300, 250, 2400]
     tower_range = [100, 70, 60, 120, 140]
-    tower_upgrade_2_range = [125, 80, 70, 140, 240]
+    tower_upgrade_2_range = [125, 80, 75, 140, 240]
     tower_attack_cooldown_frames = [29, 55, 100, 55, 2]
     tower_footprint_radius = [10,10,10,10, 15] 
     projectile_speed = [20, 15, pd.NA, 11, 20]

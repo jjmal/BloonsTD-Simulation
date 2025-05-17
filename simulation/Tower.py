@@ -124,7 +124,10 @@ class Tower:
                 # Manage how many bloons can be pierced still
                 projectile.pierce -= 1
                 # Increment pops by the number of pops of the projectile
-                self.pops += projectile.pops
+                if isinstance(projectile, Bomb):
+                    self.pops += projectile.pops
+                else:
+                    self.pops += 1
                 # Remove projectile if cannot pierce more
                 if projectile.pierce <= 0:
                     self.remove_projectile(projectile)
