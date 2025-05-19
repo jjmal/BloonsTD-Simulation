@@ -348,13 +348,13 @@ class Model2(GameModel):
 
         elif self.type == 'b':
             obj = quicksum(
-                self.round_weights[r]*self.DISTANCE[(i,j), 'Dart', u] * self.varss[(r, i,j, u)] 
+                self.round_weights[r-1]*self.DISTANCE[(i,j), 'Dart', u] * self.varss[(r, i,j, u)] 
                 for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS for u in self.UPGRADES
             )
         
         elif self.type == 'c':
             obj = quicksum(
-                self.round_weights[r]*self.ANGLE_COVERAGE[(i,j), 'Dart', u] * self.varss[(r, i,j, u)] 
+                self.round_weights[r-1]*self.ANGLE_COVERAGE[(i,j), 'Dart', u] * self.varss[(r, i,j, u)] 
                 for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS for u in self.UPGRADES
             )
 
@@ -398,26 +398,26 @@ class Model2(GameModel):
             name = 'upgradecoding'
         )
 
-        # CONSTRAINT 5 - To have upgrade 1 at round r, you must have had either upgrade 0 or upgrade 1 at one of the previous rounds
-        self.model.addConstrs(
-            (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 1] >= self.varss[r, i,j, 1]
-            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-            name = 'upgradeflow01'
-        )
+        # # CONSTRAINT 5 - To have upgrade 1 at round r, you must have had either upgrade 0 or upgrade 1 at one of the previous rounds
+        # self.model.addConstrs(
+        #     (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 1] >= self.varss[r, i,j, 1]
+        #     for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+        #     name = 'upgradeflow01'
+        # )
 
-        # CONSTRAINT 6 - To have upgrade 2 at round r, you must have had either upgrade 0 or upgrade 2 at one of the previous rounds
-        self.model.addConstrs(
-            (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 2] >= self.varss[r, i,j, 2]
-            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-            name = 'upgradeflow02'
-        )
+        # # CONSTRAINT 6 - To have upgrade 2 at round r, you must have had either upgrade 0 or upgrade 2 at one of the previous rounds
+        # self.model.addConstrs(
+        #     (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 2] >= self.varss[r, i,j, 2]
+        #     for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+        #     name = 'upgradeflow02'
+        # )
 
-        # CONSTRAINT 7 - To have upgrade 1+2 (coded as 3) at round r, you must have had either upgrade 1 or upgrade 2 or upgrade 3 at one of the previous rounds
-        self.model.addConstrs(
-            (self.varss[r_prim, i,j, 1] + self.varss[r_prim, i,j, 2] + self.varss[r_prim, i,j, 3] >= self.varss[r, i,j, 3]
-            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-            name = 'upgradeflow123'
-        )
+        # # CONSTRAINT 7 - To have upgrade 1+2 (coded as 3) at round r, you must have had either upgrade 1 or upgrade 2 or upgrade 3 at one of the previous rounds
+        # self.model.addConstrs(
+        #     (self.varss[r_prim, i,j, 1] + self.varss[r_prim, i,j, 2] + self.varss[r_prim, i,j, 3] >= self.varss[r, i,j, 3]
+        #     for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+        #     name = 'upgradeflow123'
+        # )
 
         # CONSTRAINT 8 - Fix previous placement choices
         self.model.addConstrs(
@@ -438,6 +438,20 @@ class Model2(GameModel):
             (self.varss[r_prim, i, j, 3] + self.varss[r,i,j,1] + self.varss[r,i,j,2] <= 1
             for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
             name = 'nodowngrades20'
+        )
+
+        # CONSTRAINT 11 - Separate upgrade paths 1 and 2 - part 1
+        self.model.addConstrs(
+            (self.varss[r_prim, i, j, 1] + self.varss[r,i,j,2] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'separate12'
+        )
+
+        # CONSTRAINT 12 - Separate upgrade paths 1 and 2 - part 2
+        self.model.addConstrs(
+            (self.varss[r_prim, i, j, 2] + self.varss[r,i,j,1] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'separate21'
         )
 
     def get_parameters(self) -> Dict[str, Any]:

@@ -46,15 +46,18 @@ def plot_footprint_constraints(pos, zone_points):
 
 def plot_points(points_list):
     plt.figure(figsize=(10, 6))
-
-    for points in points_list:
-        x, y = zip(*points)
-        plt.scatter(x,y)
-
+    
+    # Extract x and y coordinates
+    all_x, all_y = zip(*points_list)
+    # Plot all integer points
+    plt.plot(all_x, all_y, 'bx', markersize=1)
+    
+    plt.grid(True)
     plt.legend()
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.ylim(max(y) + 40, min(x))
+    plt.xlim(min(all_x), max(all_x))
+    plt.ylim(max(all_y), min(all_y))
     plt.axis('equal')
     plt.tight_layout()
     plt.show()
@@ -64,5 +67,5 @@ def flatten(xss):
 
    
 bp = create_pathline()
-tp = generate_all_points_on_track(extended_by=15)
-plot_track(bp, tp)
+tp = generate_all_tower_placements(False)
+plot_points(tp)

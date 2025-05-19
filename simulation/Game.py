@@ -171,17 +171,17 @@ class Game:
         info_dict['towers'] = self.tower_manager.tower_list
         return info_dict
 
-    def pause_game(self) -> None:
-        """
-        Pauses the Game upon pressing the P key. Press Enter to unpause.
-        """
-        is_paused = True
-        print("Game paused (you pressed P). Press ENTER to unpause!")
-        while is_paused:
-            for event in pygame.event.get():
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_RETURN:
-                        is_paused = False
+    # def pause_game(self) -> None:
+    #     """
+    #     Pauses the Game upon pressing the P key. Press Enter to unpause.
+    #     """
+    #     is_paused = True
+    #     print("Game paused (you pressed P). Press ENTER to unpause!")
+    #     while is_paused:
+    #         for event in pygame.event.get():
+    #             if event.type == pygame.KEYDOWN:
+    #                 if event.key == pygame.K_RETURN:
+    #                     is_paused = False
 
     
     def run_game(self) -> None:
@@ -235,10 +235,10 @@ class Game:
                 self.render_bloons()
                 self.render_ui()
 
-                # resolve pausing
-                keys = pygame.key.get_pressed()
-                if keys[pygame.K_p]:
-                    self.pause_game()
+                # # resolve pausing
+                # keys = pygame.key.get_pressed()
+                # if keys[pygame.K_p]:
+                #     self.pause_game()
 
             # Resolve game end:
             if self.check_game_end() == 1:

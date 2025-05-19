@@ -210,7 +210,7 @@ def generate_distance_dict(scaling_bracket: Tuple[int,int] = (0, 1)) -> Dict[Tup
             dist_sum = 0
             for p in midpoints:
                 if is_point_in_circle(circle, p[0], p[1]):
-                    dist_inv = (1/(math.dist(var, p)+1)) # +1 in the denominator to avoid division by 0  
+                    dist_inv = (1/(math.dist(var, p))) 
                     if (upgrade == 1 or upgrade == 3): # upgrade 1 adds pierce, so it indirectly increases "coverage" (allows to strike more bloons)
                         dist_sum += 1.75*min_max_distance(scaling_bracket[0], scaling_bracket[1], dist_inv)
                     else:
@@ -286,7 +286,7 @@ def generate_angle_coverage_dict(scaling_bracket: Tuple[int,int] = (0,1)) -> Dic
     tower_placements = generate_all_tower_placements()
     midpoints = generate_track_middlepoints()
     midpoint_vector_map = generate_midpoint_vector_map()
-    cosine_threshold = math.sqrt((10**2) + (30**2)) # cosine threshold for pierce bonus,  determined geometrically
+    cosine_threshold = (math.sqrt((30**2) - (13**2))/ 30) # cosine threshold for pierce bonus,  determined geometrically
     options = [('Dart', 0), ('Dart', 1), ('Dart', 2), ('Dart', 3), ('Super Monkey', 0), ('Super Monkey', 2)]
     for tower, upgrade in options:
         if upgrade >= 2: # upgrade 2 increases range
@@ -300,7 +300,7 @@ def generate_angle_coverage_dict(scaling_bracket: Tuple[int,int] = (0,1)) -> Dic
             for p in midpoints:
                 if is_point_in_circle(circle, p[0], p[1]):
                     cosine = compute_shooting_angle_cos(var, p, midpoint_vector_map)
-                    if (upgrade == 1 or upgrade == 3) and (cosine > cosine_threshold): # upgrade 1 adds pierce, so it indirectly increases "coverage" (allows to strike more bloons)
+                    if (upgrade == 1 or upgrade == 3) and (cosine >= cosine_threshold): # upgrade 1 adds pierce, so it indirectly increases "coverage" (allows to strike more bloons)
                         ang_sum += 2*min_max_cosine(scaling_bracket[0], scaling_bracket[1], cosine)
                     else:
                         ang_sum += min_max_cosine(scaling_bracket[0], scaling_bracket[1], cosine)
@@ -559,14 +559,14 @@ def generate_and_save() -> None:
     """
     # COV = generate_coverage_dict()
     # write_pickle(COV, 'COV')
-    DIST_0_1 = generate_distance_dict()
-    write_pickle(DIST_0_1, 'DIST_0_1')
-    DIST_05_1= generate_distance_dict((0.5, 1))
-    write_pickle(DIST_05_1, 'DIST_05_1')
+    # DIST_0_1 = generate_distance_dict()
+    # write_pickle(DIST_0_1, 'DIST_0_1')
+    # DIST_05_1= generate_distance_dict((0.5, 1))
+    # write_pickle(DIST_05_1, 'DIST_05_1')
     # ANG_0_1 = generate_angle_coverage_dict()
     # write_pickle(ANG_0_1, 'ANG_0_1')
-    # ANG_05_1 = generate_angle_coverage_dict((0.5, 1))
-    # write_pickle(ANG_05_1, 'ANG_05_1')
+    ANG_05_1 = generate_angle_coverage_dict((0.5, 1))
+    write_pickle(ANG_05_1, 'ANG_05_1')
 
     # FP_10 = generate_all_footprint_constraint_sets("nn", 10)
     # write_pickle(FP_10, 'FP_10')
@@ -594,3 +594,5 @@ def generate_and_save() -> None:
     # PLACEMENTS_S = generate_all_tower_placements(True)
     # write_pickle(PLACEMENTS_S, 'PLACEMENTS_S')
 
+
+# generate_and_save()

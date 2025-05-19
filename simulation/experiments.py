@@ -1,3 +1,4 @@
+from gurobipy import Model, GRB, quicksum
 from typing import Tuple, List
 from Game import Game, prepare_tower_queue
 from GameHeuristic import GameS1, get_s1_tower_positions
@@ -231,18 +232,21 @@ def run_1_from_file(filename: str, graphics: bool = False, speed_multiplier: int
     cost = compute_cost_of_actions(actions)
     print(f"Money spent: {cost}")
 
-def run_2(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)]):
-    model = Model2(modulo, type_, (0,1), human_strategy_cost, round_weights, False)
+def run_2(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
+    model = Model2(modulo, type_, scaling_bracket, human_strategy_cost, round_weights, False)
+    model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
+    model.model.Params.MIPGap = 0.055 # Set MIDGap to return in reasonable time...
     results = model.run()
-    extracted = Model2.extract_vars_from_gurobi(results['choices'])
-    actions = Model2.model2_to_simulation(extracted)
-    queue = prepare_tower_queue(actions)
+    
+    # actions = Model2.model2_to_simulation(results['choices'])
+    # actions =  Model2.model2_to_simulation(results)
+    # queue = prepare_tower_queue(actions)
 
-    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
-    g.run_game()
+    # g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    # g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    # cost = compute_cost_of_actions(actions)
+    # print(f"Money spent: {cost}")
 
 def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
     results = read_pickle(filename, True)
@@ -258,9 +262,17 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
     print(f"Money spent: {cost}")
 
 
-# run_1(3, 'c', False, 10, 37, (0,1), False)
+# run_1_from_file('Model1cmod10_20250517_185846', True, 10)
+# run_s1(False, 5, 37)
+# run_s1(False, 5, 36)
+# run_2(10, 'a', graphics=True, speed_multiplier=2)
+
+
+# run_2(10, 'a')
+# run_2(10, 'b')
+# run_2(10, 'c')
 
 
 
-# run_1_from_file('Model1bmod10_20250517_171701', True, 10)
-run_s1(False, 10, 37)
+
+
