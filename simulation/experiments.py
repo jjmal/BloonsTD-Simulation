@@ -116,8 +116,8 @@ def run_s2(graphics: bool = False, speed_multiplier = 5, correction: bool = Fals
             (40, ('Tack', (173,157), 0)),
             (40, ('Tack', (173,157), 1)),
             (40, ('Tack', (173,157), 2)),
-            (45, ('Super Monkey', (257,115), 0)),
-            (47, ('Super Monkey', (257,115), 2)),
+            (45, ('Super Monkey', (257,118), 0)),
+            (47, ('Super Monkey', (257,118), 2)),
             (49, ('Super Monkey', (275,363), 0))
         ]
     
@@ -195,12 +195,12 @@ def run_s2(graphics: bool = False, speed_multiplier = 5, correction: bool = Fals
             (40, ('Tack', (173,157), 0)),
             (40, ('Tack', (173,157), 1)),
             (41, ('Tack', (173,157), 2)),
-            (45, ('Super Monkey', (257,115), 0)),
-            (47, ('Super Monkey', (257,115), 2)),
+            (45, ('Super Monkey', (257,118), 0)),
+            (47, ('Super Monkey', (257,118), 2)),
             (49, ('Super Monkey', (275,363), 0))
         ]
 
-    cost = compute_cost_of_actions(actions, until=16)
+    cost = compute_cost_of_actions(actions, until=50)
     print(f"Money spent: {cost}")
 
     queue = prepare_tower_queue(actions)
@@ -264,7 +264,7 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
 
 
 # run_1_from_file('Model1cmod10_20250517_185846', True, 10)
-run_s1(True, 10, 37)
+run_s2(True, 40, True)
 
 # run_2(10, 'a', graphics=True, speed_multiplier=2)
 
