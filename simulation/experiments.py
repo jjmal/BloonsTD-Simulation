@@ -261,7 +261,7 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
     cost = compute_cost_of_actions(actions)
     print(f"Money spent: {cost}")
 
-
+print(get_s1_tower_positions())
 # run_1_from_file('Model1cmod10_20250517_185846', True, 10)
 # run_s1(False, 5, 37)
 # run_s1(False, 5, 36)
