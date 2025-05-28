@@ -1,12 +1,17 @@
 import re
+import random
+import numpy as np
+import pandas as pd
 
+from datetime import datetime
 from typing import List, Tuple, Dict, Any
 from datetime import datetime
 from gurobipy import Model, GRB, quicksum
 from datasets import create_towers_dataframe
 from modelling_sets import  get_money_constraint_rhs, generate_sets_1a, generate_sets_1b, generate_sets_1c, \
-      generate_sets_2a, generate_sets_2b, generate_sets_2c
-from modelling_utils import write_pickle
+      generate_sets_2a, generate_sets_2b, generate_sets_2c, generate_sets_3
+from modelling_utils import read_pickle, write_pickle, filter_point_set_modulo
+from Game import Game, prepare_tower_queue
  
 class GameModel:
     """
@@ -56,7 +61,7 @@ class GameModel:
 
         # Save result as pickle, if Model is not Model 1 (as for Model 1 we care about the final result after 50 models are run)
         if self.name != 'Model1':
-            write_pickle(out, f"{self.name}{self.type}mod{self.modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}", True)
+            write_pickle(out, f"{self.name}{self.type}_mod{self.modulo}_m{self.human_strategy_cost}_a{self.scaling_bracket[0]}", True)
 
         return out 
     
@@ -189,14 +194,15 @@ class Model1(GameModel):
         return out
 
     @staticmethod 
-    def model1_per_round(modulo: int, type_: str, scaling_bracket: Tuple[int,int] = (0,1), dart_monkey_nr: int = 37, round_19_correction: bool = True) -> Dict[int, List[Tuple[int,int]]]:
+    def model1_per_round(modulo: int, type_: str, scaling_bracket: Tuple[int,int] = (0,1), dart_monkey_nr: int = 37, money_correction: Tuple[int, int] = (0,0)) -> Dict[int, List[Tuple[int,int]]]:
         """
         Runs Model 1 for each round, fixing previous choices.
         :param modulo: number for the divisibility filter
         :param type_: type of Model ('a', 'b', or 'c'), which determines the objective function
-        :param round_19_correction: With an uncorrected model, the game throws an error on round 19 for modulo 10 (not enough money for the build) for 
-        types 'a' and 'b', as it by default does not account for lost lives. With correction enabled, the model will take the lives lost into account 
-        when calculating money from round 19 onwards, enabling the game to last until its properly lost.
+        :param money_correction: With an uncorrected model, the game can throws an error (not 
+        enough money for the build) for some experiments as it by default does not account for lost lives. 
+        This parameter set to (round_nr, money_amount) will subtract money_amount from available money,
+        starting at roung round_nr.
         :returns: a Dict of the form (round_nr, choices) with round_nr being the round
         in which we perform Dart Tower Build actions specified in choices
         """
@@ -245,14 +251,15 @@ class Model1(GameModel):
             m.set_constraints()
 
             # CONSTRAINT 3 - Money constraints per round
-            if not round_19_correction:
+            if money_correction == (0,0):
                 m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money)
             else:
-                if r < 19:
+                if r < money_correction[0]:
                     m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money)
                 else:
-                    m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money - 32)
-
+                    print(f"printing money corrections: {money_correction[1]}")
+                    m.model.addConstr(quicksum(250*m.varss[pos] for pos in m.TOWER_PLACEMENTS) <= money - money_correction[1])
+                    
             # CONSTRAINT 4 - Points fixed in previous rounds must stay fixed
             if len(fixed_points) > 0:
                 m.model.addConstrs(m.varss[fixed] == 1 for fixed in fixed_points)
@@ -279,9 +286,10 @@ class Model1(GameModel):
         # Save result as pickle
         m = Model1(modulo, type_, scaling_bracket, dart_monkey_nr, False) # dummy model just to get the parameters
         params = m.get_parameters()
-        params['round_19_correction'] = round_19_correction
+        params['money_correction'] = money_correction
         out['parameters'] = params
-        write_pickle(out, f"Model1{type_}mod{modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}", True)
+        # write_pickle(out, f"Model1{type_}_mod{modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}", True)
+        write_pickle(out, f"Model1{type_}_mod{modulo}_m{250*dart_monkey_nr}_a{scaling_bracket[0]}_d{money_correction[0]}-{money_correction[1]}", True)
 
         return out
 
@@ -372,8 +380,8 @@ class Model2(GameModel):
     def set_constraints(self):
         # CONSTRAINT 1 - towers cannot be placed inside other towers' footprints
         self.model.addConstrs(
-            (self.varss[r, i,j, u] + self.varss[r, k,l, u] <= 1
-            for r in range(1,51) for u in range(4) for i,j in self.TOWER_PLACEMENTS for k,l in self.FOOTPRINTS[(i,j)] if (i,j) != (k,l)),
+            (self.varss[r, i,j, u] + self.varss[r, k,l, u_prim] <= 1
+            for r in range(1,51) for u in range(4) for u_prim in range(4) for i,j in self.TOWER_PLACEMENTS for k,l in self.FOOTPRINTS[(i,j)] if (i,j) != (k,l)),
             name = 'footprints'
         )
 
@@ -398,27 +406,6 @@ class Model2(GameModel):
             name = 'upgradecoding'
         )
 
-        # # CONSTRAINT 5 - To have upgrade 1 at round r, you must have had either upgrade 0 or upgrade 1 at one of the previous rounds
-        # self.model.addConstrs(
-        #     (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 1] >= self.varss[r, i,j, 1]
-        #     for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-        #     name = 'upgradeflow01'
-        # )
-
-        # # CONSTRAINT 6 - To have upgrade 2 at round r, you must have had either upgrade 0 or upgrade 2 at one of the previous rounds
-        # self.model.addConstrs(
-        #     (self.varss[r_prim, i,j, 0] + self.varss[r_prim, i,j, 2] >= self.varss[r, i,j, 2]
-        #     for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-        #     name = 'upgradeflow02'
-        # )
-
-        # # CONSTRAINT 7 - To have upgrade 1+2 (coded as 3) at round r, you must have had either upgrade 1 or upgrade 2 or upgrade 3 at one of the previous rounds
-        # self.model.addConstrs(
-        #     (self.varss[r_prim, i,j, 1] + self.varss[r_prim, i,j, 2] + self.varss[r_prim, i,j, 3] >= self.varss[r, i,j, 3]
-        #     for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-        #     name = 'upgradeflow123'
-        # )
-
         # CONSTRAINT 8 - Fix previous placement choices
         self.model.addConstrs(
             (quicksum(self.varss[r_prim, i, j, u] for u in range(4)) <= quicksum(self.varss[r, i, j, u] for u in range(4))
@@ -437,7 +424,7 @@ class Model2(GameModel):
         self.model.addConstrs(
             (self.varss[r_prim, i, j, 3] + self.varss[r,i,j,1] + self.varss[r,i,j,2] <= 1
             for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
-            name = 'nodowngrades20'
+            name = 'nodowngrades312'
         )
 
         # CONSTRAINT 11 - Separate upgrade paths 1 and 2 - part 1
@@ -465,7 +452,7 @@ class Model2(GameModel):
 
         return out
 
-    
+
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
         """
@@ -481,15 +468,234 @@ class Model2(GameModel):
         return out
     
     @staticmethod
+    def enrich_build_order(sorted_round_action: List[Tuple]) -> List[Tuple]:
+        # Go through the sorted list in order; for each upgrade operation we need to see if a build needs to be added right before it
+        exists_set = set()
+        for round_action in sorted_round_action:
+            round_ = round_action[0]
+            action = (round_action[1], round_action[2], round_action[3])
+            if action[2] == 0:
+                exists_set.add(action) 
+            if action[2] > 0:
+                if action[2] == 3:
+                    sorted_round_action.insert(0, (round_, action[0], action[1], 1))
+                    sorted_round_action.insert(0, (round_, action[0], action[1], 2))
+                    sorted_round_action.remove(round_action)
+
+                if (action[0], action[1], 0) not in exists_set:
+                    sorted_round_action.insert(0, (round_, action[0], action[1], 0))
+                    exists_set.add((action[0], action[1], 0)) 
+
+                exists_set.add(action)
+        
+        return sorted_round_action
+    
+
+    @staticmethod
     def model2_to_simulation(result_tuple_list: List[Tuple[int,int,int,int]]) -> List[Tuple]:
         out = []
+
+        # For each position, upgrade keep only the occurence in the earliest round
+        keep_earliest_filter = {}
         for round_, position_x, position_y, upgrade in result_tuple_list:
-            out.append((round_, ('Dart', (position_x, position_y), upgrade)))
+            keep_earliest_filter[(position_x, position_y, upgrade)] = []
+        for (round_, position_x, position_y, upgrade) in result_tuple_list:
+            keep_earliest_filter[(position_x, position_y, upgrade)].append(round_)
+        only_first_occurence = {key: min(val) for key, val in keep_earliest_filter.items()}
+
+        # transform and sort
+        round_action = []
+        for key, val in only_first_occurence.items():
+            round_action.append((val, key[0], key[1], key[2]))
+        sorted_round_action = sorted(round_action, key= lambda x: x[0])
+
+        # Enrich to make into a valid build order
+        valid = Model2.enrich_build_order(sorted_round_action)
+        # Change syntax and sort
+        
+        for round_, position_x, position_y, upgrade in valid:
+            out.append((round_, ('Dart', (position_x,position_y), upgrade)))
+        
+        out.sort()
 
         return out
         
 
 class Model3(GameModel):
+    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)], logging = True):
+        super().__init__('Model3', modulo, logging)
+        self.type = type_
+        self.scaling_bracket = scaling_bracket
+        self.human_strategy_cost = human_strategy_cost
+        self.round_weights = round_weights
+
+    def generate_sets(self):
+        sets = generate_sets_3(self.modulo, self.scaling_bracket)
+        if self.type == 'a':
+            self.COVERAGE = sets['COV']   
+        elif self.type == 'b':
+            self.COVERAGE = sets['DIST']
+
+        elif self.type == 'c':
+            self.COVERAGE = sets['ANG_COV']
+                
+        
+        var_d = sets['VAR_D']
+        var_s = sets['VAR_S']
+
+        self.ROUNDS = var_d[0]
+
+        self.TOWER_PLACEMENTS = var_d[1]
+        self.UPGRADES_D = var_d[2]
+
+        self.TOWER_PLACEMENTS_S = var_s[1]
+        self.UPGRADES_S = var_s[2]
+
+        self.FOOTPRINTS = sets['FP']
+        self.FOOTPRINTS_NS = sets['FPNS']
+        self.FOOTPRINTS_SS = sets['FPSS']
+        self.COST = sets['COST']
+        self.MONEY = sets['MONEY']
+    
+    def set_variables(self):
+        # Define variables for Dart
+        self.vars_d = self.model.addVars(
+            self.ROUNDS, self.TOWER_PLACEMENTS, 'D', self.UPGRADES_D,
+            name='round-towerplacement-upgrade-dart',
+            vtype=GRB.BINARY
+            )
+        # Define variables for Super Monkey
+        self.vars_s = self.model.addVars(
+            self.ROUNDS, self.TOWER_PLACEMENTS_S, 'S', self.UPGRADES_S,
+            name='round-towerplacement-upgrade-super',
+            vtype=GRB.BINARY
+            )
+        self.model.update()
+
+    def set_objective(self):
+        # Define the objective function
+        
+        obj = quicksum(
+            self.round_weights[r-1]*self.COVERAGE[(i,j), 'Dart', u]*self.vars_d[r, i,j, 'D',u] 
+            for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS for u in self.UPGRADES_D
+            ) + \
+            quicksum(
+                self.round_weights[r-1]*self.COVERAGE[(i,j), 'Super Monkey', u]*self.vars_s[r, i,j, 'S', u] 
+                for r in self.ROUNDS for i,j in self.TOWER_PLACEMENTS_S for u in self.UPGRADES_S
+                )
+        
+        self.objective_function = obj
+
+        # Set the objective function
+        self.model.setObjective(
+            obj,
+            sense=GRB.MAXIMIZE
+        )
+
+        # Update model
+        self.model.update()
+    
+    def set_constraints(self):
+        # CONSTRAINT 1.1 - towers cannot be placed inside other towers' footprints - NN
+        self.model.addConstrs(
+            (self.vars_d[r, i,j, 'D',u] + self.vars_d[r, k,l, 'D', u_prim] <= 1
+            for r in range(1,51) for u in range(4) for u_prim in range(4) for i,j in self.TOWER_PLACEMENTS for k,l in self.FOOTPRINTS[(i,j)] if (i,j) != (k,l)),
+            name = 'footprints-nn'
+        )
+
+        # CONSTRAINT 1.2 - towers cannot be placed inside other towers' footprints - NS
+        self.model.addConstrs(
+            (self.vars_s[r, i,j, 'S', u] + self.vars_d[r, k,l,'D', u_prim] <= 1
+            for r in range(1,51) for u in [0,2] for u_prim in range(4) for i,j in self.TOWER_PLACEMENTS_S for k,l in self.FOOTPRINTS_NS[(i,j)] if (i,j) != (k,l)),
+            name = 'footprints-ns'
+        )
+
+        # CONSTRAINT 1.3 - towers cannot be placed inside other towers' footprints - SS
+        self.model.addConstrs(
+            (self.vars_s[r, i,j, 'S',u] + self.vars_s[r, k,l,'S', u_prim] <= 1
+            for r in range(1,51) for u in [0,2] for u_prim in [0,2] for i,j in self.TOWER_PLACEMENTS_S for k,l in self.FOOTPRINTS_SS[(i,j)] if (i,j) != (k,l)),
+            name = 'footprints-ss'
+        )
+
+        # CONSTRAINT 2 - We must afford the build each round
+        self.model.addConstrs(
+            ((quicksum(self.COST['Dart', u]*self.vars_d[r, i,j, 'D',u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) + \
+              quicksum(self.COST['Super Monkey', u]*self.vars_s[r, i,j, 'S',u] for i,j in self.TOWER_PLACEMENTS_S for u in [0,2]) <= self.MONEY[r])
+            for r in range(1,51)),
+            name='money'
+        )
+        
+        # CONSTRAINT 3 - We want to beat the human strategy cost
+        self.model.addConstrs(
+            ((quicksum(self.COST['Dart', u]*self.vars_d[r, i,j, 'D',u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) + \
+              quicksum(self.COST['Super Monkey', u]*self.vars_s[r, i,j,'S',u] for i,j in self.TOWER_PLACEMENTS_S for u in [0,2]) <= self.human_strategy_cost)
+            for r in range(1,51)),
+            name='beathuman'
+        )
+
+        # CONSTRAINT 4.1 - only one (Dart, upgrade) pair can be active at each position
+        self.model.addConstrs(
+            ((quicksum(self.vars_d[r, i,j, 'D', u] for u in range(4)) <= 1)
+            for r in range(1,51) for i,j in self.TOWER_PLACEMENTS),
+            name = 'upgradecoding-d'
+        )
+
+        # CONSTRAINT 4.2 - only one (Super Monkey, upgrade) pair can be active at each position
+        self.model.addConstrs(
+            ((quicksum(self.vars_s[r, i,j,'S', u] for u in [0,2]) <= 1)
+            for r in range(1,51) for i,j in self.TOWER_PLACEMENTS_S),
+            name = 'upgradecoding-s'
+        )
+
+        # CONSTRAINT 5.1 - Fix previous placement choices D
+        self.model.addConstrs(
+            (quicksum(self.vars_d[r_prim, i, j,  'D', u] for u in range(4)) <= quicksum(self.vars_d[r, i, j, 'D', u] for u in range(4))
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'fixpreviouschoices-d'
+        )
+
+        # CONSTRAINT 5.2 - Fix previous placement choices S
+        self.model.addConstrs(
+            (quicksum(self.vars_s[r_prim, i, j, 'S',u] for u in [0,2]) <= quicksum(self.vars_s[r, i, j,'S', u] for u in [0,2])
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS_S),
+            name = 'fixpreviouschoices-s'
+        )
+
+        # CONSTRAINT 6.1 - No downgrades from upgrade 1, 2, 3 to upgrade 0
+        self.model.addConstrs(
+            (self.vars_d[r_prim, i, j,'D',1] + self.vars_d[r_prim, i, j,'D', 2] + self.vars_d[r_prim, i, j, 'D', 3] + self.vars_d[r,i,j,'D',0] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'nodowngrades1230'
+        )
+
+        # CONSTRAINT 6.2 - No downgrades from upgrade 3 to upgrade 1 or 2
+        self.model.addConstrs(
+            (self.vars_d[r_prim, i, j, 'D',3] + self.vars_d[r,i,j,'D',1] + self.vars_d[r,i,j,'D',2] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'nodowngrades312'
+        )
+
+        # CONSTRAINT 6.3 - Separate upgrade paths 1 and 2 - part 1
+        self.model.addConstrs(
+            (self.vars_d[r_prim, i, j, 'D',1] + self.vars_d[r,i,j,'D',2] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'separate12'
+        )
+
+        # CONSTRAINT 6.4 - Separate upgrade paths 1 and 2 - part 2
+        self.model.addConstrs(
+            (self.vars_d[r_prim, i, j, 'D',2] + self.vars_d[r,i,j,'D', 1] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS),
+            name = 'separate21'
+        )
+
+        # CONSTRAINT 6.5 - No downgrades from upgrade 2 to upgrade 0 S
+        self.model.addConstrs(
+            (self.vars_s[r_prim, i, j,'S', 2] + self.vars_s[r,i,j, 'S', 0] <= 1
+            for r in range(2,51) for r_prim in range(1,r) for i,j in self.TOWER_PLACEMENTS_S),
+            name = 'nodowngrades20-s'
+        )
+
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
         """
@@ -511,6 +717,149 @@ class Model3(GameModel):
             out.append((round_, (tower, (position_x, position_y), upgrade)))
 
         return out
+    
 
-# m2 = Model2(10, "a")
-# m2.run()
+class ProxyEvaluator:
+    """
+    Used for evaluating the quality of proxies.
+    """
+    def __init__(self, model_nr: int, type_: str, times_per_round: int = 20, modulo: int = 1, logging: bool = True):
+        random.seed(40) # set seed for reproducibility
+        self.model_nr = model_nr
+        self.type = type_
+        self.times_per_round = times_per_round
+        self.modulo = modulo
+        self.logging = logging
+
+        self.pos_D = read_pickle('PLACEMENTS')
+        self.pos_S = read_pickle('PLACEMENTS_S')
+        
+        if self.type == 'a':
+            self.cov = read_pickle('COV')
+        elif self.type == 'b':
+            self.cov = read_pickle('DIST_0_1')
+        elif self.type == 'c':
+            self.cov = read_pickle('ANG_0_1')
+        if self.modulo > 1:
+            self.pos_D = filter_point_set_modulo(self.pos_D, self.modulo)
+            self.pos_S = filter_point_set_modulo(self.pos_S, self.modulo)
+
+        self.results = {}
+
+    def get_random_build_for_round(self, round_nr : int) -> List[Tuple]:
+        out = []
+        pos_D = self.pos_D.copy()
+        pos_S = self.pos_S.copy()
+        money = get_money_constraint_rhs(round_nr)
+
+        if self.model_nr == 1:
+            while money >= 250:
+                pos = random.choice(pos_D)
+                out.append((round_nr, ('Dart', (pos[0], pos[1]), 0)))
+                money = money - 250
+                pos_D.remove(pos)
+        
+        else:
+            while money >= 250:
+                if money >= 4000 and round_nr > 30 and self.model_nr == 3:
+                    pos = random.choice(pos_S)
+                    out.append((round_nr, ('Super Monkey', (pos[0], pos[1]), 0)))
+                    money = money - 4000
+                    pos_S.remove(pos)
+                    if money >= 2400:
+                        out.append((round_nr, ('Super Monkey', (pos[0], pos[1]), 2)))
+                        money = money - 2400
+                else:
+                    pos = random.choice(pos_D)
+                    out.append((round_nr, ('Dart', (pos[0], pos[1]), 0)))
+                    money = money - 250
+                    pos_D.remove(pos)
+                    if money >= 210:
+                        out.append((round_nr, ('Dart', (pos[0], pos[1]), 1)))
+                        money = money - 210
+                    if money >= 100:
+                        out.append((round_nr, ('Dart', (pos[0], pos[1]), 2)))
+                        money = money - 100
+        return out
+
+    def compute_cov_for_build(self, build: List[Tuple]) -> int:
+        total = 0
+        for action in build:
+            tow, pos, upg = action[1]
+            total += self.cov[pos, tow, upg]
+        
+        return total
+
+    def run_round(self, round_nr: int) -> None:
+        self.results[round_nr] = [[],[]]
+        for _ in range(self.times_per_round):
+            build = self.get_random_build_for_round(round_nr)
+            cov = self.compute_cov_for_build(build)
+            queue = prepare_tower_queue(build)
+            g = Game(40, 30000, round_nr, False, queue, 5)
+            results = g.run_round()
+            lives = results['lives']
+            self.results[round_nr][0].append(cov)
+            self.results[round_nr][1].append(lives)
+
+    def run_evaluation(self) -> Dict[int, List]:
+        for round_nr in range(1,51):
+            self.run_round(round_nr)
+            if self.logging:
+                print(f"Evaluation progress: {round_nr}/50")
+
+        self.write_results_to_pickle()
+        return self.results
+
+    def write_results_to_pickle(self):
+        write_pickle(self.results, f'proxy_evaluation_{self.model_nr}{self.type}', True)
+
+    @staticmethod
+    def get_correlation_per_round(evaluation_results: Dict[int, List]) -> Dict[int, float]:
+        out_dct = {}
+        for round_nr in range(1,51):
+            cov = evaluation_results[round_nr][0]
+            lives = evaluation_results[round_nr][1]
+            out_dct[round_nr] = np.corrcoef(cov, lives)[0,1]
+        return out_dct
+    
+    @staticmethod
+    def filter_our_extremes(evaluation_results: Dict[int, List]) -> Dict[int,List]:
+        zero_lives_count = 0
+        forty_lives_count = 0
+        for round_nr in range(1,51):
+            df = pd.DataFrame({'cov':evaluation_results[round_nr][0], 'lives':evaluation_results[round_nr][1]})
+            zero_lives = (df['lives'] == 0)
+            forty_lives = (df['lives'] == 40)
+            df_new = df[~(zero_lives | forty_lives)]
+            zero_lives_count += len(df[zero_lives])
+            forty_lives_count += len(df[forty_lives])
+            evaluation_results[round_nr][0] = list(df_new['cov'])
+            evaluation_results[round_nr][1] = list(df_new['lives'])
+        
+        print(f"Zero lives cases removed: {zero_lives_count}\nFull lives cases removed: {forty_lives_count}")
+        return evaluation_results
+
+    @staticmethod
+    def get_correlation(evaluation_results: Dict[int, List], extremes_correction: bool) -> float:
+        x = []
+        y = []
+        if extremes_correction:
+            evaluation_results = ProxyEvaluator.filter_our_extremes(evaluation_results)
+
+        for round_nr in range(1,51):
+            cov_ls = evaluation_results[round_nr][0]
+            lives_ls = evaluation_results[round_nr][1]
+            x.extend(cov_ls)
+            y.extend(lives_ls)
+        return  np.corrcoef(x,y)[0,1]
+    
+
+
+# ev = ProxyEvaluator(1,'c', 100, 1)
+# build = ev.get_random_build_for_round(14)
+# cov = ev.compute_cov_for_build(build)
+# results = ev.run_evaluation()
+results = read_pickle('proxy_evaluation_1a', True)
+corr = ProxyEvaluator.get_correlation(results, False)
+print(corr)

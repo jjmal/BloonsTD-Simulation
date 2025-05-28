@@ -19,7 +19,7 @@ def is_point_modulo(point: Tuple[int,int], modulo: int) -> bool:
         return True
     return False
 
-def filter_point_set_module(points: List[Tuple[int,int]], modulo: int) -> List[Tuple[int,int]]:
+def filter_point_set_modulo(points: List[Tuple[int,int]], modulo: int) -> List[Tuple[int,int]]:
     """
     Filters a list of points, checking if both coordinates of a point are divisible by a number. Approximately
     1/(modulo^2) points will be kept, assuming a uniformly random distribution.

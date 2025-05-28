@@ -1,10 +1,11 @@
 from gurobipy import Model, GRB, quicksum
-from typing import Tuple, List
+from typing import Tuple, List, Any
 from Game import Game, prepare_tower_queue
 from GameHeuristic import GameS1, get_s1_tower_positions
-from modelling import Model1, Model2
+from modelling import Model1, Model2, Model3, ProxyEvaluator
 from modelling_sets import create_towers_dataframe
 from modelling_utils import read_pickle
+
 
 def compute_cost_of_actions(actions: Tuple, until: int = 50) -> int:
     towers_df = create_towers_dataframe()
@@ -28,14 +29,13 @@ def run_s1(graphics: bool = False, speed_multiplier = 5, dart_monkey_nr: int = 3
     :param graphics: whether to run with graphics (True) or not (False)
     """ 
     positions = get_s1_tower_positions()[:dart_monkey_nr]
-    print(len(positions))
 
-    print(f"Money spent: {250*dart_monkey_nr}")
+    
 
     g = GameS1(40,650,1, graphics, positions, speed_multiplier)
     g.run_game()
 
-    
+    print(f"Money spent: {len(g.tower_manager.tower_list)*250}")
 
 def run_s2(graphics: bool = False, speed_multiplier = 5, correction: bool = False):
     """
@@ -209,16 +209,15 @@ def run_s2(graphics: bool = False, speed_multiplier = 5, correction: bool = Fals
 
    
 
-def run_1(modulo: int, type_: str,  graphics: bool = False, speed_multiplier: int = 5, dart_monkey_nr: int = 37, scaling_bracket: Tuple[int,int] = (0,1), round_19_correction: bool = False):
-    results = Model1.model1_per_round(modulo, type_, scaling_bracket, dart_monkey_nr, round_19_correction)
+def run_1(modulo: int, type_: str,  graphics: bool = False, speed_multiplier: int = 5, dart_monkey_nr: int = 37, scaling_bracket: Tuple[int,int] = (0,1),  money_correction: Tuple[int, int] = None):
+    results = Model1.model1_per_round(modulo, type_, scaling_bracket, dart_monkey_nr, money_correction)
     actions = Model1.model1_to_simulation(results)
     queue = prepare_tower_queue(actions)
 
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    print(f"Money spent: {len(g.tower_manager.tower_list)*250}")
 
 def run_1_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
     results = read_pickle(filename, True)
@@ -230,28 +229,26 @@ def run_1_from_file(filename: str, graphics: bool = False, speed_multiplier: int
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    print(f"Money spent: {len(g.tower_manager.tower_list)*250}")
 
 def run_2(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
     model = Model2(modulo, type_, scaling_bracket, human_strategy_cost, round_weights, False)
     model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
-    model.model.Params.MIPGap = 0.055 # Set MIDGap to return in reasonable time...
+    model.model.Params.TimeLimit = 1800 # Set Time limit to 30 minutes
     results = model.run()
     
-    # actions = Model2.model2_to_simulation(results['choices'])
-    # actions =  Model2.model2_to_simulation(results)
-    # queue = prepare_tower_queue(actions)
+    actions = Model2.model2_to_simulation(results['choices'])
+    actions =  Model2.model2_to_simulation(results)
+    queue = prepare_tower_queue(actions)
 
-    # g = Game(40, 650, 1, graphics, queue, speed_multiplier)
-    # g.run_game()
+    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    g.run_game()
 
-    # cost = compute_cost_of_actions(actions)
-    # print(f"Money spent: {cost}")
+    cost = compute_cost_of_actions(actions)
+    print(f"Money spent: {cost}")
 
 def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
-    results = read_pickle(filename, True)
-    results.pop('parameters')
+    results = read_pickle(filename, True)['choices']
 
     actions = Model2.model2_to_simulation(results)
     queue = prepare_tower_queue(actions)
@@ -263,17 +260,75 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
     print(f"Money spent: {cost}")
 
 
-# run_1_from_file('Model1cmod10_20250517_185846', True, 10)
-run_s2(True, 40, True)
+def run_3(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
+    model = Model3(modulo, type_, scaling_bracket, human_strategy_cost, round_weights, False)
+    model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
+    model.model.Params.TimeLimit = 1800 # Set Time limit to 30 minutes
+    # model.model.Params.SoftMemLimit = 18
+    results = model.run()
 
-# run_2(10, 'a', graphics=True, speed_multiplier=2)
+    actions = Model3.model3_to_simulation(results)
+    queue = prepare_tower_queue(actions)
+    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    g.run_game()
+
+    cost = compute_cost_of_actions(actions)
+    print(f"Money spent: {cost}")
+
+    
+def run_3_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
+    results = read_pickle(filename, True)['choices']
+
+    # actions = Model2.model2_to_simulation(results)
+    # queue = prepare_tower_queue(actions)
+
+    # g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    # g.run_game()
+
+    # cost = compute_cost_of_actions(actions)
+    # print(f"Money spent: {cost}")
 
 
-# run_2(10, 'a')
-# run_2(10, 'b')
-# run_2(10, 'c')
+def run_proxy_evaluation(model_nr: int, type_: str, modulo: int = 1, times_per_round: int = 100, logging: str = False) -> float:
+    """
+    Returns: correlation between the proxy value and the , derived through a Monte Carlo simulation.
+    """
+    ev = ProxyEvaluator(model_nr,type_, times_per_round, modulo, logging)
+    # build = ev.get_random_build_for_round(14)
+    # cov = ev.compute_cov_for_build(build)
+    results = ev.run_evaluation()
+    corr = ProxyEvaluator.get_correlation(results)
+    return corr
+
+def get_proxy_evaluation_from_file(filename: str, per_round: bool = False) -> Any:
+    results = read_pickle(filename, True)
+    if per_round:
+        return ProxyEvaluator.get_correlation_per_round(results)
+    else:
+        return ProxyEvaluator.get_correlation(results)
+
+def print_experiment_setting(filename: str):
+    exp = read_pickle(filename, True)
+    print(exp['parameters'])
+
+# run_3(15, 'c', True, 20, 9250, (0,1))
+
+# queue = prepare_tower_queue(actions)
+
+# g = Game(40, 650, 1, True, queue, 20)
+# g.run_game()
+
+# run_2(10, 'a', False, 5, 9250, (0,1))
+# run_2(10, 'b', False, 5, 9250, (0,1))
+# run_2(10, 'c', False, 5, 9250, (0,1))
+
+# res = read_pickle('Model2cmod10_20250522_235439', True)['choices']
+# run_2_from_file('Model2cmod10_20250522_235439', True)
 
 
 
 
-
+run_proxy_evaluation(1, 'b')
+run_proxy_evaluation(1, 'a', 10)
+run_proxy_evaluation(1, 'b', 10)
+run_proxy_evaluation(1, 'c', 10)

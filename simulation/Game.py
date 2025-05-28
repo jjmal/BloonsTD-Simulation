@@ -98,7 +98,7 @@ class Game:
             self.money += -cost
         else:
             raise ValueError(f"Not enough money for the declared build in round {self.round}! \n \
-                             Money: {self.money}. Money needed: {cost}")
+                             Money: {self.money}. Money needed: {cost}. Lives lost (delta_r): {40 - self.lives}")
 
     def move_bloons(self) -> None:
         """
@@ -256,6 +256,94 @@ class Game:
                     # Change round
                     self.next_round()
                     round_break_counter = 1
+
+                else:
+                    round_break_counter += 1
+
+            if self.graphics:
+                # Update display
+                pygame.display.update()
+
+                # Control game speed
+                clock.tick(self.fps)
+        if self.graphics:
+            pygame.quit()
+
+
+    def run_round(self) -> Dict:
+        """
+        Runs the game for only one round, returns game info after the round ends
+        """
+
+        if self.graphics:
+            # Initialise pygame
+            pygame.init()
+            # Set up the screen
+            self.setup_screen()
+            # Set up the clock
+            clock = pygame.time.Clock()
+
+        # Set up the round break counter
+        round_break_counter = 1
+        
+        # Prepare round 1
+        self.bloon_manager.prepare_queue_for_round()
+
+        # Spawn initial bloon
+        if len(self.bloon_manager.queue) > 0:
+            self.last_spawned_bloon = self.bloon_manager.spawn_bloon_from_queue()
+    
+        # Game loop
+        run = True
+        while run:
+            if self.graphics:
+                # Event loop
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        run = False
+                
+                # Background rendering
+                self.render_screen()
+
+            # Building towers
+            self.build_and_upgrade_towers()
+
+            # Spawning
+            self.spawn_bloon()
+            
+            # Movement
+            self.move_bloons()
+            self.update_towers()
+            
+            if self.graphics:
+                # Rendering
+                self.render_towers()
+                self.render_bloons()
+                self.render_ui()
+
+                # resolve pausing
+                keys = pygame.key.get_pressed()
+                if keys[pygame.K_p]:
+                    self.pause_game()
+
+            # Resolve game end:
+            if self.check_game_end() == 1:
+                run = False
+                return self.get_endgame_info()
+            elif self.check_game_end() == 2:
+                run = False
+                return self.get_endgame_info()
+
+            # Manage round changes
+            if self.check_round_end():
+                if round_break_counter >= self.round_brake_frames:
+                    # Change round
+                    self.next_round()
+                    round_break_counter = 1
+                    if self.graphics:
+                        pygame.quit()
+                    
+                    return self.get_endgame_info()
 
                 else:
                     round_break_counter += 1
