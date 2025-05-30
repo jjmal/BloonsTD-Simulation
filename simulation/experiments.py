@@ -1,8 +1,10 @@
+import numpy as np
+
 from gurobipy import Model, GRB, quicksum
 from typing import Tuple, List, Any
 from Game import Game, prepare_tower_queue
 from GameHeuristic import GameS1, get_s1_tower_positions
-from modelling import Model1, Model2, Model3, ProxyEvaluator
+from modelling import Model1, Model2, Model3, ProxyEvaluator, ProxyEvaluatorOneRound
 from modelling_sets import create_towers_dataframe
 from modelling_utils import read_pickle
 
@@ -238,7 +240,6 @@ def run_2(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int
     results = model.run()
     
     actions = Model2.model2_to_simulation(results['choices'])
-    actions =  Model2.model2_to_simulation(results)
     queue = prepare_tower_queue(actions)
 
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
@@ -252,7 +253,7 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
 
     actions = Model2.model2_to_simulation(results)
     queue = prepare_tower_queue(actions)
-
+    print(queue)
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
@@ -264,7 +265,6 @@ def run_3(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int
     model = Model3(modulo, type_, scaling_bracket, human_strategy_cost, round_weights, False)
     model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
     model.model.Params.TimeLimit = 1800 # Set Time limit to 30 minutes
-    # model.model.Params.SoftMemLimit = 18
     results = model.run()
 
     actions = Model3.model3_to_simulation(results)
@@ -279,56 +279,58 @@ def run_3(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int
 def run_3_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
     results = read_pickle(filename, True)['choices']
 
-    # actions = Model2.model2_to_simulation(results)
-    # queue = prepare_tower_queue(actions)
+    actions = Model3.model3_to_simulation(results)
+    queue = prepare_tower_queue(actions)
 
-    # g = Game(40, 650, 1, graphics, queue, speed_multiplier)
-    # g.run_game()
+    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    g.run_game()
 
-    # cost = compute_cost_of_actions(actions)
-    # print(f"Money spent: {cost}")
+    cost = compute_cost_of_actions(actions)
+    print(f"Money spent: {cost}")
 
 
-def run_proxy_evaluation(model_nr: int, type_: str, modulo: int = 1, times_per_round: int = 100, logging: str = False) -> float:
+def run_proxy_evaluation_many_rounds(model_nr: int, type_: str, modulo: int = 1, times_per_round: int = 100, money_offset: int = 0, logging: str = False) -> float:
     """
     Returns: correlation between the proxy value and the , derived through a Monte Carlo simulation.
     """
-    ev = ProxyEvaluator(model_nr,type_, times_per_round, modulo, logging)
-    # build = ev.get_random_build_for_round(14)
-    # cov = ev.compute_cov_for_build(build)
+    ev = ProxyEvaluator(model_nr,type_, times_per_round, modulo, money_offset, logging)
     results = ev.run_evaluation()
     corr = ProxyEvaluator.get_correlation(results)
     return corr
 
-def get_proxy_evaluation_from_file(filename: str, per_round: bool = False) -> Any:
+
+def get_proxy_evaluation_many_rounds_from_file(filename: str, per_round: bool = False) -> Any:
     results = read_pickle(filename, True)
     if per_round:
         return ProxyEvaluator.get_correlation_per_round(results)
     else:
         return ProxyEvaluator.get_correlation(results)
 
+
+def run_proxy_evaluation_one_round(type_: str, round_nr: int, dart_monkey_number: int, reps: int = 5000, modulo: int = 1, logging: bool = False):
+    ev = ProxyEvaluatorOneRound(1, type_, round_nr, dart_monkey_number, reps, modulo, logging)
+    r = ev.run_evaluation(True)
+    print(f'1{type_} corr: {np.corrcoef(r[0], r[1])[0][1]}')
+
+
+def get_proxy_evaluation_one_round_from_file(filename: str) -> float:
+    r = read_pickle(filename, True)
+    return np.corrcoef(r[0], r[1])[0][1]
+
+
 def print_experiment_setting(filename: str):
     exp = read_pickle(filename, True)
     print(exp['parameters'])
 
-# run_3(15, 'c', True, 20, 9250, (0,1))
 
-# queue = prepare_tower_queue(actions)
-
-# g = Game(40, 650, 1, True, queue, 20)
-# g.run_game()
-
-# run_2(10, 'a', False, 5, 9250, (0,1))
-# run_2(10, 'b', False, 5, 9250, (0,1))
-# run_2(10, 'c', False, 5, 9250, (0,1))
-
-# res = read_pickle('Model2cmod10_20250522_235439', True)['choices']
-# run_2_from_file('Model2cmod10_20250522_235439', True)
+# run_2_from_file('Model2amod10_20250518_200424', True)
 
 
 
+# run_3(20, 'b', False)
+# run_3(20, 'c', False)
 
-run_proxy_evaluation(1, 'b')
-run_proxy_evaluation(1, 'a', 10)
-run_proxy_evaluation(1, 'b', 10)
-run_proxy_evaluation(1, 'c', 10)
+
+# run_3(20, 'c')
+
+

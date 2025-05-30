@@ -7,7 +7,7 @@ from datetime import datetime
 from typing import List, Tuple, Dict, Any
 from datetime import datetime
 from gurobipy import Model, GRB, quicksum
-from datasets import create_towers_dataframe
+from datasets import create_towers_dataframe, create_rounds_dataframe
 from modelling_sets import  get_money_constraint_rhs, generate_sets_1a, generate_sets_1b, generate_sets_1c, \
       generate_sets_2a, generate_sets_2b, generate_sets_2c, generate_sets_3
 from modelling_utils import read_pickle, write_pickle, filter_point_set_modulo
@@ -58,6 +58,7 @@ class GameModel:
         out['objective_value'] = objective_value
         out['choices'] = chosen
         out['parameters'] = self.get_parameters()
+        out['mipgap'] = self.model.MIPGap
 
         # Save result as pickle, if Model is not Model 1 (as for Model 1 we care about the final result after 50 models are run)
         if self.name != 'Model1':
@@ -486,7 +487,7 @@ class Model2(GameModel):
                     sorted_round_action.insert(0, (round_, action[0], action[1], 0))
                     exists_set.add((action[0], action[1], 0)) 
 
-                exists_set.add(action)
+                # exists_set.add(action)
         
         return sorted_round_action
     
@@ -512,11 +513,12 @@ class Model2(GameModel):
         # Enrich to make into a valid build order
         valid = Model2.enrich_build_order(sorted_round_action)
         # Change syntax and sort
-        
+        print(f"valid: {valid}")
         for round_, position_x, position_y, upgrade in valid:
             out.append((round_, ('Dart', (position_x,position_y), upgrade)))
         
         out.sort()
+        print(f"sorted: {out}")
 
         return out
         
@@ -696,6 +698,18 @@ class Model3(GameModel):
             name = 'nodowngrades20-s'
         )
 
+    def get_parameters(self) -> Dict[str, Any]:
+        out = {}
+        out['name'] = self.name
+        out['modulo'] = self.modulo
+        out['type'] = self.type
+        out['human_strategy_cost'] = self.human_strategy_cost
+        out['scaling_bracket'] = self.scaling_bracket
+        out['round_weights'] = self.round_weights
+
+        return out
+    
+
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
         """
@@ -706,15 +720,59 @@ class Model3(GameModel):
         for var_name in var_name_list:
             var_str = re.search('\[.*\]', var_name).group(0).strip('[]')
             var_str_sep = var_str.split(",")
-            var = (int(var_str_sep[0]), int(var_str_sep[1]), int(var_str_sep[2]), int(var_str_sep[3]), int(var_str_sep[4]))
+            var = (int(var_str_sep[0]), int(var_str_sep[1]), int(var_str_sep[2]), str(var_str_sep[3]), int(var_str_sep[4]))
             out.append(var)
         return out
+    
+    @staticmethod
+    def enrich_build_order(sorted_round_action: List[Tuple]) -> List[Tuple]:
+        # Go through the sorted list in order; for each upgrade operation we need to see if a build needs to be added right before it
+        exists_set = set()
+        for round_action in sorted_round_action:
+            round_ = round_action[0]
+            action = (round_action[1], round_action[2], round_action[3], round_action[4])
+            if action[3] == 0:
+                exists_set.add(action) 
+            if action[3] > 0:
+                if action[3] == 3:
+                    sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 1))
+                    sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 2))
+                    sorted_round_action.remove(round_action)
+
+                if (action[0], action[1], 0) not in exists_set:
+                    sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 0))
+                    exists_set.add((action[0], action[1], action[2], 0)) 
+
+                exists_set.add(action)
         
+        return sorted_round_action
+    
     @staticmethod
     def model3_to_simulation(result_tuple_list: List[Tuple[int,int,int,str,int]]) -> List[Tuple]:
         out = []
+        keep_earliest_filter = {}
         for round_, position_x, position_y, tower, upgrade in result_tuple_list:
-            out.append((round_, (tower, (position_x, position_y), upgrade)))
+            keep_earliest_filter[(position_x, position_y, tower, upgrade)] = []
+        for (round_, position_x, position_y, tower, upgrade) in result_tuple_list:
+            keep_earliest_filter[(position_x, position_y, tower, upgrade)].append(round_)
+        only_first_occurence = {key: min(val) for key, val in keep_earliest_filter.items()}
+
+        # transform and sort
+        round_action = []
+        for key, val in only_first_occurence.items():
+            round_action.append((val, key[0], key[1], key[2], key[3]))
+        sorted_round_action = sorted(round_action, key= lambda x: x[0])
+
+        # Enrich to make into a valid build order
+        valid = Model3.enrich_build_order(sorted_round_action) 
+        # Change syntax and sort
+        for round_, position_x, position_y, tower, upgrade in valid:
+            if tower == 'D':
+                out.append((round_, ('Dart', (position_x,position_y), upgrade)))
+            elif tower == 'S':
+                 out.append((round_, ('Super Monkey', (position_x,position_y), upgrade)))
+        
+        out.sort()
 
         return out
     
@@ -723,12 +781,13 @@ class ProxyEvaluator:
     """
     Used for evaluating the quality of proxies.
     """
-    def __init__(self, model_nr: int, type_: str, times_per_round: int = 20, modulo: int = 1, logging: bool = True):
+    def __init__(self, model_nr: int, type_: str, times_per_round: int = 20, modulo: int = 1, money_offset: int = 0,logging: bool = True):
         random.seed(40) # set seed for reproducibility
         self.model_nr = model_nr
         self.type = type_
         self.times_per_round = times_per_round
         self.modulo = modulo
+        self.money_offset = money_offset
         self.logging = logging
 
         self.pos_D = read_pickle('PLACEMENTS')
@@ -753,7 +812,7 @@ class ProxyEvaluator:
         money = get_money_constraint_rhs(round_nr)
 
         if self.model_nr == 1:
-            while money >= 250:
+            while money >= 250 + self.money_offset: # Money offset for finding a setting in which we could get the most varied and reliable results
                 pos = random.choice(pos_D)
                 out.append((round_nr, ('Dart', (pos[0], pos[1]), 0)))
                 money = money - 250
@@ -790,13 +849,13 @@ class ProxyEvaluator:
         
         return total
 
-    def run_round(self, round_nr: int) -> None:
+    def run_round_for_proxy_evaluation(self, round_nr: int) -> None:
         self.results[round_nr] = [[],[]]
         for _ in range(self.times_per_round):
             build = self.get_random_build_for_round(round_nr)
             cov = self.compute_cov_for_build(build)
             queue = prepare_tower_queue(build)
-            g = Game(40, 30000, round_nr, False, queue, 5)
+            g = Game(1792, 30000, round_nr, False, queue, 5)
             results = g.run_round()
             lives = results['lives']
             self.results[round_nr][0].append(cov)
@@ -804,7 +863,7 @@ class ProxyEvaluator:
 
     def run_evaluation(self) -> Dict[int, List]:
         for round_nr in range(1,51):
-            self.run_round(round_nr)
+            self.run_round_for_proxy_evaluation(round_nr)
             if self.logging:
                 print(f"Evaluation progress: {round_nr}/50")
 
@@ -812,7 +871,12 @@ class ProxyEvaluator:
         return self.results
 
     def write_results_to_pickle(self):
-        write_pickle(self.results, f'proxy_evaluation_{self.model_nr}{self.type}', True)
+        name = f'proxy_evaluation_{self.model_nr}{self.type}'
+        if self.modulo > 1:
+            name = name + f'_{self.modulo}'
+        if self.money_offset > 0:
+            name = name + f'_{self.money_offset}'
+        write_pickle(self.results, name, True)
 
     @staticmethod
     def get_correlation_per_round(evaluation_results: Dict[int, List]) -> Dict[int, float]:
@@ -841,7 +905,7 @@ class ProxyEvaluator:
         return evaluation_results
 
     @staticmethod
-    def get_correlation(evaluation_results: Dict[int, List], extremes_correction: bool) -> float:
+    def get_correlation(evaluation_results: Dict[int, List], extremes_correction: bool = False) -> float:
         x = []
         y = []
         if extremes_correction:
@@ -855,11 +919,112 @@ class ProxyEvaluator:
         return  np.corrcoef(x,y)[0,1]
     
 
+class ProxyEvaluatorOneRound:
+    """
+    Used for evaluating the quality of proxies.
+    """
+    def __init__(self, model_nr: int, type_: str, round_nr: int, dart_monkey_number: int,  reps: int = 5000, modulo: int = 1, logging: bool = True):
+        random.seed(40) # set seed for reproducibility
+        self.model_nr = model_nr
+        self.type = type_
+        self.round_nr = round_nr
+        self.reps = reps
+        self.dart_monkey_nr = dart_monkey_number
+        self.modulo = modulo
+        self.logging = logging
 
-# ev = ProxyEvaluator(1,'c', 100, 1)
-# build = ev.get_random_build_for_round(14)
-# cov = ev.compute_cov_for_build(build)
-# results = ev.run_evaluation()
-results = read_pickle('proxy_evaluation_1a', True)
-corr = ProxyEvaluator.get_correlation(results, False)
-print(corr)
+        self.money = get_money_constraint_rhs(self.round_nr)
+        self.max_lives = create_rounds_dataframe().loc[self.round_nr, "RBE_Cash"]
+
+        self.pos_D = read_pickle('PLACEMENTS')
+        
+        if self.type == 'a':
+            self.cov = read_pickle('COV')
+        elif self.type == 'b':
+            self.cov = read_pickle('DIST_0_1')
+        elif self.type == 'c':
+            self.cov = read_pickle('ANG_0_1')
+        if self.modulo > 1:
+            self.pos_D = filter_point_set_modulo(self.pos_D, self.modulo)
+            self.pos_S = filter_point_set_modulo(self.pos_S, self.modulo)
+
+        self.results = [[],[]]
+
+    def compute_cov_for_build(self, build: List[Tuple]) -> int:
+        total = 0
+        for action in build:
+            tow, pos, upg = action[1]
+            total += self.cov[pos, tow, upg]
+        
+        return total
+    
+    def get_random_build(self) -> List[Tuple]:
+        out = []
+
+        if self.money < 250*self.dart_monkey_nr:
+            raise ValueError('Cannot built as many Dart Monkeys in the evaluation due to budget constraints!')
+
+        if self.model_nr == 1:
+            pos_ls = random.sample(self.pos_D, self.dart_monkey_nr)
+            for pos in pos_ls:
+                out.append((self.round_nr, ('Dart', (pos[0], pos[1]), 0)))
+            
+        return out
+
+
+    def run_one_setting(self) -> bool:
+        """
+        Returns: Whether all round in the given setting were won with a perfect score (True) or not (False)
+        """
+        for i in range(self.reps):
+            build = self.get_random_build()
+            cov = self.compute_cov_for_build(build)
+            queue = prepare_tower_queue(build)
+            g = Game(self.max_lives, 30000, self.round_nr, False, queue, 5)
+            results = g.run_round()
+            lives = results['lives']
+            self.results[0].append(cov)
+            self.results[1].append(lives)
+            if self.logging:
+                print(f'Progress: {i+1}/{self.reps}')
+
+    def run_evaluation(self, save: bool = True) -> List:
+        
+        self.run_one_setting()
+
+        if save:
+            self.write_results_to_pickle()
+        return self.results
+
+    def write_results_to_pickle(self):
+        name = f'proxy_evaluation_oneround_{self.model_nr}{self.type}{self.round_nr}_monkeys{self.dart_monkey_nr}_reps{self.reps}'
+        if self.modulo > 1:
+            name = name + f'_{self.modulo}'
+        write_pickle(self.results, name, True)
+
+    @staticmethod
+    def print_lives_var(round_nr: int):
+        dart_monkey_max_nr = int(np.floor(get_money_constraint_rhs(round_nr)/250))
+        for i in range(dart_monkey_max_nr):
+            if i > 37:
+                break
+            p = ProxyEvaluatorOneRound(1, 'a', 50, i+1, 100, 1, False)
+            r = p.run_evaluation(False)
+            print(f"Life variance for M1a, i = {i+1}: {np.var(r[1])}")
+
+
+# ev = ProxyEvaluatorOneRound(1, 'c', 50, 37, 1000)
+# ev.run_evaluation()
+
+# r = read_pickle('proxy_evaluation_oneround_1a50_monkeys34', True)
+# print(np.corrcoef(r[0], r[1])[0][1])
+
+
+
+# for typ in ['a', 'b', 'c']:
+#     p = ProxyEvaluatorOneRound(1, typ, 50, 23, 1000, 1, False)
+#     r = p.run_evaluation(True)
+#     print(f'1{typ} corr: {np.corrcoef(r[0], r[1])[0][1]}')
+# print(get_money_constraint_rhs(5))
+
+# ProxyEvaluatorOneRound.print_lives_var(50)
