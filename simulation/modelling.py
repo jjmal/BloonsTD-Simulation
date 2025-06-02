@@ -62,7 +62,11 @@ class GameModel:
 
         # Save result as pickle, if Model is not Model 1 (as for Model 1 we care about the final result after 50 models are run)
         if self.name != 'Model1':
-            write_pickle(out, f"{self.name}{self.type}_mod{self.modulo}_m{self.human_strategy_cost}_a{self.scaling_bracket[0]}", True)
+            name = f"{self.name}{self.type}_mod{self.modulo}_m{self.human_strategy_cost}_a{self.scaling_bracket[0]}"
+            if self.money_correction > 0:
+                name = name + f"_mc{self.money_correction}_{datetime.now().strftime("%Y%m%d-%H%M%S")}"
+            write_pickle(out, name , True)
+            
 
         return out 
     
@@ -309,12 +313,13 @@ class Model2(GameModel):
     """
     (Maximize coverage all rounds, Dart Monkey with upgrades)
     """
-    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)], logging = True):
+    def __init__(self, modulo, type_: str, money_correction: List[int] = [0 for _ in range(50)], scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for _ in range(50)],  logging = True):
         super().__init__('Model2', modulo, logging)
         self.type = type_
         self.scaling_bracket = scaling_bracket
         self.human_strategy_cost = human_strategy_cost
         self.round_weights = round_weights
+        self.money_correction = money_correction
         
     def generate_sets(self):
         if self.type == 'a':
@@ -385,10 +390,10 @@ class Model2(GameModel):
             for r in range(1,51) for u in range(4) for u_prim in range(4) for i,j in self.TOWER_PLACEMENTS for k,l in self.FOOTPRINTS[(i,j)] if (i,j) != (k,l)),
             name = 'footprints'
         )
-
+    
         # CONSTRAINT 2 - We must afford the build each round
         self.model.addConstrs(
-            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= self.MONEY[r])
+            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= self.MONEY[r] - self.money_correction[r])
             for r in range(1,51)),
             name='money'
         )
@@ -479,15 +484,22 @@ class Model2(GameModel):
                 exists_set.add(action) 
             if action[2] > 0:
                 if action[2] == 3:
-                    sorted_round_action.insert(0, (round_, action[0], action[1], 1))
-                    sorted_round_action.insert(0, (round_, action[0], action[1], 2))
+                    if (action[0], action[1], 1) in exists_set:
+                        sorted_round_action.insert(0, (round_, action[0], action[1], 2))
+                    elif (action[0], action[1], 2) in exists_set:
+                        sorted_round_action.insert(0, (round_, action[0], action[1], 1))
+                    else:
+                        sorted_round_action.insert(0, (round_, action[0], action[1], 1))
+                        sorted_round_action.insert(0, (round_, action[0], action[1], 2))
                     sorted_round_action.remove(round_action)
+                else:
+                    exists_set.add(action)
 
                 if (action[0], action[1], 0) not in exists_set:
                     sorted_round_action.insert(0, (round_, action[0], action[1], 0))
                     exists_set.add((action[0], action[1], 0)) 
 
-                # exists_set.add(action)
+                
         
         return sorted_round_action
     
@@ -513,12 +525,12 @@ class Model2(GameModel):
         # Enrich to make into a valid build order
         valid = Model2.enrich_build_order(sorted_round_action)
         # Change syntax and sort
-        print(f"valid: {valid}")
+    
         for round_, position_x, position_y, upgrade in valid:
             out.append((round_, ('Dart', (position_x,position_y), upgrade)))
         
         out.sort()
-        print(f"sorted: {out}")
+
 
         return out
         
