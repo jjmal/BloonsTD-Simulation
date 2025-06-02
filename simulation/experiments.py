@@ -233,8 +233,8 @@ def run_1_from_file(filename: str, graphics: bool = False, speed_multiplier: int
 
     print(f"Money spent: {len(g.tower_manager.tower_list)*250}")
 
-def run_2(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
-    model = Model2(modulo, type_, scaling_bracket, human_strategy_cost, round_weights, False)
+def run_2(modulo: int, type_: str, graphics: bool = False, money_correction: int = 0, chosen_lists: List = [], speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
+    model = Model2(modulo, type_, money_correction, chosen_lists, scaling_bracket, human_strategy_cost, round_weights, False)
     model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
     model.model.Params.TimeLimit = 1800 # Set Time limit to 30 minutes
     results = model.run()
@@ -253,7 +253,7 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
 
     actions = Model2.model2_to_simulation(results)
     queue = prepare_tower_queue(actions)
-    print(queue)
+    # print(queue)
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
@@ -323,14 +323,14 @@ def print_experiment_setting(filename: str):
     print(exp['parameters'])
 
 
-# run_2_from_file('Model2amod10_20250518_200424', True)
 
 
+# chosen_ls = []
+# chosen_ls.append(read_pickle('Model2a_mod10_m9250_a0', True)['choices'])
+# chosen_ls.append(read_pickle('Model2a_mod10_m9250_a0_mc38_20250531-111136', True)['choices'])
 
-# run_3(20, 'b', False)
-# run_3(20, 'c', False)
+# # run_2(10, 'a', False, 38, chosen_ls)
 
-
-# run_3(20, 'c')
-
+# # r_p = read_pickle('Model2a_mod10_m9250_a0', True)['choices']
+# # r = read_pickle('Model2a_mod10_m9250_a0_mc38_20250531-111136', True)['choices']
 

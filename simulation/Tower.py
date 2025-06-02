@@ -45,6 +45,11 @@ class Tower:
         pygame.draw.circle(screen, (220,220,220),  (self.x, self.y), self.range, 1)
         self.footprint.draw(screen)
         self.inner_circle.draw(screen)
+        if self.upgrade1:
+            pygame.draw.circle(screen, (0, 128, 0), (self.x, self.y-2), 2)
+        if self.upgrade2:
+            pygame.draw.circle(screen, (0, 128, 0), (self.x-2, self.y+2), 2)
+            pygame.draw.circle(screen, (0, 128, 0), (self.x+2, self.y+2), 2)
         for projectile in self.projectile_list:  
             projectile.draw(screen)
        
@@ -216,6 +221,7 @@ class SuperMonkeyTower(Tower):
         Gets upgrade 2 for Dart Tower (increases range).
         """
         if not self.upgrade2:
+            super().get_upgrade_2()
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
             # Also adjust range circle
             self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
@@ -265,6 +271,7 @@ class TackTower(Tower):
         Gets upgrade 1 for Tack Tower (increases attack speed).
         """
         if not self.upgrade1:
+            super().get_upgrade_1()
             self.attack_cooldown_frames = 40
             self.attack_counter = self.attack_cooldown_frames
     
@@ -273,6 +280,7 @@ class TackTower(Tower):
         Gets upgrade 2 for Tack Tower (increases range).
         """
         if not self.upgrade2:
+            super().get_upgrade_2()
             self.range = Tower.DF_TOWERS.loc[self.name, "upgrade_2_range"]
             # Also adjust range circle
             self.range_circle = Circle((220, 220, 220), self.range, [self.x, self.y])
