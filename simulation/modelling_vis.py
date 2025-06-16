@@ -1,5 +1,7 @@
-from modelling_sets import generate_track_middlepoints, create_pathline, generate_footprint_constraint_set,generate_coverage_dict, generate_all_points_on_track, generate_all_tower_placements, generate_all_footprint_constraint_sets
-from modelling_utils import generate_square_integer_points, square_to_quarter_circle
+from modelling_sets import generate_track_middlepoints, create_pathline, generate_footprint_constraint_set,generate_coverage_dict, \
+      generate_all_points_on_track, generate_all_tower_placements, generate_all_footprint_constraint_sets, generate_point_tower_set
+from modelling_utils import generate_square_integer_points, square_to_quarter_circle, filter_point_set_modulo
+from typing import Tuple
 import matplotlib.pyplot as plt
 
 
@@ -14,16 +16,17 @@ def plot_track(break_points, all_points):
     break_x, break_y = zip(*break_points)
     all_x, all_y = zip(*all_points)
     # Plot all integer points
-    plt.plot(all_x, all_y, 'bx', markersize=4)
+    plt.plot(all_x, all_y, 'o', markersize=1)
     
     # Plot break points
-    plt.plot(break_x, break_y, 'ro', markersize=8)
+    plt.plot(break_x, break_y, 'o', markersize=1)
     
     plt.grid(True)
     plt.legend()
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.ylim(max(all_y) + 40, min(all_y))
+    plt.xlim(min(all_x) - 40, max(all_x) + 40)
+    plt.ylim(max(all_y) + 40, min(all_y) - 40)
     plt.axis('equal')
     plt.tight_layout()
     plt.show()
@@ -31,14 +34,20 @@ def plot_track(break_points, all_points):
 
 def plot_footprint_constraints(pos, zone_points):
     plt.figure(figsize=(10, 6))
-
+    track_points = generate_all_points_on_track()
+    x_t, y_t = zip(*track_points)
     x, y = zip(*zone_points)
-    plt.plot(pos[0], pos[1], 'rx', markersize=5)
-    plt.plot(x,y, 'bo', markersize = 1)
+    
+    
+    plt.plot(x,y, 'o', markersize = 1)
+    plt.plot(x_t, y_t, 'o', markersize = 1)
+    plt.plot(pos[0], pos[1], 'mo', markersize=2)
 
     plt.legend()
     plt.xlabel('X')
     plt.ylabel('Y')
+    plt.xlim(min(x_t) - 40, max(x_t) + 40)
+    plt.ylim(max(y_t) + 40, min(y_t) - 40)
     plt.axis('equal')
     plt.tight_layout()
     plt.show()
@@ -50,14 +59,14 @@ def plot_points(points_list):
     # Extract x and y coordinates
     all_x, all_y = zip(*points_list)
     # Plot all integer points
-    plt.plot(all_x, all_y, 'bx', markersize=1)
+    plt.plot(all_x, all_y, 'bo', markersize=1)
     
     plt.grid(True)
     plt.legend()
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.xlim(min(all_x), max(all_x))
-    plt.ylim(max(all_y), min(all_y))
+    plt.xlim(min(all_x) - 40, max(all_x) + 40)
+    plt.ylim(max(all_y) + 40, min(all_y) - 40)
     plt.axis('equal')
     plt.tight_layout()
     plt.show()
@@ -65,7 +74,214 @@ def plot_points(points_list):
 def flatten(xss):
     return [x for xs in xss for x in xs]
 
+
+def generate_all_points_on_track_rectangles(extended_by: int = 0):
+    """
+    Generates a list of all points on the the track.
+    :param extended_by: by how much to increase or shrink the width of resulting lines; should be at 
+    least -19 and at most 15. 
+    :returns: List of tuples representing points (x,y) on the track
+    """
+
+    out_set = set()
+    break_points = create_pathline()
+    track_middle_points = generate_track_middlepoints()
+    
+    # Add points for the first middlepoint:
+    for y_add in range(- 20 - extended_by, 21 + extended_by):
+        out_set.add((-40, 230+y_add))
+
+    # Add all other points, except for cornerpoints
+    for i in range(1, len(track_middle_points), 1):
+        x1 = track_middle_points[i-1][0]
+        x2 = track_middle_points[i][0]
+        y1 = track_middle_points[i-1][1]
+        y2 = track_middle_points[i][1]
+
+        # Horizontal segment
+        if y1 == y2:
+            for y_add in range(-20 - extended_by, 21 + extended_by):
+               out_set.add((x2, y2+y_add))
+        
+        # Vertical segment
+        elif x1 == x2:
+            for x_add in range(-20 - extended_by, 21 + extended_by):
+                out_set.add((x2+x_add, y2))
+    
+    # Add points around the corners of the track
+    for i in range(1, len(break_points)-1, 1):
+        points_in_square = generate_square_integer_points(break_points[i], 20 + extended_by)
+        # Add points in the quarter circle to the point on track
+        for x,y in points_in_square:
+            out_set.add((x,y)) 
+        
+
+    # Make into a list and output   
+    out = list(out_set)  
+
+    return out
    
-bp = create_pathline()
-tp = generate_all_tower_placements(False)
-plot_points(tp)
+def generate_all_points_without_edge(edge_size: int):
+    out = []
+    for x in range(edge_size, 480 - edge_size):
+        for y in range(edge_size, 480 - edge_size):
+            out.append((x,y))
+    return out
+
+def flip_y(ax):
+    ax.set_xlim(0, 479)
+    ax.set_ylim(479, 0)
+
+    return ax
+
+def add_map_box(ax):
+    ax.vlines([0, 478, 479], 0, 479, colors='black')
+    ax.hlines([0, 479], 0, 479, colors='black')
+
+    return ax
+
+def initialize_figure():
+    fig = plt.figure(figsize=(10,10))
+    ax = fig.add_subplot(1,1,1)
+    ax.set_box_aspect(1)
+    ax = flip_y(ax)
+    ax = add_map_box(ax)
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
+    return fig, ax
+
+def save_figure(name: str):
+    plt.savefig(f'C:\\Users\\User\\Desktop\\University\\Y3\\BachelorEndProject\\figures\\sets\\' + name, bbox_inches='tight', pad_inches=0)
+
+
+def add_track(ax):
+    tr = generate_all_points_on_track(0)
+    x,y = zip(*tr)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:orange')
+
+    return ax
+
+def add_M(ax):
+    mid = generate_track_middlepoints()
+    x,y = zip(*mid)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:green')
+
+    return ax
+
+def plot_M():
+    fig, ax = initialize_figure()
+    ax = add_M(ax)
+    plt.show()
+
+def plot_Pt(mod: int = 1):
+    fig, ax = initialize_figure()
+    ax = add_track(ax)
+    p = generate_all_tower_placements(False)
+    p = filter_point_set_modulo(p, mod)
+    x, y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:blue')
+    save_figure(f'Pt_{mod}')
+    plt.show()
+
+def plot_T(e: int):
+    fig, ax = initialize_figure()
+    p = generate_all_points_on_track_rectangles(extended_by=e)
+    x, y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:orange')
+    ax = add_M(ax)
+    save_figure(f'T_{e}')
+    plt.show()
+
+def add_Tstar(ax, e: int):
+    p = generate_all_points_on_track(extended_by=e)
+    x, y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:orange')
+
+    return ax
+
+def plot_Tstar(e: int):
+    fig, ax = initialize_figure()
+    ax = add_Tstar(ax, e)
+    ax = add_M(ax)
+    save_figure(f'Tstar_{e}')
+    plt.show()
+
+def add_E(ax, e: int):
+    p = generate_all_points_without_edge(e)
+    x,y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:blue')
+    return(ax)
+
+def plot_E(e: int):
+    fig, ax = initialize_figure()
+    ax = add_E(ax, e)
+    plt.show()
+
+def plot_Tstar_and_E(e_t: int, e_e: int):
+    fig, ax = initialize_figure()
+    ax = add_E(ax, e_e)
+    ax = add_Tstar(ax, e_t)
+    save_figure(f'Tstar_{e_t}_E_{e_e}')
+    plt.show()
+
+def add_O(ax, pos: Tuple[int,int], mod: int, mode: str):
+    p = generate_footprint_constraint_set(pos, mode)
+    p = filter_point_set_modulo(p, mod)
+    x,y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:blue')
+    ax.plot(pos[0], pos[1], 'o', markersize = 4, color = 'tab:purple')
+    return(ax)
+
+def plot_O(mod: int, mode: str):
+    fig, ax = initialize_figure()
+    ax = add_track(ax)
+    ax = add_O(ax, (270, 365), mod, mode)
+    save_figure(f'O')
+    plt.show()
+    
+def add_V(ax, m: Tuple[int,int], t: str, u: int, mod: int):
+    p = generate_point_tower_set(mod)[m, t, u]
+    x,y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:blue')
+    ax.plot(m[0], m[1], 'o', markersize = 4, color = 'tab:purple')
+    return ax
+
+def plot_V(mod: int, u: int = 0):
+    fig, ax = initialize_figure()
+    ax = add_track(ax)
+    ax = add_M(ax)
+    ax = add_V(ax, (210,350), 'Dart', u, mod)
+    save_figure(f'V_{u}')
+    plt.show()
+
+def plot_Pt_raw():
+    fig, ax = initialize_figure()
+    p = generate_all_tower_placements(False)
+    x, y = zip(*p)
+    ax.plot(x,y, 'o', markersize = 1, color = 'tab:blue')
+    save_figure('Pt_raw')
+    plt.show()
+
+def plot_O_special(mod: int, mode: str):
+    fig, ax = initialize_figure()
+    ax = add_track(ax)
+    ax = add_O(ax, (270, 365), mod, mode)
+    ax.plot(270, 340, "o",  markersize = 4, color = 'tab:red')
+    ax.plot(265, 370, "o", markersize = 4, color = 'tab:green')
+    save_figure(f'O_special_{mode}')
+    plt.show()
+
+def plot_V_special(mod: int):
+    fig, ax = initialize_figure()
+    ax = add_track(ax)
+    ax = add_M(ax)
+    ax = add_V(ax, (210,350), 'Dart', 2, mod)
+    ax.plot(125, 265, "o",  markersize = 4, color = 'tab:red')
+    c1 = plt.Circle((125, 265), 100, color='tab:cyan', fill=False, zorder = 2, lw=2)
+    c2 = plt.Circle((125, 265), 125, color='tab:pink', fill=False, zorder = 2, lw=2)
+    ax.add_artist(c1)
+    ax.add_artist(c2) 
+    save_figure(f'V_special')
+    plt.show()
+
+

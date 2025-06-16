@@ -211,7 +211,7 @@ def run_s2(graphics: bool = False, speed_multiplier = 5, correction: bool = Fals
 
    
 
-def run_1(modulo: int, type_: str,  graphics: bool = False, speed_multiplier: int = 5, dart_monkey_nr: int = 37, scaling_bracket: Tuple[int,int] = (0,1),  money_correction: Tuple[int, int] = None):
+def run_1(modulo: int, type_: str,  graphics: bool = False, speed_multiplier: int = 5, dart_monkey_nr: int = 37, scaling_bracket: Tuple[int,int] = (0,1),  money_correction: Tuple[int, int] = (0,0)):
     results = Model1.model1_per_round(modulo, type_, scaling_bracket, dart_monkey_nr, money_correction)
     actions = Model1.model1_to_simulation(results)
     queue = prepare_tower_queue(actions)
@@ -233,20 +233,20 @@ def run_1_from_file(filename: str, graphics: bool = False, speed_multiplier: int
 
     print(f"Money spent: {len(g.tower_manager.tower_list)*250}")
 
-def run_2(modulo: int, type_: str, graphics: bool = False, money_correction: int = 0, chosen_lists: List = [], speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
-    model = Model2(modulo, type_, money_correction, chosen_lists, scaling_bracket, human_strategy_cost, round_weights, False)
+def run_2(modulo: int, type_: str, graphics: bool = False, money_correction: List[int] = [0 for _ in range(50)], cover_all_points_from_round: int = 0, speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
+    model = Model2(modulo, type_, money_correction,cover_all_points_from_round, scaling_bracket, human_strategy_cost, round_weights, False)
     model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
     model.model.Params.TimeLimit = 1800 # Set Time limit to 30 minutes
     results = model.run()
     
-    actions = Model2.model2_to_simulation(results['choices'])
-    queue = prepare_tower_queue(actions)
+    # actions = Model2.model2_to_simulation(results['choices'])
+    # queue = prepare_tower_queue(actions)
 
-    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
-    g.run_game()
+    # g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    # g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    # cost = compute_cost_of_actions(actions)
+    # print(f"Money spent: {cost}")
 
 def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
     results = read_pickle(filename, True)['choices']
@@ -257,36 +257,34 @@ def run_2_from_file(filename: str, graphics: bool = False, speed_multiplier: int
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    # cost = compute_cost_of_actions(actions)
+    # print(f"Money spent: {cost}")
 
 
-def run_3(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
-    model = Model3(modulo, type_, scaling_bracket, human_strategy_cost, round_weights, False)
+def run_3(modulo: int, type_: str, graphics: bool = False, speed_multiplier: int = 5, money_correction: List[int] = [0 for _ in range(50)], human_strategy_cost: int = 9250, scaling_bracket: Tuple[int,int] = (0,1), round_weights: List[float] = [0.02 for i in range(50)]):
+    model = Model3(modulo, type_, scaling_bracket, human_strategy_cost, money_correction, round_weights, False)
     model.model.Params.NodefileStart = 0.5 # Set parameter to avoid memory issues
     model.model.Params.TimeLimit = 1800 # Set Time limit to 30 minutes
     results = model.run()
 
-    actions = Model3.model3_to_simulation(results)
-    queue = prepare_tower_queue(actions)
-    g = Game(40, 650, 1, graphics, queue, speed_multiplier)
-    g.run_game()
+    # actions = Model3.model3_to_simulation(results['choices'])
+    # queue = prepare_tower_queue(actions)
+    # g = Game(40, 650, 1, graphics, queue, speed_multiplier)
+    # g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    # cost = compute_cost_of_actions(actions)
+    # print(f"Money spent: {cost}")
 
     
 def run_3_from_file(filename: str, graphics: bool = False, speed_multiplier: int = 5):
     results = read_pickle(filename, True)['choices']
-
     actions = Model3.model3_to_simulation(results)
     queue = prepare_tower_queue(actions)
-
     g = Game(40, 650, 1, graphics, queue, speed_multiplier)
     g.run_game()
 
-    cost = compute_cost_of_actions(actions)
-    print(f"Money spent: {cost}")
+    # cost = compute_cost_of_actions(actions)
+    # print(f"Money spent: {cost}")
 
 
 def run_proxy_evaluation_many_rounds(model_nr: int, type_: str, modulo: int = 1, times_per_round: int = 100, money_offset: int = 0, logging: str = False) -> float:
@@ -322,14 +320,33 @@ def print_experiment_setting(filename: str):
     exp = read_pickle(filename, True)
     print(exp['parameters'])
 
+def compute_proxy_until_round(until: int, results: Tuple, model_nr: int, type_: str, alpha: int) -> float:
+    if model_nr == 1:
+        build = Model1.model1_to_simulation(results)
+    elif model_nr == 2:
+        build = Model2.model2_to_simulation(results['choices'])
+    elif model_nr == 3:
+        build = Model3.model3_to_simulation(results['choices'])
+    
+    if type_ == 'a':
+        cov = read_pickle('COV')
+    elif type_ == 'b' and alpha == 0:
+        cov = read_pickle('DIST_0_1')
+    elif type_ == 'b' and alpha == 0.5:
+        cov = read_pickle('DIST_05_1')
+    elif type_ == 'c' and alpha == 0:
+        cov = read_pickle('ANG_0_1')
+    elif type_ == 'c' and alpha == 0.5:
+        cov = read_pickle('ANG_05_1')
+    total = 0
+    for action in build:
+        if action[0] <= until:
+            tow, pos, upg = action[1]
+            total += cov[pos, tow, upg]
+        
+    return total
 
 
 
-# chosen_ls = []
-# chosen_ls.append(read_pickle('Model2a_mod10_m9250_a0', True)['choices'])
-# chosen_ls.append(read_pickle('Model2a_mod10_m9250_a0_mc38_20250531-111136', True)['choices'])
 
-# # run_2(10, 'a', False, 38, chosen_ls)
-
-# # r_p = read_pickle('Model2a_mod10_m9250_a0', True)['choices']
-# # r = read_pickle('Model2a_mod10_m9250_a0_mc38_20250531-111136', True)['choices']
+run_3_from_file('Model3c_mod20_m9250_a0', True, 50)

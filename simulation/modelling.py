@@ -63,8 +63,15 @@ class GameModel:
         # Save result as pickle, if Model is not Model 1 (as for Model 1 we care about the final result after 50 models are run)
         if self.name != 'Model1':
             name = f"{self.name}{self.type}_mod{self.modulo}_m{self.human_strategy_cost}_a{self.scaling_bracket[0]}"
-            if self.money_correction > 0:
-                name = name + f"_mc{self.money_correction}_{datetime.now().strftime("%Y%m%d-%H%M%S")}"
+            if self.name == 'Model2':
+                if self.cover_all_points_from_round > 0:
+                    name = name + f"_cover{self.cover_all_points_from_round}"
+            if self.round_weights != [0.02 for _ in range(50)]:
+                name= name + f"_weighted"
+            if self.money_correction != [0 for _ in range(50)]:
+                name = name + f"_mc_{datetime.now().strftime("%Y%m%d-%H%M%S")}"
+           
+
             write_pickle(out, name , True)
             
 
@@ -214,7 +221,6 @@ class Model1(GameModel):
         fixed_points = []
         out = {}
         rounds = 50
-
         # Define sets:
         if type_ == 'a':
             sets = generate_sets_1a(modulo) 
@@ -294,7 +300,7 @@ class Model1(GameModel):
         params['money_correction'] = money_correction
         out['parameters'] = params
         # write_pickle(out, f"Model1{type_}_mod{modulo}_{datetime.now().strftime('%Y%m%d_%H%M%S')}", True)
-        write_pickle(out, f"Model1{type_}_mod{modulo}_m{250*dart_monkey_nr}_a{scaling_bracket[0]}_d{money_correction[0]}-{money_correction[1]}", True)
+        # write_pickle(out, f"Model1{type_}_mod{modulo}_m{250*dart_monkey_nr}_a{scaling_bracket[0]}_d{money_correction[0]}-{money_correction[1]}", True)
 
         return out
 
@@ -313,13 +319,14 @@ class Model2(GameModel):
     """
     (Maximize coverage all rounds, Dart Monkey with upgrades)
     """
-    def __init__(self, modulo, type_: str, money_correction: List[int] = [0 for _ in range(50)], scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for _ in range(50)],  logging = True):
+    def __init__(self, modulo, type_: str, money_correction: List[int] = [0 for _ in range(50)], cover_all_points_from_round: int = 0, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for _ in range(50)],  logging = True):
         super().__init__('Model2', modulo, logging)
         self.type = type_
         self.scaling_bracket = scaling_bracket
         self.human_strategy_cost = human_strategy_cost
         self.round_weights = round_weights
         self.money_correction = money_correction
+        self.cover_all_points_from_round = cover_all_points_from_round
         
     def generate_sets(self):
         if self.type == 'a':
@@ -342,6 +349,8 @@ class Model2(GameModel):
         self.FOOTPRINTS = sets['FP']
         self.COST = sets['COST']
         self.MONEY = sets['MONEY']
+        self.MID_IN_RANGE = sets['MID_IN_RANGE']
+        self.MIDP = sets['MIDP']
 
     def set_variables(self):
         # Define variables
@@ -392,17 +401,11 @@ class Model2(GameModel):
         )
     
         # CONSTRAINT 2 - We must afford the build each round
-        self.model.addConstrs(
-            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= self.MONEY[r] - self.money_correction[r])
-            for r in range(1,51)),
-            name='money'
-        )
-        
         # CONSTRAINT 3 - We want to beat the human strategy cost
         self.model.addConstrs(
-            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= self.human_strategy_cost)
+            ((quicksum(self.COST['Dart', u]*self.varss[r, i,j, u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) <= min(self.MONEY[r] - self.money_correction[r-1], self.human_strategy_cost)) # r-1 ad money correction is a list
             for r in range(1,51)),
-            name='beathuman'
+            name='money'
         )
 
         # CONSTRAINT 4 - We treat each upgrade as a separate tower - only one (tower, upgrade) pair can be active at each position
@@ -447,6 +450,14 @@ class Model2(GameModel):
             name = 'separate21'
         )
 
+        # CONSTRAINT 13 - Binary coverage
+        if self.cover_all_points_from_round > 0:
+            self.model.addConstrs(
+                (quicksum(self.varss[self.cover_all_points_from_round,i,j,u] for u in range(4) for i,j in self.MID_IN_RANGE[(m,n), 'Dart', u]) >= 1
+                for m,n in self.MIDP), name = 'binary_coverage'
+            )
+
+
     def get_parameters(self) -> Dict[str, Any]:
         out = {}
         out['name'] = self.name
@@ -458,6 +469,9 @@ class Model2(GameModel):
 
         return out
 
+    def presolve(self):
+        self.build()
+        self.model.presolve()
 
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
@@ -536,11 +550,12 @@ class Model2(GameModel):
         
 
 class Model3(GameModel):
-    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, round_weights: List[float] = [0.02 for i in range(50)], logging = True):
+    def __init__(self, modulo, type_: str, scaling_bracket: Tuple[int,int] = (0,1), human_strategy_cost: int = 9250, money_correction: List[int] = [0 for _ in range(50)], round_weights: List[float] = [0.02 for i in range(50)], logging = True):
         super().__init__('Model3', modulo, logging)
         self.type = type_
         self.scaling_bracket = scaling_bracket
         self.human_strategy_cost = human_strategy_cost
+        self.money_correction = money_correction
         self.round_weights = round_weights
 
     def generate_sets(self):
@@ -610,6 +625,27 @@ class Model3(GameModel):
         self.model.update()
     
     def set_constraints(self):
+        # # CONSTRAINT 1.1 - towers cannot be placed inside other towers' footprints - NN
+        # self.model.addConstrs(
+        #     (self.vars_d[50, i,j, 'D',u] + self.vars_d[50, k,l, 'D', u_prim] <= 1
+        #     for u in range(4) for u_prim in range(4) for i,j in self.TOWER_PLACEMENTS for k,l in self.FOOTPRINTS[(i,j)] if (i,j) != (k,l)),
+        #     name = 'footprints-nn'
+        # )
+
+        # # CONSTRAINT 1.2 - towers cannot be placed inside other towers' footprints - NS
+        # self.model.addConstrs(
+        #     (self.vars_s[50, i,j, 'S', u] + self.vars_d[50, k,l,'D', u_prim] <= 1
+        #     for u in [0,2] for u_prim in range(4) for i,j in self.TOWER_PLACEMENTS_S for k,l in self.FOOTPRINTS_NS[(i,j)] if (i,j) != (k,l)),
+        #     name = 'footprints-ns'
+        # )
+
+        # # CONSTRAINT 1.3 - towers cannot be placed inside other towers' footprints - SS
+        # self.model.addConstrs(
+        #     (self.vars_s[50, i,j, 'S',u] + self.vars_s[50, k,l,'S', u_prim] <= 1
+        #     for u in [0,2] for u_prim in [0,2] for i,j in self.TOWER_PLACEMENTS_S for k,l in self.FOOTPRINTS_SS[(i,j)] if (i,j) != (k,l)),
+        #     name = 'footprints-ss'
+        # )
+
         # CONSTRAINT 1.1 - towers cannot be placed inside other towers' footprints - NN
         self.model.addConstrs(
             (self.vars_d[r, i,j, 'D',u] + self.vars_d[r, k,l, 'D', u_prim] <= 1
@@ -634,18 +670,18 @@ class Model3(GameModel):
         # CONSTRAINT 2 - We must afford the build each round
         self.model.addConstrs(
             ((quicksum(self.COST['Dart', u]*self.vars_d[r, i,j, 'D',u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) + \
-              quicksum(self.COST['Super Monkey', u]*self.vars_s[r, i,j, 'S',u] for i,j in self.TOWER_PLACEMENTS_S for u in [0,2]) <= self.MONEY[r])
+              quicksum(self.COST['Super Monkey', u]*self.vars_s[r, i,j, 'S',u] for i,j in self.TOWER_PLACEMENTS_S for u in [0,2]) <= min(self.human_strategy_cost,self.MONEY[r] - self.money_correction[r-1]))
             for r in range(1,51)),
             name='money'
         )
         
-        # CONSTRAINT 3 - We want to beat the human strategy cost
-        self.model.addConstrs(
-            ((quicksum(self.COST['Dart', u]*self.vars_d[r, i,j, 'D',u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) + \
-              quicksum(self.COST['Super Monkey', u]*self.vars_s[r, i,j,'S',u] for i,j in self.TOWER_PLACEMENTS_S for u in [0,2]) <= self.human_strategy_cost)
-            for r in range(1,51)),
-            name='beathuman'
-        )
+        # # CONSTRAINT 3 - We want to beat the human strategy cost
+        # self.model.addConstrs(
+        #     ((quicksum(self.COST['Dart', u]*self.vars_d[r, i,j, 'D',u] for i,j in self.TOWER_PLACEMENTS for u in range(4)) + \
+        #       quicksum(self.COST['Super Monkey', u]*self.vars_s[r, i,j,'S',u] for i,j in self.TOWER_PLACEMENTS_S for u in [0,2]) <= self.human_strategy_cost)
+        #     for r in range(1,51)),
+        #     name='beathuman'
+        # )
 
         # CONSTRAINT 4.1 - only one (Dart, upgrade) pair can be active at each position
         self.model.addConstrs(
@@ -710,6 +746,9 @@ class Model3(GameModel):
             name = 'nodowngrades20-s'
         )
 
+        # # CONSTRAINT 7 - Don't build Super Monkey too early
+        # self.model.addConstr(quicksum(self.vars_s[r, i, j, 'S', u] for r in range(1,31) for u in [0,2] for i,j in self.TOWER_PLACEMENTS_S) <= 0)
+
     def get_parameters(self) -> Dict[str, Any]:
         out = {}
         out['name'] = self.name
@@ -721,6 +760,9 @@ class Model3(GameModel):
 
         return out
     
+    def presolve(self):
+        self.build()
+        self.model.presolve()
 
     @staticmethod
     def extract_vars_from_gurobi(var_name_list: List[str]) -> List[Tuple]:
@@ -747,18 +789,22 @@ class Model3(GameModel):
                 exists_set.add(action) 
             if action[3] > 0:
                 if action[3] == 3:
-                    sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 1))
-                    sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 2))
+                    if (action[0], action[1], action[2], 1) in exists_set:
+                        sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 2))
+                    elif (action[0], action[1], action[2], 2) in exists_set:
+                        sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 1))
+                    else:
+                        sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 1))
+                        sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 2))
                     sorted_round_action.remove(round_action)
-
-                if (action[0], action[1], 0) not in exists_set:
+                else:
+                    exists_set.add(action)
+                if (action[0], action[1], action[2], 0) not in exists_set:
                     sorted_round_action.insert(0, (round_, action[0], action[1], action[2], 0))
                     exists_set.add((action[0], action[1], action[2], 0)) 
-
-                exists_set.add(action)
         
         return sorted_round_action
-    
+
     @staticmethod
     def model3_to_simulation(result_tuple_list: List[Tuple[int,int,int,str,int]]) -> List[Tuple]:
         out = []
@@ -793,13 +839,14 @@ class ProxyEvaluator:
     """
     Used for evaluating the quality of proxies.
     """
-    def __init__(self, model_nr: int, type_: str, times_per_round: int = 20, modulo: int = 1, money_offset: int = 0,logging: bool = True):
+    def __init__(self, model_nr: int, type_: str, alpha: int, times_per_round: int = 20, modulo: int = 1, money_offset: int = 0,logging: bool = True):
         random.seed(40) # set seed for reproducibility
         self.model_nr = model_nr
         self.type = type_
         self.times_per_round = times_per_round
         self.modulo = modulo
         self.money_offset = money_offset
+        self.alpha = alpha
         self.logging = logging
 
         self.pos_D = read_pickle('PLACEMENTS')
@@ -807,10 +854,14 @@ class ProxyEvaluator:
         
         if self.type == 'a':
             self.cov = read_pickle('COV')
-        elif self.type == 'b':
+        elif self.type == 'b' and self.alpha == 0:
             self.cov = read_pickle('DIST_0_1')
+        elif self.type == 'b' and self.alpha == 0.5:
+            self.cov = read_pickle('DIST_05_1')
         elif self.type == 'c':
             self.cov = read_pickle('ANG_0_1')
+        elif self.type == 'c' and self.alpha == 0.5:
+            self.cov = read_pickle('ANG_05_1')
         if self.modulo > 1:
             self.pos_D = filter_point_set_modulo(self.pos_D, self.modulo)
             self.pos_S = filter_point_set_modulo(self.pos_S, self.modulo)
@@ -935,7 +986,7 @@ class ProxyEvaluatorOneRound:
     """
     Used for evaluating the quality of proxies.
     """
-    def __init__(self, model_nr: int, type_: str, round_nr: int, dart_monkey_number: int,  reps: int = 5000, modulo: int = 1, logging: bool = True):
+    def __init__(self, model_nr: int, type_: str, round_nr: int, dart_monkey_number: int,  alpha: int = 0, reps: int = 5000, modulo: int = 1, logging: bool = True):
         random.seed(40) # set seed for reproducibility
         self.model_nr = model_nr
         self.type = type_
@@ -943,6 +994,7 @@ class ProxyEvaluatorOneRound:
         self.reps = reps
         self.dart_monkey_nr = dart_monkey_number
         self.modulo = modulo
+        self.alpha = alpha
         self.logging = logging
 
         self.money = get_money_constraint_rhs(self.round_nr)
@@ -952,10 +1004,14 @@ class ProxyEvaluatorOneRound:
         
         if self.type == 'a':
             self.cov = read_pickle('COV')
-        elif self.type == 'b':
+        elif self.type == 'b' and self.alpha == 0:
             self.cov = read_pickle('DIST_0_1')
+        elif self.type == 'b' and self.alpha == 0.5:
+            self.cov = read_pickle('DIST_05_1')
         elif self.type == 'c':
             self.cov = read_pickle('ANG_0_1')
+        elif self.type == 'c' and self.alpha == 0.5:
+            self.cov = read_pickle('ANG_05_1')
         if self.modulo > 1:
             self.pos_D = filter_point_set_modulo(self.pos_D, self.modulo)
             self.pos_S = filter_point_set_modulo(self.pos_S, self.modulo)
@@ -1009,7 +1065,7 @@ class ProxyEvaluatorOneRound:
         return self.results
 
     def write_results_to_pickle(self):
-        name = f'proxy_evaluation_oneround_{self.model_nr}{self.type}{self.round_nr}_monkeys{self.dart_monkey_nr}_reps{self.reps}'
+        name = f'proxy_evaluation_oneround_{self.model_nr}{self.type}{self.round_nr}_monkeys{self.dart_monkey_nr}_alpha{self.alpha}_reps{self.reps}'
         if self.modulo > 1:
             name = name + f'_{self.modulo}'
         write_pickle(self.results, name, True)
@@ -1025,18 +1081,5 @@ class ProxyEvaluatorOneRound:
             print(f"Life variance for M1a, i = {i+1}: {np.var(r[1])}")
 
 
-# ev = ProxyEvaluatorOneRound(1, 'c', 50, 37, 1000)
-# ev.run_evaluation()
-
-# r = read_pickle('proxy_evaluation_oneround_1a50_monkeys34', True)
-# print(np.corrcoef(r[0], r[1])[0][1])
 
 
-
-# for typ in ['a', 'b', 'c']:
-#     p = ProxyEvaluatorOneRound(1, typ, 50, 23, 1000, 1, False)
-#     r = p.run_evaluation(True)
-#     print(f'1{typ} corr: {np.corrcoef(r[0], r[1])[0][1]}')
-# print(get_money_constraint_rhs(5))
-
-# ProxyEvaluatorOneRound.print_lives_var(50)

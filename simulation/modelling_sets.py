@@ -377,6 +377,55 @@ def generate_all_footprint_constraint_sets(mode: str, modulo: int = 1, adjust: b
 
     return out
 
+
+def generate_point_tower_set(modulo: int = 1) -> Dict[Tuple[int,int], List[Tuple[int,int,str,int]]]:
+    """
+    Generates a set of sets which for each point have a list of Towers that cover that point.
+    """
+    out = {}
+
+    midpoints = generate_track_middlepoints()
+    positions = generate_all_tower_placements()
+    positions_s = generate_all_tower_placements(True)
+
+    positions = filter_point_set_modulo(positions, modulo)
+    positions_s = filter_point_set_modulo(positions_s, modulo)
+
+    rang_01 = 100
+    rang_23 = 125
+
+    rang_s_0 = 140
+    rang_s_2 = 240
+
+    # Dart Tower
+    for i in range(len(midpoints)):
+        midp = midpoints[i]
+        out[midp, 'Dart', 0] = []
+        out[midp, 'Dart', 1] = []
+        out[midp, 'Dart', 2] = []
+        out[midp, 'Dart', 3] = []
+        out[midp, 'Super Monkey', 0] = []
+        out[midp, 'Super Monkey', 2] = []
+        circ_01 = Circle((0,0,0), rang_01, midp)
+        circ_23 = Circle((0,0,0), rang_23, midp)
+        circ_s_0 = Circle((0,0,0), rang_s_0, midp)
+        circ_s_2 = Circle((0,0,0), rang_s_2, midp)
+        for pos in positions:
+            if is_point_in_circle(circ_01, pos[0], pos[1]):
+                out[midp, 'Dart', 0].append(pos)
+                out[midp, 'Dart', 1].append(pos)
+            if is_point_in_circle(circ_23, pos[0], pos[1]):
+                out[midp, 'Dart', 2].append(pos)
+                out[midp, 'Dart', 3].append(pos)
+        for pos in positions_s:
+            if is_point_in_circle(circ_s_0, pos[0], pos[1]):
+                out[midp, 'Super Monkey', 0].append(pos)
+            if is_point_in_circle(circ_s_2, pos[0], pos[1]):
+                out[midp, 'Super Monkey', 2].append(pos)
+
+    return(out)
+            
+
 def generate_vars_1(modulo: int) -> List[Tuple[int,int]]:
     """
     Generates a list of variables for Model1a.
@@ -490,12 +539,15 @@ def generate_sets_2a(modulo: int):
     COV = read_pickle('COV')
     if modulo in [3,5,10]:
         FP = read_pickle(f'FP_{modulo}')
+        MID_IN_RANGE = read_pickle(f'MIDP_TOWER_RNG_{modulo}')
     else:
         FP = generate_all_footprint_constraint_sets("nn", modulo)
+        MID_IN_RANGE = generate_point_tower_set(modulo)
     COST = generate_tower_upgrade_costs()
     MONEY = generate_money_constraints_rhs()
+    MIDP = generate_track_middlepoints()
 
-    return {'VAR': variables, 'COV' : COV, 'FP' : FP, 'COST': COST, 'MONEY': MONEY}
+    return {'VAR': variables, 'COV' : COV, 'FP' : FP, 'COST': COST, 'MONEY': MONEY, 'MID_IN_RANGE': MID_IN_RANGE, 'MIDP': MIDP}
 
 def generate_sets_2b(modulo: int, scaling_bracket: Tuple[int,int] = (0,1)):
     variables = generate_vars_2(modulo)
@@ -509,12 +561,15 @@ def generate_sets_2b(modulo: int, scaling_bracket: Tuple[int,int] = (0,1)):
 
     if modulo in [3,5,10]:
         FP = read_pickle(f'FP_{modulo}')
+        MID_IN_RANGE = read_pickle(f'MIDP_TOWER_RNG_{modulo}')
     else:
         FP = generate_all_footprint_constraint_sets("nn", modulo)
+        MID_IN_RANGE = generate_point_tower_set(modulo)
     COST = generate_tower_upgrade_costs()
     MONEY = generate_money_constraints_rhs()
+    MIDP = generate_track_middlepoints()
 
-    return {'VAR': variables, 'DIST' : DIST, 'FP' : FP, 'COST': COST, 'MONEY': MONEY}
+    return {'VAR': variables, 'DIST' : DIST, 'FP' : FP, 'COST': COST, 'MONEY': MONEY, 'MID_IN_RANGE': MID_IN_RANGE, 'MIDP': MIDP}
 
 def generate_sets_2c(modulo: int, scaling_bracket: Tuple[int,int] = (0,1)):
     variables = generate_vars_2(modulo)
@@ -528,14 +583,18 @@ def generate_sets_2c(modulo: int, scaling_bracket: Tuple[int,int] = (0,1)):
 
     if modulo in [3,5,10]:
         FP = read_pickle(f'FP_{modulo}')
+        MID_IN_RANGE = read_pickle(f'MIDP_TOWER_RNG_{modulo}')
         
     else:
         FP = generate_all_footprint_constraint_sets("nn", modulo)
+        MID_IN_RANGE = generate_point_tower_set(modulo)
        
     COST = generate_tower_upgrade_costs()
     MONEY = generate_money_constraints_rhs()
+    MIDP = generate_track_middlepoints()
+    
 
-    return {'VAR': variables, 'ANG_COV' : ANG_COV, 'FP' : FP, 'COST': COST, 'MONEY': MONEY}
+    return {'VAR': variables, 'ANG_COV' : ANG_COV, 'FP' : FP, 'COST': COST, 'MONEY': MONEY, 'MID_IN_RANGE': MID_IN_RANGE, 'MIDP': MIDP}
 
 def generate_sets_3(modulo: int, scaling_bracket: Tuple[int,int] = (0,1)):
     variables = generate_vars_3(modulo)
@@ -608,6 +667,6 @@ def generate_and_save() -> None:
     PLACEMENTS_S = generate_all_tower_placements(True)
     write_pickle(PLACEMENTS_S, 'PLACEMENTS_S')
 
-
-
+    MIDPOINT_TOWER_RANGE_10 = generate_point_tower_set(10)
+    write_pickle(MIDPOINT_TOWER_RANGE_10, 'MIDP_TOWER_RNG_10')
 
