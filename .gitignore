@@ -2,5 +2,7 @@ __pycache__
 .venv
 test_modelling.py
 test_simulation.py
+test.py
 *.lp
 *.pkl
+rounds.csv
