@@ -320,7 +320,35 @@ def print_experiment_setting(filename: str):
     exp = read_pickle(filename, True)
     print(exp['parameters'])
 
-def compute_proxy_until_round(until: int, results: Tuple, model_nr: int, type_: str, alpha: int) -> float:
+
+
+def get_towers_on_round(results: Tuple, round_nr: int, model_nr):
+
+    out = []
+
+    if model_nr == 1:
+        build = Model1.model1_to_simulation(results)
+    elif model_nr == 2:
+        build = Model2.model2_to_simulation(results['choices'])
+    elif model_nr == 3:
+        build = Model3.model3_to_simulation(results['choices'])
+
+    build_dct = {}
+    for action in build:
+        if action[0] <= round_nr:
+            tow, pos, upg = action[1]
+            if (upg == 2 and build_dct[pos][1] == 1) or (upg == 1 and build_dct[pos][1] == 2):
+                build_dct[pos] = tow, 3
+            else:
+                build_dct[pos] = tow, upg
+
+    for pos, (tow, upg) in build_dct.items():
+        out.append((round_nr, (tow, pos,  upg)))
+
+    return out
+    
+
+def compute_proxy_until_round(until: int, results: Tuple, model_nr: int, type_: str, alpha: int, adj: bool) -> float:
     if model_nr == 1:
         build = Model1.model1_to_simulation(results)
     elif model_nr == 2:
@@ -338,15 +366,48 @@ def compute_proxy_until_round(until: int, results: Tuple, model_nr: int, type_: 
         cov = read_pickle('ANG_0_1')
     elif type_ == 'c' and alpha == 0.5:
         cov = read_pickle('ANG_05_1')
+
     total = 0
-    for action in build:
-        if action[0] <= until:
+
+    # Weights for adjusted 3a method
+    w = [15]*13 + [20]*17 + [1]*20
+    w_sum = sum(w)
+    for i in range(len(w)):
+        w[i] = w[i]/w_sum
+
+    if model_nr == 1:
+        towers_at_round = get_towers_on_round(results, until, model_nr)
+        for action in towers_at_round:
             tow, pos, upg = action[1]
             total += cov[pos, tow, upg]
-        
+
+    elif model_nr == 2:
+        for r in range(1, until+1):
+            towers_at_round = get_towers_on_round(results, r, model_nr)
+            for action in towers_at_round:
+                tow, pos, upg = action[1]
+                total += 0.02*cov[pos, tow, upg]
+
+    elif model_nr == 3 and adj == False:
+        for r in range(1, until+1):
+            towers_at_round = get_towers_on_round(results, r, model_nr)
+            for action in towers_at_round:
+                tow, pos, upg = action[1]
+                total += 0.02*cov[pos, tow, upg]
+
+    elif model_nr == 3 and adj == True:
+        for r in range(1, until+1):
+            towers_at_round = get_towers_on_round(results, r, model_nr)
+            for action in towers_at_round:
+                tow, pos, upg = action[1]
+                total += w[r-1]*cov[pos, tow, upg]
+
     return total
 
 
 
 
-run_3_from_file('Model3c_mod20_m9250_a0', True, 50)
+
+
+
+
